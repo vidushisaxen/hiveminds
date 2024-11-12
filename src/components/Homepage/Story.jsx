@@ -8,12 +8,11 @@ const Story = () => {
   return (
    <>
    <section id='story'>
-    <div className='w-screen h-[120vh] py-[5vw] mt-[15vw] relative'>
+    <div className='w-screen h-[130vh] py-[5vw] mt-[15vw] relative'>
         <div className='w-[90%] h-[60%] bg-black rounded-[20px] absolute top-[-15%] left-[5%]'>
             play
-
         </div>
-        <div className='w-[99%] h-screen py-[4vw] mt-[5vw] bg-[#134BD6] rounded-[20px] flex items-end justify-center gap-[7vw]'>
+        <div className='w-[99vw] h-full py-[4vw] mt-[5vw] bg-[#134BD6] rounded-[20px] flex items-end justify-center gap-[7vw]'>
             <div className='w-[36%] flex items-start justify-center flex-col  gap-[4vw]'>
                 <p className='text-[2.8vw] montreal text-[#FFFFFF]'>
                 Fuelling your growth ambitions, with confidence.

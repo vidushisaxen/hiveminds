@@ -37,11 +37,11 @@ export default function Contactform() {
   };
 
   return (
-    <div className="w-fullh-full  p-[2vw] pb-[3vw] rounded-[1vw]">
+    <div className="w-full h-full p-[2vw] pb-[3vw] rounded-[1vw]">
       <Form {...form}>  
         <form className="space-y-8">
           {/* Name Field */}
-          <div className="w-full flex gap-[1.2vw] items-center ">
+          <div className="w-full flex gap-[1vw] items-center ">
             <div className="w-[90vw] h-[5vw]   shadow-xl drop-shadow-l">
               <FormField
                 control={form.control}
@@ -59,7 +59,7 @@ export default function Contactform() {
           </div>
 
           {/* Email Field */}
-          <div className="w-full flex gap-[1.2vw] items-center ">
+          <div className="w-full flex gap-[1vw] items-center ">
             <div className="w-[90vw] h-[5vw] shadow-xl drop-shadow-l">
               <FormField
                 control={form.control}
@@ -77,7 +77,7 @@ export default function Contactform() {
           </div>
 
           {/* Phone Field */}
-          <div className="w-full flex gap-[1.2vw] items-center ">
+          <div className="w-full flex gap-[1vw] items-center ">
             <div className="w-[90vw] h-[5vw] shadow-xl drop-shadow-l">
               <FormField
                 control={form.control}
@@ -95,7 +95,7 @@ export default function Contactform() {
           </div>
 
           {/* Company Field */}
-          <div className="w-full flex gap-[1.2vw] items-center ">
+          <div className="w-full flex gap-[1vw] items-center ">
             <div className="w-[90vw] h-[5vw] shadow-xl drop-shadow-l">
               <FormField
                 control={form.control}
@@ -130,15 +130,15 @@ export default function Contactform() {
           </Select> */}
 
           {/* Message Field */}
-          <div className="w-full flex gap-[1.2vw] items-center ">
-            <div className="w-[90vw] h-[8vw] shadow-xl drop-shadow-l">
+          <div className="w-full flex gap-[1vw] items-center ">
+            <div className="w-[90vw] h-[5vw] shadow-xl drop-shadow-l">
               <FormField
                 control={form.control}
                 name="message"
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Message" {...field} className="h-[8vw] rounded-[20px]"/>
+                      <Input placeholder="Message" {...field} className="h-[5vw] rounded-[20px]"/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -153,7 +153,7 @@ export default function Contactform() {
               control={form.control}
               name="terms"
               render={({ field }) => (
-                <FormItem className="flex items-center justify-center w-full">
+                <FormItem className="flex items-center justify-between w-full">
                   <FormControl>
                     <Input type="checkbox" {...field} className="w-[2vw] h-[2vw]" />
                   </FormControl>

@@ -6,17 +6,19 @@ import Image from 'next/image';
 
 import { Navigation } from 'swiper/modules';
 
-const AwardCard=()=>{
+const AwardCard=({img,title,year,category})=>{
     return(
         <>
-        <div className='w-[35vw] h-[12vw] border-[0.5px] border-white rounded-[20px] flex items-center justify-center gap-[2vw] px-[2vw] bg-white/30 awards-card'>
-            <div className='w-[7vw] h-[7vw] relative'>
-            <Image src="/assets/images/homepage/awards-1.png" fill alt='awards-1'/>
+        <div className='w-[34.2vw] h-[11.5vw] border-[0.5px] border-white rounded-[20px] flex items-center  px-[1vw]  bg-white/30 awards-card'>
+        <div className='flex items-center justify-between gap-[1vw] w-full'>
+            <div className='w-[10vw] h-[8.3vw] relative'>
+            <Image src={img} fill alt='awards-1'/>
             </div>
             <div>
-                <p className='text-white'>Ranked among Financial Times High Growth Companies Asia Pacific</p>
-                <p className='content-white'>2024</p>
-                <p className='content-white'>Digital Marketing</p>
+                <p className='text-white text-[1.25vw] font-medium montreal '>{title}</p>
+                <p className='content-white'>{year}</p>
+                <p className='content-white'>{category}</p>
+            </div>
             </div>
 
         </div>
@@ -26,7 +28,7 @@ const AwardCard=()=>{
 const Awards = () => {
   return (
     <section id='awards '>
-        <div className='h-[150vh] w-[98vw] rounded-[30px] bg-[#134BD6] flex flex-col items-start justify-center px-[3vw] relative mt-[45vw]'>
+        <div className='h-screen w-[99vw] rounded-[30px] bg-[#134BD6] flex flex-col items-start justify-center px-[3vw]'>
             <div className='w-[35%]'>
         <h2 className=" text-[3.4vw] font-medium montreal text-white">
             <span className=''>
@@ -38,13 +40,55 @@ const Awards = () => {
                 </p>
               </div>
               <div className='w-[95vw] h-[30%] flex items-center justify-center '>
-              <Swiper navigation={true} loop={true} modules={[Navigation]} className="awards-swiper w-full h-full flex items-center justify-center mt-[10%]">
-        <SwiperSlide><AwardCard/></SwiperSlide>
-        <SwiperSlide><AwardCard/></SwiperSlide>
-        <SwiperSlide><AwardCard/></SwiperSlide>
-        <SwiperSlide><AwardCard/></SwiperSlide>
-        <SwiperSlide><AwardCard/></SwiperSlide>
-        <SwiperSlide><AwardCard/></SwiperSlide>
+              <Swiper  loop={true} modules={[Navigation]} className="awards-swiper w-full h-full flex items-center justify-center mt-[10%]">
+        <SwiperSlide>
+            <AwardCard
+        img={"/assets/images/homepage/awards-1.png"}
+        title={"Ranked among Financial Times High Growth Companies Asia Pacific"}
+        year={"2024"}
+        category={"Digital Marketing"}
+        />
+        </SwiperSlide>
+        <SwiperSlide>
+            <AwardCard
+        img={"/assets/images/homepage/awards-2.png"}
+        title={"Ranked among Financial Times High Growth Companies Asia Pacific"}
+        year={"2024"}
+        category={"Digital Marketing"}
+        />
+        </SwiperSlide>
+        <SwiperSlide>
+            <AwardCard
+        img={"/assets/images/homepage/awards-3.png"}
+        title={"Ranked among Financial Times High Growth Companies Asia Pacific"}
+        year={"2024"}
+        category={"Digital Marketing"}
+        />
+        </SwiperSlide>
+        <SwiperSlide>
+            <AwardCard
+        img={"/assets/images/homepage/awards-1.png"}
+        title={"Ranked among Financial Times High Growth Companies Asia Pacific"}
+        year={"2024"}
+        category={"Digital Marketing"}
+        />
+        </SwiperSlide>
+        <SwiperSlide>
+            <AwardCard
+        img={"/assets/images/homepage/awards-2.png"}
+        title={"Ranked among Financial Times High Growth Companies Asia Pacific"}
+        year={"2024"}
+        category={"Digital Marketing"}
+        />
+        </SwiperSlide>
+        <SwiperSlide>
+            <AwardCard
+        img={"/assets/images/homepage/awards-3.png"}
+        title={"Ranked among Financial Times High Growth Companies Asia Pacific"}
+        year={"2024"}
+        category={"Digital Marketing"}
+        />
+        </SwiperSlide>
         
       </Swiper>
               </div>

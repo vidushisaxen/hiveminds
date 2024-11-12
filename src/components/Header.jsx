@@ -18,23 +18,24 @@ const Header = () => {
           <div className='flex items-center justify-center gap-[2vw] text-[0.94vw] montreal font-medium uppercase'>
             <div>
               <ul className='flex items-center justify-between gap-[1.5vw]'>
-                <li className="relative group flex items-center gap-1">
-                  <Link href={"#"}>Services</Link>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                  <ul className="absolute hidden group-hover:flex flex-col bg-white shadow-lg p-2 mt-2 rounded-lg w-[12vw] top-full pointer-events-auto">
-                    <li className="py-1 px-3 hover:bg-gray-100"><Link href="#">Service 1</Link></li>
-                    <li className="py-1 px-3 hover:bg-gray-100"><Link href="#">Service 2</Link></li>
-                    <li className="py-1 px-3 hover:bg-gray-100"><Link href="#">Service 3</Link></li>
-                  </ul>
-                </li>
+              <li className="relative group flex items-center gap-1 after:content-[''] after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px] after:bg-white">
+  <Link href={"#"} className="relative">Services</Link>
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+  </svg>
+  <ul className="absolute hidden group-hover:flex flex-col bg-white shadow-lg p-2 mt-2 rounded-lg w-[12vw] top-full pointer-events-auto">
+    <li className="py-1 px-3 hover:bg-gray-100"><Link href="#">Service 1</Link></li>
+    <li className="py-1 px-3 hover:bg-gray-100"><Link href="#">Service 2</Link></li>
+    <li className="py-1 px-3 hover:bg-gray-100"><Link href="#">Service 3</Link></li>
+  </ul>
+</li>
+
                 
                 <li className="relative group">
                   <Link href={"#"}>Solutions</Link>
                 </li>
                 
-                <li className="relative group flex items-center gap-1">
+                <li className="relative group flex items-center gap-1 after:content-[''] after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px] after:bg-white">
                   <Link href={"#"}>Industries</Link>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
