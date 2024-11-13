@@ -49,11 +49,11 @@ const Hero = () => {
 
   return (
     <section id='hero'>
-      <div className=' w-screen h-screen flex items-center justify-center container-lg'>
-        <div className='w-[55%] flex flex-col gap-[3vw]'>
-          <h1 className='heading-1 leading-[1.2]'>
-            <span>{slidesData[activeIndex].title}</span><br />
-            <span className='blue-text'>{slidesData[activeIndex].subtitle}</span>
+      <div className=' w-full h-screen flex items-center justify-between container-lg mt-[5vw] pe-[5vw]'>
+        <div className='w-[45%] flex flex-col gap-[2vw] flex-wrap'>
+          <h1 className='heading-1 leading-[1.2] flex gap-[0.5vw] '>
+            <span>{slidesData[activeIndex].title}
+            <span className='blue-text ml-[0.8vw]'>{slidesData[activeIndex].subtitle}</span></span>
           </h1>
           <p className='content w-[75%] tracking-wide'>
             {slidesData[activeIndex].description}
@@ -61,7 +61,7 @@ const Hero = () => {
           <LinkButton text={"View Case Study"} link={"#"} />
         </div>
 
-        <div className='w-[41%] h-[63%]'>
+        <div className='w-[42%] h-[35vw]'>
           <Swiper
             effect={'cards'}
             grabCursor={true}

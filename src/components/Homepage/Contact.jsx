@@ -5,9 +5,9 @@ import Contactform from './Contactform'
 const Contact = () => {
   return (
     <section id='contact'>
-        <div className='w-screen h-full p-[4vw] z-[10] relative container-lg'>
+        <div className='w-screen h-full z-[10] relative container-lg py-[7%]'>
             <div className='w-full h-full flex gap-[10vw]'>
-            <div className='w-[35%]'>
+            <div className='w-[45%] flex flex-col gap-[2vw]'>
                 <h2 className="heading-2 ">
                 Looking to Drive <span className='blue-text'>Growth?</span>
                 </h2>

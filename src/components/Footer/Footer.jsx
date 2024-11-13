@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <section id='footer'>
         <div className='w-screen h-full flex flex-col items-center justify-center bg-[#134BD6] py-[5vw] pb-[2vw] pt-[8vw] gap-[4vw]'>
-        <div className='w-full h-full flex items-center justify-center gap-[10vw] text-white'>
+        <div className='w-full h-full flex items-center justify-between gap-[10vw] text-white container-lg'>
             <div className='w-[30%] h-full flex flex-col items-start justify-start gap-[2vw]'>
                 <p className='uppercase tracking-wider text-[1.16vw] text-white font-medium montreal'>Our Office Address</p>
                 <div>
@@ -27,7 +27,7 @@ const Footer = () => {
                     <Map/>
                  </div>
             </div>
-            <div className='w-[50%] h-full flex flex-col items-start justify-start gap-[4vw]'>
+            <div className='w-[49%] h-full flex flex-col items-start justify-start gap-[4vw]'>
                 <div className='flex items-start justify-between w-full'>
                     <div className='space-y-[1.5vw]'>
                         <p className='uppercase tracking-wider text-[1.16vw] text-white font-medium montreal'>Services</p>

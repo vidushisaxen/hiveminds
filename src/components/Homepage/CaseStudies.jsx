@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
-import { Scrollbar , Autoplay} from 'swiper/modules';
+import { Scrollbar , Autoplay, FreeMode} from 'swiper/modules';
 import Image from 'next/image';
 import PrimaryButton from '../Button/PrimaryButton';
 
@@ -29,9 +29,9 @@ const CaseStudies = () => {
     <>
       <section id="caseStudies">
         <div className="w-screen h-[45vw] flex items-center justify-center  z-[10] ">
-          <div className="w-[92%] h-full rounded-[30px] bg-white flex items-center justify-center px-[2vw] pt-[3vw] shadow-2xl drop-shadow-2xl">
-            <div className="w-[40%] h-full ">
-              <div>
+          <div className="w-[92%] h-full rounded-[30px] bg-white flex items-center justify-center px-[3vw] pt-[3vw] shadow-2xl drop-shadow-2xl">
+            <div className="w-[40%] h-full flex flex-col gap-[2vw] ">
+              
                 <h2 className="heading-2 ">
                   Growth Isn&apos;t Just a Buzzword - It&apos;s About Real{" "}
                   <span className="blue-text">Impact</span>
@@ -39,8 +39,8 @@ const CaseStudies = () => {
                 <p className="content w-[80%]">
                 Explore the challenges we&apos;ve overcome and the strategies we&apos;ve implemented to deliver exceptional results across various industries.
                 </p>
-              </div>
-              <div className="flex flex-wrap items-center mt-[4vw] gap-[2vw] w-[90%]">
+              
+              <div className="flex flex-wrap items-center mt-[2vw] gap-[1vw] w-[90%]">
               <PrimaryButton text={"All"} link={"#"}/>
               <PrimaryButton text={"Healthcare"} link={"#"}/>
               <PrimaryButton text={"Automobiles"} link={"#"}/>
@@ -60,8 +60,10 @@ const CaseStudies = () => {
         //     delay: 2500,
         //     disableOnInteraction: false,
         //   }}
+        freeMode={true}
+        slidesPerView={2}
   spaceBetween={20}
-        modules={[Scrollbar, Autoplay]}
+        modules={[Scrollbar, Autoplay,FreeMode]}
         className="casestudy-swiper w-full h-[90%]"
       >
         <SwiperSlide >

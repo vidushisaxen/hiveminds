@@ -21,7 +21,7 @@ const index = () => {
   <Services/>
   <Clients/>
   <Part/>
-  <div className='relative h-full w-screen rounded-[20px] bg-[#134BD6]'>
+  <div className='relative h-full w-screen rounded-[20px] bg-[#134BD6] mt-[10%] '>
     <span className=' block absolute h-[20%] bg-white w-full'></span>
   <CaseStudies/>
   <Awards/>

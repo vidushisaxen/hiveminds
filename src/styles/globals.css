@@ -34,7 +34,7 @@ body{
 }
 .content-white{
   font-weight: 400;
-  font-size: 1.15vw;
+  font-size: 1.05vw;
   line-height: 1.7;
   color: #FFFFFF;
 }
@@ -43,9 +43,10 @@ body{
   font-weight: 500;
   font-family: "Montreal";
   color: #111111;
+  line-height: 1.1;
 }
 .container-lg{
-  max-width: 95%;
+  max-width: 92%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -54,14 +55,11 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
-.casestudy-swiper .swiper-slide{
-  width: 26vw !important;
+
+.awards-swiper{
+  overflow: visible !important;
 }
 
-.awards-swiper .swiper-slide{
-  width: 36vw !important;
-  height: 12vw !important;
-}
 .awards-swiper .swiper-button-prev , .awards-swiper .swiper-button-next{
   position: absolute;
   color: #ffffff;
@@ -70,12 +68,11 @@ body{
   padding: 40px;
   top:20%;
 }
-/* .awards-swiper .swiper-button-prev{
-  left: 80%;
-  z-index: 3;
-  top: 0%;
-} */
-
+.swiper-scrollbar-drag{
+  background-color: #134BD6 !important;
+  height: 0.3vw !important;
+ 
+}
 
 
 
