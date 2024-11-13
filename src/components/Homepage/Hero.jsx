@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 import { EffectCards } from 'swiper/modules'
+import  styles from '@/styles/caseStudySwiper.module.css';
 
 const CaseStudyCard = ({ src, no, para }) => {
   return (
@@ -66,7 +67,7 @@ const Hero = () => {
             grabCursor={true}
             loop={true}
             modules={[EffectCards]}
-            className="caseStudySwiper w-full h-full"
+            className={`${styles.caseStudySwiper} w-full h-full`}
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           >
             <SwiperSlide>

@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
+import styles from '@/styles/clientSlider.module.css'
 
 const LogoSlider = ({ images, altPrefix, sliderClass }) => (
   <div className={`${sliderClass} h-[7vw] m-auto overflow-hidden relative`}>
-    <div className="slide-track">
+    <div className={`${styles.slideTrack}`}>
       {images.map((src, index) => (
         <div key={index} className="slide h-[10vw] w-[19vw]">
           <div className="h-[3vw] w-[10vw] relative">
@@ -75,15 +76,15 @@ const Clients = () => {
         </div>
 
         <p className="pb-[3vw] text-[1.24vw] text-[#111111] montreal font-medium">Clients</p>
-        <LogoSlider images={[...clients1, ...clients1]} altPrefix="client-logo" sliderClass="slider" />
-        <LogoSlider images={[...clients2, ...clients2]} altPrefix="client-logo" sliderClass="slider" />
+        <LogoSlider images={[...clients1, ...clients1]} altPrefix="client-logo" sliderClass={`${styles.slider}`} />
+        <LogoSlider images={[...clients2, ...clients2]} altPrefix="client-logo" sliderClass={`${styles.slider}`} />
 
         <p className="text-[1.24vw] text-[#111111] montreal font-medium py-[3vw]">Platform Partners</p>
-        <LogoSlider images={[...platform1, ...platform1]} altPrefix="platform-logo" sliderClass="slider2" />
-        <LogoSlider images={[...platform2, ...platform2]} altPrefix="platform-logo" sliderClass="slider2" />
+        <LogoSlider images={[...platform1, ...platform1]} altPrefix="platform-logo" sliderClass={`${styles.slider2}`} />
+        <LogoSlider images={[...platform2, ...platform2]} altPrefix="platform-logo" sliderClass={`${styles.slider2}`} />
 
         <p className="text-[1.24vw] text-[#111111] montreal font-medium py-[3vw]">Media Partners</p>
-        <LogoSlider images={[...media1, ...media1]} altPrefix="media-logo" sliderClass="slider" />
+        <LogoSlider images={[...media1, ...media1]} altPrefix="media-logo" sliderClass={`${styles.slider}`} />
       </div>
     </section>
   );

@@ -33,8 +33,8 @@ const ServiceCard = ({title,src,text}) => {
 const Services = () => {
   return (
     <section id="services">
-      <div className="w-screen h-screen flex items-center justify-center gap-[2vw]">
-        <div className="w-[30%] h-[55%] px-[3vw] py-[5vw] flex flex-col items-start justify-center gap-[3vw] rounded-[20px] shadow-2xl">
+      <div className="w-screen h-screen flex items-center justify-center gap-[2vw] relative">
+        <div className="w-[33%] h-[57%] px-[3vw] py-[5vw] flex flex-col items-start justify-center gap-[3vw] rounded-[20px] shadow-2xl">
           <h2 className="heading-2 w-[85%]">
             Your <span className="blue-text">Goals</span>, Our Offerings
           </h2>
@@ -42,7 +42,7 @@ const Services = () => {
             See how our strategic partnerships and collaboration drive
             innovation and accelerate your business growth.
           </p>
-          <div className="flex w-full items-center justify-center gap-[3vw]">
+          <div className="flex w-full items-center justify-center gap-[1vw]">
             <LinkButton text={"Our Solutions"} link={"#"} />
             <LinkButtonWhite text={"Industry"} link={"#"} />
           </div>
@@ -51,6 +51,12 @@ const Services = () => {
           <ServiceCard title={"SEO"} text={"We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility."} src={"/assets/images/homepage/seo.png"}/>
           <ServiceCard title={"Marketplace"} text={"We provide effective strategies that are aligned with your long-term business goals."} src={"/assets/images/homepage/marketplace.png"}/>
           <ServiceCard title={"Strategy & Consulting"} text={"We provide effective strategies that are aligned with your long-term business goals."} src={"/assets/images/homepage/strategy.png"}/>
+        </div>
+        <div className="absolute h-[2vw] w-[2.2vw] bottom-[10%] right-[5%]">
+          <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon"/>
+        </div>
+        <div className="absolute h-[2vw] w-[2.2vw] bottom-[10%] left-[5%]">
+          <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon"/>
         </div>
       </div>
     </section>

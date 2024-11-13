@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body{
   overflow-x: hidden;
   width: 100vw;
@@ -54,90 +53,6 @@ body{
   max-width: 85%;
   margin-left: auto;
   margin-right: auto;
-}
-.caseStudySwiper .swiper-slide-next .swiper-slide-shadow, .caseStudySwiper .swiper-slide-prev .swiper-slide-shadow{
-border-radius: 25px;
-}
-
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-19vw * 6)); }
-}
-
-@keyframes scroll-reverse {
-  0% { transform: translateX(calc(-19vw * 6)); }
-  100% { transform: translateX(0); }
-}
-
-.slider, .slider2 {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.slider::before, .slider::after,
-.slider2::before, .slider2::after {
-  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  content: "";
-  height: 100%;
-  position: absolute;
-  width: 100px;
-  z-index: 2;
-}
-
-.slider::after, .slider2::after {
-  right: 0;
-  top: 0;
-}
-
-.slider::before, .slider2::before {
-  left: 0;
-  top: 0;
-}
-
-.slide-track {
-  display: flex;
-  animation: scroll 20s linear infinite;
-  width: calc(19vw * 12);
-}
-
-.slider2 .slide-track {
-  animation: scroll-reverse 20s linear infinite;
-}
-
-.slide {
-  flex: 0 0 auto;
-  width: 19vw;
-}
-/* Flip card container */
-.flip-card {
-  perspective: 1000px; /* Provides the 3D space for the flip effect */
-}
-
-/* Flip card inner */
-.flip-card-inner {
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-/* Rotate card on hover */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Front and back side styles */
-.backface-hidden {
-  backface-visibility: hidden;
-}
-
-/* Flip card front */
-.flip-card-front {
-  z-index: 2;
-}
-
-/* Flip card back */
-.flip-card-back {
-  transform: rotateY(180deg);
 }
 .casestudy-swiper .swiper-slide{
   width: 26vw !important;

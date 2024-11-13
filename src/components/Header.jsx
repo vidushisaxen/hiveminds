@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
       <section id='header'>
-        <div className='h-full w-screen flex items-center justify-between px-[2vw] py-[2vw] border-[1.2px] border-b-[#DDDDDD]'>
+        <div className='h-full w-screen flex items-start justify-between px-[2vw] py-[2vw] border-[1.2px] border-b-[#DDDDDD]'>
           <div className='w-[10.5vw] h-[3.2vw] relative'>
             <Image 
               src="/assets/icons/logo.svg"
@@ -18,7 +18,7 @@ const Header = () => {
           <div className='flex items-center justify-center gap-[2vw] text-[0.94vw] montreal font-medium uppercase'>
             <div>
               <ul className='flex items-center justify-between gap-[1.5vw]'>
-              <li className="relative group flex items-center gap-1 after:content-[''] after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px] after:bg-white">
+              <li className="relative group flex items-center gap-1 after:content-[''] after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[10px] after:bg-white">
   <Link href={"#"} className="relative">Services</Link>
   <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -28,14 +28,12 @@ const Header = () => {
     <li className="py-1 px-3 hover:bg-gray-100"><Link href="#">Service 2</Link></li>
     <li className="py-1 px-3 hover:bg-gray-100"><Link href="#">Service 3</Link></li>
   </ul>
-</li>
-
-                
+</li>        
                 <li className="relative group">
                   <Link href={"#"}>Solutions</Link>
                 </li>
                 
-                <li className="relative group flex items-center gap-1 after:content-[''] after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px] after:bg-white">
+                <li className="relative group flex items-center gap-1 after:content-[''] after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[10px] after:bg-white">
                   <Link href={"#"}>Industries</Link>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />

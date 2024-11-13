@@ -1,0 +1,73 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 1.8vw;
+    height: 4.2vw;
+    position: relative;
+    width: fit-content;
+    min-width: 15vw;
+    border-radius: 1000px;
+    background:white;
+    color: #111111;
+    font-size: 1.2vw;
+    font-weight: 500;
+    text-rendering: geometricPrecision;
+    border: 1.5px solid #134BD6;
+}
+
+.btn .btnCircle {
+    clip-path: inset(0.8vw 0.9vw 0.8vw calc(100% - 3.7vw) round 4vw);
+    position: absolute;
+    inset: -1px;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    padding: 0 1.85vw;
+    z-index: 2;
+    background-color: #134BD6;
+    color: white;
+    transition: all 0.45s cubic-bezier(.785,.135,.15,.86);
+}
+
+.btn .btnCircleText {
+    display: flex;
+    
+    align-items: center;
+    gap: 0.5vw;
+    width: 100%;
+    padding-left: 0;
+    justify-content: space-between;
+}
+
+.btn .btnIcon {
+    width: 0.8vw;
+    height: 0.8vw;
+    overflow: hidden;
+}
+
+.btn .btnPath {
+    transition: transform 0.45s cubic-bezier(.785,.135,.15,.86);
+    transform-origin: center center;
+}
+
+.btn .btnPath:first-child {
+    transform: translateX(-120%) scale(0);
+}
+
+.btn:hover .btnPath:first-child {
+    transform: translateX(0) scale(1);
+}
+
+.btn:hover .btnPath:last-child {
+    transform: translateX(120%) scale(0);
+}
+.btn:hover{
+    border: 1.5px solid white;
+}
+
+.btn:hover .btnCircle {
+    clip-path: inset(0 round 4vw);
+    background-color: #134BD6;
+    color: white;
+}
+

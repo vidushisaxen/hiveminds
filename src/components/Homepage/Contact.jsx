@@ -5,14 +5,14 @@ import Contactform from './Contactform'
 const Contact = () => {
   return (
     <section id='contact'>
-        <div className='w-screen h-screen p-[4vw] z-[10] relative container-lg'>
-            <div className='w-full h-screen flex gap-[10vw]'>
+        <div className='w-screen h-full p-[4vw] z-[10] relative container-lg'>
+            <div className='w-full h-full flex gap-[10vw]'>
             <div className='w-[35%]'>
                 <h2 className="heading-2 ">
                 Looking to Drive <span className='blue-text'>Growth?</span>
                 </h2>
                 <p className="content w-[90%]">
-                We’re passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us.
+                We&apos;re passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us.
                 </p>
                 <div className='flex mt-[4vw] items-center justify-center gap-[2vw]'>
                     <div className='h-[17.5vw] w-[16.5vw] relative rounded-[16px]'>
@@ -31,6 +31,13 @@ const Contact = () => {
               <Contactform/>
               </div>
             </div>
+
+            <div className="absolute h-[2vw] w-[2.2vw] top-[33%] left-[33%]">
+          <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon"/>
+        </div>
+        <div className="absolute h-[2vw] w-[2.2vw] top-[17%] left-[20%]">
+          <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon"/>
+        </div>
 
         </div>
     </section>
