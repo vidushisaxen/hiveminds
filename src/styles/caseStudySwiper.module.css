@@ -1,7 +1,0 @@
-.caseStudySwiper .swiper-slide-next .swiper-slide-shadow, .caseStudySwiper .swiper-slide-prev .swiper-slide-shadow{
-    border-radius: 25px;
- }
-.caseStudySwiper .swiper-slide-prev{
-    transform: none !important;
-    transform: translateX(-40px) !important;
-}

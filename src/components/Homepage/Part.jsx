@@ -3,6 +3,7 @@ import React from 'react';
 import styles from '@/styles/flipCard.module.css';
 
 const Part = () => {
+  
   return (
     <section id="part mb-[10vw]">
       <div className="w-screen h-full flex flex-col items-center justify-center mb-[5vw] relative">
@@ -16,7 +17,7 @@ const Part = () => {
           </p>
         </div>
 
-        <div className="w-[90%] mx-auto grid grid-cols-12 items-center justify-center relative gap-[2vw]">
+        <div className={`w-[90%] mx-auto grid grid-cols-12 items-center justify-center relative gap-[2vw] ${styles.flipCardsContainer}`}>
           {/* First Card - Flipped to Backside initially */}
           <div className={`${styles.flipCard} w-full h-[20vw] hover:${styles.flipCardInner}`}>
             <div className={`${styles.flipCardInner} relative col-span-3 col-start-1 w-[20vw] h-full flex items-center transform transition-transform duration-500 rotate-y-180 hover:rotate-y-0`}>

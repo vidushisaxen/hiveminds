@@ -52,10 +52,10 @@ const Services = () => {
           <ServiceCard title={"Marketplace"} text={"We provide effective strategies that are aligned with your long-term business goals."} src={"/assets/images/homepage/marketplace.png"}/>
           <ServiceCard title={"Strategy & Consulting"} text={"We provide effective strategies that are aligned with your long-term business goals."} src={"/assets/images/homepage/strategy.png"}/>
         </div>
-        <div className="absolute h-[2vw] w-[2.2vw] bottom-[10%] right-[5%]">
+        <div className="absolute h-[2vw] w-[2.2vw] bottom-[5%] right-[5%]">
           <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon"/>
         </div>
-        <div className="absolute h-[2vw] w-[2.2vw] bottom-[10%] left-[5%]">
+        <div className="absolute h-[2vw] w-[2.2vw] bottom-[5%] left-[5%]">
           <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon"/>
         </div>
       </div>
