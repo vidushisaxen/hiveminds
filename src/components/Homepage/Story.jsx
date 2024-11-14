@@ -1,10 +1,9 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import Image from "next/image";
-import PrimaryButton from "../Buttons/PrimaryButton";
+import PrimaryButton from "../Button/PrimaryButton";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { headingBlur } from "../gsapAnimations";
 gsap.registerPlugin(ScrollTrigger);
 
 const Story = () => {

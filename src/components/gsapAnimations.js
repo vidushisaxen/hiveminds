@@ -1,67 +1,87 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { SplitInLineWord } from "./splitTextUtils";
+import { SplitInLineWord, SplitInLine} from "./splitTextUtils";
 import { useEffect } from "react";
-// import { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 export function headingBlur() {
-  // const headingAnims = document.querySelectorAll(".headinganim");
-  // headingAnims.forEach((headingAnim) => {
-  // let ctx = gsap.context(() => {
-  //     SplitInLineWord(headingAnim);
-  //     const headingWord = headingAnim.querySelectorAll(".word");
-  //     console.log(headingWord)
-  //     gsap.fromTo(headingWord,{
-  //         scrollTrigger: {
-  //           trigger: headingAnim,
-  //           start: "top 80%",
-  //         //   end: "bottom 70%",
-  //           markers: true,
-  //         },
-  //         opacity: 0,
-  //         skewX: 20,
-  //         filter: "blur(8px)",
-  //       },
-  //       {
-  //         // ease: "sine",
-  //         opacity: 1,
-  //         skewX: 0,
-  //         filter: "blur(0px)",
-  //         stagger: 0.2,
-  //         duration: 1,
-  //       }
-  //     );
-  //   });
-  // });
-  // return () => ctx.revert();
-
-  const headings = document.querySelectorAll(".headinganim");
-
-  headings.forEach((heading) => {
-    let ctx = gsap.context(() => {
-      SplitInLineWord(heading);
-      let animWord = heading.querySelectorAll(".word");
-
-      gsap.from(
-        animWord,
-        {
-          opacity: 0,
-          skewX: 20,
-          stagger:0.1,
-          filter: "blur(8px)",
-          scrollTrigger: {
-            trigger: heading,
-            start: "top 80%",
-          },
-        }
-      );
-    });
-    return () => ctx.revert();
-  });
+    useEffect(()=>{
+        const ctx = gsap.context(()=>{
+            const headingAnim = document.querySelectorAll(".headinganim");
+            headingAnim.forEach((headingAnim)=>{
+                SplitInLineWord(headingAnim);
+                const headingWord = headingAnim.querySelectorAll(".word");
+                gsap.from(headingWord,{
+                    scrollTrigger: {
+                        trigger: headingWord,
+                        start: 'top 80%', 
+                        // markers:true
+                      },
+                      opacity: 0,
+                    //   skewX: 10,
+                      yPercent:20,
+                      filter: 'blur(8px)',
+                      stagger:0.05,
+                      duration:0.7
+                });
+            })
+    
+        });
+        
+        return () => ctx.revert();
+    },[]);
+        
 }
+
+export function paraAnim() {
+    useEffect(() => {
+      const ctx = gsap.context(() => {
+        const paraAnimations = document.querySelectorAll("[data-para-anim]");
+        paraAnimations.forEach((paraAnimation) => {
+          SplitInLine(paraAnimation);
+          const paraLine = paraAnimation.querySelectorAll(".line-internal");
+          gsap.from(paraLine, {
+            scrollTrigger: {
+              trigger: paraAnimation,
+              start: "top 90%",
+            },
+            duration: 1.2,
+            yPercent: 100,
+            stagger: 0.07,
+            ease: "power3.out"
+          });
+        });
+      });
+      return () => ctx.revert();
+    }, []);
+  }
+  export function fadeUp() {
+    useEffect(() => {
+      if (globalThis.innerWidth > 0) {
+        const ctx = gsap.context(() => {
+          const content = document.querySelectorAll(".fadeup");
+          content.forEach((content) => {
+            gsap.from(content, {
+              scrollTrigger: {
+                trigger: content,
+                start: "top bottom",
+                end: "bottom 60%",
+              },
+              opacity: 0,
+              yPercent:50,
+              ease:"power3.out",
+              duration: 0.7,
+              stagger: 0.5,
+            });
+          });
+        });
+        return () => ctx.revert();
+      }
+    }, []);
+  }
 
 export function slideIn(){
     useEffect(()=>{

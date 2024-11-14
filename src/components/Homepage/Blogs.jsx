@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import PrimaryButton from '../Button/PrimaryButton';
+import PlainButton from '../Button/PlainButton';
 import { slideIn } from '../gsapAnimations';
 
 const BlogCard=()=>{
@@ -36,16 +36,16 @@ const Blogs = () => {
           <div className="w-[92%] h-full rounded-[30px] bg-[#F2F2F2] flex  justify-center px-[2vw] py-[6vw] gap-[2vw]  drop-shadow-2xl shadow-inner overflow-hidden">
             <div className="w-[35%] h-full ">
               <div className='flex flex-col gap-[2vw]'>
-                <h2 className="heading-2 ">
+                <h2 className="heading-2 headinganim">
                <span className='blue-text'> Passionate </span> About All Things Digital?
                 </h2>
-                <p className="content w-[80%]">
+                <p data-para-anim className="content w-[80%]">
                 Stay updated with our latest industry insights, company news, and thought leadership.
                 </p>
               </div>
               <div className="flex flex-wrap items-center mt-[2vw] gap-[2vw]">
-                <PrimaryButton text={"Blogs"} link={"#"}/>
-                <PrimaryButton text={"News"} link={"#"}/>
+                <PlainButton text={"Blogs"} link={"#"} className="fadeup"/>
+                <PlainButton text={"News"} link={"#"} className="fadeup"/>
               </div>
             </div>
             <div className="w-[70%] h-full flex items-center justify-center slideIn">

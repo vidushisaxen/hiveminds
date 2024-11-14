@@ -1,5 +1,5 @@
 import Footer from '@/components/Footer/Footer'
-import { headingBlur } from '@/components/gsapAnimations'
+import { fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 import Header from '@/components/Header'
 import Awards from '@/components/Homepage/Awards'
 import Blogs from '@/components/Homepage/Blogs'
@@ -14,7 +14,9 @@ import Loader from '@/components/Loader'
 import React from 'react'
 
 const index = () => {
- 
+  headingBlur();
+  paraAnim();
+  fadeUp();
   return (
     <>
    {/* <Loader/> */}

@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
-
 import { FreeMode, Navigation } from "swiper/modules";
 import { slideIn } from "../gsapAnimations";
 import gsap from "gsap";
@@ -56,10 +55,10 @@ const Awards = () => {
     <section id="awards ">
       <div className="h-full w-[99vw] py-[5%] rounded-[30px] bg-[#134BD6] flex flex-col items-start justify-center px-[3vw] overflow-hidden relative">
         <div className="w-[35%] flex flex-col gap-[2vw]">
-          <h2 className="heading-2 font-medium montreal !text-white">
+          <h2 className="heading-2 font-medium montreal !text-white headinganim">
             Our Accolades Speak For Themselves
           </h2>
-          <p className="content-white w-[80%]">
+          <p data-para-anim className="content-white w-[80%]">
             Discover our accolades and industry recognition that highlight our
             commitment to excellence.
           </p>

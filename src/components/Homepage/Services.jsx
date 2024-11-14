@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-import PrimaryButton from "../Buttons/PrimaryButton";
+import PrimaryButton from "../Button/PrimaryButton";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
@@ -71,16 +71,16 @@ useEffect(()=>{
     <section id="services">
       <div className="w-screen h-full flex items-center justify-between container-lg py-[5%] relative">
         <div className="w-[35%] h-[30vw] px-[3vw] py-[5vw] flex flex-col items-start justify-center gap-[3vw] bg-white rounded-[20px] shadow-2xl relative z-[10]">
-          <h2 className="heading-2 w-[85%]">
+          <h2 className="heading-2 w-[85%] headinganim">
             Your <span className="blue-text">Goals</span>, Our Offerings
           </h2>
-          <p className="content w-[80%]">
+          <p data-para-anim className="content w-[80%]">
             See how our strategic partnerships and collaboration drive
             innovation and accelerate your business growth.
           </p>
           <div className="flex w-full items-center justify-center gap-[1vw]">
-            <PrimaryButton text="Our Solutions" href="#" />
-            <PrimaryButton text="Industry" href="#" data-btn-2/>
+            <PrimaryButton text="Our Solutions" href="#"  className="fadeup"/>
+            <PrimaryButton text="Industry" href="#" data-btn-2 className="fadeup"/>
           </div>
         </div>
         <div className="flex items-center justify-center gap-[1vw] w-[62%] h-[30vw] service-card-container">

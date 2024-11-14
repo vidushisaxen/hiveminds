@@ -86,8 +86,8 @@ body{
   height: 0.3vw !important;
  
 }
-.caseStudySwiper .swiper-slide-next .swiper-slide-shadow, .caseStudySwiper .swiper-slide-prev .swiper-slide-shadow{
-  border-radius: 25px;
+.caseStudySwiper .swiper-slide .swiper-slide-shadow{
+  border-radius: 25px !important;
 }
 
 
@@ -115,6 +115,7 @@ body{
   top: -15px;
 }
  
+
 
 
 

@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Scrollbar , Autoplay, FreeMode} from 'swiper/modules';
 import Image from 'next/image';
-import PrimaryButton from '../Button/PrimaryButton';
+import PlainButton from '../Button/PlainButton';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { slideIn } from '../gsapAnimations';
@@ -68,22 +68,22 @@ const CaseStudies = () => {
           <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block px-[3vw] pt-[3vw] shadow-2xl drop-shadow-2xl overflow-hidden">
             <div className="w-[40%] h-full flex flex-col gap-[2vw] ">
               
-                <h2 className="heading-2 ">
+                <h2 className="heading-2 headinganim">
                   Growth Isn&apos;t Just a Buzzword - It&apos;s About Real{" "}
                   <span className="blue-text">Impact</span>
                 </h2>
-                <p className="content w-[80%]">
+                <p data-para-anim className="content w-[80%]">
                 Explore the challenges we&apos;ve overcome and the strategies we&apos;ve implemented to deliver exceptional results across various industries.
                 </p>
               
               <div className="flex flex-wrap items-center mt-[2vw] gap-[1vw] w-[90%]">
-              <PrimaryButton text={"All"} link={"#"}/>
-              <PrimaryButton text={"Healthcare"} link={"#"}/>
-              <PrimaryButton text={"Automobiles"} link={"#"}/>
-              <PrimaryButton text={"Wearables"} link={"#"}/>
-              <PrimaryButton text={"NBFC"} link={"#"}/>
-              <PrimaryButton text={"BFSI"} link={"#"}/>
-              <PrimaryButton text={"CDIT"} link={"#"}/>
+              <PlainButton text={"All"} link={"#"} className="fadeup"/>
+              <PlainButton text={"Healthcare"} link={"#"} className="fadeup"/>
+              <PlainButton text={"Automobiles"} link={"#"} className="fadeup"/>
+              <PlainButton text={"Wearables"} link={"#"} className="fadeup"/>
+              <PlainButton text={"NBFC"} link={"#"} className="fadeup"/>
+              <PlainButton text={"BFSI"} link={"#"} className="fadeup"/>
+              <PlainButton text={"CDIT"} link={"#"} className="fadeup"/>
               </div>
             </div>
             <div className="w-[60%] h-[90%] flex items-center justify-center slideInCaseCarousel">

@@ -67,10 +67,10 @@ const Clients = () => {
     <section id="clients" >
       <div className="w-screen h-full flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw]">
-          <h2 className="heading-2">
+          <h2 className="heading-2 headinganim">
             <span className="blue-text">Proud</span> to work with
           </h2>
-          <p className="content w-[70%] text-center">
+          <p  className="content w-[70%] text-center">
             Our diverse & growing portfolio spanning from lean startups to household brands - and everything in between
           </p>
         </div>

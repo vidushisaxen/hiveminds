@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 import { EffectCards } from 'swiper/modules'
-import PrimaryButton from '../Buttons/PrimaryButton'
-
+import PrimaryButton from '../Button/PrimaryButton'
+import gsap from 'gsap'
+import Image from 'next/image'
 
 const CaseStudyCard = ({ src, no, para }) => {
   return (
@@ -27,8 +27,11 @@ const CaseStudyCard = ({ src, no, para }) => {
 }
 
 const Hero = () => {
+  const firstSlideRef = useRef(null);
+  const secondSlideRef = useRef(null);
+  const thirdSlideRef = useRef(null);
 
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const slidesData = [
     { 
@@ -43,10 +46,33 @@ const Hero = () => {
     },
     { 
       title: "Enhancing Brand", 
-      subtitle: "Recognition", 
+      subtitle: "Search", 
       description: "Helping brands stand out with impactful campaigns and strategies" 
     },
-  ]
+  ];
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.from(firstSlideRef.current, {
+      scale: 0,
+      opacity: 0.5,
+      ease: 'power3.out',
+      duration: 1,
+    })
+    .from(secondSlideRef.current, {
+      x: 10,
+      opacity: 0,
+      ease: 'power3.out',
+      duration: 0.7,
+    }, '-=0.5')
+    .from(thirdSlideRef.current, {
+      x: 10,
+      opacity: 0,
+      ease: 'power3.out',
+      duration: 0.7,
+    }, '-=0.5'); 
+  }, []);
 
   return (
     <section id='hero'>
@@ -54,50 +80,53 @@ const Hero = () => {
         <div className='w-[45%] flex flex-col gap-[2vw] flex-wrap'>
           <h1 className='heading-1 leading-[1.2] flex gap-[0.5vw] headinganim '>
             <span>{slidesData[activeIndex].title}
-            <span className='blue-text ml-[0.8vw]'>{slidesData[activeIndex].subtitle}</span></span>
+              <span className='blue-text ml-[0.8vw]'>{slidesData[activeIndex].subtitle}</span>
+            </span>
           </h1>
-          <p className='content w-[75%] tracking-wide'>
+          <p data-para-anim className='content w-[75%] tracking-wide'>
             {slidesData[activeIndex].description}
           </p>
-          {/* <LinkButton text={"View Case Study"} link={"#"} /> */}
-          <PrimaryButton href="#" text="View Case Study"/>
+          <PrimaryButton href="#" text="View Case Study" className='fadeup'/>
         </div>
 
         <div className='w-[42%] h-[35vw]'>
           <Swiper
             effect={'cards'}
             grabCursor={true}
+            spaceBetween={30}
             loop={true}
             modules={[EffectCards]}
-            className={`caseStudySwiper w-full h-full`}
+            className='caseStudySwiper w-full h-full'
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+            cardsEffect={{
+              perSlideRotate: "0",}}
           >
-            <SwiperSlide>
+            <SwiperSlide ref={firstSlideRef}>
               <CaseStudyCard 
-                src={"/assets/images/homepage/big-basket.png"} 
-                no={"2.35x"} 
-                para={"Growth In Installs"} 
+                src="/assets/images/homepage/big-basket.png" 
+                no="2.35x" 
+                para="Growth In Installs" 
               />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide ref={secondSlideRef}>
               <CaseStudyCard 
-                src={"/assets/images/homepage/dominos.png"} 
-                no={"430k+"} 
-                para={"New Orders Within 1 Year"} 
+                src="/assets/images/homepage/dominos.png" 
+                no="430k+" 
+                para="New Orders Within 1 Year" 
               />
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide ref={thirdSlideRef}>
               <CaseStudyCard 
-                src={"/assets/images/homepage/fly-dubai.png"} 
-                no={"67%"} 
-                para={"Growth in Brand Searches"} 
+                src="/assets/images/homepage/fly-dubai.png" 
+                no="67%" 
+                para="Growth in Brand Searches" 
               />
             </SwiperSlide>
           </Swiper>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
