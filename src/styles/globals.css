@@ -69,6 +69,19 @@ body{
   margin-right: auto;
 }
 
+[data-para-anim],
+.para-anim,
+.lineWord {
+  font-kerning: none;
+}
+
+[data-para-anim] .line,
+.para-anim .line,
+.lineWord .line {
+  overflow: hidden;
+  
+}
+
 .awards-swiper{
   overflow: visible !important;
 }

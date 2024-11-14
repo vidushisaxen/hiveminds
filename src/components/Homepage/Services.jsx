@@ -25,7 +25,7 @@ const ServiceCard = ({ title, src, text,className }) => {
         </div>
       </div>
 
-      <p className="text-[1.04vw] text-[#111111] tracking-wide">{text}</p>
+      <p data-para-anim className="text-[1.04vw] text-[#111111] tracking-wide">{text}</p>
 
     </div>
 

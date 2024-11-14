@@ -50,7 +50,7 @@ const Story = () => {
               <p className="text-[2.8vw] montreal text-[#FFFFFF] leading-[1.2] headinganim">
                 Fuelling Your Growth Ambitions, With Confidence.
               </p>
-              <p className="content-white">
+              <p data-para-anim className="content-white">
                 At HiveMinds, we tackle your most challenging business problems
                 with our specialized digital marketing approach - integrating
                 strategic expertise, cutting-edge technology, and data-driven
@@ -74,7 +74,7 @@ const Story = () => {
               <p className="text-[2.8vw] montreal text-[#FFFFFF] leading-[1.2] w-[90%] headinganim">
                 Driven by Talent, Powered by Teamwork
               </p>
-              <p className="content-white">
+              <p data-para-anim className="content-white">
                 Driven by a shared passion for elevating brands, we HiveMinders
                 understands our clients&apos; unique goals and aspirations. We
                 leverage our expertise to craft compelling brand experiences,
