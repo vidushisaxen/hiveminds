@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
-import LinkButton from '../Button/LinkButton'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 import { EffectCards } from 'swiper/modules'
+import PrimaryButton from '../Buttons/PrimaryButton'
 
 const CaseStudyCard = ({ src, no, para }) => {
   return (
@@ -57,7 +57,8 @@ const Hero = () => {
           <p className='content w-[75%] tracking-wide'>
             {slidesData[activeIndex].description}
           </p>
-          <LinkButton text={"View Case Study"} link={"#"} />
+          {/* <LinkButton text={"View Case Study"} link={"#"} /> */}
+          <PrimaryButton href="#" text="View Case Study"/>
         </div>
 
         <div className='w-[42%] h-[35vw]'>

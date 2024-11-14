@@ -19,6 +19,7 @@ import {
 import { Checkbox } from "../ui/checkbox";
 import { Input } from "@/components/ui/input";
 import LinkButton from "../Button/LinkButton";
+import FormButton from "../Buttons/FormButton";
 // import { Checkbox } from "@radix-ui/react-checkbox";
 
 export default function Contactform() {
@@ -205,10 +206,8 @@ export default function Contactform() {
 
           {/* Submit Button */}
           <div className="w-full flex">
-            <LinkButton
-              link={"#"}
-              text={"Submit"}
-              type="submit"
+            <FormButton
+              text="Submit"
             />
           </div>
         </form>

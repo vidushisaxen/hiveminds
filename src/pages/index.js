@@ -13,25 +13,25 @@ import React from 'react'
 
 const index = () => {
   return (
-   <>
-   <Header/>
-   <main>
-  <Hero/>
-  <Story/>
-  <Services/>
-  <Clients/>
-  <Part/>
-  <div className='relative h-full w-screen rounded-[20px] bg-[#134BD6] mt-[10%] '>
-    <span className=' block absolute h-[20%] bg-white w-full'></span>
-  <CaseStudies/>
-  <Awards/>
-    <span className='absolute h-[20%] bottom-[-10%] bg-white w-full'></span>
-  <Blogs/>
-  </div>
-  <Contact/>
-  </main>
-  <Footer/>
-   </>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Story />
+        <Services />
+        <Clients />
+        <Part />
+        <div className='relative h-full w-screen rounded-[20px] bg-[#134BD6] mt-[10%] '>
+          <span className=' block absolute h-[20%] bg-white w-full'></span>
+          <CaseStudies />
+          <Awards />
+          <span className='absolute h-[20%] bottom-[-10%] bg-white w-full'></span>
+          <Blogs />
+        </div>
+        <Contact />
+      </main>
+      <Footer />
+    </>
   )
 }
 
