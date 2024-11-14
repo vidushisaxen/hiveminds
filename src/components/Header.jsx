@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <section id="header">
       <div
-        className={`h-fit w-screen flex fixed top-0 left-0 z-[999] items-center justify-between px-[5vw] py-[2vw] bg-white/70 transition-transform duration-300 ${
+        className={`h-fit w-screen flex fixed top-0 left-0 z-[990] items-center justify-between px-[5vw] py-[2vw] bg-white/70 transition-transform duration-300 ${
           showHeader ? 'translate-y-0' : '-translate-y-full'
         }`}
       >

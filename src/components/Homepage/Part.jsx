@@ -5,8 +5,8 @@ import styles from '@/styles/flipCard.module.css';
 const Part = () => {
   
   return (
-    <section id="part mb-[10vw]">
-      <div className="w-screen h-full flex flex-col items-center justify-center mb-[5vw] relative">
+    <section id="part">
+      <div className="w-screen h-full flex flex-col items-center justify-center relative">
         <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw]">
           <h2 className="heading-2">
             Be A Part Of

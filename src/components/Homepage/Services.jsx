@@ -1,12 +1,13 @@
-import React from "react";
-import LinkButton from "../Button/LinkButton";
-import LinkButtonWhite from "../Button/LinkButtonWhite";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import PrimaryButton from "../Buttons/PrimaryButton";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 
-const ServiceCard = ({ title, src, text }) => {
+const ServiceCard = ({ title, src, text,className }) => {
   return (
-    <div className="h-full w-[22vw] bg-[#F2F2F2] border border-[#E0E0E0] rounded-[1.5vw] flex flex-col items-start justify-start gap-[4vw] px-[1.2vw] py-[2vw] relative container-lg">
+    <div className={`h-full w-[22vw] bg-[#F2F2F2] border border-[#E0E0E0] rounded-[1.5vw] flex flex-col items-start justify-start gap-[4vw] px-[1.2vw] py-[2vw] relative container-lg ${className}`}>
       <div className="flex items-center justify-between w-full">
         <p className="text-[1.5vw]">{title}</p>
         <div className="w-[3vw] h-[3vw] border border-[#111111] relative p-[1vw] rounded-full">
@@ -32,10 +33,44 @@ const ServiceCard = ({ title, src, text }) => {
 };
 
 const Services = () => {
+useEffect(()=>{
+  const ctx = gsap.context(()=>{
+    const tl = gsap.timeline({
+      scrollTrigger:{
+        trigger:"#services",
+        start:"top 60%",
+        end:"50% top",
+        
+        // scrub:true
+      
+      }
+    })
+    tl.to(".card1",{
+       xPercent:120,
+       duration:1,
+       ease:"power3.out"
+    })
+    .to(".card2",{
+      xPercent:240,
+      delay:-1,
+      duration:1,
+      ease:"power3.out"
+    })
+    .to(".card3",{
+      xPercent:330,
+      delay:-1,
+      duration:1.4,
+      ease:"power3.out"
+    })
+
+  })
+  return()=>ctx.revert()
+},[])
+
   return (
     <section id="services">
       <div className="w-screen h-full flex items-center justify-between container-lg py-[5%] relative">
-        <div className="w-[35%] h-[30vw] px-[3vw] py-[5vw] flex flex-col items-start justify-center gap-[3vw] rounded-[20px] shadow-2xl">
+        <div className="w-[35%] h-[30vw] px-[3vw] py-[5vw] flex flex-col items-start justify-center gap-[3vw] bg-white rounded-[20px] shadow-2xl relative z-[10]">
           <h2 className="heading-2 w-[85%]">
             Your <span className="blue-text">Goals</span>, Our Offerings
           </h2>
@@ -48,10 +83,10 @@ const Services = () => {
             <PrimaryButton text="Industry" href="#" data-btn-2/>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-[1vw] w-[62%] h-[30vw]">
-          <ServiceCard title={"SEO"} text={"We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility."} src={"/assets/images/homepage/seo.png"} />
-          <ServiceCard title={"Marketplace"} text={"We provide effective strategies that are aligned with your long-term business goals."} src={"/assets/images/homepage/marketplace.png"} />
-          <ServiceCard title={"Strategy & Consulting"} text={"We provide effective strategies that are aligned with your long-term business goals."} src={"/assets/images/homepage/strategy.png"} />
+        <div className="flex items-center justify-center gap-[1vw] w-[62%] h-[30vw] service-card-container">
+          <ServiceCard title={"SEO"} text={"We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility."} src={"/assets/images/homepage/seo.png"} className={"card1 z-[4] translate-x-[-120%] "} />
+          <ServiceCard title={"Marketplace"} text={"We provide effective strategies that are aligned with your long-term business goals."} src={"/assets/images/homepage/marketplace.png"} className={"card2 z-[3] translate-x-[-240%]"} />
+          <ServiceCard title={"Strategy & Consulting"} text={"We provide effective strategies that are aligned with your long-term business goals."} src={"/assets/images/homepage/strategy.png"} className={"card3 z-[2] translate-x-[-330%]"}/>
         </div>
         <div className="absolute h-[2vw] w-[2.2vw] bottom-[5%] right-[5%]">
           <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon"/>

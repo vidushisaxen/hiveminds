@@ -1,4 +1,5 @@
 import Footer from '@/components/Footer/Footer'
+import { headingBlur } from '@/components/gsapAnimations'
 import Header from '@/components/Header'
 import Awards from '@/components/Homepage/Awards'
 import Blogs from '@/components/Homepage/Blogs'
@@ -9,11 +10,14 @@ import Hero from '@/components/Homepage/Hero'
 import Part from '@/components/Homepage/Part'
 import Services from '@/components/Homepage/Services'
 import Story from '@/components/Homepage/Story'
+import Loader from '@/components/Loader'
 import React from 'react'
 
 const index = () => {
+ 
   return (
     <>
+   {/* <Loader/> */}
       <Header />
       <main>
         <Hero />
@@ -21,7 +25,7 @@ const index = () => {
         <Services />
         <Clients />
         <Part />
-        <div className='relative h-full w-screen rounded-[20px] bg-[#134BD6] mt-[10%] '>
+        <div className='relative h-full w-screen rounded-[20px] bg-[#134BD6] '>
           <span className=' block absolute h-[20%] bg-white w-full'></span>
           <CaseStudies />
           <Awards />

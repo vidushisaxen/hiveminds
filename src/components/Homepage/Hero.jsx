@@ -6,6 +6,7 @@ import 'swiper/css/effect-cards'
 import { EffectCards } from 'swiper/modules'
 import PrimaryButton from '../Buttons/PrimaryButton'
 
+
 const CaseStudyCard = ({ src, no, para }) => {
   return (
     <div className='w-full h-full flex items-center justify-center'>
@@ -26,6 +27,7 @@ const CaseStudyCard = ({ src, no, para }) => {
 }
 
 const Hero = () => {
+
   const [activeIndex, setActiveIndex] = useState(0)
 
   const slidesData = [
@@ -48,9 +50,9 @@ const Hero = () => {
 
   return (
     <section id='hero'>
-      <div className=' w-full h-screen flex items-center justify-between container-lg mt-[5vw] pe-[5vw]'>
+      <div className=' w-full h-screen flex items-center justify-between container-lg pt-[5vw] pe-[5vw]'>
         <div className='w-[45%] flex flex-col gap-[2vw] flex-wrap'>
-          <h1 className='heading-1 leading-[1.2] flex gap-[0.5vw] '>
+          <h1 className='heading-1 leading-[1.2] flex gap-[0.5vw] headinganim '>
             <span>{slidesData[activeIndex].title}
             <span className='blue-text ml-[0.8vw]'>{slidesData[activeIndex].subtitle}</span></span>
           </h1>

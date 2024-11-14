@@ -1,10 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 
 import { FreeMode, Navigation } from "swiper/modules";
+import { slideIn } from "../gsapAnimations";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 
 const AwardCard = ({ img, title, year, category }) => {
   return (
@@ -27,6 +31,7 @@ const AwardCard = ({ img, title, year, category }) => {
   );
 };
 const Awards = () => {
+  
   const swiperRef = useRef(null); // Create a ref for Swiper
 
   // State to track which button was clicked
@@ -59,12 +64,12 @@ const Awards = () => {
             commitment to excellence.
           </p>
         </div>
-        <div className="w-[100vw] h-full flex items-center justify-center ml-[-3vw] px-[3vw] mt-[5%] ">
+        <div className="w-[100vw] h-full flex items-center justify-center ml-[-3vw] px-[3vw] mt-[5%]  ">
           <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             loop={true}
-            slidesPerView={2.5}
-            modules={[Navigation, FreeMode]}
+            slidesPerView={2.7}
+            modules={ FreeMode}
             freeMode={true}
             className="awards-swiper w-full h-full flex items-center justify-center"
           >
@@ -129,6 +134,7 @@ const Awards = () => {
               />
             </SwiperSlide>
           </Swiper>
+        </div>
           <div
             className={`absolute z-[5] top-[15%] right-[5%] overflow-hidden p-[1vw] rounded-full next-button cursor-pointer border border-white
                 ${
@@ -163,7 +169,6 @@ const Awards = () => {
               />
             </div>
           </div>
-        </div>
       </div>
     </section>
   );

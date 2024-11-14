@@ -1,10 +1,14 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Scrollbar , Autoplay, FreeMode} from 'swiper/modules';
 import Image from 'next/image';
 import PrimaryButton from '../Button/PrimaryButton';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import { slideIn } from '../gsapAnimations';
+gsap.registerPlugin(ScrollTrigger)
 
 const Card=({img,title,des})=>{
   return(
@@ -25,11 +29,43 @@ const Card=({img,title,des})=>{
   )
 }
 const CaseStudies = () => {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#caseStudies",
+          scrub: true,
+          start: "top 90%",
+          end: "bottom 60%",
+        },
+      });
+      tl.from(".casestudy-block", {
+        scale:1.2,
+        yPercent:-5
+      });
+      gsap.from(
+        ".slideInCaseCarousel",
+        {
+          opacity: 0,
+          xPercent:100,
+          duration:1,
+          
+          scrollTrigger: {
+            trigger: ".slideInCaseCarousel",
+            start: "top 80%",
+          
+          },
+        }
+      );
+    });
+    return () => ctx.revert();
+  });
+  // slideIn()
   return (
     <>
-      <section id="caseStudies">
+      <section id="caseStudies" className='pt-[15%]' >
         <div className="w-screen h-[45vw] flex items-center justify-center  z-[10] ">
-          <div className="w-[92%] h-full rounded-[30px] bg-white flex items-center justify-center px-[3vw] pt-[3vw] shadow-2xl drop-shadow-2xl">
+          <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block px-[3vw] pt-[3vw] shadow-2xl drop-shadow-2xl overflow-hidden">
             <div className="w-[40%] h-full flex flex-col gap-[2vw] ">
               
                 <h2 className="heading-2 ">
@@ -50,7 +86,7 @@ const CaseStudies = () => {
               <PrimaryButton text={"CDIT"} link={"#"}/>
               </div>
             </div>
-            <div className="w-[60%] h-[90%] flex items-center justify-center">
+            <div className="w-[60%] h-[90%] flex items-center justify-center slideInCaseCarousel">
             <Swiper
         scrollbar={{
           hide: false,

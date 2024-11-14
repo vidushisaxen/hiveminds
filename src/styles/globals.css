@@ -9,13 +9,20 @@
   --body: #111111;
   --font-body: "Avenir", Arial, Helvetica, sans-serif ;
 }
+/* #__next{
+  background-color: #FFFFFF;
+} */
 
+section{
+  background-color: #FFFFFF;
+}
 body{
   overflow-x: hidden;
   width: 100vw;
   font-family: var(--font-body);
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
+  background-color: #FFFFFF;
 }
 .montreal{
   font-family: 'Montreal';
@@ -85,7 +92,29 @@ body{
 
 
 
+/* counter animation */
+.counter,
+.count,
+.countnew {
+  bottom: 150px;
+  display: flex;
+  height: 70px;
+  font-size: 6vw;
+}
 
+.counter-1,
+.counter-2,
+.counter-3,
+.counter-4,
+.count-2,
+.count-3,
+.count-4,
+.countnew-2,
+.countnew-3,
+.countnew-4 {
+  top: -15px;
+}
+ 
 
 
 

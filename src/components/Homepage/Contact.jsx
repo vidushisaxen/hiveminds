@@ -1,10 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Contactform from './Contactform'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
 const Contact = () => {
+  // useEffect(()=>{
+  //   let ctx = gsap.context(()=>{
+  //        gsap.to("#contact",{
+  //         yPercent:-100,
+          
+  //         ease:"none",
+  //         scrollTrigger:{
+  //           trigger:"#contact",
+  //           start:"top top",
+  //           end:"+=2000 top",
+  //           // markers:true, 
+  //           scrub:true
+  //         }
+  //        })
+  //   })
+  //   return()=>ctx.revert();
+  // },[])
   return (
-    <section id='contact'>
+    <section id='contact' >
         <div className='w-screen h-full z-[10] relative container-lg py-[7%]'>
             <div className='w-full h-full flex gap-[10vw]'>
             <div className='w-[45%] flex flex-col gap-[2vw]'>

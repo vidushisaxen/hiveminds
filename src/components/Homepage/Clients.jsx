@@ -64,7 +64,7 @@ const Clients = () => {
   ];
 
   return (
-    <section id="clients">
+    <section id="clients" >
       <div className="w-screen h-full flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw]">
           <h2 className="heading-2">
