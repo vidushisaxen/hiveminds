@@ -7,7 +7,7 @@ import Map from './Map'
 const Footer = () => {
        
   return (
-    <section id='footer' className=''>
+    <section id='footer' className='fixed'>
         <div className='w-screen h-full flex flex-col items-center justify-center bg-[#134BD6] py-[5vw] pb-[2vw] pt-[8vw] gap-[4vw] '>
         <div className='w-full h-full flex items-center justify-between gap-[10vw] text-white container-lg'>
             <div className='w-[30%] h-full flex flex-col items-start justify-start gap-[2vw]'>
@@ -119,4 +119,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;

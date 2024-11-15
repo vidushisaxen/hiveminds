@@ -19,11 +19,17 @@ const Card=({img,title,des})=>{
                 alt="bigbasket-casestudy"
                 className='object-contain'
                  />
-                  <div className='absolute top-[-0.5%] right-[-3%] rounded-br-[20px] flex 
-                  flex-col items-center justify-center w-[15vw]'>
-          <p className='font-medium text-[2vw] leading-[1]'>{title}</p>
-          <p className='text-[0.94vw] font-medium leading-[1] w-[50%]'>{des}</p>
-        </div>
+                  <div className='flex absolute top-0 rounded-br-[20px] right-0 items-center justify-center w-[11.7vw] h-[4.5vw] py-[1vw] '>
+  <div className=" flex flex-col items-center justify-center text-center">
+    <p className="font-medium text-[1.5vw] leading-[1]">{title}</p>
+    <p className="text-[0.7vw] font-medium w-[95%] leading-[1]">{des}</p>
+  </div>
+  <span className='bg-black h-[3vw] w-[2px] '></span>
+  <div className=" flex flex-col items-center justify-center text-center">
+    <p className="font-medium text-[1.5vw] leading-[1]">{title}</p>
+    <p className="text-[0.7vw] font-medium w-[95%] leading-[1]">{des}</p>
+  </div>
+</div>
             </div>
     </>
   )

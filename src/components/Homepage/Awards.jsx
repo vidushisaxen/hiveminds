@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 import { FreeMode, Navigation } from "swiper/modules";
-import { slideIn } from "../gsapAnimations";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
@@ -12,12 +11,12 @@ gsap.registerPlugin(ScrollTrigger)
 const AwardCard = ({ img, title, year, category }) => {
   return (
     <>
-      <div className="w-[34.2vw] h-[11.5vw] border-[0.5px] border-white/20 rounded-[20px] flex items-center  px-[1vw]  bg-white/10 awards-card">
+      <div className="w-[34.2vw] h-[11.5vw] border-[0.5px] border-white/20 rounded-[1vw] flex items-center  px-[1vw]  bg-white/10 awards-card cursor-pointer">
         <div className="flex items-center justify-between gap-[1vw] w-full">
           <div className="w-[10vw] h-[8.3vw] relative">
             <Image src={img} fill alt="awards-1" />
           </div>
-          <div>
+          <div className="w-[80%]">
             <p className="text-white text-[1.25vw] font-medium montreal ">
               {title}
             </p>
@@ -67,6 +66,7 @@ const Awards = () => {
           <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             loop={true}
+            spaceBetween={30}
             slidesPerView={2.7}
             modules={ FreeMode}
             freeMode={true}

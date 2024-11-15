@@ -39,7 +39,7 @@ export default function Contactform() {
   };
 
   return (
-    <div className="w-full h-full p-[2vw] pb-[3vw] rounded-[1vw] fadeup">
+    <div className="w-full h-full p-[2vw] pb-[3vw] rounded-[0.5vw] fadeup">
       <Form {...form}>  
         <form className="space-y-8">
           {/* Name Field */}
@@ -51,7 +51,7 @@ export default function Contactform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="First Name *" {...field} className="h-[4vw] rounded-[1vw]"/>
+                      <Input placeholder="First Name *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none"/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -69,7 +69,7 @@ export default function Contactform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Email Address *" {...field} className="h-[4vw] rounded-[1vw]"/>
+                      <Input placeholder="Email Address *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none"/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -87,7 +87,7 @@ export default function Contactform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Phone Number *" {...field} className="h-[4vw] rounded-[1vw]"/>
+                      <Input placeholder="Phone Number *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none"/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -105,7 +105,7 @@ export default function Contactform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Company Name *" {...field} className="h-[4vw] rounded-[1vw]"/>
+                      <Input placeholder="Company Name *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none"/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -115,7 +115,7 @@ export default function Contactform() {
           </div>
 
           <Select>
-      <SelectTrigger className="w-full h-[4vw]">
+      <SelectTrigger className="w-full h-[4vw] drop-shadow-none  shadow-none">
         <SelectValue placeholder="Services" />
       </SelectTrigger>
       <SelectContent>
@@ -131,7 +131,7 @@ export default function Contactform() {
     </Select>
 
           {/* Message Field */}
-          <div className="w-full flex gap-[1vw] items-center ">
+          <div className="w-full flex gap-[1vw] items-center">
             <div className="w-[90vw] h-fit">
               <FormField
                 control={form.control}
@@ -139,7 +139,7 @@ export default function Contactform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Message" {...field} className="h-[4vw] rounded-[1vw]"/>
+                      <Input placeholder="Message" {...field} className="h-[6vw] rounded-[0.5vw] drop-shadow-none  shadow-none"/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>

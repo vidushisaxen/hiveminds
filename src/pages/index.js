@@ -1,4 +1,4 @@
-import Footer from '@/components/Footer/Footer'
+import Footer from '@/components/Footer'
 import { fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 import Header from '@/components/Header'
 import Awards from '@/components/Homepage/Awards'
@@ -7,9 +7,9 @@ import CaseStudies from '@/components/Homepage/CaseStudies'
 import Clients from '@/components/Homepage/Clients'
 import Contact from '@/components/Homepage/Contact'
 import Hero from '@/components/Homepage/Hero'
-import Part from '@/components/Homepage/Part'
 import Services from '@/components/Homepage/Services'
 import Story from '@/components/Homepage/Story'
+import TeamMembers from '@/components/Homepage/TeamMembers'
 import Loader from '@/components/Loader'
 import React from 'react'
 
@@ -19,24 +19,25 @@ const index = () => {
   fadeUp();
   return (
     <>
-   {/* <Loader/> */}
+   <Loader/>
       <Header />
       <main>
         <Hero />
         <Story />
         <Services />
         <Clients />
-        <Part />
+      <TeamMembers/>
         <div className='relative h-full w-screen rounded-[20px] bg-[#134BD6] '>
-          <span className=' block absolute h-[20%] bg-white w-full'></span>
+          <span className=' block absolute h-[20%] w-full'></span>
           <CaseStudies />
           <Awards />
-          <span className='absolute h-[20%] bottom-[-10%] bg-white w-full'></span>
+          <span className='absolute h-[20%] bottom-[-10%]  w-full'></span>
           <Blogs />
         </div>
         <Contact />
       </main>
-      <Footer />
+      <Footer/>
+     
     </>
   )
 }
