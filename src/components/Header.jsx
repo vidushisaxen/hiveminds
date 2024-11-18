@@ -29,26 +29,26 @@ const Header = () => {
     };
   }, [lastScrollY]);
 
-//   useEffect(()=>{
-//     let ctx = gsap.context(()=>{
-//     gsap.from(headerRef.current,{
-//       y:-20,
-//       opacity:0,
-//       delay:7,
-//       duration:1
-//     })
-//   })
-// return()=>ctx.revert;
-//   },[])
+  useEffect(()=>{
+    let ctx = gsap.context(()=>{
+    gsap.from(headerRef.current,{
+      y:-20,
+      opacity:0,
+      delay:7,
+      duration:1
+    })
+  })
+return()=>ctx.revert;
+  },[])
 
   return (
     <header
       className={`fixed top-0 left-0 w-full z-[100] transition-transform duration-300 ${
         isHidden ? "-translate-y-full" : "translate-y-0"
-      }`}  ref={headerRef}
+      }`} 
     >
       <div
-        className={`h-fit w-full flex items-center justify-between px-[5vw] py-[2vw] glassmorphism`}
+        className={`h-fit w-full flex items-center justify-between px-[5vw] py-[2vw] glassmorphism`}  ref={headerRef}
       >
         <div className="w-[10.5vw] h-[3.2vw] relative">
           <Image src="/assets/icons/logo.svg" fill alt="hiveminds-logo" />
