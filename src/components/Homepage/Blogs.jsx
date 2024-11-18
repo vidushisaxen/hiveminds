@@ -7,7 +7,7 @@ import { slideIn } from '../gsapAnimations';
 const BlogCard=()=>{
   return(
     <>
-    <div className='h-[35vw] w-[26vw] bg-white rounded-[1.5vw] flex flex-col items-start gap-[1vw] px-[1vw] py-[1vw] group hover:shadow-lg hover:drop-shadow-lg transition-all ease-in-out duration-500 '>
+    <Link href={"#"} className='h-[35vw] w-[26vw] bg-white rounded-[1.5vw] flex flex-col items-start gap-[1vw] px-[1vw] py-[1vw] group hover:shadow-lg hover:drop-shadow-lg transition-all ease-in-out duration-500 '>
       <div className='h-[55%] w-full relative overflow-hidden rounded-[1.2vw]'>
         <Image src="/assets/images/homepage/blogs-1.png" fill alt='blogs-1' className='group-hover:scale-[1.1] transition-all ease-in-out duration-500'/>
       </div>
@@ -17,12 +17,11 @@ const BlogCard=()=>{
       <p className='text-[1vw] text-black/50'>June 6, 2024</p>
       <div className='w-fit'>
 
-      <Link href={"#"}>
-      <p className='content  border-b border-[#111111] group-hover:border-[#134BD6] group-hover:text-[#134BD6] transition-all ease-in-out duration-300'>Read more</p>
-      </Link>
+      <p className='content group-hover:text-[#134BD6] transition-all ease-in-out duration-500 after:block after:w-full after:bg-black after:h-[1.2px] after:mt-[-0.4vw] group-hover:after:scale-0 group-hover:after:transition-all after:transition-all after:duration-500 after:ease-in-out group-hover:after:duration-500 group-hover:after:ease-in-out    group-hover:after:origin-center'>Read more</p>
+      
       </div>
       </div>
-    </div>
+    </Link>
     </>
   )
 }
@@ -54,7 +53,7 @@ const Blogs = () => {
                 <BlogCard/>
                 <div className='flex items-center justify-center h-[35vw] w-[5vw]'>
                 <Link href={"#"}>
-                <p className='content  border-b border-[#111111]'>View All</p>
+                <p className='content after:block after:w-full after:bg-black after:h-[1px] after:mt-[-0.4vw] after:transition-all after:duration-500 hover:after:scale-x-0 hover:after:transition-all hover:after:duration-500 hover:after:origin-center'>View All</p>
                 </Link>
                 </div>
               </div>

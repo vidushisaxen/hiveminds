@@ -98,6 +98,9 @@
 
 /*plainButton*/
 .buttonPlain {
+  padding: 1.4vw 3vw;
+  min-width: 8vw;
+  max-width: 12vw;
   transition: transform 0.7s cubic-bezier(.4,0,0,1); 
 }
 

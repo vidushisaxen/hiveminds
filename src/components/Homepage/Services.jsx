@@ -3,12 +3,13 @@ import Image from "next/image";
 import PrimaryButton from "../Button/PrimaryButton";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 const ServiceCard = ({ title, src, text, className }) => {
   return (
-    <div
-      className={`h-full w-[22vw] bg-[#F2F2F2] border border-[#E0E0E0] rounded-[1.2vw] flex flex-col items-start justify-start gap-[4vw] px-[1.2vw] py-[2vw] relative container-lg ${className}`}
+    <Link href={"#"}
+      className={`h-full w-[22vw] bg-[#F2F2F2] border border-[#E0E0E0] hover:bg-white hover:shadow-md hover:drop-shadow-md transition-all duration-500 ease-in-out rounded-[1.2vw] flex flex-col items-start justify-start gap-[4vw] px-[1.2vw] py-[2vw] relative container-lg ${className}`}
     >
       <div className="flex items-center justify-between w-full">
         <p className="text-[1.5vw]">{title}</p>
@@ -30,7 +31,7 @@ const ServiceCard = ({ title, src, text, className }) => {
       <p data-para-anim className="text-[1.04vw] text-[#111111] tracking-wide">
         {text}
       </p>
-    </div>
+    </Link>
   );
 };
 

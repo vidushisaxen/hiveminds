@@ -70,7 +70,7 @@ const Clients = () => {
           <h2 className="heading-2 headinganim">
             <span className="blue-text">Proud</span> to work with
           </h2>
-          <p  className="content w-[70%] text-center">
+          <p  className="content w-[70%] text-center fadeup">
             Our diverse & growing portfolio spanning from lean startups to household brands - and everything in between
           </p>
         </div>

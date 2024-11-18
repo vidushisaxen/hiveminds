@@ -10,7 +10,7 @@ const Footer = () => {
       className="w-screen h-screen bg-transparent"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="w-screen h-screen flex flex-col items-center justify-center bg-[#134BD6] py-[3vw] gap-[1vw] fixed bottom-0">
+      <div className="w-screen h-screen flex flex-col items-center justify-between bg-[#134BD6] pt-[3vw] pb-[2vw] gap-[1vw] fixed bottom-0">
         <div className="w-full h-fit flex items-center justify-between gap-[10vw] text-white container-lg">
           <div className="w-[30%] h-full flex flex-col items-start justify-start gap-[2vw]">
             <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal">
