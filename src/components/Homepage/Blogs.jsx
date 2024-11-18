@@ -7,9 +7,9 @@ import { slideIn } from '../gsapAnimations';
 const BlogCard=()=>{
   return(
     <>
-    <div className='h-[35vw] w-[26vw] bg-white rounded-[1.5vw] flex flex-col items-start gap-[1vw] px-[1vw] py-[1vw] group hover:shadow-lg hover:drop-shadow-lg transition-all ease-in-out duration-300 '>
+    <div className='h-[35vw] w-[26vw] bg-white rounded-[1.5vw] flex flex-col items-start gap-[1vw] px-[1vw] py-[1vw] group hover:shadow-lg hover:drop-shadow-lg transition-all ease-in-out duration-500 '>
       <div className='h-[55%] w-full relative overflow-hidden rounded-[1.2vw]'>
-        <Image src="/assets/images/homepage/blogs-1.png" fill alt='blogs-1' className='group-hover:scale-[1.1] transition-all ease-in-out duration-300'/>
+        <Image src="/assets/images/homepage/blogs-1.png" fill alt='blogs-1' className='group-hover:scale-[1.1] transition-all ease-in-out duration-500'/>
       </div>
       <div className='px-[0.5vw] w-[90%] flex flex-col gap-[0.5vw] mt-[1vw]'>
 
@@ -43,7 +43,7 @@ const Blogs = () => {
                 Stay updated with our latest industry insights, company news, and thought leadership.
                 </p>
               </div>
-              <div className="flex flex-wrap items-center mt-[2vw] gap-[2vw]">
+              <div className="flex flex-wrap items-center mt-[2vw] gap-[0.7vw]">
                 <PlainButton text={"Blogs"} link={"#"} className="fadeup"/>
                 <PlainButton text={"News"} link={"#"} className="fadeup"/>
               </div>

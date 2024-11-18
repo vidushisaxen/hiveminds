@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PlainButton from "./Button/PlainButton";
@@ -21,10 +21,11 @@ const Header = () => {
     };
   }, [scrollPosition]);
 
+
   return (
     <section id="header">
       <div
-        className={`h-fit w-screen flex fixed top-0 left-0 z-[990] items-center justify-between px-[5vw] py-[2vw] bg-white/70  transition-transform duration-300 ${
+        className={`h-fit w-screen flex fixed top-0 left-0 z-[100] items-center justify-between px-[5vw] py-[2vw] glassmorphism  transition-transform duration-300 ${
           showHeader ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
@@ -35,7 +36,7 @@ const Header = () => {
           <div>
             <ul className="flex items-center justify-between gap-[1.5vw]">
               <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
-                <Link href={"#"} className="relative">
+                <Link href={"#"} className="relative link-line">
                   Services
                 </Link>
                 <svg
@@ -66,11 +67,11 @@ const Header = () => {
               </li>
 
               <li className="relative group">
-                <Link href={"#"}>Solutions</Link>
+                <Link href={"#"} className="link-line">Solutions</Link>
               </li>
 
               <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
-                <Link href={"#"}>Industries</Link>
+                <Link href={"#"} className="link-line">Industries</Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-3 w-3"
@@ -87,7 +88,7 @@ const Header = () => {
                 </svg>
                 <ul className="absolute hidden group-hover:flex flex-col bg-white shadow-lg p-2 mt-2 rounded-lg w-[12vw] top-full pointer-events-auto">
                   <li className="py-1 px-3 hover:bg-gray-100">
-                    <Link href="#">Industry 1</Link>
+                    <Link href="#" className="">Industry 1</Link>
                   </li>
                   <li className="py-1 px-3 hover:bg-gray-100">
                     <Link href="#">Industry 2</Link>
@@ -99,19 +100,19 @@ const Header = () => {
               </li>
 
               <li>
-                <Link href={"#"}>About Us</Link>
+                <Link href={"#"} className="link-line">About Us</Link>
               </li>
               <li>
                 <span className="h-[1px] text-black bg-black w-[2vw] block rotate-90"></span>
               </li>
               <li>
-                <Link href={"#"}>CSR</Link>
+                <Link href={"#"} className="link-line">CSR</Link>
               </li>
               <li>
-                <Link href={"#"}>Careers</Link>
+                <Link href={"#"} className="link-line">Careers</Link>
               </li>
               <li>
-                <Link href={"#"}>Resources</Link>
+                <Link href={"#"} className="link-line">Resources</Link>
               </li>
             </ul>
           </div>

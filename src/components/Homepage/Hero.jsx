@@ -100,6 +100,7 @@ const Hero = () => {
         filter: "blur(8px)",
         stagger: 0.05,
         duration: 0.7,
+        // delay:3.7,
         scrollTrigger: {
           trigger: headingWord,
           start: "top 80%",
@@ -114,6 +115,7 @@ const Hero = () => {
         opacity: 0,
         stagger: 0.07,
         duration: 1.2,
+        // delay:3.7,
         ease: "power3.out",
         scrollTrigger: {
           trigger: paraAnimation,
@@ -125,6 +127,7 @@ const Hero = () => {
         opacity: 0,
         yPercent: 50,
         duration: 1,
+        delay:3.7,
         ease: "power3.out",
         delay: 0,
       });
@@ -140,6 +143,7 @@ const Hero = () => {
       scale: 0,
       yPercent: 20,
       opacity: 0.5,
+      delay:3.7,
       ease: "power3.out",
       duration: 1,
     })
