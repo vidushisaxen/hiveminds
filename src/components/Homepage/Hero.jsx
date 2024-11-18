@@ -74,7 +74,7 @@ const Hero = () => {
         filter: "blur(8px)",
         stagger: 0.05,
         duration: 0.7,
-        delay:3.7,
+        delay:6.5,
         scrollTrigger: {
           trigger: headingWord,
           start: "top 80%",
@@ -88,7 +88,7 @@ const Hero = () => {
         opacity: 0,
         stagger: 0.07,
         duration: 1.2,
-        delay:3.7,
+        delay:6.5,
         ease: "power3.out",
         scrollTrigger: {
           trigger: paraAnimation,
@@ -100,7 +100,7 @@ const Hero = () => {
         opacity: 0,
         yPercent: 100,
         duration: 1,
-        delay:3.9,
+        delay:6.7,
         ease: "power3.out",
       });
     });
@@ -114,7 +114,7 @@ const Hero = () => {
     tl.from(firstSlideRef.current, {
       yPercent: 20,
       opacity: 0,
-      delay:4,
+      delay:7,
       ease: "power3.out",
       duration: 1.5,
     })

@@ -5,7 +5,7 @@ import Map from "./Map";
 
 const Footer = () => {
   return (
-    <section
+    <footer
       id="footer"
       className="w-screen h-screen bg-transparent"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
@@ -266,7 +266,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 
