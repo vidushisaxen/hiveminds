@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PlainButton from "./Button/PlainButton";
+import gsap from "gsap";
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -20,6 +21,15 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollPosition]);
+
+  useEffect(()=>{
+gsap.from('#header',{
+  y:-20,
+  delay:3.5, 
+  opacity:0,
+  duration:1
+})
+  })
 
 
   return (
@@ -117,7 +127,7 @@ const Header = () => {
             </ul>
           </div>
           <div>
-            <PlainButton link={"#"} text={"Work with us"} />
+            <PlainButton link={"#"} text={"Work with us"} data-btn-blue/>
           </div>
         </div>
       </div>

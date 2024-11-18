@@ -14,7 +14,7 @@ const CaseStudyCard = ({ src, no, para }) => {
   return (
     <div className="w-full h-full flex items-center justify-center">
       <div className="w-full h-full relative">
-        <Image src={src} fill alt="big-basket" className="object-fill" />
+        <Image src={src} fill alt="big-basket" priority={true} className="object-fill" />
         <div className="flex absolute top-[1%] rounded-br-[20px] items-center justify-center w-[16.5vw] h-[4.5vw] py-[1vw] ">
           <div className=" flex flex-col items-center justify-center text-center">
             <p className="font-medium text-[1.8vw] leading-[1]">{no}</p>
@@ -60,32 +60,6 @@ const Hero = () => {
   ];
 
   useEffect(() => {
-    // Update content smoothly without innerHTML
-    const headingText = document.querySelector(".heading");
-    const paraText = document.querySelector(".para");
-
-    // Use GSAP to animate opacity instead of innerHTML
-    gsap.to(headingText, {
-      opacity: 0,
-      duration: 0.3,
-      onComplete: () => {
-        gsap.to(headingText, { opacity: 1, duration: 0.3 });
-      },
-    });
-
-    gsap.to(paraText, {
-      opacity: 0,
-      duration: 0.3,
-      onComplete: () => {
-        gsap.to(paraText, { opacity: 1, duration: 0.3 });
-      },
-    });
-
-    animateTextContent();
-  }, [activeIndex]);
-
-  // Animation for heading, paragraph, and button
-  const animateTextContent = () => {
     const headingAnim = document.querySelector(".heading");
     const paraAnimation = document.querySelector(".para");
     const buttonAnimation = document.querySelector(".button");
@@ -99,7 +73,7 @@ const Hero = () => {
         yPercent: 20,
         filter: "blur(8px)",
         stagger: 0.05,
-        duration: 1,
+        duration: 0.7,
         delay:3.7,
         scrollTrigger: {
           trigger: headingWord,
@@ -109,12 +83,11 @@ const Hero = () => {
 
       SplitInLine(paraAnimation);
       const paraLine = paraAnimation.querySelectorAll(".line-internal");
-
       gsap.from(paraLine, {
         yPercent: 100,
         opacity: 0,
         stagger: 0.07,
-        duration: 1.5,
+        duration: 1.2,
         delay:3.7,
         ease: "power3.out",
         scrollTrigger: {
@@ -125,16 +98,15 @@ const Hero = () => {
 
       gsap.from(buttonAnimation, {
         opacity: 0,
-        yPercent: 50,
+        yPercent: 100,
         duration: 1,
-        delay:3.7,
+        delay:3.9,
         ease: "power3.out",
-        delay: 0,
       });
     });
 
     return () => ctx.revert();
-  };
+  },[]);
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -142,7 +114,7 @@ const Hero = () => {
     tl.from(firstSlideRef.current, {
       yPercent: 20,
       opacity: 0,
-      delay:3.5,
+      delay:4,
       ease: "power3.out",
       duration: 1.5,
     })

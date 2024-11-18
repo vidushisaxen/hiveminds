@@ -1,5 +1,4 @@
 @import url("./fonts.css");
-@import url("./team.css");
 
 @tailwind base;
 @tailwind components;
@@ -10,13 +9,6 @@
   --body: #111111;
   --font-body: "Avenir", Arial, Helvetica, sans-serif ;
 }
-/* #__next{
-  background-color: #FAFAFA;
-}
-
-section{
-  background-color: #FAFAFA;
-} */
 body{
   overflow-x: hidden;
   width: 100vw;

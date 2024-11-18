@@ -95,7 +95,9 @@
   color: white;
 }
 
-
+.linkbutton{
+  transition: transform 0.735s cubic-bezier(0.62, 0.05, 0.01, 0.99);
+}
 /*plainButton*/
 .buttonPlain {
   padding: 1.4vw 3vw;
@@ -103,6 +105,7 @@
   max-width: 12vw;
   transition: transform 0.7s cubic-bezier(.4,0,0,1); 
 }
+
 
 .buttonPlain::before {
   content: attr(data-text);
@@ -131,7 +134,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #37474f;
   background: transparent;
   transition: transform 0.5s cubic-bezier(.4,0,0,1);
 }
@@ -148,6 +150,17 @@
 
 .buttonPlain:hover {
   animation: bounce 0.7s cubic-bezier(.4,0,0,1);
+}
+
+.buttonPlain[data-btn-blue]{
+  background-color: #134BD6;
+  color: #fff;
+  width: 11vw;
+}
+.buttonPlain[data-btn-blue]::before{
+  background-color: #fff;
+  color:#134BD6;
+
 }
 
 @keyframes bounce {

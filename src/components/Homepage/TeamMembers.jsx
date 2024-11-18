@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap';
+import styles from '@/styles/team.module.css'
 
 const TeamMembers = () => {
   useEffect(()=> {
     gsap.fromTo(
-      '.card',
+      `.team-container .${styles.card}`,
       {
         scale: 0,
         opacity:0.5
@@ -45,10 +46,10 @@ const TeamMembers = () => {
   },[]);
 
   useEffect(() => {
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll(`.${styles.card}`);
     cards.forEach(card => {
       const id = parseInt(card.getAttribute('data-id'), 10);
-      const cardInner = card.querySelector('.card-inner');
+      const cardInner = card.querySelector(`.${styles.cardInner}`);
       
       if (cardInner) {
         if (id % 2 === 0) {
@@ -60,7 +61,7 @@ const TeamMembers = () => {
     });
 
     const toggleCardRotation = () => {
-      gsap.to('.card-inner', {
+      gsap.to(`.${styles.cardInner}`, {
         rotationY: (index, target) => {
           const cardInner = target;
           const currentRotation = gsap.getProperty(cardInner, "rotationY");
@@ -74,7 +75,7 @@ const TeamMembers = () => {
 
     cards.forEach(card => {
       card.addEventListener('mouseenter', () => {
-        const cardInner = card.querySelector('.card-inner');
+        const cardInner = card.querySelector(`.${styles.cardInner}`);
         const rotation = gsap.getProperty(cardInner, "rotationY");
         if (rotation === 180) {
           toggleCardRotation();
@@ -118,63 +119,63 @@ const TeamMembers = () => {
         <div className=" hexagon absolute h-[2vw] w-[2.2vw] bottom-[5%] left-[5%] transition-all duration-100 ease-out">
           <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon"/>
         </div>
-        <div className=" hexagon absolute h-[2vw] w-[2.2vw] top-[72%] right-[25%] transition-all duration-100 ease-out">
+        <div className=" hexagon absolute h-[2vw] w-[2.2vw] top-[40%] right-[25%] transition-all duration-100 ease-out">
           <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon"/>
         </div>
 
         <div className="team-container mx-auto grid grid-cols-12 items-center justify-center relative gap-[1.2vw]">
           {/* Manually created team cards */}
-          <div className="card  col-span-3 col-start-1 w-[20vw] h-[20vw] flex items-center relative" data-id="1">
-            <div className="card-inner w-full relative">
-              <div className="card-front absolute w-full h-full top-0 left-0 flex items-center justify-center">
-                <img src="/assets/images/homepage/part-1.png" alt="team" className="card-image w-full h-full object-cover rounded-[8px]" />
+          <div className={`${styles.card} col-span-3 col-start-1 w-[20vw] h-[20vw] flex items-center relative `}data-id="1">
+            <div className={`${styles.cardInner} w-full relative h-full`}>
+              <div className={`${styles.cardFront} absolute w-full h-full top-0 left-0 flex items-center justify-center`}>
+                <Image src="/assets/images/homepage/part-1.png" fill alt="team" className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`} />
               </div>
-              <div className="card-back absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]"></div>
+              <div className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]`}></div>
             </div>
           </div>
 
-          <div className="card  col-span-4 col-start-4 w-full h-[33vw] relative" data-id="2">
-            <div className="card-inner w-full relative">
-              <div className="card-front absolute w-full h-full top-0 left-0 flex items-center justify-center">
-                <img src="/assets/images/homepage/part-2.png" alt="team" className="card-image w-full h-full object-cover rounded-[8px]" />
+          <div className={`${styles.card}  col-span-4 col-start-4 w-full h-[33vw] relative`} data-id="2">
+            <div className={`${styles.cardInner} w-full relative h-full`}>
+              <div className={`${styles.cardFront} absolute w-full h-full top-0 left-0 flex items-center justify-center`}>
+                <Image src="/assets/images/homepage/part-2.png" fill alt="team" className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`} />
               </div>
-              <div className="card-back absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]"></div>
+              <div className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]`}></div>
             </div>
           </div>
 
-          <div className="card col-span-3 col-start-8 w-full h-[15vw] top-[-15%] relative" data-id="4">
-            <div className="card-inner w-full relative">
-              <div className="card-front absolute w-full h-full top-0 left-0 flex items-center justify-center">
-                <img src="/assets/images/homepage/part-3.png" alt="team" className="card-image w-full h-full object-cover rounded-[8px]" />
+          <div className={`${styles.card} col-span-3 col-start-8 w-full h-[15vw] top-[-15%] relative`} data-id="4">
+            <div className={`${styles.cardInner} w-full relative h-full`}>
+              <div className={`${styles.cardFront} absolute w-full h-full top-0 left-0 flex items-center justify-center`}>
+                <Image src="/assets/images/homepage/part-3.png" fill alt="team" className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`} />
               </div>
-              <div className="card-back absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]"></div>
+              <div className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]`}></div>
             </div>
           </div>
 
-          <div className="card col-span-2 col-start-8 w-full h-[12vw] bottom-[1vw] absolute" data-id="3">
-            <div className="card-inner w-full relative">
-              <div className="card-front absolute w-full h-full top-0 left-0 flex items-center justify-center">
-                <img src="/assets/images/homepage/part-4.png" alt="team" className="card-image w-full h-full object-cover rounded-[8px]" />
+          <div className={`${styles.card} col-span-2 col-start-8 w-full h-[12vw] bottom-[1vw] absolute`} data-id="3">
+            <div className={`${styles.cardInner} w-full relative h-full`}>
+              <div className={`${styles.cardFront} absolute w-full h-full top-0 left-0 flex items-center justify-center`}>
+                <Image src="/assets/images/homepage/part-4.png" fill alt="team" className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`}/>
               </div>
-              <div className="card-back absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]"></div>
+              <div className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]`}></div>
             </div>
           </div>
 
-          <div className="card col-span-4 col-start-11 w-full h-[22vw] flex items-center  top-[-20%] relative" data-id="5">
-            <div className="card-inner w-full relative">
-              <div className="card-front absolute w-full h-full top-0 left-0 flex items-center justify-center">
-                <img src="/assets/images/homepage/part-5.png" alt="team" className="card-image w-full h-full object-cover rounded-[8px]" />
+          <div className={`${styles.card} col-span-4 col-start-11 w-full h-[22vw] flex items-center  top-[-20%] relative`} data-id="5">
+            <div className={`${styles.cardInner} w-full relative h-full`}>
+              <div className={`${styles.cardFront} absolute w-full h-full top-0 left-0 flex items-center justify-center`}>
+                <Image src="/assets/images/homepage/part-5.png" fill alt="team" className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`} />
               </div>
-              <div className="card-back absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]"></div>
+              <div className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]`}></div>
             </div>
           </div>
 
-          <div className=" absolute card  col-span-3 col-start-10 w-full h-[10vw] flex items-center bottom-[1vw] " data-id="6">
-            <div className="card-inner w-full relative">
-              <div className="card-front absolute w-full h-full top-0 left-0 flex items-center justify-center">
-                <img src="/assets/images/homepage/part-6.png" alt="team" className="card-image w-full h-full object-cover rounded-[8px]" />
+          <div className={` absolute ${styles.card}  col-span-3 col-start-10 w-full h-[10vw] flex items-center bottom-[1vw] `} data-id="6">
+            <div className={`${styles.cardInner} w-full relative h-full`}>
+              <div className={`${styles.cardFront} absolute w-full h-full top-0 left-0 flex items-center justify-center`}>
+                <Image src="/assets/images/homepage/part-6.png" fill alt="team" className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`} />
               </div>
-              <div className="card-back absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]"></div>
+              <div className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]`}></div>
             </div>
           </div>
         </div>
