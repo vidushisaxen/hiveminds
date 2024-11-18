@@ -238,6 +238,12 @@ font-size: 3vw;
   transform: scaleX(1) rotate(0.001deg);
 }
 
+/* loader animation */
+body.loading{
+  pointer-events: none;
+  height: 100vh;
+  overflow: hidden;
+}
 
 
 

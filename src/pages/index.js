@@ -11,6 +11,7 @@ import Services from '@/components/Homepage/Services'
 import Story from '@/components/Homepage/Story'
 import TeamMembers from '@/components/Homepage/TeamMembers'
 import Loader from '@/components/Loader'
+
 import React from 'react'
 
 const index = () => {
@@ -19,7 +20,8 @@ const index = () => {
   fadeUp();
   return (
     <>
-   <Loader/>
+    <Loader/>
+   
       <Header />
       <main>
         <Hero />

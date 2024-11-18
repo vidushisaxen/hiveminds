@@ -9,8 +9,9 @@ gsap.registerPlugin(ScrollTrigger);
 const ServiceCard = ({ title, src, text, className }) => {
   return (
     <Link href={"#"}
-      className={`h-full w-[22vw] bg-[#F2F2F2] border border-[#E0E0E0] hover:bg-white hover:shadow-md hover:drop-shadow-md transition-all duration-500 ease-in-out rounded-[1.2vw] flex flex-col items-start justify-start gap-[4vw] px-[1.2vw] py-[2vw] relative container-lg ${className}`}
+      className={`w-[19vw] ${className}`}
     >
+      <div className="h-[30vw] w-[19vw] bg-[#F2F2F2] border border-[#E0E0E0] hover:bg-white hover:shadow-md hover:drop-shadow-md transition-all duration-500 ease-in-out rounded-[1.2vw] flex flex-col items-start justify-start gap-[4vw] px-[1.2vw] py-[2vw] relative ">
       <div className="flex items-center justify-between w-full">
         <p className="text-[1.5vw]">{title}</p>
         <div className="w-[3vw] h-[3vw] border border-[#111111] relative p-[1vw] rounded-full">
@@ -31,6 +32,8 @@ const ServiceCard = ({ title, src, text, className }) => {
       <p data-para-anim className="text-[1.04vw] text-[#111111] tracking-wide">
         {text}
       </p>
+
+      </div>
     </Link>
   );
 };
@@ -103,7 +106,7 @@ const Services = () => {
   return (
     <section id="services">
       <div className="w-screen h-full flex items-center justify-between container-lg py-[5%] relative">
-        <div className="w-[35%] h-[30vw] px-[3vw] py-[5vw] flex flex-col items-start justify-center gap-[3vw] bg-white rounded-[1vw] shadow-2xl relative z-[20]">
+        <div className="w-[32%] h-[30vw] px-[3vw] py-[5vw] flex flex-col items-start justify-center gap-[3vw] bg-white rounded-[1vw] shadow-2xl relative z-[20]">
           <h2 className="heading-2 w-[85%] headinganim">
             Your <span className="blue-text">Goals</span>, Our Offerings
           </h2>
@@ -116,7 +119,7 @@ const Services = () => {
             <PrimaryButton text="Industry" href="#" data-btn-2 className="fadeup" />
           </div>
         </div>
-        <div className="flex items-center justify-center gap-[1vw] w-[62%] h-[30vw] service-card-container">
+        <div className="flex items-center justify-center w-[65%] h-[30vw] gap-[1vw] service-card-container">
           <ServiceCard
             title={"SEO"}
             text={
