@@ -139,11 +139,13 @@ const Story = () => {
               </p>
               <div className="w-full flex items-center justify-start gap-[2vw]">
                 <PrimaryButton
+                  className="fadeup"
                   text="Explore The Hiveminds Way"
                   href="#"
                   data-btn-white
                 />
                 <PrimaryButton
+                  className="fadeup"
                   text="Our Leadership Team"
                   href="#"
                   data-btn-b-white

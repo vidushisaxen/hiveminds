@@ -18,17 +18,14 @@ export function headingBlur() {
                     scrollTrigger: {
                         trigger: headingWord,
                         start: 'top 80%', 
-                        // markers:true
                       },
                       opacity: 0,
-                    //   skewX: 10,
                       yPercent:20,
                       filter: 'blur(8px)',
-                      stagger:0.05,
-                      duration:0.7
+                      stagger:0.08,
+                      duration:1
                 });
             })
-    
         });
         
         return () => ctx.revert();
@@ -73,8 +70,8 @@ export function paraAnim() {
               opacity: 0,
               yPercent:50,
               ease:"power3.out",
-              duration: 0.7,
-              stagger: 0.5,
+              duration: 1,
+              stagger: 0.1,
             });
           });
         });

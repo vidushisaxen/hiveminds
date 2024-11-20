@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { ReactLenis } from 'lenis/react'
 import 'lenis/dist/lenis.css';
 import { DefaultSeo } from 'next-seo';
-
+import { useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
 
@@ -35,9 +35,9 @@ export default function App({ Component, pageProps }) {
           },
         ]}
       />
-    <ReactLenis root>
-    <Component {...pageProps} />
-    </ReactLenis>
+      <ReactLenis root options={{lerp: 0.07}}>
+        <Component {...pageProps} />
+      </ReactLenis>
     </>
-  ) 
+  )
 }

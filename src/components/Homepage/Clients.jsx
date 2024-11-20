@@ -3,7 +3,7 @@ import React from 'react';
 import styles from '@/styles/clientSlider.module.css'
 
 const LogoSlider = ({ images, altPrefix, sliderClass }) => (
-  <div className={`${sliderClass} h-[7vw] m-auto overflow-hidden relative`}>
+  <div className={`${sliderClass} h-[7vw] m-auto overflow-hidden relative fadeup`}>
     <div className={`${styles.slideTrack}`}>
       {images.map((src, index) => (
         <div key={index} className="slide h-[10vw] w-[19vw]">

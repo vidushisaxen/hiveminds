@@ -37,7 +37,7 @@ const Loader = () => {
             {
                 y: '-91%',
                 ease: 'power2.inOut',
-                duration: 5,
+                duration: 3,
             },
             0.25
         );
@@ -47,7 +47,7 @@ const Loader = () => {
             {
                 y: '-95.3%',
                 ease: 'power2.inOut',
-                duration: 5,
+                duration: 3,
             },
             0.25
         );
@@ -69,7 +69,7 @@ const Loader = () => {
                 ease: 'power2.out',
                 duration: 1,
             },
-            5 - 0.6
+            3 - 0.6
         );
 
         // Loader Out
@@ -79,9 +79,9 @@ const Loader = () => {
                 y: '-100%',
                 ease: 'power2.in',
                 stagger: 0.1,
-                duration: 0.6,
+                duration: 0.4,
             },
-            5 + 0.6
+            3 + 0.6
         );
 
         loadAn.to(loader, {

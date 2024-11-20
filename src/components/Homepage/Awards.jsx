@@ -154,7 +154,7 @@ const Awards = () => {
                 fill="white"
                 stroke="white"
                 className="group-hover:fill-[#134bd6] group-hover:stroke-[#134bd6] transition-all duration-500"
-                stroke-width="1.79924"
+                strokeWidth="1.79924"
               />
             </svg>
               </span>
@@ -184,7 +184,7 @@ const Awards = () => {
                 fill="white"
                 stroke="white"
                 className="group-hover:fill-[#134bd6] group-hover:stroke-[#134bd6] transition-all duration-500"
-                stroke-width="1.79924"
+                strokeWidth="1.79924"
               />
             </svg>
 
