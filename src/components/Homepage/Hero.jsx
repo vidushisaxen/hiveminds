@@ -84,14 +84,14 @@ useEffect(()=>{
 },[images.length])
   useEffect(() => {
     let ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: CustomEase.create("",".87,0,.13,0.7") } });
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
       tl.from(headRef.current, { opacity: 0, yPercent: 20, filter: "blur(8px)", duration: 1.5 })
         .to(headRef.current, { opacity: 0, yPercent: -20,delay:2.7, filter: "blur(8px)", duration: 1.5 })
         .from(paraRef.current, { yPercent: 100, opacity: 0, duration: 1 }, "-=5.5")
-        .to(paraRef.current,{yPercent:-100,opacity:0,duration:1},"-=1.2")
+        .to(paraRef.current,{opacity:0,duration:1},"-=1.2")
         .from(buttonRef.current, { opacity: 0, yPercent: 100, duration: 1 }, "-=5.5")
-        .to(buttonRef.current,{yPercent:-100,opacity:0,duration:1,delay:-1.2})
+        .to(buttonRef.current,{opacity:0,duration:1,delay:-1.2})
    
   
       isFirstRender.current = false;
@@ -132,16 +132,16 @@ useEffect(()=>{
             {slidesData[activeIndex].title}{" "}
             <span className="text-primary">{slidesData[activeIndex].subtitle}</span>
           </h1>
-          <span className="overflow-hidden">
+        
 
           <p ref={paraRef} className="content w-[75%] tracking-wide para">
             {slidesData[activeIndex].description}
           </p>
-          </span>
-          <span className="overflow-hidden">
+          
+        
 
           <PrimaryButton href={slidesData[activeIndex].href} text="View Case Study" className="button" ref={buttonRef} />
-          </span>
+       
         </div>
       </div>
 
@@ -194,10 +194,10 @@ useEffect(()=>{
             <h3 className="text-[2.4vw] font-extrabold uppercase leading-[1] content-detail">
               {details[activeDetail].num1}
             </h3>
-            <span className="overflow-hidden">
+           
 
             <p className="content !leading-[1] content-para">{details[activeDetail].para1}</p>
-            </span>
+            
           </div>
 
           <span className="h-[4.5vw] w-[1px] bg-black"></span>
@@ -206,10 +206,10 @@ useEffect(()=>{
             <h3 className="text-[2.4vw] font-extrabold uppercase leading-[1] content-detail">
               {details[activeDetail].num2}
             </h3>
-            <span className="overflow-hidden">
+        
 
             <p className="content !leading-[1] content-para">{details[activeDetail].para2}</p>
-            </span>
+          
           </div>
         </div>
       </div>

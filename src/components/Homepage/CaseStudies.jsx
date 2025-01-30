@@ -34,7 +34,7 @@ const CaseStudies = () => {
         const changeBodyColor = (color) => {
           gsap.to(body, { backgroundColor: color, duration: 1, ease: "power2.out" });
         };
-        gsap.from(".casestudy-block", { scale: 1.2, yPercent: -5,duration:1 ,scrollTrigger:{
+        gsap.from(".casestudy-block", { scale: 1.11, yPercent: -5,duration:1 ,scrollTrigger:{
           trigger:".casestudy-block",
           start:"top 80%",
           scrub:true
