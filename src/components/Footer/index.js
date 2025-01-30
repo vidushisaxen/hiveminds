@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import Map from "./Map";
@@ -39,7 +38,8 @@ const Footer = () => {
             </div>
 
             <div className="h-[15vw] w-[25vw] relative rounded-[12px]">
-              <Map />
+              {/* <Map /> */}
+              <Image src={"/assets/images/homepage/map.png"} alt="map" fill />
             </div>
           </div>
           <div className="w-[49%] h-full flex flex-col items-start justify-start gap-[4vw]">
