@@ -1,54 +1,133 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import PrimaryButton from "../Button/PrimaryButton";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
-const ServiceCard = ({ title, src, text, className }) => {
+const services = [
+  {
+    img: "/assets/images/homepage/part-1.png",
+    title: "Demand Generation",
+    para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+  },
+  {
+    img: "/assets/images/homepage/part-2.png",
+    title: "Grow D2C Revenue",
+    para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+  },
+  {
+    img: "/assets/images/homepage/part-3.png",
+    title: "Drive Organic Revenue",
+    para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+  },
+  {
+    img: "/assets/images/homepage/part-4.png",
+    title: "Accelerate Ecommerce Growth",
+    para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+  },
+  {
+    img: "/assets/images/homepage/part-5.png",
+    title: "Maximise Retention",
+    para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+  },
+  {
+    img: "/assets/images/homepage/part-6.png",
+    title: "App Marketing Solutions",
+    para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+  },
+  {
+    img: "/assets/images/homepage/part-1.png",
+    title: "Digital Brand Building",
+    para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+  },
+];
+const ServiceCard = ({ service, isActive, onMouseEnter }) => {
+  const cardRef = useRef(null);
+  const headingRef = useRef(null);
+  const contentRef = useRef(null);
+  const linkRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+  
+    if (isActive) {
+      tl.to(cardRef.current, { width: "45%", duration: 0.3 , delay:0.2})
+        .to(
+          headingRef.current,
+          {top:"55%",left:"8%", opacity: 1, rotation: 0, duration: 0.3, delay:0.2 },
+          0
+        )
+        .to(contentRef.current, { top:"60%",opacity: 1, y: 0, duration: 0.5, delay: 0.5 }, 0)
+        .to(linkRef.current, { opacity: 1, scale: 1, duration: 0.5, delay: 0.3 }, 0);
+    } else {
+      tl.to(cardRef.current, { width: "18%", duration: 0.5 })
+        .to(
+          headingRef.current,
+          {top:"20%",opacity: 1, rotation: -90, duration: 0.5 },
+          0
+        )
+        .to(contentRef.current, { opacity: 0, y: 10, duration: 0.3 }, 0)
+        .to(linkRef.current, { opacity: 0, scale: 0.8, duration: 0.3 }, 0);
+    }
+  }, [isActive]);
+  
   return (
-    <Link href={"#"}
-      className={`w-[19vw] ${className}`}
+    <div
+      ref={cardRef}
+      className="relative h-full transition-all overflow-hidden rounded-[1.2vw] service-card w-[18%]"
+      onMouseEnter={onMouseEnter}
     >
-      <div className="h-[30vw] w-[19vw] bg-[#F2F2F2] border border-[#E0E0E0] hover:bg-white hover:shadow-md hover:drop-shadow-md transition-all duration-500 ease-in-out rounded-[1.2vw] flex flex-col items-start justify-start gap-[4vw] px-[1.2vw] py-[2vw] relative ">
-      <div className="flex items-center justify-between w-full">
-        <p className="text-[1.5vw]">{title}</p>
-        <div className="w-[3vw] h-[3vw] border border-[#111111] relative p-[1vw] rounded-full">
-          <Image
-            src="/assets/icons/top-right-arrow.svg"
-            fill
-            alt="top-right-arrow"
-            className="p-[1vw]"
-          />
-        </div>
-      </div>
-      <div className="w-full flex justify-start">
-        <div className="w-[3.3vw] h-[3.3vw] relative ">
-          <Image src={src} fill alt="SEO" className="object-contain" />
-        </div>
-      </div>
+      <Image
+        src="/assets/images/homepage/part-1.png"
+        alt={service.title}
+        layout="fill"
+        objectFit="cover"
+        className="absolute inset-0 z-0"
+      />
 
-      <p data-para-anim className="text-[1.04vw] text-[#111111] tracking-wide">
-        {text}
-      </p>
+      <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center p-6 text-white z-10">
+        <h3
+          ref={headingRef}
+          className="text-white text-[1.5vw] absolute w-[45vw]"
+        >
+          {service.title}
+        </h3>
 
+        <p ref={contentRef} className="content absolute !text-white opacity-0 text-left p-[2vw]">
+          {service.para}
+        </p>
+
+        {isActive && (
+          <Link href="#">
+            <div
+              ref={linkRef}
+              className="absolute top-4 right-4 bg-transparent border border-white text-white p-4 rounded-full flex items-center justify-center opacity-0 scale-0"
+            >
+              <Image
+                src="/assets/icons/top-right-arrow-white.svg"
+                height={15}
+                width={15}
+                alt="top-right-arrow"
+              />
+            </div>
+          </Link>
+        )}
       </div>
-    </Link>
+    </div>
   );
 };
 
 const Services = () => {
   const blueHexagonRef = useRef(null);
   const yellowHexagonRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  // Function to handle mouse move
   const handleMouseMove = (e) => {
     const { clientX: mouseX, clientY: mouseY } = e;
 
-    // Apply movement to the blue and yellow hexagons based on mouse position
     if (blueHexagonRef.current && yellowHexagonRef.current) {
-      const offsetX = mouseX * 0.05; // Adjust the movement sensitivity (change 0.05 for stronger/weaker movement)
+      const offsetX = mouseX * 0.05;
       const offsetY = mouseY * 0.05;
 
       gsap.to(blueHexagonRef.current, {
@@ -58,99 +137,59 @@ const Services = () => {
       });
 
       gsap.to(yellowHexagonRef.current, {
-        x: offsetX * 1.2, // Make yellow hexagon move slightly differently from blue hexagon
+        x: offsetX * 1.2,
         y: offsetY * 1.2,
         ease: "power2.out",
       });
     }
   };
 
-  // Add event listeners on mount and clean up on unmount
   useEffect(() => {
     window.addEventListener("mousemove", handleMouseMove);
-
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#services",
-          start: "top 60%",
-          end: "50% top",
-        },
-      });
-
-      tl.to(".card1", {
-        xPercent: 120,
-        duration: 1,
-        ease: "power3.out",
-      })
-        .to(".card2", {
-          xPercent: 240,
-          delay: -1,
-          duration: 1,
-          ease: "power3.out",
-        })
-        .to(".card3", {
-          xPercent: 330,
-          delay: -1,
-          duration: 1.4,
-          ease: "power3.out",
-        });
-    });
-
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      ctx.revert();
     };
   }, []);
 
   return (
     <section id="services">
-      <div className="w-screen h-full flex items-center justify-between container-lg py-[5%] relative">
-        <div className="w-[32%] h-[30vw] px-[3vw] py-[5vw] flex flex-col items-start justify-center gap-[3vw] bg-white rounded-[1vw] shadow-2xl relative z-[20]">
-          <h2 className="heading-2 w-[85%] headinganim">
-            Your <span className="blue-text">Goals</span>, Our Offerings
+      <div className="w-screen h-full flex flex-col items-center justify-center container-lg py-[5%] relative">
+        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw]">
+          <h2 className="heading-2 headinganim">
+            Your <span className="blue-text"> Goals </span>, Our Offerings
           </h2>
-          <p data-para-anim className="content w-[80%]">
-            See how our strategic partnerships and collaboration drive
-            innovation and accelerate your business growth.
+          <p className="content w-[70%] text-center fadeup">
+            See how our strategic partnerships and collaboration drive innovation and accelerate your business growth
           </p>
-          <div className="flex w-full items-center justify-center gap-[1vw]">
-            <PrimaryButton text="Our Solutions" href="#" className="fadeup" />
-            <PrimaryButton text="Industry" href="#" data-btn-2 className="fadeup" />
+        </div>
+        {/* <div className="w-full h-full flex items-center justify-center">
+          <div className="w-full h-[60vh] flex overflow-hidden gap-[1.5vw]">
+            {services.map((service, index) => (
+              <ServiceCard
+                key={index}
+                service={service}
+                isActive={index === activeIndex}
+                onMouseEnter={() => setActiveIndex(index)}
+              />
+            ))}
           </div>
-        </div>
-        <div className="flex items-center justify-center w-[65%] h-[30vw] gap-[1vw] service-card-container">
-          <ServiceCard
-            title={"SEO"}
-            text={
-              "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility."
-            }
-            src={"/assets/images/homepage/seo.png"}
-            className={"card1 z-[4] translate-x-[-120%] "}
-          />
-          <ServiceCard
-            title={"Marketplace"}
-            text={"We provide effective strategies that are aligned with your long-term business goals."}
-            src={"/assets/images/homepage/marketplace.png"}
-            className={"card2 z-[3] translate-x-[-240%]"}
-          />
-          <ServiceCard
-            title={"Strategy & Consulting"}
-            text={"We provide effective strategies that are aligned with your long-term business goals."}
-            src={"/assets/images/homepage/strategy.png"}
-            className={"card3 z-[2] translate-x-[-330%]"}
-          />
-        </div>
-        <div
-          className="absolute h-[2vw] w-[2.2vw] bottom-[5%] right-[5%]"
-          ref={blueHexagonRef}
-        >
+        </div> */}
+         <div className="w-full h-full tablet:overflow-x-auto overflow-hidden mobile:mt-[10%] tablet:w-[100vw] tablet:ml-[-5vw] custom-scroll">
+                        <div className="flex relative gap-[1.5%] overflow-hidden aspect-[2.5] fadeup tablet:flex tablet:w-[400vw] tablet:ml-[5%] tablet:aspect-auto tablet:overflow-visible tablet:mb-[5vw] tablet:gap-[3vw] mobile:gap-[1.5%]">
+                            {services.map((service, index) => (
+                                <div key={index} className="stripe group tablet:w-full tablet:h-[50vh] tablet:p-[4vw]">
+                                    <Image fill alt={service.title} src={service.img} loading="lazy" quality={90} />
+                                   <div>
+                                    {/* <p className="content !text-white z-10">{service.title}</p> */}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+        <div className="absolute h-[2vw] w-[2.2vw] top-[30%] right-[5%]" ref={blueHexagonRef}>
           <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
         </div>
-        <div
-          className="absolute h-[2vw] w-[2.2vw] bottom-[5%] left-[5%]"
-          ref={yellowHexagonRef}
-        >
+        <div className="absolute h-[2vw] w-[2.2vw] top-[15%] left-[-3%]" ref={yellowHexagonRef}>
           <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
         </div>
       </div>

@@ -28,7 +28,7 @@ const Hero = () => {
         yPercent: 20,
         filter: "blur(8px)",
         duration: 1,
-        delay: isFirstRender.current ? 4.4 : 0,
+        delay: 0,
       })
         .from(paraRef.current, {
           yPercent: 100,
@@ -53,7 +53,7 @@ const Hero = () => {
         xPercent: 20,
         stagger: 0.1,
         duration: 0.5,
-        delay: 4.4,
+        delay: 0,
       });
     });
     return () => ctx.revert();

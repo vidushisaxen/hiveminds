@@ -39,7 +39,7 @@ export default function Contactform() {
   };
 
   return (
-    <div className="w-full h-full p-[2vw] pb-[3vw] rounded-[0.5vw] fadeup">
+    <div className="w-full h-full p-[2vw] pb-[3vw] rounded-[0.5vw] fadein">
       <Form {...form}>  
         <form className="space-y-8">
           {/* Name Field */}

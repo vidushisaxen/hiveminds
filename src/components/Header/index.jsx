@@ -34,7 +34,7 @@ const Header = () => {
       gsap.from(headerRef.current, {
         y: -20,
         opacity: 0,
-        delay: 4.5,
+        delay: 0.1,
         duration: 1
       })
     })
@@ -55,9 +55,39 @@ const Header = () => {
         <div className="flex items-center justify-center gap-[2vw] text-[0.94vw] montreal font-medium uppercase">
           <div>
             <ul className="flex items-center justify-between gap-[1.5vw]">
+            <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
+                <Link href={"#"} className="relative link-line" prefetch={false}>
+                  Who We Are
+                </Link>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-3 w-3"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+                <ul className="absolute hidden group-hover:flex flex-col bg-white shadow-lg p-2 mt-2 rounded-lg w-[12vw] top-full pointer-events-auto">
+                  <li className="py-1 px-3 hover:bg-gray-100">
+                    <Link href="#" prefetch={false}>About 1</Link>
+                  </li>
+                  <li className="py-1 px-3 hover:bg-gray-100">
+                    <Link href="#" prefetch={false}>About 2</Link>
+                  </li>
+                  <li className="py-1 px-3 hover:bg-gray-100">
+                    <Link href="#" prefetch={false}>About 3</Link>
+                  </li>
+                </ul>
+              </li>
               <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
                 <Link href={"#"} className="relative link-line" prefetch={false}>
-                  Services
+                  What We do
                 </Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,14 +115,9 @@ const Header = () => {
                   </li>
                 </ul>
               </li>
-              <li className="relative group">
-                <Link href={"#"} className="link-line" prefetch={false}>
-                  Solutions
-                </Link>
-              </li>
               <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
-                <Link href={"#"} className="link-line" prefetch={false}>
-                  Industries
+                <Link href={"#"} className="relative link-line" prefetch={false}>
+                  Our Impact
                 </Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -108,43 +133,27 @@ const Header = () => {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
-                <ul className="absolute hidden group-hover:flex flex-col bg-white shadow-lg p-2 mt-2 rounded-lg w-[12vw] top-full pointer-events-auto">
+              
+                <ul className="absolute hidden group-hover:flex flex-col bg-white shadow-lg p-2 mt-2 rounded-lg w-[12vw] top-full  pointer-events-auto">
                   <li className="py-1 px-3 hover:bg-gray-100">
-                    <Link href="#" className="" prefetch={false}>
-                      Industry 1
-                    </Link>
+                    <Link href="#" prefetch={false}>Impact 1</Link>
                   </li>
                   <li className="py-1 px-3 hover:bg-gray-100">
-                    <Link href="#" prefetch={false}>Industry 2</Link>
+                    <Link href="#" prefetch={false}>Impact 2</Link>
                   </li>
                   <li className="py-1 px-3 hover:bg-gray-100">
-                    <Link href="#" prefetch={false}>Industry 3</Link>
+                    <Link href="#" prefetch={false}>Impact 3</Link>
                   </li>
                 </ul>
               </li>
-              <li>
-                <Link href={"#"} className="link-line" prefetch={false}>
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <span className="h-[1px] text-black bg-black w-[2vw] block rotate-90"></span>
-              </li>
-              <li>
-                <Link href={"#"} className="link-line" prefetch={false}>
-                  CSR
-                </Link>
-              </li>
-              <li>
+
+
+              <li className="relative group flex items-center gap-1 cursor-pointer">
                 <Link href={"#"} className="link-line" prefetch={false}>
                   Careers
                 </Link>
               </li>
-              <li>
-                <Link href={"#"} className="link-line" prefetch={false}>
-                  Resources
-                </Link>
-              </li>
+             
             </ul>
           </div>
           <div>

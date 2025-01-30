@@ -23,8 +23,6 @@ const Contact = () => {
           trigger: "#contact",
           start: "top 90%",
           end: "bottom 20%",
-         
-
           onEnter: () => changeBodyColor("#fafafa"),
           onLeaveBack: () => changeBodyColor("#134bd6"),
         });
