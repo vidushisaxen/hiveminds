@@ -8,7 +8,7 @@ import Contact from '@/components/Homepage/Contact'
 import Services from '@/components/Homepage/Services'
 import Story from '@/components/Homepage/Story'
 import TeamMembers from '@/components/Homepage/TeamMembers'
-import { fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 
 import React from 'react'
 
@@ -16,7 +16,7 @@ const index = () => {
   headingBlur();
   paraAnim();
   fadeUp();
-  
+  fadeIn();
   return (
     <>
       <Layout>

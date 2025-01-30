@@ -77,7 +77,7 @@ const Contact = () => {
               We&apos;re passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us.
             </p>
             <div className="flex mt-[4vw] items-center justify-center gap-[2vw]">
-              <div className="h-[17.5vw] w-[16.5vw] relative rounded-[16px]">
+              <div className="h-[17.5vw] w-[16.5vw] relative rounded-[16px] fadein">
                 <Image
                   src="/assets/images/homepage/contact-1.png"
                   fill
@@ -85,7 +85,7 @@ const Contact = () => {
                   className="rounded-[16px]"
                 />
               </div>
-              <div className="h-[17.5vw] w-[16.5vw] relative rounded-[16px]">
+              <div className="h-[17.5vw] w-[16.5vw] relative rounded-[16px] fadein">
                 <Image
                   src="/assets/images/homepage/contact-2.png"
                   fill

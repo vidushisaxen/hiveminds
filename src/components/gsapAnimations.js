@@ -79,6 +79,29 @@ export function paraAnim() {
       }
     }, []);
   }
+  export function fadeIn() {
+    useEffect(() => {
+      if (globalThis.innerWidth > 0) {
+        const ctx = gsap.context(() => {
+          const content = document.querySelectorAll(".fadein");
+          content.forEach((content) => {
+            gsap.from(content, {
+              scrollTrigger: {
+                trigger: content,
+                start: "top bottom",
+                end: "bottom 60%",
+              },
+              opacity: 0,
+              ease:"power1.out",
+              duration: 1,
+              stagger: 0.1,
+            });
+          });
+        });
+        return () => ctx.revert();
+      }
+    }, []);
+  }
 
 export function slideIn(){
     useEffect(()=>{

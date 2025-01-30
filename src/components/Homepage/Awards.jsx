@@ -51,7 +51,7 @@ const Awards = () => {
   };
   return (
     <section id="awards ">
-      <div className="h-full w-[99vw] py-[5%] rounded-[30px] flex flex-col items-start justify-center px-[3vw] overflow-hidden relative">
+      <div className="h-full w-[100vw] py-[5%] rounded-[30px] flex flex-col items-start justify-center px-[3vw] overflow-hidden relative">
         <div className="w-[35%] flex flex-col gap-[2vw]">
           <h2 className="heading-2 font-medium montreal !text-white headinganim">
             Our Accolades Speak For Themselves
@@ -67,7 +67,7 @@ const Awards = () => {
             loop={true}
             spaceBetween={30}
             slidesPerView={2.7}
-            modules={FreeMode}
+            modules={[FreeMode]}
             freeMode={true}
             className="awards-swiper w-full h-full flex items-center justify-center"
           >
