@@ -67,7 +67,7 @@ const CaseStudies = () => {
 
   return (
     <>
-      <section id="caseStudies" className="pt-[15%]">
+      <section id="caseStudies" className="pt-[10%]">
         <div className="w-screen h-[45vw] flex items-center justify-center z-[10]">
           <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block px-[3vw] pt-[3vw] shadow-2xl drop-shadow-2xl overflow-hidden">
             <div className="w-[40%] h-full flex flex-col gap-[2vw]">

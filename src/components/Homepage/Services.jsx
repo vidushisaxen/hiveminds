@@ -153,7 +153,7 @@ const Services = () => {
 
   return (
     <section id="services">
-      <div className="w-screen h-full flex flex-col items-center justify-center container-lg py-[5%] relative">
+      <div className="w-screen h-full flex flex-col items-center justify-center container-lg pb-[5%] relative">
         <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw]">
           <h2 className="heading-2 headinganim">
             Your <span className="blue-text"> Goals </span>, Our Offerings
