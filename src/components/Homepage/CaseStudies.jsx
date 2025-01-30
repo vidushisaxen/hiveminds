@@ -84,7 +84,7 @@ const CaseStudies = () => {
                     key={category}
                     data-text={category}
                     className={`${styles.buttonPlain} cursor-pointer relative overflow-hidden border-[#134BD6] border-[1.5px] hover:text-white rounded-[40px] text-[0.97vw] font-light h-fit flex items-center justify-center text-center px-[1.5vw] py-[0.5vw] transition-all duration-300 ${
-                      activeCategory === category ? " text-white bg-[#134BD6] transition-all duration-300 ease-in-out" : " text-[#134BD6] transition-all duration-300 ease-in-out"
+                      activeCategory === category ? " text-white bg-[#134BD6] transition-all duration-300 ease-in-out" : " transition-all duration-300 ease-in-out"
                     } `}
                     onClick={() => setActiveCategory(category)}
                   >

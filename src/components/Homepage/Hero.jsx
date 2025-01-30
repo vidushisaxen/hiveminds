@@ -124,7 +124,7 @@ useEffect(()=>{
   }, [details.length]);
 
   return (
-    <section id="hero" className="flex w-screen h-screen overflow-hidden relative">
+    <section id="hero" className="flex w-screen h-screen overflow-hidden relative bg-[#F1F1F1]">
       {/* Left Section */}
       <div className="w-[50%] h-screen flex items-center justify-between container-lg pt-[5vw] pl-[5vw] pr-[2vw]">
         <div className="w-full flex flex-col gap-[2vw] flex-wrap">
