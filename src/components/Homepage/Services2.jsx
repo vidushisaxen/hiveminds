@@ -79,16 +79,16 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                 }),
                 gsap.to(headingRef.current, {
                     rotation: 0,
-                    top: "55%",
-                    left: "10%",
+                    top: "63%",
+                    left: "8%",
                     transformOrigin: "0% 50%"
                 })
             ], "<")
             .to([contentRef.current, linkRef.current], {
                 opacity: 1,
                 scale: 1,
-                duration: 0.4,
-                stagger: 0.1,
+                duration: 0.8,
+                ease:"power3.out",
                 delay:0.25,
             }, "-=0.3");
         } else {
@@ -107,7 +107,6 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                 opacity: 0,
                 scale: 1,
                 duration: 0.4,
-                stagger: 0.1
             }, "-=0.6");
         }
     }, [isActive]);
@@ -126,12 +125,12 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                 className="absolute inset-0 z-0"
             />
 
-            <div className="absolute inset-0 bg-black/20 flex flex-col items-center justify-center p-6 text-white z-10">
+            <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-6 text-white z-10">
                 <h3
                     ref={headingRef}
-                    className="text-white text-[1.5vw] absolute w-[20vw] text-left leading-[1.2]"
+                    className="text-white text-[1.5vw] absolute w-[23vw] text-left leading-[1.2]"
                     style={{
-                        transformOrigin: "0% 50%",  // Set to rotate from left center
+                        transformOrigin: "0% 50%",
                         rotation: -90,
                         top: "90%",
                         left: "45%"
@@ -142,7 +141,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
 
                 <p
                     ref={contentRef}
-                    className="content absolute !text-white opacity-0 text-left p-[2vw] leading-[1.2] bottom-[-2%]"
+                    className="content absolute !text-white opacity-0 text-left p-[2vw] !leading-[1.3] bottom-0 "
                 >
                     {service.para}
                 </p>
@@ -166,8 +165,37 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
 };
 
 const Services2 = () => {
-   
+    const blueHexagonRef = useRef(null);
+    const yellowHexagonRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+
+    const handleMouseMove = (e) => {
+        const { clientX: mouseX, clientY: mouseY } = e;
+
+        if (blueHexagonRef.current && yellowHexagonRef.current) {
+            const offsetX = mouseX * 0.05;
+            const offsetY = mouseY * 0.05;
+
+            gsap.to(blueHexagonRef.current, {
+                x: offsetX,
+                y: offsetY,
+                ease: "power2.out",
+            });
+
+            gsap.to(yellowHexagonRef.current, {
+                x: offsetX * 1.2,
+                y: offsetY * 1.2,
+                ease: "power2.out",
+            });
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => {
+            window.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, []);
 
     return (
         <section id="services">
@@ -193,10 +221,10 @@ const Services2 = () => {
                     </div>
                 </div>
 
-                <div className="absolute h-[2vw] w-[2.2vw] top-[20%] right-[2%] blue-hexagon-animation" >
+                <div className="absolute h-[2vw] w-[2.2vw] top-[30%] right-[5%]" ref={blueHexagonRef}>
                     <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
                 </div>
-                <div className="absolute h-[2vw] w-[2.2vw] top-[10%] left-[3%] yellow-hexagon-animation" >
+                <div className="absolute h-[2vw] w-[2.2vw] top-[15%] left-[-3%]" ref={yellowHexagonRef}>
                     <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
                 </div>
             </div>

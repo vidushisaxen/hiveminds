@@ -47,7 +47,7 @@ const Header = () => {
         }`}
     >
       <div
-        className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.7vw]`} ref={headerRef}
+        className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw]`} ref={headerRef}
       >
         <div className="w-[10.5vw] h-[3.2vw] relative">
           <Image src="/assets/icons/logo.svg" fill alt="hiveminds-logo" />

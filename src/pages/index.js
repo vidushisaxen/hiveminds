@@ -10,8 +10,8 @@ import TeamMembers from '@/components/Homepage/TeamMembers'
 import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 import React, { useEffect } from 'react'
 import gsap from 'gsap'
-import { Clients } from '@/components/Homepage/Clients2'
 import Services2 from '@/components/Homepage/Services2'
+import { Clients2 } from '@/components/Homepage/Clients2'
 
 const index = () => {
   headingBlur();
@@ -41,7 +41,7 @@ const index = () => {
         <Hero />
         <Story />
         <Services2/>
-       <Clients/>
+       <Clients2/>
         <TeamMembers />
         <div className='relative h-full w-screen rounded-[20px] '>
           <span className=' block absolute h-[20%] w-full'></span>

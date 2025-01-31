@@ -28,21 +28,6 @@ const TeamMembers = () => {
         },
       }
     );
-    // const handleMouseMove = (event) => {
-    //   const { clientX, clientY } = event;
-
-    //   document.querySelectorAll(".hexagon").forEach((hexagon, index) => {
-    //     const offsetX = (clientX / window.innerWidth - 0.5) * (7 + index * 3);
-    //     const offsetY = (clientY / window.innerHeight - 0.5) * (7 + index * 3);
-    //     hexagon.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-    //   });
-    // };
-
-    // window.addEventListener("mousemove", handleMouseMove);
-
-    // return () => {
-    //   window.removeEventListener("mousemove", handleMouseMove);
-    // };
   }, []);
 
   useEffect(() => {
