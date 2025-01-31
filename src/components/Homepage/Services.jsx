@@ -42,44 +42,94 @@ const services = [
     para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
   },
 ];
-const ServiceCard = ({ service, isActive, onMouseEnter }) => {
+const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
   const cardRef = useRef(null);
   const headingRef = useRef(null);
   const contentRef = useRef(null);
   const linkRef = useRef(null);
+  const timelineRef = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-  
+    return () => {
+      if (timelineRef.current) {
+        timelineRef.current.kill();
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (timelineRef.current) {
+      timelineRef.current.kill();
+    }
+
+    timelineRef.current = gsap.timeline({
+      defaults: { 
+        ease: "power2.inOut",
+        duration: 0.5
+      }
+    });
+
+    const tl = timelineRef.current;
+
     if (isActive) {
-      tl.to(cardRef.current, { width: "45%", duration: 0.3 , delay:0.2})
-        .to(
-          headingRef.current,
-          {top:"55%",left:"8%", opacity: 1, rotation: 0, duration: 0.3, delay:0.2 },
-          0
-        )
-        .to(contentRef.current, { top:"60%",opacity: 1, y: 0, duration: 0.5, delay: 0.5 }, 0)
-        .to(linkRef.current, { opacity: 1, scale: 1, duration: 0.5, delay: 0.3 }, 0);
+      tl.to(cardRef.current, { 
+        width: "45%", 
+        duration: 0.5,
+        ease: "power2.inOut"
+      })
+      .to(headingRef.current, {
+        rotation: 0,
+        top: "55%",
+        opacity: 1,
+        duration: 0.3,
+      }, "-=0.5")  
+      .to(contentRef.current, {
+        opacity: 1,
+        delay:0.2,
+        duration: 0.5,
+      }, "-=0.3")  
+      .to(linkRef.current, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.4,
+      }, "-=0.4");
     } else {
-      tl.to(cardRef.current, { width: "18%", duration: 0.5 })
-        .to(
-          headingRef.current,
-          {top:"20%",opacity: 1, rotation: -90, duration: 0.5 },
-          0
-        )
-        .to(contentRef.current, { opacity: 0, y: 10, duration: 0.3 }, 0)
-        .to(linkRef.current, { opacity: 0, scale: 0.8, duration: 0.3 }, 0);
+      tl.to(cardRef.current, { 
+        width: "18%", 
+        duration: 0.5,
+        ease: "power2.inOut"
+      })
+      .to(headingRef.current, {
+        rotation: -90,
+        // transformOrigin:"left",
+        top: "55%",
+        opacity: 1,
+        duration: 0.3,
+      }, "-=0.5")  
+      .to(contentRef.current, {
+        opacity: 0,
+        y: 0,
+        duration: 0.4,
+      }, "-=0.5")  
+      .to(linkRef.current, {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.4,
+      }, "-=0.5");  
     }
   }, [isActive]);
-  
+
   return (
     <div
       ref={cardRef}
-      className="relative h-full transition-all overflow-hidden rounded-[1.2vw] service-card w-[18%]"
+      style={{
+        transition: 'transform 0.5s ease-in-out'
+      }}
+      className="relative h-full overflow-hidden rounded-[1.2vw] service-card w-[18%]"
       onMouseEnter={onMouseEnter}
     >
       <Image
-        src="/assets/images/homepage/part-1.png"
+        src={service.img}
         alt={service.title}
         layout="fill"
         objectFit="cover"
@@ -89,30 +139,40 @@ const ServiceCard = ({ service, isActive, onMouseEnter }) => {
       <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center p-6 text-white z-10">
         <h3
           ref={headingRef}
-          className="text-white text-[1.5vw] absolute w-[45vw]"
+          className="text-white text-[1.5vw] absolute w-[20vw] text-left leading-[1.2]"
+          style={{
+            transition: 'transform 0.5s ease-in-out'
+          }}
         >
           {service.title}
         </h3>
 
-        <p ref={contentRef} className="content absolute !text-white opacity-0 text-left p-[2vw]">
+        <p 
+          ref={contentRef}
+          className="content absolute !text-white opacity-0 text-left p-[2vw] leading-[1.2] bottom-[-2%]"
+          style={{
+            transition: 'transform 0.5s ease-in-out'
+          }}
+        >
           {service.para}
         </p>
 
-        {isActive && (
-          <Link href="#">
-            <div
-              ref={linkRef}
-              className="absolute top-4 right-4 bg-transparent border border-white text-white p-4 rounded-full flex items-center justify-center opacity-0 scale-0"
-            >
-              <Image
-                src="/assets/icons/top-right-arrow-white.svg"
-                height={15}
-                width={15}
-                alt="top-right-arrow"
-              />
-            </div>
-          </Link>
-        )}
+        <Link href="#">
+          <div
+            ref={linkRef}
+            className="absolute top-4 right-4 bg-transparent border border-white text-white p-4 rounded-full flex items-center justify-center opacity-0 scale-0"
+            style={{
+              transition: 'transform 0.5s ease-in-out'
+            }}
+          >
+            <Image
+              src="/assets/icons/top-right-arrow-white.svg"
+              height={15}
+              width={15}
+              alt="top-right-arrow"
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );
@@ -190,7 +250,7 @@ const Services = () => {
               />
             ))}
           </div>
-        </div> */}
+        </div>  */}
          <div className="w-full h-full tablet:overflow-x-auto overflow-hidden mobile:mt-[10%] tablet:w-[100vw] tablet:ml-[-5vw] custom-scroll">
                         <div className="flex relative gap-[1.5%] overflow-hidden aspect-[2.5] fadeup tablet:flex tablet:w-[400vw] tablet:ml-[5%] tablet:aspect-auto tablet:overflow-visible tablet:mb-[5vw] tablet:gap-[3vw] mobile:gap-[1.5%]">
                             {services.map((service, index) => (

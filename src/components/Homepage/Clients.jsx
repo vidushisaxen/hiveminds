@@ -77,7 +77,7 @@ const Clients = () => {
         <LogoSlider images={[...clients2, ...clients2]} altPrefix="client-logo" sliderClass={`${styles.slider}`} sliderWidth="calc(19vw * 12)" slideMargin="1vw" />
 
         <p className="text-[1.24vw] text-[#111111] montreal font-medium py-[3vw] pb-[4vw]">Platform & Media Partners</p>
-        <LogoSlider images={[...platform1,...platform1]} altPrefix="platform-logo" sliderClass={`${styles.slider2}`} sliderWidth="calc(19vw * 10)" slideMargin="8vw" />
+        <LogoSlider images={[...platform1,...platform1]} altPrefix="platform-logo" sliderClass={`${styles.slider2}`} sliderWidth="calc(19vw * 10)" slideMargin="7vw" />
         <LogoSlider images={[...platform2, ...platform2]} altPrefix="platform-logo" sliderClass={`${styles.slider2}`} sliderWidth="calc(19vw * 10)" slideMargin="1.5vw" />
       </div>
     </section>
