@@ -110,15 +110,17 @@ useEffect(()=>{
   }, [slidesData.length]);
   useEffect(()=>{
     const ctx = gsap.context(()=>{
-      gsap.from(".content-detail",{ opacity: 0, yPercent: 20, filter: "blur(8px)", duration: 1,})
+      gsap.from(".content-detail",{ opacity: 0, yPercent: 40, duration: 1,})
+      gsap.to(".content-detail",{ opacity: 0, yPercent: -20, duration: 0.5, delay:6})
       gsap.from(".content-para", { yPercent: 100, opacity: 0, duration: 0.8  })
+      gsap.to(".content-para",{ opacity: 0, yPercent: -20, duration: 0.5, delay:6})
     })
     return()=>ctx.revert();
   },[activeDetail])
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveDetail((prevIndex) => (prevIndex + 1) % details.length);
-    }, 6700); // Change every 3 seconds
+    }, 6600); // Change every 3 seconds
 
     return () => clearInterval(interval);
   }, [details.length]);

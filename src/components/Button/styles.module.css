@@ -25,7 +25,7 @@
   z-index: 2;
 }
 .btn .btnCircle {
-  clip-path: inset(10% calc(100% - 3.8vw) 10% 0.5vw round 1000px);
+  clip-path: inset(15% calc(100% - 3.55vw) 15% .7vw round 1000px);
   position: absolute;
   inset: 0px;
   border-radius: 1000px;
@@ -40,7 +40,7 @@
   width: 1vw;
   height: 1vw;
   overflow: hidden;
-  margin-left: 1.7vw;
+  margin-left: 1.6vw;
 }
 .btn .btnIcon .btnPath {
   transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);

@@ -408,32 +408,30 @@ body.loading {
 }
 
 /* casestudies scrollbar */
-.casestudy-scrollbar {
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scrollbar-width: thin; /* Thin scrollbar for Firefox */
-  scrollbar-color: #134bd6 transparent; /* Scrollbar color */
-}
+.swiper-scrollbar {
 
-.casestudy-scrollbar::-webkit-scrollbar {
-  height: 8px; /* Height of the scrollbar */
+  height: 0px !important;
+  border-radius: 10px;
   opacity: 1 !important;
+  transition: opacity 0.2s ease-in-out;
 }
 
-.casestudy-scrollbar::-webkit-scrollbar-track {
-  background: transparent; /* Transparent track */
-  opacity: 1 !important;
-}
-
-.casestudy-scrollbar::-webkit-scrollbar-thumb {
-  background: #134bd6; /* Scrollbar color */
+.swiper-scrollbar-drag {
+  background: #134bd6 !important; /* Solid blue scrollbar */
   border-radius: 10px;
   opacity: 1 !important;
 }
 
-.casestudy-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #0f3da7; /* Darker shade on hover */
-
+.swiper-scrollbar:hover {
+  opacity: 1 !important;
 }
-.casestudy-scrollbar::-webkit-scrollbar-thumb:active {
-  opacity: 1 !important; /* Always visible */
+
+.swiper-scrollbar-drag:hover {
+  background: #0f3da7 !important; /* Darker blue on hover */
+}
+.slideInCaseCarousel .swiper-wrapper{
+  position: static;
+}
+.slideInCaseCarousel  .swiper-scrollbar.swiper-scrollbar-horizontal{
+bottom: -1.5vw !important;
 }

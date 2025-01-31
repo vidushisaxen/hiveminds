@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import Map from "./Map";
@@ -7,10 +6,11 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="w-screen h-fit bg-transparent"
+      className="w-screen h-screen bg-transparent"
+      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="w-screen h-full flex flex-col items-center justify-between bg-[#134BD6] pt-[3vw] pb-[2vw] gap-[0.5vw]">
-        <div className="w-full flex items-center justify-between gap-[10vw] text-white container-lg">
+      <div className="w-screen h-screen flex flex-col items-center justify-between bg-[#134BD6] pt-[3vw] pb-[2vw] gap-[1vw] fixed bottom-0">
+        <div className="w-full h-fit flex items-center justify-between gap-[10vw] text-white container-lg">
           <div className="w-[30%] h-full flex flex-col items-start justify-start gap-[2vw]">
             <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal">
               Our Office Address
@@ -18,99 +18,62 @@ const Footer = () => {
             <div>
               <p className="content-white underline">
                 {" "}
-                BENGALURU (HQ) : No. 11, Seventh Floor, Global Tech Park, O
+                Bengaluru (HQ) : No. 11, Seventh Floor, Global Tech Park, O
                 Shaughnessy Rd, Langford Town, Langford Gardens, Bengaluru,
                 Karnataka 560025
               </p>
             </div>
             <div>
               <p className="content-white">
-                MUMBAI : Office no 301 & 302, 3rd Floor, The Eagle&apos;s Flight
+                Mumbai : Office no 301 & 302, 3rd Floor, The Eagle&apos;s Flight
                 Building, Gundavali, Andheri East, Andheri, Mumbai, Maharashtra
                 400047
               </p>
             </div>
             <div>
               <p className="content-white">
-                GURGAON : Spring House Coworking, 4th Floor,JMD Regent Arcade,
+                Gurgaon : Spring House Coworking, 4th Floor,JMD Regent Arcade,
                 Haryana 122002
               </p>
             </div>
 
             <div className="h-[15vw] w-[25vw] relative rounded-[12px]">
               {/* <Map /> */}
-              <Image src={"/assets/images/homepage/map.png"} alt="map" fill/>
+              <Image src={"/assets/images/homepage/map.png"} alt="map" fill />
             </div>
           </div>
-          <div className="w-[55%] h-full flex flex-col items-start justify-start gap-[8vw]">
+          <div className="w-[49%] h-full flex flex-col items-start justify-start gap-[4vw]">
             <div className="flex items-start justify-between w-full">
               <div className="space-y-[1.5vw]">
                 <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal">
-                  Expertise
+                  Services
                 </p>
                 <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start justify-center gap-[0.5vw]">
                   <Link href={"#"} className="link-line">
                     {" "}
-                    <li>Performance Marketing</li>
-                  </Link>
-                  <Link href={"#"} className="link-line">
-                    {" "}
-                    <li>Retail Marketing</li>
-                  </Link>
-                  <Link href={"#"} className="link-line">
-                    <li>Consumer Insights</li>
-                  </Link>
-                  <Link href={"#"} className="link-line">
-                    <li>Influencer Marketing</li>
-                  </Link>
-                  <Link href={"#"} className="link-line">
-                    <li>Affiliate Marketing</li>
-                  </Link>
-                  <Link href={"#"} className="link-line">
-                    <li>Data & Analytics</li>
-                  </Link>
-                  <Link href={"#"} className="link-line">
-                    <li>Programatic Advertising</li>
-                  </Link>
-                  <Link href={"#"} className="link-line">
                     <li>Search Engine Optimization</li>
                   </Link>
                   <Link href={"#"} className="link-line">
-                    <li>Content Management & Creative
-                    </li>
+                    {" "}
+                    <li>Branding</li>
                   </Link>
                   <Link href={"#"} className="link-line">
-                    <li>Online Reputation Management</li>
-                  </Link>
-                </ul>
-              </div>
-              <div className="space-y-[1.5vw]">
-                <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal">
-                  Solutions
-                </p>
-                <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start justify-center gap-[0.5vw]">
-                  <Link href={"#"} className="link-line">
-                    <li>Demand Generation</li>
+                    <li>Marketplace</li>
                   </Link>
                   <Link href={"#"} className="link-line">
-                    <li>Grow D2C Revenue
-                    </li>
+                    <li>Analytics</li>
                   </Link>
                   <Link href={"#"} className="link-line">
-                    <li>Drive Organic Revenue</li>
+                    <li>Pay-Per-Click</li>
                   </Link>
                   <Link href={"#"} className="link-line">
-                    <li>Maximize Retention</li>
+                    <li>Social Media Management</li>
                   </Link>
                   <Link href={"#"} className="link-line">
-                    <li>App Marketing Solutions</li>
+                    <li>Creative & Content</li>
                   </Link>
                   <Link href={"#"} className="link-line">
-                    <li>Digital Brand Building
-                    </li>
-                  </Link>
-                  <Link href={"#"} className="link-line">
-                    <li>Accelerate Ecommerce growth</li>
+                    <li>Strategy & Consulting</li>
                   </Link>
                 </ul>
               </div>
@@ -120,35 +83,72 @@ const Footer = () => {
                 </p>
                 <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start justify-center gap-[0.5vw]">
                   <Link href={"#"} className="link-line">
-                    <li>FMCG & Beauty</li>
+                    <li>Healthcare</li>
                   </Link>
                   <Link href={"#"} className="link-line">
-                    <li>Health & Wellness</li>
+                    <li>Automobiles</li>
                   </Link>
                   <Link href={"#"} className="link-line">
-                    <li>BFSI - Fintech</li>
+                    <li>Wearables</li>
                   </Link>
                   <Link href={"#"} className="link-line">
-                    <li>E-Commerce</li>
+                    <li>NBFC</li>
                   </Link>
                   <Link href={"#"} className="link-line">
-                    <li>Fashion & Lifestyle</li>
+                    <li>CDIT</li>
                   </Link>
                   <Link href={"#"} className="link-line">
-                    <li>Travel & Tourism</li>
-                  </Link>
-                  <Link href={"#"} className="link-line">
-                    <li>Telecom & Automobiles</li>
-                  </Link>
-                  <Link href={"#"} className="link-line">
-                    <li>Electronics & Consumer Durables</li>
+                    <li>BFSI</li>
                   </Link>
                 </ul>
               </div>
-              
+              <div className="space-y-[1.5vw]">
+                <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal">
+                  Quick Links
+                </p>
+                <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start justify-center gap-[0.5vw]">
+                  <Link href={"#"} className="link-line">
+                    <li>About Us</li>
+                  </Link>
+                  <Link href={"#"} className="link-line">
+                    <li>Career</li>
+                  </Link>
+                  <Link href={"#"} className="link-line">
+                    <li>Blogs</li>
+                  </Link>
+                  <Link href={"#"} className="link-line">
+                    <li>News & Events</li>
+                  </Link>
+                  <Link href={"#"} className="link-line">
+                    <li>Tools We Use</li>
+                  </Link>
+                  <Link href={"#"} className="link-line">
+                    <li>School of Digital</li>
+                  </Link>
+                  <Link href={"#"} className="link-line">
+                    <li>Contact Us</li>
+                  </Link>
+                </ul>
+              </div>
             </div>
-           
-           <div className=" flex w-full items-center justify-center">
+            <div className="w-full relative">
+              <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal">
+                subscribe to get latest insights
+              </p>
+              <input
+                type="email"
+                placeholder="Email Address*"
+                className="w-full border-b-[2px] border-white bg-transparent mt-[0.5vw] p-[0.5vw] outline-none placeholder:text-white placeholder:text-[0.94vw]"
+              />
+              <div className="h-[0.98vw] w-[1vw] absolute right-[3%] bottom-[15%] cursor-pointer">
+                <Image
+                  src="/assets/icons/top-right-arrow-white.svg"
+                  fill
+                  alt="top-right-arrow"
+                />
+              </div>
+            </div>
+
             <div className="w-full flex items-start justify-center gap-[2vw] flex-col">
               <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal">
                 follow us
@@ -158,8 +158,8 @@ const Footer = () => {
                   <div className="w-[2.4vw] h-[2.4vw] border border-white rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
                     <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
                       <svg
-                        width="15"
-                        height="15"
+                        width="12"
+                        height="23"
                         viewBox="0 0 12 23"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -184,8 +184,8 @@ const Footer = () => {
                   <div className="w-[2.4vw] h-[2.4vw] border border-white rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
                     <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
                       <svg
-                        width="15"
-                        height="15"
+                        width="21"
+                        height="21"
                         viewBox="0 0 21 21"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -213,8 +213,8 @@ const Footer = () => {
                   <div className="w-[2.4vw] h-[2.4vw] border border-white rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
                     <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
                       <svg
-                        width="15"
-                        height="15"
+                        width="19"
+                        height="20"
                         viewBox="0 0 19 20"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -232,8 +232,8 @@ const Footer = () => {
                   <div className="w-[2.4vw] h-[2.4vw] border border-white rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
                     <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
                       <svg
-                        width="15"
-                        height="15"
+                        width="24"
+                        height="24"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -249,28 +249,10 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="w-full relative">
-              <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal">
-                subscribe to get latest insights
-              </p>
-              <input
-                type="email"
-                placeholder="Email Address*"
-                className="w-[30vw] border-b-[1px] border-white bg-transparent mt-[0.5vw] p-[0.5vw] outline-none placeholder:text-white placeholder:text-[0.94vw]"
-              />
-              <div className="h-[0.98vw] w-[1vw] absolute right-[3%] bottom-[15%] cursor-pointer">
-                <Image
-                  src="/assets/icons/top-right-arrow-white.svg"
-                  fill
-                  alt="top-right-arrow"
-                />
-              </div>
-            </div>
-            </div>
           </div>
         </div>
-        <div className="mt-[3vw]">
-          <span className="w-[95vw] h-[1px] bg-white block "></span>
+        <div>
+          <span className="w-[95vw] h-[2px] bg-white block "></span>
           <div className="w-full flex items-center justify-between mt-[2vw]">
             <Link href={"#"}>
               <p className="text-white text-[0.94vw] tracking-wide">

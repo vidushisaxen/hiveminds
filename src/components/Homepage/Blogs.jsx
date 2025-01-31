@@ -17,7 +17,7 @@ const BlogCard=()=>{
       <p className='text-[1vw] text-black/50'>June 6, 2024</p>
       <div className='w-fit'>
 
-      <p className='content group-hover:text-[#134BD6] transition-all ease-in-out duration-500 after:block after:w-full after:bg-black after:h-[1.2px] after:mt-[-0.4vw] group-hover:after:scale-0 group-hover:after:transition-all after:transition-all after:duration-500 after:ease-in-out group-hover:after:duration-500 group-hover:after:ease-in-out    group-hover:after:origin-center'>Read more</p>
+      <p className='content group-hover:text-[#134BD6] transition-all ease-in-out duration-500 after:block after:w-full after:bg-black after:h-[1.2px] after:mt-[-0.4vw] group-hover:after:scale-x-0 group-hover:after:transition-scale after:transition-scale group-hover:after:bg-[#134BD6] after:duration-500 after:ease-in-out group-hover:after:duration-500 group-hover:after:ease-in-out    group-hover:after:origin-center'>Read more</p>
       
       </div>
       </div>
@@ -53,7 +53,7 @@ const Blogs = () => {
                 <BlogCard/>
                 <div className='flex items-center justify-center h-[35vw] w-[5vw]'>
                 <Link href={"#"}>
-                <p className='content after:block after:w-full after:bg-black after:h-[1px] after:mt-[-0.4vw] after:transition-all after:duration-500 hover:after:scale-x-0 hover:after:transition-all hover:after:duration-500 hover:after:origin-center'>View All</p>
+                <p className='content after:block hover:text-[#134BD6] hover:after:bg-[#134BD6] after:w-full after:bg-black after:h-[1px] after:mt-[-0.4vw] after:transition-scale after:duration-500 hover:after:scale-x-0 hover:after:transition-scale hover:after:duration-500 hover:after:origin-center'>View All</p>
                 </Link>
                 </div>
               </div>

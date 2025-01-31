@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import gsap from "gsap";
+import gsap, { random } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
@@ -119,36 +119,53 @@ const ServiceCard = ({ service, isActive, onMouseEnter }) => {
 };
 
 const Services = () => {
-  const blueHexagonRef = useRef(null);
-  const yellowHexagonRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+  // const blueHexagonRef = useRef(null);
+  // const yellowHexagonRef = useRef(null);
+  // const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleMouseMove = (e) => {
-    const { clientX: mouseX, clientY: mouseY } = e;
+  // const handleMouseMove = (e) => {
+  //   const { clientX: mouseX, clientY: mouseY } = e;
 
-    if (blueHexagonRef.current && yellowHexagonRef.current) {
-      const offsetX = mouseX * 0.05;
-      const offsetY = mouseY * 0.05;
+  //   if (blueHexagonRef.current && yellowHexagonRef.current) {
+  //     const offsetX = mouseX * 0.05 +Math.random()*10;
+  //     const offsetY = mouseY * 0.05-Math.random()*10;
 
-      gsap.to(blueHexagonRef.current, {
-        x: offsetX,
-        y: offsetY,
-        ease: "power2.out",
-      });
+  //     gsap.to(blueHexagonRef.current, {
+  //       x: offsetX,
+  //       y: offsetY,
+  //       ease: "power2.out",
+  //     });
 
-      gsap.to(yellowHexagonRef.current, {
-        x: offsetX * 1.2,
-        y: offsetY * 1.2,
-        ease: "power2.out",
-      });
-    }
-  };
+  //     gsap.to(yellowHexagonRef.current, {
+  //       x: offsetX * 1.2,
+  //       y: offsetY * 1.2,
+  //       ease: "power2.out",
+  //     });
+  //   }
+  // };
 
+  // useEffect(() => {
+  //   window.addEventListener("mousemove", handleMouseMove);
+  //   return () => {
+  //     window.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, []);
   useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
+    gsap.to(".blue-hexagon-animation", {
+      y: "30px", // Move up & down
+      duration: 2,
+      repeat: -1, // Infinite loop
+      yoyo: true, // Smooth back-and-forth motion
+      ease: "sine.inOut", // Smooth ease
+    });
+
+    gsap.to(".yellow-hexagon-animation", {
+      y: "-30px", // Move opposite direction
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
   }, []);
 
   return (
@@ -186,10 +203,10 @@ const Services = () => {
                             ))}
                         </div>
                     </div>
-        <div className="absolute h-[2vw] w-[2.2vw] top-[30%] right-[5%]" ref={blueHexagonRef}>
+        <div className="absolute h-[2vw] w-[2.2vw] top-[30%] right-[5%] blue-hexagon-animation" >
           <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
         </div>
-        <div className="absolute h-[2vw] w-[2.2vw] top-[15%] left-[-3%]" ref={yellowHexagonRef}>
+        <div className="absolute h-[2vw] w-[2.2vw] top-[15%] left-[-3%] yellow-hexagon-animation">
           <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
         </div>
       </div>

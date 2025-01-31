@@ -2,6 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Scrollbar } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/scrollbar";
 import styles from "../Button/styles.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -26,6 +31,7 @@ const caseStudies = [
 
 const CaseStudies = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const swiperRef = useRef(null);
 
   useEffect(() => {
     if (globalThis.innerWidth > 1024) {
@@ -34,11 +40,17 @@ const CaseStudies = () => {
         const changeBodyColor = (color) => {
           gsap.to(body, { backgroundColor: color, duration: 1, ease: "power2.out" });
         };
-        gsap.from(".casestudy-block", { scale: 1.11, yPercent: -5,duration:1 ,scrollTrigger:{
-          trigger:".casestudy-block",
-          start:"top 80%",
-          scrub:true
-        }});
+        
+        gsap.from(".casestudy-block", {
+          scale: 1.11,
+          yPercent: -5,
+          duration: 1,
+          scrollTrigger: {
+            trigger: ".casestudy-block",
+            start: "top 80%",
+            scrub: true,
+          },
+        });
 
         ScrollTrigger.create({
           trigger: "#caseStudies",
@@ -54,8 +66,15 @@ const CaseStudies = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      
-      gsap.from(".slideInCaseCarousel", { opacity: 0, xPercent: 100, duration: 1, scrollTrigger: { trigger: ".slideInCaseCarousel", start: "top 80%" } });
+      gsap.from(".slideInCaseCarousel", {
+        opacity: 0,
+        xPercent: 100,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".slideInCaseCarousel",
+          start: "top 80%",
+        },
+      });
     });
     return () => ctx.revert();
   }, [activeCategory]);
@@ -69,7 +88,7 @@ const CaseStudies = () => {
     <>
       <section id="caseStudies" className="pt-[10%]">
         <div className="w-screen h-[45vw] flex items-center justify-center z-[10]">
-          <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block px-[3vw] pt-[3vw] shadow-2xl drop-shadow-2xl overflow-hidden">
+          <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block pl-[3vw] pt-[3vw] pr-[1.5vw] shadow-2xl drop-shadow-2xl overflow-hidden">
             <div className="w-[40%] h-full flex flex-col gap-[2vw]">
               <h2 className="heading-2 headinganim">
                 Growth Isn&apos;t Just a Buzzword - It&apos;s About Real <span className="blue-text">Impact</span>
@@ -84,35 +103,46 @@ const CaseStudies = () => {
                     key={category}
                     data-text={category}
                     className={`${styles.buttonPlain} cursor-pointer relative overflow-hidden border-[#134BD6] border-[1.5px] hover:text-white rounded-[40px] text-[0.97vw] font-light h-fit flex items-center justify-center text-center px-[1.5vw] py-[0.5vw] transition-all duration-300 ${
-                      activeCategory === category ? " text-white bg-[#134BD6] transition-all duration-300 ease-in-out" : " transition-all duration-300 ease-in-out"
+                      activeCategory === category ? " text-white bg-[#134BD6]" : ""
                     } `}
                     onClick={() => setActiveCategory(category)}
                   >
-                    <span>
-
-                    {category}
-                    </span>
+                    <span>{category}</span>
                   </button>
                 ))}
               </div>
             </div>
 
-            <div className="w-[60%] h-[80%] flex items-center overflow-x-scroll gap-[1.5vw] slideInCaseCarousel casestudy-scrollbar">
-              {filteredCaseStudies.map((study, index) => (
-                <div className="w-full flex flex-nowrap" key={index}>
-
-
-                <div key={index} className="relative w-[25vw] h-[32.5vw]">
-                  <Image src={study.img} fill alt="casestudy" className="object-contain" />
-                  <div className="absolute top-0 right-0 w-[11.7vw] h-[5.5vw] flex items-center justify-center rounded-br-[20px]">
-                    <div className="flex flex-col justify-center  w-[70%]">
-                      <p className="font-medium text-[2.2vw] leading-[1]">{study.title}</p>
-                      <p className="text-[0.9vw] font-medium w-full  text-start leading-[1] ml-[0.1vw]">{study.des}</p>
+            {/* Swiper Component with Always Visible Blue Scrollbar */}
+            <div className="w-[60%] flex items-center slideInCaseCarousel">
+              <Swiper
+                ref={swiperRef}
+                modules={[FreeMode, Scrollbar]}
+                freeMode={true}
+                spaceBetween={20}
+                slidesPerView={2}
+                scrollbar={{ draggable: true, hide: false, el: ".swiper-scrollbar" }}
+                className="w-full h-full rounded-[1vw] overflow-hidden"
+              >
+                {filteredCaseStudies.map((study, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="relative w-[25vw] h-[30.5vw]">
+                      <Image src={study.img} fill alt="casestudy" className="object-contain" />
+                      <div className="absolute top-0 right-0 w-[11.7vw] h-[4vw] flex items-center justify-center rounded-br-[20px]">
+                        <div className="flex flex-col justify-center  w-[70%]">
+                          <p className="font-medium text-[2vw] leading-[1]">{study.title}</p>
+                          <p className="text-[0.9vw] font-medium w-full text-start leading-[1] ml-[0.1vw]">
+                            {study.des}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                  </div>
-              ))}
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
+              {/* Custom Scrollbar */}
+              <div className="swiper-scrollbar "></div>
             </div>
           </div>
         </div>

@@ -30,40 +30,40 @@ const Contact = () => {
       return () => ctx.revert();
     }
   });
-  const blueHexagonRef = useRef(null);
-  const yellowHexagonRef = useRef(null);
+  // const blueHexagonRef = useRef(null);
+  // const yellowHexagonRef = useRef(null);
 
-  // Function to handle mouse move
-  const handleMouseMove = (e) => {
-    const { clientX: mouseX, clientY: mouseY } = e;
+  // // Function to handle mouse move
+  // const handleMouseMove = (e) => {
+  //   const { clientX: mouseX, clientY: mouseY } = e;
     
-    // Apply movement to the blue and yellow hexagons based on mouse position
-    if (blueHexagonRef.current && yellowHexagonRef.current) {
-      const offsetX = mouseX * 0.05; // Adjust the movement sensitivity (change 0.05 for stronger/weaker movement)
-      const offsetY = mouseY * 0.05;
+  //   // Apply movement to the blue and yellow hexagons based on mouse position
+  //   if (blueHexagonRef.current && yellowHexagonRef.current) {
+  //     const offsetX = mouseX * 0.05; // Adjust the movement sensitivity (change 0.05 for stronger/weaker movement)
+  //     const offsetY = mouseY * 0.05;
 
-      gsap.to(blueHexagonRef.current, {
-        x: offsetX,
-        y: offsetY,
-        ease: "power2.out",
-      });
+  //     gsap.to(blueHexagonRef.current, {
+  //       x: offsetX,
+  //       y: offsetY,
+  //       ease: "power2.out",
+  //     });
 
-      gsap.to(yellowHexagonRef.current, {
-        x: offsetX * 1.2, // Make yellow hexagon move slightly differently from blue hexagon
-        y: offsetY * 1.2,
-        ease: "power2.out",
-      });
-    }
-  };
+  //     gsap.to(yellowHexagonRef.current, {
+  //       x: offsetX * 1.2, // Make yellow hexagon move slightly differently from blue hexagon
+  //       y: offsetY * 1.2,
+  //       ease: "power2.out",
+  //     });
+  //   }
+  // };
 
-  // Add event listeners on mount and clean up on unmount
-  useEffect(() => {
-    window.addEventListener('mousemove', handleMouseMove);
+  // // Add event listeners on mount and clean up on unmount
+  // useEffect(() => {
+  //   window.addEventListener('mousemove', handleMouseMove);
 
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('mousemove', handleMouseMove);
+  //   };
+  // }, []);
 
   return (
     <section id="contact">
@@ -102,14 +102,14 @@ const Contact = () => {
         </div>
 
         <div
-          className="absolute h-[2vw] w-[2.2vw] top-[33%] left-[33%]"
-          ref={blueHexagonRef}
+          className="absolute h-[2vw] w-[2.2vw] top-[33%] left-[33%] blue-hexagon-animation"
+         
         >
           <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
         </div>
         <div
-          className="absolute h-[2vw] w-[2.2vw] top-[17%] left-[20%]"
-          ref={yellowHexagonRef}
+          className="absolute h-[2vw] w-[2.2vw] top-[17%] left-[20%] yellow-hexagon-animation"
+   
         >
           <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
         </div>

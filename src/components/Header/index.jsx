@@ -61,7 +61,7 @@ const Header = () => {
                 </Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-3 w-3"
+                  className="h-3 w-3 group-hover:rotate-[-180deg] ease-in-out transition-all duration-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -73,7 +73,8 @@ const Header = () => {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
-                <ul className="absolute hidden group-hover:flex flex-col bg-white shadow-lg p-2 mt-2 rounded-lg w-[12vw] top-full pointer-events-auto">
+                <span className="w-fit h-0 top-[80%] overflow-hidden absolute group-hover:h-[8vw] rounded-[0.5vw] ease-in-out transition-all duration-700 block">
+                <ul className="flex flex-col bg-white shadow-lg p-2 px-0 mt-2 rounded-[0.5vw] w-[7.5vw] top-full pointer-events-auto">
                   <li className="py-1 px-3 hover:bg-gray-100">
                     <Link href="#" prefetch={false}>About 1</Link>
                   </li>
@@ -84,6 +85,7 @@ const Header = () => {
                     <Link href="#" prefetch={false}>About 3</Link>
                   </li>
                 </ul>
+                </span>
               </li>
               <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
                 <Link href={"#"} className="relative link-line" prefetch={false}>
@@ -91,7 +93,7 @@ const Header = () => {
                 </Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-3 w-3"
+                  className="h-3 w-3 group-hover:rotate-[-180deg] ease-in-out transition-all duration-700 "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -103,7 +105,9 @@ const Header = () => {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
-                <ul className="absolute hidden group-hover:flex flex-col bg-white shadow-lg p-2 mt-2 rounded-lg w-[12vw] top-full pointer-events-auto">
+                <span className="w-fit h-0 top-[80%] overflow-hidden absolute group-hover:h-[8vw] rounded-[0.5vw] ease-in-out transition-all duration-700 block">
+
+                <ul className=" flex flex-col bg-white shadow-lg p-2 mt-2 px-0 rounded-[0.5vw] w-[7.5vw] top-full pointer-events-auto">
                   <li className="py-1 px-3 hover:bg-gray-100">
                     <Link href="#" prefetch={false}>Service 1</Link>
                   </li>
@@ -114,6 +118,7 @@ const Header = () => {
                     <Link href="#" prefetch={false}>Service 3</Link>
                   </li>
                 </ul>
+                </span>
               </li>
               <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
                 <Link href={"#"} className="relative link-line" prefetch={false}>
@@ -121,7 +126,7 @@ const Header = () => {
                 </Link>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-3 w-3"
+                  className="h-3 w-3  group-hover:rotate-[-180deg] ease-in-out transition-all duration-700"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -133,8 +138,8 @@ const Header = () => {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
-              
-                <ul className="absolute hidden group-hover:flex flex-col bg-white shadow-lg p-2 mt-2 rounded-lg w-[12vw] top-full  pointer-events-auto">
+                <span className="w-fit h-0 top-[80%] overflow-hidden absolute group-hover:h-[8vw] rounded-[0.5vw] ease-in-out transition-all duration-700 block">
+                <ul className="flex flex-col bg-white shadow-lg p-2 px-0 mt-2 rounded-[0.5vw] w-[7.5vw] top-full  pointer-events-auto">
                   <li className="py-1 px-3 hover:bg-gray-100">
                     <Link href="#" prefetch={false}>Impact 1</Link>
                   </li>
@@ -145,6 +150,7 @@ const Header = () => {
                     <Link href="#" prefetch={false}>Impact 3</Link>
                   </li>
                 </ul>
+                </span>
               </li>
 
 

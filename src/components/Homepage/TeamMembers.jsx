@@ -28,21 +28,21 @@ const TeamMembers = () => {
         },
       }
     );
-    const handleMouseMove = (event) => {
-      const { clientX, clientY } = event;
+    // const handleMouseMove = (event) => {
+    //   const { clientX, clientY } = event;
 
-      document.querySelectorAll(".hexagon").forEach((hexagon, index) => {
-        const offsetX = (clientX / window.innerWidth - 0.5) * (7 + index * 3);
-        const offsetY = (clientY / window.innerHeight - 0.5) * (7 + index * 3);
-        hexagon.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-      });
-    };
+    //   document.querySelectorAll(".hexagon").forEach((hexagon, index) => {
+    //     const offsetX = (clientX / window.innerWidth - 0.5) * (7 + index * 3);
+    //     const offsetY = (clientY / window.innerHeight - 0.5) * (7 + index * 3);
+    //     hexagon.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+    //   });
+    // };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    // window.addEventListener("mousemove", handleMouseMove);
 
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
+    // return () => {
+    //   window.removeEventListener("mousemove", handleMouseMove);
+    // };
   }, []);
 
   useEffect(() => {
@@ -113,30 +113,30 @@ const TeamMembers = () => {
           </p>
         </div>
 
-        <div className="hexagon absolute h-[2vw] w-[2.2vw] bottom-[10%] right-[5%] transition-all duration-100 ease-out">
+        <div className="hexagon absolute h-[2vw] w-[2.2vw] bottom-[10%] right-[5%] transition-all duration-100 ease-out blue-hexagon-animation ">
           <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
         </div>
-        <div className=" hexagon absolute h-[2vw] w-[2.2vw] top-[30%] right-[5%] transition-all duration-100 ease-out">
+        <div className=" hexagon absolute h-[2vw] w-[2.2vw] top-[30%] right-[5%] transition-all duration-100 ease-out blue-hexagon-animation">
           <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
         </div>
-        <div className=" hexagon absolute h-[2vw] w-[2.2vw] top-[45%] left-[20%] transition-all duration-100 ease-out">
+        <div className=" hexagon absolute h-[2vw] w-[2.2vw] top-[45%] left-[20%] transition-all duration-100 ease-out blue-hexagon-animation">
           <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
         </div>
-        <div className=" hexagon absolute h-[2vw] w-[2.2vw] top-[25%] left-[10%] transition-all duration-100 ease-out">
+        <div className=" hexagon absolute h-[2vw] w-[2.2vw] top-[25%] left-[10%] transition-all duration-100 ease-out yellow-hexagon-animation">
           <Image
             src="/assets/icons/yellow-hexagon.svg"
             fill
             alt="yellow-hexagon"
           />
         </div>
-        <div className=" hexagon absolute h-[2vw] w-[2.2vw] bottom-[5%] left-[5%] transition-all duration-100 ease-out">
+        <div className=" hexagon absolute h-[2vw] w-[2.2vw] bottom-[5%] left-[5%] transition-all duration-100 ease-out yellow-hexagon-animation">
           <Image
             src="/assets/icons/yellow-hexagon.svg"
             fill
             alt="yellow-hexagon"
           />
         </div>
-        <div className=" hexagon absolute h-[2vw] w-[2.2vw] top-[40%] right-[25%] transition-all duration-100 ease-out">
+        <div className=" hexagon absolute h-[2vw] w-[2.2vw] top-[40%] right-[25%] transition-all duration-100 ease-out yellow-hexagon-animation">
           <Image
             src="/assets/icons/yellow-hexagon.svg"
             fill
