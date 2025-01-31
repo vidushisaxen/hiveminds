@@ -116,7 +116,7 @@ const Story = () => {
               <LinkButton
                 btnLink={"#"}
                 btnText={"How we do It"}
-                className={"text-white"}
+                className={"text-white fadeup"}
               />
             </div>
             <div className="w-[42%] flex items-start justify-start flex-col  gap-[2vw]">

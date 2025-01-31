@@ -17,7 +17,7 @@ export function headingBlur() {
                 gsap.from(headingWord,{
                     scrollTrigger: {
                         trigger: headingWord,
-                        start: 'top 80%', 
+                        start: 'top 90%', 
                       },
                       opacity: 0,
                       yPercent:20,
@@ -64,13 +64,13 @@ export function paraAnim() {
             gsap.from(content, {
               scrollTrigger: {
                 trigger: content,
-                start: "top 80%",
+                start: "top 90%",
                 // end: "bottom 60%",
               },
               opacity: 0,
               yPercent:50,
               ease:"power3.out",
-              duration: 1,
+              duration: 2,
               stagger: 0.1,
             });
           });
@@ -88,7 +88,7 @@ export function paraAnim() {
             gsap.from(content, {
               scrollTrigger: {
                 trigger: content,
-                start: "top 80%",
+                start: "top 90%",
                 // end: "bottom 60%",
               },
               opacity: 0,

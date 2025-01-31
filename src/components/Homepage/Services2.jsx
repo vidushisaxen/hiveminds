@@ -165,37 +165,9 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
 };
 
 const Services2 = () => {
-    const blueHexagonRef = useRef(null);
-    const yellowHexagonRef = useRef(null);
+   
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const handleMouseMove = (e) => {
-        const { clientX: mouseX, clientY: mouseY } = e;
-
-        if (blueHexagonRef.current && yellowHexagonRef.current) {
-            const offsetX = mouseX * 0.05;
-            const offsetY = mouseY * 0.05;
-
-            gsap.to(blueHexagonRef.current, {
-                x: offsetX,
-                y: offsetY,
-                ease: "power2.out",
-            });
-
-            gsap.to(yellowHexagonRef.current, {
-                x: offsetX * 1.2,
-                y: offsetY * 1.2,
-                ease: "power2.out",
-            });
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("mousemove", handleMouseMove);
-        return () => {
-            window.removeEventListener("mousemove", handleMouseMove);
-        };
-    }, []);
 
     return (
         <section id="services">
@@ -209,7 +181,7 @@ const Services2 = () => {
                     </p>
                 </div>
                 <div className="w-full h-full flex items-center justify-center">
-                    <div className="w-full h-[60vh] flex overflow-hidden gap-[1.5vw]">
+                    <div className="w-full h-[60vh] flex overflow-hidden gap-[1.5vw] fadein">
                         {services.map((service, index) => (
                             <ServiceCard
                                 key={index}
@@ -221,10 +193,10 @@ const Services2 = () => {
                     </div>
                 </div>
 
-                <div className="absolute h-[2vw] w-[2.2vw] top-[30%] right-[5%]" ref={blueHexagonRef}>
+                <div className="absolute h-[2vw] w-[2.2vw] top-[20%] right-[3%] blue-hexagon-animation">
                     <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
                 </div>
-                <div className="absolute h-[2vw] w-[2.2vw] top-[15%] left-[-3%]" ref={yellowHexagonRef}>
+                <div className="absolute h-[2vw] w-[2.2vw] top-[10%] left-[5%] yellow-hexagon-animation" >
                     <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
                 </div>
             </div>

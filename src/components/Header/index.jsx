@@ -29,23 +29,21 @@ const Header = () => {
     };
   }, [lastScrollY]);
 
-  // useEffect(() => {
-  //   let ctx = gsap.context(() => {
-  //     gsap.from(headerRef.current, {
-  //       y: -20,
-  //       // opacity: 0,
-  //       delay: 0.1,
-  //       duration: 1.5
-  //     })
-  //   })
-  //   return () => ctx.revert;
-  // }, [])
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(".header", {
+        y: -20,
+        opacity: 0,
+        delay: 0.5,
+        duration: 0.5
+      })
+    })
+    return () => ctx.revert;
+  }, [])
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-[100] transition-all ease duration-500 ${isHidden ? "-translate-y-full" : "translate-y-0 header-glassmorphism"
-        }`}
-    >
+    <header className="fixed top-0 left-0 w-full z-[100] header">
+      <div className={`transition-all ease duration-500 ${isHidden ? "-translate-y-full" : "translate-y-0 header-glassmorphism" }`}>
       <div
         className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw]`} ref={headerRef}
       >
@@ -166,6 +164,7 @@ const Header = () => {
             <PlainButton link={"#"} text={"Work with us"} data-btn-blue />
           </div>
         </div>
+      </div>
       </div>
     </header>
   );

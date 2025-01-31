@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
-import CustomEase from "gsap/dist/CustomEase";
 import PrimaryButton from "../Button/PrimaryButton";
 
 const Hero = () => {
@@ -77,7 +76,7 @@ useEffect(()=>{
     })
     gsap.to(".gallery-image", {
       yPercent: -images.length * 100,
-      duration: 18,
+      duration: images.length*4,
       ease: "none",
       repeat: -1,
     });

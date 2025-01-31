@@ -257,7 +257,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Email Address*"
-                className="w-[30vw] border-b-[1px] border-white bg-transparent mt-[0.5vw] p-[0.5vw] outline-none placeholder:text-white placeholder:text-[0.94vw]"
+                className="w-[30vw] border-b-[1px] border-white bg-transparent mt-[0.5vw] p-[0.5vw] pl-0 outline-none placeholder:text-white placeholder:text-[0.94vw]"
               />
               <div className="h-[0.98vw] w-[1vw] absolute right-[3%] bottom-[15%] cursor-pointer -rotate-45">
               <svg className="relative -rotate-[90deg] w-[1vw] h-[1vw] overflow-hidden mobile:w-[5.5vw] mobile:h-[5.5vw] tablet:w-[2.5vw] tablet:h-[2.5vw]" width="19" height="23" viewBox="0 0 19 23" fill="white" xmlns="http://www.w3.org/2000/svg">

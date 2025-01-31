@@ -63,14 +63,14 @@ export function Clients2() {
             Our diverse & growing portfolio spanning from lean startups to household brands - and everything in between
           </p>
         </div>
-<div className="fadeup  text-center">
+<div className="  text-center">
         <p className=" text-[1.24vw] text-[#111111] montreal font-medium">Clients</p>
         
           <Marquee pauseOnHover="true" speed={40} >
             {clients1.map((logoSrc, index) => (
               <div
                 key={index}
-                className="relative h-full w-[16vw] flex items-center justify-start group"
+                className="relative h-full w-[16vw] flex items-center justify-start group fadeup"
               >
                 <img src={logoSrc} alt={`Logo ${index}`} loading="lazy" className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain" />
               </div>
@@ -82,7 +82,7 @@ export function Clients2() {
             {clients2.map((logoSrc, index) => (
               <div
                 key={index}
-                className="relative h-full w-[16vw] flex items-center justify-start group"
+                className="relative h-full w-[16vw] flex items-center justify-start group fadeup"
               >
                 <img src={logoSrc} alt={`Logo ${index}`} loading="lazy" className="h-[7vw]  w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain" />
               </div>
@@ -95,7 +95,7 @@ export function Clients2() {
             {platform1.map((logoSrc, index) => (
               <div
                 key={index}
-                className="relative h-full w-[16vw]  flex items-center justify-start group"
+                className="relative h-full w-[16vw]  flex items-center justify-start group fadeup"
               >
                 <img src={logoSrc} alt={`Logo ${index}`} loading="lazy" className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain" />
               </div>
