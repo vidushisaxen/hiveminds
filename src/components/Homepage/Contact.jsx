@@ -102,13 +102,13 @@ const Contact = () => {
         </div>
 
         <div
-          className="absolute h-[2vw] w-[2.2vw] top-[33%] left-[33%] blue-hexagon-animation"
+          className="absolute h-[2vw] w-[2.2vw] top-[40%] left-[35%] blue-hexagon-animation"
          
         >
           <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
         </div>
         <div
-          className="absolute h-[2vw] w-[2.2vw] top-[17%] left-[20%] yellow-hexagon-animation"
+          className="absolute h-[2vw] w-[2.2vw] top-[20%] left-[15%] yellow-hexagon-animation"
    
         >
           <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />

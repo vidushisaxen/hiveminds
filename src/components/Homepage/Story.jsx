@@ -5,7 +5,7 @@ import PrimaryButton from "../Button/PrimaryButton";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import ReelButton from "../Button/ReelButton";
-import {useLenis} from "lenis/react"
+import { useLenis } from "lenis/react";
 import { initMagneticButton } from "../splitTextUtils";
 import dynamic from "next/dynamic";
 import LinkButton from "../Button/LinkButton";
@@ -13,59 +13,53 @@ gsap.registerPlugin(ScrollTrigger);
 
 const VideoModal = dynamic(() => import("@/components/VideoPlayer"));
 const Story = () => {
-
   const videoRef = useRef(null);
-    const [videoLoaded, setVideoLoaded] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const lenis = useLenis();
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const lenis = useLenis();
 
-    const handleOpen = () => {
-      setIsModalOpen(true);
-      lenis.stop();
+  const handleOpen = () => {
+    setIsModalOpen(true);
+    lenis.stop();
+  };
+
+  const handleClose = () => {
+    setIsModalOpen(false);
+    lenis.start();
+  };
+  useEffect(() => {
+    initMagneticButton();
+  }, []);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const video = videoRef.current;
+            if (video && !videoLoaded) {
+              // Set video source dynamically when it enters the viewport
+              video.src = "/assets/videos/story-reel.mp4";
+              video.load(); // Ensure the video is loaded
+              video.play(); // Play the video when it's visible
+              setVideoLoaded(true); // Set video as loaded
+            }
+            observer.unobserve(entry.target); // Stop observing once the video has loaded
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      observer.observe(videoElement);
+    }
+
+    return () => {
+      if (videoElement) observer.unobserve(videoElement);
     };
-  
-    const handleClose = () => {
-      setIsModalOpen(false);
-      lenis.start();
-    };
-    useEffect(() => {
-      initMagneticButton();
-    }, []);
-    useEffect(() => {
+  }, [videoLoaded]);
 
-    
-    
-    
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const video = videoRef.current;
-                        if (video && !videoLoaded) {
-                            // Set video source dynamically when it enters the viewport
-                            video.src = "/assets/videos/story-reel.mp4";
-                            video.load(); // Ensure the video is loaded
-                            video.play(); // Play the video when it's visible
-                            setVideoLoaded(true); // Set video as loaded
-                        }
-                        observer.unobserve(entry.target); // Stop observing once the video has loaded
-                    }
-                });
-            },
-            { threshold: 0.5 }
-        );
-
-        const videoElement = videoRef.current;
-        if (videoElement) {
-            observer.observe(videoElement);
-        }
-
-        return () => {
-            if (videoElement) observer.unobserve(videoElement);
-        };
-    }, [videoLoaded]);
-
-    
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
@@ -85,32 +79,27 @@ const Story = () => {
   return (
     <>
       <section id="story" className="pt-[15vw]">
-        <div className="w-screen h-full py-[5vw]  relative">
-        <div
-          className="w-full h-full flex justify-start items-center relative mobile:flex-col mobile:pt-[35%] mobile:gap-[7vw] tablet:flex-col tablet:pt-[35%] tablet:gap-[7vw] z-[5]"
-          data-magnetic-target
-          data-magnetic-strength="200"
-        >
-          
-          <div className="absolute left-1/2 -translate-x-1/2 mobile:static mobile:translate-x-0 tablet:static tablet:translate-x-0">
-            <ReelButton
-              onClick={handleOpen}
-              text="Play Reel"
-              className="magnetic-inner"
-            />
-          </div>
-        </div>
-          <div className="w-[90vw] h-[60%] bg-black rounded-[1.5vw] overflow-hidden absolute video top-[-15%] left-[50%] translate-x-[-50%]">
-              <video 
+        <div className="w-screen h-full py-[5vw] relative">
+          <div
+            data-magnetic-target
+            data-magnetic-strength="200"
+            className="w-[90vw] h-[60%] bg-black rounded-[1.5vw] overflow-hidden absolute video top-[-15%] left-[50%] translate-x-[-50%]"
+          >
+            <div className="absolute left-1/2 z-10 -translate-x-1/2 top-1/2 -translate-y-1/2 mobile:static mobile:translate-x-0 tablet:static tablet:translate-x-0">
+              <ReelButton
+                onClick={handleOpen}
+                text="Play Reel"
+                className="magnetic-inner z-10"
+              />
+            </div>
+            <video
               ref={videoRef}
               muted
               autoPlay
               loop
               poster="/assets/images/homepage/story-reel-poster.png"
               className="object-cover w-full h-full"
-              >
-              </video>
-           
+            ></video>
           </div>
           <div className="w-screen h-full py-[4vw] px-[5vw] mt-[5vw] pt-[22%] bg-[#134BD6] rounded-[2vw] flex items-start justify-between gap-[7vw]">
             <div className="w-[40%] flex items-start justify-start flex-col  gap-[2vw]">
@@ -124,7 +113,11 @@ const Story = () => {
                 insights to craft campaigns that elevate your brand and drive
                 sustainable growth.
               </p>
-              <LinkButton btnLink={"#"} btnText={"How we do It"} className={"text-white"}/>
+              <LinkButton
+                btnLink={"#"}
+                btnText={"How we do It"}
+                className={"text-white"}
+              />
             </div>
             <div className="w-[42%] flex items-start justify-start flex-col  gap-[2vw]">
               <p className="text-[2.8vw] montreal text-[#FFFFFF] leading-[1.2] w-[90%] headinganim">

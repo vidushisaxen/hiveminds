@@ -41,7 +41,7 @@ export default function Contactform() {
   return (
     <div className="w-full h-full p-[2vw] pb-[3vw] rounded-[0.5vw] fadein">
       <Form {...form}>  
-        <form className="space-y-8">
+        <form className="space-y-4">
           {/* Name Field */}
           <div className="w-full flex gap-[1vw] items-center ">
             <div className="w-[90vw] h-fit">

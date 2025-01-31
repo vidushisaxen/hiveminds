@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/scrollbar";
 import styles from "../Button/styles.module.css";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -102,7 +103,7 @@ const CaseStudies = () => {
                   <button
                     key={category}
                     data-text={category}
-                    className={`${styles.buttonPlain} cursor-pointer relative overflow-hidden border-[#134BD6] border-[1.5px] hover:text-white rounded-[40px] text-[0.97vw] font-light h-fit flex items-center justify-center text-center px-[1.5vw] py-[0.5vw] transition-all duration-300 ${
+                    className={`${styles.buttonPlain} cursor-pointer relative overflow-hidden border-[#134BD6] border-[1.5px] rounded-[40px] text-[0.97vw] font-light h-fit flex items-center justify-center text-center px-[1.5vw] py-[0.5vw] transition-all duration-300 ${
                       activeCategory === category ? " text-white bg-[#134BD6]" : ""
                     } `}
                     onClick={() => setActiveCategory(category)}
@@ -120,12 +121,15 @@ const CaseStudies = () => {
                 modules={[FreeMode, Scrollbar]}
                 freeMode={true}
                 spaceBetween={20}
+                speed={1000}
                 slidesPerView={2}
                 scrollbar={{ draggable: true, hide: false, el: ".swiper-scrollbar" }}
                 className="w-full h-full rounded-[1vw] overflow-hidden"
               >
                 {filteredCaseStudies.map((study, index) => (
                   <SwiperSlide key={index}>
+                    <Link href={"#"}>
+                    
                     <div className="relative w-[25vw] h-[30.5vw]">
                       <Image src={study.img} fill alt="casestudy" className="object-contain" />
                       <div className="absolute top-0 right-0 w-[11.7vw] h-[4vw] flex items-center justify-center rounded-br-[20px]">
@@ -137,6 +141,7 @@ const CaseStudies = () => {
                         </div>
                       </div>
                     </div>
+                    </Link>
                   </SwiperSlide>
                 ))}
               </Swiper>

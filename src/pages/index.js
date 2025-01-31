@@ -20,7 +20,7 @@ const index = () => {
   fadeIn();
   useEffect(() => {
     gsap.to(".blue-hexagon-animation", {
-      y: "30px", // Move up & down
+      y: "15px", // Move up & down
       duration: 2,
       repeat: -1, // Infinite loop
       yoyo: true, // Smooth back-and-forth motion
@@ -28,7 +28,7 @@ const index = () => {
     });
 
     gsap.to(".yellow-hexagon-animation", {
-      y: "-30px", // Move opposite direction
+      y: "-15px", // Move opposite direction
       duration: 2,
       repeat: -1,
       yoyo: true,

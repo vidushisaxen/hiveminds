@@ -15,8 +15,10 @@ const Hero = () => {
   const images = [
     { src1: "/assets/images/homepage/hero-bigbasket-img-1.png", src2: "/assets/images/homepage/hero-bigbasket-img-4.png" },
     { src1: "/assets/images/homepage/hero-bigbasket-img-2.png", src2: "/assets/images/homepage/hero-bigbasket-img-3.png" },
-    { src1: "/assets/images/homepage/hero-bigbasket-img-1.png", src2: "/assets/images/homepage/hero-bigbasket-img-4.png" },
-    { src1: "/assets/images/homepage/hero-bigbasket-img-2.png", src2: "/assets/images/homepage/hero-bigbasket-img-3.png" },
+    { src1: "/assets/images/homepage/hero-dominos-1.png", src2: "/assets/images/homepage/hero-dominos-4.png" },
+    { src1: "/assets/images/homepage/hero-dominos-2.png", src2: "/assets/images/homepage/hero-dominos-3.png" },
+    { src1: "/assets/images/homepage/hero-flydubai-1.png", src2: "/assets/images/homepage/hero-flydubai-4.png" },
+    { src1: "/assets/images/homepage/hero-flydubai-2.png", src2: "/assets/images/homepage/hero-flydubai-3.png" },
   ];
   const details=[
     {
@@ -75,7 +77,7 @@ useEffect(()=>{
     })
     gsap.to(".gallery-image", {
       yPercent: -images.length * 100,
-      duration: 12,
+      duration: 18,
       ease: "none",
       repeat: -1,
     });
@@ -120,7 +122,7 @@ useEffect(()=>{
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveDetail((prevIndex) => (prevIndex + 1) % details.length);
-    }, 6600); // Change every 3 seconds
+    }, 6500); // Change every 3 seconds
 
     return () => clearInterval(interval);
   }, [details.length]);
@@ -190,7 +192,7 @@ useEffect(()=>{
       </div>
 
       {/* Bottom Stats Box */}
-      <div className="absolute bottom-0 right-[4.5%] w-[49.5vw] glassmorphism-dark border border-white rounded-tl-[2vw] rounded-tr-[2vw] h-[8.5vw] detail-container">
+      <div className="absolute bottom-0 right-[4.9%] w-[49.2vw] glassmorphism-dark border border-white rounded-tl-[2vw] rounded-tr-[2vw] h-[8.5vw] detail-container">
         <div className="w-full h-full flex justify-between items-center px-[5vw]">
           <div className="flex flex-col items-center w-[25%]">
             <h3 className="text-[2.4vw] font-extrabold uppercase leading-[1] content-detail">
