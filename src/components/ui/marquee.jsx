@@ -1,5 +1,10 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useEffect } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function Marquee({
   children,
@@ -11,9 +16,9 @@ export function Marquee({
 }) {
   return (
     (<div
-      className={cn("w-full overflow-hidden sm:mt-5 z-10", className)}
+      className={cn("w-full overflow-hidden  z-10", className)}
       {...props}>
-      <div className="relative flex max-w-[100vw] overflow-hidden py-5">
+      <div className="relative flex max-w-[100vw] overflow-hidden py-3">
         <div
           className={cn(
             "flex w-max animate-marquee",
