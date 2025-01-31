@@ -1,7 +1,4 @@
 import { Marquee } from "@/components/ui/marquee"
-import { useEffect } from "react";
-import gsap from "gsap";
-
 
 const clients1 = [
   "/assets/images/homepage/logos/clients/big-basket.png",
@@ -17,6 +14,7 @@ const clients1 = [
   "/assets/images/homepage/logos/clients/P&G.png",
   "/assets/images/homepage/logos/clients/portea.png",
 ];
+
 const clients2 = [
   "/assets/images/homepage/logos/clients/airtel.png",
   "/assets/images/homepage/logos/clients/crompton.png",
@@ -31,6 +29,7 @@ const clients2 = [
   "/assets/images/homepage/logos/clients/jockey.png",
   "/assets/images/homepage/logos/clients/tanishq.png"
 ];
+
 const platform1 = [
   "/assets/images/homepage/logos/media/amazon.png",
   "/assets/images/homepage/logos/media/disney-hotstar.png",
