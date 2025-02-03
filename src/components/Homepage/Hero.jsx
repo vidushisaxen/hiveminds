@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import PrimaryButton from "../Button/PrimaryButton";
+import Link from "next/link";
 
 const Hero = () => {
   const isFirstRender = useRef(true);
@@ -62,11 +63,16 @@ const Hero = () => {
   ];
 useEffect(()=>{
   const ctx = gsap.context(()=>{
+
     gsap.from(".gallery",{
       opacity:0,
       duration:2,
       delay:1
       
+    })
+    gsap.from(".gallery-h",{
+      yPercent:10,
+      duration:24,
     })
     gsap.from(".detail-container",{
       opacity:0,
@@ -75,7 +81,7 @@ useEffect(()=>{
       delay:1
     })
     gsap.to(".gallery-image", {
-      yPercent: -images.length * 100,
+      yPercent: -images.length * 102.9,
       duration: images.length*4,
       ease: "none",
       repeat: -1,
@@ -93,9 +99,7 @@ useEffect(()=>{
         .to(paraRef.current,{opacity:0,duration:1},"-=1.2")
         .from(buttonRef.current, { opacity: 0, yPercent: 100, duration: 1 }, "-=5.5")
         .to(buttonRef.current,{opacity:0,duration:1,delay:-1.2})
-   
   
-      isFirstRender.current = false;
     });
 
     return () => ctx.revert();
@@ -109,19 +113,49 @@ useEffect(()=>{
 
     return () => clearInterval(interval);
   }, [slidesData.length]);
-  useEffect(()=>{
-    const ctx = gsap.context(()=>{
-      gsap.from(".content-detail",{ opacity: 0, yPercent: 40, duration: 1,})
-      gsap.to(".content-detail",{ opacity: 0, yPercent: -20, duration: 0.5, delay:6})
-      gsap.from(".content-para", { yPercent: 100, opacity: 0, duration: 0.8  })
-      gsap.to(".content-para",{ opacity: 0, yPercent: -20, duration: 0.5, delay:6})
-    })
-    return()=>ctx.revert();
-  },[activeDetail])
+  const firstRenderRef = useRef(true); // Track first render
+  useEffect(() => {
+  
+    const ctx = gsap.context(() => {
+      gsap.from(".content-detail", {
+        opacity: 0,
+        yPercent: 40,
+        duration: 1,
+        delay:0,
+       
+      });
+      gsap.to(".content-detail", {
+        opacity: 0,
+        yPercent: -20,
+        duration: 1,
+        // delay: firstRenderRef.current ? 2 : 8,
+        delay:5,
+      });
+  
+      gsap.from(".content-para", {
+        yPercent: 100,
+        opacity: 0,
+        duration: 0.8,
+        // delay: firstRenderRef.current ? 2 : 0, 
+      });
+      gsap.to(".content-para", {
+        opacity: 0,
+        yPercent: -20,
+        duration: 0.5,
+        delay: 5,
+      });
+    });
+  
+    // After first render, update ref to false so subsequent animations have no delay
+    firstRenderRef.current = false;
+  
+    return () => ctx.revert();
+  }, [activeDetail]);
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveDetail((prevIndex) => (prevIndex + 1) % details.length);
-    }, 6500); // Change every 3 seconds
+    }, 6000); // Change every 3 seconds
 
     return () => clearInterval(interval);
   }, [details.length]);
@@ -155,7 +189,8 @@ useEffect(()=>{
             <div className="gutter relative">
               <div className={`gallery-h ${colIndex % 2 === 0 ? "" : "gallery-h--tb"}`}>
                 {images.map((img, imgIndex) => (
-                  <div className="gallery-image relative" key={imgIndex}>
+                  <div className={`gallery-image relative ${imgIndex%2==0?"mt-[2vw]":""}`} key={imgIndex}>
+                    <Link href={"#"}>
                     <div className="gallery-image__img relative">
                       <div className="fill-dimensions cover-img overflow-hidden">
                         <Image
@@ -167,10 +202,13 @@ useEffect(()=>{
                         />
                       </div>
                     </div>
+                    </Link>
                   </div>
                 ))}
                 {images.map((img, imgIndex) => (
-                  <div className="gallery-image relative" key={`duplicate-${imgIndex}`}>
+                  <div className={`gallery-image relative ${imgIndex%2==0?"mt-[2vw]":""}`} key={`duplicate-${imgIndex}`}>
+                    <Link href={"#"}>
+                    
                     <div className="gallery-image__img relative">
                       <div className="fill-dimensions cover-img overflow-hidden">
                         <Image
@@ -182,6 +220,7 @@ useEffect(()=>{
                         />
                       </div>
                     </div>
+                    </Link>
                   </div>
                 ))}
               </div>

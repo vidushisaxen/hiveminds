@@ -8,12 +8,14 @@ import Contact from '@/components/Homepage/Contact'
 import Story from '@/components/Homepage/Story'
 import TeamMembers from '@/components/Homepage/TeamMembers'
 import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
 import Services2 from '@/components/Homepage/Services2'
 import { Clients2 } from '@/components/Homepage/Clients2'
+import Services from '@/components/Homepage/Services'
 
 const index = () => {
+  const [isOpen, setIsOpen] =  useState(false);
   headingBlur();
   paraAnim();
   fadeUp();
@@ -37,10 +39,11 @@ const index = () => {
   }, []);
   return (
     <>
-      <Layout>
+      <Layout isOpen={isOpen}>
         <Hero />
-        <Story />
-        <Services2/>
+        <Story isOpen={isOpen} setIsOpen={setIsOpen}/>
+        <Services/>{/* <Services2/> */}
+
        <Clients2/>
         <TeamMembers />
         <div className='relative h-full w-screen rounded-[20px] '>

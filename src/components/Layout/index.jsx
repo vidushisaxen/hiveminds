@@ -4,11 +4,11 @@ import Footer from "../Footer";
 import Header from "../Header";
 import Loader from "../Loader";
 
-const Layout = ({ children }) => {
+const Layout = ({ children ,isOpen}) => {
     return (
         <>
            
-            <Header />
+            <Header isOpen={isOpen} />
             <main className="relative z-[1]">
                 {children}
             </main>

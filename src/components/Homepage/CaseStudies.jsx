@@ -67,7 +67,13 @@ const CaseStudies = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".slideInCaseCarousel", {
+      gsap.from(".swiper-scrollbar",{
+        opacity:0,
+        delay:0.8,
+        duration:1,
+        ease:"power3.out"
+      })
+      gsap.from(".swiper-wrapper", {
         opacity: 0,
         xPercent: 100,
         duration: 1,
@@ -79,6 +85,7 @@ const CaseStudies = () => {
     });
     return () => ctx.revert();
   }, [activeCategory]);
+
 
   const filteredCaseStudies =
     activeCategory === "All"
@@ -129,7 +136,6 @@ const CaseStudies = () => {
                 {filteredCaseStudies.map((study, index) => (
                   <SwiperSlide key={index}>
                     <Link href={"#"}>
-                    
                     <div className="relative w-[25vw] h-[30.5vw]">
                       <Image src={study.img} fill alt="casestudy" className="object-contain" />
                       <div className="absolute top-0 right-0 w-[11.7vw] h-[4vw] flex items-center justify-center rounded-br-[20px]">

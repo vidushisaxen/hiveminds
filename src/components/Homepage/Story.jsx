@@ -12,7 +12,7 @@ import LinkButton from "../Button/LinkButton";
 gsap.registerPlugin(ScrollTrigger);
 
 const VideoModal = dynamic(() => import("@/components/VideoPlayer"));
-const Story = () => {
+const Story = ({isOpen,setIsOpen}) => {
   const videoRef = useRef(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,12 +20,14 @@ const Story = () => {
 
   const handleOpen = () => {
     setIsModalOpen(true);
+    setIsOpen(true)
     lenis.stop();
   };
 
   const handleClose = () => {
     setIsModalOpen(false);
     lenis.start();
+    setIsOpen(false);
   };
   useEffect(() => {
     initMagneticButton();

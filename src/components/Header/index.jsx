@@ -4,7 +4,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import PlainButton from "../Button/PlainButton";
 
-const Header = () => {
+const Header = ({isOpen}) => {
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const headerRef = useRef();
@@ -42,6 +42,8 @@ const Header = () => {
   }, [])
 
   return (
+    !isOpen?(
+
     <header className="fixed top-0 left-0 w-full z-[100] header">
       <div className={`transition-all ease duration-500 ${isHidden ? "-translate-y-full" : "translate-y-0 header-glassmorphism" }`}>
       <div
@@ -167,6 +169,8 @@ const Header = () => {
       </div>
       </div>
     </header>
+    ):(<>
+    </>)
   );
 };
 

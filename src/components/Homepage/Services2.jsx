@@ -46,6 +46,7 @@ const services = [
 const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
     const cardRef = useRef(null);
     const headingRef = useRef(null);
+    const headingActiveRef = useRef(null);
     const contentRef = useRef(null);
     const linkRef = useRef(null);
     const timelineRef = useRef(null);
@@ -78,18 +79,24 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                     width: "45%"
                 }),
                 gsap.to(headingRef.current, {
-                    rotation: 0,
-                    top: "63%",
-                    left: "8%",
-                    transformOrigin: "0% 50%"
+                    duration:0.5,
+                    opacity:0,
+                }),
+                gsap.to(headingActiveRef.current,{
+                  opacity:1,
+                  delay:0.5,
+                  
+                
                 })
+                
             ], "<")
+           
             .to([contentRef.current, linkRef.current], {
                 opacity: 1,
                 scale: 1,
                 duration: 0.8,
                 ease:"power3.out",
-                delay:0.25,
+                delay:-0.2,
             }, "-=0.3");
         } else {
             tl.add([
@@ -97,16 +104,22 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                     width: "18%"
                 }),
                 gsap.to(headingRef.current, {
-                    rotation: -90,
+                    
+                    opacity:1,
                     top: "90%",
                     left: "45%",
                     transformOrigin: "0% 50%"
+                }),
+                gsap.to(headingActiveRef.current,{
+                    opacity:0,
+                    duration:0.2
                 })
             ], "<")
             .to([contentRef.current, linkRef.current], {
                 opacity: 0,
                 scale: 1,
                 duration: 0.4,
+                delay:-0.5
             }, "-=0.6");
         }
     }, [isActive]);
@@ -128,7 +141,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
             <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-6 text-white z-10">
                 <h3
                     ref={headingRef}
-                    className="text-white text-[1.5vw] absolute w-[23vw] text-left leading-[1.2]"
+                    className="text-white text-[1.5vw] absolute w-[23vw] text-left leading-[1.2] rotate-[-90deg]"
                     style={{
                         transformOrigin: "0% 50%",
                         rotation: -90,
@@ -137,6 +150,10 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                     }}
                 >
                     {service.title}
+                </h3>
+                <h3  ref={headingActiveRef}
+                    className="text-white text-[1.5vw] absolute w-[23vw] text-left leading-[1.2] top-[60%] left-[8%]">
+                {service.title}
                 </h3>
 
                 <p

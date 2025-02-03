@@ -80,10 +80,10 @@ const VideoPlayer = ({ isOpen, onClose, videoSrc, poster }) => {
   return (
     <div
       ref={modalRef}
-      className="fixed top-0 cursor-none left-0 w-full h-full flex items-center justify-center opacity-0 -z-10"
+      className="fixed top-0 cursor-none left-0 w-full h-full flex items-center justify-center opacity-0 z-[999]"
       onClick={onClose}
     >
-      <div className="relative w-full h-full bg-black" onClick={handleVideoClick} data-magnetic-target data-magnetic-strength="200">
+      <div className="relative w-full h-full bg-black z-[999]" onClick={handleVideoClick} data-magnetic-target data-magnetic-strength="200">
         <video
           ref={videoRef}
           poster={poster}
