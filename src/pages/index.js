@@ -20,6 +20,7 @@ const index = () => {
   paraAnim();
   fadeUp();
   fadeIn();
+  
   useEffect(() => {
     gsap.to(".blue-hexagon-animation", {
       y: "15px", // Move up & down

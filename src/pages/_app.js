@@ -1,10 +1,26 @@
 import "@/styles/globals.css";
-import { ReactLenis } from 'lenis/react'
-import 'lenis/dist/lenis.css';
-import { DefaultSeo } from 'next-seo';
-import { useEffect } from "react";
+import { ReactLenis } from "lenis/react";
+import "lenis/dist/lenis.css";
+import { DefaultSeo } from "next-seo";
+import { useEffect, useState } from "react";
 
 export default function App({ Component, pageProps }) {
+  const [mouseEnabled, setMouseEnabled] = useState(false);
+
+  useEffect(() => {
+    const enableMouse = () => setMouseEnabled(true);
+
+    // Disable mouse interactions initially
+    document.body.style.pointerEvents = "none";
+
+    // Enable mouse interactions when user moves cursor
+    window.addEventListener("mousemove", enableMouse, { once: true });
+
+    return () => {
+      document.body.style.pointerEvents = "auto"; // Restore mouse interactions
+      window.removeEventListener("mousemove", enableMouse);
+    };
+  }, []);
 
   return (
     <>
@@ -35,9 +51,12 @@ export default function App({ Component, pageProps }) {
           },
         ]}
       />
-      <ReactLenis root options={{lerp: 0.07}}>
-        <Component {...pageProps} />
+      <ReactLenis root options={{ lerp: 0.07 }}>
+        {/* Mouse interactions enabled dynamically */}
+        <div style={{ pointerEvents: mouseEnabled ? "auto" : "none" }}>
+          <Component {...pageProps} />
+        </div>
       </ReactLenis>
     </>
-  )
+  );
 }

@@ -359,3 +359,8 @@ body.loading {
 bottom:8% !important;
 left: 42% !important;
 }
+
+.blog-link:hover .link-line::after {
+  transform-origin: left;
+  transform: scaleX(1) rotate(0.001deg);
+}
