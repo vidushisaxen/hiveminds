@@ -14,6 +14,7 @@ import Services2 from '@/components/Homepage/Services2'
 import { Clients2 } from '@/components/Homepage/Clients2'
 import Services from '@/components/Homepage/Services'
 
+
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
   headingBlur();

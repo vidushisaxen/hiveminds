@@ -1,5 +1,6 @@
 import { Marquee } from "@/components/ui/marquee"
-
+import { useEffect } from "react";
+import gsap from "gsap";
 const clients1 = [
   "/assets/images/homepage/logos/clients/big-basket.png",
   "/assets/images/homepage/logos/clients/dominos.png",

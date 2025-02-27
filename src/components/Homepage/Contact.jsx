@@ -7,29 +7,29 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 const Contact = () => {
-  useEffect(() => {
-    if (globalThis.innerWidth > 1024) {
-      let ctx = gsap.context(() => {
-        const body = document.body;
-        const changeBodyColor = (color) => {
-          gsap.to(body, {
-            backgroundColor: color,
-            duration: 1, // Duration for smooth transition
-            ease: "power2.out",
-          });
-        };
-        // ScrollTrigger for changing body background color
-        ScrollTrigger.create({
-          trigger: "#contact",
-          start: "top 90%",
-          end: "bottom 20%",
-          onEnter: () => changeBodyColor("#fafafa"),
-          onLeaveBack: () => changeBodyColor("#134bd6"),
-        });
-      });
-      return () => ctx.revert();
-    }
-  });
+  // useEffect(() => {
+  //   if (globalThis.innerWidth > 1024) {
+  //     let ctx = gsap.context(() => {
+  //       const body = document.body;
+  //       const changeBodyColor = (color) => {
+  //         gsap.to(body, {
+  //           backgroundColor: color,
+  //           duration: 1, // Duration for smooth transition
+  //           ease: "power2.out",
+  //         });
+  //       };
+  //       // ScrollTrigger for changing body background color
+  //       ScrollTrigger.create({
+  //         trigger: "#contact",
+  //         start: "top 90%",
+  //         end: "bottom 20%",
+  //         onEnter: () => changeBodyColor("#fafafa"),
+  //         onLeaveBack: () => changeBodyColor("#134bd6"),
+  //       });
+  //     });
+  //     return () => ctx.revert();
+  //   }
+  // });
   // const blueHexagonRef = useRef(null);
   // const yellowHexagonRef = useRef(null);
 

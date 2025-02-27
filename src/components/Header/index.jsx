@@ -29,17 +29,17 @@ const Header = ({isOpen}) => {
     };
   }, [lastScrollY]);
 
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.from(".header", {
-        y: -20,
-        opacity: 0,
-        delay: 0.5,
-        duration: 0.5
-      })
-    })
-    return () => ctx.revert;
-  }, [])
+  // useEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     gsap.from(headerRef.current, {
+  //       y: -20,
+  //       // opacity: 0,
+  //       delay: 0.1,
+  //       duration: 1.5
+  //     })
+  //   })
+  //   return () => ctx.revert;
+  // }, [])
 
   return (
     !isOpen?(
