@@ -18,6 +18,8 @@ export function headingBlur() {
                     scrollTrigger: {
                         trigger: headingWord,
                         start: 'top 90%', 
+                        
+                
                       },
                       opacity: 0,
                       yPercent:20,

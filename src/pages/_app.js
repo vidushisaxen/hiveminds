@@ -22,6 +22,11 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
 
+  // ✅ Scroll to top on reload
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <DefaultSeo

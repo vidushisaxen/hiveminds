@@ -394,3 +394,9 @@ left: 42% !important;
   transform-origin: left;
   transform: scaleX(1) rotate(0.001deg);
 }
+
+/* 3d card animation */
+
+.hero-img{
+  transition: all cubic-bezier(0,.08,0,1);
+}
