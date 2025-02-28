@@ -115,7 +115,7 @@ const Story = ({isOpen,setIsOpen}) => {
               </p>
               <LinkButton
                 btnLink={"#"}
-                btnText={"How we do It"}
+                btnText={"How We Do It"}
                 className={"text-white fadeup"}
               />
             </div>

@@ -1,6 +1,5 @@
 import { Marquee } from "@/components/ui/marquee";
-import { useEffect } from "react";
-import gsap from "gsap";
+
 const clients1 = [
   "/assets/images/impact/clients/bigbasket.png",
   "/assets/images/impact/clients/dominos.png",
@@ -15,36 +14,36 @@ const clients1 = [
 ];
 
 const clients2 = [
-  "/assets/images/impact/clients/airtel.png",
+  "/assets/images/impact/clients/urban-ladder.png",
   "/assets/images/impact/clients/crompton.png",
   "/assets/images/impact/clients/godrej.png",
-  "/assets/images/impact/clients/cleartrip.png",
+
   "/assets/images/impact/clients/jockey.png",
-  "/assets/images/impact/clients/airtel.png",
+  "/assets/images/impact/clients/urban-ladder.png",
   "/assets/images/impact/clients/crompton.png",
   "/assets/images/impact/clients/godrej.png",
-  "/assets/images/impact/clients/cleartrip.png",
+ 
   "/assets/images/impact/clients/jockey.png",
 ];
 const clients3 = [
-  "/assets/images/impact/clients/bajaj.png",
+ 
   "/assets/images/impact/clients/abbott.png",
   "/assets/images/impact/clients/boAt.png",
   "/assets/images/impact/clients/discovery.png",
   "/assets/images/impact/clients/instapay.png",
-  "/assets/images/impact/clients/bajaj.png",
+  
   "/assets/images/impact/clients/abbott.png",
   "/assets/images/impact/clients/boAt.png",
   "/assets/images/impact/clients/discovery.png",
   "/assets/images/impact/clients/instapay.png",
 ];
 const clients4 = [
-  "/assets/images/impact/clients/tanishq.png",
+  
   "/assets/images/impact/clients/itc.png",
   "/assets/images/impact/clients/licious.png",
   "/assets/images/impact/clients/pidilite.png",
   "/assets/images/impact/clients/sugar.png",
-  "/assets/images/impact/clients/tanishq.png",
+ 
   "/assets/images/impact/clients/itc.png",
   "/assets/images/impact/clients/licious.png",
   "/assets/images/impact/clients/pidilite.png",
@@ -52,40 +51,40 @@ const clients4 = [
 ];
 
 const platform1 = [
-  "/assets/images/impact/media/fb.png",
-  "/assets/images/impact/media/times-network.png",
-  "/assets/images/impact/media/sony-liv.png",
-  "/assets/images/impact/media/amazon.png",
-  "/assets/images/impact/media/quora.png",
-  "/assets/images/impact/media/fb.png",
-  "/assets/images/impact/media/times-network.png",
-  "/assets/images/impact/media/sony-liv.png",
-  "/assets/images/impact/media/amazon.png",
-  "/assets/images/impact/media/quora.png",
+  "/assets/images/impact/clients/facebook.png",
+  "/assets/images/impact/clients/times-network.png",
+  "/assets/images/impact/clients/sony-liv.png",
+  "/assets/images/impact/clients/amazon.png",
+  "/assets/images/impact/clients/quora.png",
+  "/assets/images/impact/clients/facebook.png",
+  "/assets/images/impact/clients/times-network.png",
+  "/assets/images/impact/clients/sony-liv.png",
+  "/assets/images/impact/clients/amazon.png",
+  "/assets/images/impact/clients/quora.png",
 ];
 const platform2 = [
-  "/assets/images/impact/media/flipkart.png",
-  "/assets/images/impact/media/network-18.png",
-  "/assets/images/impact/media/ndtv.png",
-  "/assets/images/impact/media/gaana.png",
-  "/assets/images/impact/media/spotify.png",
-  "/assets/images/impact/media/flipkart.png",
-  "/assets/images/impact/media/network-18.png",
-  "/assets/images/impact/media/ndtv.png",
-  "/assets/images/impact/media/gaana.png",
-  "/assets/images/impact/media/spotify.png",
+  "/assets/images/impact/clients/flipkart-ads.png",
+  "/assets/images/impact/clients/network18.png",
+  "/assets/images/impact/clients/ndtv.png",
+  "/assets/images/impact/clients/gaana.png",
+  "/assets/images/impact/clients/spotify.png",
+  "/assets/images/impact/clients/flipkart-ads.png",
+  "/assets/images/impact/clients/network18.png",
+  "/assets/images/impact/clients/ndtv.png",
+  "/assets/images/impact/clients/gaana.png",
+  "/assets/images/impact/clients/spotify.png",
 ];
 const platform3 = [
-  "/assets/images/impact/media/your-story.png",
-  "/assets/images/impact/media/et.png",
-  "/assets/images/impact/media/the-hindu.png",
-  "/assets/images/impact/media/hotstar.png",
-  "/assets/images/impact/media/double-click.png",
-  "/assets/images/impact/media/your-story.png",
-  "/assets/images/impact/media/et.png",
-  "/assets/images/impact/media/the-hindu.png",
-  "/assets/images/impact/media/hotstar.png",
-  "/assets/images/impact/media/double-click.png",
+  "/assets/images/impact/clients/your-story.png",
+  "/assets/images/impact/clients/et.png",
+  "/assets/images/impact/clients/the-hindu.png",
+  "/assets/images/impact/clients/disney-hotstar.png",
+  "/assets/images/impact/clients/double-click.png",
+  "/assets/images/impact/clients/your-story.png",
+  "/assets/images/impact/clients/et.png",
+  "/assets/images/impact/clients/the-hindu.png",
+  "/assets/images/impact/clients/disney-hotstar.png",
+  "/assets/images/impact/clients/double-click.png",
 ];
 
 export function Clients() {
@@ -107,13 +106,13 @@ export function Clients() {
             {clients1.map((logoSrc, index) => (
               <div
                 key={index}
-                className="relative h-full w-[20vw] flex items-center justify-start group fadeup"
+                className="relative h-full w-[20vw] flex items-center justify-center group fadeup"
               >
                 <img
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
-                  className="h-[7vw] w-[8vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain"
+                  className="h-[7vw] w-[17vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-cover"
                 />
               </div>
             ))}
@@ -129,12 +128,12 @@ export function Clients() {
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
-                  className="h-[7vw]  w-[8vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain"
+                  className="h-[7vw] w-[17vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-cover"
                 />
               </div>
             ))}
           </Marquee>
-          <Marquee pauseOnHover="true" speed={40} direction="right">
+          <Marquee pauseOnHover="true" speed={40} direction="left">
             {clients3.map((logoSrc, index) => (
               <div
                 key={index}
@@ -144,7 +143,7 @@ export function Clients() {
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
-                  className="h-[7vw]  w-[8vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain"
+                  className="h-[7vw] w-[17vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-cover"
                 />
               </div>
             ))}
@@ -159,7 +158,7 @@ export function Clients() {
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
-                  className="h-[7vw]  w-[8vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain"
+                  className="h-[7vw] w-[17vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-cover"
                 />
               </div>
             ))}
@@ -185,12 +184,12 @@ export function Clients() {
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
-                  className="h-[7vw] w-[8vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain"
+                  className="h-[7vw] w-[17vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-cover"
                 />
               </div>
             ))}
           </Marquee>
-          <Marquee pauseOnHover="true" speed={40}>
+          <Marquee pauseOnHover="true" speed={40} direction="right">
             {platform2.map((logoSrc, index) => (
               <div
                 key={index}
@@ -200,7 +199,7 @@ export function Clients() {
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
-                  className="h-[7vw] w-[8vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain"
+                  className="h-[7vw] w-[17vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-cover"
                 />
               </div>
             ))}
@@ -215,7 +214,7 @@ export function Clients() {
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
-                  className="h-[7vw] w-[8vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain"
+                  className="h-[7vw] w-[17vw] saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-cover"
                 />
               </div>
             ))}

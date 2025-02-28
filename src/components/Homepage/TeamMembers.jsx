@@ -85,16 +85,10 @@ const TeamMembers = () => {
             <span className="blue-text"> HiveMinds </span>
           </h2>
           <p className="text-[1.2vw] w-[70%] text-center" data-para-anim>
-            Journey of global impact, supporting brands from SMEs to industry
-            giants. With{" "}
-            <span className="blue-text font-medium" data-para-anim>
-              14 years, 450+ team members{" "}
-            </span>
-              and{" "}
-            <span className="blue-text font-medium" data-apar-anim>
-              4 locations,{" "}
-            </span>
-            we&apos;re creating tomorrow&apos;s digital successes together.
+            Join the Hive Tribe—Where bold strategies meet fast-paced growth.
+            We’re a tribe of marketing mavericks turning vision into success. Be
+            part of our journey as we transform brands and create tomorrow’s
+            digital legends.
           </p>
         </div>
 

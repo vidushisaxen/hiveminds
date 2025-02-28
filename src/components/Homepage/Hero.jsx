@@ -54,24 +54,24 @@ const Hero = () => {
   ];
   const slidesData = [
     {
-      title: "Delivering Digital",
+      title: "Data-Backed",
       subtitle: "Growth",
       description:
         "Expert-driven, Tech-powered, Data-optimized growth for lean startups to household brands",
       href: "/growth",
     },
     {
-      title: "Boosting Digital",
-      subtitle: "Orders",
+      title: "Optimise, Engage,",
+      subtitle: "Convert",
       description:
-        "Unlocking new orders with innovative strategies tailored to your business goals",
+        "Helping brands stand out with impactful campaigns and strategies",
       href: "/orders",
     },
     {
-      title: "Enhancing Brands",
-      subtitle: "Search",
+      title: "Clicks That",
+      subtitle: "Convert",
       description:
-        "Helping brands stand out with impactful campaigns and strategies",
+        "Unlocking new orders with innovative strategies tailored to your business goals",
       href: "/search",
     },
   ];
