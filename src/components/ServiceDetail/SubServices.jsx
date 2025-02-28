@@ -32,7 +32,7 @@ const SubServices = ({ heading, para, subservices }) => {
                 <p data-para-anim className='content !text-white w-[45%] py-[1vw] '>{para}</p>
                 <div className='flex flex-wrap items-center justify-center text-left gap-[2vw] py-[3vw]'>
                     {subservices.map((item, index) => (
-                        <div key={index} className='bg-white rounded-[20px] p-[2vw] w-[30vw] min-h-[13.5vw] text-center fadeup'>
+                        <div key={index} className='bg-white rounded-[20px] p-[2vw] w-[30vw] min-h-[15.5vw] text-center fadeup'>
                             <h4 className='text-[1.55vw] font-medium'>
                                 {item.title}
                             </h4>

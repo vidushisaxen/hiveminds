@@ -37,8 +37,8 @@ const index = () => {
   return (
     <>
       <Layout isOpen={isOpen}>
-       <Hero title1={"Performance "} title2={"Marketing "} para={"Performance marketing is the strategic catalyst that transforms digital footprints into measurable, sustainable success. To thrive, a brand needs to harness data and creativity to optimize the entire customer journey—from discovery to loyalty; thats where our expertise comes to deliver the same to brands."}/>
-       <Overview title1={"What You Need  "} title2={" to Do"} para={"In today’s competitive landscape, achieving sustainable business growth requires a strategic and efficient approach to paid marketing. We prioritize a data-first methodology, ensuring that marketing budget is allocated to high-impact media channels. Our integrated growth framework aligns paid efforts with broader business objectives, creating a seamless connection between          customer acquisition and long-term brand scaling. <br/> Embrace a holistic approach that optimizes acquisition, conversion, and retention through precision targeting. This is an opportunity to turn data into action and drive exceptional ROI."}/>
+       <Hero title1={"Performance "} title2={"Marketing "} para={"Performance marketing is the strategic catalyst that transforms digital footprints into measurable, sustainable success. To thrive, a brand needs to harness data and creativity to optimize the entire customer journey—from discovery to loyalty; thats where our expertise comes to deliver the same to brands."} img={"/assets/images/services/performance-marketing.png"}/>
+       <Overview title1={"Scale efficiently with data-first, performance-driven  "} title2={"ad campaigns"} para={"In today’s competitive landscape, achieving sustainable business growth requires a strategic and efficient approach to paid marketing. We prioritize a data-first methodology, ensuring that marketing budget is allocated to high-impact media channels. Our integrated growth framework aligns paid efforts with broader business objectives, creating a seamless connection between          customer acquisition and long-term brand scaling. <br/> <br/> Embrace a holistic approach that optimizes acquisition, conversion, and retention through precision targeting. This is an opportunity to turn data into action and drive exceptional ROI."}/>
        <div className='relative h-full w-screen rounded-[20px]  '>
           <SubServices heading={"Driving Performance Through Smart Advertising"} para={"We achieve the above through our comprehensive suite of solutions covers every critical digital touchpoint:"} subservices={subservices}/>
           <span className='absolute h-[20%] bottom-[30%] w-full'></span>
@@ -87,7 +87,7 @@ const subservices = [
     content:"Real-time performance tracking and in-depth insights to fine-tune marketing strategies."
   },
   {
-    title:"Analytics & Tracking Setup:",
+    title:"Analytics & Tracking Setup",
     content:"Seamless integration of tracking tools to ensure accurate attribution and campaign optimization."
   },
 ]

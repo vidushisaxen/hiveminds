@@ -4,9 +4,9 @@ const Overview = ({title1, title2, para}) => {
   return (
    <section className='w-screen h-full bg-white'>
     <div className='w-full h-full px-[3vw] py-[5vw] flex items-center justify-between'>
-        <div className='w-[40%]'>
+        <div className='w-[45%]'>
             <h2 className=' font-bold heading-2 headinganim'>{title1}
-                <span className='text-primary'>{title2}</span>
+                <span className='text-primary'> {title2} </span>
             </h2>
         </div>
         <div className='w-[60%] flex items-end justify-end flex-col'>

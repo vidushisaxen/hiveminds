@@ -50,38 +50,41 @@ const Footer = () => {
                   Expertise
                 </p>
                 <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start justify-center gap-[0.5vw]">
-                  <Link href={"#"} className="link-line">
+                  <Link href={"/performance-marketing-services"} className="link-line">
                     {" "}
                     <li>Performance Marketing</li>
                   </Link>
-                  <Link href={"#"} className="link-line">
+                  <Link href={"/retail-marketing-services"} className="link-line">
                     {" "}
                     <li>Retail Marketing</li>
                   </Link>
-                  <Link href={"#"} className="link-line">
+                  <Link href={"/consumer-insights-services"} className="link-line">
                     <li>Consumer Insights</li>
                   </Link>
-                  <Link href={"#"} className="link-line">
+                  <Link href={"/influencer-marketing-services"} className="link-line">
                     <li>Influencer Marketing</li>
                   </Link>
-                  <Link href={"#"} className="link-line">
+                  <Link href={"/affiliate-marketing-services"} className="link-line">
                     <li>Affiliate Marketing</li>
                   </Link>
-                  <Link href={"#"} className="link-line">
+                  <Link href={"/data-analytic-services"} className="link-line">
                     <li>Data & Analytics</li>
                   </Link>
-                  <Link href={"#"} className="link-line">
+                  <Link href={"/social-media-marketing-services"} className="link-line">
                     <li>Programatic Advertising</li>
                   </Link>
-                  <Link href={"#"} className="link-line">
+                  <Link href={"/search-engine-optimization-services"} className="link-line">
                     <li>Search Engine Optimization</li>
                   </Link>
-                  <Link href={"#"} className="link-line">
+                  <Link href={"/creative-content-management-services"} className="link-line">
                     <li>Content Management & Creative
                     </li>
                   </Link>
-                  <Link href={"#"} className="link-line">
+                  <Link href={"/online-reputation-management-services"} className="link-line">
                     <li>Online Reputation Management</li>
+                  </Link>
+                  <Link href={"/branding-services"} className="link-line">
+                    <li>Branding Services</li>
                   </Link>
                 </ul>
               </div>

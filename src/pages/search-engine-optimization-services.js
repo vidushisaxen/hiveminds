@@ -37,8 +37,8 @@ const index = () => {
   return (
     <>
       <Layout isOpen={isOpen}>
-       <Hero title1={"Search Engine"} title2={"Optimisation "} para={""}/>
-       <Overview title1={"What"} title2={" SEO Is :"} para={"SEO is the strategic catalyst that transforms your digital presence into a sustainable growth engine. By leveraging technical excellence, compelling content, and authoritative link building, your brand becomes the go-to choice when customers search online."}/>
+       <Hero title1={"Search Engine"} title2={"Optimisation "} para={"SEO is the strategic catalyst that transforms your digital presence into a sustainable growth engine. By leveraging technical excellence, compelling content, and authoritative link building, your brand becomes the go-to choice when customers search online."} img={"/assets/images/services/search-engine-optimization.png"}/>
+       <Overview title1={"Scale Efficiently with a "} title2={"Data-First Strategy"} para={"In today’s crowded digital landscape, scaling your online presence demands a holistic SEO strategy. Invest in technical optimization, quality content, and strategic authority building. Align your SEO efforts with your broader business goals to drive long-term organic growth and outpace the competition."} />
        <div className='relative h-full w-screen'>
           <SubServices heading={"Customize Your SEO Strategy"} para={"Maximize your online impact with our comprehensive suite of SEO solutions, each designed to enhance a crucial element of your digital presence:"} subservices={subservices}/>
           {/* <span className='absolute h-[20%] bottom-[30%] w-full'></span> */}
@@ -80,6 +80,6 @@ const subservices = [
   },
   {
     title:"On-Website & Off-Wesite Optimization",
-    content:"Data-backed insights to measure performance and refine strategies."
+    content:"Fine-tuning every element—onsite and beyond—to drive long-term, organic growth."
   },
 ]

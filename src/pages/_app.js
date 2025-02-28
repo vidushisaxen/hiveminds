@@ -24,8 +24,7 @@ export default function App({ Component, pageProps }) {
       window.removeEventListener("mousemove", enableMouse);
     };
   }, []);
-
-  // ✅ Scroll to top on route change
+  
   useEffect(() => {
     const handleRouteChange = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -68,7 +67,6 @@ export default function App({ Component, pageProps }) {
         ]}
       />
       <ReactLenis root options={{ lerp: 0.07 }}>
-        {/* Mouse interactions enabled dynamically */}
         <div style={{ pointerEvents: mouseEnabled ? "auto" : "none" }}>
           <Component {...pageProps} />
         </div>

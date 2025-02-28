@@ -63,15 +63,15 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
             timelineRef.current.kill();
         }
 
-    timelineRef.current = gsap.timeline({
-      defaults: { 
-        ease: "power2.inOut",
-        duration: 0.5
-      }
-    });
-    if (timelineRef.current) {
-      timelineRef.current.kill();
-    }
+        timelineRef.current = gsap.timeline({
+            defaults: {
+                ease: "power2.inOut",
+                duration: 0.5
+            }
+        });
+        if (timelineRef.current) {
+            timelineRef.current.kill();
+        }
 
         timelineRef.current = gsap.timeline({
             defaults: {
@@ -83,28 +83,28 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
         const tl = timelineRef.current;
 
         if (isActive) {
-            tl.to(cardRef.current, { 
-        width: "45%", 
-        duration: 0.5,
-        ease: "power2.inOut"
-      })
-      .to(headingRef.current, {
-        rotation: 0,
-        top: "55%",
-        opacity: 1,
-        duration: 0.3,
-      }, "-=0.5")  
-      .to(contentRef.current, {
-        opacity: 1,
-        delay:0.2,
-        duration: 0.5,
-      }, "-=0.3")  
-      .to(linkRef.current, {
-        opacity: 1,
-        scale: 1,
-        duration: 0.4,
-      }, "-=0.4");
-      tl.add([
+            tl.to(cardRef.current, {
+                width: "45%",
+                duration: 0.5,
+                ease: "power2.inOut"
+            })
+                .to(headingRef.current, {
+                    rotation: 0,
+                    top: "55%",
+                    opacity: 1,
+                    duration: 0.3,
+                }, "-=0.5")
+                .to(contentRef.current, {
+                    opacity: 1,
+                    delay: 0.2,
+                    duration: 0.5,
+                }, "-=0.3")
+                .to(linkRef.current, {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.4,
+                }, "-=0.4");
+            tl.add([
                 gsap.to(cardRef.current, {
                     width: "45%"
                 }),
@@ -115,37 +115,37 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                     transformOrigin: "0% 50%"
                 })
             ], "<")
-            .to([contentRef.current, linkRef.current], {
-                opacity: 1,
-                scale: 1,
-                duration: 0.8,
-                ease:"power3.out",
-                delay:0.25,
-            }, "-=0.3");
+                .to([contentRef.current, linkRef.current], {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    delay: 0.25,
+                }, "-=0.3");
         } else {
-            tl.to(cardRef.current, { 
-        width: "18%", 
-        duration: 0.5,
-        ease: "power2.inOut"
-      })
-      .to(headingRef.current, {
-        rotation: -90,
-        // transformOrigin:"left",
-        top: "55%",
-        opacity: 1,
-        duration: 0.3,
-      }, "-=0.5")  
-      .to(contentRef.current, {
-        opacity: 0,
-        y: 0,
-        duration: 0.4,
-      }, "-=0.5")  
-      .to(linkRef.current, {
-        opacity: 0,
-        scale: 0.8,
-        duration: 0.4,
-      }, "-=0.5");  
-      tl.add([
+            tl.to(cardRef.current, {
+                width: "18%",
+                duration: 0.5,
+                ease: "power2.inOut"
+            })
+                .to(headingRef.current, {
+                    rotation: -90,
+                    // transformOrigin:"left",
+                    top: "55%",
+                    opacity: 1,
+                    duration: 0.3,
+                }, "-=0.5")
+                .to(contentRef.current, {
+                    opacity: 0,
+                    y: 0,
+                    duration: 0.4,
+                }, "-=0.5")
+                .to(linkRef.current, {
+                    opacity: 0,
+                    scale: 0.8,
+                    duration: 0.4,
+                }, "-=0.5");
+            tl.add([
                 gsap.to(cardRef.current, {
                     width: "18%"
                 }),
@@ -156,11 +156,12 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                     transformOrigin: "0% 50%"
                 })
             ], "<")
-            .to([contentRef.current, linkRef.current], {
-                opacity: 0,
-                scale: 1,
-                duration: 0.4,
-            }, "-=0.6");
+                 
+                .to([contentRef.current, linkRef.current], {
+                    opacity: 0,
+                    scale: 1,
+                    duration: 0.4,
+                }, "-=0.6");
         }
     }, [isActive]);
 
@@ -219,7 +220,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
 };
 
 const Services = () => {
-   
+
     const [activeIndex, setActiveIndex] = useState(0);
 
 

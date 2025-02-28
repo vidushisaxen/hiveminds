@@ -15,7 +15,7 @@ const services=[
         title1:"Retail",
         title2:"Marketing",
         para1:"At HiveMinds, we help your brand skyrocket its visibility and drive endless sales. Our comprehensive ecommerce strategies blend the power of Amazon Ads and organic growth to reshape customer journeys using deep category insights, data analytics, and an omnichannel approach. Whether you’re looking to capture quick commerce’s explosive 70% YoY growth or create immersive content that converts, we design tailored solutions that make your brand the go-to in its niche.",
-        link:"/"
+        link:"/retail-marketing-services"
     },{
         src:"/assets/images/services/search-engine-optimization.png",
         title1:"Search Engine",
@@ -33,7 +33,7 @@ const services=[
         title1:"Online Reputation",
         title2:"Management",
         para1:"Your brand’s reputation is its most valuable asset. We protect your brand like it’s our own. Our ORM strategy vigilantly monitors and manages every touchpoint—turning reviews into opportunities to build trust and strengthen your reputation.",
-        link:"/"
+        link:"/online-reputation-management-services"
     },{
         src:"/assets/images/services/consumer-insights.png",
         title1:"Consumer",
@@ -45,7 +45,7 @@ const services=[
         title1:"Influencer",
         title2:"Marketing",
         para1:"Unlock the power of influence. We strategically partner with industry-leading creators to extend your reach, spark engagement, and ignite lasting brand impact. Let star power drive your success.",
-        link:"/"
+        link:"/influencer-marketing-services"
     },{
         src:"/assets/images/services/affiliate-marketing.png",
         title1:"Affliate",
@@ -54,16 +54,23 @@ const services=[
         link:"/affiliate-marketing-services"
     },{
         src:"/assets/images/services/programatic-advertising.png",
-        title1:"Programatic ",
-        title2:"Advertising",
+        title1:"Social Media ",
+        title2:"Marketing",
         para1:"We believe your brand is your most valuable asset. Our integrated approach to Branding and Programmatic Ads marries creative storytelling with robust data analytics, ensuring every campaign builds a powerful digital presence. From identifying growth challenges to mapping out full-funnel strategies, we partner with you to craft impactful narratives that drive measurable ROI and lasting brand impact.",
-        link:"/"
+        link:"/social-media-marketing-services"
     },{
         src:"/assets/images/services/data-and-analytics.png",
         title1:"Data &",
         title2:"Analytics",
         para1:"Data is more than numbers—it’s the key to unlocking your brand’s future. At HiveMinds, our integrated suite of analytical tools and methodologies enables you to harness real-time insights, optimize operations, and drive strategic growth. Whether it’s through FeedX, ADH, or our bespoke BI dashboards, we provide the clarity and intelligence required to streamline decision-making and accelerate success across industries.",
         link:"/data-analytic-services"
+    },
+    {
+        src:"/assets/images/services/branding-services.png",
+        title1:"Branding",
+        title2:"Services",
+        para1:"We create brand experiences that truly resonate in our connected world. We combine custom social media solutions, data-driven strategies, influencer partnerships, and modern video production to build an impactful online presence. By pinpointing your core challenges and driving agile, data-backed decision-making, we not only boost sales but also forge strong customer relationships. Our holistic approach—from social boosting to proactive social listening—ensures your business goals align perfectly with evolving consumer needs.",
+        link:"/branding-services"
     }
 ]
 

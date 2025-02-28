@@ -10,7 +10,6 @@ import TeamMembers from '@/components/Homepage/TeamMembers'
 import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
-
 import { Clients2 } from '@/components/Homepage/Clients2'
 import Services from '@/components/Homepage/Services'
 
@@ -44,8 +43,7 @@ const index = () => {
       <Layout isOpen={isOpen}>
         <Hero />
         <Story isOpen={isOpen} setIsOpen={setIsOpen}/>
-        <Services/>{/* <Services2/> */}
-
+        <Services/>
        <Clients2/>
         <TeamMembers />
         <div className='relative h-full w-screen rounded-[20px] '>

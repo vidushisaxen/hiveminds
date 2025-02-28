@@ -70,7 +70,7 @@ const Contact = ({title1,title2, para}) => {
       <div className="w-screen h-full z-[10] relative container-lg py-[7%]">
         <div className="w-full h-full flex gap-[10vw]">
           <div className="w-[45%] flex flex-col gap-[2vw]">
-            <h2 className="heading-2 headinganim w-[80%]">
+            <h2 className="heading-2 headinganim w-[90%]">
            {title1} 
             <span className="blue-text"> {title2}</span>
             </h2>
@@ -109,7 +109,7 @@ const Contact = ({title1,title2, para}) => {
           <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
         </div>
         <div
-          className="absolute h-[2vw] w-[2.2vw] top-[20%] left-[18%] yellow-hexagon-animation"
+          className="absolute h-[2vw] w-[2.2vw] top-[25%] left-[22%] yellow-hexagon-animation"
    
         >
           <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
