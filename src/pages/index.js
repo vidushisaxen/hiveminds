@@ -10,7 +10,7 @@ import TeamMembers from '@/components/Homepage/TeamMembers'
 import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
-import Services2 from '@/components/Homepage/Services2'
+
 import { Clients2 } from '@/components/Homepage/Clients2'
 import Services from '@/components/Homepage/Services'
 

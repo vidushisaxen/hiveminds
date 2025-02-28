@@ -26,7 +26,6 @@
     "next": "^15.0.3",
     "next-seo": "^6.6.0",
     "react": "19.0.0-rc-66855b96-20241106",
-    "react-creative-cursor": "^1.2.7",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-hook-form": "^7.53.2",
     "sass": "^1.80.6",
