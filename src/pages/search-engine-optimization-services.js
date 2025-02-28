@@ -39,9 +39,9 @@ const index = () => {
       <Layout isOpen={isOpen}>
        <Hero title1={"Search Engine"} title2={"Optimisation "} para={""}/>
        <Overview title1={"What"} title2={" SEO Is :"} para={"SEO is the strategic catalyst that transforms your digital presence into a sustainable growth engine. By leveraging technical excellence, compelling content, and authoritative link building, your brand becomes the go-to choice when customers search online."}/>
-       <div className='relative h-full w-screen rounded-[20px]  '>
+       <div className='relative h-full w-screen'>
           <SubServices heading={"Customize Your SEO Strategy"} para={"Maximize your online impact with our comprehensive suite of SEO solutions, each designed to enhance a crucial element of your digital presence:"} subservices={subservices}/>
-          <span className='absolute h-[20%] bottom-[30%] w-full'></span>
+          {/* <span className='absolute h-[20%] bottom-[30%] w-full'></span> */}
         <CaseStudies/>
         </div>
        <Contact title1={"Boost Rankings, Drive "} title2={" Growth!"} para={"Enhance your visibility and dominate search results with our expert-driven SEO solutions. Let’s optimize your digital success—connect with us today!"}/>

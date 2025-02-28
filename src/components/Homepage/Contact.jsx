@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Contactform from './Contactform';
 import gsap from 'gsap';
@@ -7,63 +7,63 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 const Contact = () => {
-  // useEffect(() => {
-  //   if (globalThis.innerWidth > 1024) {
-  //     let ctx = gsap.context(() => {
-  //       const body = document.body;
-  //       const changeBodyColor = (color) => {
-  //         gsap.to(body, {
-  //           backgroundColor: color,
-  //           duration: 1, // Duration for smooth transition
-  //           ease: "power2.out",
-  //         });
-  //       };
-  //       // ScrollTrigger for changing body background color
-  //       ScrollTrigger.create({
-  //         trigger: "#contact",
-  //         start: "top 90%",
-  //         end: "bottom 20%",
-  //         onEnter: () => changeBodyColor("#fafafa"),
-  //         onLeaveBack: () => changeBodyColor("#134bd6"),
-  //       });
-  //     });
-  //     return () => ctx.revert();
-  //   }
-  // });
-  // const blueHexagonRef = useRef(null);
-  // const yellowHexagonRef = useRef(null);
+  useEffect(() => {
+    if (globalThis.innerWidth > 1024) {
+      let ctx = gsap.context(() => {
+        const body = document.body;
+        const changeBodyColor = (color) => {
+          gsap.to(body, {
+            backgroundColor: color,
+            duration: 1, // Duration for smooth transition
+            ease: "power2.out",
+          });
+        };
+        // ScrollTrigger for changing body background color
+        ScrollTrigger.create({
+          trigger: "#contact",
+          start: "top 90%",
+          end: "bottom 20%",
+          onEnter: () => changeBodyColor("#fafafa"),
+          onLeaveBack: () => changeBodyColor("#134bd6"),
+        });
+      });
+      return () => ctx.revert();
+    }
+  });
+  const blueHexagonRef = useRef(null);
+  const yellowHexagonRef = useRef(null);
 
-  // // Function to handle mouse move
-  // const handleMouseMove = (e) => {
-  //   const { clientX: mouseX, clientY: mouseY } = e;
+  // Function to handle mouse move
+  const handleMouseMove = (e) => {
+    const { clientX: mouseX, clientY: mouseY } = e;
     
-  //   // Apply movement to the blue and yellow hexagons based on mouse position
-  //   if (blueHexagonRef.current && yellowHexagonRef.current) {
-  //     const offsetX = mouseX * 0.05; // Adjust the movement sensitivity (change 0.05 for stronger/weaker movement)
-  //     const offsetY = mouseY * 0.05;
+    // Apply movement to the blue and yellow hexagons based on mouse position
+    if (blueHexagonRef.current && yellowHexagonRef.current) {
+      const offsetX = mouseX * 0.05; // Adjust the movement sensitivity (change 0.05 for stronger/weaker movement)
+      const offsetY = mouseY * 0.05;
 
-  //     gsap.to(blueHexagonRef.current, {
-  //       x: offsetX,
-  //       y: offsetY,
-  //       ease: "power2.out",
-  //     });
+      gsap.to(blueHexagonRef.current, {
+        x: offsetX,
+        y: offsetY,
+        ease: "power2.out",
+      });
 
-  //     gsap.to(yellowHexagonRef.current, {
-  //       x: offsetX * 1.2, // Make yellow hexagon move slightly differently from blue hexagon
-  //       y: offsetY * 1.2,
-  //       ease: "power2.out",
-  //     });
-  //   }
-  // };
+      gsap.to(yellowHexagonRef.current, {
+        x: offsetX * 1.2, // Make yellow hexagon move slightly differently from blue hexagon
+        y: offsetY * 1.2,
+        ease: "power2.out",
+      });
+    }
+  };
 
-  // // Add event listeners on mount and clean up on unmount
-  // useEffect(() => {
-  //   window.addEventListener('mousemove', handleMouseMove);
+  // Add event listeners on mount and clean up on unmount
+  useEffect(() => {
+    window.addEventListener('mousemove', handleMouseMove);
 
-  //   return () => {
-  //     window.removeEventListener('mousemove', handleMouseMove);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   return (
     <section id="contact">

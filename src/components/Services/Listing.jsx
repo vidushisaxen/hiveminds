@@ -69,23 +69,23 @@ const services=[
 
 const ServiceCard = ({ src, title1, title2, para1, link, index }) => {
     return (
-        <div className={`w-full h-full flex items-center justify-center  gap-[11vw] py-[5vw] ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-            <div className='w-[40%]'>
-                <div className='w-[42vw] h-[29vw] relative'>
-                    <Image src={src} fill alt="service-card" className='rounded-[20px]' />
+        <div className={`w-full h-full flex items-center justify-between py-[3vw] ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+            <div className='w-[45%]'>
+                <div className=' relative'>
+                    <Image src={src} width={1200} height={900} alt="service-card" className='rounded-[1.2vw] fadein' />
                 </div>
             </div>
-            <div className='w-[80%]'>
-                <h2 className='text-[2.8vw] font-medium'>
+            <div className='w-[47%]'>
+                <h2 className='text-[2.8vw] font-medium headinganim'>
                     {title1}
                     <span className='text-primary'> {title2} </span>
                 </h2>
-                <p className="content tracking-wide para py-[1vw]">{para1}</p>
+                <p data-para-anim className="content tracking-wide para py-[1vw]">{para1}</p>
                 <div className='mt-[1vw]'>
                     <PrimaryButton
                         href={link}
                         text="View Details"
-                        className="button"
+                        className="button fadein"
                     />
                 </div>
             </div>
@@ -99,7 +99,7 @@ const Listing = () => {
    <section className='h-full w-screen bg-white py-[5vw] relative'>
     <div className='w-full h-full container-lg'>
         <div className='w-full flex  flex-col items-center justify-center text-center '>
-            <p className="content w-[81%] tracking-wide para py-[1vw]">We unlock your digital potential with a holistic suite of marketing services. Our performance marketing is the art and science of optimizing every customer touchpoint through data-driven and creative strategies. Our SEO expertise ensures your brand is easily discovered, turning clicks into loyal customers. In retail, we fuse paid media with organic growth tactics to drive e-commerce success, while our creative and content teams produce visually compelling, on-brand narratives that resonate. We protect your brand&apos;s reputation with proactive ORM, and our consumer insights dive deep into market trends to reveal actionable opportunities. Our advanced data analytics streamline decision-making, and our influencer, affiliate, and integrated branding solutions amplify your message across channels. With our comprehensive social media management, we help you engage, convert, and thrive in the digital era.
+            <p data-para-anim className="content w-[81%] tracking-wide para py-[1vw]">We unlock your digital potential with a holistic suite of marketing services. Our performance marketing is the art and science of optimizing every customer touchpoint through data-driven and creative strategies. Our SEO expertise ensures your brand is easily discovered, turning clicks into loyal customers. In retail, we fuse paid media with organic growth tactics to drive e-commerce success, while our creative and content teams produce visually compelling, on-brand narratives that resonate. We protect your brand&apos;s reputation with proactive ORM, and our consumer insights dive deep into market trends to reveal actionable opportunities. Our advanced data analytics streamline decision-making, and our influencer, affiliate, and integrated branding solutions amplify your message across channels. With our comprehensive social media management, we help you engage, convert, and thrive in the digital era.
                 </p>
         </div>
         <div className='py-[4vw]'>
