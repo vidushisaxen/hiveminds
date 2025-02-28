@@ -7,91 +7,80 @@ const services=[
         src:"/assets/images/services/performance-marketing.png",
         title1:"Performance",
         title2:"Marketing",
-        para1:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence. ",
-        para2:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence",
-        link:"/"
+        para1:"At HiveMinds, we believe that performance marketing is the art and science of driving growth. Our expert team combines analytical rigor with creative innovation to optimize every touchpoint in your customer journey. By focusing on customer acquisition, conversion, and retention, we create strategies that not only boost your revenue but also maximize your ROI. Our data-centric approach, paired with out-of-the-box creative solutions, ensures that every campaign we run delivers measurable, impactful results that set your brand apart. ",
+        link:"/performance-marketing-services"
     },
     {
         src:"/assets/images/services/retail-marketing.png",
         title1:"Retail",
         title2:"Marketing",
-        para1:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence. ",
-        para2:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences.",
+        para1:"At HiveMinds, we help your brand skyrocket its visibility and drive endless sales. Our comprehensive ecommerce strategies blend the power of Amazon Ads and organic growth to reshape customer journeys using deep category insights, data analytics, and an omnichannel approach. Whether you’re looking to capture quick commerce’s explosive 70% YoY growth or create immersive content that converts, we design tailored solutions that make your brand the go-to in its niche.",
         link:"/"
     },{
-        src:"/assets/images/services/seo.png",
+        src:"/assets/images/services/search-engine-optimization.png",
         title1:"Search Engine",
         title2:"Optimization",
-        para1:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence. ",
-        para2:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence",
-        link:"/"
+        para1:"Boost your search rankings and fuel organic growth with HiveMinds’ holistic SEO services. We ensure your website is fully optimized—from technical performance and content excellence to authoritative link building—so you stand out in today’s competitive digital landscape. Whether you’re in B2B, D2C, fashion, BFSI, health, or travel, our targeted SEO strategies deliver measurable results, turning clicks into loyal customers.",
+        link:"/search-engine-optimization-services"
     },{
-        src:"/assets/images/services/creative-and-content.png",
+        src:"/assets/images/services/creative-content-management.png",
         title1:"Creative &",
         title2:"Content Management",
-        para1:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence. ",
-        para2:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence",
-        link:"/"
+        para1:"Elevate your brand with content that commands attention. At HiveMinds, we blend innovative design with strategic insight to craft creatives that captivate and convert. Our services cover everything—from social media masterpieces that spark engagement, to marketplace and production-based creatives that align perfectly with your brand ethos. With our data-driven approach in paid marketing, we not only enhance your digital presence but also ensure your content becomes a catalyst for lasting growth.",
+        link:"/creative-content-management-services"
     },{
-        src:"/assets/images/services/online-reputation.png",
+        src:"/assets/images/services/online-reputation-management.png",
         title1:"Online Reputation",
         title2:"Management",
-        para1:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence. ",
-        para2:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence",
+        para1:"Your brand’s reputation is its most valuable asset. We protect your brand like it’s our own. Our ORM strategy vigilantly monitors and manages every touchpoint—turning reviews into opportunities to build trust and strengthen your reputation.",
         link:"/"
     },{
         src:"/assets/images/services/consumer-insights.png",
         title1:"Consumer",
         title2:"Insights",
-        para1:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence. ",
-        para2:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence",
-        link:"/"
+        para1:"Every consumer interaction is an opportunity waiting to be unlocked. Our comprehensive approach dives deep into the digital ecosystem to reveal actionable insights.We delve deep into consumer behavior, using state-of-the-art analytics, detailed market research, and customized channel strategies to craft impactful marketing blueprints. Our approach transforms every digital touchpoint into an opportunity for growth, enabling your brand to connect, engage, and convert more effectively than ever before.",
+        link:"/consumer-insights-services"
     },{
         src:"/assets/images/services/influencer-marketing.png",
         title1:"Influencer",
         title2:"Marketing",
-        para1:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence. ",
-        para2:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence",
+        para1:"Unlock the power of influence. We strategically partner with industry-leading creators to extend your reach, spark engagement, and ignite lasting brand impact. Let star power drive your success.",
         link:"/"
     },{
         src:"/assets/images/services/affiliate-marketing.png",
         title1:"Affliate",
         title2:"Marketing",
-        para1:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence. ",
-        para2:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence",
-        link:"/"
+        para1:"Harness the power of strategic partnerships. Our affiliate marketing solutions are designed to boost your traffic, expand your reach, and generate consistent revenue. We connect you with the right partners, ensuring every click converts into measurable success.",
+        link:"/affiliate-marketing-services"
     },{
         src:"/assets/images/services/programatic-advertising.png",
         title1:"Programatic ",
         title2:"Advertising",
-        para1:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence. ",
-        para2:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence",
+        para1:"We believe your brand is your most valuable asset. Our integrated approach to Branding and Programmatic Ads marries creative storytelling with robust data analytics, ensuring every campaign builds a powerful digital presence. From identifying growth challenges to mapping out full-funnel strategies, we partner with you to craft impactful narratives that drive measurable ROI and lasting brand impact.",
         link:"/"
     },{
-        src:"/assets/images/services/data-analytics.png",
+        src:"/assets/images/services/data-and-analytics.png",
         title1:"Data &",
         title2:"Analytics",
-        para1:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence. ",
-        para2:"Driven by a shared passion for elevating brands, we HiveMinders understands our clients' unique goals and aspirations. We leverage our expertise to craft compelling brand experiences, ensuring that every campaign is executed with precision, creativity, and an unwavering commitment to excellence",
-        link:"/"
+        para1:"Data is more than numbers—it’s the key to unlocking your brand’s future. At HiveMinds, our integrated suite of analytical tools and methodologies enables you to harness real-time insights, optimize operations, and drive strategic growth. Whether it’s through FeedX, ADH, or our bespoke BI dashboards, we provide the clarity and intelligence required to streamline decision-making and accelerate success across industries.",
+        link:"/data-analytic-services"
     }
 ]
 
-const ServiceCard = ({ src, title1, title2, para1, para2, link, index }) => {
+const ServiceCard = ({ src, title1, title2, para1, link, index }) => {
     return (
-        <div className={`w-full h-full flex items-center justify-center gap-[13vw] py-[5vw] ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+        <div className={`w-full h-full flex items-center justify-center  gap-[11vw] py-[5vw] ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
             <div className='w-[40%]'>
-                <div className='w-[44vw] h-[29vw] relative'>
+                <div className='w-[42vw] h-[29vw] relative'>
                     <Image src={src} fill alt="service-card" className='rounded-[20px]' />
                 </div>
             </div>
-            <div className='w-[70%]'>
+            <div className='w-[80%]'>
                 <h2 className='text-[2.8vw] font-medium'>
                     {title1}
                     <span className='text-primary'> {title2} </span>
                 </h2>
                 <p className="content tracking-wide para py-[1vw]">{para1}</p>
-                <p className="content tracking-wide para py-[1vw]">{para2}</p>
                 <div className='mt-[1vw]'>
                     <PrimaryButton
                         href={link}
@@ -107,28 +96,25 @@ const ServiceCard = ({ src, title1, title2, para1, para2, link, index }) => {
 const Listing = () => {
   return (
    <>
-   <section className='h-full w-screen bg-white py-[5vw] px-[3vw] relative'>
-    <div className='w-full h-full '>
+   <section className='h-full w-screen bg-white py-[5vw] relative'>
+    <div className='w-full h-full container-lg'>
         <div className='w-full flex  flex-col items-center justify-center text-center '>
-            <p className="content w-[75%] tracking-wide para py-[1vw]">At HiveMinds, we tackle your most challenging business problems with our specialised digital marketing approach - integrating strategic expertise, cutting-edge technology, and data-driven insights to craft campaigns that elevate your brand and drive sustainable growth.
+            <p className="content w-[81%] tracking-wide para py-[1vw]">We unlock your digital potential with a holistic suite of marketing services. Our performance marketing is the art and science of optimizing every customer touchpoint through data-driven and creative strategies. Our SEO expertise ensures your brand is easily discovered, turning clicks into loyal customers. In retail, we fuse paid media with organic growth tactics to drive e-commerce success, while our creative and content teams produce visually compelling, on-brand narratives that resonate. We protect your brand&apos;s reputation with proactive ORM, and our consumer insights dive deep into market trends to reveal actionable opportunities. Our advanced data analytics streamline decision-making, and our influencer, affiliate, and integrated branding solutions amplify your message across channels. With our comprehensive social media management, we help you engage, convert, and thrive in the digital era.
                 </p>
-                <p className="content w-[75%] tracking-wide para py-[1vw]">
-
-At HiveMinds, we tackle your most challenging business problems with our specialised digital marketing approach - integrating strategic expertise, cutting-edge technology.</p>
         </div>
         <div className='py-[4vw]'>
         {services.map((item,index)=>{
             return(
-                <ServiceCard key={index} index={index} src={item.src} title1={item.title1} title2={item.title2} para1={item.para1} para2={item.para2} link={item.link} />
+                <ServiceCard key={index} index={index} src={item.src} title1={item.title1} title2={item.title2} para1={item.para1}  link={item.link} />
             )
         })}
         </div>
 
     </div>
-     <div className="absolute h-[2vw] w-[2.2vw] top-[4%] right-[15%] blue-hexagon-animation">
+     <div className="absolute h-[2vw] w-[2.2vw] top-[4.5%] right-[15%] blue-hexagon-animation">
                         <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
                     </div>
-                    <div className="absolute h-[2vw] w-[2.2vw] top-[2%] left-[12%] yellow-hexagon-animation" >
+                    <div className="absolute h-[2vw] w-[2.2vw] top-[1%] left-[12%] yellow-hexagon-animation" >
                         <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
                     </div>
    </section>

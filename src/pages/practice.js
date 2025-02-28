@@ -1,7 +1,7 @@
 import { headingBlur, paraAnim } from '@/components/gsapAnimations';
 import About from '@/components/HomeCopy/About';
-import { Cursor } from 'react-creative-cursor';
-import 'react-creative-cursor/dist/styles.css';
+// import { Cursor } from 'react-creative-cursor';
+// import 'react-creative-cursor/dist/styles.css';
 import CaseStudies from '@/components/HomeCopy/CaseStudies';
 import Expertise from '@/components/HomeCopy/Expertise';
 import Hero from '@/components/HomeCopy/Hero'
@@ -18,7 +18,7 @@ const practice = () => {
      paraAnim()
   return (
     <>
-    <Cursor isGelly={true} cursorSize={0.1} />
+    {/* <Cursor isGelly={true} cursorSize={0.1} /> */}
     <Hero/>
     <About/>
     <CaseStudies/>

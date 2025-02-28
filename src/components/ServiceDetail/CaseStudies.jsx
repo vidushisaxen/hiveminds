@@ -99,8 +99,8 @@ const CaseStudies = () => {
       <section id="caseStudies" className="pt-[5%]">
         <div className="w-screen h-[45vw] flex items-center justify-center z-[10]">
           <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block pl-[3vw] pt-[3vw] pr-[1.5vw] shadow-2xl drop-shadow-2xl overflow-hidden">
-            <div className="w-[40%] h-full flex flex-col items-center gap-[2vw]">
-              <h2 className="heading-2 headinganim">
+            <div className="w-[40%] h-full flex flex-col items-start justify-center gap-[2vw] mt-[-7vw]">
+              <h2 className="heading-2 headinganim w-[60%]">
               Related Case <span className="text-primary"> Studies </span>
               </h2>
               <p data-para-anim className="content w-[80%]">
