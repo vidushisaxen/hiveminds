@@ -24,12 +24,12 @@ const GetinTouch = () => {
             </p>
             <div className="flex flex-col gap-[1vw]">
               <LinkButton
-                btnLink={"/"}
+                btnLink={"tel:+91 2667671302"}
                 btnText={"+91-8527156227"}
                 className="text-[1.2vw] leading-[1] fadein"
               />
               <LinkButton
-                btnLink={"/"}
+                btnLink={"mailto:sales@hiveminds.in"}
                 btnText={"sales@hiveminds.in"}
                 className="text-[1.2vw] leading-[1] fadein"
               />

@@ -6,6 +6,7 @@ import gsap from 'gsap'
 import Hero from '@/components/OurImpact/Hero'
 import { Clients } from '@/components/OurImpact/Clients'
 import CaseStudies from '@/components/OurImpact/CaseStudies'
+import Awards from '@/components/OurImpact/Awards'
 
 const impact = () => {
      headingBlur();
@@ -34,6 +35,7 @@ const impact = () => {
     <Layout>
     <Hero/>
     <Clients/>
+    <Awards/>
     <CaseStudies/>
     </Layout>
     </>

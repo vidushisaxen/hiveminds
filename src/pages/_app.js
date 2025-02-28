@@ -1,10 +1,13 @@
+"use client";
 import "@/styles/globals.css";
 import { ReactLenis } from "lenis/react";
 import "lenis/dist/lenis.css";
 import { DefaultSeo } from "next-seo";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
   const [mouseEnabled, setMouseEnabled] = useState(false);
 
   useEffect(() => {
@@ -22,10 +25,18 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
 
-  // ✅ Scroll to top on reload
+  // ✅ Scroll to top on route change
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    const handleRouteChange = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router]);
 
   return (
     <>

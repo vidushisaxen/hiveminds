@@ -13,7 +13,7 @@ export function Marquee({
     (<div
       className={cn("w-full overflow-hidden sm:mt-5 z-10", className)}
       {...props}>
-      <div className="relative flex max-w-[100vw] overflow-hidden py-5">
+      <div className="relative flex max-w-[100vw] overflow-hidden">
         <div
           className={cn(
             "flex w-max animate-marquee",
