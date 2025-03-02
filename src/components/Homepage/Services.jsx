@@ -90,13 +90,14 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
             })
                 .to(headingRef.current, {
                     rotation: 0,
-                    top: "55%",
+                    top: "63%",
+                    left:"8%",
                     opacity: 1,
                     duration: 0.3,
                 }, "-=0.5")
                 .to(contentRef.current, {
                     opacity: 1,
-                    delay: 0.2,
+                    delay: 0.28,
                     duration: 0.5,
                 }, "-=0.3")
                 .to(linkRef.current, {

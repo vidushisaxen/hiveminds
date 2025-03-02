@@ -17,7 +17,7 @@ const Expanding = ({ content }) => {
                     <span className='w-[120%] h-[1.5px] bg-black block mt-[2vw]'></span>
 
                     <div className='py-[1vw]'>
-                        {content.features.map((feature, index) => (
+                        {content.features?.map((feature, index) => (
                             <React.Fragment key={index}>
                                 <div className='fadein' dangerouslySetInnerHTML={{ __html: feature }} />
                                 <span className='w-[120%] h-[1.5px] bg-black block my-[1vw]'></span>

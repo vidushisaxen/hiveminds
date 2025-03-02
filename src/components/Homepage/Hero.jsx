@@ -88,8 +88,8 @@ const Hero = () => {
       })
         .to(headRef.current, {
           opacity: 0,
-          yPercent: -20,
-          delay: 2.7,
+        
+          delay: 2.9,
           filter: "blur(8px)",
           duration: 1.5,
         })
@@ -98,7 +98,7 @@ const Hero = () => {
           { yPercent: 100, opacity: 0, duration: 1 },
           "-=5.5"
         )
-        .to(paraRef.current, { opacity: 0, duration: 1 }, "-=1.2")
+        .to(paraRef.current, { opacity: 0, duration: 1 }, "-=1.4")
         .from(
           buttonRef.current,
           { opacity: 0, yPercent: 100, duration: 1 },
