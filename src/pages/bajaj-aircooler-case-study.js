@@ -4,8 +4,6 @@ import Hero from '@/components/CaseStudyDetail/Hero';
 import Layout from '@/components/Layout'
 import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 import React, { useState } from 'react'
-
-
 const content = {
     subtitle1: "Bajaj’s Cooler ",
     subtitle2: "Visibility",
