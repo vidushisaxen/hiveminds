@@ -85,7 +85,6 @@ const Hero = () => {
       })
         .to(headRef.current, {
           opacity: 0,
-        
           delay: 2.9,
           filter: "blur(8px)",
           duration: 1.5,

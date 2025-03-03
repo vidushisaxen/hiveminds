@@ -49,9 +49,11 @@ const Header = ({isOpen}) => {
       <div
         className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw]`} ref={headerRef}
       >
+        <Link href={"/"}>
         <div className="w-[10.5vw] h-[3.2vw] relative">
           <Image src="/assets/icons/logo.svg" fill alt="hiveminds-logo" />
         </div>
+        </Link>
         <div className="flex items-center justify-center gap-[2vw] text-[0.94vw] montreal font-medium uppercase">
           <div>
             <ul className="flex items-center justify-between gap-[1.5vw]">
