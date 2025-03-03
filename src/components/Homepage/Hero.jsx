@@ -16,17 +16,17 @@ const Hero = () => {
     {
       src1: "/assets/images/homepage/hero-bigbasket-img1.png",
       src2: "/assets/images/homepage/hero-bigbasket-img2.png",
-      link:"/bigbasket-case-study"
+      link:"/casestudies/bigbasket-case-study"
     },
     {
       src1: "/assets/images/homepage/hero-dominos-img1.png",
       src2: "/assets/images/homepage/hero-dominos-img2.png",
-      link:"/dominos-case-study",
+      link:"/casestudies/dominos-case-study",
     },
     {
       src1: "/assets/images/homepage/hero-flydubai-img1.png",
       src2: "/assets/images/homepage/hero-flydubai-img2.png",
-      link:"/flydubai-case-study",
+      link:"/casestudies/flydubai-case-study",
     },
   ];
   const details = [

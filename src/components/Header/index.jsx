@@ -163,7 +163,7 @@ const Header = ({isOpen}) => {
             </ul>
           </div>
           <div>
-            <PlainButton link={"#"} text={"Work with us"} data-btn-blue />
+            <PlainButton link={"/contact-us"} text={"Work with us"} data-btn-blue />
           </div>
         </div>
       </div>

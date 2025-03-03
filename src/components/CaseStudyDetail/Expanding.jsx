@@ -53,7 +53,7 @@ const Expanding = ({ content }) => {
                             </div>
                         </div>
                         <div className='w-full flex pt-[5vw] pb-[3vw] gap-[1vw]'>
-                            <Link href={"/dominos-case-study"} >
+                            <Link href={"/casestudies/dominos-case-study"} >
                                 <div className='relative fadein'>
                                     <Image src="/assets/images/impact/dominos-listing.png" height={450} width={450} alt='dominos' className='rounded-[1.5vw]' />
                                     <div className='absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[0.5vw]'>
@@ -63,7 +63,7 @@ const Expanding = ({ content }) => {
                                 </div>
                             </Link>
 
-                            <Link href={"/flydubai-case-study"}>
+                            <Link href={"/casestudies/flydubai-case-study"}>
                                 <div className='relative fadein'>
                                     <Image src="/assets/images/impact/flydubai-listing.png" height={450} width={450} alt='flydubai' className='rounded-[1.5vw]' />
                                     <div className='absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[0.5vw]'>
@@ -73,7 +73,7 @@ const Expanding = ({ content }) => {
                                 </div>
                             </Link>
 
-                            <Link href={"/flipkart-healthplus-case-study"}>
+                            <Link href={"/casestudies/flipkart-healthplus-case-study"}>
                                 <div className='relative fadein'>
                                     <Image src="/assets/images/impact/flipkart-healthplus-listing.png" height={450} width={450} alt='flipkart' className='rounded-[1.5vw]' />
                                     <div className='absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[0.5vw]'>

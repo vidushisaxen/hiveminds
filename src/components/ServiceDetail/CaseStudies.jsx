@@ -23,11 +23,11 @@ const categories = [
 ];
 
 const caseStudies = [
-  { img: "/assets/images/homepage/big-basket-casestudy.png", title: "2.35x", des: "Growth in installs", category: "", para:"Expanding the user base",link:"/bigbasket-case-study" },
-  { img: "/assets/images/homepage/dominos-casestudy.png", title: "500K+", des: "New orders within 12 months", category: "", para:"Growing the 30-min connection" ,link:"/dominos-case-study"},
-  { img: "/assets/images/homepage/flydubai-casestudy.png", title: "67%", des: "Increase in brand searches", category: "",para:"New Routes Soar to Success",link:"#" },
-  { img: "/assets/images/homepage/flipkart-healthplus-casestudy.png", title: "#1", des: "India’s Medical App for 1.5 Years", category: "Healthcare", para:"Up with the App Installs",link:"/flipkart-healthplus-case-study" },
-  { img: "/assets/images/homepage/max-life-casestudy.png", title: "45%", des: "Revenue Surge in 3 Months.", category: "BFSI", para:"Powering Growth",link:"/max-life-case-study" },
+  { img: "/assets/images/homepage/big-basket-casestudy.png", title: "2.35x", des: "Growth in installs", category: "", para:"Expanding the user base",link:"/casestudies/bigbasket-case-study" },
+  { img: "/assets/images/homepage/dominos-casestudy.png", title: "500K+", des: "New orders within 12 months", category: "", para:"Growing the 30-min connection" ,link:"/casestudies/dominos-case-study"},
+  { img: "/assets/images/homepage/flydubai-casestudy.png", title: "67%", des: "Increase in brand searches", category: "",para:"New Routes Soar to Success",link:"/casestudies/flydubai-case-study" },
+  { img: "/assets/images/homepage/flipkart-healthplus-casestudy.png", title: "#1", des: "India’s Medical App for 1.5 Years", category: "Healthcare", para:"Up with the App Installs",link:"/casestudies/flipkart-healthplus-case-study" },
+  { img: "/assets/images/homepage/max-life-casestudy.png", title: "45%", des: "Revenue Surge in 3 Months.", category: "BFSI", para:"Powering Growth",link:"/casestudies/max-life-case-study" },
 ];
 
 const CaseStudies = () => {

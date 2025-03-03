@@ -8,10 +8,80 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const AwardCard = ({ img, title, year, category }) => {
+const awards=[
+  {
+    img:"/assets/images/homepage/award-1.png",
+    title:"Abby 2024 ",
+    year:"2024",
+    category:"Innovative Use of Digital Search SEO"
+  },
+  {
+    img:"/assets/images/homepage/award2.png",
+    title:"The Jury awards  (Flipkart) ",
+    year:"2022",
+    category:"Best media mix category "
+  },
+  {
+    img:"/assets/images/homepage/award3.png",
+    title:"Google Premier Awards  ",
+    year:"2024",
+    category:"Google premier partner - App growth "
+  },
+  {
+    img:"/assets/images/homepage/award-1.png",
+    title:"Amazon Ads Case League",
+    year:"2023",
+    category:"Awareness"
+  },
+  {
+    img:"/assets/images/homepage/award2.png",
+    title:"Google Premier Awards ",
+    year:"2023",
+    category:"Google premier partner - Lead gen  "
+  },
+  {
+    img:"/assets/images/homepage/award3.png",
+    title:"Amazon Ads Case League",
+    year:"2023",
+    category:"Consideration "
+  },
+  {
+    img:"/assets/images/homepage/award-1.png",
+    title:"Youtube awards ",
+    year:"2023",
+    category:"Multiformat Story Telling"
+  },
+  {
+    img:"/assets/images/homepage/award2.png",
+    title:"Brand Storyz 2023 ",
+    year:"2023",
+    category:"Brand Initiatives - Best use of Quora "
+  },
+  {
+    img:"/assets/images/homepage/award3.png",
+    title:"Emvies ",
+    year:"2024",
+    category:"Best SEO/SEM Campaign"
+  },
+  {
+    img:"/assets/images/homepage/award-1.png",
+    title:"Abby 2024  ",
+    year:"2024",
+    category:"Innovative Use of Paid Search"
+  },
+  {
+    img:"/assets/images/homepage/award2.png",
+    title:"Google agency excellance awards ",
+    year:"2024",
+    category:"Measurement solution"
+  },
+];
+
+
+const AwardCard = ({ img, title, year, category ,key}) => {
   return (
     <>
-      <div className="w-[34.2vw] h-[11.5vw] border-[0.5px] border-white/20 rounded-[1.2vw] flex items-center  px-[1.5vw]  bg-white/10 awards-card cursor-pointer hover:scale-[1.02] duration-500 ease-in-out transition-all">
+      <div key={key} className="w-[34.2vw] h-[11.5vw] border-[0.5px] border-white/20 rounded-[1.2vw] flex items-center  px-[1.5vw]  bg-white/10 awards-card cursor-pointer hover:scale-[1.02] duration-500 ease-in-out transition-all">
         <div className="flex items-center justify-between gap-[1vw] w-full">
           <div className="w-[10vw] h-[8.3vw] relative">
             <Image src={img} fill alt="awards-1" />
@@ -29,24 +99,20 @@ const AwardCard = ({ img, title, year, category }) => {
   );
 };
 const Awards = () => {
-  const swiperRef = useRef(null); // Create a ref for Swiper
-
-  // State to track which button was clicked
+  const swiperRef = useRef(null); 
   const [activeButton, setActiveButton] = useState("");
 
   const handleNext = () => {
     if (swiperRef.current) {
-      swiperRef.current.slideNext(); // Move to the next slide
-      setActiveButton("next"); // Set next button as active
-      // Reset after 300ms
+      swiperRef.current.slideNext(); 
+      setActiveButton("next"); 
     }
   };
 
   const handlePrev = () => {
     if (swiperRef.current) {
-      swiperRef.current.slidePrev(); // Move to the previous slide
-      setActiveButton("prev"); // Set previous button as active
-      // Reset after 300ms
+      swiperRef.current.slidePrev(); 
+      setActiveButton("prev"); 
     }
   };
   return (
@@ -71,66 +137,16 @@ const Awards = () => {
             freeMode={true}
             className="awards-swiper w-full h-full flex items-center justify-center"
           >
-            <SwiperSlide>
+            {awards.map((item, index) => ( 
+              <SwiperSlide key={index}>
               <AwardCard
-                img={"/assets/images/homepage/awards-1.png"}
-                title={
-                  "Ranked among Financial Times High Growth Companies Asia Pacific"
-                }
-                year={"2024"}
-                category={"Digital Marketing"}
+                img={item.img}
+                title={item.title}
+                year={item.year}
+                category={item.category}
               />
             </SwiperSlide>
-            <SwiperSlide>
-              <AwardCard
-                img={"/assets/images/homepage/awards-2.png"}
-                title={
-                  "Ranked among Financial Times High Growth Companies Asia Pacific"
-                }
-                year={"2024"}
-                category={"Digital Marketing"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AwardCard
-                img={"/assets/images/homepage/awards-3.png"}
-                title={
-                  "Ranked among Financial Times High Growth Companies Asia Pacific"
-                }
-                year={"2024"}
-                category={"Digital Marketing"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AwardCard
-                img={"/assets/images/homepage/awards-1.png"}
-                title={
-                  "Ranked among Financial Times High Growth Companies Asia Pacific"
-                }
-                year={"2024"}
-                category={"Digital Marketing"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AwardCard
-                img={"/assets/images/homepage/awards-2.png"}
-                title={
-                  "Ranked among Financial Times High Growth Companies Asia Pacific"
-                }
-                year={"2024"}
-                category={"Digital Marketing"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AwardCard
-                img={"/assets/images/homepage/awards-3.png"}
-                title={
-                  "Ranked among Financial Times High Growth Companies Asia Pacific"
-                }
-                year={"2024"}
-                category={"Digital Marketing"}
-              />
-            </SwiperSlide>
+            ))}
           </Swiper>
         </div>
         <div

@@ -55,7 +55,7 @@ export function Clients2() {
   return (
     <section id="clients">
       <div className="w-screen h-full flex flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw]">
+        <div className="flex flex-col items-center justify-center gap-[1vw] pt-[1vw] pb-[5vw]">
           <h2 className="heading-2 headinganim">
             <span className="blue-text">Proud</span> to work with
           </h2>

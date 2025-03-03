@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
     {
-        img: "/assets/images/homepage/services/digital-brand-building.png",
+        img: "/assets/images/homepage/services/Digital-brand-building.png",
         title: "Digital Brand Building",
         para: "Transform your digital identity with strategic brand positioning. We leverage data-driven insights to craft compelling narratives, create memorable brand experiences, and establish a powerful online presence that resonates with your target audience.",
     },
@@ -90,8 +90,8 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
             })
                 .to(headingRef.current, {
                     rotation: 0,
-                    top: "50%",
-                    left:"8%",
+                    top: "55%",
+                    left:"6%",
                     opacity: 1,
                     duration: 0.3,
                 }, "-=0.5")
@@ -111,8 +111,8 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                 }),
                 gsap.to(headingRef.current, {
                     rotation: 0,
-                    top: "50%",
-                    left: "8%",
+                    top: "55%",
+                    left: "6%",
                     transformOrigin: "0% 50%"
                 })
             ], "<")
@@ -184,7 +184,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
             <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-6 text-white z-10">
                 <h3
                     ref={headingRef}
-                    className="text-white text-[1.5vw] absolute w-[23vw] text-left leading-[1.2]"
+                    className="text-white text-[1.5vw] absolute w-[28vw] text-left leading-[1.2]"
                     style={{
                         transformOrigin: "0% 50%",
                         rotation: -90,
@@ -197,7 +197,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
 
                 <p
                     ref={contentRef}
-                    className="content absolute !text-white opacity-0 text-left p-[2vw] !leading-[1.3] bottom-0 "
+                    className="content absolute !text-white opacity-0 text-left p-[2vw] px-[1.5vw] !leading-[1.3] bottom-0 "
                 >
                     {service.para}
                 </p>
