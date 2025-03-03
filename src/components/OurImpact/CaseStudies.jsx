@@ -53,7 +53,7 @@ const caseStudiesData = [
   },
   {
     id: 7,
-    imgSrc: "/assets/images/impact/casestudy/Bajaj-cs.png",
+    imgSrc: "/assets/images/impact/casestudy/bajaj-cs.png",
     title: "Bajaj",
     description:
       "<p><span class='text-primary'>50% </span>  YoY Growth in Offtakes</p> <p>Leading Seasonal Success</p>",
