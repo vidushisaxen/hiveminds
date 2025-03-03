@@ -11,7 +11,10 @@ const content = {
     subtitle2: "Horizons",
     intro: "<p class='text-[1.5vw] mt-[2vw]'>Strategic nodes drive best-seller success.</p>",
     features:[
-        "<p class='text-[1.5vw] py-[1vw]'><span class='text-primary'> 34%</span> Sales Increase; <span class='text-primary'>6x </span>Impressions; Best Seller in 2 Months</p>",
+        "<p class='text-[1.5vw] py-[1vw]'><span class='text-primary'> 34%</span> Sales Increase </p>",
+        "<p class='text-[1.5vw] py-[1vw]'><span class='text-primary'> 6x</span> Impressions </p>",
+        "<p class='text-[1.5vw] py-[1vw]'> Best Seller in  <span class='text-primary'> 2 months </span> </p>",
+         
     ],
     industry: "FMCG & Beauty",
     service: "Marketplace",
@@ -31,7 +34,7 @@ const index = () => {
     return (
         <>
             <Layout isOpen={isOpen}>
-                <Hero title1={"Pidilite"} title2={""} img={"/assets/images/impact/casestudy/pidilite-cs-hero.jpg"} />
+                <Hero title1={"Pidilite"} title2={"WD40"} img={"/assets/images/impact/casestudy/pidilite-cs-hero.jpg"} />
                 <Expanding content={content} />
             </Layout>
         </>

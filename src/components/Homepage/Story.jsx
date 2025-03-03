@@ -38,7 +38,7 @@ const Story = ({isOpen,setIsOpen}) => {
             const video = videoRef.current;
             if (video && !videoLoaded) {
               // Set video source dynamically when it enters the viewport
-              video.src = "/assets/videos/story-reel.mp4";
+              video.src = "/assets/videos/about-video.mp4";
               video.load(); // Ensure the video is loaded
               video.play(); // Play the video when it's visible
               setVideoLoaded(true); // Set video as loaded
@@ -97,7 +97,7 @@ const Story = ({isOpen,setIsOpen}) => {
               muted
               autoPlay
               loop
-              poster="/assets/images/homepage/story-reel-poster.png"
+              poster="/assets/images/homepage/about-video-poster.png"
               className="object-cover w-full h-full"
             ></video>
           </div>
@@ -149,10 +149,10 @@ const Story = ({isOpen,setIsOpen}) => {
         </div>
         {isModalOpen && (
           <VideoModal
-            poster="/assets/images/homepage/story-reel-poster.png"
+            poster="/assets/images/homepage/about-video-poster.png"
             isOpen={isModalOpen}
             onClose={handleClose}
-            videoSrc="/assets/videos/story-reel.mp4"
+            videoSrc="/assets/videos/about-video.mp4"
           />
         )}
       </section>
