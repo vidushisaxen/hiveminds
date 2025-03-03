@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
     {
-        img: "/assets/images/homepage/services/Digital-brand-building.png",
+        img: "/assets/images/homepage/services/Digital-Brand-building.png",
         title: "Digital Brand Building",
         para: "Transform your digital identity with strategic brand positioning. We leverage data-driven insights to craft compelling narratives, create memorable brand experiences, and establish a powerful online presence that resonates with your target audience.",
     },
