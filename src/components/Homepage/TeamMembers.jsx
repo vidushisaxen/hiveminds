@@ -86,8 +86,8 @@ const TeamMembers = () => {
           </h2>
           <p className="text-[1.2vw] w-[70%] text-center" data-para-anim>
             Join the Hive Tribe—Where bold strategies meet fast-paced growth.
-            We’re a tribe of marketing mavericks turning vision into success. Be
-            part of our journey as we transform brands and create tomorrow’s
+            We&apos;re a tribe of marketing mavericks turning vision into success. Be
+            part of our journey as we transform brands and create tomorrow&apos;s
             digital legends.
           </p>
         </div>

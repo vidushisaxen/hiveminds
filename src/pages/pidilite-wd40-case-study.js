@@ -31,7 +31,7 @@ const index = () => {
     return (
         <>
             <Layout isOpen={isOpen}>
-                <Hero title1={"Pidilite"} title2={""} img={"/assets/images/casestudy/bigbasket-casestudy.png"} />
+                <Hero title1={"Pidilite"} title2={""} img={"/assets/images/impact/casestudy/pidilite-cs-hero.jpg"} />
                 <Expanding content={content} />
             </Layout>
         </>

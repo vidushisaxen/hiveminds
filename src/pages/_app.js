@@ -5,10 +5,14 @@ import "lenis/dist/lenis.css";
 import { DefaultSeo } from "next-seo";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { useLenis } from "lenis/react";
+
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [mouseEnabled, setMouseEnabled] = useState(false);
+  const lenis = useLenis();
+  
 
   useEffect(() => {
     const enableMouse = () => setMouseEnabled(true);
@@ -27,15 +31,14 @@ export default function App({ Component, pageProps }) {
   
   useEffect(() => {
     const handleRouteChange = () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      lenis && lenis.start();
+      lenis && lenis.scrollTo(0, { immediate: true });
     };
-
     router.events.on("routeChangeComplete", handleRouteChange);
-    
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, [router]);
+  }, [router.events, lenis]);
 
   return (
     <>

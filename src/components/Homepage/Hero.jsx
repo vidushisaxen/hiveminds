@@ -14,42 +14,39 @@ const Hero = () => {
 
   const images = [
     {
-      src1: "/assets/images/homepage/hero-bigbasket-img-1.png",
-      src2: "/assets/images/homepage/hero-bigbasket-img-4.png",
-      src3: "/assets/images/homepage/hero-bigbasket-img-2.png",
-      src4: "/assets/images/homepage/hero-bigbasket-img-3.png",
+      src1: "/assets/images/homepage/hero-bigbasket-img1.png",
+      src2: "/assets/images/homepage/hero-bigbasket-img2.png",
+      link:"/bigbasket-case-study"
     },
     {
-      src1: "/assets/images/homepage/hero-dominos-1.png",
-      src2: "/assets/images/homepage/hero-dominos-4.png",
-      src3: "/assets/images/homepage/hero-dominos-2.png",
-      src4: "/assets/images/homepage/hero-dominos-3.png",
+      src1: "/assets/images/homepage/hero-dominos-img1.png",
+      src2: "/assets/images/homepage/hero-dominos-img2.png",
+      link:"/dominos-case-study",
     },
     {
-      src1: "/assets/images/homepage/hero-flydubai-1.png",
-      src2: "/assets/images/homepage/hero-flydubai-4.png",
-      src3: "/assets/images/homepage/hero-flydubai-2.png",
-      src4: "/assets/images/homepage/hero-flydubai-3.png",
+      src1: "/assets/images/homepage/hero-flydubai-img1.png",
+      src2: "/assets/images/homepage/hero-flydubai-img2.png",
+      link:"/flydubai-case-study",
     },
   ];
   const details = [
     {
       num1: "2.35x",
       para1: "Growth in installs",
-      num2: "430K + ",
-      para2: "New Orders within 1 Years",
+      // num2: "430K + ",
+      para2: "Expanding Horizons in Non-Metro Cities.",
     },
     {
-      num1: "1.35x",
-      para1: "Growth in installs",
-      num2: "1.90x",
-      para2: "Growth in installs",
+      num1: " 500K+",
+      para1: "New Orders in 12 Months",
+      // num2: "1.90x",
+      para2: "Success Through Influencer Power",
     },
     {
-      num1: "3.35x",
-      para1: "Growth in installs",
-      num2: "5.90x",
-      para2: "Growth in installs",
+      num1: "67%",
+      para1: "Increase in Brand Searches",
+      // num2: "5.90x",
+      para2: "New Routes Soar to Success",
     },
   ];
   const slidesData = [
@@ -109,12 +106,10 @@ const Hero = () => {
 
     return () => ctx.revert();
   }, [activeIndex]);
-
-  // ✅ Auto Increment Active Index Every 3 Seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % slidesData.length);
-    }, 5000); // Change every 3 seconds
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, [slidesData.length]);
@@ -152,7 +147,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveDetail((prevIndex) => (prevIndex + 1) % details.length);
-    }, 6000); // Change every 3 seconds
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, [details.length]);
@@ -188,8 +183,8 @@ const Hero = () => {
       {/* Right Section - Infinite Marquee Gallery */}
       <div className="w-[55vw] h-screen overflow-hidden flex flex-col items-end relative">
         <div className="Marquee-container relative top-0">
-          {/* ✅ Loop through image sets & create gallery blocks */}
-          {Array(2) // Repeat twice for infinite marquee effect
+          
+          {Array(2) 
             .fill(images)
             .flat()
             .map((imageSet, index) => (
@@ -199,7 +194,7 @@ const Hero = () => {
               >
                 {/* Left Column (src1 & src3) */}
                 <div className="w-[25vw] h-full mt-[3vw] flex flex-col gap-[0.9vw]">
-                  <Link href={"#"}>
+                  <Link href={imageSet.link}>
                     <Image
                       src={imageSet.src1}
                       width={490}
@@ -208,20 +203,20 @@ const Hero = () => {
                       alt="gallery image"
                     />
                   </Link>
-                  <Link href={"#"}>
+                  {/* <Link href={"#"}>
                     <Image
-                      src={imageSet.src3}
+                      src={imageSet.src2}
                       width={490}
                       height={670}
                       className="object-fill w-full h-full rounded-[1vw]"
                       alt="gallery image"
                     />
-                  </Link>
+                  </Link> */}
                 </div>
 
                 {/* Right Column (src2 & src4) */}
                 <div className="w-[25vw] h-full mt-[-5vw] flex flex-col gap-[0.9vw]">
-                  <Link href={"#"}>
+                  <Link href={imageSet.link}>
                     <Image
                       src={imageSet.src2}
                       width={490}
@@ -230,7 +225,7 @@ const Hero = () => {
                       alt="gallery image"
                     />
                   </Link>
-                  <Link href={"#"}>
+                  {/* <Link href={"#"}>
                     <Image
                       src={imageSet.src4}
                       width={490}
@@ -238,29 +233,29 @@ const Hero = () => {
                       className="object-fill w-full h-full rounded-[1vw]"
                       alt="gallery image"
                     />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             ))}
         </div>
         <div className="w-[51vw] h-[7vw] absolute bottom-0 rounded-tl-[2vw] rounded-tr-[2vw] border left-0 glassmorphism-dark z-[5]">
-          <div className="w-full h-full flex justify-between items-center px-[5vw]">
-            <div className="flex flex-col items-center w-[25%]">
+          <div className="w-full h-full flex justify-between items-center px-[3vw]">
+            <div className="flex items-center w-[50%]">
               <h3 className="text-[2.4vw] font-extrabold uppercase leading-[1] content-detail">
                 {details[activeDetail].num1}
               </h3>
 
-              <p className="content !leading-[1] content-para">
+              <p className="content !leading-[1] content-para pl-[0.8vw]">
                 {details[activeDetail].para1}
               </p>
             </div>
 
             <span className="h-[4.5vw] w-[1px] bg-black"></span>
 
-            <div className="flex flex-col items-center w-[35%]">
-              <h3 className="text-[2.4vw] font-extrabold uppercase leading-[1] content-detail">
+            <div className="flex flex-col items-center w-[50%]">
+              {/* <h3 className="text-[2.4vw] font-extrabold uppercase leading-[1] content-detail">
                 {details[activeDetail].num2}
-              </h3>
+              </h3> */}
 
               <p className="content !leading-[1] content-para">
                 {details[activeDetail].para2}

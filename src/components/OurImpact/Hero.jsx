@@ -20,7 +20,7 @@ const Hero = () => {
         </div>
         <div className="w-[40%] h-[80%] rounded-[1.2vw] overflow-hidden fadein">
         <Image
-         src={"/assets/images/impact/our-impact-hero.png"}
+         src={"/assets/images/impact/our-impact-hero-img.png"}
          width={400}
          height={700}
          alt="contact-hero-img"

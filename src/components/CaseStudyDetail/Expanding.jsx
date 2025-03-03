@@ -49,35 +49,35 @@ const Expanding = ({ content }) => {
                         <div className='w-full flex justify-between'>
                             <p className='text-[1.2vw] mt-[2vw] w-[40%] fadeup'>Discover our accolades and industry recognition that highlight our commitment to excellence.</p>
                             <div className='w-[20%] '>
-                                <PrimaryButton text={"All Case Studies"} href={"/"} className='fadein' />
+                                <PrimaryButton text={"All Case Studies"} href={"/our-impact"} className='fadein' />
                             </div>
                         </div>
                         <div className='w-full flex pt-[5vw] pb-[3vw] gap-[1vw]'>
-                            <Link href={"/"}>
+                            <Link href={"/dominos-case-study"} >
                                 <div className='relative fadein'>
-                                    <Image src="/assets/images/casestudy/sonata-banner.png" height={450} width={450} alt='sonata' className='rounded-[1.5vw]' />
+                                    <Image src="/assets/images/impact/dominos-listing.png" height={450} width={450} alt='dominos' className='rounded-[1.5vw]' />
                                     <div className='absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[0.5vw]'>
-                                        <p className='text-white text-[2.5vw] font-medium montreal'>Sonata</p>
+                                        <p className='text-white text-[2.5vw] font-medium montreal'>Dominos</p>
                                         <Image src={"/assets/icons/right-arrow-white.svg"} height={20} width={20} alt='right-arrow' />
                                     </div>
                                 </div>
                             </Link>
 
-                            <Link href={"/"}>
+                            <Link href={"/flydubai-case-study"}>
                                 <div className='relative fadein'>
-                                    <Image src="/assets/images/casestudy/portea-banner.png" height={450} width={450} alt='portea' className='rounded-[1.5vw]' />
+                                    <Image src="/assets/images/impact/flydubai-listing.png" height={450} width={450} alt='flydubai' className='rounded-[1.5vw]' />
                                     <div className='absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[0.5vw]'>
-                                        <p className='text-white text-[2.5vw] font-medium montreal'>Portea</p>
+                                        <p className='text-white text-[2.5vw] font-medium montreal'>Flydubai</p>
                                         <Image src={"/assets/icons/right-arrow-white.svg"} height={20} width={20} alt='right-arrow' />
                                     </div>
                                 </div>
                             </Link>
 
-                            <Link href={"/"}>
+                            <Link href={"/flipkart-healthplus-case-study"}>
                                 <div className='relative fadein'>
-                                    <Image src="/assets/images/casestudy/cloud-nine-banner.png" height={450} width={450} alt='cloud-nine' className='rounded-[1.5vw]' />
+                                    <Image src="/assets/images/impact/flipkart-healthplus-listing.png" height={450} width={450} alt='flipkart' className='rounded-[1.5vw]' />
                                     <div className='absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[0.5vw]'>
-                                        <p className='text-white text-[2.5vw] font-medium montreal'>Cloud Nine</p>
+                                        <p className='text-white text-[2.5vw] font-medium montreal'>Flipkart Health+</p>
                                         <Image src={"/assets/icons/right-arrow-white.svg"} height={20} width={20} alt='right-arrow' />
                                     </div>
                                 </div>

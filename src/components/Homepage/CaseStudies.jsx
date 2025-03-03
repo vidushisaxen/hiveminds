@@ -23,11 +23,11 @@ const categories = [
 ];
 
 const caseStudies = [
-  { img: "/assets/images/homepage/bigbasket-casestudy.png", title: "2.35x", des: "Growth in installs", category: "Healthcare" },
-  { img: "/assets/images/homepage/dominos-casestudy.png", title: "430k+", des: "New orders within 1 year", category: "Automobiles" },
-  { img: "/assets/images/homepage/flydubai-casestudy.png", title: "67%", des: "Growth in brand searches", category: "Wearables" },
-  { img: "/assets/images/homepage/flydubai-casestudy.png", title: "120%", des: "Increased Engagement", category: "BFSI" },
-  { img: "/assets/images/homepage/dominos-casestudy.png", title: "3x", des: "User Retention Boost", category: "CDIT" },
+  { img: "/assets/images/homepage/big-basket-casestudy.png", title: "2.35x", des: "Growth in installs", category: "", para:"Expanding the user base",link:"/bigbasket-case-study" },
+  { img: "/assets/images/homepage/dominos-casestudy.png", title: "500K+", des: "New orders within 12 months", category: "", para:"Growing the 30-min connection" ,link:"/dominos-case-study"},
+  { img: "/assets/images/homepage/flydubai-casestudy.png", title: "67%", des: "Increase in brand searches", category: "",para:"New Routes Soar to Success",link:"#" },
+  { img: "/assets/images/homepage/flipkart-healthplus-casestudy.png", title: "#1", des: "India’s Medical App for 1.5 Years", category: "Healthcare", para:"Up with the App Installs",link:"/flipkart-healthplus-case-study" },
+  { img: "/assets/images/homepage/max-life-casestudy.png", title: "45%", des: "Revenue Surge in 3 Months.", category: "BFSI", para:"Powering Growth",link:"/max-life-case-study" },
 ];
 
 const CaseStudies = () => {
@@ -135,7 +135,7 @@ const CaseStudies = () => {
               >
                 {filteredCaseStudies.map((study, index) => (
                   <SwiperSlide key={index}>
-                    <Link href={"#"}>
+                    <Link href={study.link}>
                     <div className="relative w-[25vw] h-[30.5vw]">
                       <Image src={study.img} fill alt="casestudy" className="object-contain" />
                       <div className="absolute top-0 right-0 w-[11.7vw] h-[4vw] flex items-center justify-center rounded-br-[20px]">
@@ -145,6 +145,9 @@ const CaseStudies = () => {
                             {study.des}
                           </p>
                         </div>
+                      </div>
+                      <div className="absolute bottom-5 w-full flex items-center justify-center">
+                        <p className="text-white text-[1.34vw] text-start leading-[1]">{study.para}</p>
                       </div>
                     </div>
                     </Link>

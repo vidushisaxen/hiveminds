@@ -113,7 +113,7 @@ const Blogs = () => {
                   src={"/assets/images/homepage/blogs-2.png"}
                   link={"#"}
                   date={"June 6, 2024"}
-                  para={"How to use ChatGPT for Keyword Research"}
+                  para={"2024 SEO Updates All Bundled Together for You to Glance"}
                 />
                 <div className="flex items-center justify-center h-[35vw] w-[7vw] ">
                   <div

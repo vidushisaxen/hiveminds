@@ -5,99 +5,99 @@ import LinkButton from "../Button/LinkButton";
 const caseStudiesData = [
   {
     id: 1,
-    imgSrc: "/assets/images/impact/dominos-banner.png",
+    imgSrc: "/assets/images/impact/casestudy/dominos-cs-banner.png",
     title: "Dominos",
     description:
       "<p><span class='text-primary'> 500K+ </span> New Orders in 12 Months.</p><p>Success Through Influencer Power</p>",
-    link: "/",
+    link: "/dominos-case-study",
   },
   {
     id: 2,
-    imgSrc: "/assets/images/impact/casestudy/nivea-cs.png",
-    title: "Nivea",
+    imgSrc: "/assets/images/impact/casestudy/max-life-cs-banner.png",
+    title: "Max Life Insurance",
     description:
-      "<p>Maintained top 3 as competitors dropped <span class='text-primary'>34% & 42%</span></p><p>Outshining the Competition,</p>",
-    link: "/",
+      "<p><span class='text-primary'> 45% </span>Revenue Surge in 3 Months</p><p>Powering Growth</p>",
+    link: "/max-life-case-study",
   },
   {
     id: 3,
-    imgSrc: "/assets/images/impact/casestudy/crompton-cs.png",
-    title: "Crompton",
+    imgSrc: "/assets/images/impact/casestudy/bigbasket-cs-banner.png",
+    title: "Big Basket",
     description:
-      "<p><span class='text-primary'>32%</span> Sales Growth</p> <p><span class='text-primary'> #1</span> in Water Heaters</p>",
-    link: "/",
+      "<p><span class='text-primary'>2.35x </span> Growth in Installs</p> <p>Expanding Horizons in Non-Metro Cities</p>",
+    link: "/bigbasket-case-study",
   },
   {
     id: 4,
-    imgSrc: "/assets/images/impact/casestudy/protienx-cs.png",
-    title: "Protinex",
+    imgSrc: "/assets/images/impact/casestudy/flipkart-healthplus-cs-banner.png",
+    title: "Flipkart Health+",
     description:
-      "<p><span class='text-primary'>2x</span> Growth in Share of Voice in 6 Months</p><p>Doubling the Impact with Strategic Campaigns</p>",
-    link: "/",
+      "<p><span class='text-primary'>India’s #1</span> Medical App for 1.5 Years</p><p>Up with the App Installs</p>",
+    link: "/flipkart-healthplus-case-study",
   },
   {
     id: 5,
-    imgSrc: "/assets/images/impact/casestudy/sugarfree-cs.png",
-    title: "Sugar Free",
+    imgSrc: "/assets/images/impact/casestudy/digit-cs-banner.png",
+    title: "Digit",
     description:
-      "<p><span class='text-primary'>35%</span> Increase in Conversion Rates</p><p>Boosting Organic Relevance</p>",
-    link: "/",
+      "<p><span class='text-primary'> 46M </span> Impressions in 12 Months</p><p>Dominating Organic Search</p>",
+    link: "/digit-case-study",
   },
   {
     id: 6,
-    imgSrc: "/assets/images/impact/casestudy/jockey-cs.png",
-    title: "Jockey",
+    imgSrc: "/assets/images/impact/casestudy/murfai-cs-banner.png",
+    title: "Murf AI",
     description:
-      "<p><span class='text-primary'>4x </span> Brand Growth</p> <p>Leading Through Innovation</p>",
-    link: "/",
+      "<p><span class='text-primary'>10x </span> Growth in Traffic</p> <p>Leading in Speech Synthesis Innovation</p>",
+    link: "/murfai-case-study",
   },
   {
     id: 7,
-    imgSrc: "/assets/images/impact/casestudy/bajaj-cs.png",
-    title: "Bajaj",
+    imgSrc: "/assets/images/impact/casestudy/saffola-cs-banner.png",
+    title: "Saffola Honey",
     description:
-      "<p><span class='text-primary'>50% </span>  YoY Growth in Offtakes</p> <p>Leading Seasonal Success</p>",
-    link: "/",
+      "<p><span class='text-primary'>50% </span> CTR Growth and 50% Higher Conversions</p> <p> Achieving Excellence</p>",
+    link: "/safolla-honey-case-study",
   },
   {
     id: 8,
-    imgSrc: "/assets/images/impact/casestudy/fly-dubai-cs.png",
+    imgSrc: "/assets/images/impact/casestudy/flydubai-cs-banner.png",
     title: "Fly Dubai",
     description:
       "<p><span class='text-primary'>67% </span> Increase in Brand Searches</p> <p>New Routes Soar to Success</p>",
-    link: "/",
+    link: "/flydubai-case-study",
   },
   {
     id: 9,
-    imgSrc: "/assets/images/impact/casestudy/sugar-cs.png",
-    title: "Sugar.Fit",
+    imgSrc: "/assets/images/impact/casestudy/bajaj-coolers-cs-banner.png",
+    title: "Bajaj",
     description:
-      "<p><span class='text-primary'>1 Lakh+ </span>  Downloads in a Year</p> <p>Reversing Diabetes and Transforming Lives</p>",
-    link: "/",
+      "<p><span class='text-primary'>50% </span> YoY Growth in Offtakes</p> <p>Leading Seasonal Success</p>",
+    link: "/bajaj-aircooler-case-study",
   },
   {
     id: 10,
-    imgSrc: "/assets/images/impact/casestudy/titan-cs.png",
-    title: "Titan",
+    imgSrc: "/assets/images/impact/casestudy/parachute-cs-banner.png",
+    title: "Parachute Advansed",
     description:
-      "<p><span class='text-primary'>6.5x </span> Revenue Growth in a Year</p> <p>Reimagining the Clock Market</p>",
-    link: "/",
+      "<p><span class='text-primary'>60% </span> ACOS Growth</p> <p>Shining with E-Commerce-Specific Packs</p>",
+    link: "/parachute-advansed-case-study",
   },
   {
     id: 11,
-    imgSrc: "/assets/images/impact/casestudy/morphy-cs.png",
-    title: "Morphy Richards",
+    imgSrc: "/assets/images/impact/casestudy/crompton-cs-banner.png",
+    title: "Crompton",
     description:
-      "<p><span class='text-primary'>10x</span> Growth in Just 2 Months</p> <p>Redefining Personal Grooming</p>",
-    link: "/",
+      "<p><span class='text-primary'>#1</span> in Water Heaters</p> <p>Converting with Category-Leading Benchmarks</p>",
+    link: "/crompton-case-study",
   },
   {
     id: 12,
-    imgSrc: "/assets/images/impact/casestudy/skillmatics.png",
-    title: "Skillmatics",
+    imgSrc: "/assets/images/impact/casestudy/saffola2-cs-banner.png",
+    title: "Saffola Honey",
     description:
-      "<p><span class='text-primary'>2x</span>  Sales Growth in the US & India in 2 Months</p> <p>Global Success Across Markets</p>",
-    link: "/",
+      "<p>From Zero to 500 Units a Day in <span class='text-primary'> 4 Weeks </span></p> <p>Launching Success in Just 4 Weeks</p>",
+    link: "/safolla-honey-case-study",
   },
 ];
 

@@ -7,39 +7,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
     {
-        img: "/assets/images/homepage/services/brand-building.png",
+        img: "/assets/images/homepage/services/digital-brand-building.png",
         title: "Digital Brand Building",
-        para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+        para: "Transform your digital identity with strategic brand positioning. We leverage data-driven insights to craft compelling narratives, create memorable brand experiences, and establish a powerful online presence that resonates with your target audience.",
     },
     {
-        img: "/assets/images/homepage/services/e-commerce.png",
-        title: "Accelerate Ecommerce Growth",
-        para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+        img: "/assets/images/homepage/services/Grow-D2C-Revenue.png",
+        title: "Grow D2C Revenue ",
+        para: "Unlock direct-to-consumer potential through precision marketing. Our approach combines advanced targeting, personalized customer journeys, and optimized conversion strategies to drive sustainable revenue growth and maximize customer lifetime value",
     },
     {
-        img: "/assets/images/homepage/services/revenue.png",
+        img: "/assets/images/homepage/services/Drive-Organic-Revenue.png",
         title: "Drive Organic Revenue",
-        para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+        para: "Elevate your organic performance with intelligent marketing solutions. We deploy cutting-edge SEO strategies, content optimization, and data-powered insights to increase visibility, attract high-intent customers, and naturally boost your revenue streams.",
     },
     {
-        img: "/assets/images/homepage/services/marketing.png",
+        img: "/assets/images/homepage/services/App-Marketing-Solutions.png",
         title: "App Marketing Solutions",
-        para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+        para: "Accelerate app growth and user acquisition through comprehensive marketing strategies. From user onboarding to retention optimization, we deploy targeted campaigns that increase downloads, enhance engagement, and drive meaningful app interactions.",
     },
     {
-        img: "/assets/images/homepage/services/performance.png",
+        img: "/assets/images/homepage/services/Accelerate-Ecommerce-Growth.png",
+        title: "Accelerate Ecommerce Growth",
+        para: "Scale your online retail potential with our integrated ecommerce marketing approach. We combine technological innovation, data analytics, and strategic marketing to optimize conversion rates, enhance customer experience, and drive exponential revenue growth.",
+    },
+    {
+        img: "/assets/images/homepage/services/Demand-Generation.png",
         title: "Demand Generation",
-        para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+        para: "Generate high-quality leads and create a robust pipeline of potential customers. Our data-driven demand generation strategies leverage sophisticated targeting, multi-channel approaches, and intelligent content marketing to attract and nurture valuable prospects.",
     },
     {
-        img: "/assets/images/homepage/services/retention.png",
+        img: "/assets/images/homepage/services/Maximise-Retention.png",
         title: "Maximise Retention",
-        para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
-    },
-    {
-        img: "/assets/images/homepage/services/grow.png",
-        title: "Grow D2C Revenue",
-        para: "We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high - quality targeted traffic and increase brand visibility.",
+        para: "Transform customers into loyal brand advocates through intelligent retention strategies. We utilize advanced analytics, personalized engagement tactics, and predictive modeling to reduce churn, increase customer lifetime value, and build lasting customer relationships.",
     },
 ];
 
@@ -90,7 +90,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
             })
                 .to(headingRef.current, {
                     rotation: 0,
-                    top: "63%",
+                    top: "50%",
                     left:"8%",
                     opacity: 1,
                     duration: 0.3,
@@ -111,7 +111,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                 }),
                 gsap.to(headingRef.current, {
                     rotation: 0,
-                    top: "63%",
+                    top: "50%",
                     left: "8%",
                     transformOrigin: "0% 50%"
                 })

@@ -128,7 +128,7 @@ const Story = ({isOpen,setIsOpen}) => {
                 understands our clients&apos; unique goals and aspirations. We
                 leverage our expertise to craft compelling brand experiences,
                 ensuring that every campaign is executed with precision,
-                creativity, and an unwavering commitment to excellence
+                creativity, and an unwavering commitment to excellence.
               </p>
               <div className="w-full flex items-center justify-start gap-[2vw]">
                 <PrimaryButton

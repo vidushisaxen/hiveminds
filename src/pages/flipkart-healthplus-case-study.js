@@ -33,7 +33,7 @@ const index = () => {
     return (
         <>
             <Layout isOpen={isOpen}>
-                <Hero title1={"Flipkart"} title2={"Health+"} img={"/assets/images/casestudy/bigbasket-casestudy.png"} />
+                <Hero title1={"Flipkart"} title2={"Health+"} img={"/assets/images/impact/casestudy/flipkart-healthplus-cs-hero.jpg"} />
                 <Expanding content={content} />
             </Layout>
         </>
