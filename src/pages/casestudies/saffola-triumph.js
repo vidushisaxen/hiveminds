@@ -2,7 +2,7 @@
 import Expanding from '@/components/CaseStudyDetail/Expanding';
 import Hero from '@/components/CaseStudyDetail/Hero';
 import Layout from '@/components/Layout'
-import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingBlur, paraAnim ,lineAnim } from '@/components/gsapAnimations'
 import React, { useState } from 'react'
 
 
@@ -28,6 +28,7 @@ const index = () => {
     paraAnim();
     fadeUp();
     fadeIn();
+    lineAnim()
     return (
         <>
             <Layout isOpen={isOpen}>

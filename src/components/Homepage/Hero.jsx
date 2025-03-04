@@ -192,13 +192,13 @@ const Hero = () => {
                 className="w-[55vw] h-fit flex gap-[0.9vw] gallery-block relative"
               >
                 {/* Left Column (src1 & src3) */}
-                <div className="w-[25vw] h-full my-[4vw] flex flex-col gap-[2vw]">
+                <div className="w-[25vw] h-full my-[4vw] flex flex-col gap-[2vw] rounded-[1vw] overflow-hidden group">
                   <Link href={imageSet.link}>
                     <Image
                       src={imageSet.src1}
                       width={490}
                       height={670}
-                      className="object-fill w-full h-full rounded-[1vw]"
+                      className="object-fill w-full h-full rounded-[1vw] group-hover:scale-[1.08] transition-all duration-700 ease-in-out"
                       alt="gallery image"
                     />
                   </Link>
@@ -206,13 +206,13 @@ const Hero = () => {
                 </div>
 
                 {/* Right Column (src2 & src4) */}
-                <div className="w-[25vw] h-full mt-[-1vw] flex flex-col gap-[0.9vw]">
+                <div className="w-[25vw] h-full mt-[-1vw] flex flex-col gap-[0.9vw] rounded-[1vw] overflow-hidden group">
                   <Link href={imageSet.link}>
                     <Image
                       src={imageSet.src2}
                       width={490}
                       height={670}
-                      className="object-fill w-full h-full rounded-[1vw]"
+                      className="object-fill w-full h-full rounded-[1vw] group-hover:scale-[1.08] transition-all duration-700 ease-in-out"
                       alt="gallery image"
                     />
                   </Link>

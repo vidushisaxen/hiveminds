@@ -136,8 +136,9 @@ const CaseStudies = () => {
                 {filteredCaseStudies.map((study, index) => (
                   <SwiperSlide key={index}>
                     <Link href={study.link}>
-                    <div className="relative w-[25vw] h-[30.5vw]">
-                      <Image src={study.img} fill alt="casestudy" className="object-contain" />
+                    <div className="relative w-[25vw] h-[30.5vw] group ">
+                      <Image src={study.img} fill alt="casestudy" className="object-contain group-hover:brightness-75 transistion-all duration-500 ease-in-out" />
+
                       <div className="absolute top-0 right-0 w-[11.7vw] h-[4vw] flex items-center justify-center rounded-br-[20px]">
                         <div className="flex flex-col justify-center  w-[70%]">
                           <p className="font-medium text-[2vw] leading-[1]">{study.title}</p>
@@ -147,7 +148,7 @@ const CaseStudies = () => {
                         </div>
                       </div>
                       <div className="absolute bottom-5 w-full flex items-center justify-center">
-                        <p className="text-white text-[1.34vw] text-start leading-[1]">{study.para}</p>
+                        <p className="text-white text-[1.34vw] text-start leading-[1] group-hover:scale-[1.1] transistion-all duration-500 ease-in-out">{study.para}</p>
                       </div>
                     </div>
                     </Link>

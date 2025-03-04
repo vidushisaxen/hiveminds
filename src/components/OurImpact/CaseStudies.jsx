@@ -78,7 +78,7 @@ const caseStudiesData = [
   {
     id: 10,
     imgSrc: "/assets/images/impact/casestudy/parachute-cs-banner.png",
-    title: "Parachute Advansed",
+    title: "Parachute Advanced",
     description:
       "<p><span class='text-primary'>60% </span> ACOS Growth</p> <p>Shining with E-Commerce-Specific Packs</p>",
     link: "/casestudies/parachute-advansed",
@@ -103,16 +103,16 @@ const caseStudiesData = [
 
 const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
   return (
-    <div className="w-[30vw] h-[43vw] pl-[0.5vw] pb-[3vw] fadein">
-      <div className="h-[25.5vw] w-full relative">
+    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group">
+      <div className="h-[25.5vw] w-full relative overflow-hidden rounded-[1.5vw]">
         <Image
           src={imgSrc}
           fill
           alt={`${title} Case Study`}
-          className="rounded-[20px]"
+          className="group-hover:scale-[1.1] transition-all duration-500 ease-in-out "
         />
       </div>
-      <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[30%] justify-between">
+      <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[28%] justify-between">
         <div>
         <p className="text-[2vw] font-medium py-[0.5vw]">{title}</p>
         <div
@@ -122,7 +122,7 @@ const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
 
         </div>
         <div className="pt-[1vw]">
-          <LinkButton btnText="View Detail" btnLink={link} />
+          <LinkButton btnText="View Detail" btnLink={link} className="group-hover:text-primary transition-all duration-500 ease-in-out" />
         </div>
       </div>
     </div>
@@ -137,7 +137,7 @@ const CaseStudies = () => {
           <h2 className="heading-2 headinganim">
             Our Case <span className="blue-text">Studies</span>
           </h2>
-          <p className="content w-[55%] text-center fadeup">
+          <p data-para-anim className="content w-[55%] text-center">
             At HiveMinds, we tackle your most challenging business problems with
             our specialised digital marketing approach - integrating strategic
             expertise, cutting-edge technology, and data-driven insights to

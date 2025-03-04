@@ -96,7 +96,7 @@ export function Clients() {
             Our
             <span className="blue-text"> Clients</span>
           </h2>
-          <p className="content w-[70%] text-center fadeup">
+          <p className="content w-[70%] text-center fadein">
             Our diverse & growing portfolio spanning from lean startups to
             household brands - and everything in between
           </p>
@@ -168,7 +168,7 @@ export function Clients() {
             <h2 className="heading-2 headinganim">
               Our Platform &<span className="blue-text"> Media Partners</span>
             </h2>
-            <p className="content w-[50%] text-center fadeup">
+            <p data-para-anim className="content w-[50%] text-center">
               Our diverse & growing portfolio spanning from lean startups to
               household brands - and everything in between
             </p>

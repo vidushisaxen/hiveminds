@@ -53,7 +53,7 @@ const Awards = () => {
         <h2 className="heading-2 headinganim">
           Awards & <span className="blue-text"> Accolades</span>
         </h2>
-        <p className="content w-[50%] text-center fadeup">
+        <p data-para-anim className="content w-[50%] text-center">
           Discover our accolades and industry recognition that highlight our
           commitment to excellence.
         </p>
