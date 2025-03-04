@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import Hero from '@/components/Contactpage/Hero'
 import Layout from '@/components/Layout'
 import React, { useEffect } from 'react'
 import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 import Locations from '@/components/Contactpage/Locations'
 import GetinTouch from '@/components/Contactpage/GetinTouch'
 import gsap from 'gsap'
+import Hero from '@/components/Hero'
 
 const contact = () => {
      headingBlur();
@@ -32,7 +32,7 @@ const contact = () => {
   return (
     <>
     <Layout>
-     <Hero/>
+     <Hero title1={"Contact"} title2={"Us"} para={"At HiveMinds, we tackle your most challenging business problems with our specialised digital marketing approach integrating strategic expertise."} img={"/assets/images/contactpage/contact-hero.png"}/>
      <Locations/>
      <GetinTouch/>
 

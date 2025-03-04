@@ -9,7 +9,7 @@ const caseStudiesData = [
     title: "Dominos",
     description:
       "<p><span class='text-primary'> 500K+ </span> New Orders in 12 Months.</p><p>Success Through Influencer Power</p>",
-    link: "/casestudies/dominos-case-study",
+    link: "/casestudies/dominos",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const caseStudiesData = [
     title: "Max Life Insurance",
     description:
       "<p><span class='text-primary'> 45% </span>Revenue Surge in 3 Months</p><p>Powering Growth</p>",
-    link: "/casestudies/max-life-case-study",
+    link: "/casestudies/max-life",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const caseStudiesData = [
     title: "Big Basket",
     description:
       "<p><span class='text-primary'>2.35x </span> Growth in Installs</p> <p>Expanding Horizons in Non-Metro Cities</p>",
-    link: "/casestudies/bigbasket-case-study",
+    link: "/casestudies/bigbasket",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const caseStudiesData = [
     title: "Flipkart Health+",
     description:
       "<p><span class='text-primary'>India’s #1</span> Medical App for 1.5 Years</p><p>Up with the App Installs</p>",
-    link: "/casestudies/flipkart-healthplus-case-study",
+    link: "/casestudies/flipkart-healthplus",
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const caseStudiesData = [
     title: "Digit",
     description:
       "<p><span class='text-primary'> 46M </span> Impressions in 12 Months</p><p>Dominating Organic Search</p>",
-    link: "/casestudies/digit-case-study",
+    link: "/casestudies/digit",
   },
   {
     id: 6,
@@ -49,7 +49,7 @@ const caseStudiesData = [
     title: "Murf AI",
     description:
       "<p><span class='text-primary'>10x </span> Growth in Traffic</p> <p>Leading in Speech Synthesis Innovation</p>",
-    link: "/casestudies/murfai-case-study",
+    link: "/casestudies/murfai",
   },
   {
     id: 7,
@@ -57,7 +57,7 @@ const caseStudiesData = [
     title: "Saffola Honey",
     description:
       "<p><span class='text-primary'>50% </span> CTR Growth and 50% Higher Conversions</p> <p> Achieving Excellence</p>",
-    link: "/casestudies/safolla-honey-case-study",
+    link: "/casestudies/saffola-honey",
   },
   {
     id: 8,
@@ -65,7 +65,7 @@ const caseStudiesData = [
     title: "Fly Dubai",
     description:
       "<p><span class='text-primary'>67% </span> Increase in Brand Searches</p> <p>New Routes Soar to Success</p>",
-    link: "/casestudies/flydubai-case-study",
+    link: "/casestudies/flydubai",
   },
   {
     id: 9,
@@ -73,7 +73,7 @@ const caseStudiesData = [
     title: "Bajaj",
     description:
       "<p><span class='text-primary'>50% </span> YoY Growth in Offtakes</p> <p>Leading Seasonal Success</p>",
-    link: "/casestudies/bajaj-aircooler-case-study",
+    link: "/casestudies/bajaj-aircooler",
   },
   {
     id: 10,
@@ -81,7 +81,7 @@ const caseStudiesData = [
     title: "Parachute Advansed",
     description:
       "<p><span class='text-primary'>60% </span> ACOS Growth</p> <p>Shining with E-Commerce-Specific Packs</p>",
-    link: "/casestudies/parachute-advansed-case-study",
+    link: "/casestudies/parachute-advansed",
   },
   {
     id: 11,
@@ -89,15 +89,15 @@ const caseStudiesData = [
     title: "Crompton",
     description:
       "<p><span class='text-primary'>#1</span> in Water Heaters</p> <p>Converting with Category-Leading Benchmarks</p>",
-    link: "/casestudies/crompton-case-study",
+    link: "/casestudies/crompton",
   },
   {
     id: 12,
-    imgSrc: "/assets/images/impact/casestudy/saffola2-cs-banner.png",
+    imgSrc: "/assets/images/impact/casestudy/saffola-triumph-cs-hero.jpg",
     title: "Saffola Honey",
     description:
       "<p>From Zero to 500 Units a Day in <span class='text-primary'> 4 Weeks </span></p> <p>Launching Success in Just 4 Weeks</p>",
-    link: "/casestudies/safolla-honey-case-study",
+    link: "/casestudies/saffola-triumph",
   },
 ];
 

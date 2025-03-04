@@ -50,40 +50,40 @@ const Footer = () => {
                   Expertise
                 </p>
                 <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start justify-center gap-[0.5vw]">
-                  <Link href={"/services/performance-marketing-services"} className="link-line">
+                  <Link href={"/services/performance-marketing"} className="link-line">
                     {" "}
                     <li>Performance Marketing</li>
                   </Link>
-                  <Link href={"/services/retail-marketing-services"} className="link-line">
+                  <Link href={"/services/retail-marketing"} className="link-line">
                     {" "}
                     <li>Retail Marketing</li>
                   </Link>
-                  <Link href={"/services/consumer-insights-services"} className="link-line">
+                  <Link href={"/services/consumer-insights"} className="link-line">
                     <li>Consumer Insights</li>
                   </Link>
-                  <Link href={"/services/influencer-marketing-services"} className="link-line">
+                  <Link href={"/services/influencer-marketing"} className="link-line">
                     <li>Influencer Marketing</li>
                   </Link>
-                  <Link href={"/services/affiliate-marketing-services"} className="link-line">
+                  <Link href={"/services/affiliate-marketing"} className="link-line">
                     <li>Affiliate Marketing</li>
                   </Link>
-                  <Link href={"/services/data-analytic-services"} className="link-line">
+                  <Link href={"/services/data-analytic"} className="link-line">
                     <li>Data & Analytics</li>
                   </Link>
-                  <Link href={"/services/social-media-marketing-services"} className="link-line">
+                  <Link href={"/services/social-media-marketing"} className="link-line">
                     <li>Programatic Advertising</li>
                   </Link>
-                  <Link href={"/services/search-engine-optimization-services"} className="link-line">
+                  <Link href={"/services/search-engine-optimization"} className="link-line">
                     <li>Search Engine Optimization</li>
                   </Link>
-                  <Link href={"/services/creative-content-management-services"} className="link-line">
+                  <Link href={"/services/creative-content-management"} className="link-line">
                     <li>Content Management & Creative
                     </li>
                   </Link>
-                  <Link href={"/services/online-reputation-management-services"} className="link-line">
+                  <Link href={"/services/online-reputation-management"} className="link-line">
                     <li>Online Reputation Management</li>
                   </Link>
-                  <Link href={"/services/branding-services"} className="link-line">
+                  <Link href={"/services/branding"} className="link-line">
                     <li>Branding Services</li>
                   </Link>
                 </ul>

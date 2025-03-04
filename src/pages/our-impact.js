@@ -3,10 +3,10 @@ import Layout from '@/components/Layout'
 import React, { useEffect } from 'react'
 import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 import gsap from 'gsap'
-import Hero from '@/components/OurImpact/Hero'
 import { Clients } from '@/components/OurImpact/Clients'
 import CaseStudies from '@/components/OurImpact/CaseStudies'
 import Awards from '@/components/OurImpact/Awards'
+import Hero from '@/components/Hero'
 
 const impact = () => {
      headingBlur();
@@ -33,7 +33,7 @@ const impact = () => {
   return (
     <>
     <Layout>
-    <Hero/>
+   <Hero title1={"Our"} title2={"Impact"} para={"Clients rely on our integrated network of agencies and specialized practices to deliver personalized experiences through creative, media and customer experience management."} img={"/assets/images/impact/our-impact-hero-img.png"}/>
     <Clients/>
     <Awards/>
     <CaseStudies/>

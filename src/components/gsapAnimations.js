@@ -70,7 +70,7 @@ export function paraAnim() {
                 // end: "bottom 60%",
               },
               opacity: 0,
-              yPercent:50,
+              y:100,
               ease:"power3.out",
               duration: 2,
               stagger: 0.1,

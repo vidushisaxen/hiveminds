@@ -3,8 +3,8 @@ import Layout from '@/components/Layout'
 import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
-import Hero from '@/components/Services/Hero'
 import Listing from '@/components/Services/Listing'
+import Hero from '@/components/Hero'
 
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
@@ -33,7 +33,7 @@ const index = () => {
   return (
     <>
       <Layout isOpen={isOpen}>
-        <Hero/>
+        <Hero title1={"What We"} title2={"Offer"} para={"Fueling digital evolution with insight and innovation, we turn complexity into clarity—empowering brands to lead and excel in today’s competitive landscape."} img={"/assets/images/services/hero.png"} />
         <Listing/>
       </Layout>
     </>
