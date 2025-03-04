@@ -11,7 +11,7 @@ import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimatio
 import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
 import { Clients2 } from '@/components/Homepage/Clients2'
-import Services from '@/components/Homepage/Services'
+import Services from '@/components/Homepage/Solutions'
 
 
 const index = () => {

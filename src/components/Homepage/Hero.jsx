@@ -117,7 +117,7 @@ const Hero = () => {
     const tl = gsap.timeline();
     tl.from(".Marquee-container", {
       top: "80%",
-      duration: 4,
+      duration: 6,
       ease: "none",
     });
     tl.to(".Marquee-container", {
@@ -146,7 +146,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveDetail((prevIndex) => (prevIndex + 1) % details.length);
-    }, 5000); 
+    }, 6000); 
 
     return () => clearInterval(interval);
   }, [details.length]);
@@ -192,7 +192,7 @@ const Hero = () => {
                 className="w-[55vw] h-fit flex gap-[0.9vw] gallery-block relative"
               >
                 {/* Left Column (src1 & src3) */}
-                <div className="w-[25vw] h-full mt-[3vw] flex flex-col gap-[0.9vw]">
+                <div className="w-[25vw] h-full my-[4vw] flex flex-col gap-[2vw]">
                   <Link href={imageSet.link}>
                     <Image
                       src={imageSet.src1}
@@ -202,19 +202,11 @@ const Hero = () => {
                       alt="gallery image"
                     />
                   </Link>
-                  {/* <Link href={"#"}>
-                    <Image
-                      src={imageSet.src2}
-                      width={490}
-                      height={670}
-                      className="object-fill w-full h-full rounded-[1vw]"
-                      alt="gallery image"
-                    />
-                  </Link> */}
+                 
                 </div>
 
                 {/* Right Column (src2 & src4) */}
-                <div className="w-[25vw] h-full mt-[-5vw] flex flex-col gap-[0.9vw]">
+                <div className="w-[25vw] h-full mt-[-1vw] flex flex-col gap-[0.9vw]">
                   <Link href={imageSet.link}>
                     <Image
                       src={imageSet.src2}
@@ -224,15 +216,7 @@ const Hero = () => {
                       alt="gallery image"
                     />
                   </Link>
-                  {/* <Link href={"#"}>
-                    <Image
-                      src={imageSet.src4}
-                      width={490}
-                      height={670}
-                      className="object-fill w-full h-full rounded-[1vw]"
-                      alt="gallery image"
-                    />
-                  </Link> */}
+                 
                 </div>
               </div>
             ))}

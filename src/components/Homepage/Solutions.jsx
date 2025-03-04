@@ -43,9 +43,10 @@ const services = [
     },
 ];
 
-const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
+const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
     const cardRef = useRef(null);
     const headingRef = useRef(null);
+    const headinginnerRef = useRef(null);
     const contentRef = useRef(null);
     const linkRef = useRef(null);
     const timelineRef = useRef(null);
@@ -88,18 +89,19 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                 duration: 0.5,
                 ease: "power2.inOut"
             })
-                .to(headingRef.current, {
-                    rotation: 0,
-                    top: "55%",
-                    left:"6%",
-                    opacity: 1,
-                    duration: 0.3,
-                }, "-=0.5")
+             
+                .to(headinginnerRef.current,{
+                    opacity:1,
+                    duration: 0.5,
+                    yPercent:-10
+                })
                 .to(contentRef.current, {
+                    
                     opacity: 1,
                     delay: 0.28,
+                    yPercent:0,
                     duration: 0.5,
-                }, "-=0.3")
+                }, "-=0.8")
                 .to(linkRef.current, {
                     opacity: 1,
                     scale: 1,
@@ -109,12 +111,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                 gsap.to(cardRef.current, {
                     width: "45%"
                 }),
-                gsap.to(headingRef.current, {
-                    rotation: 0,
-                    top: "55%",
-                    left: "6%",
-                    transformOrigin: "0% 50%"
-                })
+               
             ], "<")
                 .to([contentRef.current, linkRef.current], {
                     opacity: 1,
@@ -129,18 +126,20 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                 duration: 0.5,
                 ease: "power2.inOut"
             })
-                .to(headingRef.current, {
-                    rotation: -90,
-                    // transformOrigin:"left",
-                    top: "55%",
-                    opacity: 1,
-                    duration: 0.3,
-                }, "-=0.5")
+                .to(headinginnerRef.current,{
+                    opacity:0,
+                    yPercent:10,
+                    delay:-0.5,
+                    duration: 0.5,
+                    delay:-1,
+                })
                 .to(contentRef.current, {
                     opacity: 0,
                     y: 0,
+                    yPercent:10,
+                 
                     duration: 0.4,
-                }, "-=0.5")
+                }, "-=2.5")
                 .to(linkRef.current, {
                     opacity: 0,
                     scale: 0.8,
@@ -150,17 +149,13 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                 gsap.to(cardRef.current, {
                     width: "18%"
                 }),
-                gsap.to(headingRef.current, {
-                    rotation: -90,
-                    top: "90%",
-                    left: "45%",
-                    transformOrigin: "0% 50%"
-                })
+               
             ], "<")
                  
                 .to([contentRef.current, linkRef.current], {
                     opacity: 0,
                     scale: 1,
+                    
                     duration: 0.4,
                 }, "-=0.6");
         }
@@ -168,9 +163,9 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
 
 
     return (
-        <div
+        <Link href={link}
             ref={cardRef}
-            className="relative h-full overflow-hidden rounded-[1.2vw] service-card w-[18%]"
+            className="relative h-full overflow-hidden rounded-[1.2vw] service-card w-[18%] group"
             onMouseEnter={onMouseEnter}
         >
             <Image
@@ -181,10 +176,10 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                 className="absolute inset-0 z-0"
             />
 
-            <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-6 text-white z-10">
+            <div className="absolute inset-0 bg-black/40 flex flex-col items-start justify-end gap-[1.5vw] p-[2vw] pb-[1vw] text-white z-10">
                 <h3
                     ref={headingRef}
-                    className="text-white text-[1.5vw] absolute w-[28vw] text-left leading-[1.2]"
+                    className={`text-white text-[1.5vw] absolute w-[28vw] text-left leading-[1.2] rotate-[-90deg] ${isActive?"opacity-0":"opacity-100"} transition-all duration-300 ease-in-out `}
                     style={{
                         transformOrigin: "0% 50%",
                         rotation: -90,
@@ -194,15 +189,22 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                 >
                     {service.title}
                 </h3>
+                <h3
+                    ref={headinginnerRef}
+                    className="text-white text-[1.7vw] text-left  leading-[1.2] opacity-0 translate-y-[10%]"
+                  
+                >
+                    {service.title}
+                </h3>
 
                 <p
                     ref={contentRef}
-                    className="content absolute !text-white opacity-0 text-left p-[2vw] px-[1.5vw] !leading-[1.3] bottom-0 "
+                    className="content !text-white opacity-0 text-left  pt-0   !leading-[1.3] translate-y-[10%]"
                 >
                     {service.para}
                 </p>
 
-                <Link href="#">
+                <div >
                     <div
                         ref={linkRef}
                         className="absolute top-4 right-4 bg-transparent border border-white text-white p-4 rounded-full flex items-center justify-center opacity-0 scale-0"
@@ -214,9 +216,9 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key }) => {
                             alt="top-right-arrow"
                         />
                     </div>
-                </Link>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
@@ -241,6 +243,7 @@ const Services = () => {
                         {services.map((service, index) => (
                             <ServiceCard
                                 key={index}
+                                link={"/"}
                                 service={service}
                                 isActive={index === activeIndex}
                                 onMouseEnter={() => setActiveIndex(index)}
