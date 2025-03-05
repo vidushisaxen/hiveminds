@@ -1,7 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+
 import React, { useEffect } from 'react'
-import PrimaryButton from '../Button/PrimaryButton'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
@@ -14,7 +12,7 @@ const Expanding = ({ content }) => {
                 scrollTrigger:{
                     trigger:"#casestudy-detail",
                     start:"top top",
-                    end:"78% bottom",
+                    end:"75% top",
                  
                     pin:".category"
                 }
@@ -76,46 +74,7 @@ const Expanding = ({ content }) => {
                         <span className='w-[60%] h-[1.5px] bg-black absolute mt-[3vw] lineDraw'></span>
                     </div>
 
-                    <div className='py-[4vw] w-screen more-casestudies'>
-                        <h2 className='heading-2 w-[80%] fadein'>More Case <span className='text-primary'> Studies </span> </h2>
-                        <div className='w-full flex justify-between'>
-                            <p className='text-[1.2vw] mt-[2vw] w-[40%] fadein'>Discover our accolades and industry recognition that highlight our commitment to excellence.</p>
-                            <div className='w-[20%] '>
-                                <PrimaryButton text={"All Case Studies"} href={"/our-impact"} className='fadein' />
-                            </div>
-                        </div>
-                        <div className='w-full flex pt-[5vw] pb-[3vw] gap-[1vw]'>
-                            <Link href={"/casestudies/dominos-case-study"} >
-                                <div className='relative casestudies'>
-                                    <Image src="/assets/images/impact/dominos-listing.png" height={450} width={450} alt='dominos' className='rounded-[1.5vw]' />
-                                    <div className='absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[0.5vw]'>
-                                        <p className='text-white text-[2.5vw] font-medium montreal'>Dominos</p>
-                                        <Image src={"/assets/icons/right-arrow-white.svg"} height={20} width={20} alt='right-arrow' />
-                                    </div>
-                                </div>
-                            </Link>
-
-                            <Link href={"/casestudies/flydubai-case-study"}>
-                                <div className='relative casestudies'>
-                                    <Image src="/assets/images/impact/flydubai-listing.png" height={450} width={450} alt='flydubai' className='rounded-[1.5vw]' />
-                                    <div className='absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[0.5vw]'>
-                                        <p className='text-white text-[2.5vw] font-medium montreal'>Flydubai</p>
-                                        <Image src={"/assets/icons/right-arrow-white.svg"} height={20} width={20} alt='right-arrow' />
-                                    </div>
-                                </div>
-                            </Link>
-
-                            <Link href={"/casestudies/flipkart-healthplus-case-study"}>
-                                <div className='relative casestudies'>
-                                    <Image src="/assets/images/impact/flipkart-healthplus-listing.png" height={450} width={450} alt='flipkart' className='rounded-[1.5vw]' />
-                                    <div className='absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[0.5vw]'>
-                                        <p className='text-white text-[2.5vw] font-medium montreal'>Flipkart Health+</p>
-                                        <Image src={"/assets/icons/right-arrow-white.svg"} height={20} width={20} alt='right-arrow' />
-                                    </div>
-                                </div>
-                            </Link>
-                        </div>
-                    </div>
+                   
                 </div>
 
                 <div className='w-[20%] category'>

@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const lifeData = [
   {
@@ -28,6 +31,23 @@ const lifeData = [
 ];
 
 const Life = () => {
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+           gsap.from(".life-cards",{
+            y:100,
+            opacity:0,
+            stagger:0.2,
+            duration:2,
+            ease:"power3.out",
+            scrollTrigger:{
+              trigger:"#life-at-hiveminds",
+              start:"top 60%"
+            }
+           })
+    
+        });
+        return () => ctx.revert();
+      }, []);
   return (
     <section className="w-screen h-full py-[5%] relative" id="life-at-hiveminds">
       {/* Title Section */}
@@ -47,7 +67,7 @@ const Life = () => {
         {lifeData.map((item) => (
           <div
             key={item.id}
-            className="w-[21.5vw] h-[25vw] rounded-[1.2vw] bg-white shadow-md py-[3.5vw] px-[1.3vw]"
+            className="w-[21.5vw] h-[25vw] rounded-[1.2vw] bg-white shadow-md py-[3.5vw] px-[1.3vw] life-cards"
           >
             <div className="flex flex-col gap-[2vw] h-full">
               <h4 className="text-[1.7vw] text-center">{item.title}</h4>

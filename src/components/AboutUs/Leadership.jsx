@@ -5,37 +5,37 @@ const team = [
   {
     id: 1,
     name: "Sachin Suresh",
-    src: "/",
+    src: "/assets/images/about/leadership-1.png",
     designation: "Co-Founder",
   },
   {
     id: 2,
     name: "Shreya Aggarwal",
-    src: "/",
+    src: "/assets/images/about/leadership-2.png",
     designation: "Co-Founder",
   },
   {
     id: 3,
     name: "Mohit Grover",
-    src: "/",
+    src: "/assets/images/about/leadership-3.png",
     designation: "Co-Founder",
   },
   {
     id: 4,
     name: "Sachin Suresh",
-    src: "/",
+    src: "/assets/images/about/leadership-1.png",
     designation: "Co-Founder",
   },
   {
     id: 5,
     name: "Shreya Aggarwal",
-    src: "/",
+    src: "/assets/images/about/leadership-2.png",
     designation: "Co-Founder",
   },
   {
     id: 6,
     name: "Mohit Grover",
-    src: "/",
+    src: "/assets/images/about/leadership-3.png",
     designation: "Co-Founder",
   },
 ];

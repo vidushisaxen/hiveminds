@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import LinkButton from "../Button/LinkButton";
 import Link from "next/link";
 import styles from '../Button/styles.module.css'
 
@@ -127,7 +126,7 @@ const caseStudiesData = [
   },
 ];
 
-const CaseStudyCard = ({
+const BlogCard = ({
   imgSrc,
   title,
   description,
@@ -199,7 +198,7 @@ const BlogListing = () => {
       <div className="container-lg h-full">
         <div className="flex flex-wrap items-start justify-center gap-[1vw]">
           {caseStudiesData.map((study) => (
-            <CaseStudyCard
+            <BlogCard
               key={study.id}
               category={study.category}
               date={study.date}

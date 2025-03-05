@@ -67,13 +67,14 @@ export function paraAnim() {
               scrollTrigger: {
                 trigger: content,
                 start: "top 90%",
+                // markers:true,
                 // end: "bottom 60%",
               },
               opacity: 0,
-              y:100,
+              y:50,
               ease:"power3.out",
               duration: 2,
-              stagger: 0.1,
+              
             });
           });
         });

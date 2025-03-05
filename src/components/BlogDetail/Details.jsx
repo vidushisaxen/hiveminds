@@ -1,15 +1,42 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
-import PrimaryButton from '../Button/PrimaryButton'
-import LinkButton from '../Button/LinkButton'
+import React, { useEffect } from 'react'
+
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 
 const Details = () => {
+  useEffect(()=>{
+    const ctx = gsap.context(()=>{
+        gsap.to(".blog-credentials",{
+            ease:"none",
+            scrollTrigger:{
+                trigger:"#blog-detail",
+                start:"top top",
+                end:"90% top",
+                pin:".blog-credentials"
+            }
+        })
+        gsap.from(".related-blogs",{
+          y:100,
+          opacity:0,
+          stagger:0.2,
+          duration:2,
+          ease:"power3.out",
+          scrollTrigger:{
+            trigger:"#related-blogs",
+            start:"top 60%"
+          }
+         })
+    })
+    return()=>ctx.revert()
+},[])
   return (
     <>
-      <section className='h-full w-screen py-[5vw]'>
+      <section className='h-full w-screen py-[5vw]' id='blog-detail'>
         <div className='container-lg w-full h-full flex items-start justify-between'>
-          <div className='w-[30%]'>
+          <div className='w-[30%] blog-credentials'>
             <p className='text-[1.3vw] font-medium leading-[1]'>Posted On:</p>
             <p className='text-[1.3vw] font-medium leading-[1] py-[1vw]'>June 6,2024</p>
             <div className='py-[2vw]'>
@@ -86,123 +113,62 @@ const Details = () => {
             </div>
           </div>
           <div className='w-[60%] h-full'>
-            <p className='content py-[1vw]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s. </p>
-            <p className='content py-[1vw]'>When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-            <p className='content py-[1vw]'>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s. </p>
+            <p className='content py-[1vw] fadein'>When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <p className='content py-[1vw] fadein'>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
-            <div className='py-[2vw]'>
-              <p className='text-[2.5vw] font-medium'>Lorem Ipsum Dolor</p>
-              <p className='content py-[1vw]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <p className='content py-[1vw]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
-              <div className='py-[1.5vw]'>
+            <div className='py-[2vw] '>
+              <p className='text-[2.5vw] font-medium fadein'>Lorem Ipsum Dolor</p>
+              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
+              <div className='py-[1.5vw] fadein'>
                 <Image src={"/assets/images/blogs/blog-img1.png"} height={690} width={1130} alt='blog-image' className='rounded-[1vw]' />
               </div>
               <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
             </div>
 
             <div className='py-[2vw]'>
-              <p className='text-[2.5vw] font-medium'>Lorem Ipsum is simply dummy text </p>
-              <p className='content py-[1vw]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <p className='content py-[1vw]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
+              <p className='text-[2.5vw] font-medium fadein'>Lorem Ipsum is simply dummy text </p>
+              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
               <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
             </div>
 
             <div className='py-[2vw]'>
-              <p className='text-[2.5vw] font-medium'>Lorem Ipsum is simply dummy text </p>
-              <p className='content py-[1vw]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <p className='content py-[1vw]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
-              <div className='py-[1.5vw]'>
+              <p className='text-[2.5vw] font-medium fadein'>Lorem Ipsum is simply dummy text </p>
+              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
+              <div className='py-[1.5vw] fadein'>
                 <Image src={"/assets/images/blogs/blog-img2.png"} height={690} width={1130} alt='blog-image' className='rounded-[1vw]' />
               </div>
               <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
             </div>
 
             <div className='py-[2vw]'>
-              <p className='text-[2.5vw] font-medium'>Lorem Ipsum is simply dummy text </p>
-              <p className='content py-[1vw]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <p className='content py-[1vw]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
+              <p className='text-[2.5vw] font-medium fadein'>Lorem Ipsum is simply dummy text </p>
+              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
               <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
             </div>
 
             <div className='py-[2vw]'>
-              <p className='text-[2.5vw] font-medium'>Lorem Ipsum is simply dummy text </p>
-              <p className='content py-[1vw]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <p className='content py-[1vw]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
+              <p className='text-[2.5vw] font-medium fadein'>Lorem Ipsum is simply dummy text </p>
+              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
               <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
             </div>
 
             <div className='py-[2vw]'>
-              <p className='text-[2.5vw] font-medium'>Lorem Ipsum </p>
-              <p className='content py-[1vw]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
+              <p className='text-[2.5vw] font-medium fadein'>Lorem Ipsum </p>
+              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+             
             </div>
           </div>
 
         </div>
 
       </section>
-      <section className='h-full w-screen py-[5vw]'>
-        <div className='py-[4vw] w-full container-lg'>
-          <h2 className='heading-2 w-[80%] fadein'>Related <span className='text-primary'> Blogs </span> </h2>
-          <div className='w-full flex justify-between'>
-            <p className='text-[1.2vw] mt-[2vw] w-[40%] fadein'>Discover our accolades and industry recognition that highlight our commitment to excellence.</p>
-            <div className='w-[20%] '>
-              <PrimaryButton text={"All Blogs"} href={"/"} className='fadein' />
-            </div>
-          </div>
-          <div className='w-full flex pt-[5vw] pb-[1vw] gap-[1vw]'>
-            {/* <Link href={"#"} > */}
-              <div className='blogs'>
-                <Image src="/assets/images/blogs/blog-img3.png" height={390} width={570} alt='dominos' className='rounded-[1.5vw]' />
-                <div className='py-[1vw] w-[80%]'>
-                  <p className='text-[1.5vw] font-medium'>How to Find Your Dream Digital Marketing Job</p>
-                  <div className='flex items-center justify-between w-[80%] py-[1vw]'>
-                    <p className='content'>Digital Marketing</p>
-                    <p className='content'>9 June, 2024</p>
-                  </div>
-                  <div className='py-[1vw]'>
-                    <LinkButton btnLink={"#"} btnText={"View More"} className='text-primary' />
-                  </div>
-                </div>
-
-              </div>
-            {/* </Link> */}
-            {/* <Link href={"#"} > */}
-              <div className='blogs'>
-                <Image src="/assets/images/blogs/blog-img4.png" height={390} width={570} alt='dominos' className='rounded-[1.5vw]' />
-                <div className='py-[1vw] w-[80%]'>
-                  <p className='text-[1.5vw] font-medium'>How to use ChatGPT for Keyword Research</p>
-                  <div className='flex items-center justify-between w-[80%] py-[1vw]'>
-                    <p className='content'>SEO</p>
-                    <p className='content'>9 June, 2024</p>
-                  </div>
-                  <div className='py-[1vw]'>
-                    <LinkButton btnLink={"#"} btnText={"View More"} className='text-primary' />
-                  </div>
-                </div>
-
-              </div>
-            {/* </Link> */}
-            {/* <Link href={"#"} > */}
-              <div className='blogs'>
-                <Image src="/assets/images/blogs/blog-img5.png" height={390} width={570} alt='dominos' className='rounded-[1.5vw]' />
-                <div className='py-[1vw] w-[80%]'>
-                  <p className='text-[1.5vw] font-medium'>How to Use Wikipedia to Scale your Off-Page SEO</p>
-                  <div className='flex items-center justify-between w-[80%] py-[1vw]'>
-                    <p className='content'>Digital Marketing</p>
-                    <p className='content'>9 June, 2024</p>
-                  </div>
-                  <div className='py-[1vw]'>
-                    <LinkButton btnLink={"#"} btnText={"View More"} className='text-primary' />
-                  </div>
-                </div>
-
-              </div>
-            {/* </Link> */}
-
-          </div>
-        </div>
-      </section>
+      
     </>
   )
 }

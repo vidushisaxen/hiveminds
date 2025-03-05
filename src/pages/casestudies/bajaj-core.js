@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Expanding from '@/components/CaseStudyDetail/Expanding';
 import Hero from '@/components/CaseStudyDetail/Hero';
+import MoreCs from '@/components/CaseStudyDetail/MoreCs';
 import Layout from '@/components/Layout'
 import { fadeIn, fadeUp, headingBlur, paraAnim , lineAnim} from '@/components/gsapAnimations'
 import React, { useState } from 'react'
@@ -34,6 +35,7 @@ const index = () => {
             <Layout isOpen={isOpen}>
                 <Hero title1={"Bajaj"} title2={"Core"} img={"/assets/images/impact/casestudy/bajaj-cs-hero.jpg"} />
                 <Expanding content={content} />
+                <MoreCs/>
             </Layout>
         </>
     )

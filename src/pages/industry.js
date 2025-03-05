@@ -33,9 +33,9 @@ const industry = () => {
           <section className='w-screeen h-full py-[5vw]'>
             <div className='container-lg w-full h-full'>
               {industries.map((item, index) => (
-                <div key={index} className="w-full h-full flex items-start justify-between py-[3vw] border-[1.5px] border-[#EEEEEE] shadow-lg  px-[1.5vw] rounded-[1.5vw] mb-[3vw] fadeup">
+                <div key={index} className="w-full h-full flex items-start justify-between py-[3vw] border-[1.5px] border-[#EEEEEE] shadow-lg  px-[1.5vw] rounded-[1.5vw] mb-[3vw] fadein">
                   <div className='w-[45%]'>
-                    <Image src={item.img} width={790} height={990} alt="service-card" className='rounded-[1.2vw] fadein' />
+                    <Image src={item.img} width={790} height={990} alt="service-card" className='rounded-[1.2vw]' />
                   </div>
                   <div className='w-[50%]'>
                     <h2 className='text-[2.8vw] font-medium headinganim'>
