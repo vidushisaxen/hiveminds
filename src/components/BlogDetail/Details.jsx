@@ -6,7 +6,7 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
-const Details = () => {
+const Details = ({content}) => {
   useEffect(()=>{
     const ctx = gsap.context(()=>{
         gsap.to(".blog-credentials",{
@@ -113,14 +113,10 @@ const Details = () => {
             </div>
           </div>
           <div className='w-[60%] h-full'>
-            <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s. </p>
-            <p className='content py-[1vw] fadein'>When an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-            <p className='content py-[1vw] fadein'>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <div dangerouslySetInnerHTML={{__html:content}}/>
+            
             <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
             <div className='py-[2vw] '>
-              <p className='text-[2.5vw] font-medium fadein'>Lorem Ipsum Dolor</p>
-              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
               <div className='py-[1.5vw] fadein'>
                 <Image src={"/assets/images/blogs/blog-img1.png"} height={690} width={1130} alt='blog-image' className='rounded-[1vw]' />
               </div>
@@ -128,41 +124,13 @@ const Details = () => {
             </div>
 
             <div className='py-[2vw]'>
-              <p className='text-[2.5vw] font-medium fadein'>Lorem Ipsum is simply dummy text </p>
-              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
-              <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
-            </div>
-
-            <div className='py-[2vw]'>
-              <p className='text-[2.5vw] font-medium fadein'>Lorem Ipsum is simply dummy text </p>
-              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
               <div className='py-[1.5vw] fadein'>
                 <Image src={"/assets/images/blogs/blog-img2.png"} height={690} width={1130} alt='blog-image' className='rounded-[1vw]' />
               </div>
               <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
             </div>
 
-            <div className='py-[2vw]'>
-              <p className='text-[2.5vw] font-medium fadein'>Lorem Ipsum is simply dummy text </p>
-              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
-              <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
-            </div>
-
-            <div className='py-[2vw]'>
-              <p className='text-[2.5vw] font-medium fadein'>Lorem Ipsum is simply dummy text </p>
-              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
-              <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
-            </div>
-
-            <div className='py-[2vw]'>
-              <p className='text-[2.5vw] font-medium fadein'>Lorem Ipsum </p>
-              <p className='content py-[1vw] fadein'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-             
-            </div>
+           
           </div>
 
         </div>

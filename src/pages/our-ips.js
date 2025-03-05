@@ -88,6 +88,8 @@ const ip = [
         img: "/assets/images/industry/industry-listing.png",
         title: " FeedX",
         para: "FeedX is a state-of-the-art catalog management solution developed by HiveMinds for D2C brands on Google and Facebook. It efficiently handles over 3 million SKUs daily with a proven record of zero ad disapprovals, refreshing entire product catalogs in just 20 minutes. This robust tool ensures your digital campaigns display accurate, up-to-date information, streamlining operations, reducing manual errors, and optimizing digital advertising for maximum impact and efficiency.",
+        title: " FeedX",
+        para: "FeedX is a state-of-the-art catalog management solution developed by HiveMinds for D2C brands on Google and Facebook. It efficiently handles over 3 million SKUs daily with a proven record of zero ad disapprovals, refreshing entire product catalogs in just 20 minutes. This robust tool ensures your digital campaigns display accurate, up-to-date information, streamlining operations, reducing manual errors, and optimizing digital advertising for maximum impact and efficiency.",
     },
     {
         img: "/assets/images/industry/industry-listing.png",

@@ -1,46 +1,50 @@
-import { getAllPosts, getPostById } from "@/lib/post";
-import React, { useEffect, useState } from "react";
- 
+import Expanding from "@/components/CaseStudyDetail/Expanding";
+import Hero from "@/components/CaseStudyDetail/Hero";
+import Layout from "@/components/Layout";
+import { getCaseStudies } from "@/lib/casestudies";
 
-const PostsComponent = () => {
-  const [posts, setPosts] = useState([]);
-  const [post, setPost] = useState(null);
-  const [loading, setLoading] = useState(true);
+export default function CaseStudies({ caseStudies }) {
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      setLoading(true);
-      const allPosts = await getAllPosts();
-      setPosts(allPosts);
-
-      const singlePost = await getPostById("cG9zdDox"); 
-      setPost(singlePost);
-
-      setLoading(false);
-    };
-
-    fetchPosts();
-  }, []);
-
-  if (loading) return <p>Loading...</p>;
+    console.log(caseStudies)
 
   return (
     <div>
-      <h1>All Posts</h1>
       <ul>
-        {posts.map((post) => (
-          <li key={post.id}>{post.title}</li>
+        {caseStudies.map((study) => (
+          <li key={study.slug}>
+            <h2>{study.title}</h2>
+            <p dangerouslySetInnerHTML={{ __html: study.excerpt }}></p>
+            {study.featuredImage?.node?.sourceUrl && (
+              <img
+                src={study.featuredImage.node.sourceUrl}
+                alt={study.featuredImage.node.altText}
+              />
+            )}
+           <div>
+  <p><strong>Intro:</strong> <span dangerouslySetInnerHTML={{ __html: study.caseStudyFields.intro }} /></p>
+  <p><strong>Problem Statement:</strong> <span dangerouslySetInnerHTML={{ __html: study.caseStudyFields.problemStatement }} /></p>
+  <p><strong>Approach:</strong> <span dangerouslySetInnerHTML={{ __html: study.caseStudyFields.approach }} /></p>
+  <p><strong>Impact:</strong> <span dangerouslySetInnerHTML={{ __html: study.caseStudyFields.impact }} /></p>
+</div>
+
+          </li>
+          
         ))}
       </ul>
-
-      {post && (
-        <>
-          <h2>Single Post</h2>
-          <p>{post.title}</p>
-        </>
-      )}
     </div>
   );
-};
+}
 
-export default PostsComponent;
+
+export async function getStaticProps({ params }) {
+    // const { slug } = params || {};
+    let { caseStudies } = await getCaseStudies({
+            //  query: GET_CASE_STUDIES,
+    });
+    return {
+        props: {
+           caseStudies
+        },
+        revalidate: 500,
+    };
+}
