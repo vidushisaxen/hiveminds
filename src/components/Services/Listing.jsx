@@ -116,7 +116,6 @@ const Listing = () => {
             )
         })}
         </div>
-
     </div>
      <div className="absolute h-[2vw] w-[2.2vw] top-[4.5%] right-[15%] blue-hexagon-animation">
                         <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
