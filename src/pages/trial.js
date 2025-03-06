@@ -48,11 +48,34 @@
 //         revalidate: 500,
 //     };
 // }
+import PortableTextComponent from '@/components/PortableTextComponent';
 import React from 'react'
+
+const content = [
+  {
+    _type: "block",
+    style: "h1",
+    children: [{ _type: "span", text: "Hello World" }],
+  },
+  {
+    _type: "block",
+    style: "normal",
+    children: [{ _type: "span", text: "This is a paragraph of text." }],
+  },
+  // {
+  //   _type: "image",
+  //   asset: {
+  //     _ref: "image-1234", // Example image reference (Sanity image ID)
+  //   },
+  //   alt: "An example image",
+  // },
+];
 
 const trial = () => {
   return (
-    <div>trial</div>
+    <div className="container mx-auto p-4">
+      <PortableTextComponent value={content} />
+    </div>
   )
 }
 
