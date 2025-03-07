@@ -5,7 +5,7 @@ import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimatio
 import Hero from '@/components/Hero';
 import Image from 'next/image';
 import PrimaryButton from '@/components/Button/PrimaryButton';
-
+import img from '../../public/assets/images/industry/industry-hero.png'
 
 const solutions = () => {
     headingBlur();
@@ -15,7 +15,7 @@ const solutions = () => {
     return (
         <>
             <Layout>
-                <Hero title1={"Our"} title2={"Solution"} para={"We deliver integrated digital strategies that fuel demand, boost D2C and organic revenue, accelerate e-commerce growth, enhance retention, refine app marketing, and shape compelling digital brand identities—powering measurable, long-term success for modern brands"} img={"/assets/images/industry/industry-hero.png"} />
+                <Hero title1={"Our"} title2={"Solution"} para={"We deliver integrated digital strategies that fuel demand, boost D2C and organic revenue, accelerate e-commerce growth, enhance retention, refine app marketing, and shape compelling digital brand identities—powering measurable, long-term success for modern brands"} img={img} />
                 <main>
                     <section className='w-screen h-full py-[5vw]'>
                         <div className='container-lg text-center flex items-center justify-center  h-full'>

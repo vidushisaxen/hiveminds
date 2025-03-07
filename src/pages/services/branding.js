@@ -8,7 +8,7 @@ import Overview from '@/components/ServiceDetail/Overview'
 import SubServices from '@/components/ServiceDetail/SubServices'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
 import Contact from '@/components/ServiceDetail/Contact'
-
+import img from '../../../public//assets/images/services/branding-services.png'
 
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
@@ -37,7 +37,11 @@ const index = () => {
   return (
     <>
       <Layout isOpen={isOpen}>
-       <Hero title1={"Transforming Brands, "} title2={"Driving Impact"} para={"An integrated branding approach is a strategic catalyst that fuses creative storytelling with data-driven insights, crafting a compelling digital presence that resonates with audiences and delivers measurable, lasting impact. It's about transforming your brand into a market leader with a narrative that truly connects."} img={"/assets/images/services/branding-services.png"}/>
+       <Hero 
+        title1={"Transforming Brands, "} 
+        title2={"Driving Impact"} 
+        para={"An integrated branding approach is a strategic catalyst that fuses creative storytelling with data-driven insights, crafting a compelling digital presence that resonates with audiences and delivers measurable, lasting impact. It's about transforming your brand into a market leader with a narrative that truly connects."} 
+        img={img}/>
        <Overview title1={"Scale Efficiently with a Data-First"} title2={"Branding Strategy"} para={"Building a powerful brand requires more than just a logo—it demands a holistic, data-driven approach. Embrace deep market research, agile creative execution, and continuous performance optimization to articulate your brand’s unique story and activate it across every digital channel."}/>
        <div className='relative h-full w-screen rounded-[20px]  '>
           <SubServices heading={"Our Strategic Brand Capabilities"} para={"Empower your brand transformation with a comprehensive suite of solutions:"} subservices={subservices}/>

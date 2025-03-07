@@ -8,6 +8,7 @@ import Leadership from '@/components/AboutUs/Leadership'
 import WhyUs from '@/components/AboutUs/WhyUs'
 import Life from '@/components/AboutUs/Life'
 import Responsibility from '@/components/AboutUs/Responsibility'
+import img from '../../public/assets/images/about/about-hero.png'
 
 const contact = () => {
      headingBlur();
@@ -35,7 +36,7 @@ const contact = () => {
   return (
     <>
     <Layout>
-     <Hero title1={"Who We"} title2={"Are"} para={"We are HiveMinds—a digital marketing agency where innovative strategies, creative insights, and data-driven solutions converge to transform brands and elevate customer experiences."} img={"/assets/images/about/about-hero.png"}/>
+     <Hero title1={"Who We"} title2={"Are"} para={"We are HiveMinds—a digital marketing agency where innovative strategies, creative insights, and data-driven solutions converge to transform brands and elevate customer experiences."} img={img}/>
      <Leadership/>
      <WhyUs/>
      <Life/>

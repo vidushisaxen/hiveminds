@@ -4,7 +4,7 @@ import React from 'react'
 import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 import Hero from '@/components/Hero';
 import Image from 'next/image';
-
+import img from '../../public/assets/images/industry/industry-hero.png';
 
 const industry = () => {
   headingBlur();
@@ -14,7 +14,7 @@ const industry = () => {
   return (
     <>
       <Layout>
-        <Hero title1={"Our"} title2={"Industries"} para={"Our versatile digital strategies span diverse industries. We harness data, creativity, and insights to craft bespoke solutions that empower brands and drive growth in an ever-evolving digital world."} img={"/assets/images/industry/industry-hero.png"} />
+        <Hero title1={"Our"} title2={"Industries"} para={"Our versatile digital strategies span diverse industries. We harness data, creativity, and insights to craft bespoke solutions that empower brands and drive growth in an ever-evolving digital world."} img={img} />
         <main>
           <section className='w-screen h-full py-[5vw]'>
             <div className='container-lg text-center flex items-center justify-center  h-full'>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import PortableTextComponent from "@/components/PortableTextComponent"; // ✅ Import PortableTextComponent

@@ -7,6 +7,7 @@ import { Clients } from '@/components/OurImpact/Clients'
 import CaseStudies from '@/components/OurImpact/CaseStudies'
 import Awards from '@/components/OurImpact/Awards'
 import Hero from '@/components/Hero'
+import img from '../../public/assets/images/impact/our-impact-hero-img.png'
 
 const impact = () => {
      headingBlur();
@@ -33,7 +34,7 @@ const impact = () => {
   return (
     <>
     <Layout>
-   <Hero title1={"Our"} title2={"Impact"} para={"Clients rely on our integrated network of agencies and specialized practices to deliver personalized experiences through creative, media and customer experience management."} img={"/assets/images/impact/our-impact-hero-img.png"}/>
+   <Hero title1={"Our"} title2={"Impact"} para={"Clients rely on our integrated network of agencies and specialized practices to deliver personalized experiences through creative, media and customer experience management."} img={img}/>
     <Clients/>
     <Awards/>
     <CaseStudies/>

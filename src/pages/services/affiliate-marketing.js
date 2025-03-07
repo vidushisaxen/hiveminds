@@ -8,6 +8,7 @@ import Overview from '@/components/ServiceDetail/Overview'
 import SubServices from '@/components/ServiceDetail/SubServices'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
 import Contact from '@/components/ServiceDetail/Contact'
+import img from '../../../public/assets/images/services/affiliate-marketing.png'
 
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
@@ -36,7 +37,7 @@ const index = () => {
   return (
     <>
       <Layout isOpen={isOpen}>
-       <Hero title1={"Amplify Growth Through"} title2={"Affiliates "} para={"Affiliate Marketing services forge strategic partnerships that expand your brand’s digital reach. By converting clicks into customers, these solutions drive targeted traffic and create meaningful, revenue-generating relationships."} img={"/assets/images/services/affiliate-marketing.png"}/>
+       <Hero title1={"Amplify Growth Through"} title2={"Affiliates "} para={"Affiliate Marketing services forge strategic partnerships that expand your brand’s digital reach. By converting clicks into customers, these solutions drive targeted traffic and create meaningful, revenue-generating relationships."} img={img}/>
        <Overview title1={"Maximize Impact with Strategic"} title2={"Affiliate Analytics"} para={"To unlock new revenue streams, your brand must adopt a collaborative approach. Focus on building strong partnerships, integrating influencer and social media efforts, and continuously refining your campaigns using data-backed insights. Align your affiliate initiatives with your broader business objectives, leverage performance analytics, and build strategic partnerships to transform your digital presence and drive sustained growth."}/>
        <div className='relative h-full w-screen rounded-[20px]  '>
           <SubServices heading={"Our Affiliate Growth Engine"} para={"Our comprehensive suite of affiliate marketing solutions empowers your brand’s growth through performance-driven partnerships:"} subservices={subservices}/>

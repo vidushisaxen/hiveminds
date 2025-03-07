@@ -9,6 +9,7 @@ import {
 } from "@/components/gsapAnimations";
 import Hero from "@/components/Hero";
 import Image from "next/image";
+import img from "../../public/assets/images/industry/industry-hero.png";
 
 const ips = () => {
   headingBlur();
@@ -24,7 +25,7 @@ const ips = () => {
           para={
             "Our data suite empowers brands by turning complex data into clear, actionable insights. Our integrated tools optimize digital campaigns, driving growth and efficiency at every step."
           }
-          img={"/assets/images/industry/industry-hero.png"}
+          img={img}
         />
         <main>
           <section className="w-screen h-full py-[5vw]">

@@ -6,6 +6,7 @@ import Locations from '@/components/Contactpage/Locations'
 import GetinTouch from '@/components/Contactpage/GetinTouch'
 import gsap from 'gsap'
 import Hero from '@/components/Hero'
+import img from '../../public/assets/images/contactpage/contact-hero.png'
 
 const contact = () => {
      headingBlur();
@@ -32,7 +33,7 @@ const contact = () => {
   return (
     <>
     <Layout>
-     <Hero title1={"Contact"} title2={"Us"} para={"At HiveMinds, we tackle your most challenging business problems with our specialised digital marketing approach integrating strategic expertise."} img={"/assets/images/contactpage/contact-hero.png"}/>
+     <Hero title1={"Contact"} title2={"Us"} para={"At HiveMinds, we tackle your most challenging business problems with our specialised digital marketing approach integrating strategic expertise."} img={img}/>
      <Locations/>
      <GetinTouch/>
 

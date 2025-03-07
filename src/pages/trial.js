@@ -3,12 +3,13 @@ import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import PortableTextComponent from "@/components/PortableTextComponent"; // ✅ Import PortableTextComponent
 import { getCaseStudies } from "@/lib/casestudies";
+import img from '../../public/assets/images/impact/our-impact-hero-img.png'
 
 export default function CaseStudies({ caseStudies }) {
   console.log(caseStudies)
   return (
     <Layout>
-      <Hero title1={caseStudies[2].title} img={"/"} />
+      <Hero title1={caseStudies[2].title} img={img} />
       <div className="container mx-auto p-4">
         <ul>
           {caseStudies.map((study) => (

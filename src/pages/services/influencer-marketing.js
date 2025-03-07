@@ -8,7 +8,7 @@ import Overview from '@/components/ServiceDetail/Overview'
 import SubServices from '@/components/ServiceDetail/SubServices'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
 import Contact from '@/components/ServiceDetail/Contact'
-
+import img from '../../../public/assets/images/services/influencer-marketing.png'
 
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
@@ -37,7 +37,7 @@ const index = () => {
   return (
     <>
       <Layout isOpen={isOpen}>
-       <Hero title1={"Influence That "} title2={"Resonates"} para={"Influencer Marketing is designed to make your brand unforgettable. By partnering with influential voices that perfectly align with your product-market fit, we ensure every campaign creates a ripple effect in the digital landscape—making your brand a standout leader."} img={"/assets/images/services/influencer-marketing.png"}/>
+       <Hero title1={"Influence That "} title2={"Resonates"} para={"Influencer Marketing is designed to make your brand unforgettable. By partnering with influential voices that perfectly align with your product-market fit, we ensure every campaign creates a ripple effect in the digital landscape—making your brand a standout leader."} img={img}/>
        <Overview title1={"Drive Trust with"} title2={"Influencer Approaches"} para={"To elevate your brand, you must harness the power of authentic influence. Focus on building strategic partnerships, crafting compelling narratives, and leveraging data-driven insights to drive genuine engagement and conversions. Embrace a holistic approach that transforms influencer collaborations into measurable growth and lasting brand loyalty."}/>
        <div className='relative h-full w-screen rounded-[20px]  '>
           <SubServices heading={"Our Influencer Growth Arsenal"} para={"Empower your brand with our comprehensive suite of influencer solutions:"} subservices={subservices}/>
