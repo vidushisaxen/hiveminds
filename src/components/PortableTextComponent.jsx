@@ -4,6 +4,7 @@ import { PortableText } from "@portabletext/react";
 const PortableTextComponent = ({ value }) => {
   const ImageComponent = ({ value, isInline }) => {
     const { width, height } = getImageDimensions(value);
+    console.log(value)
 
     return (
       <img

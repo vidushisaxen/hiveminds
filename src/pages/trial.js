@@ -1,82 +1,35 @@
-// import Expanding from "@/components/CaseStudyDetail/Expanding";
-// import Hero from "@/components/CaseStudyDetail/Hero";
-// import Layout from "@/components/Layout";
-// import { getCaseStudies } from "@/lib/casestudies";
 
-// export default function CaseStudies({ caseStudies }) {
+import Hero from "@/components/Hero";
+import Layout from "@/components/Layout";
+import PortableTextComponent from "@/components/PortableTextComponent"; // ✅ Import PortableTextComponent
+import { getCaseStudies } from "@/lib/casestudies";
 
-//     console.log(caseStudies)
-
-//   return (
-//     <div>
-//       <ul>
-//         {caseStudies.map((study) => (
-//           <li key={study.slug}>
-//             <h2>{study.title}</h2>
-//             <p dangerouslySetInnerHTML={{ __html: study.excerpt }}></p>
-//             {study.featuredImage?.node?.sourceUrl && (
-//               <img
-//                 src={study.featuredImage.node.sourceUrl}
-//                 alt={study.featuredImage.node.altText}
-//               />
-//             )}
-//            <div>
-//   <p><strong>Intro:</strong> <span dangerouslySetInnerHTML={{ __html: study.caseStudyFields.intro }} /></p>
-//   <p><strong>Problem Statement:</strong> <span dangerouslySetInnerHTML={{ __html: study.caseStudyFields.problemStatement }} /></p>
-//   <p><strong>Approach:</strong> <span dangerouslySetInnerHTML={{ __html: study.caseStudyFields.approach }} /></p>
-//   <p><strong>Impact:</strong> <span dangerouslySetInnerHTML={{ __html: study.caseStudyFields.impact }} /></p>
-// </div>
-
-//           </li>
-          
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-
-// export async function getStaticProps({ params }) {
-//     // const { slug } = params || {};
-//     let { caseStudies } = await getCaseStudies({
-//             //  query: GET_CASE_STUDIES,
-//     });
-//     return {
-//         props: {
-//            caseStudies
-//         },
-//         revalidate: 500,
-//     };
-// }
-import PortableTextComponent from '@/components/PortableTextComponent';
-import React from 'react'
-
-const content = [
-  {
-    _type: "block",
-    style: "h1",
-    children: [{ _type: "span", text: "Hello World" }],
-  },
-  {
-    _type: "block",
-    style: "normal",
-    children: [{ _type: "span", text: "This is a paragraph of text." }],
-  },
-  // {
-  //   _type: "image",
-  //   asset: {
-  //     _ref: "image-1234", // Example image reference (Sanity image ID)
-  //   },
-  //   alt: "An example image",
-  // },
-];
-
-const trial = () => {
+export default function CaseStudies({ caseStudies }) {
+  console.log(caseStudies)
   return (
-    <div className="container mx-auto p-4">
-      <PortableTextComponent value={content} />
-    </div>
-  )
+    <Layout>
+      <Hero title1={caseStudies[2].title} img={"/"} />
+      <div className="container mx-auto p-4">
+        <ul>
+          {caseStudies.map((study) => (
+            <li key={study.slug} className="mb-10">
+              {/* ✅ Pass Full caseStudyFields to PortableTextComponent */}
+              {/* <PortableTextComponent value={study.content} /> */}
+              <div className="container-lg" dangerouslySetInnerHTML={{__html:study.content}}/>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Layout>
+  );
 }
 
-export default trial
+export async function getStaticProps() {
+  let { caseStudies } = await getCaseStudies();
+  return {
+    props: {
+      caseStudies,
+    },
+    revalidate: 500,
+  };
+}
