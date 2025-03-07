@@ -400,3 +400,19 @@ left: 42% !important;
 .hero-img{
   transition: all cubic-bezier(0,.08,0,1);
 }
+
+
+@media screen and (max-width: 540px) {
+  .heading-1 {
+    font-size: 12.5vw;
+  }
+  .content {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+  .heading-2 {
+    font-size: 9.2vw;
+    line-height: 1.15;
+  }
+}

@@ -9,7 +9,6 @@ import SubServices from '@/components/ServiceDetail/SubServices'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
 import Contact from '@/components/ServiceDetail/Contact'
 
-
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
   headingBlur();
@@ -19,15 +18,15 @@ const index = () => {
   
   useEffect(() => {
     gsap.to(".blue-hexagon-animation", {
-      y: "15px", // Move up & down
+      y: "15px",
       duration: 2,
-      repeat: -1, // Infinite loop
-      yoyo: true, // Smooth back-and-forth motion
-      ease: "sine.inOut", // Smooth ease
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
     });
 
     gsap.to(".yellow-hexagon-animation", {
-      y: "-15px", // Move opposite direction
+      y: "-15px",
       duration: 2,
       repeat: -1,
       yoyo: true,

@@ -8,26 +8,26 @@ import Overview from '@/components/ServiceDetail/Overview'
 import SubServices from '@/components/ServiceDetail/SubServices'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
 import Contact from '@/components/ServiceDetail/Contact'
-
+import img from '../../../public/assets/images/services/search-engine-optimization.png'
 
 const index = () => {
-  const [isOpen, setIsOpen] =  useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   headingBlur();
   paraAnim();
   fadeUp();
   fadeIn();
-  
+
   useEffect(() => {
     gsap.to(".blue-hexagon-animation", {
-      y: "15px", // Move up & down
+      y: "15px",
       duration: 2,
-      repeat: -1, // Infinite loop
-      yoyo: true, // Smooth back-and-forth motion
-      ease: "sine.inOut", // Smooth ease
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
     });
 
     gsap.to(".yellow-hexagon-animation", {
-      y: "-15px", // Move opposite direction
+      y: "-15px",
       duration: 2,
       repeat: -1,
       yoyo: true,
@@ -37,14 +37,13 @@ const index = () => {
   return (
     <>
       <Layout isOpen={isOpen}>
-       <Hero title1={"Search Engine"} title2={"Optimisation "} para={"SEO is the strategic catalyst that transforms your digital presence into a sustainable growth engine. By leveraging technical excellence, compelling content, and authoritative link building, your brand becomes the go-to choice when customers search online."} img={"/assets/images/services/search-engine-optimization.png"}/>
-       <Overview title1={"Scale Efficiently with a "} title2={"Data-First Strategy"} para={"In today’s crowded digital landscape, scaling your online presence demands a holistic SEO strategy. Invest in technical optimization, quality content, and strategic authority building. Align your SEO efforts with your broader business goals to drive long-term organic growth and outpace the competition."} />
-       <div className='relative h-full w-screen'>
-          <SubServices heading={"Customize Your SEO Strategy"} para={"Maximize your online impact with our comprehensive suite of SEO solutions, each designed to enhance a crucial element of your digital presence:"} subservices={subservices}/>
-          {/* <span className='absolute h-[20%] bottom-[30%] w-full'></span> */}
-        <CaseStudies/>
+        <Hero title1={"Search Engine"} title2={"Optimisation "} para={"SEO is the strategic catalyst that transforms your digital presence into a sustainable growth engine. By leveraging technical excellence, compelling content, and authoritative link building, your brand becomes the go-to choice when customers search online."} img={img} />
+        <Overview title1={"Scale Efficiently with a "} title2={"Data-First Strategy"} para={"In today’s crowded digital landscape, scaling your online presence demands a holistic SEO strategy. Invest in technical optimization, quality content, and strategic authority building. Align your SEO efforts with your broader business goals to drive long-term organic growth and outpace the competition."} />
+        <div className='relative h-full w-screen'>
+          <SubServices heading={"Customize Your SEO Strategy"} para={"Maximize your online impact with our comprehensive suite of SEO solutions, each designed to enhance a crucial element of your digital presence:"} subservices={subservices} />
+          {/* <CaseStudies /> */}
         </div>
-       <Contact title1={"Boost Rankings, Drive "} title2={" Growth!"} para={"Enhance your visibility and dominate search results with our expert-driven SEO solutions. Let’s optimize your digital success—connect with us today!"}/>
+        <Contact title1={"Boost Rankings, Drive "} title2={" Growth!"} para={"Enhance your visibility and dominate search results with our expert-driven SEO solutions. Let’s optimize your digital success—connect with us today!"} />
       </Layout>
     </>
   )
@@ -55,31 +54,31 @@ export default index;
 
 const subservices = [
   {
-    title:"Technical SEO Audits",
-    content:"Uncover hidden site issues and enhance performance through deep technical analysis and structured optimization."
+    title: "Technical SEO Audits",
+    content: "Uncover hidden site issues and enhance performance through deep technical analysis and structured optimization."
   },
   {
-    title:"Content Strategy & Creation",
-    content:"Crafting compelling, SEO-driven content that engages users and strengthens search rankings."
+    title: "Content Strategy & Creation",
+    content: "Crafting compelling, SEO-driven content that engages users and strengthens search rankings."
   },
   {
-    title:"Link Building & Authority Development",
-    content:"Strategic backlinking to establish credibility, trust, and better rankings."
+    title: "Link Building & Authority Development",
+    content: "Strategic backlinking to establish credibility, trust, and better rankings."
   },
   {
-    title:"Local & International SEO",
-    content:"Optimizing for hyper-local relevance and global search dominance."
+    title: "Local & International SEO",
+    content: "Optimizing for hyper-local relevance and global search dominance."
   },
   {
-    title:"Analytics & Reporting",
-    content:"Data-backed insights to measure performance and refine strategies."
+    title: "Analytics & Reporting",
+    content: "Data-backed insights to measure performance and refine strategies."
   },
   {
-    title:"App SEO",
-    content:"Enhancing discoverability for apps across search engines and app stores."
+    title: "App SEO",
+    content: "Enhancing discoverability for apps across search engines and app stores."
   },
   {
-    title:"On-Website & Off-Wesite Optimization",
-    content:"Fine-tuning every element—onsite and beyond—to drive long-term, organic growth."
+    title: "On-Website & Off-Wesite Optimization",
+    content: "Fine-tuning every element—onsite and beyond—to drive long-term, organic growth."
   },
 ]

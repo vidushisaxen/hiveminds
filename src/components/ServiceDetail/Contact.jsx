@@ -6,7 +6,7 @@ import Contactform from '../Homepage/Contactform';
 gsap.registerPlugin(ScrollTrigger)
 
 
-const Contact = ({title1,title2, para}) => {
+const Contact = ({ title1, title2, para }) => {
   useEffect(() => {
     if (globalThis.innerWidth > 1024) {
       let ctx = gsap.context(() => {
@@ -14,11 +14,10 @@ const Contact = ({title1,title2, para}) => {
         const changeBodyColor = (color) => {
           gsap.to(body, {
             backgroundColor: color,
-            duration: 1, // Duration for smooth transition
+            duration: 1,
             ease: "power2.out",
           });
         };
-        // ScrollTrigger for changing body background color
         ScrollTrigger.create({
           trigger: "#contact",
           start: "top 90%",
@@ -33,13 +32,11 @@ const Contact = ({title1,title2, para}) => {
   const blueHexagonRef = useRef(null);
   const yellowHexagonRef = useRef(null);
 
-  // Function to handle mouse move
   const handleMouseMove = (e) => {
     const { clientX: mouseX, clientY: mouseY } = e;
-    
-    // Apply movement to the blue and yellow hexagons based on mouse position
+
     if (blueHexagonRef.current && yellowHexagonRef.current) {
-      const offsetX = mouseX * 0.05; // Adjust the movement sensitivity (change 0.05 for stronger/weaker movement)
+      const offsetX = mouseX * 0.05;
       const offsetY = mouseY * 0.05;
 
       gsap.to(blueHexagonRef.current, {
@@ -49,14 +46,13 @@ const Contact = ({title1,title2, para}) => {
       });
 
       gsap.to(yellowHexagonRef.current, {
-        x: offsetX * 1.2, // Make yellow hexagon move slightly differently from blue hexagon
+        x: offsetX * 1.2,
         y: offsetY * 1.2,
         ease: "power2.out",
       });
     }
   };
 
-  // Add event listeners on mount and clean up on unmount
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove);
 
@@ -67,18 +63,18 @@ const Contact = ({title1,title2, para}) => {
 
   return (
     <section id="contact">
-      <div className="w-screen h-full z-[10] relative container-lg py-[7%]">
-        <div className="w-full h-full flex gap-[10vw]">
-          <div className="w-[45%] flex flex-col gap-[2vw]">
+      <div className="w-screen h-full z-[10] relative container-lg py-[7%] mobile:py-10">
+        <div className="w-full h-full flex gap-[10vw] mobile:block mobile:space-y-12">
+          <div className="w-[45%] flex flex-col gap-[2vw] mobile:w-full mobile:gap-4">
             <h2 className="heading-2 headinganim w-[90%]">
-           {title1} 
-            <span className="blue-text"> {title2}</span>
+              {title1}
+              <span className="blue-text"> {title2}</span>
             </h2>
             <p data-para-anim className="content w-[90%]">
-           {para}
+              {para}
             </p>
             <div className="flex mt-[4vw] items-center justify-center gap-[2vw]">
-              <div className="h-[17.5vw] w-[16.5vw] relative rounded-[16px] fadein">
+              <div className="h-[17.5vw] w-[16.5vw] relative rounded-[16px] fadein mobile:w-full mobile:h-[80vw]">
                 <Image
                   src="/assets/images/homepage/contact-1.png"
                   fill
@@ -86,7 +82,7 @@ const Contact = ({title1,title2, para}) => {
                   className="rounded-[16px]"
                 />
               </div>
-              <div className="h-[17.5vw] w-[16.5vw] relative rounded-[16px] fadein">
+              <div className="h-[17.5vw] w-[16.5vw] relative rounded-[16px] fadein mobile:hidden">
                 <Image
                   src="/assets/images/homepage/contact-2.png"
                   fill
@@ -97,20 +93,17 @@ const Contact = ({title1,title2, para}) => {
             </div>
           </div>
 
-          <div className="w-[50%] h-full">
+          <div className="w-[50%] h-full mobile:w-full">
             <Contactform />
           </div>
         </div>
-
         <div
-          className="absolute h-[2vw] w-[2.2vw] top-[40%] left-[35%] blue-hexagon-animation"
-         
+          className="absolute h-[2vw] mobile:hidden w-[2.2vw] top-[40%] left-[35%] blue-hexagon-animation"
         >
           <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
         </div>
         <div
-          className="absolute h-[2vw] w-[2.2vw] top-[25%] left-[22%] yellow-hexagon-animation"
-   
+          className="absolute h-[2vw] mobile:hidden w-[2.2vw] top-[25%] left-[22%] yellow-hexagon-animation"
         >
           <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
         </div>
