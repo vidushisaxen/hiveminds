@@ -251,6 +251,23 @@ body {
 
 /* screen size for mobile */
 @media screen and (max-width: 540px) {
+
+  /* heading mobile */
+  .heading-1 {
+    font-size: 12vw;
+  }
+  .heading-2 {
+    font-size: 9vw;
+  }
+  .content {
+    font-size: 4vw;
+    line-height: 1.6;
+  }
+  .content-white {
+    font-size: 4vw;
+    line-height: 1.6;
+  }
+
   .btn_wrapper {
     height: 25vw;
     width: 25vw;
@@ -415,4 +432,25 @@ left: 42% !important;
     font-size: 9.2vw;
     line-height: 1.15;
   }
+  .swiper-scrollbar {
+    /* opacity: 0; */
+    height: 1.5vw !important;
+    border-radius: 10px;
+    width: 88% !important;
+    
+  
+    /* transition: opacity 0.2s ease-in-out; */
+  }
+  .swiper-scrollbar-drag {
+    background: #134bd6 !important; /* Solid blue scrollbar */
+    border-radius: 10px;
+    height: 1.5vw !important;
+    width: 23% !important;
+   
+  }
+  .slideInCaseCarousel  .swiper-scrollbar.swiper-scrollbar-horizontal{
+    bottom:5% !important;
+    left: 7% !important;
+    }
+    
 }

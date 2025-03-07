@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 const PlainButton = ({text,link,...props}) => {
   return (
-    <Link {...props} href={link} className={`${styles.buttonPlain} relative overflow-hidden border-[1.5px] border-[#134BD6] rounded-[40px]  text-[0.97vw] font-light  h-fit flex items-center justify-center text-center` }
+    <Link {...props} href={link} className={`${styles.buttonPlain} relative overflow-hidden border-[1.5px] border-[#134BD6] rounded-[40px] font-light  h-fit flex items-center justify-center text-center` }
     data-text={`${text}`} >
-        <span className='text-[0.97vw] font-light leading-[1]'>{`${text}`}</span>
+        <span className='text-[0.97vw] font-light leading-[1] mobile:text-[3.8vw]'>{`${text}`}</span>
     </Link>
   );
 };

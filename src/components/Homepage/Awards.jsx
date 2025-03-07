@@ -81,17 +81,17 @@ const awards=[
 const AwardCard = ({ img, title, year, category ,key}) => {
   return (
     <>
-      <div key={key} className="w-[34.2vw] h-[11.5vw] border-[0.5px] border-white/20 rounded-[1.2vw] flex items-center  px-[1.5vw]  bg-white/10 awards-card hover:scale-[1.02] duration-500 ease-in-out transition-all">
-        <div className="flex items-center justify-between gap-[1vw] w-full">
-          <div className="w-[10vw] h-[8.3vw] relative">
+      <div key={key} className="w-[34.2vw] h-[11.5vw] border-[0.5px] border-white/20 rounded-[1.2vw] flex items-center  px-[1.5vw]  bg-white/10 awards-card hover:scale-[1.02] duration-500 ease-in-out transition-all mobile:w-[80vw] mobile:h-[25vw] mobile:rounded-[2.5vw] mobile:px-[3vw]">
+        <div className="flex items-center justify-between gap-[1vw] w-full mobile:gap-[3vw]">
+          <div className="w-[10vw] h-[8.3vw] relative mobile:w-[20vw] mobile:h-[18vw]">
             <Image src={img} fill alt="awards-1" />
           </div>
-          <div className="w-[80%]">
-            <p className="text-white text-[1.25vw] font-medium montreal ">
+          <div className="w-[80%] flex flex-col mobile:flex-col-reverse mobile:gap-[0.5vw]">
+            <p className="text-white text-[1.25vw] font-medium montreal mobile:text-[3.5vw] ">
               {title}
             </p>
-            <p className="content-white">{year}</p>
-            <p className="content-white">{category}</p>
+            <p className="content-white mobile:!text-[3vw]">{year}</p>
+            <p className="content-white mobile:text-[3.5vw] mobile:w-[90%] mobile:leading-[1.2]">{category}</p>
           </div>
         </div>
       </div>
@@ -116,13 +116,13 @@ const Awards = () => {
     }
   };
   return (
-    <section id="awards ">
-      <div className="h-full w-[100vw] py-[5%] rounded-[30px] flex flex-col items-start justify-center px-[3vw] overflow-hidden relative">
-        <div className="w-[35%] flex flex-col gap-[2vw]">
+    <section id="awards " className="mobile:bg-primary mobile:py-[10%]">
+      <div className="h-full w-[100vw] py-[5%] rounded-[30px] flex flex-col items-start justify-center px-[3vw] overflow-hidden relative mobile:pb-[25%]">
+        <div className="w-[35%] flex flex-col gap-[2vw] mobile:w-full mobile:gap-[4vw]">
           <h2 className="heading-2 font-medium montreal !text-white headinganim">
             Our Accolades Speak For Themselves
           </h2>
-          <p data-para-anim className="content-white w-[80%]">
+          <p data-para-anim className="content-white w-[80%] mobile:w-full">
             Discover our accolades and industry recognition that highlight our
             commitment to excellence.
           </p>
@@ -132,10 +132,29 @@ const Awards = () => {
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             loop={true}
             spaceBetween={30}
-            slidesPerView={2.7}
+            slidesPerView={1.2}
+            breakpoints={{
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+              },
+             
+              1024: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1280: {
+                slidesPerView: 2.7,
+                spaceBetween: 35,
+              },
+              1536: {
+                slidesPerView: 6,
+                spaceBetween: 40,
+              },
+            }}
             modules={[FreeMode]}
             freeMode={true}
-            className="awards-swiper w-full h-full flex items-center justify-center"
+            className="awards-swiper w-full h-full flex items-center justify-center "
           >
             {awards.map((item, index) => ( 
               <SwiperSlide key={index}>
@@ -150,14 +169,14 @@ const Awards = () => {
           </Swiper>
         </div>
         <div
-          className={`absolute z-[5] top-[15%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button cursor-pointer border border-white
+          className={`absolute z-[5] top-[15%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-white cursor-pointer border border-white mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw]
                 ${
                   activeButton === "next" ? " text-white" : "bg-transparent"
                 } transition-colors duration-300`} // Added background color transition
           onClick={handleNext} // Trigger next slide
         >
-          <div className="w-[4vw] h-[4vw]  relative z-[6] mobile:w-[4.5vw] mobile:h-[4.5vw] tablet:w-[2.5vw] tablet:h-[2.5vw] flex justify-center items-center group hover:bg-white transition-all duration-500">
-            <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
+          <div className="w-[4vw] h-[4vw]  relative z-[6] mobile:w-[7.5vw] mobile:h-[7.5vw] tablet:w-[2.5vw] tablet:h-[2.5vw] flex justify-center items-center group transition-all duration-500">
+            <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center mobile:w-[5.5vw] mobile:h-[5.5vw]">
               <svg
               width="16"
               height="29"
@@ -177,7 +196,7 @@ const Awards = () => {
           </div>
         </div>
         <div
-          className={`absolute z-[5] w-[4vw] h-[4vw] top-[15%] right-[11%]  border border-white overflow-hidden group hover:bg-white transition-all duration-500 rounded-full prev-button cursor-pointer 
+          className={`absolute z-[5] w-[4vw] h-[4vw] top-[15%] right-[11%]  border border-white overflow-hidden group hover:bg-white transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%]
                 ${
                   activeButton === "prev"
                     ? " text-white"
@@ -185,8 +204,8 @@ const Awards = () => {
                 } transition-colors duration-300`} // Added background color transition
           onClick={handlePrev} // Trigger previous slide
         >
-          <div className="w-[4vw] h-[4vw] relative z-[6] mobile:w-[4.5vw] mobile:h-[4.5vw] flex justify-center items-center ">
-            <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center ">
+          <div className="w-[4vw] h-[4vw]  mobile:w-[7.5vw] mobile:h-[7.5vw] relative z-[6]  flex justify-center items-center ">
+            <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center mobile:w-[5.5vw] mobile:h-[5.5vw]">
             <svg
               width="16"
               height="29"

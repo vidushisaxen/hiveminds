@@ -29,7 +29,7 @@ const clients2 = [
   "/assets/images/homepage/logos/clients/godrej.png",
   "/assets/images/homepage/logos/clients/cleartrip.png",
   "/assets/images/homepage/logos/clients/jockey.png",
-  "/assets/images/homepage/logos/clients/tanishq.png"
+  "/assets/images/homepage/logos/clients/tanishq.png",
 ];
 
 const platform1 = [
@@ -52,60 +52,76 @@ const platform1 = [
 ];
 
 export function Clients2() {
-
   return (
-    <section id="clients">
-      <div className="w-screen h-full flex flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-center gap-[1vw] pt-[1vw] pb-[5vw]">
-          <h2 className="heading-2 headinganim">
+    <section id="clients" className="mobile:py-[5%]">
+      <div className="w-screen h-full flex flex-col items-center justify-center container-lg">
+        <div className="flex flex-col items-center justify-center gap-[1vw] pt-[1vw] pb-[5vw] mobile:items-start mobile:gap-[4vw]">
+          <h2 className="heading-2 headinganim mobile:w-[50%]">
             <span className="blue-text">Proud</span> to work with
           </h2>
-          <p className="content w-[70%] text-center fadeup">
-            Our diverse & growing portfolio spanning from lean startups to household brands - and everything in between
+          <p className="content w-[70%] text-center fadeup mobile:text-start mobile:w-[90%]">
+            Our diverse & growing portfolio spanning from lean startups to
+            household brands - and everything in between
           </p>
         </div>
-<div className="  text-center">
-        <p className=" text-[1.24vw] text-[#111111] montreal font-medium">Clients</p>
-        
-          <Marquee pauseOnHover="true" speed={40} >
+        <div className="  text-center mobile:text-left">
+          <p className=" text-[1.24vw] text-[#111111] montreal font-medium mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw]">
+            Clients
+          </p>
+
+          <Marquee pauseOnHover="true" speed={40}>
             {clients1.map((logoSrc, index) => (
               <div
                 key={index}
-                className="relative h-full w-[16vw] flex items-center justify-start group fadeup"
+                className="relative h-full w-[16vw] flex items-center justify-start group fadeup mobile:w-[40vw]"
               >
-                <img src={logoSrc} alt={`Logo ${index}`} loading="lazy" className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain" />
+                <img
+                  src={logoSrc}
+                  alt={`Logo ${index}`}
+                  loading="lazy"
+                  className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw]"
+                />
               </div>
             ))}
           </Marquee>
-        
-       
+
           <Marquee pauseOnHover="true" speed={40} direction="right">
             {clients2.map((logoSrc, index) => (
               <div
                 key={index}
-                className="relative h-full w-[16vw] flex items-center justify-start group fadeup"
+                className="relative h-full w-[16vw] flex items-center justify-start group fadeup mobile:w-[40vw]"
               >
-                <img src={logoSrc} alt={`Logo ${index}`} loading="lazy" className="h-[7vw]  w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain" />
+                <img
+                  src={logoSrc}
+                  alt={`Logo ${index}`}
+                  loading="lazy"
+                  className="h-[7vw]  w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw]"
+                />
               </div>
             ))}
           </Marquee>
-        
-        <p className="text-[1.24vw] text-[#111111] montreal font-medium py-[2vw]">Platform & Media Partners</p>
-        
+
+          <p className="text-[1.24vw] text-[#111111] montreal font-medium py-[2vw] mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw]">
+            Platform & Media Partner
+          </p>
+
           <Marquee pauseOnHover="true" speed={60}>
             {platform1.map((logoSrc, index) => (
               <div
                 key={index}
-                className="relative h-full w-[16vw]  flex items-center justify-start group fadeup"
+                className="relative h-full w-[16vw]  flex items-center justify-start group fadeup mobile:w-[40vw]"
               >
-                <img src={logoSrc} alt={`Logo ${index}`} loading="lazy" className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain" />
+                <img
+                  src={logoSrc}
+                  alt={`Logo ${index}`}
+                  loading="lazy"
+                  className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw]"
+                />
               </div>
             ))}
           </Marquee>
         </div>
       </div>
-
     </section>
-
   );
 }

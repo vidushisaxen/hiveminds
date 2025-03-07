@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
 import Hero from '@/components/Homepage/Hero'
+import Contact from '@/components/ServiceDetail/Contact'
 import Awards from '@/components/Homepage/Awards'
 import Blogs from '@/components/Homepage/Blogs'
 import CaseStudies from '@/components/Homepage/CaseStudies'
-import Contact from '@/components/Homepage/Contact'
 import Story from '@/components/Homepage/Story'
 import TeamMembers from '@/components/Homepage/TeamMembers'
 import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
@@ -41,7 +41,7 @@ const index = () => {
   return (
     <>
       <Layout isOpen={isOpen}>
-        <Hero />
+        {/* <Hero /> */}
         <Story isOpen={isOpen} setIsOpen={setIsOpen}/>
         <Services/>
        <Clients2/>
@@ -53,7 +53,7 @@ const index = () => {
           <span className='absolute h-[20%] bottom-[-10%]  w-full'></span>
           <Blogs />
         </div>
-        <Contact />
+        <Contact  title1={"Drive Growth with"} title2={"Data!"} para={"Unlock powerful consumer insights to transform your brand. Connect with us today and harness data-driven strategies for measurable, sustainable success."}/>
       </Layout>
     </>
   )

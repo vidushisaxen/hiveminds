@@ -60,112 +60,223 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
     }, []);
 
     useEffect(() => {
-        if (timelineRef.current) {
-            timelineRef.current.kill();
-        }
+        if(globalThis.innerWidth>1024){
 
-        timelineRef.current = gsap.timeline({
-            defaults: {
-                ease: "power2.inOut",
-                duration: 0.5
+
+            if (timelineRef.current) {
+                timelineRef.current.kill();
             }
-        });
-        if (timelineRef.current) {
-            timelineRef.current.kill();
-        }
-
-        timelineRef.current = gsap.timeline({
-            defaults: {
-                ease: "power3.out",
-                duration: 0.6
+    
+            timelineRef.current = gsap.timeline({
+                defaults: {
+                    ease: "power2.inOut",
+                    duration: 0.5
+                }
+            });
+            if (timelineRef.current) {
+                timelineRef.current.kill();
             }
-        });
-
-        const tl = timelineRef.current;
-
-        if (isActive) {
-            tl.to(cardRef.current, {
-                width: "45%",
-                duration: 0.5,
-                ease: "power2.inOut"
-            })
-             
-                .to(headinginnerRef.current,{
-                    opacity:1,
-                    duration: 0.5,
-                    yPercent:-10
-                })
-                .to(contentRef.current, {
-                    
-                    opacity: 1,
-                    delay: 0.28,
-                    yPercent:0,
-                    duration: 0.5,
-                }, "-=0.8")
-                .to(linkRef.current, {
-                    opacity: 1,
-                    scale: 1,
-                    duration: 0.4,
-                }, "-=0.4");
-            tl.add([
-                gsap.to(cardRef.current, {
-                    width: "45%"
-                }),
-               
-            ], "<")
-                .to([contentRef.current, linkRef.current], {
-                    opacity: 1,
-                    scale: 1,
-                    duration: 0.8,
+    
+            timelineRef.current = gsap.timeline({
+                defaults: {
                     ease: "power3.out",
-                    delay: 0.25,
-                }, "-=0.3");
-        } else {
-            tl.to(cardRef.current, {
-                width: "18%",
-                duration: 0.5,
-                ease: "power2.inOut"
-            })
-                .to(headinginnerRef.current,{
-                    opacity:0,
-                    yPercent:10,
-                    delay:-0.5,
+                    duration: 0.6
+                }
+            });
+    
+            const tl = timelineRef.current;
+    
+            if (isActive) {
+                tl.to(cardRef.current, {
+                    width: "45%",
                     duration: 0.5,
-                    delay:-1,
+                    ease: "power2.inOut"
                 })
-                .to(contentRef.current, {
-                    opacity: 0,
-                    y: 0,
-                    yPercent:10,
                  
-                    duration: 0.4,
-                }, "-=2.5")
-                .to(linkRef.current, {
-                    opacity: 0,
-                    scale: 0.8,
-                    duration: 0.4,
-                }, "-=0.5");
-            tl.add([
-                gsap.to(cardRef.current, {
-                    width: "18%"
-                }),
-               
-            ], "<")
+                    .to(headinginnerRef.current,{
+                        opacity:1,
+                        duration: 0.5,
+                        yPercent:-10
+                    })
+                    .to(contentRef.current, {
+                        
+                        opacity: 1,
+                        delay: 0.28,
+                        yPercent:0,
+                        duration: 0.5,
+                    }, "-=0.8")
+                    .to(linkRef.current, {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.4,
+                    }, "-=0.4");
+                tl.add([
+                    gsap.to(cardRef.current, {
+                        width: "45%"
+                    }),
+                   
+                ], "<")
+                    .to([contentRef.current, linkRef.current], {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.8,
+                        ease: "power3.out",
+                        delay: 0.25,
+                    }, "-=0.3");
+            } else {
+                tl.to(cardRef.current, {
+                    width: "18%",
+                    duration: 0.5,
+                    ease: "power2.inOut"
+                })
+                    .to(headinginnerRef.current,{
+                        opacity:0,
+                        yPercent:10,
+                        delay:-0.5,
+                        duration: 0.5,
+                        delay:-1,
+                    })
+                    .to(contentRef.current, {
+                        opacity: 0,
+                        y: 0,
+                        yPercent:10,
+                     
+                        duration: 0.4,
+                    }, "-=2.5")
+                    .to(linkRef.current, {
+                        opacity: 0,
+                        scale: 0.8,
+                        duration: 0.4,
+                    }, "-=0.5");
+                tl.add([
+                    gsap.to(cardRef.current, {
+                        width: "18%"
+                    }),
+                   
+                ], "<")
+                     
+                    .to([contentRef.current, linkRef.current], {
+                        opacity: 0,
+                        scale: 1,
+                        
+                        duration: 0.4,
+                    }, "-=0.6");
+            }
+        }
+        else{
+
+            if (timelineRef.current) {
+                timelineRef.current.kill();
+            }
+    
+            timelineRef.current = gsap.timeline({
+                defaults: {
+                    ease: "power2.inOut",
+                    duration: 0.5
+                }
+            });
+            if (timelineRef.current) {
+                timelineRef.current.kill();
+            }
+    
+            timelineRef.current = gsap.timeline({
+                defaults: {
+                    ease: "power3.out",
+                    duration: 0.6
+                }
+            });
+    
+            const tl = timelineRef.current;
+    
+            if (isActive) {
+                tl.to(cardRef.current, {
+                    width: "100%",
+                    height:"600%",
+                    duration: 0.5,
+                    ease: "power2.inOut"
+                })
                  
-                .to([contentRef.current, linkRef.current], {
-                    opacity: 0,
-                    scale: 1,
-                    
-                    duration: 0.4,
-                }, "-=0.6");
+                    .to(headinginnerRef.current,{
+                        opacity:1,
+                        duration: 0.5,
+                        yPercent:-10
+                    })
+                    .to(contentRef.current, {
+                        
+                        opacity: 1,
+                        delay: 0.28,
+                        yPercent:0,
+                        duration: 0.5,
+                    }, "-=0.8")
+                    .to(linkRef.current, {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.4,
+                    }, "-=0.4");
+                tl.add([
+                    gsap.to(cardRef.current, {
+                        width: "100%",
+                        height:"600%",
+
+                    }),
+                   
+                ], "<")
+                    .to([contentRef.current, linkRef.current], {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.8,
+                        ease: "power3.out",
+                        delay: 0.25,
+                    }, "-=0.3");
+            } else {
+                tl.to(cardRef.current, {
+                    width: "100%",
+                    height:"130%",
+                    duration: 0.5,
+                    ease: "power2.inOut"
+                })
+                    .to(headinginnerRef.current,{
+                        opacity:0,
+                        yPercent:10,
+                        delay:-0.5,
+                        duration: 0.5,
+                        delay:-1,
+                    })
+                    .to(contentRef.current, {
+                        opacity: 0,
+                        y: 0,
+                        yPercent:10,
+                     
+                        duration: 0.4,
+                    }, "-=2.5")
+                    .to(linkRef.current, {
+                        opacity: 0,
+                        scale: 0.8,
+                        duration: 0.4,
+                    }, "-=0.5");
+                tl.add([
+                    gsap.to(cardRef.current, {
+                        width: "100%",
+                        height:"130%"
+                    }),
+                   
+                ], "<")
+                     
+                    .to([contentRef.current, linkRef.current], {
+                        opacity: 0,
+                        scale: 1,
+                        
+                        duration: 0.4,
+                    }, "-=0.6");
+            }
         }
     }, [isActive]);
 
 
     return (
-        <Link href={link}
+        <div 
             ref={cardRef}
-            className="relative h-full overflow-hidden rounded-[1.2vw] service-card w-[18%] group"
+            className="relative h-full overflow-hidden rounded-[1.2vw] service-card w-[18%] group mobile:w-full mobile:rounded-[4vw]"
             onMouseEnter={onMouseEnter}
         >
             <Image
@@ -176,10 +287,10 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
                 className="absolute inset-0 z-0"
             />
 
-            <div className="absolute inset-0 bg-black/40 flex flex-col items-start justify-end gap-[1.5vw] p-[2vw] pb-[1vw] text-white z-10">
+            <div className="absolute inset-0 bg-black/40 flex flex-col items-start justify-end gap-[1.5vw] p-[2vw] pb-[1vw] text-white z-10 mobile:px-[4vw] mobile:pb-[10vw]">
                 <h3
                     ref={headingRef}
-                    className={`text-white text-[1.5vw] absolute w-[28vw] text-left leading-[1.2] rotate-[-90deg] ${isActive?"opacity-0":"opacity-100"} transition-all duration-300 ease-in-out `}
+                    className={`text-white text-[1.5vw] absolute w-[28vw] text-left leading-[1.2] rotate-[-90deg] ${isActive?"opacity-0":"opacity-100"} transition-all duration-300 ease-in-out mobile:text-[5vw] mobile:rotate-0 mobile:!top-[38%] mobile:w-full mobile:!left-[5%] `}
                     style={{
                         transformOrigin: "0% 50%",
                         rotation: -90,
@@ -191,7 +302,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
                 </h3>
                 <h3
                     ref={headinginnerRef}
-                    className="text-white text-[1.7vw] text-left  leading-[1.2] opacity-0 translate-y-[10%]"
+                    className="text-white text-[1.7vw] text-left  leading-[1.2] opacity-0 translate-y-[10%] mobile:text-[5vw]"
                   
                 >
                     {service.title}
@@ -218,7 +329,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
                     </div>
                 </div>
             </div>
-        </Link>
+        </div>
     );
 };
 
@@ -230,16 +341,16 @@ const Services = () => {
     return (
         <section id="services">
             <div className="w-screen h-full flex flex-col items-center justify-center container-lg pb-[4%] relative">
-                <div className="flex flex-col items-center justify-center gap-[1vw] py-[4vw]">
+                <div className="flex flex-col items-center justify-center gap-[1vw] py-[4vw] mobile:items-start mobile:gap-[4vw]">
                     <h2 className="heading-2 headinganim">
                         Your <span className="blue-text"> Goals </span>, Our Offerings
                     </h2>
-                    <p className="content w-[70%] text-center fadeup">
+                    <p className="content w-[70%] text-center fadeup mobile:text-left mobile:w-[90%]">
                         See how our strategic partnerships and collaboration drive innovation and accelerate your business growth
                     </p>
                 </div>
                 <div className="w-full h-full flex items-center justify-center">
-                    <div className="w-full h-[60vh] flex overflow-hidden gap-[1.5vw] fadein">
+                    <div className="w-full h-[60vh] flex overflow-hidden gap-[1.5vw] fadein mobile:flex-col mobile:h-[280vw] mobile:gap-[3vw] mobile:mt-[5vw]">
                         {services.map((service, index) => (
                             <ServiceCard
                                 key={index}
@@ -252,10 +363,10 @@ const Services = () => {
                     </div>
                 </div>
 
-                <div className="absolute h-[2vw] w-[2.2vw] top-[20%] right-[3%] blue-hexagon-animation">
+                <div className="absolute h-[2vw] w-[2.2vw] top-[20%] right-[3%] blue-hexagon-animation mobile:hidden">
                     <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
                 </div>
-                <div className="absolute h-[2vw] w-[2.2vw] top-[10%] left-[5%] yellow-hexagon-animation" >
+                <div className="absolute h-[2vw] w-[2.2vw] top-[10%] left-[5%] yellow-hexagon-animation mobile:hidden" >
                     <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
                 </div>
             </div>

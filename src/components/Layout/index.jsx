@@ -1,6 +1,7 @@
 
 
 import Footer from "../Footer";
+import FooterMobile from "../FooterMobile";
 import Header from "../Header";
 import Loader from "../Loader";
 
@@ -12,7 +13,8 @@ const Layout = ({ children ,isOpen}) => {
             <main className="relative z-[1]">
                 {children}
             </main>
-            <Footer />
+            {/* <Footer /> */}
+            <FooterMobile/>
         </>
     )
 }

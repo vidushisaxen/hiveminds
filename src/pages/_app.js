@@ -10,24 +10,30 @@ import { useLenis } from "lenis/react";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  // const [mouseEnabled, setMouseEnabled] = useState(false);
+  const [mouseEnabled, setMouseEnabled] = useState(false);
   const lenis = useLenis();
+
+  useEffect(() => {
+    if(globalThis.innerWidth>1024){
+      
+      const enableMouse = () => setMouseEnabled(true);
+      // console.log("mobile width")
+      // Disable mouse interactions initially
+      document.body.style.pointerEvents = "none";
   
+      // Enable mouse interactions when user moves cursor
+      window.addEventListener("mousemove", enableMouse, { once: true });
 
-  // useEffect(() => {
-  //   const enableMouse = () => setMouseEnabled(true);
+    }
+    else{
+      setMouseEnabled(true)
+    }
 
-  //   // Disable mouse interactions initially
-  //   document.body.style.pointerEvents = "none";
-
-  //   // Enable mouse interactions when user moves cursor
-  //   window.addEventListener("mousemove", enableMouse, { once: true });
-
-  //   return () => {
-  //     document.body.style.pointerEvents = "auto"; // Restore mouse interactions
-  //     window.removeEventListener("mousemove", enableMouse);
-  //   };
-  // }, []);
+    return () => {
+      document.body.style.pointerEvents = "auto"; // Restore mouse interactions
+      window.removeEventListener("mousemove", enableMouse);
+    };
+  }, []);
   
   useEffect(() => {
     const handleRouteChange = () => {

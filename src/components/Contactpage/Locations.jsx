@@ -26,34 +26,34 @@ const Locations = () => {
 
   return (
     <section
-      className="w-screen h-[70vw] py-[5%] pb-[25vw] bg-[#134BD6]"
+      className="w-screen h-[70vw] py-[5%] pb-[25vw] bg-[#134BD6] mobile:h-[370vw] mobile:py-[10%]"
       id="locations"
     >
       <div className="container-lg flex flex-col gap-[4vw] items-center justify-center">
         <h2 className="heading-2 headinganim !text-white">
           Our Office Locations
         </h2>
-        <div className="flex w-full justify-between">
-          <div className="w-[29vw] h-[31vw] rounded-[1.2vw] bg-white p-[3vw] flex flex-col items-center location-card relative">
-            <h4 className="text-[2.8vw] montreal font-medium">Bengaluru</h4>
-            <span className="bg-[#134BD6] text-white py-[0.1vw] px-[0.9vw] rounded-full absolute top-[25%] text-[1vw] left-[45%]">
+        <div className="flex w-full justify-between mobile:flex-col mobile:gap-[4vw] mobile:mt-[7vw]">
+          <div className="w-[29vw] h-[31vw] rounded-[1.2vw] bg-white p-[3vw] flex flex-col items-center location-card relative mobile:w-[90vw] mobile:h-[90vw] mobile:rounded-[4vw] mobile:pt-[10vw]">
+            <h4 className="text-[2.8vw] montreal font-medium mobile:text-[8vw]">Bengaluru</h4>
+            <span className="bg-[#134BD6] text-white py-[0.1vw] px-[0.9vw] rounded-full absolute top-[25%] text-[1vw] left-[45%] mobile:text-[4vw] mobile:px-[4vw] mobile:py-[1vw] mobile:top-[25%] mobile:left-[43%] montreal">
               HQ
             </span>
-            <div className="w-full h-[1px] bg-black my-[4vw]"></div>
-            <p className="text-center text-[1.2vw]">
+            <div className="w-full h-[1px] bg-black my-[4vw] mobile:mt-[15vw] mobile:mb-[7vw]"></div>
+            <p className="text-center text-[1.2vw] mobile:text-[4vw]">
               No. 11, Seventh Floor, Global Tech Park, O Shaughnessy Rd,
               Langford Town, Langford Gardens, Bengaluru, Karnataka 560025
             </p>
             <Link href={"/"}>
-              <p className="hover:text-blue-700 link-line transition-all duration-300 ease-in-out font-medium mt-[3vw]">
+              <p className="hover:text-blue-700 link-line transition-all duration-300 ease-in-out font-medium mt-[3vw] mobile:mt-[10vw]">
                 Show On Google Map
               </p>
             </Link>
           </div>
-          <div className="w-[29vw] h-[31vw] rounded-[1.2vw] bg-white p-[3vw] flex flex-col items-center location-card">
-            <h4 className="text-[2.8vw] montreal font-medium">Mumbai</h4>
-            <div className="w-full h-[1px] bg-black my-[4vw]"></div>
-            <p className="text-center text-[1.2vw]">
+          <div className="w-[29vw] h-[31vw] rounded-[1.2vw] bg-white p-[3vw] flex flex-col items-center location-card mobile:w-[90vw] mobile:h-[90vw] mobile:rounded-[4vw] mobile:pt-[10vw]">
+            <h4 className="text-[2.8vw] montreal font-medium mobile:text-[8vw]">Mumbai</h4>
+            <div className="w-full h-[1px] bg-black my-[4vw] mobile:mt-[15vw] mobile:mb-[7vw]"></div>
+            <p className="text-center text-[1.2vw] mobile:text-[4vw]">
               Office no 301 & 302, 3rd Floor, The Eagle&apos;s Flight Building,
               Gundavali, Andheri East, Andheri, Mumbai, Maharashtra 400047
             </p>
@@ -63,11 +63,11 @@ const Locations = () => {
               </p>
             </Link>
           </div>
-          <div className="w-[29vw] h-[31vw] rounded-[1.2vw] bg-white p-[3vw] flex flex-col items-center location-card">
-            <h4 className="text-[2.8vw] montreal font-medium">Gurugram</h4>
-            <div className="w-full h-[1px] bg-black my-[4vw]"></div>
+          <div className="w-[29vw] h-[31vw] rounded-[1.2vw] bg-white p-[3vw] flex flex-col items-center location-card mobile:w-[90vw] mobile:h-[90vw] mobile:rounded-[4vw] mobile:pt-[10vw]">
+            <h4 className="text-[2.8vw] montreal font-medium mobile:text-[8vw]">Gurugram</h4>
+            <div className="w-full h-[1px] bg-black my-[4vw] mobile:mt-[15vw] mobile:mb-[10vw]"></div>
             <div className="flex flex-col justify-between h-[60%] items-center">
-              <p className="text-center text-[1.2vw] w-[85%]">
+              <p className="text-center text-[1.2vw]  mobile:text-[4vw] w-[85%]">
                 Spring House Coworking, 4th Floor, JMD Regent Arcade, Haryana
                 122002
               </p>
@@ -83,12 +83,13 @@ const Locations = () => {
         </div>
       </div>
       <div className="w-full px-[5vw]">
-        <div className="w-[90vw] h-[40vw]  relative rounded-[1.2vw] overflow-hidden mt-[7vw] z-[10]">
+        <div className="w-[90vw] h-[40vw]  relative rounded-[1.2vw] overflow-hidden mt-[7vw] z-[10] mobile:w-[88vw] mobile:h-[110vw] mobile:rounded-[6vw]">
           {/* <Map/> */}
           <Image
             src={"/assets/images/contactpage/contact-map-image.png"}
             alt="map"
             fill
+            className="object-cover"
           />
         </div>
       </div>
