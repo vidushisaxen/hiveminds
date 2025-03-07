@@ -5,7 +5,7 @@ import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimatio
 import Hero from '@/components/Hero';
 import Image from 'next/image';
 import PrimaryButton from '@/components/Button/PrimaryButton';
-import img from '../../public/assets/images/industry/industry-hero.png'
+import img from '../../public/assets/images/solutions/solutions-hero-img.png'
 
 const solutions = () => {
     headingBlur();
@@ -74,44 +74,44 @@ export default solutions
 
 const solution = [
     {
-        src: "/assets/images/industry/industry-listing.png",
+        src: "/assets/images/solutions/demand-generation-img.png",
         title1: "Demand",
         title2: "Generation",
         para: "Our demand generation solution ignite brand interest and drive high-quality leads through data-driven digital campaigns. We combine precise audience segmentation with creative content and targeted media strategies to spark engagement and build awareness. By continuously optimizing performance with advanced analytics, we ensure every marketing dollar delivers measurable impact—transforming prospects into loyal customers and fueling sustainable,remarkable growth.",
         link: "#"
     },
     {
-        src: "/assets/images/industry/industry-listing.png",
+        src: "/assets/images/solutions/d2c-revenue-img.png",
         title1: "D2C",
         title2: " Revenue",
         para: "In the D2C landscape, we drive revenue growth through tailored digital strategies designed specifically for consumer-centric brands. We harness robust data insights, creative campaigns, and agile execution to optimize the customer journey. By bridging the gap between online engagement and purchase behavior, our comprehensive approach boosts conversion rates and overall revenue—empowering brands to build strong relationships and achieve sustainable, measurable growth in a competitive market.",
         link: "#"
     }, {
-        src: "/assets/images/industry/industry-listing.png",
+        src: "/assets/images/solutions/organic-revenue-img.png",
         title1: "Organic",
         title2: " Revenue",
-        para: "AWe drive organic revenue by boosting your website’s natural visibility and authority. Our SEO strategies blend technical excellence, content optimization, and authoritative link-building to attract high-quality non-paid traffic. By improving search rankings and fostering trust, we transform organic clicks into sustained revenue streams. Our data-driven approach ensures every optimization elevates your online presence, delivering long-term, measurable results and driving consistent business growth.",
+        para: "We drive organic revenue by boosting your website’s natural visibility and authority. Our SEO strategies blend technical excellence, content optimization, and authoritative link-building to attract high-quality non-paid traffic. By improving search rankings and fostering trust, we transform organic clicks into sustained revenue streams. Our data-driven approach ensures every optimization elevates your online presence, delivering long-term, measurable results and driving consistent business growth.",
         link: "#"
     }, {
-        src: "/assets/images/industry/industry-listing.png",
-        title1: "Accelerate",
-        title2: "E-commerce Growth",
+        src: "/assets/images/solutions/ecommerce-growth-img.png",
+        title1: "Accelerating",
+        title2: "Ecommerce Growth",
         para: "We accelerate e-commerce growth by seamlessly integrating paid media strategies with organic tactics. Our targeted approach leverages advanced analytics, creative content, and strategic channel optimization to boost user acquisition and conversion. By refining every step of the digital customer journey, we drive significant revenue and market share gains. Our agile, data-driven campaigns empower brands to capture emerging opportunities and achieve rapid,sustainable growth in the competitive e-commerce landscape with excellence.",
         link: "#"
     }, {
-        src: "/assets/images/industry/industry-listing.png",
-        title1: "Maximise",
+        src: "/assets/images/solutions/maximizing-retention-img.png",
+        title1: "Maximizing",
         title2: "Retention",
         para: "We maximize retention by cultivating deep, lasting relationships between brands and their customers. Our retention strategies leverage advanced analytics, personalized content, and targeted engagement tactics to nurture loyalty and extend customer lifetime value. By continuously optimizing customer journeys and refining touchpoints, we ensure sustained engagement and repeat conversions. Our data-driven approach fosters a customer-centric ecosystem, turning one-time buyers into lifelong advocates and driving consistent revenue growth.",
         link: "#"
     }, {
-        src: "/assets/images/industry/industry-listing.png",
+        src: "/assets/images/solutions/app-marketing-img.png",
         title1: "App",
         title2: "Marketing",
         para: "Our App Marketing solutions drive growth by optimizing every touchpoint in the mobile journey. Our data-driven strategies combine user acquisition, creative optimization, and performance analytics to boost app installs and engagement. We tailor campaigns to meet unique audience needs, ensuring seamless experiences and converting downloads into loyal customers. Our agile approach leverages the latest technology to maximize ROI and fuel sustained, scalable growth in a mobile-first world.",
         link: "#"
     }, {
-        src: "/assets/images/industry/industry-listing.png",
+        src: "/assets/images/solutions/digital-brand-building-img.png",
         title1: "Digital",
         title2: "Brand Building",
         para: "At HiveMinds, Digital Brand Building is about crafting compelling narratives that resonate with audiences and foster long-term loyalty. Our integrated approach blends creative storytelling with data-driven insights and strategic media planning to enhance visibility and drive engagement. We build memorable digital experiences across touchpoints, ensuring every interaction reinforces your brand identity—turning each moment into an opportunity to build trust and drive sustainable, measurable growth with excellence.",

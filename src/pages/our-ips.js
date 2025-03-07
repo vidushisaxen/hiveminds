@@ -9,7 +9,7 @@ import {
 } from "@/components/gsapAnimations";
 import Hero from "@/components/Hero";
 import Image from "next/image";
-import img from "../../public/assets/images/industry/industry-hero.png";
+import img from "../../public/assets/images/ip/ips-hero-img.png";
 
 const ips = () => {
   headingBlur();
@@ -47,14 +47,13 @@ driven decision-making for sustained growth.
             </div>
           </section>
           <section className="w-screen h-full py-[2vw] pb-[10vw]">
-            <div className="container-lg w-full h-full flex flex-wrap justify-between ">
+            <div className="container-lg w-full h-full flex flex-wrap gap-y-[5vw] justify-between ">
               {ip.map((item, index) => (
                 <div
                   key={index}
-                  className={`w-[48%] h-full flex-col flex items-start justify-between  px-[1.5vw] fadeup 
-        ${index % 2 !== 0 ? "mt-[8vw]" : ""}`}
+                  className="w-[48%]  py-[2vw] h-[55vw] pb-[5vw] rounded-[1.5vw] flex-col flex items-start  shadow-2xl px-[1.9vw] fadeup"
                 >
-                  <div className="h-[40vw] pb-[2vw]">
+                  <div className="h-[30vw] pb-[2vw]">
                     <Image
                       src={item.img}
                       width={790}
@@ -86,45 +85,43 @@ export default ips;
 
 const ip = [
     {
-        img: "/assets/images/industry/industry-listing.png",
-        title: " FeedX",
-        para: "FeedX is a state-of-the-art catalog management solution developed by HiveMinds for D2C brands on Google and Facebook. It efficiently handles over 3 million SKUs daily with a proven record of zero ad disapprovals, refreshing entire product catalogs in just 20 minutes. This robust tool ensures your digital campaigns display accurate, up-to-date information, streamlining operations, reducing manual errors, and optimizing digital advertising for maximum impact and efficiency.",
+        img: "/assets/images/ip/feedx-img.png",
         title: " FeedX",
         para: "FeedX is a state-of-the-art catalog management solution developed by HiveMinds for D2C brands on Google and Facebook. It efficiently handles over 3 million SKUs daily with a proven record of zero ad disapprovals, refreshing entire product catalogs in just 20 minutes. This robust tool ensures your digital campaigns display accurate, up-to-date information, streamlining operations, reducing manual errors, and optimizing digital advertising for maximum impact and efficiency.",
     },
     {
-        img: "/assets/images/industry/industry-listing.png",
+        img: "/assets/images/ip/wizual-img.png",
         title: " Vizual",
         para: "Vizual is an advanced image analysis solution by HiveMinds that leverages Machine Learning and Artificial Intelligence to transform visual data. By automating image scrutiny, Vizual rapidly extracts critical insights, eliminating manual review. This innovative tool provides actionable intelligence for optimizing creative strategies and enhancing campaign precision, enabling brands to quickly understand visual trends, optimize content, and gain a competitive edge in today’s dynamic digital marketplace.",
     },
     {
-        img: "/assets/images/industry/industry-listing.png",
+        img: "/assets/images/ip/optimmmix-img.png",
         title: " OptiMMMix",
         para: "OptiMMMix is an in-house optimization tool developed by HiveMinds that harnesses Meta’s Robyn technology and insights from proprietary MMM models. It analyzes media saturation levels, identifies effective channels, eliminates bias in decision-making, and delivers precise recommendations for media reallocation. This powerful solution enables brands to fine-tune their advertising strategies in real time, ensuring maximum efficiency, optimal ROI, and superior performance across all digital channels—unlocking unmatched efficiency in every campaign.",
 
     },
     {
-        img: "/assets/images/industry/industry-listing.png",
+        img: "/assets/images/ip/ip-image.png",
         title: " ADH",
         para: "Google Ads Data Hub (ADH) is a cutting-edge, privacy-compliant measurement solution that empowers advertisers with deterministic insights into digital campaign performance. Acting as a secure data clean room, ADH enables HiveMinds to merge proprietary brand data with event-level Google data, offering a comprehensive understanding of audience behavior and campaign impact.This innovative tool facilitates precise campaign analysis, ensuring strategies are optimized, transparent, and aligned with regulatory standards for enhanced ROI, maximizing clarity and actionable measurable results.",
     },
     {
-        img: "/assets/images/industry/industry-listing.png",
+        img: "/assets/images/ip/bidsmart-img.png",
         title: " BidSmart ",
         para: "BidSmart is an advanced bid optimization engine developed by HiveMinds that leverages near real-time data to manage cost-per-click and return on ad spend efficiently. By automating bid adjustments and eliminating manual processes, BidSmart ensures data-driven bidding on e- commerce platforms, maximizing campaign performance and ROI. It empowers brands to respond instantly to market changes, dynamically optimizing bids for the best possible outcomes. BidSmart delivers measurable efficiency and exceptional digital results at scale.",
 
     },
     {
-        img: "/assets/images/industry/industry-listing.png",
-        title: " Leadscoring:",
+        img: "/assets/images/ip/ip-image.png",
+        title: " Leadscoring",
         para: "Leadscoring is a transformative tool that revolutionizes how businesses identify and prioritize high-value leads in a competitive market. By assigning scores based on demographics, behavior, and engagement, it streamlines the sales process and maximizes conversion rates. This data-driven approach ensures efficient resource allocation, eliminates wasted efforts, and empowers teams to focus on prospects with the greatest potential, driving revenue growth and propelling sales strategies to unprecedented heights. Experience measurable, sustainable growth through streamlined, optimized lead prioritization and conversion.",
     }, {
-        img: "/assets/images/industry/industry-listing.png",
+        img: "/assets/images/ip/ip-image.png",
         title: " Hamuli",
         para: "Hamuli is HiveMinds’ bespoke BI dashboard service that unlocks your data’s full potential. Utilizing cutting-edge technology, Hamuli crafts intuitive, customizable dashboards that visualize KPIs, track trends, and forecast insights in real time. By seamlessly integrating data from multiple sources, it provides actionable intelligence for informed decision-making, empowering teams to boost efficiency, optimize performance, and drive sustainable growth in a dynamic business environment. Hamuli transforms raw data into strategic insights, enabling faster, effective decisions and measurable operational improvements for lasting growth.",
     },
     {
-        img: "/assets/images/industry/industry-listing.png",
+        img: "/assets/images/ip/hivepulse-img.png",
         title: " Hivepulse",
         para: "Hivepulse is HiveMinds’ advanced sentiment analysis tool that leverages AI to transform vast text data into clear, actionable insights. By analyzing customer feedback, public opinion, and brand perception, Hivepulse reveals valuable emotional and attitudinal trends. This empowers businesses to make informed decisions, enhance customer experiences, and mitigate risks effectively. Hivepulse converts data overload into strategic intelligence, enabling organizations to navigate complex digital landscapes with confidence and drive measurable, sustainable growth. Unlocking insights that propel remarkable success and innovation at scale.",
     }
