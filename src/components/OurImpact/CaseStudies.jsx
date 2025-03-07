@@ -105,8 +105,8 @@ const caseStudiesData = [
 
 const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
   return (
-    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group blog-link">
-      <div className="h-[25.5vw] w-full relative overflow-hidden rounded-[1.5vw]">
+    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group blog-link mobile:w-[90vw] mobile:h-[130vw]">
+      <div className="h-[25.5vw] w-full relative overflow-hidden rounded-[1.5vw] mobile:h-[80vw] mobile:rounded-[4vw]">
         <Link href={link}>
         <Image
           src={imgSrc}
@@ -117,11 +117,11 @@ const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
         
         </Link>
       </div>
-      <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[28%] justify-between">
+      <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[28%] justify-between mobile:mt-[3vw] ">
         <div>
-        <p className="text-[2vw] font-medium py-[0.5vw]">{title}</p>
+        <p className="text-[2vw] font-medium py-[0.5vw] mobile:text-[7vw]">{title}</p>
         <div
-          className="text-[1.05vw] w-[95%]"
+          className="text-[1.05vw] w-[95%] mobile:text-[4.5vw]"
           dangerouslySetInnerHTML={{ __html: description }}
         />
 
@@ -129,13 +129,13 @@ const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
         <Link href={link}>
                   <div className="w-fit">
                     <div
-                      className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[5.5vw] `}
+                      className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw] `}
                     >
                       <span className="relative link-line group-hover:text-primary ">
-                        View More
+                        View Detail
                       </span>
                       <svg
-                        className="relative -rotate-[90deg] w-[1vw] h-[1vw] overflow-hidden mobile:w-[5.5vw] mobile:h-[5.5vw] tablet:w-[2.5vw] tablet:h-[2.5vw]"
+                        className="relative -rotate-[90deg] w-[1vw] h-[1vw] overflow-hidden mobile:w-[4.5vw] mobile:h-[4.5vw] mobile:mt-[-1vw] tablet:w-[2.5vw] tablet:h-[2.5vw]"
                         width="19"
                         height="23"
                         viewBox="0 0 19 23"
@@ -163,13 +163,13 @@ const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
 
 const CaseStudies = () => {
   return (
-    <section className="w-screen h-full pb-[7%]">
+    <section className="w-screen h-full pb-[7%] mobile:pt-[5%]">
       <div className="container-lg h-full">
-        <div className="flex flex-col items-center justify-center gap-[1vw] py-[7vw]">
+        <div className="flex flex-col items-center justify-center gap-[1vw] py-[7vw] mobile:block mobile:space-y-[4vw]">
           <h2 className="heading-2 headinganim">
             Our Case <span className="blue-text">Studies</span>
           </h2>
-          <p data-para-anim className="content w-[55%] text-center">
+          <p data-para-anim className="content w-[55%] text-center mobile:w-[90%] mobile:text-left">
             At HiveMinds, we tackle your most challenging business problems with
             our specialised digital marketing approach - integrating strategic
             expertise, cutting-edge technology, and data-driven insights to
@@ -178,7 +178,7 @@ const CaseStudies = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap items-start justify-center gap-[1vw]">
+        <div className="flex flex-wrap items-start justify-center gap-[1vw] mobile:flex-col">
           {caseStudiesData.map((study) => (
             <CaseStudyCard
               key={study.id}
