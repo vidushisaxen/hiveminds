@@ -54,7 +54,7 @@ const blogDetail = () => {
   return (
     <>
       <Layout>
-        <Hero title1={"How to Setup Google Business Profile for Better Online"} title2={"Presence in 2023"} para={"Discover the lucrative opportunities of a SEO job and learn how to excel in this dynamic industry. Explore career opportunities and essential skills. Discover the lucrative opportunities of a SEO job and learn how to excel in this dynamic industry. Explore career opportunities and essential skills."} img={"/assets/images/blogs/blog-detail-hero.png"} category={"Digital Marketing"}/>
+        <Hero title1={"Hiveminds E-commerce Conclave 2023: "} title2={"Industry Leaders Gather"} para={"Industry leaders converged at HiveMinds E-commerce Conclave 2023, a vibrant event showcasing cutting-edge trends in digital marketing and e-commerce. The photo gallery captures dynamic sessions, strategic networking, and insightful discussions, underscoring the event’s role in driving innovation and growth across the retail landscape for success."} img={"/assets/images/blogs/hiveminds-ecommerce-conclave-2023.jpg"} category={"E-Commerce"}/>
         <Details content={content}/>
         <RelatedBlogs/>
       </Layout>

@@ -38,11 +38,11 @@ const Details = ({content}) => {
         <div className='container-lg w-full h-full flex items-start justify-between'>
           <div className='w-[30%] blog-credentials'>
             <p className='text-[1.3vw] font-medium leading-[1]'>Posted On:</p>
-            <p className='text-[1.3vw] font-medium leading-[1] py-[1vw]'>June 6,2024</p>
+            <p className='text-[1.3vw] font-medium leading-[1] py-[1vw]'>{content.date}</p>
             <div className='py-[2vw]'>
               <p className='text-[1.3vw] font-medium leading-[1]'>Share Article:</p>
               <div className="flex items-start gap-[1vw] py-[1vw]">
-                <Link href={"#"}>
+                <Link href={content.fbLink}>
                   <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
                     <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
                       <svg
@@ -61,7 +61,7 @@ const Details = ({content}) => {
                     </span>
                   </div>
                 </Link>
-                <Link href={"#"}>
+                <Link href={content.linkedinLink}>
                   <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
                     <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
                       <svg
@@ -90,7 +90,7 @@ const Details = ({content}) => {
                     </span>
                   </div>
                 </Link>
-                <Link href={"#"}>
+                <Link href={content.twitterLink}>
                   <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
                     <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
                       <svg
@@ -113,22 +113,31 @@ const Details = ({content}) => {
             </div>
           </div>
           <div className='w-[60%] h-full'>
-            <div dangerouslySetInnerHTML={{__html:content}}/>
-            
-            <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
+           {content.content1.map((item,index)=>(
+            <div key={index} className='space-y-[2vw] py-[1vw] fadein' dangerouslySetInnerHTML={{__html:item}}/>
+           ))}
+            {/* <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' /> */}
             <div className='py-[2vw] '>
               <div className='py-[1.5vw] fadein'>
-                <Image src={"/assets/images/blogs/blog-img1.png"} height={690} width={1130} alt='blog-image' className='rounded-[1vw]' />
+                <Image src={content.featuredImage1} height={690} width={1130} alt='blog-image' className='rounded-[1vw]' />
               </div>
               <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
             </div>
 
+            {content.content2.map((item,index)=>(
+            <div key={index} className='space-y-[2vw] py-[1vw] fadein' dangerouslySetInnerHTML={{__html:item}}/>
+           ))}
+
             <div className='py-[2vw]'>
               <div className='py-[1.5vw] fadein'>
-                <Image src={"/assets/images/blogs/blog-img2.png"} height={690} width={1130} alt='blog-image' className='rounded-[1vw]' />
+                <Image src={content.featuredImage2} height={690} width={1130} alt='blog-image' className='rounded-[1vw]' />
               </div>
               <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
             </div>
+
+            {content.content3.map((item,index)=>(
+            <div key={index} className='space-y-[2vw] py-[1vw] fadein' dangerouslySetInnerHTML={{__html:item}}/>
+           ))}
 
            
           </div>

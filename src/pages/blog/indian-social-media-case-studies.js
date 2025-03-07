@@ -54,7 +54,7 @@ const blogDetail = () => {
   return (
     <>
       <Layout>
-        <Hero title1={"How to Setup Google Business Profile for Better Online"} title2={"Presence in 2023"} para={"Discover the lucrative opportunities of a SEO job and learn how to excel in this dynamic industry. Explore career opportunities and essential skills. Discover the lucrative opportunities of a SEO job and learn how to excel in this dynamic industry. Explore career opportunities and essential skills."} img={"/assets/images/blogs/blog-detail-hero.png"} category={"Digital Marketing"}/>
+        <Hero title1={"Indian Social Media: "} title2={"Case Studies"} para={"This curated collection of Indian social media case studies reveals how brands are revolutionizing engagement. By leveraging creative storytelling, strategic targeting, and robust analytics, these case studies offer actionable insights into transforming digital content into powerful, measurable growth engines."} img={"/assets/images/blogs/indian-social-media.jpg"} category={"Social Media Management"}/>
         <Details content={content}/>
         <RelatedBlogs/>
       </Layout>
