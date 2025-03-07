@@ -15,6 +15,14 @@ import Services from '@/components/Homepage/Solutions'
 
 
 const index = () => {
+  const [mobileWidth, setMobileWidth] = useState(false);
+    useEffect(() => {
+      if (globalThis.innerWidth > 541) {
+        setMobileWidth(false);
+      } else {
+        setMobileWidth(true);
+      }
+    }, []);
   const [isOpen, setIsOpen] =  useState(false);
   headingBlur();
   paraAnim();
@@ -41,7 +49,7 @@ const index = () => {
   return (
     <>
       <Layout isOpen={isOpen}>
-        {/* <Hero /> */}
+        {!mobileWidth&&<Hero />}
         <Story isOpen={isOpen} setIsOpen={setIsOpen}/>
         <Services/>
        <Clients2/>
