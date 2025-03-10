@@ -57,11 +57,11 @@ const RelatedBlogs = () => {
   return (
     <section className="h-full w-screen pb-[5%]" id="related-blogs">
       <div className="py-[4vw] w-full container-lg">
-        <h2 className="heading-2 w-[80%] fadein">
+        <h2 className="heading-2 w-[80%] fadein mobile:w-full">
           Related <span className="text-primary">Blogs</span>
         </h2>
-        <div className="w-full flex justify-between">
-          <p className="text-[1.2vw] mt-[2vw] w-[35%] fadein">
+        <div className="w-full flex justify-between mobile:flex-col mobile:gap-[7vw] mobile:mt-[5vw]">
+          <p className="text-[1.2vw] mt-[2vw] w-[35%] fadein mobile:w-full mobile:text-[4vw]">
             Discover our accolades and industry recognition that highlight our
             commitment to excellence.
           </p>
@@ -69,10 +69,10 @@ const RelatedBlogs = () => {
             <PrimaryButton text={"All Blogs"} href={"/"} className="fadein" />
           </div>
         </div>
-        <div className="w-full flex pt-[5vw] pb-[1vw] gap-[1vw]">
+        <div className="w-full flex pt-[5vw] pb-[1vw] gap-[1vw] mobile:flex-col mobile:gap-[7vw] mobile:mt-[7vw]">
           {relatedBlogsData.map((blog) => (
             <div key={blog.id} className="blogs related-blog group blog-link">
-              <Link href={"#"} className="w-[30vw] h-[22vw] rounded-[1.2vw] overflow-hidden block">
+              <Link href={"#"} className="w-[30vw] h-[22vw] rounded-[1.2vw] overflow-hidden block mobile:w-full mobile:h-[70vw] mobile:rounded-[4vw]">
                 <Image
                   src={blog.imgSrc}
                   height={390}
@@ -81,22 +81,22 @@ const RelatedBlogs = () => {
                   className="object-cover w-full h-full group-hover:scale-[1.1] transistion-all duration-500 ease-in-out"
                 /> 
               </Link>
-              <div className="py-[1vw] w-[80%]">
-                <p className="text-[1.5vw] font-medium">{blog.title}</p>
-                <div className="flex items-center gap-[3vw] w-[80%] py-[1vw] pb-[2vw] ">
-                  <p className="content !text-[1vw]">{blog.category}</p>
-                  <p className="content !text-[1vw]">{blog.date}</p>
+              <div className="py-[1vw] w-[80%] mobile:w-full mobile:mt-[7vw] mobile:flex mobile:flex-col mobile:gap-[1.5vw]">
+                <p className="text-[1.5vw] font-medium mobile:text-[6vw] mobile:leading-[1.2]">{blog.title}</p>
+                <div className="flex items-center gap-[3vw] w-[80%] py-[1vw] pb-[2vw] mobile:w-full mobile:justify-between ">
+                  <p className="content !text-[1vw] mobile:!text-[4vw]">{blog.category}</p>
+                  <p className="content !text-[1vw] mobile:!text-[4vw]">{blog.date}</p>
                 </div>
                 <Link href="#">
                   <div className="w-fit">
                     <div
-                      className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[5.5vw] `}
+                      className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[5vw] `}
                     >
                       <span className="relative link-line group-hover:text-primary ">
                         View More
                       </span>
                       <svg
-                        className="relative -rotate-[90deg] w-[1vw] h-[1vw] overflow-hidden mobile:w-[5.5vw] mobile:h-[5.5vw] tablet:w-[2.5vw] tablet:h-[2.5vw]"
+                        className="relative -rotate-[90deg] w-[1vw] h-[1vw] overflow-hidden mobile:w-[5vw] mobile:h-[5vw] tablet:w-[2.5vw] tablet:h-[2.5vw]"
                         width="19"
                         height="23"
                         viewBox="0 0 19 23"

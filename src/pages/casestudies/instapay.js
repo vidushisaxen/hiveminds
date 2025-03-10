@@ -10,19 +10,19 @@ import React, { useState } from 'react'
 const content = {
     subtitle1: "Instapay ",
     subtitle2: "Digital Leap",
-    intro: "<p class='text-[1.5vw] mt-[2vw]'>Simplified remittance drives digital adoption. <br/><br/>Instapay becomes the go-to app for migrant workers in Malasia with over 1 Lakh downloads in a year</p>",
+    intro: "<p class='mobile:mt-[7vw] mt-[2vw]'>Simplified remittance drives digital adoption. <br/><br/>Instapay becomes the go-to app for migrant workers in Malasia with over 1 Lakh downloads in a year</p>",
     features:[
-        "<p class='text-[1.5vw] py-[1vw]'><span class='text-primary'> 25K+ </span> leads</p>",
-        "<p class='text-[1.5vw] py-[1vw]'><span class='text-primary'> 3.5M </span> awareness</p>",
-        "<p class='text-[1.5vw] py-[1vw]'><span class='text-primary'> 1L+ </span> downloads</p>",
+        "<p class='py-[1vw]'><span class='text-primary'> 25K+ </span> leads</p>",
+        "<p class=' py-[1vw]'><span class='text-primary'> 3.5M </span> awareness</p>",
+        "<p class=' py-[1vw]'><span class='text-primary'> 1L+ </span> downloads</p>",
 
     ],
     industry: "BFSI - Fintech",
     service: "PPC / Lead Gen",
     category: "Lead Gen",
-    problem: " <p class='text-[1.5vw] mt-[2vw]'>Instapay aimed to drive financial inclusion for Malaysian migrant workers by simplifying digital remittance communication, overcoming language and cultural barriers.</p>",
-    approach: "<p class='text-[1.5vw] mt-[2vw]'>To drive awareness, we developed visually engaging, easily understandable content—including how-to videos, guides, and explainers—all communicated in vernacular languages to resonate culturally. To enhance consideration, we hosted live Facebook Q&A sessions providing real-time clarity. For acquisition, we executed targeted paid ad campaigns across social platforms, maximizing reach and driving substantial traffic to Instapay.</p>",
-    impact: "<p class='text-[1.5vw] mt-[2vw]'>Our integrated approach generated over <span class='text-primary !font-medium'> 25K quality leads </span>, reached 3.5M potential users, and drove 1L+ app downloads within one year, transforming financial inclusion.</p>"
+    problem: " <p class=' mt-[2vw]'>Instapay aimed to drive financial inclusion for Malaysian migrant workers by simplifying digital remittance communication, overcoming language and cultural barriers.</p>",
+    approach: "<p class=' mt-[2vw]'>To drive awareness, we developed visually engaging, easily understandable content—including how-to videos, guides, and explainers—all communicated in vernacular languages to resonate culturally. To enhance consideration, we hosted live Facebook Q&A sessions providing real-time clarity. For acquisition, we executed targeted paid ad campaigns across social platforms, maximizing reach and driving substantial traffic to Instapay.</p>",
+    impact: "<p class=' mt-[2vw]'>Our integrated approach generated over <span class='text-primary !font-medium'> 25K quality leads </span>, reached 3.5M potential users, and drove 1L+ app downloads within one year, transforming financial inclusion.</p>"
 
 }
 

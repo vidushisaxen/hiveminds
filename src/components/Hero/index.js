@@ -9,7 +9,7 @@ const Hero = ({ title1, title2, para, img }) => {
     >
       <div className="w-full h-full container-lg flex justify-between mobile:flex-col mobile:gap-10">
         <div className="w-[50%] flex flex-col gap-[1vw] pt-[7vw] mobile:w-full mobile:gap-4 mobile:pt-0">
-          <h1 className="heading-1 leading-[1.2] fadeup mobile:w-[80%]">
+          <h1 className="heading-1 leading-[1.2] fadeup">
             {title1}
             <span className="text-primary">{" "}{title2}</span>
           </h1>

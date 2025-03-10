@@ -12,6 +12,7 @@ import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
 import { Clients2 } from '@/components/Homepage/Clients2'
 import Services from '@/components/Homepage/Solutions'
+import MobileHero from '@/components/Homepage/MobileHero'
 
 
 const index = () => {
@@ -49,7 +50,7 @@ const index = () => {
   return (
     <>
       <Layout isOpen={isOpen}>
-        {!mobileWidth&&<Hero />}
+        {!mobileWidth?<Hero />:<MobileHero/>}
         <Story isOpen={isOpen} setIsOpen={setIsOpen}/>
         <Services/>
        <Clients2/>

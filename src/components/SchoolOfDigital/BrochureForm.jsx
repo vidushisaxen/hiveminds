@@ -38,8 +38,8 @@ export default function Brochureform() {
   };
 
   return (
-    <div className="w-full h-full p-[2vw] pb-[3vw] rounded-[0.5vw] fadein bg-white">
-      <p className="text-[2vw] font-medium text-center py-[2vw]">Fill in the Details and Get your Brochure Now!</p>
+    <div className="w-full h-full p-[2vw] pb-[3vw] rounded-[0.5vw] fadein bg-white mobile:rounded-[4.5vw] mobile:py-[7vw] mobile:bg-[#F2F2F2]">
+      <p className="text-[2vw] font-medium text-center py-[2vw] mobile:text-[5vw] mobile:w-[80%] mobile:ml-[2vw] mobile:text-left mobile:mb-[4vw]">Fill in the Details and Get your Brochure Now!</p>
       <Form {...form}>
         <form className="space-y-4">
           {/* Name Field */}
@@ -51,7 +51,7 @@ export default function Brochureform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="First Name *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2]" />
+                      <Input placeholder="First Name *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -69,7 +69,7 @@ export default function Brochureform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Email Address *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2]" />
+                      <Input placeholder="Email Address *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -87,7 +87,7 @@ export default function Brochureform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Phone Number *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2]" />
+                      <Input placeholder="Phone Number *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -105,7 +105,7 @@ export default function Brochureform() {
                 render={({ field }) => (
                   <FormItem >
                     <FormControl>
-                      <Input placeholder="City" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2]" />
+                      <Input placeholder="City" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -115,7 +115,7 @@ export default function Brochureform() {
           </div>
 
           <Select>
-            <SelectTrigger className="w-full h-[4vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2]">
+            <SelectTrigger className="w-full h-[4vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md">
               <SelectValue placeholder="Mode of Class" />
             </SelectTrigger>
             <SelectContent>
@@ -132,7 +132,7 @@ export default function Brochureform() {
          
 
           {/* Submit Button */}
-          <div className="w-full flex">
+          <div className="w-full flex mobile:pt-[7vw]">
             <FormButton
               text="Submit"
             />

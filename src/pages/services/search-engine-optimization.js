@@ -6,9 +6,10 @@ import gsap from 'gsap'
 import Hero from '@/components/ServiceDetail/Hero'
 import Overview from '@/components/ServiceDetail/Overview'
 import SubServices from '@/components/ServiceDetail/SubServices'
-import CaseStudies from '@/components/ServiceDetail/CaseStudies'
+
 import Contact from '@/components/ServiceDetail/Contact'
 import img from '../../../public/assets/images/services/search-engine-optimization.png'
+import CaseStudies from '@/components/Homepage/CaseStudies'
 
 const index = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,9 +40,9 @@ const index = () => {
       <Layout isOpen={isOpen}>
         <Hero title1={"Search Engine"} title2={"Optimisation "} para={"SEO is the strategic catalyst that transforms your digital presence into a sustainable growth engine. By leveraging technical excellence, compelling content, and authoritative link building, your brand becomes the go-to choice when customers search online."} img={img} />
         <Overview title1={"Scale Efficiently with a "} title2={"Data-First Strategy"} para={"In today’s crowded digital landscape, scaling your online presence demands a holistic SEO strategy. Invest in technical optimization, quality content, and strategic authority building. Align your SEO efforts with your broader business goals to drive long-term organic growth and outpace the competition."} />
-        <div className='relative h-full w-screen'>
+        <div className='relative h-full w-screen  mobile:bg-primary mobile:pb-[10%]'>
           <SubServices heading={"Customize Your SEO Strategy"} para={"Maximize your online impact with our comprehensive suite of SEO solutions, each designed to enhance a crucial element of your digital presence:"} subservices={subservices} />
-          {/* <CaseStudies /> */}
+          <CaseStudies/>
         </div>
         <Contact title1={"Boost Rankings, Drive "} title2={" Growth!"} para={"Enhance your visibility and dominate search results with our expert-driven SEO solutions. Let’s optimize your digital success—connect with us today!"} />
       </Layout>

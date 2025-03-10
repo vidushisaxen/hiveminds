@@ -136,10 +136,10 @@ const BlogCard = ({
   date,
 }) => {
   return (
-    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group blog-link">
+    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group blog-link mobile:w-full mobile:h-full">
       <Link href={"/blog"}>
       
-      <div className="h-[20.5vw] w-full relative overflow-hidden rounded-[1.3vw]">
+      <div className="h-[20.5vw] w-full relative overflow-hidden rounded-[1.3vw] mobile:h-[75vw] mobile:rounded-[4vw]">
         <Image
           src={imgSrc}
           fill
@@ -148,10 +148,10 @@ const BlogCard = ({
         />
       </div>
       </Link>
-      <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[28%] gap-[1.5vw] justify-between">
-        <div className="flex flex-col gap-[0.5vw]">
-          <p className="text-[1.6vw] font-medium py-[0.5vw]">{title}</p>
-          <div className="flex gap-[4vw] text-black/70">
+      <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[28%] gap-[1.5vw] justify-between mobile:gap-[7vw] mobile:mt-[5vw]">
+        <div className="flex flex-col gap-[0.5vw] mobile:gap-[4vw]">
+          <p className="text-[1.6vw] font-medium py-[0.5vw] mobile:text-[6vw]">{title}</p>
+          <div className="flex gap-[4vw] text-black/70 mobile:w-full mobile:justify-between">
             <p>{category}</p>
             <p>{date}</p>
           </div>
@@ -161,11 +161,11 @@ const BlogCard = ({
         <Link href={link}>
         <div className="w-fit">
               <div
-                className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[5.5vw] `}
+                className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[5vw] `}
               >
                 <span className="relative link-line group-hover:text-primary ">View More</span>
                 <svg
-                  className="relative -rotate-[90deg] w-[1vw] h-[1vw] overflow-hidden mobile:w-[5.5vw] mobile:h-[5.5vw] tablet:w-[2.5vw] tablet:h-[2.5vw]"
+                  className="relative -rotate-[90deg] w-[1vw] h-[1vw] overflow-hidden mobile:w-[5vw] mobile:h-[5vw] tablet:w-[2.5vw] tablet:h-[2.5vw]"
                   width="19"
                   height="23"
                   viewBox="0 0 19 23"
@@ -194,9 +194,9 @@ const BlogCard = ({
 
 const BlogListing = () => {
   return (
-    <section className="w-screen h-full pb-[7%]">
+    <section className="w-screen h-full pb-[7%] mobile:pb-[10%]">
       <div className="container-lg h-full">
-        <div className="flex flex-wrap items-start justify-center gap-[1vw]">
+        <div className="flex flex-wrap items-start justify-center gap-[1vw] mobile:flex-col mobile:gap-[7vw] mobile:mt-[10vw]">
           {caseStudiesData.map((study) => (
             <BlogCard
               key={study.id}

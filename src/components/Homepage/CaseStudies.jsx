@@ -192,7 +192,7 @@ const CaseStudies = () => {
                     spaceBetween: 35,
                   },
                   1536: {
-                    slidesPerView: 6,
+                    slidesPerView: 2,
                     spaceBetween: 40,
                   },
                 }}

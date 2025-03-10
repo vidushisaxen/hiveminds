@@ -233,9 +233,10 @@
   .btn {
    
     height: 15vw;
-    padding: 0 2vw;
+    padding: 0 3vw;
     padding-left: 15.5vw;
-    width: 85vw;
+    width: fit-content;
+    min-width: 40vw;
     max-width: 70vw;
     font-size: 3.9vw;
     font-weight: 400;

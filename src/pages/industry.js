@@ -18,7 +18,7 @@ const industry = () => {
         <main>
           <section className='w-screen h-full py-[5vw]'>
             <div className='container-lg text-center flex items-center justify-center  h-full'>
-              <div className='w-[75%] text-center'>
+              <div className='w-[75%] text-center mobile:w-full mobile:text-left'>
                 <p data-para-anim className='content py-[1vw]'>
                   At HiveMinds, we provide comprehensive digital marketing services across industries. We tailor
                   strategies to meet the unique needs of each sector, blending deep market research, data-driven
@@ -30,17 +30,17 @@ const industry = () => {
             </div>
 
           </section>
-          <section className='w-screeen h-full py-[5vw]'>
-            <div className='container-lg w-full h-full'>
+          <section className='w-screeen h-full pb-[5vw] mobile:pb-[15%] mobile:pt-[5%]'>
+            <div className='container-lg w-full h-full mobile:flex mobile:flex-col mobile:gap-[4vw]'>
               {industries.map((item, index) => (
-                <div key={index} className="w-full h-full flex items-start justify-between py-[3vw] border-[1.5px] border-[#EEEEEE] shadow-lg  px-[1.5vw] rounded-[1.5vw] mb-[3vw]">
-                  <div className='w-[45%]'>
-                    <Image src={item.img} width={790} height={990} alt="service-card" className='rounded-[1.2vw]' />
+                <div key={index} className="w-full h-[36vw] flex items-start justify-between py-[3vw] border-[1.5px] border-[#EEEEEE] shadow-md  px-[1.5vw] rounded-[1.5vw] mb-[3vw] mobile:flex-col mobile:rounded-[5.5vw] mobile:px-[3vw] fadeup mobile:h-[150vw]">
+                  <div className='w-[45%] mobile:w-full'>
+                    <Image src={item.img} width={790} height={990} alt="service-card" className='rounded-[1.2vw] mobile:rounded-[3.5vw]' />
                   </div>
-                  <div className='w-[50%]'>
-                    <h2 className='text-[2.8vw] font-medium headinganim'>
+                  <div className='w-[50%] mobile:w-full mobile:mt-[7vw]'>
+                    <h2 className='text-[2.8vw] font-medium mobile:text-[5.5vw] mobile:mb-[2vw]'>
                       {item.title1}
-                      <span className='text-primary'> {item.title2} </span>
+                      <span className='text-primary '> {item.title2} </span>
                     </h2>
 
                     <p className='content tracking-wide para py-[1vw]' dangerouslySetInnerHTML={{ __html: item.para }} />

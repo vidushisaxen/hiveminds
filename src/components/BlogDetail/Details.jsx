@@ -8,48 +8,53 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Details = ({content}) => {
   useEffect(()=>{
-    const ctx = gsap.context(()=>{
-        gsap.to(".blog-credentials",{
-            ease:"none",
+    if(globalThis.innerWidth>1024){
+
+      const ctx = gsap.context(()=>{
+          gsap.to(".blog-credentials",{
+              ease:"none",
+              scrollTrigger:{
+                  trigger:"#blog-detail",
+                  start:"top top",
+                  end:"90% top",
+                  pin:".blog-credentials"
+              }
+          })
+          gsap.from(".related-blogs",{
+            y:100,
+            opacity:0,
+            stagger:0.2,
+            duration:2,
+            ease:"power3.out",
             scrollTrigger:{
-                trigger:"#blog-detail",
-                start:"top top",
-                end:"90% top",
-                pin:".blog-credentials"
+              trigger:"#related-blogs",
+              start:"top 60%"
             }
-        })
-        gsap.from(".related-blogs",{
-          y:100,
-          opacity:0,
-          stagger:0.2,
-          duration:2,
-          ease:"power3.out",
-          scrollTrigger:{
-            trigger:"#related-blogs",
-            start:"top 60%"
-          }
-         })
-    })
-    return()=>ctx.revert()
+           })
+      })
+      return()=>ctx.revert()
+
+    }
 },[])
   return (
     <>
       <section className='h-full w-screen py-[5vw]' id='blog-detail'>
-        <div className='container-lg w-full h-full flex items-start justify-between'>
-          <div className='w-[30%] blog-credentials'>
-            <p className='text-[1.3vw] font-medium leading-[1]'>Posted On:</p>
-            <p className='text-[1.3vw] font-medium leading-[1] py-[1vw]'>{content.date}</p>
+        <div className='container-lg w-full h-full flex items-start justify-between mobile:flex-col'>
+          <div className='w-[30%] blog-credentials mobile:w-full mobile:flex mobile:flex-col mobile:gap-[3vw]'>
+            <p className='text-[1.3vw] font-medium leading-[1] mobile:text-[4vw]'>Posted On:</p>
+            <p className='text-[1.3vw] font-medium leading-[1] py-[1vw] mobile:text-[5.5vw]'>{content.date}</p>
             <div className='py-[2vw]'>
-              <p className='text-[1.3vw] font-medium leading-[1]'>Share Article:</p>
-              <div className="flex items-start gap-[1vw] py-[1vw]">
+              <p className='text-[1.3vw] font-medium leading-[1] mobile:text-[4vw] mobile:mb-[4vw]'>Share Article:</p>
+              <div className="flex items-start gap-[1vw] py-[1vw] mobile:gap-[3vw]">
                 <Link href={content.fbLink}>
-                  <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
-                    <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
+                  <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
+                    <span className=" flex justify-center items-center ">
                       <svg
                         width="15"
                         height="15"
                         viewBox="0 0 12 23"
                         fill="none"
+                        className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw]'
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -62,13 +67,14 @@ const Details = ({content}) => {
                   </div>
                 </Link>
                 <Link href={content.linkedinLink}>
-                  <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
-                    <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
+                  <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
+                    <span className=" flex justify-center items-center">
                       <svg
                         width="15"
                         height="15"
                         viewBox="0 0 21 21"
                         fill="none"
+                         className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw]'
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -91,13 +97,14 @@ const Details = ({content}) => {
                   </div>
                 </Link>
                 <Link href={content.twitterLink}>
-                  <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
-                    <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
+                  <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
+                    <span className=" flex justify-center items-center">
                       <svg
                         width="15"
                         height="15"
                         viewBox="0 0 19 20"
                         fill="none"
+                         className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw]'
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -112,16 +119,16 @@ const Details = ({content}) => {
               </div>
             </div>
           </div>
-          <div className='w-[60%] h-full'>
+          <div className='w-[60%] h-full mobile:w-full'>
            {content.content1.map((item,index)=>(
             <div key={index} className='space-y-[2vw] py-[1vw] fadein' dangerouslySetInnerHTML={{__html:item}}/>
            ))}
             {/* <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' /> */}
-            <div className='py-[2vw] '>
+            <div className='py-[2vw] mobile:py-[7vw] '>
               <div className='py-[1.5vw] fadein'>
-                <Image src={content.featuredImage1} height={690} width={1130} alt='blog-image' className='rounded-[1vw]' />
+                <Image src={content.featuredImage1} height={690} width={1130} alt='blog-image' className='rounded-[1vw] mobile:h-[85vw] mobile:rounded-[4vw]' />
               </div>
-              <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
+              <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw] mobile:h-[1px] mobile:w-[92%] mobile:my-[10vw] mobile:hidden' />
             </div>
 
             {content.content2.map((item,index)=>(
@@ -132,7 +139,7 @@ const Details = ({content}) => {
               <div className='py-[1.5vw] fadein'>
                 <Image src={content.featuredImage2} height={690} width={1130} alt='blog-image' className='rounded-[1vw]' />
               </div>
-              <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
+              <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw] mobile:h-[1px] mobile:w-[92%] mobile:my-[10vw] mobile:hidden' />
             </div>
 
             {content.content3.map((item,index)=>(

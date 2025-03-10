@@ -18,8 +18,8 @@ const solutions = () => {
                 <Hero title1={"Our"} title2={"Solution"} para={"We deliver integrated digital strategies that fuel demand, boost D2C and organic revenue, accelerate e-commerce growth, enhance retention, refine app marketing, and shape compelling digital brand identities—powering measurable, long-term success for modern brands"} img={img} />
                 <main>
                     <section className='w-screen h-full py-[5vw]'>
-                        <div className='container-lg text-center flex items-center justify-center  h-full'>
-                            <div className='w-[75%] text-center'>
+                        <div className='container-lg text-center flex items-center justify-center  h-full mobile:items-start'>
+                            <div className='w-[75%] text-center mobile:w-full mobile:text-left'>
                                 <p data-para-anim className='content py-[1vw]'>
                                     HiveMinds&apos; performance marketing transforms digital campaigns into powerful growth engines.
                                     We combine cutting-edge analytics with creative strategy to optimize the entire marketing
@@ -36,22 +36,22 @@ const solutions = () => {
                         </div>
 
                     </section>
-                    <section className='w-screeen h-full py-[5vw]'>
-                        <div className='container-lg w-full h-full'>
+                    <section className='w-screeen h-full py-[5vw] mobile:pb-[12%]'>
+                        <div className='container-lg w-full h-full mobile:flex mobile:flex-col mobile:gap-[5vw]'>
                             {solution.map((item, index) => (
-                                <div key={index} className={`w-full h-full flex items-center justify-between py-[3vw] ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                                    <div className='w-[45%]'>
+                                <div key={index} className={`w-full h-full flex items-center justify-between py-[3vw] ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} mobile:flex-col`}>
+                                    <div className='w-[45%] mobile:w-full'>
                                         <div className=' relative'>
-                                            <Image src={item.src} width={1200} height={900} alt="service-card" className='rounded-[1.2vw] fadein' />
+                                            <Image src={item.src} width={1200} height={900} alt="service-card" className='rounded-[1.2vw] fadein mobile:rounded-[4.5vw]' />
                                         </div>
                                     </div>
-                                    <div className='w-[47%]'>
-                                        <h2 className='text-[2.8vw] font-medium headinganim'>
+                                    <div className='w-[47%] mobile:w-full mobile:space-y-[3vw] mobile:mt-[5vw] mobile:ml-[2vw]'>
+                                        <h2 className='text-[2.8vw] font-medium headinganim mobile:text-[6.5vw]'>
                                             {item.title1}
                                             <span className='text-primary'> {item.title2} </span>
                                         </h2>
                                         <p data-para-anim className="content tracking-wide para py-[1vw]">{item.para}</p>
-                                        <div className='mt-[1vw]'>
+                                        <div className='mt-[1vw] mobile:mt-[3vw]'>
                                             <PrimaryButton
                                                 href={item.link}
                                                 text="View Details"

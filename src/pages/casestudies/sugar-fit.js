@@ -10,13 +10,13 @@ import React, { useState } from 'react'
 const content = {
     subtitle1: "Sugar.fit",
     subtitle2: "Success",
-    intro: "<p class='text-[1.5vw] mt-[2vw]'>Transforming diabetes reversal with smart, data-driven marketing.</p>",
+    intro: "<p class='mobile:mt-[7vw] mt-[2vw]'>Transforming diabetes reversal with smart, data-driven marketing.</p>",
     features: [
-        "<p class='text-[1.5vw] py-[1vw]'><span class='text-primary'> 1 Lakh+ </span> Downloads in a Year</p>",
+        "<p class=' py-[1vw]'><span class='text-primary'> 1 Lakh+ </span> Downloads in a Year</p>",
     ],
-    problem: "<p class='text-[1.5vw] mt-[2vw]'>Sugar.fit, a new diabetes reversal brand, struggled with minimal category awareness and strict digital ad policies, hindering its launch and growth.</p>",
-    approach: "<p class='text-[1.5vw] mt-[2vw]'>We implemented a data-driven strategy to expand Sugar.fit’s audience by analyzing organic customer insights. <br/><br/> Our channel mix evolved from core platforms to include additional engagement channels, targeting customers based on specific interests. <br/><br/> We conducted creative experiments, developing content that clearly communicated the benefits of diabetes reversal and Sugar.fit’s unique value proposition, resulting in highly resonant messaging across all digital touchpoints.</p>",
-    impact: "<p class='text-[1.5vw] mt-[2vw]'>Our targeted strategy generated over <span class='text-primary !font-medium'> 1 Lakh </span> downloads in one year, significantly boosting brand recognition and empowering Sugar.fit to transform lives through effective diabetes reversal solutions.</p>",
+    problem: "<p class=' mt-[2vw]'>Sugar.fit, a new diabetes reversal brand, struggled with minimal category awareness and strict digital ad policies, hindering its launch and growth.</p>",
+    approach: "<p class=' mt-[2vw]'>We implemented a data-driven strategy to expand Sugar.fit’s audience by analyzing organic customer insights. <br/><br/> Our channel mix evolved from core platforms to include additional engagement channels, targeting customers based on specific interests. <br/><br/> We conducted creative experiments, developing content that clearly communicated the benefits of diabetes reversal and Sugar.fit’s unique value proposition, resulting in highly resonant messaging across all digital touchpoints.</p>",
+    impact: "<p class=' mt-[2vw]'>Our targeted strategy generated over <span class='text-primary !font-medium'> 1 Lakh </span> downloads in one year, significantly boosting brand recognition and empowering Sugar.fit to transform lives through effective diabetes reversal solutions.</p>",
     industry: "Health & Wellness",
     service: "PPC",
     category: "Brand Searches"

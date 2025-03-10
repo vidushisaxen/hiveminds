@@ -120,10 +120,10 @@ const Listing = () => {
                         })}
                     </div>
                 </div>
-                <div className="absolute h-[2vw] w-[2.2vw] top-[4.5%] right-[15%] blue-hexagon-animation">
+                <div className="absolute h-[2vw] w-[2.2vw] top-[4.5%] right-[15%] blue-hexagon-animation mobile:hidden">
                     <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
                 </div>
-                <div className="absolute h-[2vw] w-[2.2vw] top-[1%] left-[12%] yellow-hexagon-animation" >
+                <div className="absolute h-[2vw] w-[2.2vw] top-[1%] left-[12%] yellow-hexagon-animation mobile:hidden" >
                     <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
                 </div>
             </section>

@@ -13,19 +13,19 @@ const caseStudies = [
     id: 1,
     title: "Dominos",
     imgSrc: "/assets/images/impact/dominos-listing.png",
-    link: "/casestudies/dominos-case-study",
+    link: "/casestudies/dominos",
   },
   {
     id: 2,
     title: "Flydubai",
     imgSrc: "/assets/images/impact/flydubai-listing.png",
-    link: "/casestudies/flydubai-case-study",
+    link: "/casestudies/flydubai",
   },
   {
     id: 3,
     title: "Flipkart Health+",
     imgSrc: "/assets/images/impact/flipkart-healthplus-listing.png",
-    link: "/casestudies/flipkart-healthplus-case-study",
+    link: "/casestudies/flipkart-healthplus",
   },
 ];
 
@@ -48,13 +48,13 @@ const MoreCs = () => {
   }, []);
 
   return (
-    <section className="w-full h-full py-[5%]" id="more-casestudy">
+    <section className="w-full h-full py-[5%] mobile:pb-[10%]" id="more-casestudy">
       <div className="w-screen h-full more-casestudies container-lg">
-        <h2 className="heading-2 w-[80%] fadein">
+        <h2 className="heading-2 w-[80%] fadein mobile:w-full">
           More Case <span className="text-primary">Studies</span>
         </h2>
-        <div className="w-full flex justify-between">
-          <p className="text-[1.2vw] mt-[2vw] w-[40%] fadein">
+        <div className="w-full flex justify-between mobile:flex-col mobile:mt-[4vw] mobile:gap-[7vw]">
+          <p className="text-[1.2vw] mt-[2vw] w-[40%] fadein mobile:w-full mobile:text-[4.2vw]">
             Discover our accolades and industry recognition that highlight our
             commitment to excellence.
           </p>
@@ -66,10 +66,10 @@ const MoreCs = () => {
             />
           </div>
         </div>
-        <div className="w-full flex pt-[5vw] pb-[3vw] gap-[1vw]">
+        <div className="w-full flex pt-[5vw] pb-[3vw] gap-[1vw] mobile:flex-col mobile:gap-[8vw] mobile:pt-[10vw]">
           {caseStudies.map((study) => (
             <Link key={study.id} href={study.link}>
-              <div className="relative casestudy w-[30vw] h-[30vw] overflow-hidden rounded-[1.5vw] group cursor-pointer">
+              <div className="relative casestudy w-[30vw] h-[30vw] overflow-hidden rounded-[1.5vw] group cursor-pointer mobile:w-full mobile:h-[85vw] mobile:rounded-[4vw]">
                 <Image
                   src={study.imgSrc}
                   height={450}
@@ -77,13 +77,13 @@ const MoreCs = () => {
                   alt={study.title}
                   className="hover:scale-[1.1] transition-all ease-in-out duration-500 hover:brightness-75 w-full h-full object-cover"
                 />
-                <div className="absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[1vw]">
-                  <p className="text-white text-[2.5vw] font-medium montreal">
+                <div className="absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[1vw] mobile:gap-[2.5vw] mobile:left-[5%]">
+                  <p className="text-white text-[2.5vw] font-medium montreal mobile:text-[6.5vw]">
                     {study.title}
                   </p>
                   <div>
                     <svg
-                      className="relative -rotate-[90deg] w-[2vw] h-[2vw] overflow-hidden"
+                      className="relative -rotate-[90deg] w-[2vw] h-[2vw] overflow-hidden mobile:w-[6vw] mobile:h-[6vw]"
                       width="19"
                       height="23"
                       viewBox="0 0 19 23"

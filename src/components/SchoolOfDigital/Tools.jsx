@@ -41,17 +41,17 @@ const tools3=[
 const Tools = () => {
   return (
    <section>
-     <div className='w-full h-full'>
-        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw]  container-lg">
+     <div className='w-full h-full mobile:py-[10%]'>
+        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw]  container-lg mobile:items-start mobile:gap-[4vw]">
             <h2 data-heading-anim className="heading-2 headinganim">
             Tools you will Learn from
                 <span className="blue-text"> Our Course</span>
             </h2>
-            <p data-para-anim className="content w-[65%] text-center fadein">
+            <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left">
             We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high-quality. We provide effective strategies that are aligned with your long-term business goals.
             </p>
         </div>
-        <div className='py-[5vw] flex flex-col gap-[3vw]'>
+        <div className='py-[5vw] flex flex-col gap-[3vw] mobile:gap-0'>
               <Marquee pauseOnHover="true" speed={40}>
                         {tools1.map((logoSrc, index) => (
                           <div
@@ -72,7 +72,7 @@ const Tools = () => {
                         {tools2.map((logoSrc, index) => (
                           <div
                             key={index}
-                            className="relative h-full w-[20vw] flex items-center justify-start group fadeup mobile:w-[40vw]"
+                            className="relative h-full w-[20vw] flex items-center justify-start group fadeup mobile:w-[40vw] mobile:hidden"
                           >
                             <img
                               src={logoSrc}
@@ -88,7 +88,7 @@ const Tools = () => {
                         {tools3.map((logoSrc, index) => (
                           <div
                             key={index}
-                            className="relative h-full w-[20vw] flex items-center justify-start group fadeup mobile:w-[40vw]"
+                            className="relative h-full w-[20vw] flex items-center justify-start group fadeup mobile:w-[40vw] mobile:hidden"
                           >
                             <img
                               src={logoSrc}

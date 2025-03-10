@@ -17,31 +17,31 @@ const content={
       "<p class='content'> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>",
       "<p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>",
       "<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>",
-      " <span class='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]'/>",
-      "<p class='text-[2.5vw]'>Lorem Ipsum Dolor</p>",
+      " <span class='bg-black w-[57%] h-[1.5px] absolute lineDraw mobile:hidden my-[1vw] mobile:w-[92%] mobile:h-[1px] mobile:my-[4vw]'/>",
+      "<p class='text-[2.5vw] mobile:text-[7vw] mobile:font-medium mobile:mt-[10vw]'>Lorem Ipsum Dolor</p>",
       "<p class='content'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>",
       "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>"
 
   ],
   content2:[
-    "<p class='text-[2.5vw]'>Lorem Ipsum is simply dummy text </p>",
+    "<p class='text-[2.5vw] mobile:text-[7vw] mobile:font-medium mobile:mt-[10vw]'>Lorem Ipsum is simply dummy text </p>",
       "<p class='content'> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>",
       "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>",
-      " <span class='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]'/>",
-      "<p class='text-[2.5vw]'>Lorem Ipsum is simply dummy text </p>",
+      " <span class='bg-black w-[57%] h-[1.5px] absolute lineDraw mobile:hidden my-[1vw] mobile:h-[1px] mobile:w-[92%] mobile:my-[10vw]'/>",
+      "<p class='text-[2.5vw] mobile:text-[7vw] mobile:font-medium mobile:mt-[15vw]'>Lorem Ipsum is simply dummy text </p>",
       "<p class='content'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>",
       "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>"
   ],
   content3:[
-    "<p class='text-[2.5vw]'>Lorem Ipsum is simply dummy text </p>",
+    "<p class='text-[2.5vw]  mobile:text-[7vw] mobile:font-medium mobile:mt-[15vw]'>Lorem Ipsum is simply dummy text </p>",
       "<p class='content'> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>",
       "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>",
-      " <span class='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]'/>",
-      "<p class='text-[2.5vw]'>Lorem Ipsum is simply dummy text </p>",
+      " <span class='bg-black w-[57%] h-[1.5px] absolute lineDraw mobile:hidden my-[1vw] mobile:h-[1px] mobile:w-[92%] mobile:my-[10vw]'/>",
+      "<p class='text-[2.5vw] mobile:text-[7vw] mobile:font-medium mobile:mt-[15vw]'>Lorem Ipsum is simply dummy text </p>",
       "<p class='content'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>",
       "<p class='content'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>",
-      " <span class='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]'/>",
-      "<p class='text-[2.5vw]'>Lorem Ipsum</p>",
+      " <span class='bg-black w-[57%] h-[1.5px] absolute lineDraw mobile:hidden my-[1vw] mobile:h-[1px] mobile:w-[92%] mobile:my-[10vw]'/>",
+      "<p class='text-[2.5vw] mobile:text-[7vw] mobile:font-medium mobile:mt-[15vw]'>Lorem Ipsum</p>",
       "<p class='content'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>"
   ]
 }

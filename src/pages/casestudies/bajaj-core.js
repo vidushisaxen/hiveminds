@@ -8,18 +8,18 @@ import React, { useState } from 'react'
 const content = {
     subtitle1: "Bajaj Core  ",
     subtitle2: "Dominance",
-    intro: "<p class='text-[1.5vw] mt-[2vw]'>Dominating core categories with top product rankings.</p>",
+    intro: "<p class='mt-[2vw] mobile:mt-[7vw]'>Dominating core categories with top product rankings.</p>",
     features:[
-        "<p class='text-[1.5vw] py-[1vw]'> 3 products in Top 5 <span class='text-primary'> Top 5 </span></p>",
-        "<p class='text-[1.5vw] py-[1vw]'> 1 product ranked <span class='text-primary'> #1 </span></p>",
+        "<p class=' py-[1vw]'> 3 products in Top 5 <span class='text-primary'> Top 5 </span></p>",
+        "<p class=' py-[1vw]'> 1 product ranked <span class='text-primary'> #1 </span></p>",
 
     ],
     industry: "Electronics & Consumer Durables",
     service: "Marketplace",
     category: "Getting The Bestseller Rank",
-    problem: " <p class='text-[1.5vw] mt-[2vw]'>Until 2021, Bajaj relied on organic strength, but in 2022, limited budgets and aggressive competitors challenged its quest for top positions in core categories.</p>",
-    approach: "<p class='text-[1.5vw] mt-[2vw]'>We fine-tuned content to align with customer FAQs and Bajaj’s unique selling propositions, attracting new audiences and driving increased offtakes. Visibility was maximized during peak hours while ensuring healthy gross volumes and avoiding internal cannibalization. This strategic content and timing approach enabled Bajaj to overcome budget constraints and secure a dominant position in the market.</p>",
-    impact: "<p class='text-[1.5vw] mt-[2vw]'>Achieved a <span class='text-primary'> #1 ranked </span> product in core categories, with three products in the top five and highest clicks on generic keywords.</p>"
+    problem: " <p class=' mt-[2vw]'>Until 2021, Bajaj relied on organic strength, but in 2022, limited budgets and aggressive competitors challenged its quest for top positions in core categories.</p>",
+    approach: "<p class=' mt-[2vw]'>We fine-tuned content to align with customer FAQs and Bajaj’s unique selling propositions, attracting new audiences and driving increased offtakes. Visibility was maximized during peak hours while ensuring healthy gross volumes and avoiding internal cannibalization. This strategic content and timing approach enabled Bajaj to overcome budget constraints and secure a dominant position in the market.</p>",
+    impact: "<p class=' mt-[2vw]'>Achieved a <span class='text-primary'> #1 ranked </span> product in core categories, with three products in the top five and highest clicks on generic keywords.</p>"
 
 }
 

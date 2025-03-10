@@ -60,12 +60,12 @@ const data = [
 const TestimonialCard = ({ img, name, year, content, key, stars }) => {
   return (
     <>
-      <div key={key} className="w-[34.2vw] h-[30vw] shadow-sm rounded-[1.2vw]  py-[2vw] px-[1.5vw] bg-white  hover:scale-[1.02] duration-500 ease-in-out transition-all mobile:w-[80vw] mobile:h-[25vw] mobile:rounded-[2.5vw] mobile:px-[3vw] border">
-        <div className="flex items-start justify-between gap-[1vw] w-full mobile:gap-[3vw]">
+      <div key={key} className="w-[34.2vw] h-[30vw] shadow-sm rounded-[1.2vw]  py-[2vw] px-[1.5vw] bg-white  hover:scale-[1.02] duration-500 ease-in-out transition-all mobile:w-full mobile:h-[130vw] mobile:rounded-[4.5vw] mobile:px-[5vw] border mobile:py-[5vw] ">
+        <div className="flex items-start justify-between gap-[1vw] w-full mobile:gap-[5vw]">
           <div className="w-[8vw] h-[7vw] relative mobile:w-[20vw] mobile:h-[18vw]">
             <Image src={img} fill alt="awards-1" className='rounded-full' />
           </div>
-          <div className="w-[80%] flex flex-col mobile:flex-col-reverse mobile:gap-[0.5vw]">
+          <div className="w-[80%] flex flex-col mobile:mt-[3vw] mobile:gap-[0.5vw]">
             <p className=" text-[1.8vw] font-medium montreal mobile:text-[3.5vw] ">
               {name}
             </p>
@@ -90,7 +90,7 @@ const TestimonialCard = ({ img, name, year, content, key, stars }) => {
           <span className='absolute top-[10%] left-[5%]'>
             <Image src={"/assets/icons/quote-icon.svg"} width={100} height={100} alt='quote-icon' />
           </span>
-          <p className='content relative z-[1]'>{content}</p>
+          <p className='content relative z-[1] mobile:mt-[7vw]'>{content}</p>
         </div>
       </div>
     </>
@@ -117,17 +117,17 @@ const Testimonials = () => {
   return (
     <section className='py-[5vw] h-full w-screen relative'>
       <div className='w-full h-full '>
-        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] container-lg">
+        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] container-lg mobile:items-start mobile:gap-[4vw]">
           <h2 data-heading-anim className="heading-2 headinganim">
             What Our
             <span className="blue-text"> Customer&apos;s Say</span>
           </h2>
-          <p data-para-anim className="content w-[65%] text-center fadein">
+          <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left">
             We provide effective strategies that are aligned with your long-term business goals.
           </p>
         </div>
 
-        <div className="w-full overflow-hidden h-full flex items-center justify-center py-[3vw] mt-[5%] fadeup">
+        <div className="w-full overflow-hidden h-full flex items-center justify-center py-[3vw] mt-[5%] fadeup mobile:px-[5vw]">
           <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             loop={true}
@@ -135,8 +135,8 @@ const Testimonials = () => {
             slidesPerView={1.2}
             breakpoints={{
               480: {
-                slidesPerView: 2,
-                spaceBetween: 15,
+                slidesPerView: 1.05,
+                spaceBetween: 5,
               },
 
               1024: {
@@ -170,7 +170,7 @@ const Testimonials = () => {
           </Swiper>
         </div>
         <div
-          className={`absolute z-[5] top-[30%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-white cursor-pointer border border-black mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw]
+          className={`absolute z-[5] top-[30%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-white cursor-pointer border border-black mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:hidden
                 ${activeButton === "next" ? " text-black" : "bg-transparent"
             } transition-colors duration-300`}
           onClick={handleNext}
@@ -196,7 +196,7 @@ const Testimonials = () => {
           </div>
         </div>
         <div
-          className={`absolute z-[5] w-[4vw] h-[4vw] top-[30%] right-[11%]  border border-black overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%]
+          className={`absolute z-[5] w-[4vw] h-[4vw] top-[30%] right-[11%]  border border-black overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%] mobile:hidden
                 ${activeButton === "prev"
               ? " text-black"
               : "bg-transparent "
