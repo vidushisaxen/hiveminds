@@ -1,48 +1,45 @@
 import Image from "next/image";
 import React from "react";
+import img1 from "../../../public/assets/images/about/responsibility-1.png";
+import img2 from "../../../public/assets/images/about/responsibility-2.png";
+import img3 from "../../../public/assets/images/about/responsibility-3.png";
+import img4 from "../../../public/assets/images/about/responsibility-4.png";
+import img5 from "../../../public/assets/images/about/responsibility-5.png";
+import img6 from "../../../public/assets/images/about/responsibility-6.png";
 
 const Responsibility = () => {
   return (
     <>
-      <section className="w-screen h-full py-[5%]" id="responsibility">
-        <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw]">
-          <h2 className="heading-2 headinganim">
+      <section className="w-screen h-full py-[5%] mobile:py-10" id="responsibility">
+        <div className="mobile:px-[5vw] flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:block mobile:pb-8">
+          <h2 className="heading-2 headinganim mobile:pb-4">
             Corporate Social <span className="blue-text">Responsibility</span>
           </h2>
-          <p className="content w-[70%] text-center fadein">
+          <p className="content w-[70%] text-center fadein mobile:text-left mobile:w-full">
             We provide effective strategies that are aligned with your long-term
             business goals. We promise to deliver high-quality. We provide
             effective strategies that are aligned with your long-term business
             goals.
           </p>
-          <div className="container-lg grid grid-cols-12 w-full h-[37vw] mt-[5vw] fadeup">
-            <div className="col-span-3 h-fit">
-              <div className="w-full h-full flex flex-col gap-[1.5vw] pr-[1.5vw]">
-                <div className="h-[55%] w-full  rounded-[1.2vw] overflow-hidden">
-                   <Image src={"/assets/images/about/responsibility-1.png"} alt="responsibilty-images" width={400} height={520} className="object-cover w-full h-full hover:scale-[1.1] transition-all ease-in-out duration-500"/>
-                </div>
-                <div className="h-[45%] w-full  rounded-[1.2vw] overflow-hidden">
-                <Image src={"/assets/images/about/responsibility-2.png"} alt="responsibilty-images" width={400} height={520} className="object-cover w-full h-full hover:scale-[1.1] transition-all ease-in-out duration-500"/>
-                </div>
-              </div>
-
-            </div>
-            <div className="col-start-4 col-span-3 w-[115%] h-full rounded-[1.2vw] overflow-hidden">
-            <Image src={"/assets/images/about/responsibility-3.png"} alt="responsibilty-images" width={400} height={520} className="object-cover w-full h-full hover:scale-[1.1] transition-all ease-in-out duration-500"/>
-            </div>
-            <div className="col-start-7 col-span-3 pl-[5vw] ">
-            <div className="w-full h-full flex flex-col gap-[1.5vw] pr-[1.5vw]">
-                <div className="h-[38%] w-full  rounded-[1.2vw] overflow-hidden">
-                   <Image src={"/assets/images/about/responsibility-4.png"} alt="responsibilty-images" width={400} height={520} className="object-cover w-full h-full hover:scale-[1.1] transition-all ease-in-out duration-500"/>
-                </div>
-                <div className="h-[60%] w-full  rounded-[1.2vw] overflow-hidden">
-                <Image src={"/assets/images/about/responsibility-5.png"} alt="responsibilty-images" width={400} height={520} className="object-cover w-full h-full hover:scale-[1.1] transition-all ease-in-out duration-500"/>
-                </div>
-              </div>
-            </div>
-            <div className="col-start-10 col-span-3 bg-yellow-500 rounded-[1.2vw] overflow-hidden">
-            <Image src={"/assets/images/about/responsibility-6.png"} alt="responsibilty-images" width={400} height={520} className="object-cover w-full h-full hover:scale-[1.1] transition-all ease-in-out duration-500"/>
-            </div>
+        </div>
+        <div className="container-lg grid grid-cols-16 grid-rows-5 gap-[1.2vw] h-[35vw] mobile:grid-cols-2 mobile:grid-rows-none mobile:h-full mobile:gap-4 mobile:pb-10">
+          <div className="overflow-hidden rounded-2xl col-span-4 row-span-3 mobile:col-span-2 mobile:row-auto mobile:h-[70vw]">
+            <Image src={img1} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
+          </div>
+          <div className="overflow-hidden rounded-2xl col-span-4 row-span-2 row-start-4 mobile:col-span-1 mobile:row-auto mobile:h-[60vw]">
+            <Image src={img2} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
+          </div>
+          <div className="overflow-hidden rounded-2xl col-span-5 row-span-5 mobile:col-span-1 mobile:row-auto mobile:h-[60vw]">
+            <Image src={img3} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
+          </div>
+          <div className="overflow-hidden rounded-2xl col-span-3 row-span-2 mobile:col-span-2 mobile:row-auto mobile:h-[70vw]">
+            <Image src={img4} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
+          </div>
+          <div className="overflow-hidden rounded-2xl col-span-3 row-span-3 order-3 mobile:order-last mobile:col-span-1 mobile:row-auto mobile:h-[60vw]">
+            <Image src={img5} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
+          </div>
+          <div className="overflow-hidden rounded-2xl col-span-4 row-span-5 mobile:col-span-1 mobile:row-auto mobile:h-[60vw]">
+            <Image src={img6} alt="responsibilty-images" placeholder="blur" className="object-cover w-full h-full hover:scale-[1.05] ease-in-out duration-500" />
           </div>
         </div>
       </section>

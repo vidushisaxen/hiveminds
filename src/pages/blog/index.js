@@ -14,7 +14,6 @@ const index = () => {
   return (
    <>
    <Layout>
-
     <Hero title1={"What’s"} title2={"Buzzing"} para={"SEO is vastly interdisciplinary and it requires skills ranging from coding to linguistics to production. It includes services such as Influencer Marketing and Organic Social Media Management."} img={img} />
     <FeaturedBlog/>
     <BlogListing/>
@@ -24,4 +23,4 @@ const index = () => {
   )
 }
 
-export default index
+export default index;

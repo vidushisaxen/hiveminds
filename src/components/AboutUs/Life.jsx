@@ -31,31 +31,30 @@ const lifeData = [
 ];
 
 const Life = () => {
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-           gsap.from(".life-cards",{
-            y:100,
-            opacity:0,
-            stagger:0.2,
-            duration:2,
-            ease:"power3.out",
-            scrollTrigger:{
-              trigger:"#life-at-hiveminds",
-              start:"top 60%"
-            }
-           })
-    
-        });
-        return () => ctx.revert();
-      }, []);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".life-cards", {
+        y: 100,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: "#life-at-hiveminds",
+          start: "top 60%"
+        }
+      })
+    });
+    return () => ctx.revert();
+  }, []);
   return (
-    <section className="w-screen h-full py-[5%] relative" id="life-at-hiveminds">
+    <section className="w-screen h-full py-[5%] relative mobile:pb-16" id="life-at-hiveminds">
       {/* Title Section */}
-      <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw]">
-        <h2 className="heading-2 headinganim">
+      <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:block mobile:px-[5vw] mobile:pb-10">
+        <h2 className="heading-2 headinganim mobile:w-4/5 mobile:mb-4">
           Life At <span className="blue-text">Hiveminds?</span>
         </h2>
-        <p className="content w-[70%] text-center fadein">
+        <p className="content w-[70%] text-center fadein mobile:text-left mobile:w-full">
           Here, work feels like family. Our vibrant culture celebrates every
           achievement and embraces diverse traditions, fostering deep social
           bonds and a dynamic, inclusive community.
@@ -63,22 +62,22 @@ const Life = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="container-lg flex justify-between flex-wrap gap-[2vw]">
+      <div className="container-lg flex justify-between flex-wrap gap-[2vw] mobile:block mobile:space-y-4">
         {lifeData.map((item) => (
           <div
             key={item.id}
-            className="w-[21.5vw] h-[25vw] rounded-[1.2vw] bg-white shadow-md py-[3.5vw] px-[1.3vw] life-cards"
+            className="w-[21.5vw] h-[25vw] rounded-[1.2vw] bg-white shadow-md py-[3.5vw] px-[1.3vw] life-cards mobile:w-full mobile:h-full mobile:px-5 mobile:pt-6 mobile:pb-8 mobile:rounded-2xl mobile:shadow-lg"
           >
-            <div className="flex flex-col gap-[2vw] h-full">
-              <h4 className="text-[1.7vw] text-center">{item.title}</h4>
-              <p className="text-[1.2vw] text-center">{item.description}</p>
+            <div className="flex flex-col gap-[2vw] h-full mobile:gap-4">
+              <h4 className="text-[1.7vw] text-center mobile:text-[5.65vw] mobile:text-left font-medium mobile:leading-8">{item.title}</h4>
+              <p className="text-[1.2vw] text-center mobile:text-left mobile:text-[4.6vw]">{item.description}</p>
             </div>
           </div>
         ))}
       </div>
 
       {/* Background Section */}
-      <div className="w-full h-[38%] bg-primary absolute bottom-0 z-[-1]"></div>
+      <div className="w-full h-[38%] bg-primary absolute bottom-0 z-[-1] mobile:h-[70%]"></div>
     </section>
   );
 };
