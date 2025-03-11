@@ -58,12 +58,12 @@ const WhyUs = () => {
   return (
     <section className="w-screen h-full pb-[5%] mobile:pb-10" id="why-us">
       <div className="cotainer-lg flex flex-col px-[5vw]">
-        <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:items-start mobile:gap-5 mobile:pb-8">
+        <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:items-start mobile:gap-5 mobile:pb-8 tablet:items-start tablet:gap-[3vw]">
           <h2 className="heading-2 headinganim mobile:w-3/5">
             Why
             <span className="blue-text"> Hiveminds?</span>
           </h2>
-          <p className="content w-[70%] text-center fadein mobile:w-full mobile:text-left">
+          <p className="content w-[70%] text-center fadein mobile:w-full mobile:text-left tablet:text-left">
             HiveMinds thrives on innovation, data, and creativity, fostering a
             culture that champions collaboration and continuous growth. Our
             commitment to excellence makes us a trusted partner for both clients
@@ -71,19 +71,19 @@ const WhyUs = () => {
           </p>
         </div>
 
-        <div className="w-full flex justify-between mobile:block">
-          <div className="h-[43vw] w-[40%] rounded-[1.5vw] overflow-hidden fadeup mobile:w-full mobile:rounded-3xl mobile:h-[80vw] mobile:mb-6" ref={previewContainerRef}>
+        <div className="w-full flex justify-between mobile:block tablet:flex-col">
+          <div className="h-[43vw] w-[40%] rounded-[1.5vw] overflow-hidden fadeup mobile:w-full mobile:rounded-3xl mobile:h-[80vw] mobile:mb-6 tablet:w-full tablet:h-[60vw]" ref={previewContainerRef}>
             <Image src={"/assets/images/about/hiveminds-1.png"} alt="" className="w-full h-full object-cover" width={720} height={940} />
           </div>
-          <div className="w-[55%] flex flex-col mt-[1.5vw] mobile:w-full">
+          <div className="w-[55%] flex flex-col mt-[1.5vw] mobile:w-full tablet:w-full">
           {features.map((item,index)=>(  
-            <div key={index} className="flex flex-col gap-[2vw] mt-[2vw] fadein mobile:gap-5 mobile:mt-5" onMouseEnter={() => handleImageHover(item)}>
+            <div key={index} className="flex flex-col gap-[2vw] mt-[2vw] fadein mobile:gap-5 mobile:mt-5 tablet:gap-[4vw] tablet:mt-[4vw]" onMouseEnter={() => handleImageHover(item)}>
               <span className="w-full h-[1px] bg-black"></span>
               
-                <div  className="flex gap-[2vw] items-center mobile:gap-6 mobile:px-3"  
+                <div  className="flex gap-[2vw] items-center mobile:gap-6 mobile:px-3 tablet:gap-[4vw]"  
                 >
-                    <Image src={item.icon} alt="icons" width={30} height={30} className="mobile:w-10" />
-                    <p className="text-[1.2vw] mobile:text-[5.1vw]">{item.heading}</p>
+                    <Image src={item.icon} alt="icons" width={30} height={30} className="mobile:w-10 tablet:w-[8vw]" />
+                    <p className="text-[1.2vw] mobile:text-[5.1vw] tablet:text-[4vw]">{item.heading}</p>
                   </div>
             </div>
              ))}

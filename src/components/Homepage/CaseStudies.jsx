@@ -136,7 +136,7 @@ const CaseStudies = () => {
     <>
       <section id="caseStudies" className="pt-[10%] relative">
         <div className="w-screen h-[45vw] flex items-center justify-center z-[10] mobile:h-full tablet:h-full">
-          <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block pl-[3vw] pt-[3vw] pr-[1.5vw] shadow-2xl drop-shadow-2xl overflow-hidden mobile:shadow-none mobile:flex-col mobile:items-start mobile:py-[12vw] mobile:px-[5vw] mobile:gap-[4vw] mobile:rounded-[4vw] mobile:drop-shadow-md tablet:flex-col tablet:rounded-[3vw] tablet:pb-[7vw]">
+          <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block pl-[3vw] pt-[3vw] pr-[1.5vw] shadow-2xl drop-shadow-2xl overflow-hidden mobile:shadow-none mobile:flex-col mobile:items-start mobile:py-[12vw] mobile:px-[5vw] mobile:gap-[4vw] mobile:rounded-[4vw] mobile:drop-shadow-md tablet:flex-col tablet:rounded-[3vw] tablet:py-[7vw]">
             <div className="w-[40%] h-full flex flex-col gap-[2vw] mobile:w-full mobile:gap-[4vw] tablet:w-full ">
               <h2 className="heading-2 headinganim">
                 Growth Isn&apos;t Just a Buzzword - It&apos;s About Real{" "}
@@ -245,7 +245,7 @@ const CaseStudies = () => {
             </div>
           </div>
         </div>
-        <div className="w-screen h-[70%] rounded-tl-[4vw] rounded-tr-[4vw] bg-primary absolute bottom-0 left-0 z-[-1] hidden mobile:block">
+        <div className="w-screen h-[70%] rounded-tl-[4vw] rounded-tr-[4vw] bg-primary absolute bottom-0 left-0 z-[-1] hidden mobile:block tablet:block">
 
 
         </div>

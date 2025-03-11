@@ -1,45 +1,35 @@
+// import { TrendingUp } from "lucide-react";
+// import React, { useEffect, useState } from "react";
 
-// import Hero from "@/components/Hero";
-// import Layout from "@/components/Layout";
-// import PortableTextComponent from "@/components/PortableTextComponent"; // ✅ Import PortableTextComponent
-// import { getCaseStudies } from "@/lib/casestudies";
-// import img from '../../public/assets/images/impact/our-impact-hero-img.png'
+// const trial = () => {
+//   const [show, setShow] = useState(false);
+//   const [name, setName] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [pass, setPass] = useState("");
 
-// export default function CaseStudies({ caseStudies }) {
-//   console.log(caseStudies)
-//   return (
-//     <Layout>
-//       <Hero title1={caseStudies[2].title} img={img} />
-//       <div className="container mx-auto p-4">
-//         <ul>
-//           {caseStudies.map((study) => (
-//             <li key={study.slug} className="mb-10">
-//               {/* ✅ Pass Full caseStudyFields to PortableTextComponent */}
-//               {/* <PortableTextComponent value={study.content} /> */}
-//               <div className="container-lg" dangerouslySetInnerHTML={{__html:study.content}}/>
-//             </li>
-//           ))}
-//         </ul>
-//       </div>
-//     </Layout>
-//   );
-// }
+  
+//   const showPass = () => {
+//     if(show){
 
-// export async function getStaticProps() {
-//   let { caseStudies } = await getCaseStudies();
-//   return {
-//     props: {
-//       caseStudies,
-//     },
-//     revalidate: 500,
+//       setShow(false);
+//     }
+//     else{
+    
+//         setShow(true);
+    
+//     }
 //   };
-// }
-import React from 'react'
 
-const trial = () => {
-  return (
-    <div>trial</div>
-  )
-}
+//   return (
+//     <>
+//       <form>
+//         <input type="name " placeholder="name" />
+//         <input type="email" placeholder="email" />
+//         <input type={show?"text":"password"} placeholder="enter a pass" />
+//         <span onClick={showPass}>{show ? <><p>hide</p></> : <><p>show</p></>}</span>
+//       </form>
+//     </>
+//   );
+// };
 
-export default trial
+// export default trial;

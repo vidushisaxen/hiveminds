@@ -81,13 +81,13 @@ const awards=[
 const AwardCard = ({ img, title, year, category ,key}) => {
   return (
     <>
-      <div key={key} className="w-[34.2vw] h-[11.5vw] border-[0.5px] border-white/20 rounded-[1.2vw] flex items-center  px-[1.5vw]  bg-white/10 awards-card hover:scale-[1.02] duration-500 ease-in-out transition-all mobile:w-[80vw] mobile:h-[25vw] mobile:rounded-[2.5vw] mobile:px-[3vw]">
-        <div className="flex items-center justify-between gap-[1vw] w-full mobile:gap-[3vw]">
-          <div className="w-[10vw] h-[8.3vw] relative mobile:w-[20vw] mobile:h-[18vw]">
+      <div key={key} className="w-[34.2vw] h-[11.5vw] border-[0.5px] border-white/20 rounded-[1.2vw] flex items-center  px-[1.5vw]  bg-white/10 awards-card hover:scale-[1.02] duration-500 ease-in-out transition-all mobile:w-[80vw] mobile:h-[25vw] mobile:rounded-[2.5vw] mobile:px-[3vw] tablet:w-[65vw] tablet:h-[20vw]">
+        <div className="flex items-center justify-between gap-[1vw] w-full mobile:gap-[3vw] tablet:gap-[2.5vw]">
+          <div className="w-[10vw] h-[8.3vw] relative mobile:w-[20vw] mobile:h-[18vw] tablet:w-[15vw] tablet:h-[15vw]">
             <Image src={img} fill alt="awards-1" />
           </div>
           <div className="w-[80%] flex flex-col mobile:flex-col-reverse mobile:gap-[0.5vw]">
-            <p className="text-white text-[1.25vw] font-medium montreal mobile:text-[3.5vw] ">
+            <p className="text-white text-[1.25vw] font-medium montreal mobile:text-[3.5vw] tablet:text-[2vw] ">
               {title}
             </p>
             <p className="content-white mobile:!text-[3vw]">{year}</p>
@@ -116,13 +116,13 @@ const Awards = () => {
     }
   };
   return (
-    <section id="awards " className="mobile:bg-primary mobile:py-[10%]">
+    <section id="awards " className="mobile:bg-primary mobile:py-[10%] tablet:bg-primary tablet:py-[7%]">
       <div className="h-full w-[100vw] py-[5%] rounded-[30px] flex flex-col items-start justify-center px-[3vw] overflow-hidden relative mobile:pb-[25%]">
-        <div className="w-[35%] flex flex-col gap-[2vw] mobile:w-full mobile:gap-[4vw]">
+        <div className="w-[35%] flex flex-col gap-[2vw] mobile:w-full mobile:gap-[4vw] tablet:w-[70%]">
           <h2 className="heading-2 font-medium montreal !text-white headinganim">
             Our Accolades Speak For Themselves
           </h2>
-          <p data-para-anim className="content-white w-[80%] mobile:w-full">
+          <p data-para-anim className="content-white w-[80%] mobile:w-full tablet:w-[60%] tablet:!leading-[1.4]" >
             Discover our accolades and industry recognition that highlight our
             commitment to excellence.
           </p>
@@ -136,6 +136,10 @@ const Awards = () => {
             breakpoints={{
               480: {
                 slidesPerView: 2,
+                spaceBetween: 15,
+              },
+              720:{
+                slidesPerView: 1.4,
                 spaceBetween: 15,
               },
              
@@ -169,7 +173,7 @@ const Awards = () => {
           </Swiper>
         </div>
         <div
-          className={`absolute z-[5] top-[15%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-white cursor-pointer border border-white mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw]
+          className={`absolute z-[5] top-[15%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-white cursor-pointer border border-white mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] tablet:w-fit tablet:h-fit tablet:p-[2vw] tablet:top-[30%]
                 ${
                   activeButton === "next" ? " text-white" : "bg-transparent"
                 } transition-colors duration-300`} // Added background color transition
@@ -196,7 +200,7 @@ const Awards = () => {
           </div>
         </div>
         <div
-          className={`absolute z-[5] w-[4vw] h-[4vw] top-[15%] right-[11%]  border border-white overflow-hidden group hover:bg-white transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%]
+          className={`absolute z-[5] w-[4vw] h-[4vw] top-[15%] right-[11%]  border border-white overflow-hidden group hover:bg-white transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%] tablet:w-fit tablet:h-fit tablet:p-[2vw] tablet:right-[15%] tablet:top-[30%]
                 ${
                   activeButton === "prev"
                     ? " text-white"
@@ -204,7 +208,7 @@ const Awards = () => {
                 } transition-colors duration-300`} // Added background color transition
           onClick={handlePrev} // Trigger previous slide
         >
-          <div className="w-[4vw] h-[4vw]  mobile:w-[7.5vw] mobile:h-[7.5vw] relative z-[6]  flex justify-center items-center ">
+          <div className="w-[4vw] h-[4vw]  mobile:w-[7.5vw] mobile:h-[7.5vw] relative z-[6]  tablet:w-[2.5vw] tablet:h-[2.5vw] flex justify-center items-center ">
             <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center mobile:w-[5.5vw] mobile:h-[5.5vw]">
             <svg
               width="16"

@@ -42,12 +42,12 @@ const Tools = () => {
   return (
    <section>
      <div className='w-full h-full mobile:py-[10%]'>
-        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw]  container-lg mobile:items-start mobile:gap-[4vw]">
-            <h2 data-heading-anim className="heading-2 headinganim">
+        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw]  container-lg mobile:items-start mobile:gap-[4vw] tablet:block tablet:space-y-[3vw]">
+            <h2 data-heading-anim className="heading-2 headinganim tablet:w-[70%]">
             Tools you will Learn from
                 <span className="blue-text"> Our Course</span>
             </h2>
-            <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left">
+            <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left tablet:text-left">
             We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high-quality. We provide effective strategies that are aligned with your long-term business goals.
             </p>
         </div>
@@ -56,13 +56,13 @@ const Tools = () => {
                         {tools1.map((logoSrc, index) => (
                           <div
                             key={index}
-                            className="relative h-full w-[20vw] flex items-center justify-start group fadeup mobile:w-[40vw]"
+                            className="relative h-full w-[20vw] flex items-center justify-start group fadeup mobile:w-[40vw] tablet:w-[30vw]"
                           >
                             <img
                               src={logoSrc}
                               alt={`Logo ${index}`}
                               loading="lazy"
-                              className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw]"
+                              className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw] tablet:h-[15vw] tablet:w-full"
                             />
                           </div>
                         ))}
@@ -72,13 +72,13 @@ const Tools = () => {
                         {tools2.map((logoSrc, index) => (
                           <div
                             key={index}
-                            className="relative h-full w-[20vw] flex items-center justify-start group fadeup mobile:w-[40vw] mobile:hidden"
+                            className="relative h-full w-[20vw] flex items-center justify-start group fadeup mobile:w-[40vw] mobile:hidden tablet:w-[30vw]"
                           >
                             <img
                               src={logoSrc}
                               alt={`Logo ${index}`}
                               loading="lazy"
-                              className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw]"
+                              className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw] tablet:h-[15vw] tablet:w-full "
                             />
                           </div>
                         ))}
@@ -88,13 +88,13 @@ const Tools = () => {
                         {tools3.map((logoSrc, index) => (
                           <div
                             key={index}
-                            className="relative h-full w-[20vw] flex items-center justify-start group fadeup mobile:w-[40vw] mobile:hidden"
+                            className="relative h-full w-[20vw] flex items-center justify-start group fadeup mobile:w-[40vw] mobile:hidden tablet:w-[30vw]"
                           >
                             <img
                               src={logoSrc}
                               alt={`Logo ${index}`}
                               loading="lazy"
-                              className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw]"
+                              className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw] tablet:h-[15vw] tablet:w-full"
                             />
                           </div>
                         ))}

@@ -231,10 +231,10 @@ const BlogCard = ({
   date,
 }) => {
   return (
-    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group blog-link">
+    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group blog-link tablet:w-[44vw] tablet:h-[70vw] mobile:w-[92vw] mobile:h-[140vw]">
       <Link href={link}>
 
-        <div className="h-[20.5vw] w-full relative overflow-hidden rounded-[1.3vw]">
+        <div className="h-[20.5vw] w-full relative overflow-hidden rounded-[1.3vw] tablet:h-[30vw] mobile:h-[60vw] mobile:rounded-[4vw]">
           <Image
             src={imgSrc}
             fill
@@ -243,9 +243,9 @@ const BlogCard = ({
           />
         </div>
       </Link>
-      <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[28%] gap-[1.5vw] justify-between mobile:gap-[7vw] mobile:mt-[5vw]">
-        <div className="flex flex-col gap-[0.5vw] mobile:gap-[4vw]">
-          <p className="text-[1.6vw] font-medium py-[0.5vw] mobile:text-[6vw]">{title}</p>
+      <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[28%] gap-[1.5vw] justify-between mobile:gap-[7vw] mobile:mt-[5vw] tablet:gap-[3vw]">
+        <div className="flex flex-col gap-[0.5vw] mobile:gap-[4vw] tablet:gap-[1.5vw]">
+          <p className="text-[1.6vw] font-medium py-[0.5vw] mobile:text-[6vw] tablet:text-[3vw] tablet:leading-[1.2]">{title}</p>
           <div className="flex gap-[4vw] text-black/70 mobile:w-full mobile:justify-between">
             <p>{category}</p>
             <p>{date}</p>
@@ -256,11 +256,11 @@ const BlogCard = ({
         <Link href={link}>
           <div className="w-fit">
             <div
-              className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[5.5vw] `}
+              className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[5vw] `}
             >
               <span className="relative link-line group-hover:text-primary ">View More</span>
               <svg
-                className="relative -rotate-[90deg] w-[1vw] h-[1vw] overflow-hidden mobile:w-[5.5vw] mobile:h-[5.5vw] tablet:w-[2.5vw] tablet:h-[2.5vw]"
+                className="relative -rotate-[90deg] w-[1vw] h-[1vw] overflow-hidden mobile:w-[5vw] mobile:h-[5vw] tablet:w-[2.5vw] tablet:h-[2.5vw]"
                 width="19"
                 height="23"
                 viewBox="0 0 19 23"
@@ -321,11 +321,11 @@ const BlogListing = () => {
   return (
     <section className="w-screen h-full pb-[7%] mobile:pb-[10%]">
     <div className="container-lg h-full">
-      <div className="flex items-center py-[3vw] space-x-4">
+      <div className="flex items-center py-[3vw] space-x-4 mobile:flex-col mobile:items-start mobile:gap-[4vw] mobile:space-x-0 mobile:py-[7vw] ">
         <div className="flex flex-col">
-          <p className="content px-[1vw] py-[0.5vw]">Category:</p>
+          <p className="content px-[1vw] py-[0.5vw] mobile:py-[2vw]">Category:</p>
           <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-            <SelectTrigger className="w-[10vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl border-[1.5px] border-black rounded-[30px]">
+            <SelectTrigger className="w-[10vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6  border-[1.5px] border-black rounded-full tablet:w-[20vw] mobile:w-[80vw] ">
               <SelectValue placeholder="Category:" />
             </SelectTrigger>
             <SelectContent>
@@ -337,9 +337,9 @@ const BlogListing = () => {
           </Select>
         </div>
         <div className="flex flex-col">
-          <p className="content px-[1vw] py-[0.5vw]">Year:</p>
+          <p className="content px-[1vw] py-[0.5vw] mobile:py-[2vw]">Year:</p>
           <Select value={selectedYear} onValueChange={setSelectedYear}>
-            <SelectTrigger className="w-[10vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl border-[1.5px] border-black rounded-[30px]">
+            <SelectTrigger className="w-[10vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 border-[1.5px] border-black rounded-full tablet:w-[20vw] mobile:w-[80vw]">
               <SelectValue placeholder="Select Year:" />
             </SelectTrigger>
             <SelectContent>
@@ -353,7 +353,7 @@ const BlogListing = () => {
           </Select>
         </div>
         <button
-          className="bg-[#134BD6] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-[30px]"
+          className="bg-[#134BD6] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-full mobile:text-[5vw] mobile:px-[7vw] mobile:py-[2.5vw]"
           onClick={handleFilter}
         >
           Apply
@@ -361,7 +361,7 @@ const BlogListing = () => {
       </div>
 
       {/* Filtered Case Studies */}
-      <div className="flex flex-wrap items-start justify-start gap-[1vw] gap-y-[2vw]">
+      <div className="flex flex-wrap items-start justify-start gap-[1vw] gap-y-[2vw] tablet:mt-[4vw]">
         {filteredblogs.map((study) => (
           <BlogCard
             key={study.id}

@@ -12,9 +12,9 @@ const BlogCard = ({ link, para, src, date }) => {
     <>
       <Link
         href={link}
-        className="h-[35vw] w-[26vw] bg-white rounded-[1.5vw] flex flex-col blog-link items-start gap-[1vw] px-[1vw] py-[1vw] group hover:shadow-lg hover:drop-shadow-lg transition-all ease-in-out duration-500 mobile:w-[85vw] mobile:h-[110vw] mobile:p-[3.5vw] mobile:rounded-[4vw]"
+        className="h-[35vw] w-[26vw] bg-white rounded-[1.5vw] flex flex-col blog-link items-start gap-[1vw] px-[1vw] py-[1vw] group hover:shadow-lg hover:drop-shadow-lg transition-all ease-in-out duration-500 mobile:w-[85vw] mobile:h-[110vw] mobile:p-[3.5vw] mobile:rounded-[4vw] tablet:w-full tablet:h-[70vw] tablet:px-[3vw] tablet:py-[3vw] tablet:rounded-[4vw]"
       >
-        <div className="h-[55%] w-full relative overflow-hidden rounded-[1.2vw] mobile:rounded-[2.5vw]">
+        <div className="h-[55%] w-full relative overflow-hidden rounded-[1.2vw] mobile:rounded-[2.5vw] tablet:h-[60%] tablet:rounded-[3vw]">
           <Image
             src={src}
             fill
@@ -22,10 +22,10 @@ const BlogCard = ({ link, para, src, date }) => {
             className="group-hover:scale-[1.1] transition-all ease-in-out duration-500"
           />
         </div>
-        <div className="px-[0.5vw] w-[90%] h-[40%] flex flex-col gap-[1vw] mt-[1vw] mobile:mt-[3vw]">
-          <p className="text-[1.35vw] font-medium montreal mobile:text-[4.5vw]">{para}</p>
-          <div className="flex flex-col justify-between h-full w-full pb-[2vw]">
-            <p className="text-[1vw] text-black/50 mobile:text-[4vw]">{date}</p>
+        <div className="px-[0.5vw] w-[90%] h-[40%] flex flex-col gap-[1vw] mt-[1vw] mobile:mt-[3vw] tablet:h-[20%] tablet:gap-[3vw]">
+          <p className="text-[1.35vw] font-medium montreal mobile:text-[4.5vw] tablet:text-[3vw] tablet:leading-[1.2]">{para}</p>
+          <div className="flex flex-col justify-between h-full w-full pb-[2vw] tablet:gap-[2vw]">
+            <p className="text-[1vw] text-black/50 mobile:text-[4vw] tablet:text-[2vw]">{date}</p>
             <div className="w-fit">
               <div
                 className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw] `}
@@ -81,25 +81,25 @@ const Blogs = () => {
     <>
       <section id="blogs" className="relative">
         <div className="w-screen h-full flex items-center justify-center z-[10] mobile:flex-col ">
-          <div className="w-[92%] h-full rounded-[1.2vw] bg-[#F2F2F2] flex  justify-center px-[2vw] py-[6vw] gap-[2vw]  drop-shadow-2xl shadow-inner overflow-hidden mobile:flex-col mobile:py-[10vw] mobile:drop-shadow-none mobile:shadow-md mobile:px-[3.5vw] mobile:rounded-[4vw]">
-            <div className="w-[35%] h-full mobile:w-full ">
-              <div className="flex flex-col gap-[2vw] mobile:gap-[4vw]">
+          <div className="w-[92%] h-full rounded-[1.2vw] bg-[#F2F2F2] flex  justify-center px-[2vw] py-[6vw] gap-[2vw]  drop-shadow-2xl shadow-inner overflow-hidden mobile:flex-col mobile:py-[10vw] mobile:drop-shadow-none mobile:shadow-md mobile:px-[3.5vw] mobile:rounded-[4vw] tablet:flex-col tablet:rounded-[3vw] tablet:px-[3vw]">
+            <div className="w-[35%] h-full mobile:w-full tablet:w-full ">
+              <div className="flex flex-col gap-[2vw] mobile:gap-[4vw] tablet:gap-[3vw]">
                 <h2 className="heading-2 headinganim">
                   <span className="blue-text"> Passionate </span> About All
                   Things Digital?
                 </h2>
-                <p data-para-anim className="content w-[80%] mobile:w-[90%]">
+                <p data-para-anim className="content w-[80%] mobile:w-[90%] tablet:w-[60%]">
                   Stay updated with our latest industry insights, company news,
                   and thought leadership.
                 </p>
               </div>
-              <div className="flex flex-wrap items-center mt-[2vw] gap-[0.7vw] mobile:gap-[1.5vw]">
+              <div className="flex flex-wrap items-center mt-[2vw] gap-[0.7vw] mobile:gap-[1.5vw] tablet:gap-[2vw]">
                 <PlainButton text={"Blogs"} link={"#"} className="fadeup" />
                 <PlainButton text={"News"} link={"#"} className="fadeup" />
               </div>
             </div>
-            <div className="w-[70%] h-full flex items-center justify-center blog mobile:w-full mobile:flex-col mobile:mt-[8vw]">
-              <div className="flex items-start justify-center gap-[1vw] h-full w-full mobile:flex-col mobile:gap-[7vw]">
+            <div className="w-[70%] h-full flex items-center justify-center blog mobile:w-full mobile:flex-col mobile:mt-[8vw] tablet:w-full tablet:items-start tablet:justify-start tablet:mt-[5vw]">
+              <div className="flex items-start justify-center gap-[1vw] h-full w-full mobile:flex-col mobile:gap-[7vw] tablet:justify-start tablet:flex-col tablet:gap-[5vw]">
                 <BlogCard
                   src={"/assets/images/homepage/blogs-1.png"}
                   link={"#"}
@@ -114,9 +114,9 @@ const Blogs = () => {
                   date={"June 6, 2024"}
                   para={"2024 SEO Updates All Bundled Together for You to Glance"}
                 />
-                <div className="flex items-center justify-center h-[35vw] w-[7vw]  mobile:h-fit mobile:w-full">
+                <div className="flex items-center justify-center h-[35vw] w-[7vw]  mobile:h-fit mobile:w-full tablet:h-fit tablet:w-full">
                   <div
-                    className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] group items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw] `}
+                    className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] group items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw]  `}
                   >
                     <span className="relative link-line ">View All</span>
                     <svg
@@ -144,7 +144,7 @@ const Blogs = () => {
             </div>
           </div>
         </div>
-        <div className="hidden mobile:block h-[20%] w-screen bg-primary absolute top-0 left-0 rounded-bl-[4vw] z-[-1] rounded-br-[4vw] ">
+        <div className="hidden mobile:block h-[20%] w-screen bg-primary absolute top-0 left-0 rounded-bl-[4vw] z-[-1] rounded-br-[4vw] tablet:block tablet:h-[100vw] ">
 
         </div>
       </section>

@@ -60,13 +60,13 @@ const data = [
 const TestimonialCard = ({ img, name, year, content, key, stars }) => {
   return (
     <>
-      <div key={key} className="w-[34.2vw] h-[30vw] shadow-sm rounded-[1.2vw]  py-[2vw] px-[1.5vw] bg-white  hover:scale-[1.02] duration-500 ease-in-out transition-all mobile:w-full mobile:h-[130vw] mobile:rounded-[4.5vw] mobile:px-[5vw] border mobile:py-[5vw] ">
+      <div key={key} className="w-[34.2vw] h-[30vw] shadow-sm rounded-[1.2vw]  py-[2vw] px-[1.5vw] bg-white  hover:scale-[1.02] duration-500 ease-in-out transition-all mobile:w-full mobile:h-[130vw] mobile:rounded-[4.5vw] mobile:px-[5vw] border mobile:py-[5vw] tablet:w-full tablet:h-[50vw] tablet:px-[3vw] ">
         <div className="flex items-start justify-between gap-[1vw] w-full mobile:gap-[5vw]">
-          <div className="w-[8vw] h-[7vw] relative mobile:w-[20vw] mobile:h-[18vw]">
+          <div className="w-[8vw] h-[7vw] relative mobile:w-[20vw] mobile:h-[18vw] tablet:w-[10vw] tablet:h-[10vw]">
             <Image src={img} fill alt="awards-1" className='rounded-full' />
           </div>
           <div className="w-[80%] flex flex-col mobile:mt-[3vw] mobile:gap-[0.5vw]">
-            <p className=" text-[1.8vw] font-medium montreal mobile:text-[3.5vw] ">
+            <p className=" text-[1.8vw] font-medium montreal mobile:text-[3.5vw] tablet:text-[2.5vw] ">
               {name}
             </p>
             <p className=" mobile:!text-[3vw]">{year}</p>
@@ -117,17 +117,17 @@ const Testimonials = () => {
   return (
     <section className='py-[5vw] h-full w-screen relative'>
       <div className='w-full h-full '>
-        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] container-lg mobile:items-start mobile:gap-[4vw]">
+        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] container-lg mobile:items-start mobile:gap-[4vw] tablet:items-start tablet:gap-[3vw]">
           <h2 data-heading-anim className="heading-2 headinganim">
             What Our
             <span className="blue-text"> Customer&apos;s Say</span>
           </h2>
-          <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left">
+          <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left tablet:text-left">
             We provide effective strategies that are aligned with your long-term business goals.
           </p>
         </div>
 
-        <div className="w-full overflow-hidden h-full flex items-center justify-center py-[3vw] mt-[5%] fadeup mobile:px-[5vw]">
+        <div className="w-full overflow-hidden h-full flex items-center justify-center py-[3vw] mt-[5%] fadeup mobile:px-[5vw] tablet:px-[5vw]">
           <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             loop={true}
@@ -138,7 +138,11 @@ const Testimonials = () => {
                 slidesPerView: 1.05,
                 spaceBetween: 5,
               },
-
+              720:{
+                slidesPerView: 1.5,
+                spaceBetween: 30,
+              }
+,
               1024: {
                 slidesPerView: 2,
                 spaceBetween: 30,
@@ -154,7 +158,7 @@ const Testimonials = () => {
             }}
             modules={[FreeMode]}
             freeMode={true}
-            className="awards-swiper w-full h-full flex items-center justify-center "
+            className="awards-swiper w-full h-full flex items-center justify-center tablet:px-[3vw]"
           >
             {data.map((item, index) => (
               <SwiperSlide key={index}>
@@ -170,12 +174,12 @@ const Testimonials = () => {
           </Swiper>
         </div>
         <div
-          className={`absolute z-[5] top-[30%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-white cursor-pointer border border-black mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:hidden
+          className={`absolute z-[5] top-[30%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-white cursor-pointer border border-black mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:hidden tablet:w-fit tablet:h-fit 
                 ${activeButton === "next" ? " text-black" : "bg-transparent"
             } transition-colors duration-300`}
           onClick={handleNext}
         >
-          <div className="w-[4vw] h-[4vw]  relative z-[6] mobile:w-[7.5vw] mobile:h-[7.5vw] tablet:w-[2.5vw] tablet:h-[2.5vw] flex justify-center items-center group transition-all duration-500">
+          <div className="w-[4vw] h-[4vw]  relative z-[6] mobile:w-[7.5vw] mobile:h-[7.5vw] tablet:w-[5.5vw] tablet:h-[5.5vw] flex justify-center items-center group transition-all duration-500">
             <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center mobile:w-[5.5vw] mobile:h-[5.5vw]">
               <svg
                 width="16"
@@ -196,14 +200,14 @@ const Testimonials = () => {
           </div>
         </div>
         <div
-          className={`absolute z-[5] w-[4vw] h-[4vw] top-[30%] right-[11%]  border border-black overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%] mobile:hidden
+          className={`absolute z-[5] w-[4vw] h-[4vw] top-[30%] right-[11%]  border border-black overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%] mobile:hidden tablet:w-fit tablet:h-fit tablet:right-[12%]
                 ${activeButton === "prev"
               ? " text-black"
               : "bg-transparent "
             } transition-colors duration-300`}
           onClick={handlePrev}
         >
-          <div className="w-[4vw] h-[4vw]  mobile:w-[7.5vw] mobile:h-[7.5vw] relative z-[6]  flex justify-center items-center ">
+          <div className="w-[4vw] h-[4vw]  mobile:w-[7.5vw] mobile:h-[7.5vw] relative z-[6] tablet:w-[5.5vw] tablet:h-[5.5vw] flex justify-center items-center ">
             <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center mobile:w-[5.5vw] mobile:h-[5.5vw]">
             <svg
             className='rotate-180'

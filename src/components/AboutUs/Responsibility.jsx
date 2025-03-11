@@ -10,12 +10,12 @@ import img6 from "../../../public/assets/images/about/responsibility-6.png";
 const Responsibility = () => {
   return (
     <>
-      <section className="w-screen h-full py-[5%] mobile:py-10" id="responsibility">
-        <div className="mobile:px-[5vw] flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:block mobile:pb-8">
+      <section className="w-screen h-full py-[5%] mobile:py-10 tablet:py-[8%]" id="responsibility">
+        <div className="mobile:px-[5vw] flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:block mobile:pb-8 tablet:items-start container-lg tablet:gap-[3vw]">
           <h2 className="heading-2 headinganim mobile:pb-4">
             Corporate Social <span className="blue-text">Responsibility</span>
           </h2>
-          <p className="content w-[70%] text-center fadein mobile:text-left mobile:w-full">
+          <p className="content w-[70%] text-center fadein mobile:text-left mobile:w-full tablet:text-left">
             We provide effective strategies that are aligned with your long-term
             business goals. We promise to deliver high-quality. We provide
             effective strategies that are aligned with your long-term business

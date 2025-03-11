@@ -40,8 +40,8 @@ const Brochure = () => {
     return (
         <section id="brochure" className=' bg-[#134BD6]'>
             <div className="w-screen h-full z-[10] relative container-lg py-[7%] mobile:py-[12%]">
-                <div className="w-full h-full flex gap-[10vw] mobile:flex-col">
-                    <div className="w-[45%] flex flex-col gap-[2vw] mobile:w-full mobile:gap-[4vw]">
+                <div className="w-full h-full flex gap-[10vw] mobile:flex-col tablet:flex-col">
+                    <div className="w-[45%] flex flex-col gap-[2vw] mobile:w-full mobile:gap-[4vw] tablet:w-full">
                         <h2 className="heading-2 headinganim !text-white">
                             Download Our Brochure!
                         </h2>
@@ -51,19 +51,19 @@ const Brochure = () => {
                         </p>
                     </div>
 
-                    <div className="w-[50%] h-full mobile:w-full mobile:px-[2vw]">
+                    <div className="w-[50%] h-full mobile:w-full mobile:px-[2vw] tablet:w-full">
                         <Brochureform />
                     </div>
                 </div>
 
                 <div
-                    className="absolute h-[2vw] w-[2.2vw] top-[25%] left-[25%] blue-hexagon-animation mobile:hidden"
+                    className="absolute h-[2vw] w-[2.2vw] top-[25%] left-[25%] blue-hexagon-animation mobile:hidden tablet:hidden"
 
                 >
                     <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
                 </div>
                 <div
-                    className="absolute h-[2vw] w-[2.2vw] top-[5%] left-[15%] yellow-hexagon-animation mobile:hidden"
+                    className="absolute h-[2vw] w-[2.2vw] top-[5%] left-[15%] yellow-hexagon-animation mobile:hidden tablet:hidden"
 
                 >
                     <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />

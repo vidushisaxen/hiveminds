@@ -3,7 +3,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Scrollbar, Autoplay } from "swiper/modules";
+import { FreeMode, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/scrollbar";
@@ -45,7 +45,7 @@ const MobileHeroSwiper = () => {
           }}
           allowTouchMove={false}
           
-          modules={[FreeMode, Scrollbar, Autoplay ]}
+          modules={[FreeMode, Autoplay ]}
           freeMode={true}
           slidesPerView={1}
           spaceBetween={0}
