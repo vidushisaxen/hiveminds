@@ -49,7 +49,7 @@ const Header = ({ isOpen }) => {
         }`}
       >
         <div
-          className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw] tablet:py-[3%] tablet:px-[4%]`}
+          className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw] tablet:py-[3%] tablet:px-[5%]`}
           ref={headerRef}
         >
           <Link href={"/"}>

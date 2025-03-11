@@ -16,55 +16,50 @@ const solutions = () => {
         <>
             <Layout>
                 <Hero title1={"Our"} title2={"Solution"} para={"We deliver integrated digital strategies that fuel demand, boost D2C and organic revenue, accelerate e-commerce growth, enhance retention, refine app marketing, and shape compelling digital brand identities—powering measurable, long-term success for modern brands"} img={img} />
-                <main>
-                    <section className='w-screen h-full py-[5vw]'>
-                        <div className='container-lg text-center flex items-center justify-center  h-full mobile:items-start'>
-                            <div className='w-[75%] text-center mobile:w-full mobile:text-left'>
-                                <p data-para-anim className='content py-[1vw]'>
-                                    HiveMinds&apos; performance marketing transforms digital campaigns into powerful growth engines.
-                                    We combine cutting-edge analytics with creative strategy to optimize the entire marketing
-                                    funnel, ensuring every touchpoint converts.
-                                </p>
-                                <p data-para-anim className='content py-[1vw]'>
-                                    Our customized approach drives customer acquisition, conversion, and retention—delivering
-                                    measurable ROI and long-term success. With innovative, data-driven campaigns that adapt to
-                                    market dynamics, HiveMinds empowers brands to achieve outstanding digital growth and
-                                    maximize every marketing dollar.
-                                </p>
-                            </div>
-
+                <section className='w-screen h-full py-[5vw] tablet:py-[8vw]'>
+                    <div className='container-lg text-center flex items-center justify-center h-full mobile:items-start tablet:items-start'>
+                        <div className='w-[75%] text-center mobile:w-full mobile:text-left tablet:text-left tablet:w-full tablet:space-y-[3vw]'>
+                            <p data-para-anim className='content py-[1vw]'>
+                                HiveMinds&apos; performance marketing transforms digital campaigns into powerful growth engines.
+                                We combine cutting-edge analytics with creative strategy to optimize the entire marketing
+                                funnel, ensuring every touchpoint converts.
+                            </p>
+                            <p data-para-anim className='content py-[1vw]'>
+                                Our customized approach drives customer acquisition, conversion, and retention—delivering
+                                measurable ROI and long-term success. With innovative, data-driven campaigns that adapt to
+                                market dynamics, HiveMinds empowers brands to achieve outstanding digital growth and
+                                maximize every marketing dollar.
+                            </p>
                         </div>
-
-                    </section>
-                    <section className='w-screeen h-full py-[5vw] mobile:pb-[12%]'>
-                        <div className='container-lg w-full h-full mobile:flex mobile:flex-col mobile:gap-[5vw]'>
-                            {solution.map((item, index) => (
-                                <div key={index} className={`w-full h-full flex items-center justify-between py-[3vw] ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} mobile:flex-col`}>
-                                    <div className='w-[45%] mobile:w-full'>
-                                        <div className=' relative'>
-                                            <Image src={item.src} width={1200} height={900} alt="service-card" className='rounded-[1.2vw] fadein mobile:rounded-[4.5vw]' />
-                                        </div>
-                                    </div>
-                                    <div className='w-[47%] mobile:w-full mobile:space-y-[3vw] mobile:mt-[5vw] mobile:ml-[2vw]'>
-                                        <h2 className='text-[2.8vw] font-medium headinganim mobile:text-[6.5vw]'>
-                                            {item.title1}
-                                            <span className='text-primary'> {item.title2} </span>
-                                        </h2>
-                                        <p data-para-anim className="content tracking-wide para py-[1vw]">{item.para}</p>
-                                        <div className='mt-[1vw] mobile:mt-[3vw]'>
-                                            <PrimaryButton
-                                                href={item.link}
-                                                text="View Details"
-                                                className="button fadein"
-                                            />
-                                        </div>
+                    </div>
+                </section>
+                <section className='w-screeen h-full py-[5vw] mobile:pb-[12%] tablet:pt-0 tablet:pb-[15%]'>
+                    <div className='container-lg w-full h-full mobile:flex mobile:flex-col mobile:gap-[5vw] tablet:space-y-[8vw]'>
+                        {solution.map((item, index) => (
+                            <div key={index} className={`w-full h-full flex items-center justify-between py-[3vw] tablet:items-start tablet:py-0 tablet:gap-[4vw] ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} mobile:flex-col tablet:flex-col`}>
+                                <div className='w-[45%] mobile:w-full tablet:w-3/4'>
+                                    <div className=' relative'>
+                                        <Image src={item.src} width={1200} height={900} alt="service-card" className='rounded-[1.2vw] fadein mobile:rounded-[4.5vw] tablet:rounded-2xl' />
                                     </div>
                                 </div>
-                            ))}
-                        </div>
-
-                    </section>
-                </main>
+                                <div className='w-[47%] mobile:w-full mobile:space-y-[3vw] mobile:mt-[5vw] mobile:ml-[2vw] tablet:w-5/6'>
+                                    <h2 className='text-[2.8vw] font-medium headinganim mobile:text-[6.5vw] tablet:text-[5.5vw]'>
+                                        {item.title1}
+                                        <span className='text-primary'> {item.title2} </span>
+                                    </h2>
+                                    <p data-para-anim className="content tracking-wide para py-[1vw] tablet:py-[4vw]">{item.para}</p>
+                                    <div className='mt-[1vw] mobile:mt-[3vw]'>
+                                        <PrimaryButton
+                                            href={item.link}
+                                            text="View Details"
+                                            className="button fadein"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </Layout>
         </>
     )

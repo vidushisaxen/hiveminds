@@ -468,12 +468,15 @@ left: 42% !important;
     font-size: 8vw;
   }
   .content {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     letter-spacing: 0.5px;
   }
   .heading-2 {
     font-size: 5.5vw;
     line-height: 1.15;
+  }
+  .container-lg{
+    max-width: 90%;
   }
 }
