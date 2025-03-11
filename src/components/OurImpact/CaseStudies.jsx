@@ -128,7 +128,7 @@ const caseStudiesData = [
 
 const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
   return (
-    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group blog-link mobile:w-[90vw] mobile:h-[130vw]">
+    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group blog-link mobile:w-[90vw] mobile:h-[130vw] tablet:w-[48%]">
       <div className="h-[25.5vw] w-full relative overflow-hidden rounded-[1.5vw] mobile:h-[80vw] mobile:rounded-[4vw]">
         <Link href={link}>
         <Image
@@ -142,9 +142,9 @@ const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
       </div>
       <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[28%] justify-between mobile:mt-[3vw] ">
         <div>
-        <p className="text-[2vw] font-medium py-[0.5vw] mobile:text-[7vw]">{title}</p>
+        <p className="text-[2vw] font-medium py-[0.5vw] mobile:text-[7vw] tablet:text-[4vw]">{title}</p>
         <div
-          className="text-[1.05vw] w-[95%] mobile:text-[4.5vw]"
+          className="text-[1.05vw] w-[95%] mobile:text-[4.5vw] tablet:text-[2vw]"
           dangerouslySetInnerHTML={{ __html: description }}
         />
 
@@ -196,13 +196,13 @@ const CaseStudies = () => {
       setFilteredCaseStudies(filtered);
     };
   return (
-    <section className="w-screen h-full pb-[7%] mobile:pt-[5%]">
+    <section className="w-screen h-full pb-[7%] mobile:pt-[5%] tablet:pb-[20%]">
       <div className="container-lg h-full">
-        <div className="flex flex-col items-center justify-start gap-[1vw] py-[7vw] mobile:block mobile:space-y-[4vw]">
+        <div className="flex flex-col items-center justify-start gap-[1vw] py-[7vw] mobile:block mobile:space-y-[4vw] tablet:items-start ">
           <h2 className="heading-2 headinganim">
             Our Case <span className="blue-text">Studies</span>
           </h2>
-          <p data-para-anim className="content w-[55%] text-center mobile:w-[90%] mobile:text-left">
+          <p data-para-anim className="content w-[55%] text-center mobile:w-[90%] mobile:text-left tablet:w-[90%] tablet:text-left">
             At HiveMinds, we tackle your most challenging business problems with
             our specialised digital marketing approach - integrating strategic
             expertise, cutting-edge technology, and data-driven insights to
@@ -236,7 +236,7 @@ const CaseStudies = () => {
         </div>
       
 
-        <div className="flex flex-wrap items-start justify-center gap-[1vw] mobile:flex-col">
+        <div className="flex flex-wrap items-start justify-center gap-[1vw] mobile:flex-col tablet:justify-start tablet:gap-x-[3vw] tablet:gap-y-[7vw]">
           {filteredCaseStudies.map((study) => (
             <CaseStudyCard
               key={study.id}

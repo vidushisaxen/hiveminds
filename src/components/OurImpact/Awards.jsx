@@ -55,15 +55,15 @@ const Awards = () => {
   ];
 
   return (
-    <section className="w-screen h-full overflow-hidden" id="awards">
+    <section className="w-screen h-full overflow-hidden tablet:py-[7%]" id="awards">
       {/* Heading Section */}
-      <div className="flex flex-col items-center justify-center gap-[1vw] pt-[7vw] pb-[5vw] container-lg mobile:items-start mobile:gap-[4vw]">
+      <div className="flex flex-col items-center justify-center gap-[1vw] pt-[7vw] pb-[5vw] container-lg mobile:items-start mobile:gap-[4vw] tablet:items-start">
         <h2 className="heading-2 headinganim">
           Awards & <span className="blue-text"> Accolades</span>
         </h2>
         <p
           data-para-anim
-          className="content w-[50%] text-center mobile:w-[90%] mobile:text-start"
+          className="content w-[50%] text-center mobile:w-[90%] mobile:text-start tablet:text-left tablet:w-[90%]"
         >
           Discover our accolades and industry recognition that highlight our
           commitment to excellence.
@@ -75,8 +75,8 @@ const Awards = () => {
         <>
           <div className="container-lg flex flex-wrap justify-center gap-[3vw]">
             {awardsData.map((award, id) => (
-              <div key={id} className="w-[20vw] h-auto flex flex-col fadeup ">
-                <div className="w-full h-[11vw] shadow-sm drop-shadow-sm rounded-[1.2vw] overflow-hidden">
+              <div key={id} className="w-[20vw] h-auto flex flex-col fadeup tablet:w-[43vw]">
+                <div className="w-full h-[11vw] shadow-sm drop-shadow-sm rounded-[1.2vw] overflow-hidden tablet:h-[25vw] tablet:rounded-[3vw]">
                   <Image
                     src={award.imgSrc}
                     alt="award-image"
@@ -85,10 +85,10 @@ const Awards = () => {
                     className="object-cover w-full h-full "
                   />
                 </div>
-                <p className="mt-4 text-[1.2vw] pl-[0.5vw] font-semibold">
+                <p className="mt-4 text-[1.2vw] pl-[0.5vw] font-semibold tablet:text-[2.5vw]">
                   {award.awardTitle}
                 </p>
-                <p className="text-gray-500 pl-[0.5vw] ">{award.date}</p>
+                <p className="text-gray-500 pl-[0.5vw] content">{award.date}</p>
               </div>
             ))}
           </div>
@@ -96,12 +96,10 @@ const Awards = () => {
       ) : (
         <>
         <div className="overflow-scroll">
-          
-
            <div className="w-fit flex justify-center gap-[3vw]  px-[5vw] mobile:mt-[5vw]">
             {awardsData.map((award, id) => (
-              <div key={id} className="w-[50vw] h-auto flex flex-col fadeup rounded-[3vw] overflow-hidden ">
-                <div className="w-full h-[11vw] shadow-sm drop-shadow-sm rounded-[3vw] overflow-hidden mobile:h-[35vw]">
+              <div key={id} className="w-[50vw] h-auto flex flex-col fadeup rounded-[3vw] overflow-hidden">
+                <div className="w-full h-[11vw] shadow-sm drop-shadow-sm rounded-[3vw] overflow-hidden mobile:h-[35vw] ">
                   <Image
                     src={award.imgSrc}
                     alt="award-image"

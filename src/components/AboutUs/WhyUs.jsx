@@ -58,7 +58,7 @@ const WhyUs = () => {
   return (
     <section className="w-screen h-full pb-[5%] mobile:pb-10" id="why-us">
       <div className="cotainer-lg flex flex-col px-[5vw]">
-        <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:items-start mobile:gap-5 mobile:pb-8">
+        <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:items-start mobile:gap-5 mobile:pb-8 ">
           <h2 className="heading-2 headinganim mobile:w-3/5">
             Why
             <span className="blue-text"> Hiveminds?</span>
@@ -72,7 +72,7 @@ const WhyUs = () => {
         </div>
 
         <div className="w-full flex justify-between mobile:block">
-          <div className="h-[43vw] w-[40%] rounded-[1.5vw] overflow-hidden fadeup mobile:w-full mobile:rounded-3xl mobile:h-[80vw] mobile:mb-6" ref={previewContainerRef}>
+          <div className="h-[43vw] w-[40%] rounded-[1.5vw] overflow-hidden fadeup mobile:w-full mobile:rounded-3xl mobile:h-[80vw] mobile:mb-6"  ref={previewContainerRef}>
             <Image src={"/assets/images/about/hiveminds-1.png"} alt="" className="w-full h-full object-cover" width={720} height={940} />
           </div>
           <div className="w-[55%] flex flex-col mt-[1.5vw] mobile:w-full">
