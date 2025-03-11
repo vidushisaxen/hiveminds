@@ -85,7 +85,7 @@ const WhyUs = () => {
                     <Image src={item.icon} alt="icons" width={30} height={30} className="mobile:w-10 tablet:w-[8vw]" />
                     <p className="text-[1.2vw] mobile:text-[5.1vw] tablet:text-[4vw]">{item.heading}</p>
                   </div>
-            </div>
+            </div> 
              ))}
               <span className="w-full h-[1px] bg-black my-[2vw]"></span>
           </div>

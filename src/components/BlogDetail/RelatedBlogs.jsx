@@ -55,7 +55,7 @@ const RelatedBlogs = () => {
   }, []);
 
   return (
-    <section className="h-full w-screen pb-[5%]" id="related-blogs">
+    <section className="h-full w-screen pb-[5%] mobile:py-[10%]" id="related-blogs">
       <div className="py-[4vw] w-full container-lg">
         <h2 className="heading-2 w-[80%] fadein mobile:w-full">
           Related <span className="text-primary">Blogs</span>

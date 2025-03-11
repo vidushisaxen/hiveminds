@@ -8,48 +8,53 @@ gsap.registerPlugin(ScrollTrigger)
 
 const SEODetails = () => {
     useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.to(".blog-credentials", {
-                ease: "none",
-                scrollTrigger: {
-                    trigger: "#blog-detail",
-                    start: "top top",
-                    end: "90% top",
-                    pin: ".blog-credentials"
-                }
+        if(globalThis.innerWidth>1024){
+
+            const ctx = gsap.context(() => {
+                gsap.to(".blog-credentials", {
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: "#blog-detail",
+                        start: "top top",
+                        end: "90% top",
+                        pin: ".blog-credentials"
+                    }
+                })
+                gsap.from(".related-blogs", {
+                    y: 100,
+                    opacity: 0,
+                    stagger: 0.2,
+                    duration: 2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: "#related-blogs",
+                        start: "top 60%"
+                    }
+                })
             })
-            gsap.from(".related-blogs", {
-                y: 100,
-                opacity: 0,
-                stagger: 0.2,
-                duration: 2,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: "#related-blogs",
-                    start: "top 60%"
-                }
-            })
-        })
-        return () => ctx.revert()
+            return () => ctx.revert()
+
+        }
     }, [])
     return (
         <>
             <section className='h-full w-screen py-[5vw]' id='blog-detail'>
-                <div className='container-lg w-full h-full flex items-start justify-between'>
-                    <div className='w-[30%] blog-credentials'>
-                        <p className='text-[1.3vw] font-medium leading-[1]'>Posted On:</p>
-                        <p className='text-[1.3vw] font-medium leading-[1] py-[1vw]'>June 24,2025</p>
+                <div className='container-lg w-full h-full flex items-start justify-between mobile:flex-col'>
+                    <div className='w-[30%] blog-credentials mobile:w-full mobile:flex mobile:flex-col mobile:gap-[3vw]'>
+                        <p className='text-[1.3vw] font-medium leading-[1] mobile:text-[4vw]'>Posted On:</p>
+                        <p className='text-[1.3vw] font-medium leading-[1] py-[1vw] mobile:text-[5.5vw]'>June 24,2025</p>
                         <div className='py-[2vw]'>
-                            <p className='text-[1.3vw] font-medium leading-[1]'>Share Article:</p>
-                            <div className="flex items-start gap-[1vw] py-[1vw]">
+                            <p className='text-[1.3vw] font-medium leading-[1]  mobile:text-[4vw] mobile:mb-[4vw]'>Share Article:</p>
+                            <div className="flex items-start gap-[1vw] py-[1vw] mobile:gap-[3vw]">
                                 <Link href={"#"}>
-                                    <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
-                                        <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
+                                    <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
+                                        <span className=" flex justify-center items-center">
                                             <svg
                                                 width="15"
                                                 height="15"
                                                 viewBox="0 0 12 23"
                                                 fill="none"
+                                                  className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw]'
                                                 xmlns="http://www.w3.org/2000/svg"
                                             >
                                                 <path
@@ -62,13 +67,14 @@ const SEODetails = () => {
                                     </div>
                                 </Link>
                                 <Link href={"#"}>
-                                    <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
-                                        <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
+                                    <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
+                                        <span className=" flex justify-center items-center">
                                             <svg
                                                 width="15"
                                                 height="15"
                                                 viewBox="0 0 21 21"
                                                 fill="none"
+                                                  className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw]'
                                                 xmlns="http://www.w3.org/2000/svg"
                                             >
                                                 <path
@@ -91,13 +97,14 @@ const SEODetails = () => {
                                     </div>
                                 </Link>
                                 <Link href={"#"}>
-                                    <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group">
-                                        <span className="w-[1.5vw] h-[1.5vw] flex justify-center items-center">
+                                    <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
+                                        <span className=" flex justify-center items-center">
                                             <svg
                                                 width="15"
                                                 height="15"
                                                 viewBox="0 0 19 20"
                                                 fill="none"
+                                                  className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw]'
                                                 xmlns="http://www.w3.org/2000/svg"
                                             >
                                                 <path
@@ -113,52 +120,52 @@ const SEODetails = () => {
                         </div>
                     </div>
 
-                    <div className='w-[60%] h-full space-y-[1.5vw]'>
+                    <div className='w-[60%] h-full space-y-[1.5vw] mobile:w-full mobile:mt-[4vw] mobile:space-y-[4vw]'>
                         <h2 className='heading-2'>A Complete Overview of Google&apos;s 2024 SEO Updates
                         </h2>
                         <p className='content'>In 2024, seven Google algorithm updates were implemented: four core updates and three spam updates. These changes focus on high-quality, user-centric content and penalise practices attempting to manipulate search rankings through low-quality or irrelevant material.
                         </p>
                         <p className='content'> SEO has transformed significantly in the last year, moving beyond traditional optimisation tactics. Let&apos;s learn more about the core updates and understand their impact in detail:</p>
-                        <p className='font-medium  text-[1.8vw]'>Timeline of Major Google Algorithm Updates in 2024
+                        <p className='font-medium  text-[1.8vw] mobile:text-[4.5vw]'>Timeline of Major Google Algorithm Updates in 2024
                         </p>
                         <table className='w-full border-collapse'>
                             <thead>
                                 <tr>
-                                    <th className='border border-black p-[1.5vw] w-1/3 text-[1.2vw] font-medium text-center'>Timeline</th>
-                                    <th className='border border-black p-[1.5vw] w-1/4 text-[1.2vw] font-medium text-center'>Update Name</th>
-                                    <th className='border border-black p-[1.5vw] w-1/2 text-[1.2vw] font-medium text-center'>Focus Area</th>
+                                    <th className='border border-black p-[1.5vw] w-1/3 text-[1.2vw] font-medium text-center mobile:text-[4vw]'>Timeline</th>
+                                    <th className='border border-black p-[1.5vw] w-1/4 text-[1.2vw] font-medium text-center mobile:text-[4vw]'>Update Name</th>
+                                    <th className='border border-black p-[1.5vw] w-1/2 text-[1.2vw] font-medium text-center mobile:text-[4vw]'>Focus Area</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td className='border border-black p-[1.5vw]'>March 5- April 19 </td>
                                     <td className='border border-black p-[1.5vw]'>Core Update</td>
-                                    <td className='border border-black p-[1.5vw]'><ul className='list-disc'><li>Reducing low-quality and unoriginal content by 40% in search results</li></ul></td>
+                                    <td className='border border-black p-[1.5vw]'><ul className='list-disc mobile:ml-[4vw]'><li>Reducing low-quality and unoriginal content by 40% in search results</li></ul></td>
                                 </tr>
                                 <tr >
                                     <td className='border border-black p-[1.5vw]'>August 15- September 3</td>
                                     <td className='border border-black p-[1.5vw]'>Core Update</td>
-                                    <td className='border border-black p-[1.5vw]'><ul className='list-disc'><li>Prioritises high-quality sites with original content, including small and independent websites</li><li>Aims to focus more on useful content than well-optimised content</li></ul>  </td>
+                                    <td className='border border-black p-[1.5vw]'><ul className='list-disc mobile:ml-[4vw]'><li>Prioritises high-quality sites with original content, including small and independent websites</li><li>Aims to focus more on useful content than well-optimised content</li></ul>  </td>
                                 </tr>
                                 <tr >
                                     <td className='border border-black p-[1.5vw]'>November 11- December 5</td>
                                     <td className='border border-black p-[1.5vw]'>Core Update- Parasite SEO</td>
-                                    <td className='border border-black p-[1.5vw]'><ul className='list-disc'><li>Aims to prioritise genuinely useful content</li><li>Reduce the visibility of content created solely for search rankings.</li></ul>
+                                    <td className='border border-black p-[1.5vw]'><ul className='list-disc mobile:ml-[4vw]'><li>Aims to prioritise genuinely useful content</li><li>Reduce the visibility of content created solely for search rankings.</li></ul>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className='border border-black p-[1.5vw]'>December 12- December 18</td>
                                     <td className='border border-black p-[1.5vw]'>Core Update</td>
-                                    <td className='p-[1.5vw] border border-black'><ul className='list-disc'><li>Refine its ranking system to enhance search result relevance and enhance the overall user experience.</li></ul>
+                                    <td className='p-[1.5vw] border border-black'><ul className='list-disc mobile:ml-[4vw]'><li>Refine its ranking system to enhance search result relevance and enhance the overall user experience.</li></ul>
 
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                         
-                        <p className='text-[1.8vw]'>Major Trends Observed</p>
+                        <p className='text-[1.8vw] mobile:text-[4.5vw]'>Major Trends Observed</p>
                         
-                            <ul className='list-decimal content'>
+                            <ul className='list-decimal content mobile:ml-[5vw] mobile:space-y-[3vw]'>
                                 <li><span className='font-medium'>Emphasis on High-Quality Content: </span> Google&apos;s algorithm updates have consistently aimed to surface content that is genuinely useful and relevant to users, demoting low-quality or unoriginal material.
                                 </li>
                                 <li>
@@ -172,28 +179,28 @@ const SEODetails = () => {
                             </ul>
                         <div>
 
-                        <p className='text-[2.5vw]'>Key SEO Updates from Google in 2024 </p>
-                        <div className='space-y-[1.5vw]'>
-                        <p className='text-[1.8vw]'>Update 1: March 2024 Core Update</p>
-                        <p className='text-[1.5vw]'>What Changed? </p>
+                        <p className='text-[2.5vw] mobile:text-[6vw]'>Key SEO Updates from Google in 2024 </p>
+                        <div className='space-y-[1.5vw] mobile:space-y-[3vw] '>
+                        <p className='text-[1.8vw] mobile:text-[4.5vw]'>Update 1: March 2024 Core Update</p>
+                        <p className='text-[1.5vw] mobile:text-[4vw]'>What Changed? </p>
                         <p className='content'>The <span className='font-medium'>Google Core Algorithm</span> Update in March 2024 focused on a comprehensive adjustment targeting spammy and low-quality content. Google aimed to reduce the visibility of content that lacked originality or was created solely to manipulate search rankings.
                         </p>
-                        <p className='text-[1.5vw]'>Key Metrics Impacted</p>
+                        <p className='text-[1.5vw] mobile:text-[4vw]'>Key Metrics Impacted</p>
                         
-                            <ul className='list-disc content'>
+                            <ul className='list-disc content mobile:ml-[3vw] mobile:space-y-[3vw]'>
                                 <li><span className='font-medium'>Content Quality:</span> Sites with thin or duplicated content experienced declines in rankings.</li>
                                 <li><span>User Engagement:</span> Metrics such as time on page and bounce rate became more critical indicators of content value.
                                 </li>
                             </ul>
                        
-                        <p className='text-[1.8vw]'>Update 2: August 2024 Core Update</p>
-                        <p className='text-[1.5vw]'>What Changed? </p>
+                        <p className='text-[1.8vw] mobile:text-[4.5vw]'>Update 2: August 2024 Core Update</p>
+                        <p className='text-[1.5vw] mobile:text-[4vw]'>What Changed? </p>
                         <p className='content'>The August 2024 Core Update focused on enhancing the relevance of search results by promoting content that demonstrated expertise, experience, authoritativeness, and trustworthiness (E-E-A-T).
 
                         </p>
-                        <p className='text-[1.5vw]'>Key Metrics Impacted</p>
+                        <p className='text-[1.5vw] mobile:text-[4vw]'>Key Metrics Impacted</p>
                        
-                            <ul className='list-disc content'>
+                            <ul className='list-disc content mobile:space-y-[3vw] mobile:ml-[5vw]'>
                                 <li><span className='font-medium'>E-E-A-T Signals: </span> Content authored by recognised experts or authoritative sources saw improved rankings.
                                 </li>
                                 <li><span>Content Depth:</span>  In-depth articles that thoroughly covered topics were favoured.
@@ -201,13 +208,13 @@ const SEODetails = () => {
                                 </li>
                             </ul>
                         
-                        <p className='text-[1.8vw]'>Update 3: November 2024 Parasite SEO Crackdown</p>
-                        <p className='text-[1.5vw]'>What Changed? </p>
+                        <p className='text-[1.8vw] mobile:text-[4.5vw]'>Update 3: November 2024 Parasite SEO Crackdown</p>
+                        <p className='text-[1.5vw] mobile:text-[4vw]'>What Changed? </p>
                         <p className='content'>In November 2024, Google intensified efforts against &apos;parasite SEO,&apos; targeting sites that published unrelated content to exploit their search rankings. This included penalising practices where sites hosted content irrelevant to their primary focus, often for affiliate marketing gains.
                         </p>
-                        <p className='text-[1.5vw]'>Key Metrics Impacted</p>
+                        <p className='text-[1.5vw] mobile:text-[4vw]'>Key Metrics Impacted</p>
                        
-                            <ul className='list-disc content'>
+                            <ul className='list-disc content mobile:space-y-[3vw] mobile:ml-[5vw]'>
                                 <li><span className='font-medium'>Relevance: </span> Sites maintaining a clear topical focus were rewarded, while those with disparate content faced penalties.
 
                                 </li>
@@ -217,24 +224,24 @@ const SEODetails = () => {
                                 </li>
                             </ul>
                         
-                        <p className='text-[1.8vw]'>Industry-Specific Implications</p>
+                        <p className='text-[1.8vw] mobile:text-[4.5vw]'>Industry-Specific Implications</p>
                         <p className='content'>Industries relying heavily on affiliate marketing or user-generated content must reassess their strategies to ensure alignment with Google&apos;s quality standards. The crackdown on &apos;parasite SEO&apos; particularly impacted sectors where unrelated content was previously used to drive traffic.
                         </p>
 
                         </div>
 
-                        <div className='space-y-[1.5vw] mt-[1vw]'>
-                            <p className='text-[2.5vw]'>How These Updates May Affect SEO in 2025 </p>
-                            <p className='text-[1.8vw]'>Potential Challenges</p>
-                            <ul className='list-disc'>
+                        <div className='space-y-[1.5vw] mt-[1vw] mobile:mt-[4vw] mobile:pb-[7vw]'>
+                            <p className='text-[2.5vw] mobile:text-[6vw] mobile:leading-[1.2]'>How These Updates May Affect SEO in 2025 </p>
+                            <p className='text-[1.8vw] mobile:text-[4.5vw]'>Potential Challenges</p>
+                            <ul className='list-disc  mobile:space-y-[3vw] mobile:ml-[5vw]'>
                                 <li><span className='font-medium'>Stricter Content Quality Guidelines:</span> As Google continues to refine its algorithms, the threshold for high-quality content will likely rise, requiring more investment in content creation and auditing.
                                 </li>
                                 <li><span className='font-medium'>Adaptation to AI-Driven Search:</span> The evolution of AI in search means that traditional SEO practices may become less effective, necessitating a deeper understanding of AI algorithms and user intent.
                                 </li>
                             </ul>
 
-                            <p className='text-[1.8vw]'>Opportunities </p>
-                            <ul className='list-disc'>
+                            <p className='text-[1.8vw] mobile:text-[4.5vw]'>Opportunities </p>
+                            <ul className='list-disc mobile:ml-[5vw]'>
                                 <li><span className='font-medium'>Focus on Authentic Content: </span> here is a growing demand for genuine, human-authored content that resonates with users, allowing brands to build trust and authority. This aligns with <span className='font-medium'>Google&apos;s latest algorithm update</span> , favouring content that provides unique value.
 
                                 </li>
@@ -244,17 +251,17 @@ const SEODetails = () => {
                             </ul>
 
                         </div>
-                        <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
-                        <p className='content pt-[2vw]'>Google&apos;s SEO update in 2024 focuses more on user-centric, high-quality content. At HiveMinds, we have proactively adapted to these changes, assisting our clients in navigating the complexities of SEO through tailored strategies that emphasise authenticity and relevance. By continuously analysing <span className='font-medium'> Google algorithm updates </span> and <span className='font-medium'>SEO trends </span> , we ensure that your business remains visible and competitive in search results.</p>
+                        <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw] mobile:w-[92%] mobile:h-[1px]' />
+                        <p className='content pt-[2vw] mobile:pt-[7vw]'>Google&apos;s SEO update in 2024 focuses more on user-centric, high-quality content. At HiveMinds, we have proactively adapted to these changes, assisting our clients in navigating the complexities of SEO through tailored strategies that emphasise authenticity and relevance. By continuously analysing <span className='font-medium'> Google algorithm updates </span> and <span className='font-medium'>SEO trends </span> , we ensure that your business remains visible and competitive in search results.</p>
 
                         <p className='content py-[1.5vw]'>Need help adapting to the latest SEO updates? Let&apos;s talk.</p>
 
 
                          <div className='py-[2vw] '>
                                       <div className='py-[1.5vw] fadein'>
-                                        <Image src={"/assets/images/blogs/seo-content-img1.png"} height={690} width={1130} alt='blog-image' className='rounded-[1vw]' />
+                                        <Image src={"/assets/images/blogs/seo-content-img1.png"} height={690} width={1130} alt='blog-image' className='rounded-[1vw] mobile:rounded-[3vw]' />
                                       </div>
-                                      <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' />
+                                      <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw] mobile:w-[92%] mobile:h-[1px] mobile:my-[7vw]' />
                                     </div>
                         </div>
 
