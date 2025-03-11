@@ -29,8 +29,8 @@ const ips = () => {
         />
         <main>
           <section className="w-screen h-full py-[5vw]">
-            <div className="container-lg text-center flex items-center justify-center  h-full mobile:text-left">
-              <div className="w-[75%] text-center mobile:text-left mobile:w-full">
+            <div className="container-lg text-center flex items-center justify-center  h-full mobile:text-left tablet:items-start tablet:justify-start">
+              <div className="w-[75%] text-center mobile:text-left mobile:w-full tablet:text-left tablet:w-[90%]">
                 <p data-para-anim className="content py-[1vw]">
                   Unlock the full potential of your data with HiveMinds&apos;
                   innovative tools. FeedX offers seamless catalog management for
@@ -51,27 +51,27 @@ const ips = () => {
             </div>
           </section>
           <section className="w-screen h-full py-[2vw] pb-[10vw] mobile:pb-[15%]">
-            <div className="container-lg w-full h-full flex flex-wrap gap-y-[5vw] justify-between  mobile:flex-col">
+            <div className="container-lg w-full h-full flex flex-wrap gap-y-[5vw] justify-between mobile:flex-col">
               {ip.map((item, index) => (
                 <div
                   key={index}
-                  className="w-[48%]  py-[2vw] h-[55vw] pb-[5vw] rounded-[1.5vw] flex-col flex items-start  shadow-2xl px-[1.9vw] fadeup mobile:w-full mobile:h-full mobile:shadow-md mobile:rounded-[4.5vw] mobile:px-[3vw] mobile:pt-[3vw]"
+                  className="w-[48%]  py-[2vw] h-[55vw] pb-[5vw] rounded-[1.5vw] flex-col flex items-start shadow-lg px-[1.9vw] fadeup mobile:w-full mobile:h-full mobile:shadow-md mobile:rounded-[4.5vw] mobile:px-[3vw] mobile:pt-[3vw] tablet:w-[95%] tablet:h-[65vh] tablet:px-[3vw] tablet:py-[3vw] tablet:rounded-[3vw]"
                 >
-                  <div className="h-[30vw] pb-[2vw] mobile:w-full mobile:h-[50vw]">
+                  <div className="h-[30vw] pb-[2vw] mobile:w-full mobile:h-[50vw] tablet:w-3/5 tablet:h-[40vw]">
                     <Image
                       src={item.img}
                       width={790}
                       height={1090}
                       alt="service-card"
-                      className="rounded-[1.2vw] fadein w-full h-full object-cover mobile:rounded-[3vw]"
+                      className="rounded-[1.2vw] fadein w-full h-full object-cover mobile:rounded-[3vw] tablet:rounded-[3vw]"
                     />
                   </div>
-                  <div>
-                    <h2 className="text-[2.8vw] font-medium headinganim mobile:text-[6.5vw]">
+                  <div className="tablet:px-[1vw]">
+                    <h2 className="text-[2.8vw] font-medium headinganim mobile:text-[6.5vw] tablet:text-[4vw]">
                       {item.title}
                     </h2>
                     <p
-                      className="content tracking-wide para py-[1vw] fadeup"
+                      className="content tracking-wide para py-[1vw] fadeup tablet:w-[90%] "
                       dangerouslySetInnerHTML={{ __html: item.para }}
                     />
                   </div>

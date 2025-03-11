@@ -76,19 +76,19 @@ const services = [
 
 const ServiceCard = ({ src, title1, title2, para1, link, index }) => {
     return (
-        <div className={`w-full h-full flex items-center justify-between py-[3vw] mobile:flex-col mobile:items-start mobile:gap-6 mobile:py-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-            <div className='w-[45%] mobile:w-full '>
+        <div className={`w-full h-full flex items-center justify-between py-[3vw] mobile:flex-col mobile:items-start mobile:gap-6 mobile:py-8 tablet:py-[5vw] tablet:flex-col tablet:items-start tablet:gap-[4vw] ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}` }>
+            <div className='w-[45%] mobile:w-full tablet:w-3/5'>
                 <div className='relative'>
-                    <Image src={src} width={1200} height={900} alt="service-card" className='rounded-[1.2vw] fadein mobile:rounded-[1.2rem]' />
+                    <Image src={src} width={1200} height={900} alt="service-card" className='rounded-[1.2vw] fadein mobile:rounded-[1.2rem] tablet:rounded-[3vw]' />
                 </div>
             </div>
-            <div className='w-[47%] mobile:w-full'>
-                <h2 className='text-[2.8vw] font-medium headinganim mobile:text-[9.2vw] mobile:leading-10'>
+            <div className='w-[47%] mobile:w-full tablet:w-[90%]'>
+                <h2 className='text-[2.8vw] font-medium headinganim mobile:text-[9.2vw] mobile:leading-10 tablet:text-[6vw] tablet:leading-[1.2]'>
                     {title1}
                     <span className='text-primary'> {title2} </span>
                 </h2>
                 <p data-para-anim className="content tracking-wide para py-[1vw] mobile:py-7">{para1}</p>
-                <div className='mt-[1vw]'>
+                <div className='mt-[1vw] tablet:my-[2vw]'>
                     <PrimaryButton
                         href={link}
                         text="View Details"
@@ -108,7 +108,7 @@ const Listing = () => {
                     <div className='w-full flex  flex-col items-center justify-center text-center '>
                         <p 
                             data-para-anim 
-                            className="content w-[81%] tracking-wide para py-[1vw] mobile:text-left mobile:w-[98%]">
+                            className="content w-[81%] tracking-wide para py-[1vw] mobile:text-left mobile:w-[98%] tablet:text-left tablet:w-full">
                                 We unlock your digital potential with a holistic suite of marketing services. Our performance marketing is the art and science of optimizing every customer touchpoint through data-driven and creative strategies. Our SEO expertise ensures your brand is easily discovered, turning clicks into loyal customers. In retail, we fuse paid media with organic growth tactics to drive e-commerce success, while our creative and content teams produce visually compelling, on-brand narratives that resonate. We protect your brand&apos;s reputation with proactive ORM, and our consumer insights dive deep into market trends to reveal actionable opportunities. Our advanced data analytics streamline decision-making, and our influencer, affiliate, and integrated branding solutions amplify your message across channels. With our comprehensive social media management, we help you engage, convert, and thrive in the digital era.
                         </p>
                     </div>
@@ -120,10 +120,10 @@ const Listing = () => {
                         })}
                     </div>
                 </div>
-                <div className="absolute h-[2vw] w-[2.2vw] top-[4.5%] right-[15%] blue-hexagon-animation mobile:hidden">
+                <div className="absolute h-[2vw] w-[2.2vw] top-[4.5%] right-[15%] blue-hexagon-animation mobile:hidden tablet:hidden">
                     <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
                 </div>
-                <div className="absolute h-[2vw] w-[2.2vw] top-[1%] left-[12%] yellow-hexagon-animation mobile:hidden" >
+                <div className="absolute h-[2vw] w-[2.2vw] top-[1%] left-[12%] yellow-hexagon-animation mobile:hidden tablet:hidden" >
                     <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
                 </div>
             </section>

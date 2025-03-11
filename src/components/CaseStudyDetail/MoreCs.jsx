@@ -54,7 +54,7 @@ const MoreCs = () => {
           More Case <span className="text-primary">Studies</span>
         </h2>
         <div className="w-full flex justify-between mobile:flex-col mobile:mt-[4vw] mobile:gap-[7vw]">
-          <p className="text-[1.2vw] mt-[2vw] w-[40%] fadein mobile:w-full mobile:text-[4.2vw]">
+          <p className="text-[1.2vw] mt-[2vw] w-[40%] fadein mobile:w-full mobile:text-[4.2vw] tablet:text-[2.5vw] tablet:w-[60%]">
             Discover our accolades and industry recognition that highlight our
             commitment to excellence.
           </p>
@@ -66,10 +66,10 @@ const MoreCs = () => {
             />
           </div>
         </div>
-        <div className="w-full flex pt-[5vw] pb-[3vw] gap-[1vw] mobile:flex-col mobile:gap-[8vw] mobile:pt-[10vw]">
-          {caseStudies.map((study) => (
-            <Link key={study.id} href={study.link}>
-              <div className="relative casestudy w-[30vw] h-[30vw] overflow-hidden rounded-[1.5vw] group cursor-pointer mobile:w-full mobile:h-[85vw] mobile:rounded-[4vw]">
+        <div className="w-full flex pt-[5vw] pb-[3vw] gap-[1vw] mobile:flex-col mobile:gap-[8vw] mobile:pt-[10vw] tablet:gap-[3vw] tablet:py-[7%]">
+          {caseStudies.map((study, index) => (
+            <Link key={study.id} href={study.link} className={`${index==2?"tablet:hidden":""}`}>
+              <div className="relative casestudy w-[30vw] h-[30vw] overflow-hidden rounded-[1.5vw] group cursor-pointer mobile:w-full mobile:h-[85vw] mobile:rounded-[4vw] tablet:h-[45vw] tablet:w-[45vw] tablet:rounded-[3vw]">
                 <Image
                   src={study.imgSrc}
                   height={450}
