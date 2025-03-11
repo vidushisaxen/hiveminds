@@ -49,15 +49,15 @@ const Header = ({ isOpen }) => {
         }`}
       >
         <div
-          className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw]`}
+          className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw] tablet:py-[3%] tablet:px-[4%]`}
           ref={headerRef}
         >
           <Link href={"/"}>
-            <div className="w-[10.5vw] h-[3.2vw] relative mobile:h-[17vw] mobile:w-[30vw]">
+            <div className="w-[10.5vw] h-[3.2vw] relative mobile:h-[17vw] mobile:w-[30vw] tablet:w-[20vw] tablet:h-[6vw]">
               <Image src="/assets/icons/logo.svg" fill alt="hiveminds-logo" />
             </div>
           </Link>
-          <div className="flex items-center justify-center gap-[2vw] text-[0.94vw] montreal font-medium uppercase mobile:hidden">
+          <div className="flex items-center justify-center gap-[2vw] text-[0.94vw] montreal font-medium uppercase mobile:hidden tablet:hidden">
             <div>
               <ul className="flex items-center justify-between gap-[1.5vw]">
                 <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
@@ -202,8 +202,9 @@ const Header = ({ isOpen }) => {
               />
             </div>
           </div>
-          <div className="cursor-pointer mobile:block hidden">
+          <div className="cursor-pointer mobile:block hidden tablet:block">
             <svg
+              className="w-[4.5vw]"
               width="40"
               height="23"
               viewBox="0 0 40 23"

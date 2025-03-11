@@ -4,7 +4,7 @@ import React from "react";
 const Hero = ({ title1, title2, para, img }) => {
   return (
     <section
-      className="w-screen h-full overflow-hidden bg-[#F1F1F1] pt-[10%] pb-[4%] mobile:pb-8 mobile:bg-white1 mobile:pt-24"
+      className="w-screen h-full overflow-hidden bg-[#F1F1F1] pt-[10%] pb-[4%] mobile:pb-8 mobile:bg-white1 mobile:pt-24 "
       id="contact-hero"
     >
       <div className="w-full h-full container-lg flex justify-between mobile:flex-col mobile:gap-10">

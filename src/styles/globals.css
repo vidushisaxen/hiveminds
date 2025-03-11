@@ -418,15 +418,6 @@ left: 42% !important;
   transition: all cubic-bezier(0,.08,0,1);
 }
 
-@media screen and (max-width: 1023px) {
-  .content-white {
-    font-weight: 400;
-    font-size: 2.5vw;
-    line-height: 1.7;
-    color: #ffffff;
-  }
-}
-
 
 @media screen and (max-width: 540px) {
   .heading-1 {
@@ -461,9 +452,28 @@ left: 42% !important;
     bottom:5% !important;
     left: 7% !important;
     }
-    
 }
 
 .swiper-linear .swiper-wrapper {
   transition-timing-function: linear !important;
+}
+@media screen and (max-width: 1023px) {
+  .content-white {
+    font-weight: 400;
+    font-size: 2.5vw;
+    line-height: 1.7;
+    color: #ffffff;
+  }
+  .heading-1 {
+    font-size: 8vw;
+  }
+  .content {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+  .heading-2 {
+    font-size: 5.5vw;
+    line-height: 1.15;
+  }
 }

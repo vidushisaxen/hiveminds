@@ -60,27 +60,23 @@ const BlogCard = ({ link, para, src, date }) => {
 };
 
 const Blogs = () => {
-  useEffect(()=>{
-    if(globalThis.innerWidth>1024){
-
-      const ctx = gsap.context(()=>{
-  
-        gsap.from(".blog",{
-          xPercent:100,
-          opacity:0,
-          duration:1.2,
-          scrollTrigger:{
-            trigger:"#blogs",
-            start:"top 80%"
+  useEffect(() => {
+    if (globalThis.innerWidth > 1024) {
+      const ctx = gsap.context(() => {
+        gsap.from(".blog", {
+          xPercent: 100,
+          opacity: 0,
+          duration: 1.2,
+          scrollTrigger: {
+            trigger: "#blogs",
+            start: "top 80%"
           }
         })
-  
-        return()=>ctx.revert();
       })
+      return () => ctx.revert();
     }
+  }, []);
 
-  },[])
- 
   return (
     <>
       <section id="blogs" className="relative">
