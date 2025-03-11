@@ -122,9 +122,9 @@ const Testimonials = () => {
             What Our
             <span className="blue-text"> Customer&apos;s Say</span>
           </h2>
-          <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left tablet:text-left">
+          {/* <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left tablet:text-left">
             We provide effective strategies that are aligned with your long-term business goals.
-          </p>
+          </p> */}
         </div>
 
         <div className="w-full overflow-hidden h-full flex items-center justify-center py-[3vw] mt-[5%] fadeup mobile:px-[5vw] tablet:px-[5vw]">

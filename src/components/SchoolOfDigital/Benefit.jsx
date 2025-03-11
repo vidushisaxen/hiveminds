@@ -10,9 +10,9 @@ const Benefit = () => {
                Who Can
                 <span className="blue-text"> Benefit</span>
             </h2>
-            <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left tablet:text-left">
+            {/* <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left tablet:text-left">
             We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high-quality. We provide effective strategies that are aligned with your long-term business goals.
-            </p>
+            </p> */}
         </div>
 
         <div className='flex items-center justify-between h-full mobile:mt-[10vw] mobile:flex-col mobile:gap-[10vw] '>

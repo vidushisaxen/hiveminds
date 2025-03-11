@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import img from '../../../public/assets/images/schoolofdigital/offer-card-img.png'
 
-
-const OfferCard=({title,duration})=>{
+const OfferCard=({title,duration,img})=>{
     return(
        <div className='rounded-[1.5vw] shadow-md  w-[29vw] h-full fadeup font-body mobile:w-full mobile:rounded-[4.5vw] mobile:p-[2.5vw] mobile:py-[4.5vw] mobile:border tablet:w-[44vw] tablet:h-[45vw]'>
        <div className=''>
@@ -23,20 +21,20 @@ const Offer = () => {
     <div className='w-full h-full container-lg'>
         <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] mobile:items-start mobile:gap-[4vw] tablet:items-start tablet:gap-[3vw]">
             <h2 data-heading-anim className="heading-2 headinganim">
-               What We
-                <span className="blue-text"> Offer</span>
+            What you&apos;ll
+                <span className="blue-text"> Learn</span>
             </h2>
-            <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left tablet:text-left tablet:w-[80%]">
+            {/* <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left tablet:text-left tablet:w-[80%]">
             We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high-quality. We provide effective strategies that are aligned with your long-term business goals.
-            </p>
+            </p> */}
         </div>
         <div className='w-full h-full flex flex-wrap items-center justify-between gap-[1vw] gap-y-[2vw] mobile:flex-col mobile:gap-[5vw]'>
-            <OfferCard title={"Advanced Digital Marketing"} duration={"3 months"}/>
-            <OfferCard title={"Advanced Search Engine Optimization"} duration={"3 months"}/>
-            <OfferCard title={"Marketplace Ads-Amazon & Flipkart"} duration={"3 months"}/>
-            <OfferCard title={"Google Ads"} duration={"3 months"}/>
-            <OfferCard title={"Facebook Ads"} duration={"3 months"}/>
-            <OfferCard title={"Marketing Analytics"} duration={"3 months"}/>
+            <OfferCard title={"Advanced Digital Marketing"} duration={"3 months"} img={"/assets/images/schoolofdigital/digital-marketing.png"}/>
+            <OfferCard title={"Advanced Search Engine Optimization"} duration={"3 months"} img={"/assets/images/schoolofdigital/advances-search-engine-optimization.png"}/>
+            <OfferCard title={"Marketplace Ads-Amazon & Flipkart"} duration={"3 months"} img={"/assets/images/schoolofdigital/marketplace-ads.png"}/>
+            <OfferCard title={"Google Ads"} duration={"3 months"} img={"/assets/images/schoolofdigital/google-ads.png"}/>
+            <OfferCard title={"Facebook Ads"} duration={"3 months"} img={"/assets/images/schoolofdigital/facebook-ads.png"}/>
+            <OfferCard title={"Marketing Analytics"} duration={"3 months"} img={"/assets/images/schoolofdigital/marketing-analytics.png"}/>
         </div>
         </div>
         </section>

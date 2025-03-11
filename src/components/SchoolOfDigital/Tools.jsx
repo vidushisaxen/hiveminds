@@ -47,9 +47,9 @@ const Tools = () => {
             Tools you will Learn from
                 <span className="blue-text"> Our Course</span>
             </h2>
-            <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left tablet:text-left">
+            {/* <p data-para-anim className="content w-[65%] text-center fadein mobile:w-full mobile:text-left tablet:text-left">
             We provide effective strategies that are aligned with your long-term business goals. We promise to deliver high-quality. We provide effective strategies that are aligned with your long-term business goals.
-            </p>
+            </p> */}
         </div>
         <div className='py-[5vw] flex flex-col gap-[3vw] mobile:gap-0'>
               <Marquee pauseOnHover="true" speed={40}>
