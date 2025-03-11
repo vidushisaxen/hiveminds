@@ -18,7 +18,7 @@ import MobileHero from '@/components/Homepage/MobileHero'
 const index = () => {
   const [mobileWidth, setMobileWidth] = useState(false);
     useEffect(() => {
-      if (globalThis.innerWidth > 541) {
+      if (globalThis.innerWidth > 1024) {
         setMobileWidth(false);
       } else {
         setMobileWidth(true);

@@ -53,19 +53,19 @@ const platform1 = [
 
 export function Clients2() {
   return (
-    <section id="clients" className="mobile:py-[5%]">
+    <section id="clients" className="mobile:py-[5%] tablet:py-[5%]">
       <div className="w-screen h-full flex flex-col items-center justify-center container-lg">
-        <div className="flex flex-col items-center justify-center gap-[1vw] pt-[1vw] pb-[5vw] mobile:items-start mobile:gap-[4vw]">
+        <div className="flex flex-col items-center justify-center gap-[1vw] pt-[1vw] pb-[5vw] mobile:items-start mobile:gap-[4vw] tablet:items-start tablet:gap-[2.5vw]">
           <h2 className="heading-2 headinganim mobile:w-[50%]">
             <span className="blue-text">Proud</span> to work with
           </h2>
-          <p className="content w-[70%] text-center fadeup mobile:text-start mobile:w-[90%]">
+          <p className="content w-[70%] text-center fadeup mobile:text-start mobile:w-[90%] tablet:text-left tablet:w-[60%]">
             Our diverse & growing portfolio spanning from lean startups to
             household brands - and everything in between
           </p>
         </div>
         <div className="  text-center mobile:text-left">
-          <p className=" text-[1.24vw] text-[#111111] montreal font-medium mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw]">
+          <p className=" text-[1.24vw] text-[#111111] montreal font-medium mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw] tablet:text-[3vw]">
             Clients
           </p>
 
@@ -73,13 +73,13 @@ export function Clients2() {
             {clients1.map((logoSrc, index) => (
               <div
                 key={index}
-                className="relative h-full w-[16vw] flex items-center justify-start group fadeup mobile:w-[40vw]"
+                className="relative h-full w-[16vw] flex items-center justify-start group fadeup mobile:w-[40vw] tablet:w-[30vw]"
               >
                 <img
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
-                  className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw]"
+                  className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw] tablet:h-[15vw]"
                 />
               </div>
             ))}
@@ -89,19 +89,19 @@ export function Clients2() {
             {clients2.map((logoSrc, index) => (
               <div
                 key={index}
-                className="relative h-full w-[16vw] flex items-center justify-start group fadeup mobile:w-[40vw]"
+                className="relative h-full w-[16vw] flex items-center justify-start group fadeup mobile:w-[40vw] tablet:w-[30vw]"
               >
                 <img
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
-                  className="h-[7vw]  w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw]"
+                  className="h-[7vw]  w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw] tablet:h-[15vw]"
                 />
               </div>
             ))}
           </Marquee>
 
-          <p className="text-[1.24vw] text-[#111111] montreal font-medium py-[2vw] mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw]">
+          <p className="text-[1.24vw] text-[#111111] montreal font-medium py-[2vw] mobile:text-[4.5vw] mobile:ml-[3.8vw] mobile:py-[7vw] tablet:text-[3vw] tablet:py-[5vw]">
             Platform & Media Partner
           </p>
 
@@ -109,13 +109,13 @@ export function Clients2() {
             {platform1.map((logoSrc, index) => (
               <div
                 key={index}
-                className="relative h-full w-[16vw]  flex items-center justify-start group fadeup mobile:w-[40vw]"
+                className="relative h-full w-[16vw]  flex items-center justify-start group fadeup mobile:w-[40vw] tablet:w-[30vw] "
               >
                 <img
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
-                  className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw]"
+                  className="h-[7vw] w-full saturate-0  transition-all duration-300 ease group-hover:saturate-100 object-contain mobile:h-[20vw] tablet:h-[15vw]"
                 />
               </div>
             ))}

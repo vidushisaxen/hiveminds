@@ -10,7 +10,7 @@ import LinkButton from "../Button/LinkButton";
 gsap.registerPlugin(ScrollTrigger);
 
 const VideoModal = dynamic(() => import("@/components/VideoPlayer"));
-const Story = ({isOpen,setIsOpen}) => {
+const Story = ({ isOpen, setIsOpen }) => {
   const videoRef = useRef(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,7 +18,7 @@ const Story = ({isOpen,setIsOpen}) => {
 
   const handleOpen = () => {
     setIsModalOpen(true);
-    setIsOpen(true)
+    setIsOpen(true);
     lenis.stop();
   };
 
@@ -38,11 +38,11 @@ const Story = ({isOpen,setIsOpen}) => {
             const video = videoRef.current;
             if (video && !videoLoaded) {
               video.src = "/assets/videos/about-video-short.mp4";
-              video.load(); 
+              video.load();
               video.play();
-              setVideoLoaded(true); 
+              setVideoLoaded(true);
             }
-            observer.unobserve(entry.target); 
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -60,20 +60,22 @@ const Story = ({isOpen,setIsOpen}) => {
   }, [videoLoaded]);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#story",
-          scrub: true,
-          start: "top 90%",
-          end: "bottom 60%",
-        },
+    if (globalThis.innerWidth > 1024) {
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#story",
+            scrub: true,
+            start: "top 90%",
+            end: "bottom 60%",
+          },
+        });
+        tl.from(".video", {
+          width: "100vw",
+        });
       });
-      tl.from(".video", {
-        width: "100vw",
-      });
-    });
-    return () => ctx.revert();
+      return () => ctx.revert();
+    }
   });
   return (
     <>
@@ -82,9 +84,9 @@ const Story = ({isOpen,setIsOpen}) => {
           <div
             data-magnetic-target
             data-magnetic-strength="200"
-            className="w-[90vw] h-[60%] bg-black rounded-[1.5vw] overflow-hidden absolute video top-[-15%] left-[50%] translate-x-[-50%] mobile:h-[70vw] mobile:rounded-[5vw] mobile:top-[-5%]"
+            className="w-[90vw] h-[60%] bg-black rounded-[1.5vw] overflow-hidden absolute video top-[-15%] left-[50%] translate-x-[-50%] mobile:h-[70vw] mobile:rounded-[5vw] mobile:top-[-5%] tablet:top-[-5%] tablet:h-[60vw]"
           >
-            <div className="absolute left-1/2 z-10 -translate-x-1/2 top-1/2 -translate-y-1/2  tablet:static tablet:translate-x-0">
+            <div className="absolute left-1/2 z-10 -translate-x-1/2 top-1/2 -translate-y-1/2 ">
               <ReelButton
                 onClick={handleOpen}
                 text="Play Reel"
@@ -100,9 +102,9 @@ const Story = ({isOpen,setIsOpen}) => {
               className="object-cover w-full h-full"
             ></video>
           </div>
-          <div className="w-screen h-full py-[4vw] px-[5vw] mt-[5vw] pt-[22%] bg-[#134BD6] rounded-[2vw] flex items-start justify-between gap-[7vw] mobile:flex-col mobile:rounded-[4vw] mobile:pt-[60vw] mobile:pb-[15vw]">
-            <div className="w-[40%] flex items-start justify-start flex-col  gap-[2vw] mobile:w-full mobile:gap-[4vw]">
-              <p className="text-[2.8vw] montreal text-[#FFFFFF] leading-[1.2] headinganim mobile:text-[9vw]">
+          <div className="w-screen h-full py-[4vw] px-[5vw] mt-[5vw] pt-[22%] bg-[#134BD6] rounded-[2vw] flex items-start justify-between gap-[7vw] mobile:flex-col mobile:rounded-[4vw] mobile:pt-[60vw] mobile:pb-[15vw] tablet:flex-col tablet:pt-[50vw] tablet:pb-[10vw]">
+            <div className="w-[40%] flex items-start justify-start flex-col  gap-[2vw] mobile:w-full mobile:gap-[4vw] tablet:w-full">
+              <p className="text-[2.8vw] montreal text-[#FFFFFF] leading-[1.2] headinganim mobile:text-[9vw] tablet:text-[5vw] ">
                 Fuelling Your Growth Ambitions, With Confidence.
               </p>
               <p data-para-anim className="content-white">
@@ -118,8 +120,8 @@ const Story = ({isOpen,setIsOpen}) => {
                 className={"text-white fadeup"}
               />
             </div>
-            <div className="w-[42%] flex items-start justify-start flex-col  gap-[2vw] mobile:w-full mobile:gap-[4vw]">
-              <p className="text-[2.8vw] montreal text-[#FFFFFF] leading-[1.2] w-[90%] headinganim mobile:text-[9vw]">
+            <div className="w-[42%] flex items-start justify-start flex-col  gap-[2vw] mobile:w-full mobile:gap-[4vw] tablet:w-full">
+              <p className="text-[2.8vw] montreal text-[#FFFFFF] leading-[1.2] w-[90%] headinganim mobile:text-[9vw] tablet:text-[5vw]">
                 Driven by Talent, Powered by Teamwork
               </p>
               <p data-para-anim className="content-white">
@@ -129,7 +131,7 @@ const Story = ({isOpen,setIsOpen}) => {
                 ensuring that every campaign is executed with precision,
                 creativity, and an unwavering commitment to excellence.
               </p>
-              <div className="w-full flex items-center justify-start gap-[2vw] mobile:flex-col mobile:items-start mobile:mt-[4vw]">
+              <div className="w-full flex items-center justify-start gap-[2vw] mobile:flex-col mobile:items-start mobile:mt-[4vw] tablet:mt-[3vw]">
                 <PrimaryButton
                   className="fadeup"
                   text="Explore The Hiveminds Way"

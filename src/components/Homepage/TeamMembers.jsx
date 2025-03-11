@@ -6,7 +6,7 @@ import styles from "@/styles/team.module.css";
 const TeamMembers = () => {
   const [mobileWidth, setMobileWidth] = useState(false);
   useEffect(() => {
-    if (globalThis.innerWidth > 541) {
+    if (globalThis.innerWidth > 1024) {
       setMobileWidth(false);
     } else {
       setMobileWidth(true);
@@ -85,12 +85,12 @@ const TeamMembers = () => {
   return (
     <section id="team-members">
       <div className="w-screen h-full flex flex-col items-center justify-center mb-[5vw] relative container-lg">
-        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] mobile:items-start mobile:justify-start mobile:gap-[4vw]">
+        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] mobile:items-start mobile:justify-start mobile:gap-[4vw] tablet:items-start tablet:justify-start">
           <h2 className="heading-2 headinganim">
             Be A Part Of
             <span className="blue-text"> HiveMinds </span>
           </h2>
-          <p className="text-[1.2vw] w-[70%] text-center mobile:text-[4vw] mobile:text-left mobile:w-[90%] fadeup">
+          <p className="content w-[70%] text-center mobile:text-[4vw] mobile:text-left mobile:w-[90%] fadeup tablet:text-left tablet:w-[60%]">
             Join the Hive Tribe—Where bold strategies meet fast-paced growth.
             We&apos;re a tribe of marketing mavericks turning vision into
             success. Be part of our journey as we transform brands and create

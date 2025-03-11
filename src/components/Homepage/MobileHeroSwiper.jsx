@@ -54,9 +54,15 @@ const MobileHeroSwiper = () => {
               slidesPerView: 1,
               spaceBetween: 15,
             },
-            1024: {
+            720:{
               slidesPerView: 2,
-              spaceBetween: 30,
+              spaceBetween:15,
+ 
+
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween:0,
             },
             1280: {
               slidesPerView: 2,
@@ -72,13 +78,13 @@ const MobileHeroSwiper = () => {
             hide: false,
             el: ".swiper-scrollbar",
           }}
-          className="w-full h-full rounded-[4vw] overflow-hidden pr-[5vw] mobileHeroSwiper swiper-linear"
+          className="w-full h-full rounded-[4vw] overflow-hidden pr-[5vw] mobileHeroSwiper swiper-linear pointer-events-none tablet:rounded-[2vw]"
         >
           {images.map((image, index) => (
             <React.Fragment key={index}>
               <SwiperSlide>
                 <Link href={image.link}>
-                  <div className="relative w-[92vw] mobile:h-[100vw] overflow-hidden">
+                  <div className="relative w-[92vw] mobile:h-[100vw] overflow-hidden tablet:h-[50vw] tablet:w-full tablet:rounded-[2vw]">
                     <Image
                       src={image.src1}
                       fill
@@ -90,7 +96,7 @@ const MobileHeroSwiper = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Link href={image.link}>
-                  <div className="relative w-[92vw] mobile:h-[100vw] overflow-hidden">
+                  <div className="relative w-[92vw] mobile:h-[100vw] overflow-hidden tablet:h-[50vw] tablet:w-full tablet:rounded-[2vw]">
                     <Image
                       src={image.src2}
                       fill

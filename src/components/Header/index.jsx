@@ -49,11 +49,11 @@ const Header = ({ isOpen }) => {
         }`}
       >
         <div
-          className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw] tablet:py-[3%] tablet:px-[5%]`}
+          className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw] tablet:py-[3vw]`}
           ref={headerRef}
         >
           <Link href={"/"}>
-            <div className="w-[10.5vw] h-[3.2vw] relative mobile:h-[17vw] mobile:w-[30vw] tablet:w-[20vw] tablet:h-[6vw]">
+            <div className="w-[10.5vw] h-[3.2vw] relative mobile:h-[17vw] mobile:w-[30vw] tablet:w-[20vw] tablet:h-[7vw]">
               <Image src="/assets/icons/logo.svg" fill alt="hiveminds-logo" />
             </div>
           </Link>

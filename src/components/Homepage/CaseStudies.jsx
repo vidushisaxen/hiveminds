@@ -135,41 +135,41 @@ const CaseStudies = () => {
   return (
     <>
       <section id="caseStudies" className="pt-[10%] relative">
-        <div className="w-screen h-[45vw] flex items-center justify-center z-[10] mobile:h-full">
-          <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block pl-[3vw] pt-[3vw] pr-[1.5vw] shadow-2xl drop-shadow-2xl overflow-hidden mobile:shadow-none mobile:flex-col mobile:items-start mobile:py-[12vw] mobile:px-[5vw] mobile:gap-[4vw] mobile:rounded-[4vw] mobile:drop-shadow-md">
-            <div className="w-[40%] h-full flex flex-col gap-[2vw] mobile:w-full mobile:gap-[4vw]">
+        <div className="w-screen h-[45vw] flex items-center justify-center z-[10] mobile:h-full tablet:h-full">
+          <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block pl-[3vw] pt-[3vw] pr-[1.5vw] shadow-2xl drop-shadow-2xl overflow-hidden mobile:shadow-none mobile:flex-col mobile:items-start mobile:py-[12vw] mobile:px-[5vw] mobile:gap-[4vw] mobile:rounded-[4vw] mobile:drop-shadow-md tablet:flex-col tablet:rounded-[3vw] tablet:pb-[7vw]">
+            <div className="w-[40%] h-full flex flex-col gap-[2vw] mobile:w-full mobile:gap-[4vw] tablet:w-full ">
               <h2 className="heading-2 headinganim">
                 Growth Isn&apos;t Just a Buzzword - It&apos;s About Real{" "}
                 <span className="blue-text">Impact</span>
               </h2>
-              <p data-para-anim className="content w-[80%]">
+              <p data-para-anim className="content w-[80%] tablet:w-[60%]">
                 Explore the challenges we&apos;ve overcome and the strategies
                 we&apos;ve implemented to deliver exceptional results across
                 various industries.
               </p>
 
-              <div className="flex flex-wrap items-center mt-[2vw] gap-[1vw] w-[90%] mobile:w-full">
+              <div className="flex flex-wrap items-center mt-[2vw] gap-[1vw] w-[90%] mobile:w-full tablet:w-full">
                 {categories.map((category) => (
                   <button
                     key={category}
                     data-text={category}
                     className={`${
                       styles.buttonPlain
-                    } cursor-pointer relative overflow-hidden border-[#134BD6] border-[1.5px] rounded-[40px] text-[0.97vw] font-light h-fit flex items-center justify-center text-center px-[1.5vw] py-[0.5vw] transition-all duration-300 mobile:!text-[3.5vw] ${
+                    } cursor-pointer relative overflow-hidden border-[#134BD6] border-[1.5px] rounded-[40px] text-[0.97vw] font-light h-fit flex items-center justify-center text-center px-[1.5vw] py-[0.5vw] transition-all duration-300 mobile:!text-[3.5vw] tablet:text-[2vw] tablet:px-[4vw] tablet:py-[1vw] tablet:w-fit tablet:h-fit ${
                       activeCategory === category
                         ? " text-white bg-[#134BD6]"
                         : ""
                     } `}
                     onClick={() => setActiveCategory(category)}
                   >
-                    <span>{category}</span>
+                    <span className="block">{category}</span>
                   </button>
                 ))}
               </div>
             </div>
 
             {/* Swiper Component with Always Visible Blue Scrollbar */}
-            <div className="w-[60%] flex items-center slideInCaseCarousel mobile:w-full">
+            <div className="w-[60%] flex items-center slideInCaseCarousel mobile:w-full tablet:w-full tablet:mt-[7vw]">
               <Swiper
                 ref={swiperRef}
                 modules={[FreeMode, Scrollbar]}
@@ -181,6 +181,11 @@ const CaseStudies = () => {
                   480: {
                     slidesPerView: 2,
                     spaceBetween: 15,
+                  },
+                  720:{
+                    slidesPerView: 1.5,
+                    spaceBetween: 15,
+
                   },
                  
                   1024: {
@@ -206,7 +211,7 @@ const CaseStudies = () => {
                 {filteredCaseStudies.map((study, index) => (
                   <SwiperSlide key={index}>
                     <Link href={study.link}>
-                      <div className="relative w-[25vw] h-[30.5vw] group mobile:w-[67vw] mobile:h-[90vw]">
+                      <div className="relative w-[25vw] h-[30.5vw] group mobile:w-[67vw] mobile:h-[90vw] tablet:w-[55vw] tablet:h-[70vw]">
                         <Image
                           src={study.img}
                           fill
@@ -214,18 +219,18 @@ const CaseStudies = () => {
                           className="object-contain group-hover:brightness-75 transistion-all duration-500 ease-in-out"
                         />
 
-                        <div className="absolute top-0 right-0 w-[11.7vw] h-[4vw] flex items-center justify-center rounded-br-[20px] mobile:right-[5%] mobile:top-[8%] mobile:w-[25vw]">
+                        <div className="absolute top-0 right-0 w-[11.7vw] h-[4vw] flex items-center justify-center rounded-br-[20px] mobile:right-[5%] mobile:top-[8%] mobile:w-[25vw] tablet:w-[30vw] tablet:right-[-5%] tablet:top-[5%]">
                           <div className="flex flex-col justify-center  w-[70%] mobile:w-full">
-                            <p className="font-medium text-[2vw] leading-[1] mobile:text-[5vw]">
+                            <p className="font-medium text-[2vw] leading-[1] mobile:text-[5vw] tablet:text-[3vw]">
                               {study.title}
                             </p>
-                            <p className="text-[0.9vw] font-medium w-full text-start leading-[1] ml-[0.1vw] mobile:text-[3vw]">
+                            <p className="text-[0.9vw] font-medium w-full text-start leading-[1] ml-[0.1vw] mobile:text-[3vw] tablet:text-[2vw]">
                               {study.des}
                             </p>
                           </div>
                         </div>
-                        <div className="absolute bottom-5 w-full flex items-center justify-center mobile:bottom-[15%]">
-                          <p className="text-white text-[1.34vw] text-start leading-[1] group-hover:scale-[1.1] transistion-all duration-500 ease-in-out mobile:text-[4vw]">
+                        <div className="absolute bottom-5 w-full flex items-center justify-center mobile:bottom-[15%] tablet:bottom-[10%]">
+                          <p className="text-white text-[1.34vw] text-start leading-[1] group-hover:scale-[1.1] transistion-all duration-500 ease-in-out mobile:text-[4vw] tablet:text-[3vw]">
                             {study.para}
                           </p>
                         </div>

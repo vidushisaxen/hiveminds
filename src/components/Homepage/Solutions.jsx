@@ -276,7 +276,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
     return (
         <div 
             ref={cardRef}
-            className="relative h-full overflow-hidden rounded-[1.2vw] service-card w-[18%] group mobile:w-full mobile:rounded-[4vw]"
+            className="relative h-full overflow-hidden rounded-[1.2vw] service-card w-[18%] group mobile:w-full mobile:rounded-[4vw] tablet:w-full"
             onMouseEnter={onMouseEnter}
         >
             <Image
@@ -287,10 +287,10 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
                 className="absolute inset-0 z-0"
             />
 
-            <div className="absolute inset-0 bg-black/40 flex flex-col items-start justify-end gap-[1.5vw] p-[2vw] pb-[1vw] text-white z-10 mobile:px-[4vw] mobile:pb-[10vw]">
+            <div className="absolute inset-0 bg-black/40 flex flex-col items-start justify-end gap-[1.5vw] p-[2vw] pb-[1vw] text-white z-10 mobile:px-[4vw] mobile:pb-[10vw] tablet:pb-[5vw] tablet:px-[3vw]">
                 <h3
                     ref={headingRef}
-                    className={`text-white text-[1.5vw] absolute w-[28vw] text-left leading-[1.2] rotate-[-90deg] ${isActive?"opacity-0":"opacity-100"} transition-all duration-300 ease-in-out mobile:text-[5vw] mobile:rotate-0 mobile:!top-[38%] mobile:w-full mobile:!left-[5%] `}
+                    className={`text-white text-[1.5vw] absolute w-[28vw] text-left leading-[1.2] rotate-[-90deg] ${isActive?"opacity-0":"opacity-100"} transition-all duration-300 ease-in-out mobile:text-[5vw] tablet:text-[3vw] tablet:rotate-0 tablet:!top-[35%] tablet:!left-[5%] tablet:w-full mobile:rotate-0 mobile:!top-[38%] mobile:w-full mobile:!left-[5%] `}
                     style={{
                         transformOrigin: "0% 50%",
                         rotation: -90,
@@ -302,7 +302,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
                 </h3>
                 <h3
                     ref={headinginnerRef}
-                    className="text-white text-[1.7vw] text-left  leading-[1.2] opacity-0 translate-y-[10%] mobile:text-[5vw]"
+                    className="text-white text-[1.7vw] text-left  leading-[1.2] opacity-0 translate-y-[10%] mobile:text-[5vw] tablet:text-[4vw]"
                   
                 >
                     {service.title}
@@ -310,7 +310,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
 
                 <p
                     ref={contentRef}
-                    className="content !text-white opacity-0 text-left  pt-0   !leading-[1.3] translate-y-[10%]"
+                    className="content !text-white opacity-0 text-left  pt-0   !leading-[1.3] translate-y-[10%] tablet:!text-[2.5vw]"
                 >
                     {service.para}
                 </p>
@@ -341,16 +341,16 @@ const Services = () => {
     return (
         <section id="services">
             <div className="w-screen h-full flex flex-col items-center justify-center container-lg pb-[4%] relative">
-                <div className="flex flex-col items-center justify-center gap-[1vw] py-[4vw] mobile:items-start mobile:gap-[4vw]">
+                <div className="flex flex-col items-center justify-center gap-[1vw] py-[4vw] mobile:items-start mobile:gap-[4vw] tablet:items-start tablet:gap-[2.5vw]">
                     <h2 className="heading-2 headinganim">
                         Your <span className="blue-text"> Goals </span>, Our Offerings
                     </h2>
-                    <p className="content w-[70%] text-center fadeup mobile:text-left mobile:w-[90%]">
+                    <p className="content w-[70%] text-center fadeup mobile:text-left mobile:w-[90%] tablet:text-left tablet:w-[60%]">
                         See how our strategic partnerships and collaboration drive innovation and accelerate your business growth
                     </p>
                 </div>
                 <div className="w-full h-full flex items-center justify-center">
-                    <div className="w-full h-[60vh] flex overflow-hidden gap-[1.5vw] fadein mobile:flex-col mobile:h-[280vw] mobile:gap-[3vw] mobile:mt-[5vw]">
+                    <div className="w-full h-[60vh] flex overflow-hidden gap-[1.5vw] fadein mobile:flex-col mobile:h-[280vw] mobile:gap-[3vw] mobile:mt-[5vw] tablet:h-[150vw] tablet:flex-col tablet:mt-[4vw]">
                         {services.map((service, index) => (
                             <ServiceCard
                                 key={index}
@@ -363,10 +363,10 @@ const Services = () => {
                     </div>
                 </div>
 
-                <div className="absolute h-[2vw] w-[2.2vw] top-[20%] right-[3%] blue-hexagon-animation mobile:hidden">
+                <div className="absolute h-[2vw] w-[2.2vw] top-[20%] right-[3%] blue-hexagon-animation mobile:hidden tablet:hidden">
                     <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
                 </div>
-                <div className="absolute h-[2vw] w-[2.2vw] top-[10%] left-[5%] yellow-hexagon-animation mobile:hidden" >
+                <div className="absolute h-[2vw] w-[2.2vw] top-[10%] left-[5%] yellow-hexagon-animation mobile:hidden tablet:hidden" >
                     <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
                 </div>
             </div>

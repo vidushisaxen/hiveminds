@@ -1,8 +1,7 @@
-import Image from "next/image";
+
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import PrimaryButton from "../Button/PrimaryButton";
-import Link from "next/link";
 import MobileHeroSwiper from "./MobileHeroSwiper";
 const MobileHero = () => {
 
@@ -39,21 +38,21 @@ const MobileHero = () => {
       subtitle: "Growth",
       description:
         "Expert-driven, Tech-powered, Data-optimized growth for lean startups to household brands",
-      href: "/growth",
+      href: "/our-impact",
     },
     {
       title: "Optimise, Engage,",
       subtitle: "Convert",
       description:
         "Helping brands stand out with impactful campaigns and strategies",
-      href: "/orders",
+      href: "/our-impact",
     },
     {
       title: "Clicks That",
       subtitle: "Convert",
       description:
         "Unlocking new orders with innovative strategies tailored to your business goals",
-      href: "/search",
+      href: "/our-impact",
     },
   ];
   useEffect(() => {
@@ -91,7 +90,7 @@ const MobileHero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % slidesData.length);
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [slidesData.length]);
@@ -122,42 +121,42 @@ const MobileHero = () => {
 
   return (
     <section
-      className="w-screen h-full pt-[30%] pb-[15%] overflow-hidden"
+      className="w-screen h-full pt-[30%] pb-[15%] overflow-hidden tablet:pt-[20%] tablet:h-[90vh]"
       id="hero"
     >
       <div className="container-lg flex flex-col gap-[5vw]">
-        <div className="w-full h-[100vw] rounded-[5vw] overflow-hidden border relative">
+        <div className="w-full h-[100vw] rounded-[5vw] overflow-hidden relative tablet:h-fit tablet:rounded-[2vw]">
             
           <MobileHeroSwiper/>
-          <div className="w-full h-[22vw] glassmorphism-dark absolute bottom-0 left-0 z-[1] flex">
-          <div className="w-full h-full flex justify-between items-center px-[3vw] gap-[3vw]">
+          <div className="w-full h-[22vw] glassmorphism-dark absolute bottom-0 left-0 z-[1] flex tablet:h-[14vw]">
+          <div className="w-full h-full flex justify-between items-center px-[3vw] gap-[3vw] tablet:px-[5vw]">
             <div className="flex gap-[3vw] w-[57%] ">
-              <h3 className="text-[5vw] font-extrabold uppercase leading-[1] content-detail">
+              <h3 className="text-[5vw] font-extrabold uppercase leading-[1] content-detail tablet:text-[4vw]">
                 {details[activeDetail].num1}
               </h3>
 
-              <p className="text-[3.4vw] !leading-[1.3] content-para">
+              <p className="text-[3.4vw] !leading-[1.3] content-para tablet:text-[2.5vw]">
                 {details[activeDetail].para1}
               </p>
             </div>
 
-            <span className="h-[15.5vw] w-[1px] bg-black"></span>
+            <span className="h-[15.5vw] w-[1px] bg-black tablet:h-[10vw]"></span>
 
             <div className="flex flex-col items-end w-[47%]">
               
 
-              <p className="text-[3.4vw] !leading-[1.3] content-para">
+              <p className="text-[3.4vw] !leading-[1.3] content-para tablet:text-[2.5vw]">
                 {details[activeDetail].para2}
               </p>
             </div>
           </div>
                   </div>
         </div>
-        <div className="w-full h-full flex items-center justify-between container-lg pt-[5vw] pr-[2vw]">
+        <div className="w-full h-full flex items-center justify-between container-lg pt-[5vw] pr-[2vw] tablet:pt-0">
           <div className="w-full flex flex-col gap-[5vw] flex-wrap">
             <h1
               ref={headRef}
-              className="heading-1 !text-[11vw] leading-[1.2] heading"
+              className="heading-1 mobile:!text-[11vw] leading-[1.2] heading"
             >
               {slidesData[activeIndex].title}{" "}
               <span className="text-primary">
@@ -165,7 +164,7 @@ const MobileHero = () => {
               </span>
             </h1>
 
-            <p ref={paraRef} className="content w-full tracking-wide para">
+            <p ref={paraRef} className="content w-full tracking-wide para tablet:w-[70%]">
               {slidesData[activeIndex].description}
             </p>
 
