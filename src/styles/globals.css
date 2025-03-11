@@ -463,3 +463,7 @@ left: 42% !important;
     }
     
 }
+
+.swiper-linear .swiper-wrapper {
+  transition-timing-function: linear !important;
+}

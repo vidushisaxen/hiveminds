@@ -3,31 +3,16 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import PrimaryButton from "../Button/PrimaryButton";
 import Link from "next/link";
+import MobileHeroSwiper from "./MobileHeroSwiper";
 const MobileHero = () => {
-  const isFirstRender = useRef(true);
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeDetail, setActiveDetail] = useState(0);
   const headRef = useRef(null);
   const paraRef = useRef(null);
   const buttonRef = useRef(null);
 
-  const images = [
-    {
-      src1: "/assets/images/homepage/hero-bigbasket-img1.png",
-      src2: "/assets/images/homepage/hero-bigbasket-img2.png",
-      link: "/casestudies/bigbasket",
-    },
-    {
-      src1: "/assets/images/homepage/hero-dominos-img1.png",
-      src2: "/assets/images/homepage/hero-dominos-img2.png",
-      link: "/casestudies/dominos",
-    },
-    {
-      src1: "/assets/images/homepage/hero-flydubai-img1.png",
-      src2: "/assets/images/homepage/hero-flydubai-img2.png",
-      link: "/casestudies/flydubai",
-    },
-  ];
+
   const details = [
     {
       num1: "2.35x",
@@ -112,15 +97,6 @@ const MobileHero = () => {
   }, [slidesData.length]);
 
   useEffect(() => {
-    const tl = gsap.timeline();
-    tl.to(".Marquee-container", {
-      xPercent: -52,
-      duration: images.length * 4,
-      ease: "none",
-      repeat: -1,
-    });
-  }, [images.length]);
-  useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
       tl.from(".content-detail , .content-para", {
@@ -152,84 +128,15 @@ const MobileHero = () => {
       <div className="container-lg flex flex-col gap-[5vw]">
         <div className="w-full h-[100vw] rounded-[5vw] overflow-hidden border relative">
             
-          <div className="w-fit h-full flex flex-nowrap Marquee-container relative">
-        
-            {images.map((image, index) => (
-              <>
-                <div key={index} className="w-[90vw] h-[100vw] relative">
-                  <Image
-                    src={image.src1}
-                    fill
-                    className="object-cover h-full w-full"
-                  />
-
-                </div>
-                <div key={index} className="w-[90vw] h-[100vw] relative">
-                  <Image
-                    src={image.src2}
-                    fill
-                    className="object-cover h-full w-full"
-                  />
-
-                  
-                </div>
-              </>
-            ))}
-            {images.map((image, index) => (
-              <>
-                  
-                <div key={index} className="w-[90vw] h-[100vw] relative">
-                  <Image
-                    src={image.src1}
-                    fill
-                    className="object-cover h-full w-full"
-                  />
-
-                </div>
-                <div key={index} className="w-[90vw] h-[100vw] relative">
-                  <Image
-                    src={image.src2}
-                    fill
-                    className="object-cover h-full w-full"
-                  />
-
-                  <div className="w-full h-[22vw] glassmorphism-dark absolute bottom-0 left-0 z-[1] flex">
-                    <div className="w-full h-full flex justify-between items-center px-[3vw]">
-                      <div className="flex items-center w-[50%]">
-                        <h3 className="text-[2.4vw] font-extrabold uppercase leading-[1] content-detail">
-                          {details[activeDetail].num1}
-                        </h3>
-
-                        <p className="content !leading-[1] content-para pl-[0.8vw]">
-                          {details[activeDetail].para1}
-                        </p>
-                      </div>
-
-                      <span className="h-[4.5vw] w-[1px] bg-black"></span>
-
-                      <div className="flex flex-col items-center w-[50%]">
-                        {/* <h3 className="text-[2.4vw] font-extrabold uppercase leading-[1] content-detail">
-                {details[activeDetail].num2}
-              </h3> */}
-
-                        <p className="content !leading-[1] content-para">
-                          {details[activeDetail].para2}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </>
-            ))}
-          </div>
+          <MobileHeroSwiper/>
           <div className="w-full h-[22vw] glassmorphism-dark absolute bottom-0 left-0 z-[1] flex">
           <div className="w-full h-full flex justify-between items-center px-[3vw] gap-[3vw]">
-            <div className="flex gap-[3vw] w-[55%] ">
-              <h3 className="text-[4.5vw] font-extrabold uppercase leading-[1] content-detail">
+            <div className="flex gap-[3vw] w-[57%] ">
+              <h3 className="text-[5vw] font-extrabold uppercase leading-[1] content-detail">
                 {details[activeDetail].num1}
               </h3>
 
-              <p className="content !leading-[1] content-para pl-[0.8vw]">
+              <p className="text-[3.4vw] !leading-[1.3] content-para">
                 {details[activeDetail].para1}
               </p>
             </div>
@@ -239,7 +146,7 @@ const MobileHero = () => {
             <div className="flex flex-col items-end w-[47%]">
               
 
-              <p className="content !leading-[1] content-para">
+              <p className="text-[3.4vw] !leading-[1.3] content-para">
                 {details[activeDetail].para2}
               </p>
             </div>

@@ -75,9 +75,9 @@ const Blogs = () => {
           }
         })
   
+        return()=>ctx.revert();
       })
     }
-    return()=>ctx.revert();
 
   },[])
  
