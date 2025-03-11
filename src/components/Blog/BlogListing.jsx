@@ -11,18 +11,27 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
 
-const caseStudiesData = [
+const blogsData = [
   {
     id: 1,
     type: "PR",
     imgSrc: "/assets/images/blogs/short-video-apps.jpg",
     title: "Short Video Apps: Ad Investment Hesitation",
     category: "Video Formats",
-    date: "9 June, 2024",
+    date: "August 31, 2023",
     description:
       "In the wake of rising digital maturity, brands are rethinking investments in 'desi' short video apps.",
-    link: "/blog/short-video-apps-ad-investment-hesitatxion",
+    link: "/blog/short-video-apps-ad-investment-hesitation",
   },
   {
     id: 2,
@@ -30,9 +39,9 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/screen-size.jpg",
     title: "Screen Size & Programmatic Ads: Does Size Matter?",
     category: "Programmatic Media Buying",
-    date: "9 June, 2024",
+    date: "July 31, 2024",
     description:
-      "Screen size plays a pivotal role in programmatic media buying. The article highlights that while larger screens generate robust engagement and conversions, smaller devices require tailored approaches.",
+      "Screen size plays a pivotal role in programmatic media buying. ",
     link: "/blog/screen-size-and-programatic-ads",
   },
   {
@@ -41,7 +50,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/building-foundation.jpg",
     title: "Building a Foundation for Success: Insights from Jyothirmayee",
     category: "Digital Marketing",
-    date: "9 June, 2024",
+    date: "December 6, 2024",
     description:
       " Jyothirmayee JT emphasizes that building a strong foundation is essential for marketing success.",
     link: "/blog/building-a-foundation-for-success",
@@ -52,7 +61,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/bootstrapped-startup.jpg",
     title: "Building a Bootstrapped Startup",
     category: "Digital Marketing",
-    date: "9 June, 2024",
+    date: "September 11, 2017",
     description:
       "Jyothirmayee JT’s inspiring journey of building HiveMinds from the ground up. ",
     link: "/blog/building-a-bootstrapped-startup",
@@ -63,7 +72,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/the-ai-era.jpg",
     title: "The AI Era: Navigating Digital Discovery & Brand Growth",
     category: "Branding",
-    date: "9 June, 2024",
+    date: "February 13, 2024",
     description:
       "How brands leverage AI-driven insights to optimize campaigns, enhance consumer engagement...",
     link: "/blog/the-ai-era-navigating-digital-discovery-and-brand-growth",
@@ -74,7 +83,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/women-entrepreneurship.jpg",
     title: "The New Dawn: Women Entrepreneurship in India",
     category: "Digital Marketing",
-    date: "9 June, 2024",
+    date: "March 8, 2019",
     description:
       "India's entrepreneurial landscape is being redefined by dynamic women leaders.",
     link: "/blog/the-new-dawn-of-women-entrepreneurship-in-india",
@@ -85,7 +94,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/retail-through-consumers-eyes.jpg",
     title: "Retail Through the Consumer's Eyes",
     category: "Digital Marketing",
-    date: "9 June, 2024",
+    date: "March 27, 2023",
     description:
       "On BrandEquity, Deepti Bhadauria delivers thought-provoking insights into branding, digital marketing, and emerging consumer trends. ",
     link: "/blog/retail-through-consumers-eyes",
@@ -96,7 +105,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/hiveminds-ecommerce-conclave-2023.jpg",
     title: "Hiveminds E-commerce Conclave 2023: Industry Leaders Gather",
     category: "E-Commerce",
-    date: "9 June, 2024",
+    date: "June 6, 2024",
     description:
       "Industry leaders converged at HiveMinds E-commerce Conclave 2023, a vibrant event showcasing cutting-edge trends in digital marketing and e-commerce.",
     link: "/blog/hiveminds-ecommerce-conclave-2023",
@@ -107,7 +116,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/hiveminds-ecommerce-conclave-2024.jpg",
     title: "Hiveminds eComm Conclave '24: India Opportunity Playbook",
     category: "E-Commerce",
-    date: "9 June, 2024",
+    date: "June 17, 2024",
     description:
       "In “An India Opportunity Playbook,” the HiveMinds Ecomm Conclave 2024 article details a gathering of top industry experts. ",
     link: "/blog",
@@ -118,7 +127,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/ecommerce-cost-of-missing-early-trends.jpg",
     title: "E-commerce: The High Cost of Missing Early Trends",
     category: "E-Commerce",
-    date: "9 June, 2024",
+    date: "April 05, 2023",
     description:
       "In today's fast-moving e-commerce arena, missing emerging trends can cost brands dearly.",
     link: "/blog/ecommerce-the-high-cost-of-missing-early-trends",
@@ -129,7 +138,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/ola-mapping-new-course-for-gps-advertising.jpg",
     title: "Ola: Mapping a New Course for GPS Advertising",
     category: "Digital Marketing",
-    date: "9 June, 2024",
+    date: "April 5, 2023",
     description:
       "Ola Maps is carving out a new destination for GPS advertising, as the article details. ",
     link: "/blog/ola-mapping-a-new-course-for-gps-advertising",
@@ -140,7 +149,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/google-ends-continuous-scroll.jpg",
     title: "Google Ends Continuous Scroll: A New Search Era for Advertisers",
     category: "Digital Marketing",
-    date: "9 June, 2024",
+    date: "July 9, 2024",
     description:
       "Google is set to end continuous scroll, prompting advertisers to embrace a return to traditional search pagination. ",
     link: "/blog/google-ends-continuous-scroll",
@@ -150,7 +159,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/storytelling-in-digital-age.jpg",
     title: "Storytelling in the Digital Age: Brand Communication & Its Impact",
     category: "Digital Marketing",
-    date: "9 June, 2024",
+    date: "May 30, 2024",
     description:
       "The piece explores how brands are revolutionizing communication by leveraging digital marketing to tell authentic stories.",
     link: "/blog/storytelling-in-digital-age",
@@ -161,7 +170,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/metaverse-and-ecommerce.jpg",
     title: "Metaverse & E-commerce: Game-Changer or Just Hype?",
     category: "Digital Marketing",
-    date: "9 June, 2024",
+    date: "May 20, 2024",
     description:
       "Exploring the frontier of digital retail, the article investigates whether the metaverse can revolutionize e-commerce. ",
     link: "/blog/metaverse-and-ecommerce-game-changer-or-just-a-hype",
@@ -171,7 +180,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/republic-day-campaigns.jpg",
     title: "Republic Day Campaigns: An Expert's Guide",
     category: "Digital Marketing",
-    date: "9 June, 2024",
+    date: "January 23, 2024",
     description:
       "Industry experts share best practices for Republic Day campaigns in this guide, highlighting the importance of combining authentic storytelling with strategic digital execution. ",
     link: "/blog/republic-day-campaigns",
@@ -182,7 +191,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/indian-social-media.jpg",
     title: "Indian Social Media: Case Studies",
     category: "Social Media Management",
-    date: "9 June, 2024",
+    date: "March 05, 2025",
     description:
       "This curated collection of Indian social media case studies reveals how brands are revolutionizing engagement. ",
     link: "/blog/indian-social-media-case-studies",
@@ -193,7 +202,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/blog-detail-hero.png",
     title: "Decoding Attribution Windows: Finding the Perfect Fit for Your Marketing Strategy",
     category: "Digital Marketing",
-    date: "9 June, 2024",
+    date: "June 6, 2024",
     description:
       "Discover how attribution windows shape your marketing efforts. This blog unpacks various models and their impact on campaign performance... ",
     link: "/blog/decoding-attribution-windows",
@@ -204,7 +213,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/blogs/2024-seo-updates.jpg",
     title: "2024 SEO Updates All Bundled Together for You to Glance",
     category: "SEO",
-    date: "9 June, 2024",
+    date: "June 24, 2025",
     description:
       "Discover how advanced attribution models can transform your marketing strategy. ",
     link: "/blog/2024-seo-updates-all-bundled-together",
@@ -279,69 +288,123 @@ const BlogCard = ({
 };
 
 const BlogListing = () => {
-  const [selectedCategory, setSelectedCategory] = useState("PR");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedYear, setSelectedYear] = useState("");
+  const [filteredblogs, setFilteredblogs] = useState(blogsData);
 
-  const filteredCaseStudies = caseStudiesData.filter(
-    (item) => item.type === selectedCategory
-  );
+  const handleFilter = () => {
+    const filtered = blogsData.filter((study) => {
+      const studyYear = new Date(study.date).getFullYear().toString();
+  
+      
+      if (selectedCategory && !selectedYear) {
+        return study.type === selectedCategory;
+      }
+      
+     
+      if (!selectedCategory && selectedYear) {
+        return studyYear === selectedYear;
+      }
+  
+    
+      if (selectedCategory && selectedYear) {
+        return study.type === selectedCategory && studyYear === selectedYear;
+      }
+  
+    
+      return true;
+    });
+  
+    setFilteredblogs(filtered);
+  };
+  
   return (
     <section className="w-screen h-full pb-[7%] mobile:pb-[10%]">
-      <div className="container-lg h-full">
-        <div className="flex items-center py-[3vw] space-x-4">
+    <div className="container-lg h-full">
+      <div className="flex items-center py-[3vw] space-x-4">
         <div className="flex flex-col">
-        <p className="content px-[1vw] py-[0.5vw]">Category:</p>
-            <Select  value={ selectedCategory} onValueChange={setSelectedCategory}>
-              <SelectTrigger className="w-[10vw] h-[3.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl border-[1.5px] border-black rounded-[30px]">
-                <SelectValue placeholder="Category:" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
+          <p className="content px-[1vw] py-[0.5vw]">Category:</p>
+          <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+            <SelectTrigger className="w-[10vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl border-[1.5px] border-black rounded-[30px]">
+              <SelectValue placeholder="Category:" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
                 <SelectItem value="Blog">Blog</SelectItem>
                 <SelectItem value="PR">PR</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-            </div>
-         
-         
-         <div className="flex flex-col">
-<p className="content px-[1vw] py-[0.5vw]">Year:</p>
-            <Select>
-              <SelectTrigger className="w-[10vw] h-[3.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl border-[1.5px] border-black rounded-[30px]">
-                <SelectValue placeholder="Select Year:" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="1">2025</SelectItem>
-                  <SelectItem value="2">2024</SelectItem>
-                  <SelectItem value="3">2023</SelectItem>
-                  <SelectItem value="4">2022</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-            </div>
-          
-          <button className="bg-[#134BD6] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-[30px]">
-            Apply
-          </button>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
         </div>
-
-        <div className="flex flex-wrap items-start justify-start gap-[1vw] gap-y-[2vw]">
-          {filteredCaseStudies.map((study) => (
-            <BlogCard
-              key={study.id}
-              category={study.category}
-              date={study.date}
-              imgSrc={study.imgSrc}
-              title={study.title}
-              dcppara={study.dcppara}
-              description={study.description}
-              link={study.link}
-            />
-          ))}
+        <div className="flex flex-col">
+          <p className="content px-[1vw] py-[0.5vw]">Year:</p>
+          <Select value={selectedYear} onValueChange={setSelectedYear}>
+            <SelectTrigger className="w-[10vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl border-[1.5px] border-black rounded-[30px]">
+              <SelectValue placeholder="Select Year:" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectItem value="2025">2025</SelectItem>
+                <SelectItem value="2024">2024</SelectItem>
+                <SelectItem value="2023">2023</SelectItem>
+                <SelectItem value="2022">2022</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
         </div>
+        <button
+          className="bg-[#134BD6] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-[30px]"
+          onClick={handleFilter}
+        >
+          Apply
+        </button>
       </div>
-    </section>
+
+      {/* Filtered Case Studies */}
+      <div className="flex flex-wrap items-start justify-start gap-[1vw] gap-y-[2vw]">
+        {filteredblogs.map((study) => (
+          <BlogCard
+            key={study.id}
+            category={study.category}
+            date={study.date}
+            imgSrc={study.imgSrc}
+            title={study.title}
+            dcppara={study.dcppara}
+            description={study.description}
+            link={study.link}
+          />
+        ))}
+      </div>
+    </div>
+
+    {/* <div className="my-[3vw] border-[1.5px] border-black rounded-full py-[1.2vw] w-[30%] ml-auto mr-auto">
+    <Pagination>
+      <PaginationContent>
+        <PaginationItem>
+          <PaginationPrevious href="#" />
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="#" isActive className={"text-[1.2vw] "}>1</PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="#" className={"text-[1.2vw] "} > 2 </PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="#" className={"text-[1.2vw] "}>3</PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="#" className={"text-[1.2vw] "}>4</PaginationLink>
+        </PaginationItem>
+         <PaginationItem>
+          <PaginationLink href="#" className={"text-[1.2vw] "}>5</PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationNext href="#" />
+        </PaginationItem>
+      </PaginationContent>
+    </Pagination>
+    </div> */}
+  </section>
   );
 };
 

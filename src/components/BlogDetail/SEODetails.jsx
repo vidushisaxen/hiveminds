@@ -38,7 +38,7 @@ const SEODetails = () => {
                 <div className='container-lg w-full h-full flex items-start justify-between'>
                     <div className='w-[30%] blog-credentials'>
                         <p className='text-[1.3vw] font-medium leading-[1]'>Posted On:</p>
-                        <p className='text-[1.3vw] font-medium leading-[1] py-[1vw]'>June 6,2024</p>
+                        <p className='text-[1.3vw] font-medium leading-[1] py-[1vw]'>June 24,2025</p>
                         <div className='py-[2vw]'>
                             <p className='text-[1.3vw] font-medium leading-[1]'>Share Article:</p>
                             <div className="flex items-start gap-[1vw] py-[1vw]">

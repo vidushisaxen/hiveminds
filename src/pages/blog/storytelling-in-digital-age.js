@@ -7,7 +7,7 @@ import Details from '@/components/BlogDetail/Details';
 import RelatedBlogs from '@/components/BlogDetail/RelatedBlogs';
 
 const content={
-  date:"June 6,2024",
+  date:"May 30,2024",
   fbLink:"#",
   linkedinLink:"#",
   twitterLink:"#",

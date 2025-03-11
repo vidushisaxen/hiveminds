@@ -15,17 +15,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "../ui/checkbox";
 import { Input } from "@/components/ui/input";
 import FormButton from "../Button/FormButton";
-// import { Checkbox } from "@radix-ui/react-checkbox";
+
+
 
 export default function Contactform() {
   const form = useForm({
     defaultValues: {
       name: "",
       email: "",
-      phone: "",
+      phone: "", 
       company: "",
       services: "service1",
       terms: false,
@@ -50,7 +52,7 @@ export default function Contactform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="First Name *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl" />
+                      <Input placeholder="Name *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -129,7 +131,6 @@ export default function Contactform() {
             </SelectContent>
           </Select>
 
-          {/* Message Field */}
           <div className="w-full flex gap-[1vw] items-center">
             <div className="w-[90vw] h-fit">
               <FormField
@@ -138,7 +139,7 @@ export default function Contactform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Message" {...field} className="h-[6vw] rounded-[0.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl" />
+                      <Textarea  placeholder="Message" {...field} className="h-[6vw] rounded-[0.5vw] px-[1vw] placeholder:text-[#111111] placeholder:text-[1vw] !border-0 bg-white drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

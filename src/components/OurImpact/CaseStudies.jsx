@@ -1,20 +1,31 @@
 import Image from "next/image";
-import React from "react";
+import React, {useState} from "react";
 import styles from "../Button/styles.module.css";
 import Link from "next/link";
+import industry from "@/pages/industry";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 const caseStudiesData = [
   {
     id: 1,
-    imgSrc: "/assets/images/impact/casestudy/dominos-cs-banner.png",
-    title: "Dominos",
-    
+    industry:"E-Commerce",
+    imgSrc: "/assets/images/impact/casestudy/flipkart-healthplus-cs-banner.png",
+    title: "Flipkart Health+",
     description:
-      "<p><span class='text-primary'> 500K+ </span> New Orders in 12 Months.</p><p>Success Through Influencer Power</p>",
-    link: "/casestudies/dominos",
+      "<p><span class='text-primary'>India’s #1</span> Medical App for 1.5 Years</p><p>Up with the App Installs</p>",
+    link: "/casestudies/flipkart-healthplus",
   },
   {
     id: 2,
+    industry:"BFSI-Fintech",
     imgSrc: "/assets/images/impact/casestudy/max-life-cs-banner.png",
     title: "Max Life Insurance",
     description:
@@ -23,6 +34,7 @@ const caseStudiesData = [
   },
   {
     id: 3,
+    industry:"E-Commerce",
     imgSrc: "/assets/images/impact/casestudy/bigbasket-cs-banner.png",
     title: "Big Basket",
     description:
@@ -31,38 +43,7 @@ const caseStudiesData = [
   },
   {
     id: 4,
-    imgSrc: "/assets/images/impact/casestudy/flipkart-healthplus-cs-banner.png",
-    title: "Flipkart Health+",
-    description:
-      "<p><span class='text-primary'>India’s #1</span> Medical App for 1.5 Years</p><p>Up with the App Installs</p>",
-    link: "/casestudies/flipkart-healthplus",
-  },
-  {
-    id: 5,
-    imgSrc: "/assets/images/impact/casestudy/digit-cs-banner.png",
-    title: "Digit",
-    description:
-      "<p><span class='text-primary'> 46M </span> Impressions in 12 Months</p><p>Dominating Organic Search</p>",
-    link: "/casestudies/digit",
-  },
-  {
-    id: 6,
-    imgSrc: "/assets/images/impact/casestudy/murfai-cs-banner.png",
-    title: "Murf AI",
-    description:
-      "<p><span class='text-primary'>10x </span> Growth in Traffic</p> <p>Leading in Speech Synthesis Innovation</p>",
-    link: "/casestudies/murfai",
-  },
-  {
-    id: 7,
-    imgSrc: "/assets/images/impact/casestudy/saffola-cs-banner.png",
-    title: "Saffola Honey",
-    description:
-      "<p><span class='text-primary'>50% </span> CTR Growth and 50% Higher Conversions</p> <p> Achieving Excellence</p>",
-    link: "/casestudies/saffola-honey",
-  },
-  {
-    id: 8,
+    industry:"Travel & Tourism",
     imgSrc: "/assets/images/impact/casestudy/flydubai-cs-banner.png",
     title: "Fly Dubai",
     description:
@@ -70,7 +51,54 @@ const caseStudiesData = [
     link: "/casestudies/flydubai",
   },
   {
+    id: 5,
+    industry:"E-Commerce",
+    imgSrc: "/assets/images/impact/casestudy/dominos-cs-banner.png",
+    title: "Dominos",
+    description:
+      "<p><span class='text-primary'> 500K+ </span> New Orders in 12 Months.</p><p>Success Through Influencer Power</p>",
+    link: "/casestudies/dominos",
+  },
+  {
+    id: 6,
+    industry:"BFSI-Fintech",
+    imgSrc: "/assets/images/impact/casestudy/digit-cs-banner.png",
+    title: "Digit",
+    description:
+      "<p><span class='text-primary'> 46M </span> Impressions in 12 Months</p><p>Dominating Organic Search</p>",
+    link: "/casestudies/digit",
+  },
+  {
+    id: 7,
+    industry:"International",
+    imgSrc: "/assets/images/impact/casestudy/murfai-cs-banner.png",
+    title: "Murf AI",
+    description:
+      "<p><span class='text-primary'>10x </span> Growth in Traffic</p> <p>Leading in Speech Synthesis Innovation</p>",
+    link: "/casestudies/murfai",
+  },
+  {
+    id: 8,
+    industry:"FMCG & Beauty",
+    imgSrc: "/assets/images/impact/casestudy/saffola-cs-banner.png",
+    title: "Saffola Honey",
+    description:
+      "<p><span class='text-primary'>50% </span> CTR Growth and 50% Higher Conversions</p> <p> Achieving Excellence</p>",
+    link: "/casestudies/saffola-honey",
+  },
+  {
     id: 9,
+    industry:"FMCG & Beauty",
+    imgSrc: "/assets/images/impact/casestudy/saffola-triumph-cs-hero.jpg",
+    title: "Saffola Honey",
+    description:
+      "<p>From Zero to 500 Units a Day in <span class='text-primary'> 4 Weeks </span></p> <p>Launching Success in Just 4 Weeks</p>",
+    link: "/casestudies/saffola-triumph",
+  },
+  
+  {
+    id: 10,
+    industry:"Electronics and Consumer Durables",
     imgSrc: "/assets/images/impact/casestudy/bajaj-coolers-cs-banner.png",
     title: "Bajaj",
     description:
@@ -78,7 +106,8 @@ const caseStudiesData = [
     link: "/casestudies/bajaj-aircooler",
   },
   {
-    id: 10,
+    id: 11,
+    industry:"FMCG & Beauty",
     imgSrc: "/assets/images/impact/casestudy/parachute-cs-banner.png",
     title: "Parachute Advanced",
     description:
@@ -86,21 +115,15 @@ const caseStudiesData = [
     link: "/casestudies/parachute-advansed",
   },
   {
-    id: 11,
+    id: 12,
+    industry:"Electronics and Consumer Durables",
     imgSrc: "/assets/images/impact/casestudy/crompton-cs-banner.png",
     title: "Crompton",
     description:
       "<p><span class='text-primary'>#1</span> in Water Heaters</p> <p>Converting with Category-Leading Benchmarks</p>",
     link: "/casestudies/crompton",
   },
-  {
-    id: 12,
-    imgSrc: "/assets/images/impact/casestudy/saffola-triumph-cs-hero.jpg",
-    title: "Saffola Honey",
-    description:
-      "<p>From Zero to 500 Units a Day in <span class='text-primary'> 4 Weeks </span></p> <p>Launching Success in Just 4 Weeks</p>",
-    link: "/casestudies/saffola-triumph",
-  },
+  
 ];
 
 const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
@@ -162,10 +185,20 @@ const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
 };
 
 const CaseStudies = () => {
+   const [selectedIndustry, setSelectedIndustry] = useState("");
+    const [filteredCaseStudies, setFilteredCaseStudies] = useState(caseStudiesData);
+  
+    const handleFilter = () => {
+      const filtered = caseStudiesData.filter(
+        (study) =>
+          (selectedIndustry ? study.industry === selectedIndustry : true) 
+      );
+      setFilteredCaseStudies(filtered);
+    };
   return (
     <section className="w-screen h-full pb-[7%] mobile:pt-[5%]">
       <div className="container-lg h-full">
-        <div className="flex flex-col items-center justify-center gap-[1vw] py-[7vw] mobile:block mobile:space-y-[4vw]">
+        <div className="flex flex-col items-center justify-start gap-[1vw] py-[7vw] mobile:block mobile:space-y-[4vw]">
           <h2 className="heading-2 headinganim">
             Our Case <span className="blue-text">Studies</span>
           </h2>
@@ -177,9 +210,34 @@ const CaseStudies = () => {
             growth.
           </p>
         </div>
+<div className="flex py-[3vw] gap-[3vw]">
+        <div className="flex flex-col">
+          <p className="content px-[1vw] py-[0.5vw]">Filters:</p>
+          <Select value={selectedIndustry} onValueChange={setSelectedIndustry}>
+            <SelectTrigger className="w-[22vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl border-[1.5px] border-black rounded-[30px]">
+              <SelectValue placeholder="All Indutries" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectItem value="E-Commerce">E-Commerce</SelectItem>
+                <SelectItem value="BFSI-Fintech">BFSI-Fintech</SelectItem>
+                <SelectItem value="Travel & Tourism">Travel & Tourism</SelectItem>
+                <SelectItem value="International">International</SelectItem>
+                <SelectItem value="FMCG & Beauty">FMCG & Beauty</SelectItem>
+                <SelectItem value="Electronics and Consumer Durables">Electronics and Consumer Durables</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+        </div>
+        <button  onClick={handleFilter}
+          className="bg-[#134BD6] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-[30px]">
+          Apply
+        </button>
+        </div>
+      
 
         <div className="flex flex-wrap items-start justify-center gap-[1vw] mobile:flex-col">
-          {caseStudiesData.map((study) => (
+          {filteredCaseStudies.map((study) => (
             <CaseStudyCard
               key={study.id}
               imgSrc={study.imgSrc}

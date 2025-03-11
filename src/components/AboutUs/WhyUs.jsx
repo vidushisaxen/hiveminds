@@ -1,7 +1,60 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
+import gsap from "gsap";
+
+const features =[
+  {
+    image:"/assets/images/about/hiveminds-1.png",
+    icon:"/assets/images/about/why-us-1.svg",
+    heading:"Innovation"
+  },
+  {
+    image:"/assets/images/about/hiveminds-2.png",
+    icon:"/assets/images/about/why-us-2.svg",
+    heading:"Collaboration"
+  },
+  {
+    image:"/assets/images/about/hiveminds-3.png",
+    icon:"/assets/images/about/why-us-3.svg",
+    heading:"Skill Growth"
+  },
+  {
+    image:"/assets/images/about/hiveminds-4.png",
+    icon:"/assets/images/about/why-us-4.svg",
+    heading:"Data-Driven"
+  },
+  {
+    image:"/assets/images/about/hiveminds-5.png",
+    icon:"/assets/images/about/why-us-5.svg",
+    heading:"Recognition"
+  },
+  {
+    image:"/assets/images/about/hiveminds-6.png",
+    icon:"/assets/images/about/why-us-6.svg",
+    heading:"Training"
+  }
+]
 
 const WhyUs = () => {
+  const previewContainerRef = useRef(null);
+  const handleImageHover = (item) => {
+    const { image: imgSrc} = item;
+    const previewContainer = previewContainerRef.current;
+    const currentLastImg = previewContainer.querySelector('img:last-child');
+    if (currentLastImg) {
+      gsap.to(currentLastImg, { duration: 1, scale: 1.2, left: '100%' });
+    }
+    const newImg = document.createElement('img');
+    newImg.src = imgSrc;
+    newImg.style.position = 'absolute';
+    newImg.style.left = '-50%';
+    newImg.style.top = '0%';
+    newImg.style.width = '100%';
+    newImg.style.height = '100%';
+    newImg.style.objectFit = 'cover';
+    previewContainer.appendChild(newImg);
+    gsap.to(newImg, { duration: 1, left: '0%' });
+  };  
   return (
     <section className="w-screen h-full pb-[5%] mobile:pb-10" id="why-us">
       <div className="cotainer-lg flex flex-col px-[5vw]">
@@ -19,53 +72,22 @@ const WhyUs = () => {
         </div>
 
         <div className="w-full flex justify-between mobile:block">
-          <div className="h-[43vw] w-[40%] rounded-[1.5vw] overflow-hidden fadeup mobile:w-full mobile:rounded-3xl mobile:h-[80vw] mobile:mb-6">
-            <Image src={"/assets/images/about/why-us.png"} alt="" className="w-full h-full object-cover" width={720} height={940} />
+          <div className="h-[43vw] w-[40%] rounded-[1.5vw] overflow-hidden fadeup mobile:w-full mobile:rounded-3xl mobile:h-[80vw] mobile:mb-6" ref={previewContainerRef}>
+            <Image src={"/assets/images/about/hiveminds-1.png"} alt="" className="w-full h-full object-cover" width={720} height={940} />
           </div>
           <div className="w-[55%] flex flex-col mt-[1.5vw] mobile:w-full">
-            <div className="flex flex-col gap-[2vw] mt-[2vw] fadein mobile:gap-5 mobile:mt-5">
+          {features.map((item,index)=>(  
+            <div key={index} className="flex flex-col gap-[2vw] mt-[2vw] fadein mobile:gap-5 mobile:mt-5" onMouseEnter={() => handleImageHover(item)}>
               <span className="w-full h-[1px] bg-black"></span>
-              <div className="flex gap-[2vw] items-center mobile:gap-6 mobile:px-3">
-                <Image src={"/assets/images/about/why-us-1.svg"} alt="icons" width={30} height={30} className="mobile:w-10" />
-                <p className="text-[1.2vw] mobile:text-[5.1vw]">Innovation</p>
-              </div>
+              
+                <div  className="flex gap-[2vw] items-center mobile:gap-6 mobile:px-3"  
+                >
+                    <Image src={item.icon} alt="icons" width={30} height={30} className="mobile:w-10" />
+                    <p className="text-[1.2vw] mobile:text-[5.1vw]">{item.heading}</p>
+                  </div>
             </div>
-            <div className="flex flex-col gap-[2vw] mt-[2vw] fadein mobile:gap-5 mobile:mt-5">
-              <span className="w-full h-[1px] bg-black"></span>
-              <div className="flex gap-[2vw] items-center mobile:gap-6 mobile:px-3">
-                <Image src={"/assets/images/about/why-us-2.svg"} alt="icons" width={30} height={30} className="mobile:w-10" />
-                <p className="text-[1.2vw] mobile:text-[5.1vw]">Collaboration</p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-[2vw] mt-[2vw] fadein mobile:gap-5 mobile:mt-5">
-              <span className="w-full h-[1px] bg-black"></span>
-              <div className="flex gap-[2vw] items-center mobile:gap-6 mobile:px-3">
-                <Image src={"/assets/images/about/why-us-3.svg"} alt="icons" width={30} height={30} className="mobile:w-10" />
-                <p className="text-[1.2vw] mobile:text-[5.1vw]">Skill Growth</p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-[2vw] mt-[2vw] fadein mobile:gap-5 mobile:mt-5">
-              <span className="w-full h-[1px] bg-black"></span>
-              <div className="flex gap-[2vw] items-center mobile:gap-6 mobile:px-3">
-                <Image src={"/assets/images/about/why-us-4.svg"} alt="icons" width={30} height={30} className="mobile:w-10" />
-                <p className="text-[1.2vw] mobile:text-[5.1vw]">Data-Driven</p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-[2vw] mt-[2vw] fadein mobile:gap-5 mobile:mt-5">
-              <span className="w-full h-[1px] bg-black"></span>
-              <div className="flex gap-[2vw] items-center mobile:gap-6 mobile:px-3">
-                <Image src={"/assets/images/about/why-us-5.svg"} alt="icons" width={30} height={30} className="mobile:w-10" />
-                <p className="text-[1.2vw] mobile:text-[5.1vw]">Recognition</p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-[2vw] mt-[2vw] fadein mobile:gap-5 mobile:mt-5">
-              <span className="w-full h-[1px] bg-black"></span>
-              <div className="flex gap-[2vw] items-center mobile:gap-6 mobile:px-3">
-                <Image src={"/assets/images/about/why-us-6.svg"} alt="icons" width={30} height={30} className="mobile:w-10" />
-                <p className="text-[1.2vw] mobile:text-[5.1vw]">Training</p>
-              </div>
-              <span className="w-full h-[1px] bg-black"></span>
-            </div>
+             ))}
+              <span className="w-full h-[1px] bg-black my-[2vw]"></span>
           </div>
         </div>
       </div>
