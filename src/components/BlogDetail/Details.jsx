@@ -54,7 +54,7 @@ const Details = ({content}) => {
                         height="15"
                         viewBox="0 0 12 23"
                         fill="none"
-                        className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw] tablet:h-[3.5vw] tablet:w-[3.5vw]'
+                        className='mobile:w-[5vw] mobile:h-[5vw] w-[1.2vw] h-[1.2vw] tablet:h-[3.5vw] tablet:w-[3.5vw]'
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -74,7 +74,7 @@ const Details = ({content}) => {
                         height="15"
                         viewBox="0 0 21 21"
                         fill="none"
-                         className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw] tablet:h-[3.5vw] tablet:w-[3.5vw]'
+                         className='mobile:w-[5vw] mobile:h-[5vw] w-[1.2vw] h-[1.2vw] tablet:h-[3.5vw] tablet:w-[3.5vw]'
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -104,7 +104,7 @@ const Details = ({content}) => {
                         height="15"
                         viewBox="0 0 19 20"
                         fill="none"
-                         className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw] tablet:h-[3.5vw] tablet:w-[3.5vw]'
+                         className='mobile:w-[5vw] mobile:h-[5vw] w-[1.2vw] h-[1.2vw] tablet:h-[3.5vw] tablet:w-[3.5vw]'
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path

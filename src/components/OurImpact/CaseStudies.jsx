@@ -109,7 +109,7 @@ const caseStudiesData = [
     id: 11,
     industry:"FMCG & Beauty",
     imgSrc: "/assets/images/impact/casestudy/parachute-cs-banner.png",
-    title: "Parachute Advanced",
+    title: "Parachute Advansed",
     description:
       "<p><span class='text-primary'>60% </span> ACOS Growth</p> <p>Shining with E-Commerce-Specific Packs</p>",
     link: "/casestudies/parachute-advansed",
