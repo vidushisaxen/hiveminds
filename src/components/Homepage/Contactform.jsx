@@ -151,7 +151,7 @@ export default function Contactform() {
           {/* Checkbox Field */}
           <div className="w-full flex gap-[1vw] justify-center mobile:justify-start mobile:items-start mobile:gap-3 tablet:block tablet:w-4/5 ">
             <Checkbox className=""/>
-            <span className="text-[1.1vw] text-black/70 mobile:text-[1rem] tablet:text-[2vw] tablet:px-[3vw]">
+            <span className="text-[1.1vw] text-black/70  capitalize mobile:text-[1rem] tablet:text-[2vw] tablet:px-[3vw]">
               Sign me up to receive future marketing communications regarding Hiveminds, services and events.
             </span>
           </div>

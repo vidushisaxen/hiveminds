@@ -152,8 +152,8 @@ const Awards = () => {
                 spaceBetween: 35,
               },
               1536: {
-                slidesPerView: 6,
-                spaceBetween: 40,
+                slidesPerView: 2.7,
+                spaceBetween: 35,
               },
             }}
             modules={[FreeMode]}

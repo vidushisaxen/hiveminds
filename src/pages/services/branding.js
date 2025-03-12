@@ -9,7 +9,7 @@ import SubServices from '@/components/ServiceDetail/SubServices'
 
 import Contact from '@/components/ServiceDetail/Contact'
 import img from '../../../public//assets/images/services/branding-services.png'
-import CaseStudies from '@/components/Homepage/CaseStudies'
+import CaseStudies from '@/components/ServiceDetail/CaseStudies'
 
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);

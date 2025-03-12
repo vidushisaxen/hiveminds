@@ -107,7 +107,7 @@ const Leadership = () => {
             <div className="mobile:w-screen mobile:overflow-hidden">
               <div className="flex justify-between flex-wrap w-full h-full py-[2vw] mobile:flex-nowrap mobile:overflow-x-auto mobile:gap-[5vw] tablet:gap-[2.5vw]">
                 {team.map((team, id) => (
-                  <div className="flex flex-col mb-[2vw] gap-[0.5vw] fadeup mobile:first:pl-[5vw] mobile:last-of-type:pr-[5vw] mobile:gap-4 tablet:gap-[1.5vw]" key={id}>
+                  <div className="flex flex-col mb-[2vw] gap-[0.5vw] py-[1vw] fadeup mobile:first:pl-[5vw] mobile:last-of-type:pr-[5vw] mobile:gap-4 tablet:gap-[1.5vw]" key={id}>
                     <div className="w-[29.5vw] h-[33vw] rounded-[1.4vw] overflow-hidden bg-black mobile:w-[80vw] mobile:h-[90vw] mobile:rounded-[1.2rem] tablet:w-[43vw] tablet:h-[50vw]">
                       <Image
                         src={team.src}
@@ -118,8 +118,8 @@ const Leadership = () => {
                       />
                     </div>
                     <div className="flex flex-col mobile:pl-2 tablet:pl-2">
-                      <h4 className="text-[1.6vw] mobile:text-lg leading-[1.2] tablet:text-[3.5vw]">{team.name}</h4>
-                      <p className="">{team.designation}</p>
+                      <h4 className="text-[1.6vw] pt-[1vw] mobile:text-lg leading-[1.2] tablet:text-[3.5vw]">{team.name}</h4>
+                      <p className="content">{team.designation}</p>
                     </div>
                   </div>
                 ))}

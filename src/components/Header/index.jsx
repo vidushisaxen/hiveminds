@@ -188,7 +188,7 @@ const Header = ({ isOpen }) => {
                 </li>
 
                 <li className="relative group flex items-center gap-1 cursor-pointer">
-                  <Link href={"#"} className="link-line" prefetch={false}>
+                  <Link href={"/careers"} className="link-line" prefetch={false}>
                     Careers
                   </Link>
                 </li>

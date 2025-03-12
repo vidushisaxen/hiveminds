@@ -12,9 +12,8 @@ const GetinTouch = () => {
             Get In
             <span className="text-primary"> Touch</span>
           </h1>
-          <p data-para-anim className="content w-[65%] tracking-wide para mobile:w-full">
-            Leave us your details and a member of our team will get back to you
-            as soon as possible.
+          <p  className="content w-[70%] fadeup tracking-wide para mobile:w-full">
+          Leave us your details and a member of our team will get back to you as soon as possible.
           </p>
 
           <div className="flex flex-col gap-[3vw] mt-[5vw] mobile:gap-[7vw]">

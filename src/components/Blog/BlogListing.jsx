@@ -247,11 +247,13 @@ const BlogCard = ({
         <div className="flex flex-col gap-[0.5vw] mobile:gap-[4vw] tablet:gap-[1.5vw]">
           <p className="text-[1.6vw] font-medium py-[0.5vw] mobile:text-[6vw] tablet:text-[3vw] tablet:leading-[1.2]">{title}</p>
           <div className="flex gap-[4vw] text-black/70 mobile:w-full mobile:justify-between">
-            <p>{category}</p>
-            <p>{date}</p>
+            <p className="content">{category}</p>
+            <p className="content">{date}</p>
           </div>
-          <div className="text-[1.05vw] w-[95%]" />
+          <div className=" w-[95%]" />
+          <p className="content">
           {description}
+          </p>
         </div>
         <Link href={link}>
           <div className="w-fit">

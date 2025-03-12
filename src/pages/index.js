@@ -62,7 +62,7 @@ const index = () => {
           <span className='absolute h-[20%] bottom-[-10%]  w-full'></span>
           <Blogs />
         </div>
-        <Contact  title1={"Drive Growth with"} title2={"Data!"} para={"Unlock powerful consumer insights to transform your brand. Connect with us today and harness data-driven strategies for measurable, sustainable success."}/>
+        <Contact  title1={"Looking to Drive "} title2={"Growth?"} para={"We’re passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us."}/>
       </Layout>
     </>
   )

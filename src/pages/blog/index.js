@@ -14,7 +14,7 @@ const index = () => {
   return (
    <>
    <Layout>
-    <Hero title1={"What’s"} title2={"Buzzing"} para={"SEO is vastly interdisciplinary and it requires skills ranging from coding to linguistics to production. It includes services such as Influencer Marketing and Organic Social Media Management."} img={img} />
+    <Hero title1={"What’s"} title2={"Buzzing"} para={"Leveraging data-driven insights and technical expertise, HiveMinds crafts SEO solutions that elevate digital visibility and drive measurable results, turning organic searches into valuable customer relationships."} img={img} />
     <FeaturedBlog/>
     <BlogListing/>
    </Layout>

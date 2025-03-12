@@ -116,11 +116,11 @@ const industries = [
     img: "/assets/images/industry/automobiles.png",
     title1: " Automobiles",
     title2: " ",
-    para: "In the automobile sector, we fuel brand performance with strategic paid advertising, performance marketing, and impactful social media boosting. Our tailored campaigns drive consumer engagement and conversions, enabling automotive brands to accelerate growth anddominate the digital arena.",
+    para: "In the automobile sector, we fuel brand performance with strategic paid advertising, performance marketing, and impactful social media boosting. Our tailored campaigns drive consumer engagement and conversions, enabling automotive brands to accelerate growth and dominate the digital arena.",
   },
   {
     img: "/assets/images/industry/travel-and-tourism.png",
-    title1: " Travel and",
+    title1: " Travel &",
     title2: " Tourism",
     para: "We transform travel brands into digital destinations. Our integrated strategies blend data-driven insights, creative storytelling, and performance optimization to elevate online visibility, drive bookings, and create memorable journeys that resonate with globetrotters.",
   }

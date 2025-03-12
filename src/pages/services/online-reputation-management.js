@@ -9,7 +9,7 @@ import SubServices from '@/components/ServiceDetail/SubServices'
 
 import Contact from '@/components/ServiceDetail/Contact'
 import img from '../../../public/assets/images/services/online-reputation-management.png'
-import CaseStudies from '@/components/Homepage/CaseStudies'
+import CaseStudies from '@/components/ServiceDetail/CaseStudies'
 
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
@@ -41,7 +41,7 @@ const index = () => {
        <Hero title1={"Your Reputation , Our"} title2={"Priority "} para={"An ORM service acts as a vigilant guardian for your brand, ensuring every customer interaction not only safeguards your image but also builds lasting trust. It’s about transforming every piece of feedback into an opportunity to strengthen your reputation"} img={img}/>
        <Overview title1={"Drive Trust with"} title2={"ORM"} para={"To protect and enhance a brand's image, you must be proactive and responsive. Focus on continuously monitoring your online presence, engaging with your audience, and turning customer feedback into actionable strategies. This approach not only mitigates risks but also builds enduring customer loyalty in today’s competitive digital landscape."}/>
        <div className='relative h-full w-screen rounded-[20px] mobile:bg-primary mobile:pb-[10%] '>
-          <SubServices heading={"Our ORM Strategic Framework"} para={"EEmpower your brand with our comprehensive ORM solutions designed to protect and elevate your reputation:"} subservices={subservices}/>
+          <SubServices heading={"Our ORM Strategic Framework"} para={"Empower your brand with our comprehensive ORM solutions designed to protect and elevate your reputation:"} subservices={subservices}/>
           <span className='absolute h-[20%] bottom-[30%] w-full'></span>
         <CaseStudies/>
         </div>

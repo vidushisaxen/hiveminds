@@ -45,7 +45,7 @@ const Locations = () => {
               Langford Town, Langford Gardens, Bengaluru, Karnataka 560025
             </p>
             <Link href={"/"}>
-              <p className="hover:text-blue-700 link-line transition-all duration-300 ease-in-out font-medium mt-[3vw] mobile:mt-[10vw]">
+              <p className="content !font-medium hover:text-blue-700 link-line transition-all duration-300 ease-in-out  mt-[3vw] mobile:mt-[10vw]">
                 Show On Google Map
               </p>
             </Link>
@@ -58,7 +58,7 @@ const Locations = () => {
               Gundavali, Andheri East, Andheri, Mumbai, Maharashtra 400047
             </p>
             <Link href={"/"}>
-              <p className="hover:text-blue-700 link-line transition-all duration-300 ease-in-out  font-medium mt-[3vw]">
+              <p className="content !font-medium hover:text-blue-700 link-line transition-all duration-300 ease-in-out   mt-[3vw]">
                 Show On Google Map
               </p>
             </Link>
@@ -73,7 +73,7 @@ const Locations = () => {
               </p>
               <div className="flex justify-center items-center w-fit h-full">
                 <Link href={"/"}>
-                  <p className="hover:text-blue-700 link-line transition-all duration-300 ease-in-out  font-medium mt-[3vw]">
+                  <p className=" content !font-medium hover:text-blue-700 link-line transition-all duration-300 ease-in-out  mt-[3vw]">
                     Show On Google Map
                   </p>
                 </Link>

@@ -99,10 +99,10 @@ const CaseStudies = () => {
           <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block pl-[3vw] pt-[3vw] pr-[1.5vw] shadow-2xl drop-shadow-2xl overflow-hidden">
             <div className="w-[40%] h-full flex flex-col gap-[2vw]">
               <h2 className="heading-2 headinganim">
-                Growth Isn&apos;t Just a Buzzword - It&apos;s About Real <span className="blue-text">Impact</span>
+              Related Case <span className="blue-text">Studies</span>
               </h2>
               <p data-para-anim className="content w-[80%]">
-                Explore the challenges we&apos;ve overcome and the strategies we&apos;ve implemented to deliver exceptional results across various industries.
+              Explore the challenges we&apos;ve overcome and the strategies we&apos;ve implemented to deliver exceptional results across various industries.
               </p>
 
               <div className="flex flex-wrap items-center mt-[2vw] gap-[1vw] w-[90%]">

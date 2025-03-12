@@ -83,7 +83,7 @@ const caseStudiesData = [
     imgSrc: "/assets/images/impact/casestudy/saffola-cs-banner.png",
     title: "Saffola Honey",
     description:
-      "<p><span class='text-primary'>50% </span> CTR Growth and 50% Higher Conversions</p> <p> Achieving Excellence</p>",
+      "<p><span class='text-primary'>100% </span> CTR Growth and 50% Higher Conversions</p> <p> Achieving Excellence</p>",
     link: "/casestudies/saffola-honey",
   },
   {
@@ -144,7 +144,7 @@ const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
         <div>
         <p className="text-[2vw] font-medium py-[0.5vw] mobile:text-[7vw] tablet:text-[4vw]">{title}</p>
         <div
-          className="text-[1.05vw] w-[95%] mobile:text-[4.5vw] tablet:text-[2vw]"
+          className="content w-[95%] mobile:text-[4.5vw] tablet:text-[2vw]"
           dangerouslySetInnerHTML={{ __html: description }}
         />
 
@@ -210,11 +210,11 @@ const CaseStudies = () => {
             growth.
           </p>
         </div>
-<div className="flex py-[3vw] gap-[3vw]">
+<div className="flex py-[3vw] gap-[1vw]">
         <div className="flex flex-col">
           <p className="content px-[1vw] py-[0.5vw]">Filters:</p>
           <Select value={selectedIndustry} onValueChange={setSelectedIndustry}>
-            <SelectTrigger className="w-[22vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl border-[1.5px] border-black rounded-[30px]">
+            <SelectTrigger className="w-[22vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl border-[1.5px] border-black rounded-full">
               <SelectValue placeholder="All Indutries" />
             </SelectTrigger>
             <SelectContent>
@@ -230,7 +230,7 @@ const CaseStudies = () => {
           </Select>
         </div>
         <button  onClick={handleFilter}
-          className="bg-[#134BD6] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-[30px]">
+          className="bg-[#134BD6] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-full content-white">
           Apply
         </button>
         </div>

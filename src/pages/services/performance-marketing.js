@@ -6,10 +6,9 @@ import gsap from 'gsap'
 import Hero from '@/components/ServiceDetail/Hero'
 import Overview from '@/components/ServiceDetail/Overview'
 import SubServices from '@/components/ServiceDetail/SubServices'
-
 import Contact from '@/components/ServiceDetail/Contact'
 import img from '../../../public/assets/images/services/performance-marketing.png'
-import CaseStudies from '@/components/Homepage/CaseStudies'
+import CaseStudies from '@/components/ServiceDetail/CaseStudies'
 
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);

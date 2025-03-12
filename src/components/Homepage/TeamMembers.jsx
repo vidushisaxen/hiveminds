@@ -90,7 +90,7 @@ const TeamMembers = () => {
             Be A Part Of
             <span className="blue-text"> HiveMinds </span>
           </h2>
-          <p className="content w-[70%] text-center mobile:text-[4vw] mobile:text-left mobile:w-[90%] fadeup tablet:text-left tablet:w-[60%]">
+          <p className="content w-[45%] text-center mobile:text-[4vw] mobile:text-left mobile:w-[90%] fadeup tablet:text-left tablet:w-[60%]">
             Join the Hive Tribe—Where bold strategies meet fast-paced growth.
             We&apos;re a tribe of marketing mavericks turning vision into
             success. Be part of our journey as we transform brands and create

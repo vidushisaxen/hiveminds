@@ -71,7 +71,7 @@ const Contact = () => {
         <div className="w-full h-full flex gap-[10vw]">
           <div className="w-[45%] flex flex-col gap-[2vw]">
             <h2 className="heading-2 headinganim">
-              Looking to Drive <span className="blue-text">Growth?</span>
+            Looking to Drive  <span className="blue-text">Growth?</span>
             </h2>
             <p data-para-anim className="content w-[90%]">
               We&apos;re passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us.

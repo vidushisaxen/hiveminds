@@ -74,16 +74,16 @@ const WhyUs = () => {
 
         <div className="w-full flex justify-between mobile:block tablet:flex-col">
           <div className="h-[43vw] w-[40%] rounded-[1.5vw] overflow-hidden fadeup mobile:w-full mobile:rounded-3xl mobile:h-[80vw] mobile:mb-6 tablet:w-full tablet:h-[60vw]" ref={previewContainerRef}>
-            <Image src={"/assets/images/about/hiveminds-1.png"} alt="" className="w-full h-full object-cover" width={720} height={940} />
+            <Image src={"/assets/images/about/hiveminds-1.png"} alt="" className="w-full h-full object-cover" width={720} height={940}  />
           </div>
-          <div className="w-[55%] flex flex-col mt-[1.5vw] mobile:w-full tablet:w-full">
+          <div className="w-[55%] flex flex-col  mobile:w-full tablet:w-full">
           {features.map((item,index)=>(  
             <div key={index} className="flex flex-col gap-[2vw] mt-[2vw] fadein mobile:gap-5 mobile:mt-5 tablet:gap-[4vw] tablet:mt-[4vw]" onMouseEnter={() => handleImageHover(item)}>
               <span className="w-full h-[1px] bg-black"></span>
               
                 <div  className="flex gap-[2vw] items-center mobile:gap-6 mobile:px-3 tablet:gap-[4vw]"  
                 >
-                    <Image src={item.icon} alt="icons" width={30} height={30} className="mobile:w-10 tablet:w-[8vw]" />
+                    <Image src={item.icon} alt="icons" width={30} height={30} className="w-[3vw] h-[3vw] mobile:w-10 tablet:w-[8vw]" />
                     <p className="text-[1.2vw] mobile:text-[5.1vw] tablet:text-[4vw]">{item.heading}</p>
                   </div>
             </div> 
