@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { useRouter } from "next/router";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Contactform from './Contactform';
@@ -10,25 +11,26 @@ const Contact = ({ title1, title2, para }) => {
   useEffect(() => {
     if (globalThis.innerWidth > 1024) {
       let ctx = gsap.context(() => {
-        const body = document.body;
-        const changeBodyColor = (color) => {
-          gsap.to(body, {
-            backgroundColor: color,
-            duration: 1,
-            ease: "power2.out",
-          });
-        };
+        // const body = document.body;
+        // const changeBodyColor = (color) => {
+        //   gsap.to(body, {
+        //     backgroundColor: color,
+        //     duration: 1,
+        //     ease: "power2.out",
+        //   });
+        // };
         ScrollTrigger.create({
           trigger: "#contact",
           start: "top 90%",
           end: "bottom 20%",
-          onEnter: () => changeBodyColor("#fafafa"),
-          onLeaveBack: () => changeBodyColor("#134bd6"),
+          // onEnter: () => changeBodyColor("#fafafa"),
+          // onLeaveBack: () => changeBodyColor("#134bd6"),
         });
       });
       return () => ctx.revert();
     }
   });
+
   const blueHexagonRef = useRef(null);
   const yellowHexagonRef = useRef(null);
 

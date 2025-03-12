@@ -16,7 +16,7 @@ const Hero = () => {
           Hiveminds School
             <span className="text-primary">{" "}of Digital</span>
           </h1>
-          <p data-para-anim className="text-[2vw] para w-[50%]"> Upscale with our Digital Marketing Course</p>
+          <p data-para-anim className="text-[2vw] para w-[50%] mobile:text-[4.2vw] tablet:text-[2.4vw] mobile:w-full tablet:w-[80%]"> Upscale with our Digital Marketing Course</p>
           <p data-para-anim className="content w-[70%] tracking-wide para mobile:w-full tablet:w-4/5">
           Kickstart your digital marketing career with our carefully curated range of content to make you job-ready in 3 months.
           </p>

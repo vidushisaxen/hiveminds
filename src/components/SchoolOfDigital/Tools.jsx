@@ -41,7 +41,7 @@ const tools3=[
 const Tools = () => {
   return (
    <section>
-     <div className='w-full h-full mobile:py-[10%]'>
+     <div className='w-full h-full mobile:py-[10%] tablet:py-[7%]'>
         <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw]  container-lg mobile:items-start mobile:gap-[4vw] tablet:block tablet:space-y-[3vw]">
             <h2 data-heading-anim className="heading-2 headinganim tablet:w-[70%]">
             Tools you will Learn from

@@ -1,5 +1,6 @@
 import { formatDate } from "@/lib/datetime";
 import Link from "next/link";
+import { LinkedinShareButton, FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'next-share';
 
 export default function ShareDetails({ slug, date }) {
 
@@ -13,7 +14,8 @@ export default function ShareDetails({ slug, date }) {
                 <div className='py-[2vw]'>
                     <p className='text-[1.3vw] font-medium leading-[1]  mobile:text-[4vw] mobile:mb-[4vw]'>Share Article:</p>
                     <div className="flex items-start gap-[1vw] py-[1vw] mobile:gap-[3vw]">
-                        <Link href={"#"}>
+                        <FacebookShareButton>
+
                             <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
                                 <span className=" flex justify-center items-center">
                                     <svg
@@ -31,8 +33,10 @@ export default function ShareDetails({ slug, date }) {
                                     </svg>
                                 </span>
                             </div>
-                        </Link>
-                        <Link href={"#"}>
+
+                        </FacebookShareButton>
+                    
+                        <LinkedinShareButton>
                             <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
                                 <span className=" flex justify-center items-center">
                                     <svg
@@ -59,8 +63,11 @@ export default function ShareDetails({ slug, date }) {
                                     </svg>
                                 </span>
                             </div>
-                        </Link>
-                        <Link href={"#"}>
+                        
+                        </LinkedinShareButton>
+                       
+                       <TwitterShareButton>
+
                             <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
                                 <span className=" flex justify-center items-center">
                                     <svg
@@ -78,7 +85,9 @@ export default function ShareDetails({ slug, date }) {
                                     </svg>
                                 </span>
                             </div>
-                        </Link>
+
+                       </TwitterShareButton>
+                      
                     </div>
                 </div>
             </div>

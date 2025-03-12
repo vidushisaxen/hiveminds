@@ -39,7 +39,7 @@ const index = () => {
       <Layout isOpen={isOpen}>
        <Hero title1={"Retail"} title2={"Services"} para={"Digital retail is the strategic engine that transforms customer interactions into measurable revenue gains. By seamlessly blending precision paid media with organic growth tactics, our approach reimagines your e-commerce presence and unlocks untapped market potential."} img={img}/>
        <Overview title1={"Scale Efficiently with Data-First "} title2={"Retail Strategies"} para={"In today’s hyper-competitive digital marketplace, scaling your retail operations requires a strategic, data-driven methodology. Prioritize deep category insights, advanced analytics, and creative execution to optimize every touchpoint—from discovery to conversion—and drive sustainable growth."}/>
-       <div className='relative h-full w-screen rounded-[20px] mobile:bg-primary mobile:pb-[10%] '>
+       <div className='relative h-full w-screen rounded-[20px] mobile:bg-primary mobile:pb-[10%] tablet:bg-primary tablet:pb-[10%] '>
           <SubServices heading={"Our Solutions For Retail Transformation"} para={"Our comprehensive suite of retail services are designed to empower your brand’s digital evolution:"} subservices={subservices}/>
           <span className='absolute h-[20%] bottom-[30%] w-full'></span>
         <CaseStudies/>

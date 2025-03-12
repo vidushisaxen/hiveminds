@@ -1,46 +1,17 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect } from 'react'
+import React from 'react'
+import styles from"./blogstyles.module.css"
 
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/dist/ScrollTrigger'
-gsap.registerPlugin(ScrollTrigger)
 
 const Details = ({content}) => {
-  useEffect(()=>{
-    if(globalThis.innerWidth>1024){
 
-      const ctx = gsap.context(()=>{
-          gsap.to(".blog-credentials",{
-              ease:"none",
-              scrollTrigger:{
-                  trigger:"#blog-detail",
-                  start:"top top",
-                  end:"90% top",
-                  pin:".blog-credentials"
-              }
-          })
-          gsap.from(".related-blogs",{
-            y:100,
-            opacity:0,
-            stagger:0.2,
-            duration:2,
-            ease:"power3.out",
-            scrollTrigger:{
-              trigger:"#related-blogs",
-              start:"top 60%"
-            }
-           })
-      })
-      return()=>ctx.revert()
-
-    }
-},[])
   return (
     <>
       <section className='h-full w-screen py-[5vw]' id='blog-detail'>
         <div className='container-lg w-full h-full flex items-start justify-between mobile:flex-col tablet:flex-col'>
-          <div className='w-[30%] blog-credentials mobile:w-full mobile:flex mobile:flex-col mobile:gap-[3vw] tablet:w-full'>
+
+          <div className='w-[30%] blog-credentials mobile:w-full mobile:flex mobile:flex-col mobile:gap-[3vw] tablet:w-full sticky mobile:static tablet:static top-[8vw]'>
             <p className='text-[1.3vw] font-medium leading-[1] mobile:text-[4vw] tablet:text-[2.5vw]'>Posted On:</p>
             <p className='text-[1.3vw] font-medium leading-[1] py-[1vw] mobile:text-[5.5vw] tablet:text-[3.5vw]'>{content.date}</p>
             <div className='py-[2vw] tablet:py-[3vw]'>
@@ -119,6 +90,7 @@ const Details = ({content}) => {
               </div>
             </div>
           </div>
+          
           <div className='w-[60%] h-full mobile:w-full tablet:w-full'>
            {content.content1.map((item,index)=>(
             <div key={index} className='space-y-[2vw] py-[1vw] fadein' dangerouslySetInnerHTML={{__html:item}}/>

@@ -43,7 +43,7 @@ const index = () => {
         para={"An integrated branding approach is a strategic catalyst that fuses creative storytelling with data-driven insights, crafting a compelling digital presence that resonates with audiences and delivers measurable, lasting impact. It's about transforming your brand into a market leader with a narrative that truly connects."} 
         img={img}/>
        <Overview title1={"Scale Efficiently with a Data-First"} title2={"Branding Strategy"} para={"Building a powerful brand requires more than just a logo—it demands a holistic, data-driven approach. Embrace deep market research, agile creative execution, and continuous performance optimization to articulate your brand’s unique story and activate it across every digital channel."}/>
-       <div className='relative h-full w-screen rounded-[20px]  mobile:bg-primary mobile:pb-[10%]'>
+       <div className='relative h-full w-screen rounded-[20px]  mobile:bg-primary mobile:pb-[10%] tablet:bg-primary tablet:pb-[10%]'>
           <SubServices heading={"Our Strategic Brand Capabilities"} para={"Empower your brand transformation with a comprehensive suite of solutions:"} subservices={subservices}/>
           <span className='absolute h-[20%] bottom-[30%] w-full'></span>
         <CaseStudies/>

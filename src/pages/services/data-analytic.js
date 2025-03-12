@@ -39,7 +39,7 @@ const index = () => {
       <Layout isOpen={isOpen}>
        <Hero title1={"Data Analytic"} title2={"Services "} para={"Data is the foundation of every successful digital strategy. Our data analysis solutions transform raw numbers into powerful business intelligence, enabling brands to make informed decisions, optimize marketing performance, and unlock new growth opportunities."} img={img}/>
        <Overview title1={"Turn Insights into Action with"} title2={"Precision Analytics"} para={"In today’s fast-paced digital landscape, brands that leverage data-driven decision-making gain a competitive edge. Expertise in predictive modeling, consumer behavior analysis, and real-time reporting ensures that every marketing initiative is backed by deep, actionable insights."}/>
-       <div className='relative h-full w-screen rounded-[20px] mobile:bg-primary mobile:pb-[10%] '>
+       <div className='relative h-full w-screen rounded-[20px] mobile:bg-primary mobile:pb-[10%] tablet:bg-primary tablet:pb-[10%]'>
           <SubServices heading={"Our Data Solutions Power Business Success"} para={"Our suite of data-driven services helps brands maximize efficiency and impact:"} subservices={subservices}/>
           <span className='absolute h-[20%] bottom-[30%] w-full'></span>
         <CaseStudies/>

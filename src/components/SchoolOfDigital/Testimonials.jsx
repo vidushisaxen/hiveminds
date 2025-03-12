@@ -86,16 +86,16 @@ const data = [
 const TestimonialCard = ({ img, name, year, content, key, stars }) => {
   return (
     <>
-      <div key={key} className="w-[34.2vw] h-[30vw] shadow-sm rounded-[1.2vw]  py-[2vw] px-[1.5vw] bg-white  hover:scale-[1.02] duration-500 ease-in-out transition-all mobile:w-full mobile:h-[130vw] mobile:rounded-[4.5vw] mobile:px-[5vw] border mobile:py-[5vw] tablet:w-full tablet:h-[50vw] tablet:px-[3vw] ">
+      <div key={key} className="w-[34.2vw] h-[30vw] shadow-sm rounded-[1.2vw]  py-[2vw] px-[1.5vw] bg-white  hover:scale-[1.02] duration-500 ease-in-out transition-all mobile:w-full mobile:h-[130vw] mobile:rounded-[4.5vw] mobile:px-[5vw] border mobile:py-[5vw] tablet:w-full tablet:h-[50vw] tablet:px-[3vw] tablet:rounded-[2vw] ">
         <div className="flex items-start justify-between gap-[1vw] w-full mobile:gap-[5vw]">
-          <div className=" mobile:w-[20vw] mobile:h-[18vw] tablet:w-[10vw] tablet:h-[10vw]">
-            <Image src={img} width={118} height={118} alt="icon" className='rounded-full w-[5vw] h-[5vw]' />
+          <div className=" mobile:w-[10vw] mobile:h-[18vw] mobile:flex mobile:justify-center mobile:items-center tablet:w-[10vw] tablet:h-[10vw]">
+            <Image src={img} width={118} height={118} alt="icon" className='rounded-full w-[5vw] h-[5vw] tablet:w-[8vw] tablet:h-[8vw] mobile:w-[10vw] mobile:h-[10vw]' />
           </div>
           <div className="w-[80%] flex flex-col mobile:mt-[3vw] mobile:gap-[0.5vw]">
             <p className=" text-[1.8vw] font-medium montreal mobile:text-[3.5vw] tablet:text-[2.5vw] ">
               {name}
             </p>
-            <p className=" mobile:!text-[3vw]">{year}</p>
+            <p className=" mobile:text-[3vw] tablet:text-[2.2vw]">{year}</p>
             {Number.isInteger(stars) && stars > 0 && (
               <div className="flex items-center py-[1vw]">
                 {Array.from({ length: stars }, (_, index) => (
@@ -105,7 +105,7 @@ const TestimonialCard = ({ img, name, year, content, key, stars }) => {
                     height={25}
                     width={25}
                     alt="star"
-                    className='w-[1.5vw] h-[1.5vw]'
+                    className='w-[1.5vw] h-[1.5vw] tablet:w-[2vw] tablet:h-[2vw] mobile:w-[4vw] mobile:h-[4vw]'
                   />
                 ))}
               </div>
@@ -201,7 +201,7 @@ const Testimonials = () => {
           </Swiper>
         </div>
         <div
-          className={`absolute z-[5] top-[30%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-white cursor-pointer border border-black mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:hidden tablet:w-fit tablet:h-fit 
+          className={`absolute z-[5] top-[30%] right-[5%] w-[4vw] h-[4vw] overflow-hidden rounded-full next-button hover:bg-white cursor-pointer border border-black mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:hidden tablet:w-fit tablet:h-fit tablet:top-[20%]
                 ${activeButton === "next" ? " text-black" : "bg-transparent"
             } transition-colors duration-300`}
           onClick={handleNext}
@@ -227,7 +227,7 @@ const Testimonials = () => {
           </div>
         </div>
         <div
-          className={`absolute z-[5] w-[4vw] h-[4vw] top-[30%] right-[11%]  border border-black overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%] mobile:hidden tablet:w-fit tablet:h-fit tablet:right-[12%]
+          className={`absolute z-[5] w-[4vw] h-[4vw] top-[30%] right-[11%]  border border-black overflow-hidden group  transition-all duration-500 rounded-full prev-button cursor-pointer mobile:top-[85%] mobile:w-fit mobile:h-fit mobile:p-[3vw] mobile:right-[25%] mobile:hidden tablet:w-fit tablet:h-fit tablet:right-[12%] tablet:top-[20%]
                 ${activeButton === "prev"
               ? " text-black"
               : "bg-transparent "

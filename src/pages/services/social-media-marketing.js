@@ -39,7 +39,7 @@ const index = () => {
       <Layout isOpen={isOpen}>
        <Hero title1={"Social Media Marketing "} title2={"Services"} para={"Social media marketing is the strategic accelerator that transforms everyday interactions into immersive brand experiences. By leveraging data-driven insights and creative storytelling, your brand builds authentic connections that cut through the noise and drive sustainable growth."} img={img}/>
        <Overview title1={"Scale Efficiently with Data-First  "} title2={"Social Media Strategies"} para={"To excel on social platforms, brands must actively engage its audience across digital channels. Embrace a proactive, audience-first approach—delivering compelling content, fostering genuine interactions, and continuously refining your strategy—to build loyalty, boost conversions, and drive measurable results."}/>
-       <div className='relative h-full w-screen rounded-[20px] mobile:bg-primary mobile:pb-[10%] '>
+       <div className='relative h-full w-screen rounded-[20px] mobile:bg-primary mobile:pb-[10%] tablet:bg-primary tablet:pb-[10%]'>
           <SubServices heading={"Our Social Engagement Arsenal"} para={"Our suite of social media services empowers your brand to maximize its digital impact:"} subservices={subservices}/>
           <span className='absolute h-[20%] bottom-[30%] w-full'></span>
         <CaseStudies/>

@@ -1,6 +1,7 @@
 "use client";
 import "@/styles/globals.css";
 import { ReactLenis } from "lenis/react";
+
 import "lenis/dist/lenis.css";
 import { DefaultSeo } from "next-seo";
 import { useEffect, useState } from "react";
@@ -45,6 +46,20 @@ export default function App({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events, lenis]);
+  useEffect(() => {
+  
+    const handleRouteChange = () => {
+      document.body.style.backgroundColor = "#fafafa";
+    };
+  
+    // Listen to route change events
+    router.events.on("routeChangeStart", handleRouteChange);
+  
+    // Cleanup
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, []);
 
   return (
     <>

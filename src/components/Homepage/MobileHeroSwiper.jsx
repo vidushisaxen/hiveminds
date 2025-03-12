@@ -84,7 +84,7 @@ const MobileHeroSwiper = () => {
             <React.Fragment key={index}>
               <SwiperSlide>
                 <Link href={image.link}>
-                  <div className="relative w-[92vw] mobile:h-[100vw] overflow-hidden tablet:h-[50vw] tablet:w-full tablet:rounded-[2vw]">
+                  <div className="relative w-full mobile:h-[100vw] overflow-hidden tablet:h-[50vw] tablet:w-full tablet:rounded-[2vw]">
                     <Image
                       src={image.src1}
                       fill

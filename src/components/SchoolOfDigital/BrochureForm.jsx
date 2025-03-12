@@ -51,7 +51,7 @@ export default function Brochureform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="First Name *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md tablet:!h-[7vw]" />
+                      <Input placeholder="First Name *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md tablet:!h-[7vw] tablet:rounded-[1.5vw]" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -69,7 +69,7 @@ export default function Brochureform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Email Address *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md tablet:!h-[7vw]" />
+                      <Input placeholder="Email Address *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md tablet:!h-[7vw] tablet:rounded-[1.5vw]" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -87,7 +87,7 @@ export default function Brochureform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Phone Number *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md tablet:!h-[7vw]" />
+                      <Input placeholder="Phone Number *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md tablet:!h-[7vw] tablet:rounded-[1.5vw]" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -105,7 +105,7 @@ export default function Brochureform() {
                 render={({ field }) => (
                   <FormItem >
                     <FormControl>
-                      <Input placeholder="City" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md tablet:!h-[7vw]" />
+                      <Input placeholder="City" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md tablet:!h-[7vw] tablet:rounded-[1.5vw]" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -115,7 +115,7 @@ export default function Brochureform() {
           </div>
 
           <Select>
-            <SelectTrigger className="w-full h-[4vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md tablet:!h-[7vw]">
+            <SelectTrigger className="w-full h-[4vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl bg-[#F2F2F2] mobile:bg-white mobile:shadow-md tablet:!h-[7vw] tablet:rounded-[1.5vw]">
               <SelectValue placeholder="Mode of Class" />
             </SelectTrigger>
             <SelectContent>

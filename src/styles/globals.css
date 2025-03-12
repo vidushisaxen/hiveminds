@@ -41,7 +41,7 @@ body {
 }
 .content-white {
   font-weight: 400;
-  font-size: 1.05vw;
+  font-size: 1.2vw;
   line-height: 1.7;
   color: #ffffff;
 }
@@ -264,7 +264,7 @@ body {
     line-height: 1.6;
   }
   .content-white {
-    font-size: 4vw;
+    font-size: 4vw !important;
     line-height: 1.6;
   }
 
@@ -490,4 +490,10 @@ left: 42% !important;
 
  .swiper-linear .swiper-wrapper {
   transition-timing-function: linear !important;
+}
+
+.wp-block-separator{
+  background: #000;
+  opacity: 1 !important;
+  color: #000;
 }

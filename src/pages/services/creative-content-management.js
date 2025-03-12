@@ -39,7 +39,7 @@ const index = () => {
       <Layout isOpen={isOpen}>
        <Hero title1={"Creative and Content"} title2={"Services "} para={"Content is the strategic foundation of impactful brand engagement. Our creative and content solutions fuse data-driven insights with compelling storytelling to craft immersive brand experiences—ensuring every narrative drives measurable engagement and sustainable growth."} img={img}/>
        <Overview title1={"Scale Efficiently with Strategic "} title2={" Creative Execution"} para={"In today’s digital landscape, brands must differentiate itself through authentic, high-impact content. Embrace a holistic content strategy that seamlessly integrates creative storytelling with performance analytics to captivate audiences, drive conversions, and foster lasting brand loyalty."}/>
-       <div className='relative h-full w-screen rounded-[20px]  mobile:bg-primary mobile:pb-[10%]'>
+       <div className='relative h-full w-screen rounded-[20px]  mobile:bg-primary mobile:pb-[10%] tablet:bg-primary tablet:pb-[10%]'>
           <SubServices heading={"Our Creative Impact Suite"} para={"Our comprehensive suite of creative solutions empowers your brand to transform ideas into action:"} subservices={subservices}/>
           <span className='absolute h-[20%] bottom-[30%] w-full'></span>
         <CaseStudies/>

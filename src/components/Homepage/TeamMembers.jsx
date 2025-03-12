@@ -85,7 +85,7 @@ const TeamMembers = () => {
   return (
     <section id="team-members">
       <div className="w-screen h-full flex flex-col items-center justify-center mb-[5vw] relative container-lg">
-        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] mobile:items-start mobile:justify-start mobile:gap-[4vw] tablet:items-start tablet:justify-start">
+        <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] mobile:items-start mobile:justify-start mobile:gap-[4vw] tablet:items-start tablet:justify-start tablet:gap-[2vw]">
           <h2 className="heading-2 headinganim">
             Be A Part Of
             <span className="blue-text"> HiveMinds </span>

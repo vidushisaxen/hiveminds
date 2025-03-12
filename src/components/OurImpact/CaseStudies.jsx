@@ -128,7 +128,7 @@ const caseStudiesData = [
 
 const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
   return (
-    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group blog-link mobile:w-[90vw] mobile:h-[130vw] tablet:w-[48%]">
+    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group blog-link mobile:w-[90vw] mobile:h-[130vw] tablet:w-[48%] tablet:h-full">
       <div className="h-[25.5vw] w-full relative overflow-hidden rounded-[1.5vw] mobile:h-[80vw] mobile:rounded-[4vw]">
         <Link href={link}>
         <Image
@@ -140,7 +140,7 @@ const CaseStudyCard = ({ imgSrc, title, description, link, dcppara }) => {
         
         </Link>
       </div>
-      <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[28%] justify-between mobile:mt-[3vw] ">
+      <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[28%] justify-between mobile:mt-[3vw] tablet:h-full tablet:gap-[3vw] ">
         <div>
         <p className="text-[2vw] font-medium py-[0.5vw] mobile:text-[7vw] tablet:text-[4vw]">{title}</p>
         <div
@@ -198,7 +198,7 @@ const CaseStudies = () => {
   return (
     <section className="w-screen h-full pb-[7%] mobile:pt-[5%] tablet:pb-[20%]">
       <div className="container-lg h-full">
-        <div className="flex flex-col items-center justify-start gap-[1vw] py-[7vw] mobile:block mobile:space-y-[4vw] tablet:items-start ">
+        <div className="flex flex-col items-center justify-start gap-[1vw] py-[7vw] mobile:block mobile:space-y-[4vw] tablet:items-start  tablet:gap-[4vw] tablet:pb-0">
           <h2 className="heading-2 headinganim">
             Our Case <span className="blue-text">Studies</span>
           </h2>
@@ -210,11 +210,11 @@ const CaseStudies = () => {
             growth.
           </p>
         </div>
-<div className="flex py-[3vw] gap-[1vw]">
+<div className="flex py-[3vw] gap-[1vw] tablet:items-end mobile:items-end">
         <div className="flex flex-col">
-          <p className="content px-[1vw] py-[0.5vw]">Filters:</p>
+          <p className="content px-[1vw] py-[0.5vw] mobile:py-[3vw]">Filters:</p>
           <Select value={selectedIndustry} onValueChange={setSelectedIndustry}>
-            <SelectTrigger className="w-[22vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl border-[1.5px] border-black rounded-full">
+            <SelectTrigger className="w-[22vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 border-[1.5px] border-black rounded-full mobile:w-[40vw] mobile:rounded-[9vw] mobile:border-[1px] ">
               <SelectValue placeholder="All Indutries" />
             </SelectTrigger>
             <SelectContent>
@@ -230,13 +230,13 @@ const CaseStudies = () => {
           </Select>
         </div>
         <button  onClick={handleFilter}
-          className="bg-[#134BD6] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-full content-white">
+          className="bg-[#134BD6] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-[30px] tablet:py-[1.5vw] tablet:px-[5vw] mobile:text-[4vw] mobile:px-[7vw] mobile:py-[3vw]">
           Apply
         </button>
         </div>
       
 
-        <div className="flex flex-wrap items-start justify-center gap-[1vw] mobile:flex-col tablet:justify-start tablet:gap-x-[3vw] tablet:gap-y-[7vw]">
+        <div className="flex flex-wrap items-start justify-center gap-[1vw] mobile:flex-col tablet:justify-start tablet:gap-x-[3vw] tablet:gap-y-[3vw] tablet:mt-[5vw] mobile:mt-[10vw]">
           {filteredCaseStudies.map((study) => (
             <CaseStudyCard
               key={study.id}

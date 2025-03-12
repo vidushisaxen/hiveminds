@@ -40,7 +40,7 @@ const Jobs = () => {
     return (
         <section className='relative py-[5vw] w-screen h-full overflow-hidden mobile:pb-[10%]'>
             <div className='w-full h-full container-lg'>
-                <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] mobile:items-start tablet:items-start tablet:gap-[3vw]">
+                <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:items-start tablet:items-start tablet:gap-[3vw] mobile:gap-[4vw]">
                     <h2 data-heading-anim className="heading-2 headinganim">
                         Job
                         <span className="blue-text"> Openings</span>
@@ -50,7 +50,7 @@ const Jobs = () => {
                     </p>
                 </div>
 
-                <div className='flex flex-wrap w-full h-full gap-[1vw] mobile:flex-col  mobile:gap-[4vw] mobile:mt-[7vw]'>
+                <div className='flex flex-wrap w-full h-full gap-[1vw] mobile:flex-col  mobile:gap-[4vw] mobile:mt-[7vw] tablet:gap-[2vw]'>
                     <JobCard title={"Account Manager / Sr.Account Manager - SEM"} duration={"Full Time"} location={"Bangalore"} link={"/"}/>
                     <JobCard  title={"Performance Marketing"} duration={"Full Time"} location={"Bangalore"} link={"/"}/>
                     <JobCard  title={"Sr. Specialist - SEM"} duration={"Full Time"} location={"Bangalore"} link={"/"}/>

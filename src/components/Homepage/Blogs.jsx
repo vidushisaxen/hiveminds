@@ -12,9 +12,9 @@ const BlogCard = ({ link, para, src, date }) => {
     <>
       <Link
         href={link}
-        className="h-[35vw] w-[26vw] bg-white rounded-[1.5vw] flex flex-col blog-link items-start gap-[1vw] px-[1vw] py-[1vw] group hover:shadow-lg hover:drop-shadow-lg transition-all ease-in-out duration-500 mobile:w-[85vw] mobile:h-[110vw] mobile:p-[3.5vw] mobile:rounded-[4vw] tablet:w-full tablet:h-[70vw] tablet:px-[3vw] tablet:py-[3vw] tablet:rounded-[4vw]"
+        className="h-[35vw] w-[26vw] bg-white rounded-[1.5vw] flex flex-col blog-link items-start gap-[1vw] px-[1vw] py-[1vw] group hover:shadow-lg hover:drop-shadow-lg transition-all ease-in-out duration-500 mobile:w-[85vw] mobile:h-[110vw] mobile:p-[3.5vw] mobile:rounded-[4vw] tablet:w-full tablet:h-full tablet:px-[3vw] tablet:py-[3vw] tablet:rounded-[4vw]"
       >
-        <div className="h-[55%] w-full relative overflow-hidden rounded-[1.2vw] mobile:rounded-[2.5vw] tablet:h-[60%] tablet:rounded-[3vw]">
+        <div className="h-[55%] w-full relative overflow-hidden rounded-[1.2vw] mobile:rounded-[2.5vw] tablet:h-[50vw] tablet:rounded-[3vw]">
           <Image
             src={src}
             fill
@@ -81,7 +81,7 @@ const Blogs = () => {
     <>
       <section id="blogs" className="relative">
         <div className="w-screen h-full flex items-center justify-center z-[10] mobile:flex-col ">
-          <div className="w-[92%] h-full rounded-[1.2vw] bg-[#F2F2F2] flex  justify-center px-[2vw] py-[6vw] gap-[2vw]  drop-shadow-2xl shadow-inner overflow-hidden mobile:flex-col mobile:py-[10vw] mobile:drop-shadow-none mobile:shadow-md mobile:px-[3.5vw] mobile:rounded-[4vw] tablet:flex-col tablet:rounded-[3vw] tablet:px-[3vw]">
+          <div className="w-[92%] h-full rounded-[1.2vw] bg-[#F2F2F2] flex  justify-center px-[2vw] py-[6vw] gap-[2vw]  drop-shadow-2xl shadow-inner overflow-hidden mobile:flex-col mobile:py-[10vw] mobile:drop-shadow-none mobile:shadow-md mobile:px-[3.5vw] mobile:rounded-[4vw] tablet:flex-col tablet:rounded-[3vw] tablet:px-[5vw]">
             <div className="w-[35%] h-full mobile:w-full tablet:w-full ">
               <div className="flex flex-col gap-[2vw] mobile:gap-[4vw] tablet:gap-[3vw]">
                 <h2 className="heading-2 headinganim">
@@ -94,15 +94,15 @@ const Blogs = () => {
                 </p>
               </div>
               <div className="flex flex-wrap items-center mt-[2vw] gap-[0.7vw] mobile:gap-[1.5vw] tablet:gap-[2vw]">
-                <PlainButton text={"Blogs"} link={"#"} className="fadeup" />
-                <PlainButton text={"News"} link={"#"} className="fadeup" />
+                <PlainButton text={"Blogs"} link={"/blog"} className="fadeup" />
+                <PlainButton text={"News"} link={"/blog"} className="fadeup" />
               </div>
             </div>
             <div className="w-[70%] h-full flex items-center justify-center blog mobile:w-full mobile:flex-col mobile:mt-[8vw] tablet:w-full tablet:items-start tablet:justify-start tablet:mt-[5vw]">
               <div className="flex items-start justify-center gap-[1vw] h-full w-full mobile:flex-col mobile:gap-[7vw] tablet:justify-start tablet:flex-col tablet:gap-[5vw]">
                 <BlogCard
                   src={"/assets/images/homepage/blogs-1.png"}
-                  link={"#"}
+                  link={"/blog/decoding-attribution-windows"}
                   date={"June 6, 2024"}
                   para={
                     "Decoding Attribution Windows: Finding the Perfect Fit for Your Marketing Strategy"
@@ -110,7 +110,7 @@ const Blogs = () => {
                 />
                 <BlogCard
                   src={"/assets/images/homepage/blogs-2.png"}
-                  link={"#"}
+                  link={"/blog/2024-seo-updates-all-bundled-together"}
                   date={"June 6, 2024"}
                   para={"2024 SEO Updates All Bundled Together for You to Glance"}
                 />
@@ -144,7 +144,7 @@ const Blogs = () => {
             </div>
           </div>
         </div>
-        <div className="hidden mobile:block h-[20%] w-screen bg-primary absolute top-0 left-0 rounded-bl-[4vw] z-[-1] rounded-br-[4vw] tablet:block tablet:h-[100vw] ">
+        <div className="mobile:block h-[50%] mobile:h-[20%] w-screen bg-primary absolute top-0 left-0 mobile:rounded-bl-[4vw] z-[-1] mobile:rounded-br-[4vw] rounded-bl-[2vw] rounded-br-[2vw] tablet:block tablet:h-[150vw] ">
 
         </div>
       </section>

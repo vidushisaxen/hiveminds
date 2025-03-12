@@ -33,11 +33,11 @@ const industry = () => {
           <section className='w-screeen h-full pb-[5vw] mobile:pb-[15%] mobile:pt-[5%]'>
             <div className='container-lg w-full h-full mobile:flex mobile:flex-col mobile:gap-[4vw]'>
               {industries.map((item, index) => (
-                <div key={index} className="w-full h-[36vw] flex items-start justify-between py-[3vw] border-[1.5px] border-[#EEEEEE] shadow-md  px-[1.5vw] rounded-[1.5vw] mb-[3vw] mobile:flex-col mobile:rounded-[5.5vw] mobile:px-[3vw] fadeup mobile:h-[150vw] tablet:flex-col tablet:h-[75vw] tablet:px-[3vw] tablet:my-[6vw] ">
+                <div key={index} className="w-full h-[36vw] flex items-start justify-between py-[3vw] border-[1.5px] border-[#EEEEEE] shadow-md  px-[1.5vw] rounded-[1.5vw] mb-[3vw] mobile:flex-col mobile:justify-start mobile:rounded-[5.5vw] mobile:px-[3vw] fadeup mobile:h-[155vw] mobile:pb-[10vw] tablet:flex-col tablet:h-[75vw] tablet:px-[3vw] tablet:my-[6vw] ">
                   <div className='w-[45%] mobile:w-full tablet:w-3/5'>
                     <Image src={item.img} width={790} height={990} alt="service-card" className='rounded-[1.2vw] mobile:rounded-[3.5vw]' />
                   </div>
-                  <div className='w-[50%] mobile:w-full mobile:mt-[7vw] tablet:w-full '>
+                  <div className='w-[50%] mobile:w-full mobile:mt-[7vw] tablet:w-full mobile:pl-[2vw] '>
                     <h2 className='text-[2.8vw] font-medium mobile:text-[5.5vw] mobile:mb-[2vw] tablet:text-[4vw]'>
                       {item.title1}
                       <span className='text-primary '> {item.title2} </span>

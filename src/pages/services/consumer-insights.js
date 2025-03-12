@@ -39,7 +39,7 @@ const index = () => {
       <Layout isOpen={isOpen}>
        <Hero title1={"Consumer Insights"} title2={"Services "} para={"Consumer Insights are the strategic cornerstone for sustainable growth. We transform complex consumer data into actionable intelligence, empowering your brand to make informed decisions that drive innovation and lasting impact."} img={img}/>
        <Overview title1={"Scale Efficiently with Data-First"} title2={"Consumer Insights"} para={"Truly understanding your audience is essential. Leverage advanced analytics and market research to uncover hidden trends, untapped opportunities, and evolving consumer preferences. By harnessing these insights, you can tailor your messaging and product offerings to exceed customer expectations and achieve sustainable growth."}/>
-       <div className='relative h-full w-screen rounded-[20px] mobile:bg-primary mobile:pb-[10%] '>
+       <div className='relative h-full w-screen rounded-[20px] mobile:bg-primary mobile:pb-[10%] tablet:bg-primary tablet:pb-[10%] '>
           <SubServices heading={"Unlock Insights, Unleash Growth"} para={"Our comprehensive suite of consumer insights services empowers your brand to transform raw data into strategic advantage:"} subservices={subservices}/>
           <span className='absolute h-[20%] bottom-[30%] w-full'></span>
         <CaseStudies/>

@@ -15,7 +15,7 @@ const Benefit = () => {
             </p> */}
         </div>
 
-        <div className='flex items-center justify-between h-full mobile:mt-[10vw] mobile:flex-col mobile:gap-[10vw] '>
+        <div className='flex items-center justify-between h-full mobile:mt-[10vw] mobile:flex-col mobile:gap-[10vw] tablet:mt-[5vw] '>
             <div className='flex flex-col items-center justify-center gap-[1.5vw] w-[30%] h-[20vw] mobile:flex mobile:flex-row mobile:justify-start mobile:w-full mobile:gap-[10vw] tablet:w-full'>
                 <Image src="/assets/icons/students.svg" height={100} width={100} alt='students' className='fadein'/>
                 <p data-para-anim className='text-[1.5vw] font-medium mobile:text-[5vw] tablet:text-[2.5vw] '>Students</p>

@@ -89,7 +89,7 @@ const Story = ({ isOpen, setIsOpen }) => {
             <div className="absolute left-1/2 z-10 -translate-x-1/2 top-1/2 -translate-y-1/2 ">
               <ReelButton
                 onClick={handleOpen}
-                text="Play Reel"
+                text="Play"
                 className="magnetic-inner z-10"
               />
             </div>

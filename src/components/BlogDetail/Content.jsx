@@ -1,5 +1,6 @@
 import React from 'react';
 import ShareDetails from './ShareDetails';
+import styles from "./blogstyles.module.css"
 
 const Content = ({ slug, date, content }) => {
 
@@ -10,7 +11,7 @@ const Content = ({ slug, date, content }) => {
                     <ShareDetails slug={slug} date={date} />
                     <div className='w-[60%] h-full space-y-[1.5vw] mobile:w-full mobile:mt-[4vw] mobile:space-y-[4vw]'>
                         <div
-                            className=''
+                            className={styles.blogContent}
                             dangerouslySetInnerHTML={{ __html: content }}
                         />
                     </div>

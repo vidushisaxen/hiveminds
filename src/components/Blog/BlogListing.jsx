@@ -231,7 +231,7 @@ const BlogCard = ({
   date,
 }) => {
   return (
-    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group blog-link tablet:w-[44vw] tablet:h-[70vw] mobile:w-[92vw] mobile:h-[140vw]">
+    <div className="w-[30vw] h-[40vw] pl-[0.5vw] pb-[3vw] fadeup group blog-link tablet:w-[44vw] tablet:h-[70vw] mobile:w-[92vw] mobile:h-full">
       <Link href={link}>
 
         <div className="h-[20.5vw] w-full relative overflow-hidden rounded-[1.3vw] tablet:h-[30vw] mobile:h-[60vw] mobile:rounded-[4vw]">
@@ -239,12 +239,12 @@ const BlogCard = ({
             src={imgSrc}
             fill
             alt={`${title} Case Study`}
-            className="group-hover:scale-[1.1] transition-all duration-500 ease-in-out "
+            className="group-hover:scale-[1.1] transition-all duration-500 ease-in-out object-cover "
           />
         </div>
       </Link>
-      <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[28%] gap-[1.5vw] justify-between mobile:gap-[7vw] mobile:mt-[5vw] tablet:gap-[3vw]">
-        <div className="flex flex-col gap-[0.5vw] mobile:gap-[4vw] tablet:gap-[1.5vw]">
+      <div className="mt-[1vw] px-[0.5vw] flex flex-col h-[28%] gap-[1.5vw] justify-between mobile:gap-[5vw] mobile:mt-[5vw] tablet:gap-[3vw]">
+        <div className="flex flex-col gap-[0.5vw] mobile:gap-[2vw] tablet:gap-[1.5vw]">
           <p className="text-[1.6vw] font-medium py-[0.5vw] mobile:text-[6vw] tablet:text-[3vw] tablet:leading-[1.2]">{title}</p>
           <div className="flex gap-[4vw] text-black/70 mobile:w-full mobile:justify-between">
             <p className="content">{category}</p>
@@ -363,7 +363,7 @@ const BlogListing = () => {
       </div>
 
       {/* Filtered Case Studies */}
-      <div className="flex flex-wrap items-start justify-start gap-[1vw] gap-y-[2vw] tablet:mt-[4vw]">
+      <div className="flex flex-wrap items-start justify-start gap-[1vw] gap-y-[2vw] tablet:mt-[4vw] mobile:gap-y-[8vw]">
         {filteredblogs.map((study) => (
           <BlogCard
             key={study.id}

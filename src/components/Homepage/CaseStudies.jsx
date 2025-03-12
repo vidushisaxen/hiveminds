@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -72,14 +73,14 @@ const CaseStudies = () => {
   useEffect(() => {
     if (globalThis.innerWidth > 1024) {
       let ctx = gsap.context(() => {
-        const body = document.body;
-        const changeBodyColor = (color) => {
-          gsap.to(body, {
-            backgroundColor: color,
-            duration: 1,
-            ease: "power2.out",
-          });
-        };
+        // const body = document.body;
+        // const changeBodyColor = (color) => {
+        //   gsap.to(body, {
+        //     backgroundColor: color,
+        //     duration: 1,
+        //     ease: "power2.out",
+        //   });
+        // };
 
         gsap.from(".casestudy-block", {
           scale: 1.11,
@@ -96,14 +97,14 @@ const CaseStudies = () => {
           trigger: "#caseStudies",
           start: "70% 60%",
           end: "bottom 20%",
-          onEnter: () => changeBodyColor("#134bd6"),
-          onLeaveBack: () => changeBodyColor("#fafafa"),
+          // onEnter: () => changeBodyColor("#134bd6"),
+          // onLeaveBack: () => changeBodyColor("#fafafa"),
         });
       });
       return () => ctx.revert();
     }
   }, []);
-
+  
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".swiper-scrollbar", {
@@ -245,7 +246,7 @@ const CaseStudies = () => {
             </div>
           </div>
         </div>
-        <div className="w-screen h-[70%] rounded-tl-[4vw] rounded-tr-[4vw] bg-primary absolute bottom-0 left-0 z-[-1] hidden mobile:block tablet:block">
+        <div className="w-screen h-[70%] rounded-tl-[2vw] rounded-tr-[2vw] mobile:rounded-tl-[4vw] mobile:rounded-tr-[4vw] bg-primary absolute bottom-0 left-0 z-[-1] ">
 
 
         </div>

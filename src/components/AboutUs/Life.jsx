@@ -50,8 +50,8 @@ const Life = () => {
   return (
     <section className="w-screen h-full py-[5%] relative mobile:pb-16" id="life-at-hiveminds">
       {/* Title Section */}
-      <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:block mobile:px-[5vw] mobile:pb-10 tablet:items-start container-lg tablet:gap-[3vw]">
-        <h2 className="heading-2 headinganim mobile:w-4/5 mobile:mb-4">
+      <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:block mobile:pb-10 tablet:items-start container-lg tablet:gap-[3vw]">
+        <h2 className="heading-2 headinganim mobile:w-full mobile:mb-4">
           Life At <span className="blue-text">Hiveminds?</span>
         </h2>
         <p className="content w-[70%] text-center fadein mobile:text-left mobile:w-full tablet:text-left">

@@ -55,7 +55,7 @@ const index = () => {
         <Services/>
        <Clients2/>
         <TeamMembers />
-        <div className='relative h-full w-screen rounded-[20px] '>
+        <div className='relative h-fit w-screen rounded-[20px]  '>
           <span className=' block absolute h-[20%] w-full'></span>
           <CaseStudies />
           <Awards />

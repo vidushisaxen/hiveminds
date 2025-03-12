@@ -1,34 +1,11 @@
 
-import React, { useEffect } from 'react'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/dist/ScrollTrigger'
-gsap.registerPlugin(ScrollTrigger)
+import React from 'react'
 
 const Expanding = ({ content }) => {
-    useEffect(()=>{
-        if(globalThis.innerWidth>1024){
-
-            const ctx = gsap.context(()=>{
-                gsap.to(".category",{
-                    ease:"none",
-                    scrollTrigger:{
-                        trigger:"#casestudy-detail",
-                        start:"top top",
-                        end:"75% top",
-                     
-                        pin:".category"
-                    }
-                })
-                
-                return()=>ctx.revert()
-    
-            })
-            
-        }
-    },[])
+  
     return (
-        <section className='w-screen h-full py-[5vw] overflow-hidden' id='casestudy-detail'>
-            <div className='container-lg flex justify-between mobile:flex-col-reverse tablet:flex-col-reverse'>
+        <section className='w-screen h-full py-[5vw] ' id='casestudy-detail'>
+            <div className='container-lg flex justify-between mobile:flex-col-reverse tablet:flex-col-reverse min-h-screen h-full w-full'>
 
                 <div className='w-[55%]  mobile:w-full mobile:pt-[15vw] tablet:w-full'>
                     <h2 className='heading-2 w-[70%] fadein mobile:w-full tablet:w-[90%]'>
@@ -49,7 +26,7 @@ const Expanding = ({ content }) => {
                     </div>
 
 
-                    <div className='py-[4vw] mobile:py-[7vw]'>
+                    <div className='py-[4vw] mobile:py-[7vw] '>
                         <h2 className='heading-2 w-[80%] fadein mobile:w-full'>Problem <span className='text-primary'> Statement </span></h2>
                         <div className='fadein text-[1.5vw] mobile:text-[5vw] tablet:text-[2.8vw]  mobile:mt-[7vw]' dangerouslySetInnerHTML={{ __html: content.problem }} />
                         <span className='w-[60%] h-[1.5px] bg-black absolute mt-[3vw] lineDraw mobile:w-[92%] mobile:my-[7vw] mobile:h-[1px] tablet:w-[90%] tablet:my-[4vw]'></span>
@@ -70,7 +47,7 @@ const Expanding = ({ content }) => {
                    
                 </div>
 
-                <div className='w-[20%] category mobile:w-full tablet:w-full tablet:py-[3vw]'>
+                <div className='w-[20%] category mobile:w-full tablet:w-full tablet:py-[3vw] sticky mobile:static tablet:static top-[6vw] h-full'>
                     <div className='py-[1vw] mobile:py-[2vw]'>
                         <p data-para-anim className='content '> Industry:</p>
                         <p className='text-[1.5vw] font-bold py-[0.5vw] fadein mobile:text-[6.5vw] tablet:text-[2.8vw] '>{content.industry}</p>
