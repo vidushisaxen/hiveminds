@@ -216,7 +216,7 @@ const blogsData = [
     date: "June 24, 2025",
     description:
       "Discover how advanced attribution models can transform your marketing strategy. ",
-    link: "/blog/2024-seo-updates-all-bundled-together",
+    link: "/blog/2024-seo-updates-all-bundled-together-for-you-to-glance",
   },
 
 ];

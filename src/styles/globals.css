@@ -384,8 +384,6 @@ body.loading {
   height: 0.3vw !important;
   border-radius: 10px;
   width: 50% !important;
-  
-
   /* transition: opacity 0.2s ease-in-out; */
 }
 
@@ -418,7 +416,7 @@ left: 42% !important;
   transition: all cubic-bezier(0,.08,0,1);
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 541px) and (max-width: 1023px) {
   .content-white {
     font-weight: 400;
     font-size: 2.5vw;
@@ -445,16 +443,12 @@ left: 42% !important;
     height: 0.5vw !important;
     border-radius: 10px;
     width: 88% !important;
-    
-  
     /* transition: opacity 0.2s ease-in-out; */
   }
   .swiper-scrollbar-drag {
     background: #134bd6 !important; /* Solid blue scrollbar */
     border-radius: 10px;
     height: 0.5vw !important;
-    
-   
   }
   .slideInCaseCarousel  .swiper-scrollbar.swiper-scrollbar-horizontal{
     bottom:4% !important;
@@ -480,8 +474,6 @@ left: 42% !important;
     height: 1.5vw !important;
     border-radius: 10px;
     width: 88% !important;
-    
-  
     /* transition: opacity 0.2s ease-in-out; */
   }
   .swiper-scrollbar-drag {
@@ -489,7 +481,6 @@ left: 42% !important;
     border-radius: 10px;
     height: 1.5vw !important;
     width: 23% !important;
-   
   }
   .slideInCaseCarousel  .swiper-scrollbar.swiper-scrollbar-horizontal{
     bottom:5% !important;

@@ -29,18 +29,6 @@ const Header = ({ isOpen }) => {
     };
   }, [lastScrollY]);
 
-  // useEffect(() => {
-  //   let ctx = gsap.context(() => {
-  //     gsap.from(headerRef.current, {
-  //       y: -20,
-  //       // opacity: 0,
-  //       delay: 0.1,
-  //       duration: 1.5
-  //     })
-  //   })
-  //   return () => ctx.revert;
-  // }, [])
-
   return !isOpen ? (
     <header className="fixed top-0 left-0 w-full z-[100] header">
       <div
@@ -204,7 +192,7 @@ const Header = ({ isOpen }) => {
           </div>
           <div className="cursor-pointer mobile:block hidden tablet:block">
             <svg
-              className="w-[7.5vw] tablet:w-[4vw]"
+              className="tablet:w-[4.5vw] mobile:w-8"
               width="40"
               height="23"
               viewBox="0 0 40 23"
