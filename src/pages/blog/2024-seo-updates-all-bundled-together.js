@@ -15,7 +15,7 @@ const blogDetail = () => {
   return (
     <>
       <Layout>
-        <Hero title1={"2024 SEO Updates All Bundled Together for You to Glance"} title2={"Finding the Perfect Fit for Your Marketing Strategy"} para={"Discover how advanced attribution models can transform your marketing strategy. This blog breaks down the process of aligning data with creative efforts, providing clear, actionable steps to optimize your campaigns, enhance ROI, and achieve sustainable growth in today’s competitive digital landscape."} img={"/assets/images/blogs/2024-seo-updates.jpg"} category={"SEO"}/>
+        <Hero title1={"2024 SEO Updates All Bundled Together for "} title2={"You to Glance"} para={"Discover how advanced attribution models can transform your marketing strategy. This blog breaks down the process of aligning data with creative efforts, providing clear, actionable steps to optimize your campaigns, enhance ROI, and achieve sustainable growth in today’s competitive digital landscape."} img={"/assets/images/blogs/2024-seo-updates.jpg"} category={"SEO"}/>
        <SEODetails />
         <RelatedBlogs/>
       </Layout>

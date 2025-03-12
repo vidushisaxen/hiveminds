@@ -39,22 +39,22 @@ const Details = ({content}) => {
   return (
     <>
       <section className='h-full w-screen py-[5vw]' id='blog-detail'>
-        <div className='container-lg w-full h-full flex items-start justify-between mobile:flex-col'>
-          <div className='w-[30%] blog-credentials mobile:w-full mobile:flex mobile:flex-col mobile:gap-[3vw]'>
-            <p className='text-[1.3vw] font-medium leading-[1] mobile:text-[4vw]'>Posted On:</p>
-            <p className='text-[1.3vw] font-medium leading-[1] py-[1vw] mobile:text-[5.5vw]'>{content.date}</p>
-            <div className='py-[2vw]'>
-              <p className='text-[1.3vw] font-medium leading-[1] mobile:text-[4vw] mobile:mb-[4vw]'>Share Article:</p>
-              <div className="flex items-start gap-[1vw] py-[1vw] mobile:gap-[3vw]">
+        <div className='container-lg w-full h-full flex items-start justify-between mobile:flex-col tablet:flex-col'>
+          <div className='w-[30%] blog-credentials mobile:w-full mobile:flex mobile:flex-col mobile:gap-[3vw] tablet:w-full'>
+            <p className='text-[1.3vw] font-medium leading-[1] mobile:text-[4vw] tablet:text-[2.5vw]'>Posted On:</p>
+            <p className='text-[1.3vw] font-medium leading-[1] py-[1vw] mobile:text-[5.5vw] tablet:text-[3.5vw]'>{content.date}</p>
+            <div className='py-[2vw] tablet:py-[3vw]'>
+              <p className='text-[1.3vw] font-medium leading-[1] mobile:text-[4vw] mobile:mb-[4vw] tablet:text-[2.5vw] tablet:mb-[2vw]'>Share Article:</p>
+              <div className="flex items-start gap-[1vw] py-[1vw] mobile:gap-[3vw] tablet:gap-[2vw]">
                 <Link href={content.fbLink}>
-                  <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
+                  <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw] ">
                     <span className=" flex justify-center items-center ">
                       <svg
                         width="15"
                         height="15"
                         viewBox="0 0 12 23"
                         fill="none"
-                        className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw]'
+                        className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw] tablet:h-[3.5vw] tablet:w-[3.5vw]'
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -67,14 +67,14 @@ const Details = ({content}) => {
                   </div>
                 </Link>
                 <Link href={content.linkedinLink}>
-                  <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
+                  <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw]">
                     <span className=" flex justify-center items-center">
                       <svg
                         width="15"
                         height="15"
                         viewBox="0 0 21 21"
                         fill="none"
-                         className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw]'
+                         className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw] tablet:h-[3.5vw] tablet:w-[3.5vw]'
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -97,14 +97,14 @@ const Details = ({content}) => {
                   </div>
                 </Link>
                 <Link href={content.twitterLink}>
-                  <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
+                  <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw]">
                     <span className=" flex justify-center items-center">
                       <svg
                         width="15"
                         height="15"
                         viewBox="0 0 19 20"
                         fill="none"
-                         className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw]'
+                         className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw] tablet:h-[3.5vw] tablet:w-[3.5vw]'
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -119,16 +119,16 @@ const Details = ({content}) => {
               </div>
             </div>
           </div>
-          <div className='w-[60%] h-full mobile:w-full'>
+          <div className='w-[60%] h-full mobile:w-full tablet:w-full'>
            {content.content1.map((item,index)=>(
             <div key={index} className='space-y-[2vw] py-[1vw] fadein' dangerouslySetInnerHTML={{__html:item}}/>
            ))}
             {/* <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw]' /> */}
             <div className='py-[2vw] mobile:py-[7vw] '>
-              <div className='py-[1.5vw] fadein'>
-                <Image src={content.featuredImage1} height={690} width={1130} alt='blog-image' className='rounded-[1vw] mobile:h-[85vw] mobile:rounded-[4vw]' />
+              <div className='py-[1.5vw] fadein tablet:py-[3vw]'>
+                <Image src={content.featuredImage1} height={690} width={1130} alt='blog-image' className='rounded-[1vw] mobile:h-[85vw] mobile:rounded-[4vw] tablet:rounded-[3vw]' />
               </div>
-              <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw] mobile:h-[1px] mobile:w-[92%] mobile:my-[10vw] mobile:hidden' />
+              <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw] mobile:h-[1px] mobile:w-[92%] mobile:my-[10vw] mobile:hidden tablet:w-[92%] tablet:h-[1px]' />
             </div>
 
             {content.content2.map((item,index)=>(
@@ -136,10 +136,10 @@ const Details = ({content}) => {
            ))}
 
             <div className='py-[2vw]'>
-              <div className='py-[1.5vw] fadein'>
-                <Image src={content.featuredImage2} height={690} width={1130} alt='blog-image' className='rounded-[1vw]' />
+              <div className='py-[1.5vw] fadein tablet:py-[3vw]'>
+                <Image src={content.featuredImage2} height={690} width={1130} alt='blog-image' className='rounded-[1vw] mobile:rounded-[4vw] tablet:rounded-[3vw]' />
               </div>
-              <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw] mobile:h-[1px] mobile:w-[92%] mobile:my-[10vw] mobile:hidden' />
+              <span className='bg-black w-[57%] h-[1.5px] absolute lineDraw my-[1vw] mobile:h-[1px] mobile:w-[92%] mobile:my-[10vw] mobile:hidden  tablet:w-[92%] tablet:h-[1px]' />
             </div>
 
             {content.content3.map((item,index)=>(

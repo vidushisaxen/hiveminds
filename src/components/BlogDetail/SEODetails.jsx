@@ -42,19 +42,19 @@ const SEODetails = () => {
                 <div className='container-lg w-full h-full flex items-start justify-between mobile:flex-col tablet:flex-col'>
                     <div className='w-[30%] blog-credentials mobile:w-full mobile:flex mobile:flex-col mobile:gap-[3vw] tablet:w-full '>
                         <p className='text-[1.3vw] font-medium leading-[1] mobile:text-[4vw] tablet:text-[2.5vw] tablet:mb-[1vw]'>Posted On:</p>
-                        <p className='text-[1.3vw] font-medium leading-[1] py-[1vw] mobile:text-[5.5vw] tablet:text-[4vw]'>June 24,2025</p>
+                        <p className='text-[1.3vw] font-medium leading-[1] py-[1vw] mobile:text-[5.5vw] tablet:text-[3.5vw]'>June 24,2025</p>
                         <div className='py-[2vw] tablet:py-[3vw]'>
                             <p className='text-[1.3vw] font-medium leading-[1]  mobile:text-[4vw] mobile:mb-[4vw] tablet:text-[2.5vw] tablet:mb-[2vw]'>Share Article:</p>
                             <div className="flex items-start gap-[1vw] py-[1vw] mobile:gap-[3vw] tablet:gap-[2vw]">
                                 <Link href={"#"}>
-                                    <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw] tablet:w-[9vw] tablet:h-[9vw]">
+                                    <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw]">
                                         <span className=" flex justify-center items-center">
                                             <svg
                                                 width="15"
                                                 height="15"
                                                 viewBox="0 0 12 23"
                                                 fill="none"
-                                                  className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw] tablet:w-[4.5vw] tablet:h-[4.5vw]'
+                                                  className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw] tablet:w-[3.5vw] tablet:h-[3.5vw]'
                                                 xmlns="http://www.w3.org/2000/svg"
                                             >
                                                 <path
@@ -67,14 +67,14 @@ const SEODetails = () => {
                                     </div>
                                 </Link>
                                 <Link href={"#"}>
-                                    <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw] tablet:w-[9vw] tablet:h-[9vw]">
+                                    <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw]">
                                         <span className=" flex justify-center items-center">
                                             <svg
                                                 width="15"
                                                 height="15"
                                                 viewBox="0 0 21 21"
                                                 fill="none"
-                                                  className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw] tablet:w-[4.5vw] tablet:h-[4.5vw]'
+                                                  className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw] tablet:w-[3.5vw] tablet:h-[3.5vw]'
                                                 xmlns="http://www.w3.org/2000/svg"
                                             >
                                                 <path
@@ -97,14 +97,14 @@ const SEODetails = () => {
                                     </div>
                                 </Link>
                                 <Link href={"#"}>
-                                    <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw] tablet:w-[9vw] tablet:h-[9vw]">
+                                    <div className="w-[2.4vw] h-[2.4vw] border border-black rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw] tablet:w-[7vw] tablet:h-[7vw]">
                                         <span className=" flex justify-center items-center">
                                             <svg
                                                 width="15"
                                                 height="15"
                                                 viewBox="0 0 19 20"
                                                 fill="none"
-                                                  className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw] tablet:w-[4.5vw] tablet:h-[4.5vw]'
+                                                  className='mobile:w-[5vw] mobile:h-[5vw] w-[1.5vw] h-[1.5vw] tablet:w-[3.5vw] tablet:h-[3.5vw]'
                                                 xmlns="http://www.w3.org/2000/svg"
                                             >
                                                 <path
