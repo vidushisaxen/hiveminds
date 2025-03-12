@@ -1,9 +1,12 @@
 import Layout from "@/components/Layout";
 import { fadeIn, fadeUp, headingBlur, lineAnim, paraAnim } from '@/components/gsapAnimations'
 import RelatedBlogs from '@/components/BlogDetail/RelatedBlogs';
-import { getPostBySlug, getRecentPosts } from "@/lib/blogs";
+import { getPostBySlug, getRecentPosts, postPathBySlug } from "@/lib/blogs";
 import Content from "@/components/BlogDetail/Content";
 import BlogHero from "@/components/BlogDetail/BlogHero";
+import { NextSeo } from "next-seo";
+import { ArticleJsonLd } from "@/lib/json-ld";
+import config from "../../../../package.json";
 
 export default function BlogDetail({ post }) {
     fadeIn();
@@ -19,17 +22,48 @@ export default function BlogDetail({ post }) {
         categories,
         slug,
         excerpt,
-        featuredImage,
+        metaImage,
+        metaDescription,
+        blogFields,
     } = post;
+
+    const { homepage = '' } = config;
+    const path = postPathBySlug(slug);
 
     return (
         <>
+            <NextSeo
+                title={title}
+                description={metaDescription}
+                openGraph={{
+                    type: 'article',
+                    url: `${homepage}${path}`,
+                    title: title,
+                    "description": metaDescription,
+                    images: [
+                        {
+                            url: metaImage.sourceUrl,
+                            width: metaImage.mediaDetails.width,
+                            height: metaImage.mediaDetails.height,
+                            alt: metaImage.mediaDetails.alt,
+                            type: "image/jpg",
+                        },
+                    ],
+                    siteName: "Hiveminds",
+                }}
+                canonical={`${homepage}${path}`}
+                languageAlternates={[{
+                    hrefLang: 'x-default',
+                    href: `${homepage}${path}`,
+                }]}
+            />
+            <ArticleJsonLd post={post} />
             <Layout>
                 <BlogHero
-                    title={title} 
-                    excerpt={excerpt} 
-                    featuredImg={featuredImage} 
-                    category={categories[0].name} 
+                    title={title}
+                    excerpt={excerpt}
+                    featuredImg={blogFields.heroImage.node}
+                    category={categories[0].name}
                 />
                 <Content date={date} slug={slug} content={content} />
                 <RelatedBlogs />

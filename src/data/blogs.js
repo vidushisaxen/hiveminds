@@ -57,6 +57,7 @@ export const QUERY_POST_BY_SLUG = gql`
           }
         }
       }
+      modified
       content
       date
       featuredImage {
@@ -66,6 +67,16 @@ export const QUERY_POST_BY_SLUG = gql`
           srcSet
           sizes
           id
+        }
+      }
+      blogFields {
+        heroImage {
+          node {
+            altText
+            sourceUrl
+            srcSet
+            sizes
+          }
         }
       }
       author{
