@@ -61,18 +61,18 @@ const RelatedBlogs = () => {
           Related <span className="text-primary">Blogs</span>
         </h2>
         <div className="w-full flex justify-between mobile:flex-col mobile:gap-[7vw] mobile:mt-[5vw]">
-          <p className="text-[1.2vw] mt-[2vw] w-[35%] fadein mobile:w-full mobile:text-[4vw]">
+          <p className="text-[1.2vw] mt-[2vw] w-[35%] fadein mobile:w-full mobile:text-[4vw] tablet:text-[2.4vw] tablet:w-[50%]">
             Discover our accolades and industry recognition that highlight our
             commitment to excellence.
           </p>
           <div className="w-fit">
-            <PrimaryButton text={"All Blogs"} href={"/"} className="fadein" />
+            <PrimaryButton text={"All Blogs"} href={"/blog"} className="fadein" />
           </div>
         </div>
-        <div className="w-full flex pt-[5vw] pb-[1vw] gap-[1vw] mobile:flex-col mobile:gap-[7vw] mobile:mt-[7vw]">
+        <div className="w-full flex pt-[5vw] pb-[1vw] gap-[1vw] mobile:flex-col mobile:gap-[7vw] mobile:mt-[7vw] tablet:gap-[2vw]">
           {relatedBlogsData.map((blog) => (
-            <div key={blog.id} className="blogs related-blog group blog-link">
-              <Link href={"#"} className="w-[30vw] h-[22vw] rounded-[1.2vw] overflow-hidden block mobile:w-full mobile:h-[70vw] mobile:rounded-[4vw]">
+            <div key={blog.id} className={`blogs related-blog group blog-link ${blog.id%3==0?"tablet:hidden":""}`}>
+              <Link href={"#"} className="w-[30vw] h-[22vw] rounded-[1.2vw] overflow-hidden block mobile:w-full mobile:h-[70vw] mobile:rounded-[4vw] tablet:w-[44vw] tablet:h-[30vw] tablet:rounded-[2.5vw]">
                 <Image
                   src={blog.imgSrc}
                   height={390}
@@ -81,11 +81,11 @@ const RelatedBlogs = () => {
                   className="object-cover w-full h-full group-hover:scale-[1.1] transistion-all duration-500 ease-in-out"
                 /> 
               </Link>
-              <div className="py-[1vw] w-[80%] mobile:w-full mobile:mt-[7vw] mobile:flex mobile:flex-col mobile:gap-[1.5vw]">
-                <p className="text-[1.5vw] font-medium mobile:text-[6vw] mobile:leading-[1.2]">{blog.title}</p>
-                <div className="flex items-center gap-[3vw] w-[80%] py-[1vw] pb-[2vw] mobile:w-full mobile:justify-between ">
-                  <p className="content !text-[1vw] mobile:!text-[4vw]">{blog.category}</p>
-                  <p className="content !text-[1vw] mobile:!text-[4vw]">{blog.date}</p>
+              <div className="py-[1vw] w-[80%] mobile:w-full mobile:mt-[7vw] mobile:flex mobile:flex-col mobile:gap-[1.5vw] tablet:ml-[1vw]">
+                <p className="text-[1.5vw] font-medium mobile:text-[6vw] mobile:leading-[1.2] tablet:text-[3vw]">{blog.title}</p>
+                <div className="flex items-center gap-[3vw] w-[80%] py-[1vw] pb-[2vw] mobile:w-full mobile:justify-between tablet:w-full tablet:gap-[5vw] ">
+                  <p className=" text-[1vw] mobile:text-[4vw] tablet:text-[2vw]">{blog.category}</p>
+                  <p className=" text-[1vw] mobile:text-[4vw] tablet:text-[2vw]">{blog.date}</p>
                 </div>
                 <Link href="#">
                   <div className="w-fit">

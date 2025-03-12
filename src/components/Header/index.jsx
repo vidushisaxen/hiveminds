@@ -204,7 +204,7 @@ const Header = ({ isOpen }) => {
           </div>
           <div className="cursor-pointer mobile:block hidden tablet:block">
             <svg
-              className="w-[4.5vw]"
+              className="w-[7.5vw] tablet:w-[4vw]"
               width="40"
               height="23"
               viewBox="0 0 40 23"
