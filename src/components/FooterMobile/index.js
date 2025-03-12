@@ -171,7 +171,7 @@ const FooterMobile = () => {
               Our Office Address
             </p>
             <div className="order-3">
-              <p className="content-white underline">
+              <p className="content-white underline mobile:!text-[4vw]">
                 {" "}
                 BENGALURU (HQ) : No. 11, Seventh Floor, Global Tech Park, O
                 Shaughnessy Rd, Langford Town, Langford Gardens, Bengaluru,
@@ -179,20 +179,20 @@ const FooterMobile = () => {
               </p>
             </div>
             <div className="order-4">
-              <p className="content-white">
+              <p className="content-white mobile:!text-[4vw]">
                 MUMBAI : Office no 301 & 302, 3rd Floor, The Eagle&apos;s Flight
                 Building, Gundavali, Andheri East, Andheri, Mumbai, Maharashtra
                 400047
               </p>
             </div>
             <div className="order-5">
-              <p className="content-white">
+              <p className="content-white mobile:!text-[4vw]">
                 GURGAON : Spring House Coworking, 4th Floor,JMD Regent Arcade,
                 Haryana 122002
               </p>
             </div>
 
-            <div className="h-[15vw] w-[25vw] relative rounded-[12px] order-2 mobile:w-[92vw] mobile:h-[70vw]">
+            <div className="h-[15vw] w-[25vw] relative rounded-[12px] order-2 mobile:w-full mobile:h-[70vw]">
               {/* <Map /> */}
               <Image src={"/assets/images/homepage/map.png"} alt="map" fill />
             </div>

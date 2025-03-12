@@ -114,7 +114,7 @@ const Leadership = () => {
                         alt={`${team.name} image`}
                         width={500}
                         height={700}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover hover:scale-[1.07] transition-all duration-500 ease-in-out"
                       />
                     </div>
                     <div className="flex flex-col mobile:pl-2 tablet:pl-2">

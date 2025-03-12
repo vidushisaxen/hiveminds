@@ -42,15 +42,16 @@ const WhyUs = () => {
     const previewContainer = previewContainerRef.current;
     const currentLastImg = previewContainer.querySelector('img:last-child');
     if (currentLastImg) {
-      gsap.to(currentLastImg, { duration: 1, scale: 1.2, left: '100%' });
+      gsap.to(currentLastImg, { duration: 1, bottom: '0%'});
     }
     const newImg = document.createElement('img');
     newImg.src = imgSrc;
     newImg.style.position = 'absolute';
-    newImg.style.left = '-50%';
-    newImg.style.top = '0%';
+    newImg.style.left = '0%';
+    newImg.style.bottom = '-100%';
     newImg.style.width = '100%';
     newImg.style.height = '100%';
+    
     newImg.style.objectFit = 'cover';
     previewContainer.appendChild(newImg);
     gsap.to(newImg, { duration: 1, left: '0%' });

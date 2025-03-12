@@ -52,7 +52,7 @@ export default function Contactform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Name *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:h-[8vw]" />
+                      <Input placeholder="Name *" {...field} className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:h-[8vw]" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -70,7 +70,7 @@ export default function Contactform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Email Address *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl  tablet:h-[8vw]" />
+                      <Input placeholder="Email Address *" {...field} className="h-[4vw] rounded-[0.5vw] border drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl  tablet:h-[8vw]" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -88,7 +88,7 @@ export default function Contactform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Phone Number *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl  tablet:h-[8vw]" />
+                      <Input placeholder="Phone Number *" {...field} className="h-[4vw] rounded-[0.5vw] border drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl  tablet:h-[8vw]" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -106,7 +106,7 @@ export default function Contactform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Input placeholder="Company Name *" {...field} className="h-[4vw] rounded-[0.5vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl  tablet:h-[8vw]" />
+                      <Input placeholder="Company Name *" {...field} className="h-[4vw] rounded-[0.5vw] border drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl  tablet:h-[8vw]" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -116,7 +116,7 @@ export default function Contactform() {
           </div>
 
           <Select>
-            <SelectTrigger className="w-full h-[4vw] drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:px-[5vw]  tablet:h-[8vw]">
+            <SelectTrigger className="w-full h-[4vw] drop-shadow-none border  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:px-[5vw]  tablet:h-[8vw]">
               <SelectValue placeholder="Services" />
             </SelectTrigger>
             <SelectContent>
@@ -139,7 +139,7 @@ export default function Contactform() {
                 render={({ field }) => (
                   <FormItem className="required">
                     <FormControl>
-                      <Textarea  placeholder="Message" {...field} className="h-[6vw] rounded-[0.5vw] px-[1vw] placeholder:text-[#111111] placeholder:text-[1vw] !border-0 bg-white drop-shadow-none  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:placeholder:text-[1.8vw] tablet:px-[5vw]  tablet:h-[12vw] tablet:py-[2vw]" />
+                      <Textarea  placeholder="Message" {...field} className="h-[6vw] rounded-[0.5vw] px-[1vw] placeholder:text-[#111111] placeholder:text-[1vw] bg-white drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:placeholder:text-[1.8vw] tablet:px-[5vw] tablet:h-[12vw] tablet:py-[2vw]" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
