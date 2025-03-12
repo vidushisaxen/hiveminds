@@ -6,8 +6,7 @@ import gsap from 'gsap'
 import Hero from '@/components/ServiceDetail/Hero'
 import Overview from '@/components/ServiceDetail/Overview'
 import SubServices from '@/components/ServiceDetail/SubServices'
-
-import Contact from '@/components/ServiceDetail/Contact'
+import Contact from '@/components/Homepage/Contact'
 import img from '../../../public/assets/images/services/affiliate-marketing.png'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
 

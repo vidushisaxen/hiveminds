@@ -9,18 +9,9 @@ import "swiper/css/free-mode";
 import "swiper/css/scrollbar";
 import styles from "../Button/styles.module.css";
 import Link from "next/link";
+import PrimaryButton from "../Button/PrimaryButton";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const categories = [
-  "All",
-  "Healthcare",
-  "Automobiles",
-  "Wearables",
-  "NBFC",
-  "BFSI",
-  "CDIT",
-];
 
 const caseStudies = [
   { img: "/assets/images/homepage/big-basket-casestudy.png", title: "2.35x", des: "Growth in installs", category: "", para:"Expanding the user base",link:"/casestudies/bigbasket" },
@@ -85,40 +76,22 @@ const CaseStudies = () => {
     });
     return () => ctx.revert();
   }, [activeCategory]);
-
-
-  const filteredCaseStudies =
-    activeCategory === "All"
-      ? caseStudies
-      : caseStudies.filter((caseStudy) => caseStudy.category === activeCategory);
-
   return (
     <>
       <section id="caseStudies" className="pt-[10%]">
         <div className="w-screen h-[45vw] flex items-center justify-center z-[10]">
           <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block pl-[3vw] pt-[3vw] pr-[1.5vw] shadow-2xl drop-shadow-2xl overflow-hidden">
-            <div className="w-[40%] h-full flex flex-col gap-[2vw]">
-              <h2 className="heading-2 headinganim">
+            <div className="w-[40%] h-full flex flex-col gap-[2vw] items-start justify-center mt-[-7vw]">
+              <h2 className="heading-2 headinganim w-[80%]">
               Related Case <span className="blue-text">Studies</span>
               </h2>
               <p data-para-anim className="content w-[80%]">
               Explore the challenges we&apos;ve overcome and the strategies we&apos;ve implemented to deliver exceptional results across various industries.
               </p>
-
-              <div className="flex flex-wrap items-center mt-[2vw] gap-[1vw] w-[90%]">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    data-text={category}
-                    className={`${styles.buttonPlain} cursor-pointer relative overflow-hidden border-[#134BD6] border-[1.5px] rounded-[40px] text-[0.97vw] font-light h-fit flex items-center justify-center text-center px-[1.5vw] py-[0.5vw] transition-all duration-300 ${
-                      activeCategory === category ? " text-white bg-[#134BD6]" : ""
-                    } `}
-                    onClick={() => setActiveCategory(category)}
-                  >
-                    <span>{category}</span>
-                  </button>
-                ))}
-              </div>
+<div>
+  <PrimaryButton text={"All Case Studies"} href={"/our-impact"}/>
+</div>
+              
             </div>
 
             {/* Swiper Component with Always Visible Blue Scrollbar */}
@@ -133,7 +106,7 @@ const CaseStudies = () => {
                 scrollbar={{ draggable: true, hide: false, el: ".swiper-scrollbar" }}
                 className="w-full h-full rounded-[1vw] overflow-hidden"
               >
-                {filteredCaseStudies.map((study, index) => (
+                {caseStudies.map((study, index) => (
                   <SwiperSlide key={index}>
                     <Link href={study.link}>
                     <div className="relative w-[25vw] h-[30.5vw]">
