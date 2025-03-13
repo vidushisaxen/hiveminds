@@ -14,22 +14,21 @@ import { Clients2 } from '@/components/Homepage/Clients2'
 import Services from '@/components/Homepage/Solutions'
 import MobileHero from '@/components/Homepage/MobileHero'
 
-
 const index = () => {
   const [mobileWidth, setMobileWidth] = useState(false);
-    useEffect(() => {
-      if (globalThis.innerWidth > 1024) {
-        setMobileWidth(false);
-      } else {
-        setMobileWidth(true);
-      }
-    }, []);
-  const [isOpen, setIsOpen] =  useState(false);
+  useEffect(() => {
+    if (globalThis.innerWidth > 1024) {
+      setMobileWidth(false);
+    } else {
+      setMobileWidth(true);
+    }
+  }, []);
+  const [isOpen, setIsOpen] = useState(false);
   headingBlur();
   paraAnim();
   fadeUp();
   fadeIn();
-  
+
   useEffect(() => {
     gsap.to(".blue-hexagon-animation", {
       y: "15px", // Move up & down
@@ -50,10 +49,10 @@ const index = () => {
   return (
     <>
       <Layout isOpen={isOpen}>
-        {!mobileWidth?<Hero />:<MobileHero/>}
-        <Story isOpen={isOpen} setIsOpen={setIsOpen}/>
-        <Services/>
-       <Clients2/>
+        {!mobileWidth ? <Hero /> : <MobileHero />}
+        <Story isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Services />
+        <Clients2 />
         <TeamMembers />
         <div className='relative h-fit w-screen rounded-[20px]  '>
           <span className=' block absolute h-[20%] w-full'></span>
@@ -62,7 +61,7 @@ const index = () => {
           <span className='absolute h-[20%] bottom-[-10%]  w-full'></span>
           <Blogs />
         </div>
-        <Contact  title1={"Looking to Drive "} title2={"Growth?"} para={"We’re passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us."}/>
+        <Contact title1={"Looking to Drive "} title2={"Growth?"} para={"We’re passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us."} />
       </Layout>
     </>
   )

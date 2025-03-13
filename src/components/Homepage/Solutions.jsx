@@ -2,48 +2,54 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
     {
+        id: 1,
         img: "/assets/images/homepage/services/Digital-Brand-building.png",
         title: "Digital Brand Building",
         para: "Transform your digital identity with strategic brand positioning. We leverage data-driven insights to craft compelling narratives, create memorable brand experiences, and establish a powerful online presence that resonates with your target audience.",
     },
     {
+        id: 2,
         img: "/assets/images/homepage/services/Grow-D2C-Revenue.png",
         title: "Grow D2C Revenue ",
         para: "Unlock direct-to-consumer potential through precision marketing. Our approach combines advanced targeting, personalized customer journeys, and optimized conversion strategies to drive sustainable revenue growth and maximize customer lifetime value",
     },
     {
+        id: 3,
         img: "/assets/images/homepage/services/Drive-Organic-Revenue.png",
         title: "Drive Organic Revenue",
         para: "Elevate your organic performance with intelligent marketing solutions. We deploy cutting-edge SEO strategies, content optimization, and data-powered insights to increase visibility, attract high-intent customers, and naturally boost your revenue streams.",
     },
     {
+        id: 4,
         img: "/assets/images/homepage/services/App-Marketing-Solutions.png",
         title: "App Marketing Solutions",
         para: "Accelerate app growth and user acquisition through comprehensive marketing strategies. From user onboarding to retention optimization, we deploy targeted campaigns that increase downloads, enhance engagement, and drive meaningful app interactions.",
     },
     {
+        id: 5,
         img: "/assets/images/homepage/services/Accelerate-Ecommerce-Growth.png",
         title: "Accelerate Ecommerce Growth",
         para: "Scale your online retail potential with our integrated ecommerce marketing approach. We combine technological innovation, data analytics, and strategic marketing to optimize conversion rates, enhance customer experience, and drive exponential revenue growth.",
     },
     {
+        id: 6,
         img: "/assets/images/homepage/services/Demand-Generation.png",
         title: "Demand Generation",
         para: "Generate high-quality leads and create a robust pipeline of potential customers. Our data-driven demand generation strategies leverage sophisticated targeting, multi-channel approaches, and intelligent content marketing to attract and nurture valuable prospects.",
     },
     {
+        id: 7,
         img: "/assets/images/homepage/services/Maximise-Retention.png",
         title: "Maximise Retention",
         para: "Transform customers into loyal brand advocates through intelligent retention strategies. We utilize advanced analytics, personalized engagement tactics, and predictive modeling to reduce churn, increase customer lifetime value, and build lasting customer relationships.",
     },
 ];
 
-const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
+const ServiceCard = ({ service, isActive, onMouseEnter }) => {
     const cardRef = useRef(null);
     const headingRef = useRef(null);
     const headinginnerRef = useRef(null);
@@ -272,7 +278,6 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
         }
     }, [isActive]);
 
-
     return (
         <div 
             ref={cardRef}
@@ -282,9 +287,8 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
             <Image
                 src={service.img}
                 alt={service.title}
-                layout="fill"
-                objectFit="cover"
-                className="absolute inset-0 z-0"
+                fill
+                className="absolute inset-0 z-0 object-cover w-full h-full"
             />
 
             <div className="absolute inset-0 bg-black/40 flex flex-col items-start justify-end gap-[1.5vw] p-[2vw] pb-[1vw] text-white z-10 mobile:px-[4vw] mobile:pb-[10vw] tablet:pb-[5vw] tablet:px-[3vw]">
@@ -336,7 +340,6 @@ const ServiceCard = ({ service, isActive, onMouseEnter, key ,link}) => {
 const Services = () => {
 
     const [activeIndex, setActiveIndex] = useState(0);
-
 
     return (
         <section id="services">

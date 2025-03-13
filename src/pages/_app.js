@@ -1,14 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import "@/styles/globals.css";
-import { ReactLenis } from "lenis/react";
-
+import { ReactLenis, useLenis } from "lenis/react";
 import "lenis/dist/lenis.css";
 import { DefaultSeo } from "next-seo";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { useLenis } from "lenis/react";
 
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -92,9 +91,9 @@ export default function App({ Component, pageProps }) {
         ]}
       />
       <ReactLenis root options={{ lerp: 0.07 }}>
-        {/* <div style={{ pointerEvents: mouseEnabled ? "auto" : "none" }}> */}
-        <div>
+        <div style={{ pointerEvents: mouseEnabled ? "auto" : "none" }}>
           <Component {...pageProps} />
+          <SpeedInsights />
         </div>
       </ReactLenis>
     </>

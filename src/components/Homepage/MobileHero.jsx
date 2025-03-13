@@ -11,7 +11,6 @@ const MobileHero = () => {
   const paraRef = useRef(null);
   const buttonRef = useRef(null);
 
-
   const details = [
     {
       num1: "2.35x",
