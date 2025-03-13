@@ -6,7 +6,7 @@ import Content from "@/components/BlogDetail/Content";
 import BlogHero from "@/components/BlogDetail/BlogHero";
 import { NextSeo } from "next-seo";
 import { ArticleJsonLd } from "@/lib/json-ld";
-import config from "../../../../package.json";
+import { homepage } from "@/lib/util";
 
 export default function BlogDetail({ post }) {
     fadeIn();
@@ -27,7 +27,6 @@ export default function BlogDetail({ post }) {
         blogFields,
     } = post;
 
-    const { homepage = '' } = config;
     const path = postPathBySlug(slug);
 
     return (

@@ -1,8 +1,7 @@
 import { postPathBySlug } from './blogs';
-import config from '../../package.json';
+import { homepage, faviconPath } from './util';
 
 export function ArticleJsonLd({ post = {} }) {
-  const { homepage = '', faviconPath = 'favicon.ico' } = config;
   const { title, slug, date, author, categories, modified, featuredImage, metaDescription } = post;
   const path = postPathBySlug(slug);
   const datePublished = !!date && new Date(date);

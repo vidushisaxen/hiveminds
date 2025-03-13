@@ -31,3 +31,6 @@ export function removeExtraSpaces(text) {
   if (typeof text !== 'string') return;
   return text.replace(/\s+/g, ' ').trim();
 }
+
+export const homepage = 'https://www.hiveminds.in/';
+export const faviconPath = 'favicon.ico'
