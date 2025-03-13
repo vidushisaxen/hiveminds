@@ -14,7 +14,6 @@ export default function BlogDetail({ post }) {
     headingBlur();
     lineAnim();
     paraAnim();
-
     const {
         content,
         title,
