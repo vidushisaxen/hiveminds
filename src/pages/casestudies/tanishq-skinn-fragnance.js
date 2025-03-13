@@ -5,8 +5,6 @@ import MoreCs from '@/components/CaseStudyDetail/MoreCs';
 import Layout from '@/components/Layout'
 import { fadeIn, fadeUp, headingBlur, paraAnim , lineAnim } from '@/components/gsapAnimations'
 import React, { useState } from 'react'
-
-
 const content = {
     subtitle1: "Skinn Fragrance",
     subtitle2: "Breakthrough",
