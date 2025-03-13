@@ -18,7 +18,7 @@ const Culture = () => {
                 </div>
                 <div className='flex items-start justify-between py-[1vw] mobile:flex-col mobile:gap-[7vw] tablet:flex-col'>
                     <div className='w-[45%] h-full mobile:w-full tablet:w-full'>
-                    <Image src={img} height={890} width={790} alt='culture image' className='rounded-[1.5vw] fadein tablet:rounde-[3vw] tablet:h-[50vw] object-cover'/>
+                    <Image alt='culture-img' src={img} height={890} width={790} className='rounded-[1.5vw] fadein tablet:rounde-[3vw] tablet:h-[50vw] object-cover'/>
                     </div>
                     <div className='w-1/2 mobile:w-full tablet:w-full tablet:mt-[4vw] '>
                     <p data-para-anim className='text-[1.8vw] font-medium py-[2vw] mobile:text-[5vw] tablet:text-[2.5vw]'>We cultivate an environment that encourages creative problem-solving, continuous learning, and collaborative teamwork. Every voice is heard, and every idea is valued. Our diverse and inclusive community celebrates milestones together, supports personal growth, and drives digital transformation—making our workplace not only a hub for professional success but also a place where lifelong relationships are forged.</p>

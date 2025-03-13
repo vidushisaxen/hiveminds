@@ -49,7 +49,7 @@ const services = [
     },
 ];
 
-const ServiceCard = ({ service, isActive, onMouseEnter }) => {
+const ServiceCard = ({ service, isActive, onMouseEnter}) => {
     const cardRef = useRef(null);
     const headingRef = useRef(null);
     const headinginnerRef = useRef(null);

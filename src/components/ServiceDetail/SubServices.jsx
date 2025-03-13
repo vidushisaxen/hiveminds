@@ -4,28 +4,9 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 const SubServices = ({ heading, para, subservices }) => {
-  useEffect(() => {
-    if (globalThis.innerWidth > 1024) {
-      let ctx = gsap.context(() => {
-        const body = document.body;
-        const changeBodyColor = (color) => {
-          gsap.to(body, { backgroundColor: color, duration: 1, ease: "power2.out" });
-        };
-
-        ScrollTrigger.create({
-          trigger: "#subservices",
-          start: "top 60%",
-          end: "bottom 20%",
-
-          onEnter: () => changeBodyColor("#134bd6"),
-          onLeaveBack: () => changeBodyColor("#fafafa"),
-        });
-      });
-      return () => ctx.revert();
-    }
-  }, []);
+  
   return (
-    <section className='w-screen h-full py-[5vw] px-[3vw] mobile:bg-primary mobile:py-10 mobile:px-[5vw] tablet:bg-primary tablet:px-[6vw]' id='subservices'>
+    <section className='w-screen h-full py-[5vw] px-[3vw] bg-primary mobile:py-10 mobile:px-[5vw]  tablet:px-[6vw]' id='subservices'>
       <div className='flex flex-col items-center justify-center text-center mobile:text-left mobile:block tablet:block tablet:text-left '>
         <h2 className='heading-2 !text-white headinganim tablet:w-4/5'>
           {heading}

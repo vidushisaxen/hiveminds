@@ -30,11 +30,11 @@ const Header = ({ isOpen }) => {
   }, [lastScrollY]);
 
   return !isOpen ? (
-    <header className="fixed top-0 left-0 w-full z-[100] header">
-      <div
-        className={`transition-all ease duration-500 ${
+    <header className={`fixed top-0 left-0 w-full z-[100] header transition-all ease duration-500 ${
           isHidden ? "-translate-y-full" : "translate-y-0 header-glassmorphism"
-        }`}
+        }`}>
+      <div
+        className={``}
       >
         <div
           className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw] tablet:py-[3vw]`}

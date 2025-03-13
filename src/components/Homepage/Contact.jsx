@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { useRouter } from "next/router";
+
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import Contactform from './Contactform';
+
+import ContactForm from './Contactform';
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -11,20 +12,12 @@ const Contact = ({ title1, title2, para }) => {
   useEffect(() => {
     if (globalThis.innerWidth > 1024) {
       let ctx = gsap.context(() => {
-        // const body = document.body;
-        // const changeBodyColor = (color) => {
-        //   gsap.to(body, {
-        //     backgroundColor: color,
-        //     duration: 1,
-        //     ease: "power2.out",
-        //   });
-        // };
+     
         ScrollTrigger.create({
           trigger: "#contact",
           start: "top 90%",
           end: "bottom 20%",
-          // onEnter: () => changeBodyColor("#fafafa"),
-          // onLeaveBack: () => changeBodyColor("#134bd6"),
+         
         });
       });
       return () => ctx.revert();
@@ -96,7 +89,8 @@ const Contact = ({ title1, title2, para }) => {
           </div>
 
           <div className="w-[50%] h-full mobile:w-full tablet:w-full">
-            <Contactform />
+            <ContactForm />
+        
           </div>
         </div>
         <div
