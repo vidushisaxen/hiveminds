@@ -78,6 +78,9 @@ body {
 .awards-swiper {
   overflow: visible !important;
 }
+.bgblur{
+  backdrop-filter:'blur(50px)' !important;
+}
 
 .awards-swiper .swiper-button-prev,
 .awards-swiper .swiper-button-next {
