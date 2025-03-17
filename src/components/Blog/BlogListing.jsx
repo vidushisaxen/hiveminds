@@ -119,7 +119,7 @@ const blogsData = [
     date: "June 17, 2024",
     description:
       "In “An India Opportunity Playbook,” the HiveMinds Ecomm Conclave 2024 article details a gathering of top industry experts. ",
-    link: "/blog",
+    link: "/blog/hiveminds-ecommerce-conclave-2024",
   },
   {
     id: 10,
