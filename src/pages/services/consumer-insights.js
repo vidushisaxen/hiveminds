@@ -9,7 +9,14 @@ import SubServices from '@/components/ServiceDetail/SubServices'
 import Contact from '@/components/Homepage/Contact'
 import img from '../../../public/assets/images/services/consumer-insights.png'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
+import Metadata from '@/components/Metadata'
 
+
+const metadata={
+  title:"Consumer Insights Services | HiveMinds",
+  metaDescription:"Gain actionable insights with HiveMinds. We analyze consumer behavior, market trends, and data to drive informed decisions and impactful brand strategies.",
+  path:"services/consumer-insights"
+}
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
   headingBlur();
@@ -36,6 +43,7 @@ const index = () => {
   }, []);
   return (
     <>
+    <Metadata metadata={metadata}/>
       <Layout isOpen={isOpen}>
        <Hero title1={"Consumer Insights"} title2={"Services "} para={"Consumer Insights are the strategic cornerstone for sustainable growth. We transform complex consumer data into actionable intelligence, empowering your brand to make informed decisions that drive innovation and lasting impact."} img={img}/>
        <Overview title1={"Scale Efficiently with Data-First"} title2={"Consumer Insights"} para={"Truly understanding your audience is essential. Leverage advanced analytics and market research to uncover hidden trends, untapped opportunities, and evolving consumer preferences. By harnessing these insights, you can tailor your messaging and product offerings to exceed customer expectations and achieve sustainable growth."}/>

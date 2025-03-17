@@ -8,7 +8,13 @@ import CaseStudies from '@/components/OurImpact/CaseStudies'
 import Awards from '@/components/OurImpact/Awards'
 import Hero from '@/components/Hero'
 import img from '../../public/assets/images/impact/our-impact-hero-img.png'
+import Metadata from '@/components/Metadata'
 
+const metadata={
+  title:"HiveMinds' Impact: Client Success, Partnerships, and Awards",
+  metaDescription:"Explore how HiveMinds drives client success across industries, collaborates with top media partners, and earns industry accolades for digital marketing excellence.",
+  path:"our-impact"
+}
 const impact = () => {
      headingBlur();
       paraAnim();
@@ -33,6 +39,7 @@ const impact = () => {
     },[])
   return (
     <>
+    <Metadata metadata={metadata}/>
     <Layout>
    <Hero title1={"Our"} title2={"Impact"} para={"Clients rely on our integrated network of agencies and specialized practices to deliver personalized experiences through creative, media and customer experience management."} img={img}/>
     <Clients/>

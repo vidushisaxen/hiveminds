@@ -9,7 +9,13 @@ import SubServices from '@/components/ServiceDetail/SubServices'
 import Contact from '@/components/Homepage/Contact'
 import img from '../../../public/assets/images/services/creative-content-management.png'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
+import Metadata from '@/components/Metadata'
 
+const metadata={
+  title:"Creative and Content Services | HiveMinds",
+  metaDescription:"Elevate your brand with HiveMinds' creative content solutions. We blend data-driven insights with storytelling to craft immersive experiences that drive engagement and growth.",
+  path:"services/creative-content-management"
+}
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
   headingBlur();
@@ -36,6 +42,7 @@ const index = () => {
   }, []);
   return (
     <>
+    <Metadata metadata={metadata}/>
       <Layout isOpen={isOpen}>
        <Hero title1={"Creative and Content"} title2={"Services "} para={"Content is the strategic foundation of impactful brand engagement. Our creative and content solutions fuse data-driven insights with compelling storytelling to craft immersive brand experiences—ensuring every narrative drives measurable engagement and sustainable growth."} img={img}/>
        <Overview title1={"Scale Efficiently with Strategic "} title2={" Creative Execution"} para={"In today’s digital landscape, brands must differentiate itself through authentic, high-impact content. Embrace a holistic content strategy that seamlessly integrates creative storytelling with performance analytics to captivate audiences, drive conversions, and foster lasting brand loyalty."}/>

@@ -9,7 +9,13 @@ import SubServices from '@/components/ServiceDetail/SubServices'
 import Contact from '@/components/Homepage/Contact'
 import img from '../../../public/assets/images/services/affiliate-marketing.png'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
+import Metadata from '@/components/Metadata'
 
+const metadata={
+  title:"Affiliate Marketing Services | HiveMinds",
+  metaDescription:"Boost revenue with HiveMinds' affiliate marketing services. We drive growth through strategic partnerships, data-driven campaigns, and performance tracking.",
+  path:"services/affiliate-marketing"
+}
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
   headingBlur();
@@ -36,6 +42,7 @@ const index = () => {
   }, []);
   return (
     <>
+    <Metadata metadata={metadata}/>
       <Layout isOpen={isOpen}>
        <Hero title1={"Amplify Growth Through"} title2={"Affiliates "} para={"Affiliate Marketing services forge strategic partnerships that expand your brand’s digital reach. By converting clicks into customers, these solutions drive targeted traffic and create meaningful, revenue-generating relationships."} img={img}/>
        <Overview title1={"Maximize Impact with Strategic"} title2={"Affiliate Analytics"} para={"To unlock new revenue streams, your brand must adopt a collaborative approach. Focus on building strong partnerships, integrating influencer and social media efforts, and continuously refining your campaigns using data-backed insights. Align your affiliate initiatives with your broader business objectives, leverage performance analytics, and build strategic partnerships to transform your digital presence and drive sustained growth."}/>

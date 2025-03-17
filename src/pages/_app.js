@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import nextSeoConfig from "../../next-seo.config";
+
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -63,32 +65,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <DefaultSeo
-        title="Hiveminds"
-        description="Delivering Digital Growth"
-        additionalLinkTags={[
-          {
-            rel: "preload",
-            href: "/assets/fonts/avenir.woff",
-            as: "font",
-            type: "font/woff",
-            crossOrigin: "",
-          },
-          {
-            rel: "preload",
-            href: "/assets/fonts/avenir-medium.woff",
-            as: "font",
-            type: "font/woff",
-            crossOrigin: "",
-          },
-          {
-            rel: "preload",
-            href: "/assets/fonts/ppneuemontreal-medium.woff",
-            as: "font",
-            type: "font/woff",
-            crossOrigin: "",
-          },
-        ]}
+      <DefaultSeo {...nextSeoConfig} 
+        dangerouslySetAllPagesToNoIndex={true}
+        dangerouslySetAllPagesToNoFollow={true}
       />
       <ReactLenis root options={{ lerp: 0.07 }}>
         <div style={{ pointerEvents: mouseEnabled ? "auto" : "none" }}>

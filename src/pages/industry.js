@@ -5,7 +5,13 @@ import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimatio
 import Hero from '@/components/Hero';
 import Image from 'next/image';
 import img from '../../public/assets/images/industry/industry-hero-img.png';
+import Metadata from '@/components/Metadata';
 
+const metadata={
+  title:"HiveMinds: Digital Marketing for Diverse Industries",
+  metaDescription:"HiveMinds crafts data-driven strategies for FMCG, health, fintech, e-commerce, fashion, and more to drive brand growth and engagement.",
+  path:"industry"
+}
 const industry = () => {
   headingBlur();
   paraAnim();
@@ -13,6 +19,7 @@ const industry = () => {
   fadeIn();
   return (
     <>
+    <Metadata metadata={metadata}/>
       <Layout>
         <Hero title1={"Our"} title2={"Industries"} para={"Our versatile digital strategies span diverse industries. We harness data, creativity, and insights to craft bespoke solutions that empower brands and drive growth in an ever-evolving digital world."} img={img} />
         <main>

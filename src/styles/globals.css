@@ -163,12 +163,6 @@ body {
 .animate-marquee-reverse {
   animation: marquee-reverse var(--duration, 30s) linear infinite;
 }
-
-.header-glassmorphism {
-  backdrop-filter: blur(5px);
-  background: rgba(255, 255, 255, 0.95);
-}
-
 .animate-marquee {
   animation: marquee var(--duration, 30s) linear infinite;
 }
@@ -181,7 +175,7 @@ body {
   backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.95);
 }
-
+.glassmorphism-menu
 .glassmorphism {
   backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.75);

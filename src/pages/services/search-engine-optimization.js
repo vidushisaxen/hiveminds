@@ -9,7 +9,14 @@ import SubServices from '@/components/ServiceDetail/SubServices'
 import Contact from '@/components/Homepage/Contact'
 import img from '../../../public/assets/images/services/search-engine-optimization.png'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
+import Metadata from '@/components/Metadata'
 
+
+const metadata={
+  title:"Search Engine Optimization Services | HiveMinds",
+  metaDescription:"Boost your online presence with HiveMinds' SEO services. We offer technical audits, content creation, link building, and analytics to drive sustainable growth.",
+  path:"services/search-engine-optimization"
+}
 const index = () => {
   const [isOpen, setIsOpen] = useState(false);
   headingBlur();
@@ -36,6 +43,7 @@ const index = () => {
   }, []);
   return (
     <>
+    <Metadata metadata={metadata}/>
       <Layout isOpen={isOpen}>
         <Hero title1={"Search Engine"} title2={"Optimisation "} para={"SEO is the strategic catalyst that transforms your digital presence into a sustainable growth engine. By leveraging technical excellence, compelling content, and authoritative link building, your brand becomes the go-to choice when customers search online."} img={img} />
         <Overview title1={"Scale Efficiently with a "} title2={"Data-First Strategy"} para={"In today’s crowded digital landscape, scaling your online presence demands a holistic SEO strategy. Invest in technical optimization, quality content, and strategic authority building. Align your SEO efforts with your broader business goals to drive long-term organic growth and outpace the competition."} />

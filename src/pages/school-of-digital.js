@@ -8,8 +8,14 @@ import Brochure from '@/components/SchoolOfDigital/Brochure';
 import Testimonials from '@/components/SchoolOfDigital/Testimonials';
 import Join from '@/components/SchoolOfDigital/Join';
 import Hero from '@/components/SchoolOfDigital/Hero';
+import Metadata from '@/components/Metadata';
 
+const metadata={
+  title:"HiveMinds School of Digital | Advanced Digital Marketing Courses",
+  metaDescription:"Join HiveMinds School of Digital for expert-led courses in SEO, Google Ads, and advanced digital marketing. Perfect for students and professionals looking to upskill.",
+  path:"school-of-digital"
 
+}
 const schoolOfDigital = () => {
      headingBlur();
       paraAnim();
@@ -17,6 +23,8 @@ const schoolOfDigital = () => {
       fadeIn();
       lineAnim();
   return (
+    <>
+    <Metadata metadata={metadata}/>
    <Layout>
        <Hero/>
        <Offer/>
@@ -26,6 +34,7 @@ const schoolOfDigital = () => {
        <Testimonials/>
        <Join/>
     </Layout>
+    </>
   )
 }
 

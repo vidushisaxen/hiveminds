@@ -9,7 +9,14 @@ import SubServices from '@/components/ServiceDetail/SubServices'
 import Contact from '@/components/Homepage/Contact'
 import img from '../../../public/assets/images/services/performance-marketing.png'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
+import Metadata from '@/components/Metadata'
 
+
+const metadata={
+  title:"Performance Marketing Services | HiveMinds",
+  metaDescription:"Maximize ROI with HiveMinds' data-driven performance marketing. We optimize customer journeys using AI-driven strategies, precision targeting, and real-time analytics.",
+  path:"services/performance-marketing"
+}
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
   headingBlur();
@@ -36,6 +43,7 @@ const index = () => {
   }, []);
   return (
     <>
+    <Metadata metadata={metadata}/>
       <Layout isOpen={isOpen}>
        <Hero title1={"Performance "} title2={"Marketing "} para={"Performance marketing is the strategic catalyst that transforms digital footprints into measurable, sustainable success. To thrive, a brand needs to harness data and creativity to optimize the entire customer journey—from discovery to loyalty; thats where our expertise comes to deliver the same to brands."} img={img}/>
        <Overview title1={"Scale efficiently with data-first, performance-driven  "} title2={"ad campaigns"} para={"In today’s competitive landscape, achieving sustainable business growth requires a strategic and efficient approach to paid marketing. We prioritize a data-first methodology, ensuring that marketing budget is allocated to high-impact media channels. Our integrated growth framework aligns paid efforts with broader business objectives, creating a seamless connection between          customer acquisition and long-term brand scaling. <br/> <br/> Embrace a holistic approach that optimizes acquisition, conversion, and retention through precision targeting. This is an opportunity to turn data into action and drive exceptional ROI."}/>

@@ -6,7 +6,13 @@ import gsap from 'gsap'
 import Listing from '@/components/Services/Listing'
 import Hero from '@/components/Hero'
 import img from '../../../public/assets/images/services/hero.png'
+import Metadata from '@/components/Metadata'
 
+const metadata={
+  title:"HiveMinds Digital Marketing Services for Business Growth",
+  metaDescription:"HiveMinds offers SEO, performance marketing, content, ORM, and analytics to help brands grow digitally with data-driven strategies.",
+  path:"services"
+}
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
   headingBlur();
@@ -33,6 +39,7 @@ const index = () => {
   }, []);
   return (
     <>
+    <Metadata metadata={metadata}/>
       <Layout isOpen={isOpen}>
         <Hero
           title1={"What We"} 

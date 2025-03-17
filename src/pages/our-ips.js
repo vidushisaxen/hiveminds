@@ -10,7 +10,13 @@ import {
 import Hero from "@/components/Hero";
 import Image from "next/image";
 import img from "../../public/assets/images/ip/ips-hero-img.png";
+import Metadata from "@/components/Metadata";
 
+const metadata={
+  title:"HiveMinds: Innovative Digital Marketing Tools for Brand Growth",
+  metaDescription:"Explore HiveMinds' proprietary tools like FeedX, Vizual, and OptiMMMix, designed to optimize digital campaigns and drive brand growth.",
+  path:"our-ips"
+}
 const ips = () => {
   headingBlur();
   paraAnim();
@@ -18,6 +24,7 @@ const ips = () => {
   fadeIn();
   return (
     <>
+    <Metadata metadata={metadata}/>
       <Layout>
         <Hero
           title1={"Our"}

@@ -9,7 +9,14 @@ import SubServices from '@/components/ServiceDetail/SubServices'
 import Contact from '@/components/Homepage/Contact'
 import img from '../../../public/assets/images/services/programatic-advertising.png'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
+import Metadata from '@/components/Metadata'
 
+
+const metadata={
+  title:"Social Media Marketing Services | HiveMinds",
+  metaDescription:"Grow your brand with HiveMinds' social media marketing. We create data-driven strategies and engaging content to boost reach, engagement, and conversions.",
+  path:"services/social-media-marketing"
+}
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
   headingBlur();
@@ -36,6 +43,7 @@ const index = () => {
   }, []);
   return (
     <>
+    <Metadata metadata={metadata}/>
       <Layout isOpen={isOpen}>
        <Hero title1={"Social Media Marketing "} title2={"Services"} para={"Social media marketing is the strategic accelerator that transforms everyday interactions into immersive brand experiences. By leveraging data-driven insights and creative storytelling, your brand builds authentic connections that cut through the noise and drive sustainable growth."} img={img}/>
        <Overview title1={"Scale Efficiently with Data-First  "} title2={"Social Media Strategies"} para={"To excel on social platforms, brands must actively engage its audience across digital channels. Embrace a proactive, audience-first approach—delivering compelling content, fostering genuine interactions, and continuously refining your strategy—to build loyalty, boost conversions, and drive measurable results."}/>

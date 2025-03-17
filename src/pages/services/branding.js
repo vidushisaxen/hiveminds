@@ -9,7 +9,13 @@ import SubServices from '@/components/ServiceDetail/SubServices'
 import Contact from '@/components/Homepage/Contact'
 import img from '../../../public//assets/images/services/branding-services.png'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
+import Metadata from '@/components/Metadata'
 
+const metadata={
+  title:"Branding & Programmatic Advertising Services | HiveMinds",
+  metaDescription:"Build a powerful brand with HiveMinds. We craft compelling identities using creative storytelling, data-driven insights, and multi-channel strategies.",
+  path:"services/branding"
+}
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
   headingBlur();
@@ -36,6 +42,7 @@ const index = () => {
   }, []);
   return (
     <>
+    <Metadata metadata={metadata}/>
       <Layout isOpen={isOpen}>
        <Hero 
         title1={"Transforming Brands, "} 
