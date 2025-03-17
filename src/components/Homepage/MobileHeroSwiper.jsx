@@ -61,17 +61,10 @@ const MobileHeroSwiper = () => {
 
             },
             1024: {
-              slidesPerView: 3,
-              spaceBetween:0,
-            },
-            1280: {
               slidesPerView: 2,
-              spaceBetween: 35,
+              spaceBetween:15,
             },
-            1536: {
-              slidesPerView: 2,
-              spaceBetween: 40,
-            },
+            
           }}
           scrollbar={{
             draggable: true,

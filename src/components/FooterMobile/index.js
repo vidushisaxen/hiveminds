@@ -12,7 +12,7 @@ const FooterMobile = () => {
 
   return (
     <>
-      <footer className="w-screen h-full py-[10%] bg-primary z-[100] relative overflow-hidden">
+      <footer className="w-screen h-full py-[10%] bg-primary z-[1] relative overflow-hidden">
         <div className="container-lg flex flex-col gap-[5vw]">
           <div className="w-full relative">
             <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal mobile:text-[5vw] mobile:mb-[4vw]">
