@@ -14,7 +14,7 @@ const BlogCard = ({ imgSrc, title, description, link, category, date }) => {
 
     return (
         <div className="w-[30vw] h-fit pl-[0.5vw] pb-[3vw] fadeup group blog-link tablet:w-[44vw] tablet:h-[70vw] mobile:w-[92vw] mobile:h-full">
-            <Link href={path}>
+            <Link href={`/${path}`}>
                 <div className="h-[20.5vw] w-full relative overflow-hidden rounded-[1.3vw] tablet:h-[30vw] mobile:h-[60vw] mobile:rounded-[4vw]">
                     <Image
                         src={imgSrc.sourceUrl}
@@ -37,7 +37,7 @@ const BlogCard = ({ imgSrc, title, description, link, category, date }) => {
                         dangerouslySetInnerHTML={{ __html: descriptionTrimmed }}
                     />
                 </div>
-                <Link href={path}>
+                <Link href={`/${path}`}>
                     <div className="w-fit">
                         <div className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[5vw]`}>
                             <span className="relative link-line group-hover:text-primary ">View More</span>
