@@ -22,6 +22,9 @@ export const POST_FIELDS = gql`
         sizes
       }
     }
+    blogFields {
+      blogType
+    }
     date
     isSticky
     slug
@@ -60,15 +63,6 @@ export const QUERY_POST_BY_SLUG = gql`
       modified
       content
       date
-      featuredImage {
-        node {
-          altText
-          sourceUrl
-          srcSet
-          sizes
-          id
-        }
-      }
       blogFields {
         heroImage {
           node {
@@ -78,6 +72,7 @@ export const QUERY_POST_BY_SLUG = gql`
             sizes
           }
         }
+        blogType
       }
       author{
         node{

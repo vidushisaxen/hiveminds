@@ -1,26 +1,56 @@
-import BlogListing from '@/components/Blog/BlogListing'
-import FeaturedBlog from '@/components/Blog/FeaturedBlog'
-import Hero from '@/components/Hero'
-import Layout from '@/components/Layout'
-import React from 'react'
-import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
+import BlogListing from "@/components/Blog/BlogListing"
+import FeaturedBlog from "@/components/Blog/FeaturedBlog"
+import Hero from "@/components/Hero"
+import Layout from "@/components/Layout"
+import { getPaginatedPosts, sortStickyPosts } from "@/lib/blogs"
 import img from '../../../public/assets/images/blogpage/blog-listing-hero.png'
+import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 
-const index = () => {
-  headingBlur();
-        paraAnim();
-        fadeUp();
-        fadeIn();
-  return (
-   <>
-   <Layout>
-    <Hero title1={"What’s"} title2={"Buzzing"} para={"Leveraging data-driven insights and technical expertise, HiveMinds crafts SEO solutions that elevate digital visibility and drive measurable results, turning organic searches into valuable customer relationships."} img={img} />
-    <FeaturedBlog/>
-    <BlogListing/>
-   </Layout>
-   
-   </>
-  )
+export default function Blogs({ posts, featuredPost, pagination }) {
+
+    headingBlur();
+    paraAnim();
+    fadeUp();
+    fadeIn();
+
+    return (
+        <>
+            <Layout>
+                <Hero title1={"What's"} title2={"Buzzing"} para={"Leveraging data-driven insights and technical expertise, HiveMinds crafts SEO solutions that elevate digital visibility and drive measurable results, turning organic searches into valuable customer relationships."} img={img} />
+                {featuredPost && (
+                    <FeaturedBlog post={featuredPost} />
+                )}    
+                <BlogListing posts={posts} pagination={pagination} />
+            </Layout>
+        </>
+    )
 }
 
-export default index;
+export async function getStaticProps({ params }) {
+    const { slug } = params || {};
+    let { posts, pagination } = await getPaginatedPosts();
+    if (slug) {
+        const { posts: filteredPosts, pagination: filteredPagination } = await getPaginatedPosts({
+            categoryId: slug,
+        });
+        posts = filteredPosts;
+        pagination = {
+            ...filteredPagination,
+            basePath: `/blog/${slug}/page`,
+        };
+    }
+    posts = sortStickyPosts(posts);
+    const featuredPost = posts.find((post) => post.isSticky) || null;
+    posts = posts.filter((post) => !post.isSticky);
+    return {
+        props: {
+            posts,
+            featuredPost,
+            pagination: {
+                ...pagination,
+                basePath: slug ? `/blog/${slug}/page` : '/blog',
+            },
+        },
+        revalidate: 500,
+    };
+}
