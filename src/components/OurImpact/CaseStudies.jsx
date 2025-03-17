@@ -50,7 +50,7 @@ const caseStudiesData = [
       "<p><span class='text-primary'>67% </span> Increase in Brand Searches</p> <p>New Routes Soar to Success</p>",
     link: "/casestudies/flydubai",
   },
-  {
+  { 
     id: 5,
     industry:"E-Commerce",
     imgSrc: "/assets/images/impact/casestudy/dominos-cs-banner.png",
