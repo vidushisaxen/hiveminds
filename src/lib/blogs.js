@@ -17,7 +17,7 @@ import {
  */
 
 export function postPathBySlug(slug) {
-  return `blog/${slug}`;
+  return `/blog/${slug}`;
 }
 
 /**
