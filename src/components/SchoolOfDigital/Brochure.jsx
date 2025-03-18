@@ -3,7 +3,8 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import LinkButton from '../Button/LinkButton';
-import Brochureform from './BrochureForm';
+// import Brochureform from './BrochureForm';
+import BrochureForm from './BrochureForm';
 gsap.registerPlugin(ScrollTrigger)
 
 const Brochure = () => {
@@ -52,16 +53,11 @@ const Brochure = () => {
                     </div>
 
                     <div className="w-[50%] h-full mobile:w-full mobile:px-[2vw] tablet:w-full">
-                        <Brochureform />
+                        <BrochureForm />
                     </div>
                 </div>
 
-                <div
-                    className="absolute h-[2vw] w-[2.2vw] top-[25%] left-[25%] blue-hexagon-animation mobile:hidden tablet:hidden"
-
-                >
-                    <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
-                </div>
+               
                 <div
                     className="absolute h-[2vw] w-[2.2vw] top-[5%] left-[15%] yellow-hexagon-animation mobile:hidden tablet:hidden"
 

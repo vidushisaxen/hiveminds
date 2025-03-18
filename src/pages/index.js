@@ -9,7 +9,7 @@ import Story from '@/components/Homepage/Story'
 import TeamMembers from '@/components/Homepage/TeamMembers'
 import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 import React, { useEffect, useState } from 'react'
-import gsap from 'gsap'
+
 import { Clients2 } from '@/components/Homepage/Clients2'
 import Services from '@/components/Homepage/Solutions'
 import MobileHero from '@/components/Homepage/MobileHero'
@@ -34,24 +34,6 @@ const index = () => {
   paraAnim();
   fadeUp();
   fadeIn();
-
-  useEffect(() => {
-    gsap.to(".blue-hexagon-animation", {
-      y: "15px",
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-
-    gsap.to(".yellow-hexagon-animation", {
-      y: "-15px",
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-  }, []);
   return (
     <>
     <Metadata metadata={metadata}/>

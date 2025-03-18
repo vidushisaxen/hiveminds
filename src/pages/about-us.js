@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { fadeIn, fadeUp, headingBlur, paraAnim, lineAnim } from '@/components/gsapAnimations'
-import gsap from 'gsap'
+
 import Hero from '@/components/Hero'
 import Leadership from '@/components/AboutUs/Leadership'
 import WhyUs from '@/components/AboutUs/WhyUs'
@@ -22,23 +22,7 @@ const contact = () => {
   fadeUp();
   fadeIn();
   lineAnim()
-  useEffect(() => {
-    gsap.to(".blue-hexagon-animation", {
-      y: "15px",
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-
-    gsap.to(".yellow-hexagon-animation", {
-      y: "-15px",
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-  }, [])
+ 
   return (
     <>
     <Metadata metadata={metadata}/>

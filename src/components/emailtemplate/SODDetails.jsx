@@ -1,7 +1,7 @@
 import React from "react";
 import { Body, Column, Container, Head, Hr, Html, Img, Link, Preview, Row, Section, Text } from "@react-email/components";
 
-const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessage, userService }) => {
+const SODDetails = ({ userName, userEmail,userCity, userNumber , userMode}) => {
   // const selectedServices = Object.keys(userService).filter(service => userService[service]);
 
   return (
@@ -21,7 +21,7 @@ const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessa
           />
           <Text style={paragraph}>Hi,</Text>
           <Text style={paragraph}>
-            You have a new contact form submission on the HiveMinds website.
+            You have a new School of digital form submission on the HiveMinds website.
             <br />
             Below are the details.
           </Text>
@@ -39,27 +39,22 @@ const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessa
               <Column style={columnText}>{userNumber}</Column>
             </Row>
             <Row style={row}>
-              <Column style={columnHead}>Company</Column>
-              <Column style={columnText}>{userCompany}</Column>
+              <Column style={columnHead}>City</Column>
+              <Column style={columnText}>{userCity}</Column>
             </Row>
            
             <Row style={row}>
-              <Column style={columnHead}>Services</Column>
+              <Column style={columnHead}>Mode of Class</Column>
               <Column style={columnText}>
-                {userService}
+                {userMode}
               </Column>
             </Row>
 
             {/* Only show the "Other" service details if provided */}
-           
-
-            <Row style={row}>
-              <Column style={columnHead}>Message</Column>
-              <Column style={columnText}>{userMessage}</Column>
-            </Row>
+          
           </Section>
           <Text style={footer}>
-            This form is submitted from <Link href="https://hiveminds-staging.vercel.app/contact-us">Contact Page.</Link>
+            This form is submitted from <Link href="https://hiveminds-staging.vercel.app/school-of-digital">Contact Page.</Link>
           </Text>
           <Text style={paragraph}>- Team HiveMinds</Text>
           <Hr style={hr} />
@@ -70,7 +65,7 @@ const ContactDetails = ({ userName, userEmail,userCompany, userNumber, userMessa
   );
 };
 
-export default ContactDetails;
+export default SODDetails;
 
 const main = {
   backgroundColor: "#ffffff",

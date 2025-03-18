@@ -498,6 +498,38 @@ left: 42% !important;
       left: 50%;
     }
 
+    /* hexagon animation */
+    @keyframes float-up-down {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes float-down-up {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    
+    .blue-hexagon-animation {
+      animation: float-up-down 3s infinite ease-in-out;
+    }
+    
+    .yellow-hexagon-animation {
+      animation: float-down-up 3s infinite ease-in-out;
+    }
 
 @media screen and (min-width: 541px) and (max-width: 1024px) {
   .content-white {

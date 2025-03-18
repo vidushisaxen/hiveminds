@@ -45,3 +45,96 @@ export const QUERY_ALL_CASE_STUDIES = gql`
     }
   }
 `;
+
+export const QUERY_CASESTUDY_BY_SLUG = gql`
+  query CaseStudyBySlug($slug: ID!) {
+    caseStudy(id: $slug, idType: SLUG) {
+      excerpt
+      id
+      categories {
+        edges {
+          node {
+            databaseId
+            id
+            name
+            slug
+          }
+        }
+      }
+            featuredImage {
+      node {
+        altText
+        sourceUrl
+        sizes
+        srcSet
+      }
+    }
+      industries {
+        edges {
+          node {
+            databaseId
+            id
+            name
+            slug
+          }
+        }
+      }
+      services {
+        edges {
+          node {
+            databaseId
+            id
+            name
+            slug
+          }
+        }
+      }
+      modified
+      content
+      date
+      title
+      slug
+    }
+  }
+`;
+
+export const QUERY_CASESTUDIES_BY_INDUSTRY_ID = gql`
+  ${CASE_STUDY_FIELDS}
+  query CaseStudiesByIndustryId($industryId: Int!) {
+    caseStudies(where: { industryId: $industryId, hasPassword: false }) {
+      edges {
+        node {
+          ...PostFields
+        }
+      }
+    }
+  }
+`;
+
+export const QUERY_CASESTUDY_SEO_BY_SLUG = gql`
+  query CaseStudySEOBySlug($slug: ID!) {
+    caseStudy(id: $slug, idType: SLUG) {
+      id
+      seo {
+        metaDesc
+        title
+        opengraphImage {
+          altText
+          sourceUrl
+          mediaDetails {
+            height
+            width
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const QUERY_CASESTUDY_PER_PAGE = gql`
+  query CaseStudyPerPage {
+    allSettings {
+      readingSettingsPostsPerPage
+    }
+  }
+`;
