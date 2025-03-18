@@ -78,7 +78,7 @@ const team = [
 const Leadership = () => {
   return (
     <>
-      <section className="w-screen h-full py-[5vw] mobile:pt-8 mobile:pb-12">
+      <section className="w-screen h-full py-[5vw] mobile:pt-8 mobile:pb-12" id="leadership">
         <div className="container-lg h-full flex items-center justify-center flex-col mobile:max-w-full tablet:items-start">
           <div className="py-[1vw] w-[75%] text-center px-[1vw] mobile:w-full mobile:text-left mobile:px-[5vw] tablet:text-left tablet:w-full">
             <p className="content fadein">

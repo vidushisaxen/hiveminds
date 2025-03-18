@@ -23,7 +23,7 @@ const Culture = () => {
                     <div className='w-1/2 mobile:w-full tablet:w-full tablet:mt-[4vw] '>
                     <p data-para-anim className='text-[1.8vw] font-medium py-[2vw] mobile:text-[5vw] tablet:text-[2.5vw]'>We cultivate an environment that encourages creative problem-solving, continuous learning, and collaborative teamwork. Every voice is heard, and every idea is valued. Our diverse and inclusive community celebrates milestones together, supports personal growth, and drives digital transformation—making our workplace not only a hub for professional success but also a place where lifelong relationships are forged.</p>
                     <div className='mt-[3vw] mobile:mt-[7vw]'>
-                    <PrimaryButton text={"Join Our Team"} href="/"/>
+                    <PrimaryButton text={"Join Our Team"} href="#"/>
                     </div>
                     </div>
                     

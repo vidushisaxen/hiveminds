@@ -150,7 +150,7 @@ const CaseStudies = () => {
                 industries.
               </p>
               <div>
-                <PrimaryButton text={"All Case Studies"} href={"/casestudy"} />
+                <PrimaryButton text={"All Case Studies"} href={"/our-impact"} />
               </div>
             </div>
 

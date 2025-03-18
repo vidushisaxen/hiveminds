@@ -94,8 +94,8 @@ const Blogs = () => {
                 </p>
               </div>
               <div className="flex flex-wrap items-center mt-[2vw] gap-[0.7vw] mobile:gap-[1.5vw] tablet:gap-[2vw]">
-                <PlainButton text={"Blogs"} link={"/blog"} className="fadeup" />
-                <PlainButton text={"News"} link={"/blog"} className="fadeup" />
+                <PlainButton text={"Blogs"} link={"/blog?category=Blog"} className="fadeup" />
+                <PlainButton text={"News"} link={"/blog?category=pr"} className="fadeup" />
               </div>
             </div>
             <div className="w-[70%] h-full flex items-center justify-center blog mobile:w-full mobile:flex-col mobile:mt-[8vw] tablet:w-full tablet:items-start tablet:justify-start tablet:mt-[5vw]">
@@ -115,7 +115,7 @@ const Blogs = () => {
                   para={"2024 SEO Updates All Bundled Together for You to Glance"}
                 />
                 <div className="flex items-center justify-center h-[35vw] w-[7vw]  mobile:h-fit mobile:w-full tablet:h-fit tablet:w-full">
-                  <div
+                  <Link href={"/blog"}
                     className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] group items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw]  `}
                   >
                     <span className="relative link-line ">View All</span>
@@ -138,7 +138,7 @@ const Blogs = () => {
                         fill="currentColor"
                       />
                     </svg>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>

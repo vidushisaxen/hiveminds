@@ -115,7 +115,7 @@ const Story = ({ isOpen, setIsOpen }) => {
                 sustainable growth.
               </p>
               <LinkButton
-                btnLink={"#"}
+                btnLink={"/solutions"}
                 btnText={"How We Do It"}
                 className={"text-white fadeup"}
               />
@@ -135,13 +135,13 @@ const Story = ({ isOpen, setIsOpen }) => {
                 <PrimaryButton
                   className="fadeup"
                   text="Explore The Hiveminds Way"
-                  href="#"
+                  href="/about-us"
                   data-btn-white
                 />
                 <PrimaryButton
                   className="fadeup"
                   text="Our Leadership Team"
-                  href="#"
+                  href="/about-us#leadership"
                   data-btn-b-white
                 />
               </div>
