@@ -1,56 +1,70 @@
-import { GET_ALL_CASE_STUDY_SLUGS, GET_CASE_STUDIES, GET_CASE_STUDY_BY_SLUG } from "@/data/casestudies";
-import { getApolloClient } from "./apollo-client";
+import { getApolloClient } from './apollo-client';
+import { sortObjectsByDate } from './datetime';
 
-export async function getCaseStudies() {
+import { QUERY_ALL_CASE_STUDIES } from "../data/casestudies";
 
-    const apolloClient = getApolloClient();
+/**
+ * caseStudyPathBySlug
+ */
 
-    const data = await apolloClient.query({
-        query: GET_CASE_STUDIES,
+export function caseStudyPathBySlug(slug) {
+  return `casestudies/${slug}`;
+}
+
+/**
+ * getAllCaseStudies
+ */
+export async function getAllCaseStudies() {
+  const apolloClient = getApolloClient();
+
+  const data = await apolloClient.query({
+    query: QUERY_ALL_CASE_STUDIES,
+  });
+
+  const caseStudies = data?.data.caseStudies.edges.map(({ node = {} }) => node);
+
+  return {
+    caseStudies: Array.isArray(caseStudies) && caseStudies.map(mapCaseStudyData),
+  };
+}
+
+/**
+ * mapCaseStudyData
+ */
+
+export function mapCaseStudyData(caseStudy = {}) {
+  const data = { ...caseStudy };
+  if (data.categories) {
+    data.categories = data.categories.edges.map(({ node }) => {
+      return {
+        ...node,
+      };
     });
-
-    const caseStudies = data?.data.caseStudies.edges.map(({ node = {} }) => node);
-
-    return {
-        caseStudies,
-    };
-}
-
-export async function getCaseStudyBySlug() {
-
-    const apolloClient = getApolloClient();
-
-
-    let caseData;
-    try {
-        caseData = await apolloClient.query({
-          query: GET_CASE_STUDY_BY_SLUG,
-          // variables: {
-          //   slug,
-          // },
-        });
-      } catch (e) {
-        console.log(`[posts][getPostBySlug] Failed to query post data: ${e.message}`);
-        throw e;
-      }
-      // if (!postData?.data.post) return { post: undefined };
-
-    const caseStudy = caseData.slug.map(({ node = {} }) => node);
-
-    return {
-        caseStudy,
-    };
-}
-
-export async function getAllCaseStudiesSlug() {
-    try {
-      const { data } = await client.query({
-        query: GET_ALL_CASE_STUDY_SLUGS,
-      });
-  
-      return data.caseStudies.edges.map((edge) => edge.node.slug);
-    } catch (error) {
-      console.error("Error fetching case study slugs:", error);
-      return [];
-    }
   }
+  if (data.industries) {
+    data.industries = data.industries.edges.map(({ node }) => {
+      return {
+        ...node,
+      };
+    });
+  }
+  if (data.services) {
+    data.services = data.services.edges.map(({ node }) => {
+      return {
+        ...node,
+      };
+    });
+  }
+  if (data.featuredImage) {
+    data.featuredImage = data.featuredImage.node;
+  }
+  return data;
+}
+
+/**
+ * sortStickyCaseStudies
+ */
+
+export function sortStickyCaseStudies(caseStudies) {
+  return [...caseStudies].sort((caseStudy) => (caseStudy.isSticky.isSticky ? -1 : 1));
+}

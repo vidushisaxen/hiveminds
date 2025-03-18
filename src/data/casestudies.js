@@ -1,65 +1,45 @@
 import { gql } from "@apollo/client";
 
-export const GET_CASE_STUDIES = gql`
-  query CaseStudies {
-    caseStudies {
+export const CASE_STUDY_FIELDS = gql`
+  fragment CaseStudyFields on CaseStudy {
+    id
+    excerpt
+    title
+    date
+    databaseId
+    modified
+    slug
+    featuredImage {
+      node {
+        altText
+        sourceUrl
+        sizes
+        srcSet
+      }
+    }
+    industries {
       edges {
         node {
-          content
-          featuredImage {
-            node {
-              altText
-              sourceUrl
-            }
-          }
+          databaseId
+          name
           slug
-          title
-          casestudyfield {
-            casestudyfield
-            fieldGroupName
-            link
-            para
-            featuredimage {
-              node {
-                sourceUrl
-              }
-            }
-          }
+          id
         }
       }
+    }
+    isSticky {
+      isSticky
     }
   }
 `;
 
-export const GET_CASE_STUDY_BY_SLUG = gql`
-  query CaseStudyBySlug($slug: ID!) {
-    caseStudy(id: $slug, idType: SLUG) {
-      id
-      content
-      databaseId
-      excerpt
-      title
-      slug
-      casestudyfield {
-        link
-        para
-      }
-      featuredImage {
-        node {
-          altText
-          sourceUrl
-        }
-      }
-    }
-  }
-`;
-
-export const GET_ALL_CASE_STUDY_SLUGS = gql`
-  query CaseStudies {
-    caseStudies {
+export const QUERY_ALL_CASE_STUDIES = gql`
+  ${CASE_STUDY_FIELDS}
+  query AllCaseStudies {
+    caseStudies(first: 10000, where: { hasPassword: false }) {
       edges {
         node {
-          slug
+          ...CaseStudyFields
         }
       }
     }
