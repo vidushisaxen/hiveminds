@@ -131,13 +131,6 @@ export const QUERY_CASESTUDY_SEO_BY_SLUG = gql`
   }
 `;
 
-export const QUERY_CASESTUDY_PER_PAGE = gql`
-  query CaseStudyPerPage {
-    allSettings {
-      readingSettingsPostsPerPage
-    }
-  }
-`;
 export const GET_HOME_PAGE_CASESTUDIES = gql`
   query homePageCaseStudies {
     caseStudies(first: 10000, where: { hasPassword: false }) {

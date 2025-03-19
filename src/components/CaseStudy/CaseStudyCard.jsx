@@ -10,7 +10,7 @@ const CaseStudyCard = ({ image, title, description, link }) => {
     return (
         <div className="w-[32%] fadeup group blog-link mobile:w-[90vw] tablet:w-[48%] tablet:h-full">
             <div className="h-[25.5vw] w-full relative overflow-hidden rounded-[1.5vw] mobile:h-[80vw] mobile:rounded-[4vw]">
-                <Link href={`/${path}`}>
+                <Link href={`/${path}`} className="relative block h-full w-full">
                     <Image src={image.sourceUrl} fill sizes={image.sizes} alt={image.altText || "case study image"} className="group-hover:scale-[1.1] transition-all duration-500 ease-in-out" />
                 </Link>
             </div>

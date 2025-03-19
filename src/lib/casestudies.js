@@ -4,7 +4,6 @@ import { sortObjectsByDate } from "./datetime";
 import {
   QUERY_ALL_CASE_STUDIES,
   QUERY_CASESTUDY_BY_SLUG,
-  QUERY_CASESTUDY_PER_PAGE,
   QUERY_CASESTUDY_SEO_BY_SLUG,
   GET_HOME_PAGE_CASESTUDIES,
 } from "../data/casestudies";
@@ -70,15 +69,19 @@ export async function getCaseStudyBySlug(slug) {
     caseStudy,
   };
 }
+
 /**
  * getAllCaseStudies
  */
 export async function getAllCaseStudies() {
+
   const apolloClient = getApolloClient();
 
   const data = await apolloClient.query({
     query: QUERY_ALL_CASE_STUDIES,
   });
+
+  console.log(data)
 
   const caseStudies = data?.data.caseStudies.edges.map(({ node = {} }) => node);
 
@@ -97,8 +100,7 @@ export async function getHomePageCaseStudies() {
   const caseStudies = data?.data.caseStudies.edges.map(({ node = {} }) => node);
 
   return {
-    caseStudies:
-      Array.isArray(caseStudies) && caseStudies.map(mapCaseStudyData),
+    caseStudies: Array.isArray(caseStudies) && caseStudies.map(mapCaseStudyData),
   };
 }
 
@@ -161,28 +163,14 @@ export async function getRecentCaseStudies() {
  * getCaseStudiesPerPage
  */
 
-export async function getCaseStudiesPerPage() {
-  try {
-    const apolloClient = getApolloClient();
-
-    const { data } = await apolloClient.query({
-      query: QUERY_CASESTUDY_PER_PAGE,
-    });
-
-    return Number(data.allSettings.readingSettingsPostsPerPage);
-  } catch (e) {
-    console.log(`Failed to query CASESTUDY per page data: ${e.message}`);
-    throw e;
-  }
-}
+export const getCaseStudiesPerPage = process.env.CASESTUDY_PER_PAGE || 9;
 
 /**
  * getPageCount
  */
 
 export async function getPagesCount(caseStudies, caseStudiesPerPage) {
-  const _caseStudiesPerPage =
-    caseStudiesPerPage ?? (await getCaseStudiesPerPage());
+  const _caseStudiesPerPage = caseStudiesPerPage ?? (getCaseStudiesPerPage);
   return Math.ceil(caseStudies.length / _caseStudiesPerPage);
 }
 
@@ -190,12 +178,9 @@ export async function getPagesCount(caseStudies, caseStudiesPerPage) {
  * getPaginatedCaseStudies
  */
 
-export async function getPaginatedCaseStudies({
-  currentPage = 1,
-  ...options
-} = {}) {
-  const { caseStudies } = await getAllCaseStudies(options);
-  const caseStudiesPerPage = await getCaseStudiesPerPage();
+export async function getPaginatedCaseStudies({currentPage = 1} = {}) {
+  const { caseStudies } = await getAllCaseStudies();
+  const caseStudiesPerPage = getCaseStudiesPerPage;
   const pagesCount = await getPagesCount(caseStudies, caseStudiesPerPage);
 
   let page = Number(currentPage);
@@ -222,33 +207,3 @@ export async function getPaginatedCaseStudies({
     },
   };
 }
-
-// export async function getPaginatedPosts({ currentPage = 1, ...options } = {}) {
-//   const { posts } = await getAllPosts(options);
-//   const postsPerPage = await getPostsPerPage();
-//   const pagesCount = await getPagesCount(posts, postsPerPage);
-
-//   let page = Number(currentPage);
-
-//   if (typeof page === 'undefined' || isNaN(page)) {
-//     page = 1;
-//   } else if (page > pagesCount) {
-//     return {
-//       posts: [],
-//       pagination: {
-//         currentPage: undefined,
-//         pagesCount,
-//       },
-//     };
-//   }
-
-//   const offset = postsPerPage * (page - 1);
-//   const sortedPosts = sortStickyPosts(posts);
-//   return {
-//     posts: sortedPosts.slice(offset, offset + postsPerPage),
-//     pagination: {
-//       currentPage: page,
-//       pagesCount,
-//     },
-//   };
-// }

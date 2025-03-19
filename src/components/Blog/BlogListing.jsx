@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useQueryState } from "next-usequerystate";
 import BlogFilter from "./BlogFilter";
 import BlogCard from "./BlogCard";
-import Pagination from "./Pagination";
+import Pagination from "../Pagination";
 
 const BlogListing = ({ posts, pagination }) => {
   const [category, setCategory] = useQueryState("category");

@@ -1,60 +1,45 @@
 import React, { useEffect, useState } from "react";
 import { useQueryState } from "next-usequerystate";
-// import BlogFilter from "./BlogFilter";
-// import BlogCard from "./BlogCard";
-// import Pagination from "./Pagination";
+import CaseStudyFilter from "./CaseStudyFilter";
+import Pagination from "../Pagination";
+import CaseStudyCard from "./CaseStudyCard";
 
-const CaseStudyListing = ({ posts, pagination }) => {
-  const [category, setCategory] = useQueryState("category");
-  const [year, setYear] = useQueryState("year");
-
-  const [filteredBlogs, setFilteredBlogs] = useState(posts);
+const CaseStudyListing = ({ caseStudies, pagination, industries }) => {
+  const [industry, setIndustry] = useQueryState("industry");
+  const [filteredCaseStudies, setFilteredCaseStudies] = useState(caseStudies);
 
   // Filtering Logic
   useEffect(() => {
-    let filtered = posts;
+    let filtered = caseStudies;
 
-    if (category) {
-      filtered = filtered.filter((post) => post.blogFields.blogType[0] === category);
-    }
-    if (year) {
-      filtered = filtered.filter((post) => new Date(post.date).getFullYear().toString() === year);
+    if (industry) {
+      filtered = filtered.filter((caseStudy) => caseStudy.industries[0].slug === industry);
     }
 
-    setFilteredBlogs(filtered);
-  }, [category, year, posts]);
+    setFilteredCaseStudies(filtered);
+  }, [industry, caseStudies]);
 
   // Function to clear filters
   const clearFilters = () => {
-    setCategory(null);
-    setYear(null);
+    setIndustry(null);
   };
 
   return (
-    <section className="w-screen h-full pb-[7%] mobile:pb-[10%]">
+    <section className="w-screen h-full py-[7%] mobile:py-[5%] tablet:py-[20%]">
       <div className="container-lg h-full">
-        
 
-        {/* Blog Filter Component */}
-        {/* <BlogFilter category={category} setCategory={setCategory} year={year} setYear={setYear} clearFilters={clearFilters} /> */}
+        <CaseStudyFilter industries={industries} industry={industry} setIndustry={setIndustry} clearFilters={clearFilters} />
 
-        {/* Filtered Blogs */}
-        {/* <div className="flex flex-wrap items-start justify-start gap-[1vw] gap-y-[2vw] tablet:mt-[4vw] mobile:gap-y-[8vw]">
-          {filteredBlogs.length > 0 ? (
-            filteredBlogs.map((post) => (
-              <BlogCard
-                key={post.id}
-                category={post.categories[0].name}
-                date={post.date}
-                imgSrc={post.featuredImage}
-                title={post.title}
-                description={post.excerpt}
-                link={post.slug}
-              />
-            ))
-          ) : (
-            <p className="text-center w-full text-lg font-semibold">No posts found.</p>
-          )}
+        <div className="flex flex-wrap items-start justify-start gap-x-[2%] gap-y-[5vw] mobile:flex-col mobile:gap-y-10 tablet:justify-between tablet:gap-x-0 tablet:gap-y-[5vw] tablet:mt-[5vw] mobile:mt-[10vw]">
+          {filteredCaseStudies.map((item) => (
+            <CaseStudyCard
+              key={item.id}
+              image={item.featuredImage}
+              title={item.title}
+              description={item.excerpt}
+              link={item.slug}
+            />
+          ))}
         </div>
 
         <div>
@@ -66,7 +51,7 @@ const CaseStudyListing = ({ posts, pagination }) => {
               basePath={pagination?.basePath}
             />
           )}
-        </div> */}
+        </div>
       </div>
     </section>
   );
