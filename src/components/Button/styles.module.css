@@ -100,9 +100,10 @@
 }
 /*plainButton*/
 .buttonPlain {
-  padding: 1.4vw 3vw;
+  padding: 0.8vw 1.5vw;
   min-width: 8vw;
-  max-width: 10vw;
+  width: fit-content;
+  max-width: 12vw;
   transition: transform 0.7s cubic-bezier(.4,0,0,1); 
 }
 
@@ -233,7 +234,7 @@
   }
 
   .buttonPlain {
-    padding: 3vw 9vw;
+    padding: 1.5vw 4vw;
     width: fit-content;
     min-width: 10vw;
     max-width: 30vw;
@@ -299,10 +300,11 @@
   }
 
   .buttonPlain {
-    padding: 5vw 7vw;
-    padding-left: 10vw;
-    min-width: 25vw;
-    max-width: 20vw;
+    padding: 3vw 7vw;
+   
+    width: fit-content;
+    min-width: 15vw;
+    max-width: 40vw;
    
   }
 }

@@ -13,7 +13,7 @@ const MobileMenu = ({ openMenu }) => {
         className={`w-screen h-screen overflow-y-auto fixed top-0 bg-white z-[998] transition-all duration-500 ease-out tablet:w-[70vw] ${openMenu ? "left-0 tablet:left-[30%]" : "left-[100%]"}`}
         id="mobile-menu"
       >
-        <div className="w-full h-fit mobile:px-[5vw] flex flex-col mobile:gap-[4vw] mobile:py-[25vw] text-xl tablet:px-[3vw] tablet:py-[15vw] tablet:text-2xl tablet:gap-[3vw]">
+        <div className="w-full h-fit mobile:px-[5vw] flex flex-col mobile:gap-[4vw] mobile:py-[25vw] text-xl tablet:px-[5vw] tablet:py-[15vw] tablet:text-2xl tablet:gap-[3vw]">
           <Link
             href={"/about-us"}
             className="relative link-line "
@@ -138,7 +138,7 @@ const MobileMenu = ({ openMenu }) => {
 
                 {/* Sublist (Expands on Click) */}
                 <div
-                  className={` overflow-hidden transition-all duration-500 ${
+                  className={` overflow-hidden transition-all duration-700 ease-in-out ${
                     openSection === section.title
                       ? "max-h-[500px] opacity-100"
                       : "max-h-0 opacity-0"

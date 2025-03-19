@@ -61,14 +61,14 @@ export const QUERY_CASESTUDY_BY_SLUG = gql`
           }
         }
       }
-            featuredImage {
-      node {
-        altText
-        sourceUrl
-        sizes
-        srcSet
+      featuredImage {
+        node {
+          altText
+          sourceUrl
+          sizes
+          srcSet
+        }
       }
-    }
       industries {
         edges {
           node {
@@ -139,18 +139,37 @@ export const QUERY_CASESTUDY_PER_PAGE = gql`
   }
 `;
 export const GET_HOME_PAGE_CASESTUDIES = gql`
-  query postsforHomePage {
-    caseStudies(first: 3) {
-      nodes {
-        featuredImage {
-          node {
-            sourceUrl
+  query homePageCaseStudies {
+    caseStudies(first: 10000, where: { hasPassword: false }) {
+      edges {
+        node {
+          caseStudyFields {
+            homepageListing {
+              metricsSubtext
+              numberMetrics
+              subtitle
+              listingImage {
+                node {
+                  altText
+                  sizes
+                  sourceUrl
+                }
+              }
+            }
+            ishomepagepost
+          }
+          title
+          slug
+          id
+          industries {
+            edges {
+              node {
+                name
+                slug
+              }
+            }
           }
         }
-        id
-        slug
-        title
-        date
       }
     }
   }

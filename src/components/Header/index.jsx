@@ -325,7 +325,7 @@ const Header = ({ isOpen }) => {
                             className="hover:scale-[1.2] transition-all duration-500 ease-in-out"
                           />
                         </Link>
-                        <Link href={"/solutions"}>
+                        <Link href={"/solutions"} className="w-fit">
                           <div
                             className={`cursor-pointer flex w-fit relative text-[1.1vw] pl-[0.4vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw]  `}
                           >
@@ -367,7 +367,7 @@ const Header = ({ isOpen }) => {
                             className="hover:scale-[1.2] transition-all duration-500 ease-in-out"
                           />
                         </Link>
-                        <Link href={"/our-ips"}>
+                        <Link href={"/our-ips"} className="w-fit">
                           <div
                             className={`cursor-pointer flex w-fit relative text-[1.1vw] pl-[0.4vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw]  `}
                           >
@@ -411,7 +411,7 @@ const Header = ({ isOpen }) => {
                             className="hover:scale-[1.2] transition-all duration-500 ease-in-out"
                           />
                         </Link>
-                        <Link href={"/school-of-digital"}>
+                        <Link href={"/school-of-digital"} className="w-fit">
                           <div
                             className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] pl-[0.4vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw]  `}
                           >

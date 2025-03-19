@@ -4,23 +4,25 @@ import Hero from '@/components/Homepage/Hero'
 import Contact from '@/components/Homepage/Contact'
 import Awards from '@/components/Homepage/Awards'
 import Blogs from '@/components/Homepage/Blogs'
-import CaseStudies from '@/components/Homepage/CaseStudies'
 import Story from '@/components/Homepage/Story'
 import TeamMembers from '@/components/Homepage/TeamMembers'
 import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
 import React, { useEffect, useState } from 'react'
-
 import { Clients2 } from '@/components/Homepage/Clients2'
 import Services from '@/components/Homepage/Solutions'
 import MobileHero from '@/components/Homepage/MobileHero'
 import Metadata from '@/components/Metadata'
+import {  getHomePageCaseStudies } from '@/lib/casestudies'
+import { getAllIndustries } from '@/lib/industries'
+import CaseStudies from '@/components/Homepage/CaseStudiesCopy'
 
 const metadata = {
   title: "HiveMinds | Data-Driven Digital Marketing for Business Growth",
   metaDescription: "HiveMinds delivers strategic, data-driven digital marketing solutions to help startups and brands grow sustainably with advanced technology and expertise.",
   path: ""
 }
-const index = () => {
+const index = ({stickyCaseStudies, industries}) => {
+
   const [mobileWidth, setMobileWidth] = useState(false);
   useEffect(() => {
     if (globalThis.innerWidth > 1024) {
@@ -45,7 +47,7 @@ const index = () => {
         <TeamMembers />
         <div className='relative h-fit w-screen rounded-[20px]  '>
           <span className=' block absolute h-[20%] w-full'></span>
-          <CaseStudies />
+          <CaseStudies caseStudies={stickyCaseStudies} />
           <Awards />
           <span className='absolute h-[20%] bottom-[-10%]  w-full'></span>
           <Blogs />
@@ -57,3 +59,17 @@ const index = () => {
 }
 
 export default index;
+
+export async function getStaticProps() {
+  const { caseStudies } = await getHomePageCaseStudies();
+  const { industries } = await getAllIndustries();
+
+  const stickyCaseStudies = caseStudies.filter((caseStudy) => caseStudy.caseStudyFields.ishomepagepost) || null;
+  return {
+    props: {
+      stickyCaseStudies,
+      industries,
+    },
+    revalidate: 500,
+  };
+}

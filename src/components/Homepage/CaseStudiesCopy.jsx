@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/router";
+
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,74 +14,52 @@ import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 const categories = [
-  "All",
-  "Healthcare",
-  "Automobiles",
-  "Wearables",
-  "NBFC",
-  "BFSI",
-  "CDIT",
-];
-
-const caseStudies = [
   {
-    img: "/assets/images/homepage/big-basket-casestudy.png",
-    title: "2.35x",
-    des: "Growth in installs",
-    category: "",
-    para: "Expanding the user base",
-    link: "/casestudies/bigbasket",
+    btnName: "All",
+    value: "",
   },
   {
-    img: "/assets/images/homepage/dominos-casestudy.png",
-    title: "500K+",
-    des: "New orders within 12 months",
-    category: "",
-    para: "Growing the 30-min connection",
-    link: "/casestudies/dominos",
+    btnName: "E-Commerce",
+    value: "e-commerce",
   },
   {
-    img: "/assets/images/homepage/flydubai-casestudy.png",
-    title: "67%",
-    des: "Increase in brand searches",
-    category: "",
-    para: "New Routes Soar to Success",
-    link: "/casestudies/flydubai",
+    btnName: "Travel",
+    value: "travel-tourism",
   },
   {
-    img: "/assets/images/homepage/flipkart-healthplus-casestudy.png",
-    title: "#1",
-    des: "India’s Medical App for 1.5 Years",
-    category: "Healthcare",
-    para: "Up with the App Installs",
-    link: "/casestudies/flipkart-healthplus",
+    btnName: "Healthcare",
+    value: "Healthcare",
   },
   {
-    img: "/assets/images/homepage/max-life-casestudy.png",
-    title: "45%",
-    des: "Revenue Surge in 3 Months.",
-    category: "BFSI",
-    para: "Powering Growth",
-    link: "/casestudies/max-life",
+    btnName: "BFSI",
+    value: "bfsi-fintech",
+  },
+  {
+    btnName: "Automobiles",
+    value: "Automobiles",
+  },
+  {
+    btnName: "Wearables",
+    value: "Wearables",
+  },
+  {
+    btnName: "NBFC",
+    value: "NBFC",
+  },
+  {
+    btnName: "CDIT",
+    value: "cdit",
   },
 ];
 
-const CaseStudies = () => {
+const CaseStudies= ({ caseStudies }) => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [slugValue, setslugValue] = useState("");
   const swiperRef = useRef(null);
 
   useEffect(() => {
     if (globalThis.innerWidth > 1024) {
       let ctx = gsap.context(() => {
-        // const body = document.body;
-        // const changeBodyColor = (color) => {
-        //   gsap.to(body, {
-        //     backgroundColor: color,
-        //     duration: 1,
-        //     ease: "power2.out",
-        //   });
-        // };
-
         gsap.from(".casestudy-block", {
           scale: 1.11,
           yPercent: -5,
@@ -97,14 +75,12 @@ const CaseStudies = () => {
           trigger: "#caseStudies",
           start: "70% 60%",
           end: "bottom 20%",
-          // onEnter: () => changeBodyColor("#134bd6"),
-          // onLeaveBack: () => changeBodyColor("#fafafa"),
         });
       });
       return () => ctx.revert();
     }
   }, []);
-  
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".swiper-scrollbar", {
@@ -113,10 +89,11 @@ const CaseStudies = () => {
         duration: 1,
         ease: "power3.out",
       });
-      gsap.from(".swiper-wrapper", {
+      gsap.from(swiperRef.current, {
         opacity: 0,
-        xPercent: 100,
+        xPercent: 20,
         duration: 1,
+        ease:"power3.out",
         scrollTrigger: {
           trigger: ".slideInCaseCarousel",
           start: "top 80%",
@@ -126,12 +103,12 @@ const CaseStudies = () => {
     return () => ctx.revert();
   }, [activeCategory]);
 
-  const filteredCaseStudies =
-    activeCategory === "All"
-      ? caseStudies
-      : caseStudies.filter(
-          (caseStudy) => caseStudy.category === activeCategory
-        );
+  const filteredCaseStudies = caseStudies.filter((item) => {
+    if (slugValue === "") return true;
+    return (
+      item.industries[0]?.slug?.toLowerCase() === slugValue.toLowerCase()
+    );
+  });
 
   return (
     <>
@@ -149,46 +126,48 @@ const CaseStudies = () => {
                 various industries.
               </p>
 
-              <div className="flex flex-wrap items-center mt-[2vw] gap-[1vw] w-[90%] mobile:w-full tablet:w-full">
+              <div className="flex flex-wrap items-center mt-[2vw] gap-[1vw] mobile:gap-[2vw] w-[90%] mobile:w-full tablet:w-full">
                 {categories.map((category) => (
                   <button
-                    key={category}
-                    data-text={category}
+                    key={category.value}
+                    data-text={category.btnName}
                     className={`${
                       styles.buttonPlain
                     } cursor-pointer relative overflow-hidden border-[#134BD6] border-[1.5px] rounded-[40px] text-[0.97vw] font-light h-fit flex items-center justify-center text-center px-[1.5vw] py-[0.5vw] transition-all duration-300 mobile:!text-[3.5vw] tablet:text-[2vw] tablet:px-[4vw] tablet:py-[1vw] tablet:w-fit tablet:h-fit ${
-                      activeCategory === category
+                      activeCategory === category.btnName
                         ? " text-white bg-[#134BD6]"
                         : ""
                     } `}
-                    onClick={() => setActiveCategory(category)}
+                    onClick={() => {
+                      setActiveCategory(category.btnName);
+                      setslugValue(category.value);
+                    }}
                   >
-                    <span className="block">{category}</span>
+                    <div className=" w-fit h-fit">{category.btnName}</div>
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* Swiper Component with Always Visible Blue Scrollbar */}
+            {/* Swiper Component */}
             <div className="w-[60%] flex items-center slideInCaseCarousel mobile:w-full tablet:w-full tablet:mt-[7vw]">
+              {filteredCaseStudies.length>0?(<>
               <Swiper
                 ref={swiperRef}
                 modules={[FreeMode, Scrollbar]}
                 freeMode={true}
                 spaceBetween={20}
                 speed={1000}
-                slidesPerView={1.2} // Default for small screens
+                slidesPerView={1.2}
                 breakpoints={{
                   480: {
                     slidesPerView: 2,
                     spaceBetween: 15,
                   },
-                  720:{
+                  720: {
                     slidesPerView: 1.5,
                     spaceBetween: 15,
-
                   },
-                 
                   1024: {
                     slidesPerView: 2,
                     spaceBetween: 30,
@@ -209,47 +188,59 @@ const CaseStudies = () => {
                 }}
                 className="w-full h-full rounded-[1vw] overflow-hidden pr-[5vw]"
               >
-                {filteredCaseStudies.map((study, index) => (
-                  <SwiperSlide key={index}>
-                    <Link href={study.link}>
-                      <div className="relative w-[25vw] h-[30.5vw] group mobile:w-[67vw] mobile:h-[90vw] tablet:w-[55vw] tablet:h-[70vw]">
-                        <Image
-                          src={study.img}
-                          fill
-                          alt="casestudy"
-                          className="object-contain group-hover:brightness-75 transistion-all duration-500 ease-in-out"
-                        />
-
-                        <div className="absolute top-0 right-0 w-[11.7vw] h-[4vw] flex items-center justify-center rounded-br-[20px] mobile:right-[5%] mobile:top-[8%] mobile:w-[25vw] tablet:w-[30vw] tablet:right-[-5%] tablet:top-[5%]">
-                          <div className="flex flex-col justify-center  w-[70%] mobile:w-full">
-                            <p className="font-medium text-[2vw] leading-[1] mobile:text-[5vw] tablet:text-[3vw]">
-                              {study.title}
-                            </p>
-                            <p className="text-[0.9vw] font-medium w-full text-start leading-[1] ml-[0.1vw] mobile:text-[3vw] tablet:text-[2vw]">
-                              {study.des}
+                
+                  {filteredCaseStudies.map((item, index) => (
+                    <SwiperSlide key={index}>
+                      <Link href={item.slug}>
+                        <div className="relative w-[25vw] h-[30.5vw] group mobile:w-[67vw] mobile:h-[90vw] tablet:w-[55vw] tablet:h-[70vw]">
+                          <Image
+                            src={item.caseStudyFields.homepageListing.listingImage.node.sourceUrl}
+                            fill
+                            sizes={item.caseStudyFields.homepageListing.listingImage.node.sizes}
+                            alt={
+                              item.caseStudyFields.homepageListing.listingImage.node.altText ||
+                              "case study image"
+                            }
+                            className="object-contain group-hover:brightness-75 transistion-all duration-500 ease-in-out"
+                          />
+                          <div className="absolute top-0 right-0 w-[11.7vw] h-[4vw] flex items-center justify-center rounded-br-[20px] mobile:right-[5%] mobile:top-[8%] mobile:w-[25vw] tablet:w-[30vw] tablet:right-[-5%] tablet:top-[5%]">
+                            <div className="flex flex-col justify-center  w-[70%] mobile:w-full">
+                              <p className="font-medium text-[2vw] leading-[1] mobile:text-[5vw] tablet:text-[3vw]">
+                                {item.caseStudyFields.homepageListing.numberMetrics}
+                              </p>
+                              <p className="text-[0.9vw] font-medium w-full text-start leading-[1] ml-[0.1vw] mobile:text-[3vw] tablet:text-[2vw]">
+                                {item.caseStudyFields.homepageListing.metricsSubtext}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="absolute bottom-5 w-full flex items-center justify-center mobile:bottom-[15%] tablet:bottom-[10%]">
+                            <p className="text-white text-[1.34vw] text-start leading-[1] group-hover:scale-[1.1] transistion-all duration-500 ease-in-out mobile:text-[4vw] tablet:text-[3vw]">
+                              {item.caseStudyFields.homepageListing.subtitle}
                             </p>
                           </div>
                         </div>
-                        <div className="absolute bottom-5 w-full flex items-center justify-center mobile:bottom-[15%] tablet:bottom-[10%]">
-                          <p className="text-white text-[1.34vw] text-start leading-[1] group-hover:scale-[1.1] transistion-all duration-500 ease-in-out mobile:text-[4vw] tablet:text-[3vw]">
-                            {study.para}
-                          </p>
-                        </div>
-                      </div>
-                    </Link>
-                  </SwiperSlide>
-                ))}
+                      </Link>
+                    </SwiperSlide>
+                  ))}
+                
+              
+                
               </Swiper>
-
-              {/* Custom Scrollbar */}
+              
               <div className="swiper-scrollbar "></div>
+              
+              </>):(<>
+              <div className="w-full h-full justify-center tablet:h-[70vw] mobile:h-[90vw] items-center flex text-xl">
+                No casestudies to show
+
+              </div>
+              </>)}
+
+      
             </div>
           </div>
         </div>
-        <div className="w-screen h-[70%] rounded-tl-[2vw] rounded-tr-[2vw] mobile:rounded-tl-[4vw] mobile:rounded-tr-[4vw] bg-primary absolute bottom-0 left-0 z-[-1] ">
-
-
-        </div>
+        <div className="w-screen h-[70%] rounded-tl-[2vw] rounded-tr-[2vw] mobile:rounded-tl-[4vw] mobile:rounded-tr-[4vw] bg-primary absolute bottom-0 left-0 z-[-1] "></div>
       </section>
     </>
   );

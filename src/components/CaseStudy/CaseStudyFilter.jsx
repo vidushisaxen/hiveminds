@@ -1,6 +1,6 @@
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-const CaseStudyFilter = ({ industries, industry, selectedIndustry, setIndustry, clearFilters }) => {
+const CaseStudyFilter = ({ industries, industry, setIndustry, clearFilters }) => {
     const isFilterApplied = industry;
 
 
