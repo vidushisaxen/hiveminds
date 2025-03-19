@@ -138,3 +138,20 @@ export const QUERY_CASESTUDY_PER_PAGE = gql`
     }
   }
 `;
+export const GET_HOME_PAGE_CASESTUDIES = gql`
+  query postsforHomePage {
+    caseStudies(first: 3) {
+      nodes {
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        id
+        slug
+        title
+        date
+      }
+    }
+  }
+`;
