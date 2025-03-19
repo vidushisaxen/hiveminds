@@ -27,7 +27,7 @@ export const CASE_STUDY_FIELDS = gql`
         }
       }
     }
-    isSticky {
+    caseStudyFields {
       isSticky
     }
   }

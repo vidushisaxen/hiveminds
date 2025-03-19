@@ -121,7 +121,7 @@ export function mapCaseStudyData(caseStudy = {}) {
  */
 
 export function sortStickyCaseStudies(caseStudies) {
-  return [...caseStudies].sort((caseStudy) => (caseStudy.isSticky.isSticky ? -1 : 1));
+  return [...caseStudies].sort((caseStudy) => (caseStudy.caseStudyFields.isSticky ? -1 : 1));
 }
 
 /**

@@ -16,9 +16,9 @@ import MobileHero from '@/components/Homepage/MobileHero'
 import Metadata from '@/components/Metadata'
 
 const metadata = {
-  title:"HiveMinds | Data-Driven Digital Marketing for Business Growth",
-  metaDescription:"HiveMinds delivers strategic, data-driven digital marketing solutions to help startups and brands grow sustainably with advanced technology and expertise.",
-  path:""
+  title: "HiveMinds | Data-Driven Digital Marketing for Business Growth",
+  metaDescription: "HiveMinds delivers strategic, data-driven digital marketing solutions to help startups and brands grow sustainably with advanced technology and expertise.",
+  path: ""
 }
 const index = () => {
   const [mobileWidth, setMobileWidth] = useState(false);
@@ -36,7 +36,7 @@ const index = () => {
   fadeIn();
   return (
     <>
-    <Metadata metadata={metadata}/>
+      <Metadata metadata={metadata} />
       <Layout isOpen={isOpen}>
         {!mobileWidth ? <Hero /> : <MobileHero />}
         <Story isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -50,7 +50,7 @@ const index = () => {
           <span className='absolute h-[20%] bottom-[-10%]  w-full'></span>
           <Blogs />
         </div>
-        <Contact title1={"Looking to Drive "} title2={"Growth?"} para={"We’re passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us."} />
+        <Contact title1={"Looking to Drive "} title2={"Growth?"} para={"We're passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us."} />
       </Layout>
     </>
   )

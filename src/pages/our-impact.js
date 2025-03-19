@@ -40,7 +40,7 @@ export async function getStaticProps() {
   const { caseStudies } = await getAllCaseStudies();
   const { industries } = await getAllIndustries();
 
-  const stickyCaseStudies = caseStudies.filter((caseStudy) => caseStudy.isSticky.isSticky) || null;
+  const stickyCaseStudies = caseStudies.filter((caseStudy) => caseStudy.caseStudyFields.isSticky) || null;
   return {
     props: {
       stickyCaseStudies,
