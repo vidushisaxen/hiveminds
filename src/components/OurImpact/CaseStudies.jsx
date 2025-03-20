@@ -197,7 +197,7 @@ const CaseStudies = () => {
     <section className="w-screen h-full pb-[7%] mobile:pt-[5%] tablet:pb-[20%]">
       <div className="container-lg h-full">
         <div className="flex flex-col items-center justify-start gap-[1vw] pt-[7vw] pb-[3vw] mobile:block mobile:space-y-[4vw] tablet:items-start  tablet:gap-[4vw] tablet:pb-0">
-          <h2 className="heading-2 headinganim">
+          <h2 className="heading-2 headingAnim">
             Our Case <span className="blue-text">Studies</span>
           </h2>
           <p data-para-anim className="content w-[55%] text-center mobile:w-[90%] mobile:text-left tablet:w-[90%] tablet:text-left">

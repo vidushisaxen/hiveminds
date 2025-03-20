@@ -58,7 +58,7 @@ const Awards = () => {
     <section className="w-screen h-full overflow-hidden tablet:py-[7%]" id="awards">
       {/* Heading Section */}
       <div className="flex flex-col items-center justify-center gap-[1vw] pt-[7vw] pb-[5vw] container-lg mobile:items-start mobile:gap-[4vw] tablet:items-start">
-        <h2 className="heading-2 headinganim">
+        <h2 className="heading-2 headingAnim">
           Awards & <span className="blue-text"> Accolades</span>
         </h2>
         <p

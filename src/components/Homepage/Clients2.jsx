@@ -56,7 +56,7 @@ export function Clients2() {
     <section id="clients" className="mobile:py-[5%] tablet:py-[5%]">
       <div className="w-screen h-full flex flex-col items-center justify-center container-lg">
         <div className="flex flex-col items-center justify-center gap-[1vw] pt-[1vw] pb-[5vw] mobile:items-start mobile:gap-[4vw] tablet:items-start tablet:gap-[2.5vw]">
-          <h2 className="heading-2 headinganim mobile:w-[50%]">
+          <h2 className="heading-2 headingAnim mobile:w-[50%]">
             <span className="blue-text">Proud</span> to work with
           </h2>
           <p className="content w-[70%] text-center fadeup mobile:text-start mobile:w-[90%] tablet:text-left tablet:w-[60%]">

@@ -1,13 +1,13 @@
 import Layout from '@/components/Layout';
 import { getPaginatedPosts, getAllPosts, getPagesCount } from '@/lib/blogs';
-import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
 import img from '../../../../public/assets/images/blogpage/blog-listing-hero.png'
 import Hero from '@/components/Hero';
 import BlogListing from '@/components/Blog/BlogListing';
 
 export default function Blog({ posts, pagination }) {
 
-    headingBlur();
+    headingAnim();
     paraAnim();
     fadeUp();
     fadeIn();

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
 import React from 'react'
-import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
 import Hero from '@/components/Hero';
 import Image from 'next/image';
 import img from '../../public/assets/images/industry/industry-hero-img.png';
@@ -13,7 +13,7 @@ const metadata={
   path:"industry"
 }
 const industry = () => {
-  headingBlur();
+  headingAnim();
   paraAnim();
   fadeUp();
   fadeIn();

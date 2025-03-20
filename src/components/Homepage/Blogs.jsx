@@ -84,7 +84,7 @@ const Blogs = () => {
           <div className="w-[92%] h-full rounded-[1.2vw] bg-[#F2F2F2] flex  justify-center px-[2vw] py-[6vw] gap-[2vw]  drop-shadow-2xl shadow-inner overflow-hidden mobile:flex-col mobile:py-[10vw] mobile:drop-shadow-none mobile:shadow-md mobile:px-[3.5vw] mobile:rounded-[4vw] tablet:flex-col tablet:rounded-[3vw] tablet:px-[5vw]">
             <div className="w-[35%] h-full mobile:w-full tablet:w-full ">
               <div className="flex flex-col gap-[2vw] mobile:gap-[4vw] tablet:gap-[3vw]">
-                <h2 className="heading-2 headinganim">
+                <h2 className="heading-2 headingAnim">
                   <span className="blue-text"> Passionate </span> About All
                   Things Digital?
                 </h2>

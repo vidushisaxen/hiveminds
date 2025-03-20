@@ -42,7 +42,7 @@ const Contact = () => {
       <div className="w-screen h-full z-[10] relative container-lg py-[7%] overflow-hidden mobile:py-[12%]">
         <div className="w-full h-full flex gap-[10vw] mobile:flex-col tablet:flex-col ">
           <div className="w-[45%] flex flex-col gap-[2vw] mobile:w-full mobile:flex-col mobile:gap-[5vw] tablet:w-full">
-            <h2 className="heading-2 headinganim">
+            <h2 className="heading-2 headingAnim">
               Apply <span className="blue-text">Now</span>
             </h2>
             <p data-para-anim className="content w-[70%] mobile:w-full">

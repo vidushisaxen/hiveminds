@@ -83,7 +83,7 @@ const ServiceCard = ({ src, title1, title2, para1, link, index }) => {
                 </div>
             </div>
             <div className='w-[47%] mobile:w-full tablet:w-[90%]'>
-                <h2 className='text-[2.8vw] font-medium headinganim mobile:text-[9.2vw] mobile:leading-10 tablet:text-[6vw] tablet:leading-[1.2]'>
+                <h2 className='text-[2.8vw] font-medium headingAnim mobile:text-[9.2vw] mobile:leading-10 tablet:text-[6vw] tablet:leading-[1.2]'>
                     {title1}
                     <span className='text-primary'> {title2} </span>
                 </h2>

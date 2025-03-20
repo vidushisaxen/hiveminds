@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
 import img from "../../../../public/assets/images/services/hero.png";
 import Hero from '@/components/Hero';
 import { getAllCaseStudies, getPagesCount, getPaginatedCaseStudies } from '@/lib/casestudies';
@@ -8,7 +8,7 @@ import CaseStudyListing from '@/components/CaseStudy/CaseStudyListing';
 
 export default function CaseStudyPage({ caseStudies, pagination, industries }) {
 
-    headingBlur();
+    headingAnim();
     paraAnim();
     fadeUp();
     fadeIn();

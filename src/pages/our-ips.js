@@ -4,7 +4,7 @@ import React from "react";
 import {
   fadeIn,
   fadeUp,
-  headingBlur,
+  headingAnim,
   paraAnim,
 } from "@/components/gsapAnimations";
 import Hero from "@/components/Hero";
@@ -18,7 +18,7 @@ const metadata={
   path:"our-ips"
 }
 const ips = () => {
-  headingBlur();
+  headingAnim();
   paraAnim();
   fadeUp();
   fadeIn();
@@ -74,7 +74,7 @@ const ips = () => {
                     />
                   </div>
                   <div className="tablet:px-[1vw]">
-                    <h2 className="text-[2.8vw] font-medium headinganim mobile:text-[6.5vw] tablet:text-[4vw]">
+                    <h2 className="text-[2.8vw] font-medium headingAnim mobile:text-[6.5vw] tablet:text-[4vw]">
                       {item.title}
                     </h2>
                     <p

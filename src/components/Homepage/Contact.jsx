@@ -61,7 +61,7 @@ const Contact = ({ title1, title2, para }) => {
       <div className="w-screen h-full z-[10] relative container-lg py-[7%] mobile:py-10">
         <div className="w-full h-full flex gap-[10vw] mobile:block mobile:space-y-12 tablet:flex-col">
           <div className="w-[45%] flex flex-col gap-[2vw] mobile:w-full mobile:gap-4 tablet:w-full">
-            <h2 className="heading-2 headinganim w-[90%]">
+            <h2 className="heading-2 headingAnim w-[90%]">
               {title1}
               <span className="blue-text"> {title2}</span>
             </h2>

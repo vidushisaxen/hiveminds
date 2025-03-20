@@ -64,7 +64,7 @@ const Clients = () => {
     <section id="clients">
       <div className="w-screen h-full flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] tablet:py-[10%]">
-          <h2 className="heading-2 headinganim">
+          <h2 className="heading-2 headingAnim">
             <span className="blue-text">Proud</span> to work with
           </h2>
           <p className="content w-[70%] text-center fadeup">

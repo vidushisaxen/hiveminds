@@ -104,7 +104,7 @@ const Story = ({ isOpen, setIsOpen }) => {
           </div>
           <div className="w-screen h-full py-[4vw] px-[5vw] mt-[5vw] pt-[22%] bg-[#134BD6] rounded-[2vw] flex items-start justify-between gap-[7vw] mobile:flex-col mobile:rounded-[4vw] mobile:pt-[60vw] mobile:pb-[15vw] tablet:flex-col tablet:pt-[50vw] tablet:pb-[10vw]">
             <div className="w-[40%] flex items-start justify-start flex-col  gap-[2vw] mobile:w-full mobile:gap-[4vw] tablet:w-full">
-              <p className="text-[2.8vw] montreal text-[#FFFFFF] leading-[1.2] headinganim mobile:text-[9vw] tablet:text-[5vw] ">
+              <p className="text-[2.8vw] montreal text-[#FFFFFF] leading-[1.2] mobile:text-[9vw] tablet:text-[5vw] headingAnim">
                 Fuelling Your Growth Ambitions, With Confidence.
               </p>
               <p data-para-anim className="content-white">
@@ -121,7 +121,7 @@ const Story = ({ isOpen, setIsOpen }) => {
               />
             </div>
             <div className="w-[42%] flex items-start justify-start flex-col  gap-[2vw] mobile:w-full mobile:gap-[4vw] tablet:w-full">
-              <p className="text-[2.8vw] montreal text-[#FFFFFF] leading-[1.2] w-[90%] headinganim mobile:text-[9vw] tablet:text-[5vw]">
+              <p className="text-[2.8vw] montreal text-[#FFFFFF] leading-[1.2] w-[90%] headingAnim mobile:text-[9vw] tablet:text-[5vw]">
                 Driven by Talent, Powered by Teamwork
               </p>
               <p data-para-anim className="content-white">

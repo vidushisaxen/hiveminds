@@ -20,7 +20,7 @@ const Offer = () => {
     <section className='h-full w-screen pt-[5vw] mobile:pb-[7vw] tablet:pb-[5vw]'>
     <div className='w-full h-full container-lg'>
         <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] mobile:items-start mobile:gap-[4vw] tablet:items-start tablet:gap-[2.5vw]">
-            <h2 data-heading-anim className="heading-2 headinganim">
+            <h2 data-heading-anim className="heading-2 headingAnim">
             What you&apos;ll
                 <span className="blue-text"> Learn</span>
             </h2>

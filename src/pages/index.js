@@ -6,7 +6,7 @@ import Awards from '@/components/Homepage/Awards'
 import Blogs from '@/components/Homepage/Blogs'
 import Story from '@/components/Homepage/Story'
 import TeamMembers from '@/components/Homepage/TeamMembers'
-import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
 import React, { useEffect, useState } from 'react'
 import { Clients2 } from '@/components/Homepage/Clients2'
 import Services from '@/components/Homepage/Solutions'
@@ -32,8 +32,9 @@ const index = ({stickyCaseStudies, industries}) => {
     }
   }, []);
   const [isOpen, setIsOpen] = useState(false);
-  headingBlur();
+
   paraAnim();
+  headingAnim()
   fadeUp();
   fadeIn();
   return (

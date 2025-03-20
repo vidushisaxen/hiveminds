@@ -41,7 +41,7 @@ const Jobs = () => {
         <section className='relative py-[5vw] w-screen h-full overflow-hidden mobile:pb-[10%]'>
             <div className='w-full h-full container-lg'>
                 <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:items-start tablet:items-start tablet:gap-[3vw] mobile:gap-[4vw]">
-                    <h2 data-heading-anim className="heading-2 headinganim">
+                    <h2 data-heading-anim className="heading-2 headingAnim">
                         Job
                         <span className="blue-text"> Openings</span>
                     </h2>

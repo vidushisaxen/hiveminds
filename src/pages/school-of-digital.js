@@ -1,5 +1,5 @@
 import React from 'react'
-import { fadeIn, fadeUp, headingBlur, lineAnim, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, lineAnim, paraAnim } from '@/components/gsapAnimations'
 import Layout from '@/components/Layout';
 import Offer from '@/components/SchoolOfDigital/Offer';
 import Benefit from '@/components/SchoolOfDigital/Benefit';
@@ -17,7 +17,7 @@ const metadata={
 
 }
 const schoolOfDigital = () => {
-     headingBlur();
+     headingAnim();
       paraAnim();
       fadeUp();
       fadeIn();

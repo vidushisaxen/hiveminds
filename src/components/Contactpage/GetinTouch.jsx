@@ -8,7 +8,7 @@ const GetinTouch = () => {
     <section className="w-screen h-[90vw] bg-white relative overflow-hidden mobile:h-full mobile:pb-[15%] tablet:h-full tablet:pb-[10%]">
       <div className="container-lg flex h-full justify-between items-center mobile:flex-col mobile:items-start mobile:mt-[67vw] tablet:flex-col tablet:items-start tablet:mt-[20vw]">
         <div className="flex-col flex gap-[1.5vw] mobile:gap-[4vw] tablet:gap-[2vw]">
-          <h1 className="heading-2 leading-[1.2] headinganim">
+          <h1 className="heading-2 leading-[1.2] headingAnim">
             Get In
             <span className="text-primary"> Touch</span>
           </h1>

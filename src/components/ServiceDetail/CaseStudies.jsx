@@ -140,7 +140,7 @@ const CaseStudies = () => {
         <div className="w-screen h-[42vw] flex items-center justify-center z-[10] mobile:h-full tablet:h-full">
           <div className="w-[90vw] h-full rounded-[2vw] bg-white flex items-center justify-center casestudy-block pl-[3vw] pt-[3vw] pr-[1.5vw] shadow-2xl drop-shadow-2xl overflow-hidden mobile:shadow-none mobile:flex-col mobile:items-start mobile:py-[12vw] mobile:px-[5vw] mobile:gap-[4vw] mobile:rounded-[4vw] mobile:drop-shadow-md tablet:flex-col tablet:rounded-[3vw] tablet:py-[7vw]">
             <div className="w-[40%] h-full mt-[10vw] flex flex-col gap-[2vw] mobile:mt-0 tablet:mt-0 mobile:w-full mobile:gap-[4vw] tablet:w-full ">
-              <h2 className="heading-2 headinganim">
+              <h2 className="heading-2 headingAnim">
                 Related Case
                 <span className="blue-text">Studies</span>
               </h2>

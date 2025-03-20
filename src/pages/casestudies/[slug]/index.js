@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { fadeIn, fadeUp, headingBlur, lineAnim, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, lineAnim, paraAnim } from '@/components/gsapAnimations'
 import RelatedBlogs from '@/components/BlogDetail/RelatedBlogs';
 import { caseStudyPathBySlug, getCaseStudyBySlug, getRecentCaseStudies } from "@/lib/casestudies";
 import Hero from "@/components/CaseStudyDetail/Hero";
@@ -10,7 +10,7 @@ import { homepage } from "@/lib/util";
 export default function CaseStudyDetail({ caseStudy }) {
     fadeIn();
     fadeUp();
-    headingBlur();
+    headingAnim();
     lineAnim();
     paraAnim();
 

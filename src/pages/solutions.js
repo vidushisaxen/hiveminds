@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
 import React from 'react'
-import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, imgAnim, paraAnim } from '@/components/gsapAnimations'
 import Hero from '@/components/Hero';
 import Image from 'next/image';
 import PrimaryButton from '@/components/Button/PrimaryButton';
@@ -14,10 +14,11 @@ const metadata={
     path:"solutions"
 }
 const solutions = () => {
-    headingBlur();
+    headingAnim();
     paraAnim();
     fadeUp();
     fadeIn();
+    imgAnim()
     return (
         <>
         <Metadata metadata={metadata}/>
@@ -46,11 +47,12 @@ const solutions = () => {
                             <div key={index} className={`w-full h-full flex items-center justify-between py-[3vw] tablet:items-start tablet:py-0 tablet:gap-[4vw] ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} mobile:flex-col tablet:flex-col`}>
                                 <div className='w-[45%] mobile:w-full tablet:w-3/4'>
                                     <div className=' relative'>
+                                    <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-white1 imgAnim origin-bottom"/>
                                         <Image src={item.src} width={1200} height={900} alt="service-card" className='rounded-[1.2vw] fadein mobile:rounded-[4.5vw] tablet:rounded-2xl' />
                                     </div>
                                 </div>
                                 <div className='w-[47%] mobile:w-full mobile:space-y-[3vw] mobile:mt-[5vw] mobile:ml-[2vw] tablet:w-5/6'>
-                                    <h2 className='text-[2.8vw] font-medium headinganim mobile:text-[6.5vw] tablet:text-[5.5vw]'>
+                                    <h2 className='text-[2.8vw] font-medium headingAnim mobile:text-[6.5vw] tablet:text-[5.5vw]'>
                                         {item.title1}
                                         <span className='text-primary'> {item.title2} </span>
                                     </h2>

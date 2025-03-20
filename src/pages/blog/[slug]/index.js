@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { fadeIn, fadeUp, headingBlur, lineAnim, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, imgAnim, lineAnim, paraAnim } from '@/components/gsapAnimations'
 import RelatedBlogs from '@/components/BlogDetail/RelatedBlogs';
 import { getPostBySlug, getRecentPosts, postPathBySlug } from "@/lib/blogs";
 import Content from "@/components/BlogDetail/Content";
@@ -11,9 +11,10 @@ import { homepage } from "@/lib/util";
 export default function BlogDetail({ post }) {
     fadeIn();
     fadeUp();
-    headingBlur();
+    headingAnim();
     lineAnim();
     paraAnim();
+    imgAnim()
     const {
         content,
         title,

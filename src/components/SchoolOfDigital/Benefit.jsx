@@ -6,7 +6,7 @@ const Benefit = () => {
   <section className='h-full w-screen py-[5vw]'>
     <div className='w-full h-full container-lg'>
         <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] mobile:items-start mobile:gap-[4vw] tablet:block tablet:space-y-[3vw]">
-            <h2 data-heading-anim className="heading-2 headinganim">
+            <h2 data-heading-anim className="heading-2 headingAnim">
                Who Can
                 <span className="blue-text"> Benefit</span>
             </h2>

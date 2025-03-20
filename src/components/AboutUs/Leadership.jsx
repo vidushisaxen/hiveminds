@@ -93,7 +93,7 @@ const Leadership = () => {
           </div>
           <div>
             <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] mobile:block mobile:py-8 mobile:px-[5vw] tablet:items-start tablet:gap-[3vw]">
-              <h2 className="heading-2 headinganim">
+              <h2 className="heading-2 headingAnim">
                 Our
                 <span className="blue-text"> Leadership</span>
               </h2>

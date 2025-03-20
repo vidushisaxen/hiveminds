@@ -19,7 +19,7 @@ const FeaturedBlog = ({ post }) => {
     <section className="w-screen h-full py-[5%]" id="featured-blog">
       <div className="container-lg flex flex-col gap-[4vw] items-center mobile:items-start">
         <div className="flex flex-col items-center justify-center gap-[1vw] pb-[3vw] mobile:block mobile:space-y-[4vw]  tablet:items-start tablet:gap-[3vw]">
-          <h2 data-title-anim className="heading-2 headinganim">
+          <h2 data-title-anim className="heading-2 headingAnim">
             Featured <span className="blue-text"> Blog</span>
           </h2>
           <p className="content w-[60%] text-center fadein mobile:text-left mobile:w-full tablet:text-left tablet:w-[80%]">

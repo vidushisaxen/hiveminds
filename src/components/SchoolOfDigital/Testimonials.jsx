@@ -145,7 +145,7 @@ const Testimonials = () => {
     <section className='py-[5vw] h-full w-screen relative'>
       <div className='w-full h-full '>
         <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] container-lg mobile:items-start mobile:gap-[4vw] tablet:items-start tablet:gap-[3vw]">
-          <h2 data-heading-anim className="heading-2 headinganim">
+          <h2 data-heading-anim className="heading-2 headingAnim">
             What Our
             <span className="blue-text"> Customer&apos;s Say</span>
           </h2>

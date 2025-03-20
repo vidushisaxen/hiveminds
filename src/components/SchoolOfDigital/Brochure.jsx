@@ -43,7 +43,7 @@ const Brochure = () => {
             <div className="w-screen h-full z-[10] relative container-lg py-[7%] mobile:py-[12%]">
                 <div className="w-full h-full flex gap-[10vw] mobile:flex-col tablet:flex-col">
                     <div className="w-[45%] flex flex-col gap-[2vw] mobile:w-full mobile:gap-[4vw] tablet:w-full">
-                        <h2 className="heading-2 headinganim !text-white">
+                        <h2 className="heading-2 headingAnim !text-white">
                             Download Our Brochure!
                         </h2>
                         <p data-para-anim className="content w-[70%] !text-white mobile:w-full">

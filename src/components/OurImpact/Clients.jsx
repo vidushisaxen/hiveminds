@@ -93,7 +93,7 @@ export function Clients() {
     <section id="clients" className="tablet:py-[7%]">
       <div className="w-screen h-full flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center gap-[1vw] py-[5vw] mobile:items-start mobile:pl-[3.8vw] mobile:gap-[4vw] tablet:items-start tablet:px-[6vw]">
-          <h2 className="heading-2 headinganim">
+          <h2 className="heading-2 headingAnim">
             Our
             <span className="blue-text"> Clients</span>
           </h2>
@@ -166,7 +166,7 @@ export function Clients() {
           </Marquee>
 
           <div className="flex flex-col items-center justify-center gap-[1vw] pt-[7vw] pb-[5vw] mobile:items-start mobile:ml-[3.8vw] mobile:gap-[4vw] mobile:pt-[10vw] tablet:items-start tablet:justify-start tablet:px-[6vw] tablet:py-[10%]">
-            <h2 className="heading-2 headinganim">
+            <h2 className="heading-2 headingAnim">
               Our Platform &<span className="blue-text"> Media Partners</span>
             </h2>
             <p data-para-anim className="content w-[50%] text-center mobile:text-start mobile:w-[90%] tablet:text-left tablet:w-[90%]">

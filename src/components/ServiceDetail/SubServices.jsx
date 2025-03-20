@@ -8,7 +8,7 @@ const SubServices = ({ heading, para, subservices }) => {
   return (
     <section className='w-screen h-full py-[5vw] px-[3vw] bg-primary mobile:py-10 mobile:px-[5vw]  tablet:px-[6vw]' id='subservices'>
       <div className='flex flex-col items-center justify-center text-center mobile:text-left mobile:block tablet:block tablet:text-left '>
-        <h2 className='heading-2 !text-white headinganim tablet:w-4/5'>
+        <h2 className='heading-2 !text-white headingAnim tablet:w-4/5'>
           {heading}
         </h2>
         <p data-para-anim className='content !text-white w-[45%] py-[1vw] mobile:w-full mobile:py-6 tablet:w-4/5 tablet:text-left tablet:py-[4vw]'>{para}</p>

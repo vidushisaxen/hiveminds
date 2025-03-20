@@ -30,7 +30,7 @@ const Locations = () => {
       id="locations"
     >
       <div className="container-lg flex flex-col gap-[4vw] items-center justify-center tablet:items-start">
-        <h2 className="heading-2 headinganim !text-white">
+        <h2 className="heading-2 headingAnim !text-white">
           Our Office Locations
         </h2>
         <div className="flex w-full justify-between mobile:flex-col mobile:gap-[4vw] mobile:mt-[7vw] tablet:flex-wrap tablet:justify-center tablet:gap-[3vw] tablet:mt-[4vw]">

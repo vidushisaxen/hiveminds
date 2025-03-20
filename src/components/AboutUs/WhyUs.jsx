@@ -60,7 +60,7 @@ const WhyUs = () => {
     <section className="w-screen h-full pb-[5%] mobile:pb-10" id="why-us">
       <div className="cotainer-lg flex flex-col px-[5vw]">
         <div className="flex flex-col items-center justify-center gap-[1vw] pb-[5vw] mobile:items-start mobile:gap-5 mobile:pb-8 tablet:items-start tablet:gap-[3vw]">
-          <h2 className="heading-2 headinganim mobile:w-3/5">
+          <h2 className="heading-2 headingAnim mobile:w-3/5">
             Why
             <span className="blue-text"> Hiveminds?</span>
           </h2>

@@ -4,11 +4,11 @@ import Hero from "@/components/Hero"
 import Layout from "@/components/Layout"
 import { getPaginatedPosts, sortStickyPosts } from "@/lib/blogs"
 import img from '../../../public/assets/images/blogpage/blog-listing-hero.png'
-import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
 
 export default function Blogs({ posts, featuredPost, pagination }) {
 
-    headingBlur();
+    headingAnim();
     paraAnim();
     fadeUp();
     fadeIn();

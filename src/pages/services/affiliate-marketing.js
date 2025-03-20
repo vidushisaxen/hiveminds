@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
-import { fadeIn, fadeUp, headingBlur, paraAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
 import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
 import Hero from '@/components/ServiceDetail/Hero'
@@ -18,7 +18,7 @@ const metadata={
 }
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
-  headingBlur();
+  headingAnim();
   paraAnim();
   fadeUp();
   fadeIn();

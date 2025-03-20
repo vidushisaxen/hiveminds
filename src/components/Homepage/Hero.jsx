@@ -78,29 +78,27 @@ const Hero = () => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
       tl.from(headRef.current, {
-        opacity: 0,
-        yPercent: 20,
-        filter: "blur(8px)",
-        duration: 1.5,
+        maskPosition: "100% 100%",
+        duration: 3.5,
       })
         .to(headRef.current, {
-          opacity: 0,
-          delay: 2.9,
-          filter: "blur(8px)",
-          duration: 1.5,
+          opacity:0,
+          delay:1,
+          // maskPosition:"-50% 100%",
+          duration: 0.5,
         })
         .from(
           paraRef.current,
           { yPercent: 100, opacity: 0, duration: 1 },
-          "-=5.5"
+          "-=5"
         )
-        .to(paraRef.current, { opacity: 0, duration: 1 }, "-=1.4")
+        .to(paraRef.current, { opacity: 0, duration: 1 }, "-=0.9")
         .from(
           buttonRef.current,
           { opacity: 0, yPercent: 100, duration: 1 },
-          "-=5.5"
+          "-=5"
         )
-        .to(buttonRef.current, { opacity: 0, duration: 1, delay: -1.2 });
+        .to(buttonRef.current, { opacity: 0, duration: 1, delay: -1 });
     });
 
     return () => ctx.revert();
@@ -159,7 +157,7 @@ const Hero = () => {
       {/* Left Section */}
       <div className="w-[45%] h-screen flex items-center justify-between container-lg pt-[5vw] pl-[5vw] pr-[2vw]">
         <div className="w-full flex flex-col gap-[2vw] flex-wrap">
-          <h1 ref={headRef} className="heading-1 leading-[1.2] heading">
+          <h1 ref={headRef} className="heading-1 leading-[1.1] heading hero-heading">
             {slidesData[activeIndex].title}{" "}
             <span className="text-primary">
               {slidesData[activeIndex].subtitle}

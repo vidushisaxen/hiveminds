@@ -5,7 +5,7 @@ const Overview = ({ title1, title2, para }) => {
         <section className='w-screen h-full bg-white'>
             <div className='w-full h-full px-[3vw] py-[5vw] flex items-center justify-between mobile:flex-col mobile:px-[5vw] mobile:py-10 mobile:gap-4 tablet:flex-col tablet:py-[8vw] tablet:items-start tablet:px-[6vw]'>
                 <div className='w-[45%] mobile:w-full tablet:w-[90%]'>
-                    <h2 className='font-bold heading-2 headinganim'>{title1}
+                    <h2 className='font-bold heading-2 headingAnim'>{title1}
                         <span className='text-primary'> {title2} </span>
                     </h2>
                 </div>

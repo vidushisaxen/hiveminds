@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
 import React from 'react'
-import { fadeIn, fadeUp, headingBlur, paraAnim, lineAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim, lineAnim } from '@/components/gsapAnimations'
 
 import Hero from '@/components/Hero'
 import Leadership from '@/components/AboutUs/Leadership'
@@ -17,7 +17,7 @@ const metadata={
   path:"about-us"
 }
 const contact = () => {
-  headingBlur();
+  headingAnim();
   paraAnim();
   fadeUp();
   fadeIn();

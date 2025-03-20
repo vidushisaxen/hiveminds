@@ -7,32 +7,90 @@ import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 
-export function headingBlur() {
-    useEffect(()=>{
-        const ctx = gsap.context(()=>{
-            const headingAnim = document.querySelectorAll(".headinganim");
-            headingAnim.forEach((headingAnim)=>{
-                SplitInLineWord(headingAnim);
-                const headingWord = headingAnim.querySelectorAll(".word");
-                gsap.from(headingWord,{
-                    scrollTrigger: {
-                        trigger: headingWord,
-                        start: 'top 90%', 
+// export function headingBlur() {
+//     useEffect(()=>{
+//         const ctx = gsap.context(()=>{
+//             const headingAnim = document.querySelectorAll(".headinganim");
+//             headingAnim.forEach((headingAnim)=>{
+//                 SplitInLineWord(headingAnim);
+//                 const headingWord = headingAnim.querySelectorAll(".word");
+//                 gsap.from(headingWord,{
+//                     scrollTrigger: {
+//                         trigger: headingWord,
+//                         start: 'top 90%', 
                         
                 
-                      },
-                      opacity: 0,
-                      yPercent:20,
-                      filter: 'blur(8px)',
-                      stagger:0.08,
-                      duration:1
-                });
-            })
-        });
+//                       },
+//                       opacity: 0,
+//                       yPercent:20,
+//                       filter: 'blur(8px)',
+//                       stagger:0.08,
+//                       duration:1
+//                 });
+//             })
+//         });
         
-        return () => ctx.revert();
-    },[]);
+//         return () => ctx.revert();
+//     },[]);
         
+// }
+export function headingAnim() {
+  useEffect(()=>{
+      const ctx = gsap.context(()=>{
+          const headingAnim = document.querySelectorAll(".headingAnim");
+          headingAnim.forEach((headingAnim)=>{
+              SplitInLineWord(headingAnim);
+              const headingWord = headingAnim.querySelectorAll(".word");
+              gsap.fromTo(headingWord,{
+                 
+                    maskPosition: "100% 100%",
+                  
+              },{
+                  maskPosition:"0% 100%",
+                  stagger:0.05,
+                  duration:2.5,
+                  ease:"power3.out",
+                  scrollTrigger: {
+                    trigger: headingWord,
+                    start: 'top 85%', 
+                    
+                    
+            
+                  },
+
+              });
+          })
+      });
+      
+      return () => ctx.revert();
+  },[]);
+      
+}
+
+export function imgAnim(){
+
+  useEffect(()=>{
+    const ctx = gsap.context(()=>{
+      const imgAnim = document.querySelectorAll(".imgAnim")
+      imgAnim.forEach((img)=>{
+        gsap.to(img,{
+          scaleY:0,
+          duration:1.5,
+          ease:"power4.inOut",
+          scrollTrigger:{
+            trigger:img,
+            start:"top 90%",
+          
+          }
+       
+         })
+
+      })
+
+
+    })
+    return()=>ctx.revert()
+  })
 }
 
 export function paraAnim() {
