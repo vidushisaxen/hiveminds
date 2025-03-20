@@ -24,37 +24,7 @@ const Contact = ({ title1, title2, para }) => {
     }
   });
 
-  const blueHexagonRef = useRef(null);
-  const yellowHexagonRef = useRef(null);
-
-  const handleMouseMove = (e) => {
-    const { clientX: mouseX, clientY: mouseY } = e;
-
-    if (blueHexagonRef.current && yellowHexagonRef.current) {
-      const offsetX = mouseX * 0.05;
-      const offsetY = mouseY * 0.05;
-
-      gsap.to(blueHexagonRef.current, {
-        x: offsetX,
-        y: offsetY,
-        ease: "power2.out",
-      });
-
-      gsap.to(yellowHexagonRef.current, {
-        x: offsetX * 1.2,
-        y: offsetY * 1.2,
-        ease: "power2.out",
-      });
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+ 
 
   return (
     <section id="contact">

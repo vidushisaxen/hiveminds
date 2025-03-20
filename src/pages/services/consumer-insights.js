@@ -23,24 +23,7 @@ const index = () => {
   paraAnim();
   fadeUp();
   fadeIn();
-  
-  useEffect(() => {
-    gsap.to(".blue-hexagon-animation", {
-      y: "15px", // Move up & down
-      duration: 2,
-      repeat: -1, // Infinite loop
-      yoyo: true, // Smooth back-and-forth motion
-      ease: "sine.inOut", // Smooth ease
-    });
 
-    gsap.to(".yellow-hexagon-animation", {
-      y: "-15px", // Move opposite direction
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-  }, []);
   return (
     <>
     <Metadata metadata={metadata}/>
