@@ -10,6 +10,7 @@ import "swiper/css/free-mode";
 import "swiper/css/scrollbar";
 import styles from "../Button/styles.module.css";
 import Link from "next/link";
+import { caseStudyPathBySlug } from "@/lib/casestudies";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -191,7 +192,7 @@ const CaseStudies= ({ caseStudies }) => {
                 
                   {filteredCaseStudies.map((item, index) => (
                     <SwiperSlide key={index}>
-                      <Link href={item.slug}>
+                      <Link href={`/${caseStudyPathBySlug(item.slug)}`}>
                         <div className="relative w-[25vw] h-[30.5vw] group mobile:w-[67vw] mobile:h-[90vw] tablet:w-[55vw] tablet:h-[70vw]">
                           <Image
                             src={item.caseStudyFields.homepageListing.listingImage.node.sourceUrl}

@@ -94,7 +94,6 @@ export async function getStaticPaths() {
     const { caseStudies } = await getRecentCaseStudies({
         count: process.env.POSTS_PRERENDER_COUNT,
     });
-    console.log(caseStudies)
 
     const paths = caseStudies
         .filter(({ slug }) => typeof slug === 'string')

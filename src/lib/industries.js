@@ -7,7 +7,7 @@ import { QUERY_ALL_INDUSTRIES, QUERY_INDUSTRY_BY_SLUG, QUERY_INDUSTRY_SEO_BY_SLU
  */
 
 export function industryPathBySlug(slug) {
-  return `casestudies/industry/${slug}`;
+  return `casestudies/${slug}`;
 }
 
 /**

@@ -59,7 +59,6 @@ export default function ContactForm() {
 
   const onSubmit = async (data) => {
     setIsLoading(true);
-    console.log("Form Data Submitted:", data);
 
     try {
       const res = await fetch("/api/contactform", {

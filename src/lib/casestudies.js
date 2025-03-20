@@ -81,8 +81,6 @@ export async function getAllCaseStudies() {
     query: QUERY_ALL_CASE_STUDIES,
   });
 
-  console.log(data)
-
   const caseStudies = data?.data.caseStudies.edges.map(({ node = {} }) => node);
 
   return {
@@ -180,7 +178,7 @@ export async function getPagesCount(caseStudies, caseStudiesPerPage) {
 
 export async function getPaginatedCaseStudies({currentPage = 1} = {}) {
   const { caseStudies } = await getAllCaseStudies();
-  const caseStudiesPerPage = getCaseStudiesPerPage;
+  const caseStudiesPerPage = 9;
   const pagesCount = await getPagesCount(caseStudies, caseStudiesPerPage);
 
   let page = Number(currentPage);

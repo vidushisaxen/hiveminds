@@ -12,16 +12,16 @@ import { Clients2 } from '@/components/Homepage/Clients2'
 import Services from '@/components/Homepage/Solutions'
 import MobileHero from '@/components/Homepage/MobileHero'
 import Metadata from '@/components/Metadata'
-import {  getHomePageCaseStudies } from '@/lib/casestudies'
+import { getHomePageCaseStudies } from '@/lib/casestudies'
 import { getAllIndustries } from '@/lib/industries'
-import CaseStudies from '@/components/Homepage/CaseStudiesCopy'
+import CaseStudies from '@/components/Homepage/CaseStudies'
 
 const metadata = {
   title: "HiveMinds | Data-Driven Digital Marketing for Business Growth",
   metaDescription: "HiveMinds delivers strategic, data-driven digital marketing solutions to help startups and brands grow sustainably with advanced technology and expertise.",
   path: ""
 }
-const index = ({stickyCaseStudies, industries}) => {
+const index = ({ stickyCaseStudies, industries }) => {
 
   const [mobileWidth, setMobileWidth] = useState(false);
   useEffect(() => {
