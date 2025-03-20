@@ -67,7 +67,7 @@ export default function App({ Component, pageProps }) {
         dangerouslySetAllPagesToNoIndex={true}
         dangerouslySetAllPagesToNoFollow={true}
       />
-      <Loader/>
+      {/* <Loader/> */}
       <ReactLenis root options={{ lerp: 0.07 }}>
         <div style={{ pointerEvents: mouseEnabled ? "auto" : "none" }}>
         <AnimatePresence mode="wait">
