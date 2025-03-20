@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CaseStudyCard from "../CaseStudy/CaseStudyCard";
 import { useQueryState } from "next-usequerystate";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@radix-ui/react-select";
 
 const Listing = ({ industries, caseStudies }) => {
 

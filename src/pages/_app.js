@@ -9,26 +9,28 @@ import { useRouter } from "next/router";
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import nextSeoConfig from "../../next-seo.config";
-
+import { AnimatePresence ,motion} from "framer-motion";
+import Loader from "@/components/Loader";
+import Loader2 from "@/components/Loader2";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [mouseEnabled, setMouseEnabled] = useState(false);
   const lenis = useLenis();
 
+  const pageVariants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 }
+  };
+
   useEffect(() => {
     if(globalThis.innerWidth>1024){
-      
       const enableMouse = () => setMouseEnabled(true);
-      // console.log("mobile width")
-      // Disable mouse interactions initially
       document.body.style.pointerEvents = mouseEnabled?"auto":"none";
-  
-      // Enable mouse interactions when user moves cursor
-      
       window.addEventListener("mousemove", enableMouse, { once: true });
       return () => {
-        document.body.style.pointerEvents = "auto"; // Restore mouse interactions
+        document.body.style.pointerEvents = "auto"; 
         window.removeEventListener("mousemove", enableMouse);
       };
     }
@@ -53,11 +55,7 @@ export default function App({ Component, pageProps }) {
     const handleRouteChange = () => {
       document.body.style.backgroundColor = "#fafafa";
     };
-  
-    // Listen to route change events
     router.events.on("routeChangeStart", handleRouteChange);
-  
-    // Cleanup
     return () => {
       router.events.off("routeChangeStart", handleRouteChange);
     };
@@ -69,9 +67,21 @@ export default function App({ Component, pageProps }) {
         dangerouslySetAllPagesToNoIndex={true}
         dangerouslySetAllPagesToNoFollow={true}
       />
+      <Loader/>
       <ReactLenis root options={{ lerp: 0.07 }}>
         <div style={{ pointerEvents: mouseEnabled ? "auto" : "none" }}>
-          <Component {...pageProps} />
+        <AnimatePresence mode="wait">
+            <motion.div
+              key={router.pathname}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={pageVariants}
+              transition={{ duration: 0.5 }}
+            >
+              <Component {...pageProps} />
+            </motion.div>
+          </AnimatePresence>
           <SpeedInsights />
         </div>
       </ReactLenis>
