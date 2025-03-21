@@ -12,6 +12,7 @@ export default function CaseStudyPage({ caseStudies, pagination, industries }) {
     paraAnim();
     fadeUp();
     fadeIn();
+    // console.log(industries)
 
     return (
         <>

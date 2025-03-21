@@ -61,7 +61,7 @@ const MoreCs = () => {
           <div className="w-fit">
             <PrimaryButton
               text={"All Case Studies"}
-              href={"/our-impact"}
+              href={"/casestudies"}
               className="fadein"
             />
           </div>

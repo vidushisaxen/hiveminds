@@ -6,6 +6,7 @@ import Hero from "@/components/CaseStudyDetail/Hero";
 import Content from "@/components/CaseStudyDetail/Content";
 import { NextSeo } from "next-seo";
 import { homepage } from "@/lib/util";
+import MoreCs from "@/components/CaseStudyDetail/MoreCs";
 
 export default function CaseStudyDetail({ caseStudy }) {
     fadeIn();
@@ -63,7 +64,8 @@ export default function CaseStudyDetail({ caseStudy }) {
                 
                 />
                 <Content date={date} slug={slug} content={content} categories={categories} industry={industries[0].name} services={services}/>
-                <RelatedBlogs />
+                {/* <RelatedBlogs /> */}
+                <MoreCs/>
             </Layout>
         </>
     )

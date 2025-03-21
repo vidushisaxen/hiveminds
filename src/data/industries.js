@@ -22,6 +22,21 @@ export const QUERY_INDUSTRY_BY_SLUG = gql`
       id
       name
       slug
+      caseStudies(first: 1000) {
+        edges {
+          node {
+            title
+            slug
+            featuredImage {
+              node {
+                altText
+                sourceUrl
+              }
+            }
+            excerpt
+          }
+        }
+      }
     }
   }
 `;

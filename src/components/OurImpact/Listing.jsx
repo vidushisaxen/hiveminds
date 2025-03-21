@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import CaseStudyCard from "../CaseStudy/CaseStudyCard";
 import { useQueryState } from "next-usequerystate";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@radix-ui/react-select";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 const Listing = ({ industries, caseStudies }) => {
 
     const [industry, setIndustry] = useQueryState("industry");
     const [filteredCaseStudies, setFilteredCaseStudies] = useState(caseStudies);
-
+  
     // Filtering Logic
     useEffect(() => {
         let filtered = caseStudies;
@@ -62,6 +62,7 @@ export default Listing;
 
 const CaseStudyFilter = ({ industries, industry, setIndustry, clearFilters }) => {
     const isFilterApplied = industry;
+    // console.log(industries)
 
     return (
         <div className="flex gap-[1vw] pb-[3vw] tablet:items-end mobile:items-end">
@@ -73,11 +74,14 @@ const CaseStudyFilter = ({ industries, industry, setIndustry, clearFilters }) =>
                     </SelectTrigger>
                     <SelectContent>
                         <SelectGroup>
-                            {industries.map((item) => (
+                            {industries.map((item,index) => (
+                                <>
                                 <SelectItem key={item.slug} value={item.slug}>
                                     {item.name}
                                 </SelectItem>
+                                </>
                             ))}
+                            
                         </SelectGroup>
                     </SelectContent>
                 </Select>
