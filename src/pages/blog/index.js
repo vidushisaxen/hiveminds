@@ -8,7 +8,6 @@ import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimatio
 import Metadata from "@/components/Metadata"
 import { WebpageJsonLd } from "@/lib/json-ld"
 
-
 const metadata={
     title:" HiveMinds | Blogs",
     metaDescription:"Blogs",

@@ -47,7 +47,7 @@ export function OrganizationJsonLd() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': `${homepage}/#organization`,
+    '@id': `${homepage}#organization`,
     name: "Hiveminds",
     description: "HiveMinds is a digital marketing agency that combines strategic expertise, advanced technology, and data-driven insights to deliver customized solutions. Our services include performance marketing, SEO, creative content, and more, aimed at driving sustainable growth for businesses across various industries. ",
     url: homepage,
@@ -60,7 +60,7 @@ export function OrganizationJsonLd() {
       addressRegion: 'Bengaluru, Karnataka 560025',
       addressCountry: 'India',
     },
-    logo: `${homepage}/favicon.ico`,
+    logo: `${homepage}favicon.ico`,
     sameAs: [
       "https://www.facebook.com/hiveminds/",
       "https://www.linkedin.com/in/hiveminds-school-of-digital-264139246/",
@@ -81,14 +81,14 @@ export function WebsiteJsonLd() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': `${homepage}/#website`,
+    '@id': `${homepage}#website`,
     name: 'Hiveminds',
     url: homepage,
     copyrightYear: new Date().getFullYear(),
     'inLanguage': "en-US",
     "publisher": [
       {
-        "@id": `${homepage}/#organization`
+        "@id": `${homepage}#organization`
       }
     ],
   };
@@ -105,8 +105,8 @@ export function ImageObjectJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ImageObject",
-    '@id': `${homepage}/assets/images/seo/homepage.png`,
-    url: `${homepage}/assets/images/seo/homepage.png`,
+    '@id': `${homepage}assets/images/seo/homepage.png`,
+    url: `${homepage}assets/images/seo/homepage.png`,
     width: "1920",
     height: "1016",
     inLanguage: "en-US"
@@ -121,14 +121,13 @@ export function ImageObjectJsonLd() {
 }
 
 export function WebpageJsonLd({ metadata = {} }) {
-  // const { homepage = '', faviconPath = '/favicon.ico' } = config;
-  const { title, slug, metaDescription, date_published, date_modified } = metadata;
+  const { title, path, metaDescription, date_published, date_modified } = metadata;
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": `${homepage}/${slug}#webpage`,
-    url: `${homepage}/${slug}`,
+    "@id": `${homepage}${path}#webpage`,
+    url: `${homepage}${path}`,
     name: `${title}`,
     description: `${metaDescription}`,
     datePublished: `${date_published}`,
@@ -142,10 +141,10 @@ export function WebpageJsonLd({ metadata = {} }) {
       }
     },
     "about": {
-      "@id": `${homepage}/${slug}#organization`
+      "@id": `${homepage}${path}#organization`
     },
     "isPartOf": {
-      "@id": `${homepage}/${slug}#website`
+      "@id": `${homepage}${path}#website`
     },
     "inLanguage": "en_US",
   };
@@ -163,9 +162,9 @@ export function LocalBusiness() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "HiveMinds Innovative Market Solutions Pvt Ltd",
-    "image": "https://www.hiveminds.in/assets/images/seo/homepage.png",
+    "image": `${homepage}/assets/images/seo/homepage.png`,
     "@id": "",
-    "url": "https://www.hiveminds.in",
+    "url": `${homepage}`,
     "telephone": "080 4680 1708",
     "address": {
       "@type": "PostalAddress",

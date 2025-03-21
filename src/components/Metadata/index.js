@@ -1,8 +1,11 @@
 import { NextSeo } from 'next-seo'
 import React from 'react'
+import { homepage } from '@/lib/util'
 
 const Metadata = ({metadata}) => {
-    const homepage = "https://www.hiveminds.in"
+
+    console.log(homepage);
+
   return (
    <NextSeo
                    title={metadata.title}
@@ -14,7 +17,7 @@ const Metadata = ({metadata}) => {
                        "description": metadata.metaDescription,
                        images: [
                         {
-                            url: `${homepage}/assets/images/seo/${metadata.img}`,
+                            url: `${homepage}assets/images/seo/${metadata.img}`,
                             width: 1290,
                             height: 594,
                             alt: "Page Og Image",
