@@ -81,8 +81,8 @@ export default function App({ Component, pageProps }) {
       <WebsiteJsonLd />
       <ImageObjectJsonLd />
       <DefaultSeo {...nextSeoConfig} 
-        dangerouslySetAllPagesToNoIndex={true}
-        dangerouslySetAllPagesToNoFollow={true}
+        // dangerouslySetAllPagesToNoIndex={true}
+        // dangerouslySetAllPagesToNoFollow={true}
       />
       {/* <Loader/> */}
       <ReactLenis root options={{ lerp: 0.07, autoRaf: false }} ref={lenisRef}>

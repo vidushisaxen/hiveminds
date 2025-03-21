@@ -162,7 +162,7 @@ export function LocalBusiness() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "HiveMinds Innovative Market Solutions Pvt Ltd",
-    "image": `${homepage}/assets/images/seo/homepage.png`,
+    "image": `https://hiveminds-staging.vercel.app/seo/logo.png`,
     "@id": "",
     "url": `${homepage}`,
     "telephone": "080 4680 1708",
