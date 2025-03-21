@@ -3,6 +3,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
@@ -104,21 +105,19 @@ const ServiceCard = ({ service, isActive, onMouseEnter}) => {
                 tl.to(cardRef.current, {
                     width: "45%",
                     duration: 0.5,
-                    ease: "power2.inOut"
+                    ease: "power1.out"
                 })
-                 
                     .to(headinginnerRef.current,{
                         opacity:1,
                         duration: 0.5,
                         yPercent:-10
                     })
-                    .to(contentRef.current, {
-                        
+                    .to(contentRef.current, {          
                         opacity: 1,
-                        delay: 0.28,
+                        
                         yPercent:0,
                         duration: 0.5,
-                    }, "-=0.8")
+                    }, "-=0.53")
                     .to(linkRef.current, {
                         opacity: 1,
                         scale: 1,
@@ -153,7 +152,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter}) => {
                     .to(contentRef.current, {
                         opacity: 0,
                         y: 0,
-                        yPercent:10,
+                        yPercent:5,
                      
                         duration: 0.4,
                     }, "-=2.5")
@@ -302,12 +301,12 @@ const ServiceCard = ({ service, isActive, onMouseEnter}) => {
             <div className="absolute inset-0 bg-black/40 flex flex-col items-start justify-end gap-[1.5vw] p-[2vw] pb-[1vw] text-white z-10 mobile:px-[4vw] mobile:pb-[10vw] tablet:pb-[5vw] tablet:px-[3vw]">
                 <h3
                     ref={headingRef}
-                    className={`text-white text-[1.5vw] absolute w-[28vw] text-left leading-[1.2] rotate-[-90deg] ${isActive?"opacity-0":"opacity-100"} transition-all duration-300 ease-in-out mobile:text-[5vw] tablet:text-[3vw] tablet:rotate-0 tablet:!top-[35%] tablet:!left-[5%] tablet:w-full mobile:rotate-0 mobile:!top-[38%] mobile:w-full mobile:!left-[5%] `}
+                    className={`text-white text-[1.5vw] absolute w-[28vw] text-left leading-[1.2] rotate-[-90deg] ${isActive?"opacity-0 left-[30%]":"opacity-100 left-[45%]"} transition-all duration-300 ease-in-out mobile:text-[5vw] tablet:text-[3vw] tablet:rotate-0 tablet:!top-[35%] tablet:!left-[5%] tablet:w-full mobile:rotate-0 mobile:!top-[38%] mobile:w-full mobile:!left-[5%] `}
                     style={{
                         transformOrigin: "0% 50%",
                         rotation: -90,
                         top: "90%",
-                        left: "45%"
+                        
                     }}
                 >
                     {service.title}
@@ -322,7 +321,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter}) => {
 
                 <p
                     ref={contentRef}
-                    className="content !text-white opacity-0 text-left  pt-0   !leading-[1.3] translate-y-[10%] tablet:!text-[2.5vw]"
+                    className="content !text-white opacity-0 text-left  pt-0   !leading-[1.3] translate-y-[5%] tablet:!text-[2.5vw]"
                 >
                     {service.para}
                 </p>

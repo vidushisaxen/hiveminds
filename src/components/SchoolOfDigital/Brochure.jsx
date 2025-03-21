@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
@@ -8,13 +8,8 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Brochure = () => {
    
-    useEffect(() => {
-        window.addEventListener('mousemove', handleMouseMove);
 
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
+ 
 
     return (
         <section id="brochure" className=' bg-[#134BD6]'>
