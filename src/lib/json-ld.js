@@ -12,7 +12,7 @@ export function ArticleJsonLd({ post = {} }) {
     '@type': 'Article',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${homepage}${path}`,
+      '@id': `${homepage}/${path}`,
     },
     headline: title,
     image: [featuredImage?.sourceUrl],
@@ -30,7 +30,7 @@ export function ArticleJsonLd({ post = {} }) {
       name: "Hiveminds",
       logo: {
         '@type': 'ImageObject',
-        url: `${homepage}${faviconPath}`,
+        url: `${homepage}/${faviconPath}`,
       },
     },
   };
@@ -47,7 +47,7 @@ export function OrganizationJsonLd() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': `${homepage}#organization`,
+    '@id': `${homepage}/#organization`,
     name: "Hiveminds",
     description: "HiveMinds is a digital marketing agency that combines strategic expertise, advanced technology, and data-driven insights to deliver customized solutions. Our services include performance marketing, SEO, creative content, and more, aimed at driving sustainable growth for businesses across various industries. ",
     url: homepage,
@@ -60,7 +60,7 @@ export function OrganizationJsonLd() {
       addressRegion: 'Bengaluru, Karnataka 560025',
       addressCountry: 'India',
     },
-    logo: `${homepage}favicon.ico`,
+    logo: `${homepage}/favicon.ico`,
     sameAs: [
       "https://www.facebook.com/hiveminds/",
       "https://www.linkedin.com/in/hiveminds-school-of-digital-264139246/",
@@ -81,14 +81,14 @@ export function WebsiteJsonLd() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': `${homepage}#website`,
+    '@id': `${homepage}/#website`,
     name: 'Hiveminds',
     url: homepage,
     copyrightYear: new Date().getFullYear(),
     'inLanguage': "en-US",
     "publisher": [
       {
-        "@id": `${homepage}#organization`
+        "@id": `${homepage}/#organization`
       }
     ],
   };
@@ -105,8 +105,8 @@ export function ImageObjectJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ImageObject",
-    '@id': `${homepage}assets/images/seo/homepage.png`,
-    url: `${homepage}assets/images/seo/homepage.png`,
+    '@id': `${homepage}/assets/images/seo/homepage.png`,
+    url: `${homepage}/assets/images/seo/homepage.png`,
     width: "1920",
     height: "1016",
     inLanguage: "en-US"
@@ -126,8 +126,8 @@ export function WebpageJsonLd({ metadata = {} }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": `${homepage}${path}#webpage`,
-    url: `${homepage}${path}`,
+    "@id": `${homepage}/${path}#webpage`,
+    url: `${homepage}/${path}`,
     name: `${title}`,
     description: `${metaDescription}`,
     datePublished: `${date_published}`,
@@ -137,14 +137,14 @@ export function WebpageJsonLd({ metadata = {} }) {
       name: "Hiveminds",
       logo: {
         "@type": "ImageObject",
-        url: `${homepage}${faviconPath}`,
+        url: `${homepage}/${faviconPath}`,
       }
     },
     "about": {
-      "@id": `${homepage}${path}#organization`
+      "@id": `${homepage}/${path}#organization`
     },
     "isPartOf": {
-      "@id": `${homepage}${path}#website`
+      "@id": `${homepage}/${path}#website`
     },
     "inLanguage": "en_US",
   };
@@ -213,7 +213,7 @@ export function AuthorJsonLd({ author = {} }) {
     '@type': 'Person',
     name: name,
     image: avatar?.url,
-    url: `${homepage}${path}`,
+    url: `${homepage}/${path}`,
     description: description,
   };
 
@@ -245,7 +245,7 @@ export function JobpostingJsonLd({ job }) {
       "sameAs": homepage,
       logo: {
         "@type": "ImageObject",
-        url: `${homepage}${faviconPath}`,
+        url: `${homepage}/${faviconPath}`,
       }
     },
     "industry": "Digital Marketing Agency",

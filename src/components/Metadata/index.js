@@ -3,21 +3,18 @@ import React from 'react'
 import { homepage } from '@/lib/util'
 
 const Metadata = ({metadata}) => {
-
-    console.log(homepage);
-
   return (
    <NextSeo
                    title={metadata.title}
                    description={metadata.metaDescription}
                    openGraph={{
                        type: 'website',
-                       url: `${homepage}${metadata.path}`,
+                       url: `${homepage}/${metadata.path}`,
                        title: metadata.title,
                        "description": metadata.metaDescription,
                        images: [
                         {
-                            url: `${homepage}assets/images/seo/${metadata.img}`,
+                            url: `${homepage}/assets/images/seo/${metadata.img}`,
                             width: 1290,
                             height: 594,
                             alt: "Page Og Image",
@@ -26,10 +23,10 @@ const Metadata = ({metadata}) => {
                     ],
                        siteName: "Hiveminds",
                    }}
-                   canonical={`${homepage}${metadata.path}`}
+                   canonical={`${homepage}/${metadata.path}`}
                    languageAlternates={[{
                        hrefLang: 'x-default',
-                       href: `${homepage}${metadata.path}`,
+                       href: `${homepage}/${metadata.path}`,
                    }]}
                />
   )

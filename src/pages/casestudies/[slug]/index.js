@@ -47,7 +47,7 @@ export default function CaseStudyDetail({ caseStudy }) {
                 description={metaDescription}
                 openGraph={{
                     type: 'webpage',
-                    url: `${homepage}${path}`,
+                    url: `${homepage}/${path}`,
                     title: title,
                     "description": metaDescription,
                     images: [
@@ -61,7 +61,7 @@ export default function CaseStudyDetail({ caseStudy }) {
                     ],
                     siteName: "Hiveminds",
                 }}
-                canonical={`${homepage}${path}`}
+                canonical={`${homepage}/${path}`}
                 languageAlternates={[{
                     hrefLang: 'x-default',
                     href: `${homepage}${path}`,

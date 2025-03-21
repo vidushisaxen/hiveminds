@@ -36,7 +36,7 @@ export default function BlogDetail({ post }) {
                 description={metaDescription}
                 openGraph={{
                     type: 'article',
-                    url: `${homepage}${path}`,
+                    url: `${homepage}/${path}`,
                     title: title,
                     "description": metaDescription,
                     images: [
@@ -50,7 +50,7 @@ export default function BlogDetail({ post }) {
                     ],
                     siteName: "Hiveminds",
                 }}
-                canonical={`${homepage}${path}`}
+                canonical={`${homepage}/${path}`}
                 languageAlternates={[{
                     hrefLang: 'x-default',
                     href: `${homepage}${path}`,

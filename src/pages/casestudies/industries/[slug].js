@@ -11,6 +11,8 @@ import img from "../../../../public/assets/images/services/hero.png";
 import IndustryCsListing from "@/components/CaseStudy/IndustryCSListing";
 import { notFound } from "next/navigation";
 import MoreCs from "@/components/CaseStudyDetail/MoreCs";
+import Metadata from "@/components/Metadata";
+import { WebpageJsonLd } from "@/lib/json-ld";
 
 export default function Blogs({ industry, industries }) {
   headingAnim();
@@ -20,9 +22,20 @@ export default function Blogs({ industry, industries }) {
 
 //   console.log(industries);
 
+const metadata={
+  title:" HiveMinds | Case Studies | Industries",
+  metaDescription:"Case Studies | Industries",
+  path:"casestudies",
+  img:"homepage.png",
+  date_published: "2025-03-21T00:00",
+  date_modified: "2025-03-21T00:00",
+}
+
 
   return (
     <>
+    <Metadata metadata={metadata}/>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
         <Hero
           title1={"Our Case"}
