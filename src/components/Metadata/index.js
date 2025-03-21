@@ -4,7 +4,7 @@ import { homepage } from '@/lib/util'
 
 const Metadata = ({metadata}) => {
 
-    console.log(homepage);
+
 
   return (
    <NextSeo
