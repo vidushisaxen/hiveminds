@@ -17,6 +17,8 @@ import { getAllIndustries } from '@/lib/industries'
 import CaseStudies from '@/components/Homepage/CaseStudies'
 import { WebpageJsonLd } from '@/lib/json-ld'
 
+import { getAllPosts } from '@/lib/blogs'
+
 const metadata = {
   title: "HiveMinds | Data-Driven Digital Marketing for Business Growth",
   metaDescription: "HiveMinds delivers strategic, data-driven digital marketing solutions to help startups and brands grow sustainably with advanced technology and expertise.",
@@ -25,7 +27,7 @@ const metadata = {
     date_published: "2025-03-21T00:00",
     date_modified: "2025-03-21T00:00",
 }
-const index = ({ stickyCaseStudies, industries }) => {
+const index = ({ stickyCaseStudies , filteredPosts}) => {
 
   const [mobileWidth, setMobileWidth] = useState(false);
   useEffect(() => {
@@ -41,12 +43,15 @@ const index = ({ stickyCaseStudies, industries }) => {
   headingAnim()
   fadeUp();
   fadeIn();
+
+
   return (
     <>
       <Metadata metadata={metadata} />
       <WebpageJsonLd metadata={metadata}/>
       <Layout isOpen={isOpen}>
         {!mobileWidth ? <Hero /> : <MobileHero />}
+        {/* <HeroCopy/> */}
         <Story isOpen={isOpen} setIsOpen={setIsOpen} />
         <Services />
         <Clients2 />
@@ -56,7 +61,7 @@ const index = ({ stickyCaseStudies, industries }) => {
           <CaseStudies caseStudies={stickyCaseStudies} />
           <Awards />
           <span className='absolute h-[20%] bottom-[-10%]  w-full'></span>
-          <Blogs />
+          <Blogs posts={filteredPosts} />
         </div>
         <Contact title1={"Looking to Drive "} title2={"Growth?"} para={"We're passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us."} />
       </Layout>
@@ -69,10 +74,14 @@ export default index;
 export async function getStaticProps() {
   const { caseStudies } = await getHomePageCaseStudies();
   const { industries } = await getAllIndustries();
+  const {posts} = await getAllPosts()
+  const filteredPosts = posts.filter((post)=>post?.blogFields.blogType[0]=="blog"||post?.blogFields.blogType[0]=="Blog")
 
   const stickyCaseStudies = caseStudies.filter((caseStudy) => caseStudy.caseStudyFields.ishomepagepost) || null;
   return {
     props: {
+      posts,
+      filteredPosts,
       stickyCaseStudies,
       industries,
     },

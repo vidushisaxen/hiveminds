@@ -1,29 +1,17 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
 import ContactForm from './Contactform';
+import { imgAnim } from '../gsapAnimations';
 gsap.registerPlugin(ScrollTrigger)
 
 
 const Contact = ({ title1, title2, para }) => {
-  useEffect(() => {
-    if (globalThis.innerWidth > 1024) {
-      let ctx = gsap.context(() => {
-     
-        ScrollTrigger.create({
-          trigger: "#contact",
-          start: "top 90%",
-          end: "bottom 20%",
-         
-        });
-      });
-      return () => ctx.revert();
-    }
-  });
-
+ imgAnim()
+ 
  
 
   return (
@@ -40,6 +28,9 @@ const Contact = ({ title1, title2, para }) => {
             </p>
             <div className="flex mt-[4vw] items-center justify-center gap-[2vw]">
               <div className="h-[17.5vw] w-[16.5vw] relative rounded-[16px] fadein mobile:w-full mobile:h-[80vw] tablet:w-1/2 tablet:h-[50vw]">
+              <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-white1 imgAnim origin-bottom">
+
+</div>
                 <Image
                   src="/assets/images/homepage/contact-1.png"
                   fill
@@ -48,6 +39,9 @@ const Contact = ({ title1, title2, para }) => {
                 />
               </div>
               <div className="h-[17.5vw] w-[16.5vw] relative rounded-[16px] fadein mobile:hidden tablet:w-1/2 tablet:h-[50vw]">
+              <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-white1 imgAnim origin-bottom">
+
+</div>
                 <Image
                   src="/assets/images/homepage/contact-2.png"
                   fill

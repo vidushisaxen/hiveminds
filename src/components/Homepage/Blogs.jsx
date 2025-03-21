@@ -5,14 +5,16 @@ import PlainButton from "../Button/PlainButton";
 import styles from "../Button/styles.module.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { formatDate } from "@/lib/datetime";
 gsap.registerPlugin(ScrollTrigger)
 
-const BlogCard = ({ link, para, src, date }) => {
+const BlogCard = ({ link, para, src, date  ,className}) => {
+    const formattedDate = formatDate(date);
   return (
     <>
       <Link
         href={link}
-        className="h-[35vw] w-[26vw] bg-white rounded-[1.5vw] flex flex-col blog-link items-start gap-[1vw] px-[1vw] py-[1vw] group hover:shadow-lg hover:drop-shadow-lg transition-all ease-in-out duration-500 mobile:w-[85vw] mobile:h-[110vw] mobile:p-[3.5vw] mobile:rounded-[4vw] tablet:w-full tablet:h-full tablet:px-[3vw] tablet:py-[3vw] tablet:rounded-[4vw]"
+        className={`h-[35vw] w-[26vw] bg-white rounded-[1.5vw] flex flex-col blog-link items-start gap-[1vw] px-[1vw] py-[1vw] group hover:shadow-lg hover:drop-shadow-lg transition-all ease-in-out duration-500 mobile:w-[85vw] mobile:h-[110vw] mobile:p-[3.5vw] mobile:rounded-[4vw] tablet:w-full tablet:h-full tablet:px-[3vw] tablet:py-[3vw] tablet:rounded-[4vw] ${className}`}
       >
         <div className="h-[55%] w-full relative overflow-hidden rounded-[1.2vw] mobile:rounded-[2.5vw] tablet:h-[50vw] tablet:rounded-[3vw]">
           <Image
@@ -25,7 +27,7 @@ const BlogCard = ({ link, para, src, date }) => {
         <div className="px-[0.5vw] w-[90%] h-[40%] flex flex-col gap-[1vw] mt-[1vw] mobile:mt-[3vw] tablet:h-[20%] tablet:gap-[3vw]">
           <p className="text-[1.35vw] font-medium montreal mobile:text-[4.5vw] tablet:text-[3vw] tablet:leading-[1.2]">{para}</p>
           <div className="flex flex-col justify-between h-full w-full pb-[2vw] tablet:gap-[2vw]">
-            <p className="text-[1vw] text-black/50 mobile:text-[4vw] tablet:text-[2vw]">{date}</p>
+            <p className="text-[1vw] text-black/50 mobile:text-[4vw] tablet:text-[2vw]">{formattedDate}</p>
             <div className="w-fit">
               <div
                 className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw] `}
@@ -59,7 +61,8 @@ const BlogCard = ({ link, para, src, date }) => {
   );
 };
 
-const Blogs = () => {
+const Blogs = ({posts}) => {
+ 
   useEffect(() => {
     if (globalThis.innerWidth > 1024) {
       const ctx = gsap.context(() => {
@@ -100,20 +103,28 @@ const Blogs = () => {
             </div>
             <div className="w-[70%] h-full flex items-center justify-center blog mobile:w-full mobile:flex-col mobile:mt-[8vw] tablet:w-full tablet:items-start tablet:justify-start tablet:mt-[5vw]">
               <div className="flex items-start justify-center gap-[1vw] h-full w-full mobile:flex-col mobile:gap-[7vw] tablet:justify-start tablet:flex-col tablet:gap-[5vw]">
-                <BlogCard
-                  src={"/assets/images/homepage/blogs-1.png"}
-                  link={"/blog/decoding-attribution-windows"}
-                  date={"June 6, 2024"}
+                
+                
+                {posts.map((post,id)=>(
+                  <BlogCard
+                  key={id}
+                  src={post.featuredImage.sourceUrl}
+                  link={`/blog/${post.slug}`}
+                  className={`${id>1?"hidden":""}`}
+                  date={post.date}
                   para={
-                    "Decoding Attribution Windows: Finding the Perfect Fit for Your Marketing Strategy"
+                    post.title
                   }
                 />
-                <BlogCard
-                  src={"/assets/images/homepage/blogs-2.png"}
-                  link={"/blog/2024-seo-updates-all-bundled-together"}
-                  date={"June 6, 2024"}
-                  para={"2024 SEO Updates All Bundled Together for You to Glance"}
-                />
+
+                  
+                ))}
+                {/* // <BlogCard
+                //   src={"/assets/images/homepage/blogs-2.png"}
+                //   link={"/blog/2024-seo-updates-all-bundled-together"}
+                //   date={"June 6, 2024"}
+                //   para={"2024 SEO Updates All Bundled Together for You to Glance"}
+                // /> */}
                 <div className="flex items-center justify-center h-[35vw] w-[7vw]  mobile:h-fit mobile:w-full tablet:h-fit tablet:w-full">
                   <Link href={"/blog"}
                     className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] group items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw]  `}
