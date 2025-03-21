@@ -9,8 +9,8 @@ import Metadata from "@/components/Metadata"
 import { WebpageJsonLd } from "@/lib/json-ld"
 
 const metadata={
-    title:" HiveMinds | Blogs",
-    metaDescription:"Blogs",
+    title:" HiveMinds Blog | Insights on Digital Marketing, SEO, and E-Commerce Trends",
+    metaDescription:"Explore the HiveMinds Blog for expert articles on digital marketing strategies, SEO best practices, and the latest e-commerce trends. Stay informed with industry updates and case studies to enhance your online presence.",
     path:"blog",
     img:"homepage.png",
     date_published: "2025-03-21T00:00",

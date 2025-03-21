@@ -19,6 +19,7 @@ import { WebpageJsonLd } from '@/lib/json-ld'
 
 import { getAllPosts } from '@/lib/blogs'
 
+
 const metadata = {
   title: "HiveMinds | Data-Driven Digital Marketing for Business Growth",
   metaDescription: "HiveMinds delivers strategic, data-driven digital marketing solutions to help startups and brands grow sustainably with advanced technology and expertise.",

@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { SplitInLineWord, SplitInLine} from "./splitTextUtils";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +37,7 @@ gsap.registerPlugin(ScrollTrigger);
         
 // }
 export function headingAnim() {
+  const router = useRouter();
   useEffect(()=>{
       const ctx = gsap.context(()=>{
           const headingAnim = document.querySelectorAll(".headingAnim");
@@ -63,7 +66,7 @@ export function headingAnim() {
       });
       
       return () => ctx.revert();
-  },[]);
+  },[router.asPath]);
       
 }
 
@@ -116,6 +119,7 @@ export function paraAnim() {
     }, []);
   }
   export function fadeUp() {
+    const router = useRouter();
     useEffect(() => {
       if (globalThis.innerWidth > 0) {
         const ctx = gsap.context(() => {
@@ -138,7 +142,7 @@ export function paraAnim() {
         });
         return () => ctx.revert();
       }
-    }, []);
+    }, [router.asPath]);
   }
   export function fadeIn() {
     useEffect(() => {

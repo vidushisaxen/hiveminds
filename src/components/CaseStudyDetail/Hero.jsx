@@ -8,7 +8,7 @@ const Hero = ({ title1, title2, img }) => {
         <section className='w-screen h-full bg-[#F1F1F1] pt-[10%] pb-[4%] mobile:pt-[20%] mobile:bg-[#fafafa] tablet:h-[65vw]'>
             <div className='w-full h-full flex  justify-between gap-[10vw] px-[3vw] mobile:flex-col mobile:px-[4vw] tablet:items-center tablet:px-[6vw]'>
                 <div className='w-[50%] pt-[7vw] mobile:w-full'>
-                    <h1 className='heading-1 leading-[1.2] headingAnim'>
+                    <h1 className='heading-1 leading-[1.2] fadeup'>
                         {title1}
                         <span className='text-primary'> {title2} </span>
                     </h1>

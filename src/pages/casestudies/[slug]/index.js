@@ -1,18 +1,23 @@
 import Layout from "@/components/Layout";
 import { fadeIn, fadeUp, headingAnim, lineAnim, paraAnim } from '@/components/gsapAnimations'
-import RelatedBlogs from '@/components/BlogDetail/RelatedBlogs';
+
 import { caseStudyPathBySlug, getCaseStudyBySlug, getRecentCaseStudies } from "@/lib/casestudies";
 import Hero from "@/components/CaseStudyDetail/Hero";
 import Content from "@/components/CaseStudyDetail/Content";
+
 import { NextSeo } from "next-seo";
 import { homepage } from "@/lib/util";
 import MoreCs from "@/components/CaseStudyDetail/MoreCs";
 import { WebpageJsonLd } from "@/lib/json-ld";
 
+
 export default function CaseStudyDetail({ caseStudy }) {
+  
+  
+    
     fadeIn();
     fadeUp();
-    headingAnim();
+    // headingAnim();
     lineAnim();
     paraAnim();
 
