@@ -8,6 +8,7 @@ import Hero from '@/components/Hero'
 import img from '../../../public/assets/images/services/hero.png'
 import Metadata from '@/components/Metadata'
 import { WebpageJsonLd } from '@/lib/json-ld'
+import Loader from '@/components/Loader'
 
 const metadata={
   title:"HiveMinds Digital Marketing Services for Business Growth",
@@ -28,6 +29,7 @@ const index = () => {
     <>
     <Metadata metadata={metadata}/>
     <WebpageJsonLd metadata={metadata}/>
+    
       <Layout isOpen={isOpen}>
         <Hero
           title1={"What We"} 

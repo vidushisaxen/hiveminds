@@ -18,6 +18,8 @@ import CaseStudies from '@/components/Homepage/CaseStudies'
 import { WebpageJsonLd } from '@/lib/json-ld'
 
 import { getAllPosts } from '@/lib/blogs'
+import LoaderHome from '../components/Loader'
+
 
 
 const metadata = {
@@ -50,6 +52,7 @@ const index = ({ stickyCaseStudies , filteredPosts}) => {
     <>
       <Metadata metadata={metadata} />
       <WebpageJsonLd metadata={metadata}/>
+     <LoaderHome/>
       <Layout isOpen={isOpen}>
         {!mobileWidth ? <Hero /> : <MobileHero />}
         {/* <HeroCopy/> */}

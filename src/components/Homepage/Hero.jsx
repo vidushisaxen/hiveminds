@@ -193,6 +193,7 @@ const Hero = () => {
                 <div className="w-[25vw] h-full my-[4vw] flex flex-col gap-[2vw] rounded-[1vw] overflow-hidden group">
                   <Link href={imageSet.link}>
                     <Image
+                    priority={true}
                       src={imageSet.src1}
                       width={490}
                       height={670}
@@ -207,6 +208,7 @@ const Hero = () => {
                 <div className="w-[25vw] h-full mt-[-1vw] flex flex-col gap-[0.9vw] rounded-[1vw] overflow-hidden group">
                   <Link href={imageSet.link}>
                     <Image
+                    priority={true}
                       src={imageSet.src2}
                       width={490}
                       height={670}

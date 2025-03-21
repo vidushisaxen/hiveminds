@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import styles from "./styles.module.css";
 import { useLenis } from "lenis/react";
 
-const Loader = () => {
+const LoaderHome = () => {
     const loaderRef = useRef();
     const num1wrapRef = useRef();
     const num2wrapRef = useRef();
@@ -128,4 +128,4 @@ const Loader = () => {
     );
 }
 
-export default Loader;
+export default LoaderHome;
