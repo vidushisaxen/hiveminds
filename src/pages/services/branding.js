@@ -10,11 +10,15 @@ import Contact from '@/components/Homepage/Contact'
 import img from '../../../public//assets/images/services/branding-services.png'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
 import Metadata from '@/components/Metadata'
+import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata={
   title:"Branding & Programmatic Advertising Services | HiveMinds",
   metaDescription:"Build a powerful brand with HiveMinds. We craft compelling identities using creative storytelling, data-driven insights, and multi-channel strategies.",
-  path:"services/branding"
+  path:"services/branding",
+  img:"homepage.png",
+    date_published: "2025-03-21T00:00",
+    date_modified: "2025-03-21T00:00",
 }
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
@@ -26,6 +30,7 @@ const index = () => {
   return (
     <>
     <Metadata metadata={metadata}/>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout isOpen={isOpen}>
        <Hero 
         title1={"Transforming Brands, "} 

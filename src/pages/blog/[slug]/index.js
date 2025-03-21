@@ -5,7 +5,7 @@ import { getPostBySlug, getRecentPosts, postPathBySlug } from "@/lib/blogs";
 import Content from "@/components/BlogDetail/Content";
 import BlogHero from "@/components/BlogDetail/BlogHero";
 import { NextSeo } from "next-seo";
-import { ArticleJsonLd } from "@/lib/json-ld";
+import { ArticleJsonLd} from "@/lib/json-ld";
 import { homepage } from "@/lib/util";
 
 export default function BlogDetail({ post }) {
@@ -27,7 +27,7 @@ export default function BlogDetail({ post }) {
         blogFields,
     } = post;
 
-    const path = postPathBySlug(slug);
+    const path = postPathBySlug(slug); 
 
     return (
         <>

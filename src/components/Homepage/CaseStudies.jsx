@@ -58,29 +58,29 @@ const CaseStudies= ({ caseStudies }) => {
   const [slugValue, setslugValue] = useState("");
   const swiperRef = useRef(null);
 
-  useEffect(() => {
-    if (globalThis.innerWidth > 1024) {
-      let ctx = gsap.context(() => {
-        gsap.from(".casestudy-block", {
-          scale: 1.11,
-          yPercent: -5,
-          duration: 1,
-          scrollTrigger: {
-            trigger: ".casestudy-block",
-            start: "top 80%",
-            scrub: true,
-          },
-        });
+  // useEffect(() => {
+  //   if (globalThis.innerWidth > 1024) {
+  //     let ctx = gsap.context(() => {
+  //       gsap.from(".casestudy-block", {
+  //         scale: 1.11,
+  //         yPercent: -5,
+  //         duration: 1,
+  //         scrollTrigger: {
+  //           trigger: ".casestudy-block",
+  //           start: "top 80%",
+  //           scrub: true,
+  //         },
+  //       });
 
-        ScrollTrigger.create({
-          trigger: "#caseStudies",
-          start: "70% 60%",
-          end: "bottom 20%",
-        });
-      });
-      return () => ctx.revert();
-    }
-  }, []);
+  //       ScrollTrigger.create({
+  //         trigger: "#caseStudies",
+  //         start: "70% 60%",
+  //         end: "bottom 20%",
+  //       });
+  //     });
+  //     return () => ctx.revert();
+  //   }
+  // }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {

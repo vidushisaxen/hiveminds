@@ -10,11 +10,15 @@ import Life from '@/components/AboutUs/Life'
 import Responsibility from '@/components/AboutUs/Responsibility'
 import img from '../../public/assets/images/about/about-hero.png'
 import Metadata from '@/components/Metadata'
+import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata={
   title:"HiveMinds: Innovating Digital Marketing with Data-Driven Solutions",
   metaDescription:"Discover how HiveMinds' leadership and collaborative culture drive innovative, data-driven digital marketing strategies for brand transformation and growth.",
-  path:"about-us"
+  path:"about-us",
+  img:"homepage.png",
+    date_published: "2025-03-21T00:00",
+    date_modified: "2025-03-21T00:00",
 }
 const contact = () => {
   headingAnim();
@@ -26,6 +30,7 @@ const contact = () => {
   return (
     <>
     <Metadata metadata={metadata}/>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
         <Hero title1={"Who We"} title2={"Are"} para={"We are HiveMinds—a digital marketing agency where innovative strategies, creative insights, and data-driven solutions converge to transform brands and elevate customer experiences."} img={img} />
         <Leadership />

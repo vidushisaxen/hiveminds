@@ -5,7 +5,18 @@ import Layout from "@/components/Layout"
 import { getPaginatedPosts, sortStickyPosts } from "@/lib/blogs"
 import img from '../../../public/assets/images/blogpage/blog-listing-hero.png'
 import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
+import Metadata from "@/components/Metadata"
+import { WebpageJsonLd } from "@/lib/json-ld"
 
+
+const metadata={
+    title:" HiveMinds | Blogs",
+    metaDescription:"Blogs",
+    path:"blog",
+    img:"homepage.png",
+    date_published: "2025-03-21T00:00",
+    date_modified: "2025-03-21T00:00",
+  }
 export default function Blogs({ posts, featuredPost, pagination }) {
 
     headingAnim();
@@ -15,6 +26,8 @@ export default function Blogs({ posts, featuredPost, pagination }) {
 
     return (
         <>
+        <Metadata metadata={metadata}/>
+        <WebpageJsonLd metadata={metadata}/>
             <Layout>
                 <Hero title1={"What's"} title2={"Buzzing"} para={"Leveraging data-driven insights and technical expertise, HiveMinds crafts SEO solutions that elevate digital visibility and drive measurable results, turning organic searches into valuable customer relationships."} img={img} />
                 {featuredPost && (

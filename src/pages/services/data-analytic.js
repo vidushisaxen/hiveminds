@@ -10,11 +10,15 @@ import Contact from '@/components/Homepage/Contact'
 import img from '../../../public//assets/images/services/data-and-analytics.png'
 import CaseStudies from '@/components/ServiceDetail/CaseStudies'
 import Metadata from '@/components/Metadata'
+import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata={
   title:"Data Analytics Services | HiveMinds",
   metaDescription:"Transform raw data into actionable intelligence with HiveMinds' data analytics services, empowering informed decisions and business growth.",
-  path:"services/data-analytic"
+  path:"services/data-analytic",
+  img:"homepage.png",
+    date_published: "2025-03-21T00:00",
+    date_modified: "2025-03-21T00:00",
 }
 const index = () => {
   const [isOpen, setIsOpen] =  useState(false);
@@ -27,6 +31,7 @@ const index = () => {
   return (
     <>
     <Metadata metadata={metadata}/>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout isOpen={isOpen}>
        <Hero title1={"Data Analytic"} title2={"Services "} para={"Data is the foundation of every successful digital strategy. Our data analysis solutions transform raw numbers into powerful business intelligence, enabling brands to make informed decisions, optimize marketing performance, and unlock new growth opportunities."} img={img}/>
        <Overview title1={"Turn Insights into Action with"} title2={"Precision Analytics"} para={"In today’s fast-paced digital landscape, brands that leverage data-driven decision-making gain a competitive edge. Expertise in predictive modeling, consumer behavior analysis, and real-time reporting ensures that every marketing initiative is backed by deep, actionable insights."}/>

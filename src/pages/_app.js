@@ -4,19 +4,32 @@ import "@/styles/globals.css";
 import { ReactLenis, useLenis } from "lenis/react";
 import "lenis/dist/lenis.css";
 import { DefaultSeo } from "next-seo";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
-
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import nextSeoConfig from "../../next-seo.config";
 import { AnimatePresence ,motion} from "framer-motion";
-import Loader from "@/components/Loader";
-import Loader2 from "@/components/Loader2";
+import { ImageObjectJsonLd, LocalBusiness, OrganizationJsonLd, WebsiteJsonLd } from "@/lib/json-ld";
+import gsap from 'gsap'
+
+
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [mouseEnabled, setMouseEnabled] = useState(false);
   const lenis = useLenis();
+
+  const lenisRef = useRef();
+  
+  useEffect(() => {
+    function update(time) {
+      lenisRef.current?.lenis?.raf(time * 1000)
+    }
+  
+    gsap.ticker.add(update)
+  
+    return () => gsap.ticker.remove(update)
+  }, []);
 
   const pageVariants = {
     initial: { opacity: 0 },
@@ -63,12 +76,16 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+    <LocalBusiness/>
+    <OrganizationJsonLd />
+      <WebsiteJsonLd />
+      <ImageObjectJsonLd />
       <DefaultSeo {...nextSeoConfig} 
         dangerouslySetAllPagesToNoIndex={true}
         dangerouslySetAllPagesToNoFollow={true}
       />
       {/* <Loader/> */}
-      <ReactLenis root options={{ lerp: 0.07 }}>
+      <ReactLenis root options={{ lerp: 0.07, autoRaf: false }} ref={lenisRef}>
         <div style={{ pointerEvents: mouseEnabled ? "auto" : "none" }}>
         <AnimatePresence mode="wait">
             <motion.div

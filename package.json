@@ -38,6 +38,7 @@
     "parametrize": "^0.2.4",
     "react": "^19.0.0",
     "react-dom": "19.0.0",
+    "react-helmet": "^6.1.0",
     "react-hook-form": "^7.53.2",
     "resend": "^4.1.2",
     "sass": "^1.80.6",

@@ -11,11 +11,15 @@ import Hero from "@/components/Hero";
 import Image from "next/image";
 import img from "../../public/assets/images/ip/ips-hero-img.png";
 import Metadata from "@/components/Metadata";
+import { WebpageJsonLd } from "@/lib/json-ld";
 
 const metadata={
   title:"HiveMinds: Innovative Digital Marketing Tools for Brand Growth",
   metaDescription:"Explore HiveMinds' proprietary tools like FeedX, Vizual, and OptiMMMix, designed to optimize digital campaigns and drive brand growth.",
-  path:"our-ips"
+  path:"our-ips",
+  img:"homepage.png",
+    date_published: "2025-03-21T00:00",
+    date_modified: "2025-03-21T00:00",
 }
 const ips = () => {
   headingAnim();
@@ -25,6 +29,7 @@ const ips = () => {
   return (
     <>
     <Metadata metadata={metadata}/>
+    <WebpageJsonLd metadata={metadata}/>
       <Layout>
         <Hero
           title1={"Our"}

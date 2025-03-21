@@ -47,7 +47,7 @@ export default {
         locale: 'en_US',
         images: [
             {
-                url: 'https://hiveminds-staging.vercel.app/assets/seo/homepage.png',
+                url: 'https://www.hiveminds.in/assets/seo/homepage.png',
                 width: 1909,
                 height: 949,
                 alt: "Hivemimds Og Image",

@@ -7,6 +7,7 @@ import Content from "@/components/CaseStudyDetail/Content";
 import { NextSeo } from "next-seo";
 import { homepage } from "@/lib/util";
 import MoreCs from "@/components/CaseStudyDetail/MoreCs";
+import { WebpageJsonLd } from "@/lib/json-ld";
 
 export default function CaseStudyDetail({ caseStudy }) {
     fadeIn();
@@ -29,6 +30,15 @@ export default function CaseStudyDetail({ caseStudy }) {
     } = caseStudy;
 
     const path = caseStudyPathBySlug(slug);
+    const metadata = {
+        title:{title},
+        metaDescription:{metaDescription},
+        path: `${homepage}${path}`,
+        img:"homepage.png",
+    date_published: "2025-03-21T00:00",
+    date_modified: "2025-03-21T00:00",
+
+    }
 
     return (
         <>
@@ -57,11 +67,11 @@ export default function CaseStudyDetail({ caseStudy }) {
                     href: `${homepage}${path}`,
                 }]}
             />
+            <WebpageJsonLd metadata={metadata}/>
             <Layout>
                 <Hero
                     title1={title}
                     img={featuredImage.sourceUrl}
-                
                 />
                 <Content date={date} slug={slug} content={content} categories={categories} industry={industries[0].name} services={services}/>
                 {/* <RelatedBlogs /> */}

@@ -15,11 +15,15 @@ import Metadata from '@/components/Metadata'
 import { getHomePageCaseStudies } from '@/lib/casestudies'
 import { getAllIndustries } from '@/lib/industries'
 import CaseStudies from '@/components/Homepage/CaseStudies'
+import { WebpageJsonLd } from '@/lib/json-ld'
 
 const metadata = {
   title: "HiveMinds | Data-Driven Digital Marketing for Business Growth",
   metaDescription: "HiveMinds delivers strategic, data-driven digital marketing solutions to help startups and brands grow sustainably with advanced technology and expertise.",
-  path: ""
+  path: "",
+  img:"homepage.png",
+    date_published: "2025-03-21T00:00",
+    date_modified: "2025-03-21T00:00",
 }
 const index = ({ stickyCaseStudies, industries }) => {
 
@@ -40,6 +44,7 @@ const index = ({ stickyCaseStudies, industries }) => {
   return (
     <>
       <Metadata metadata={metadata} />
+      <WebpageJsonLd metadata={metadata}/>
       <Layout isOpen={isOpen}>
         {!mobileWidth ? <Hero /> : <MobileHero />}
         <Story isOpen={isOpen} setIsOpen={setIsOpen} />

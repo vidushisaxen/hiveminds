@@ -7,11 +7,15 @@ import Image from 'next/image';
 import PrimaryButton from '@/components/Button/PrimaryButton';
 import img from '../../public/assets/images/solutions/solutions-hero-img.png'
 import Metadata from '@/components/Metadata';
+import { WebpageJsonLd } from '@/lib/json-ld';
 
 const metadata={
     title:"HiveMinds | Digital Growth Solutions for Brands",
     metaDescription:"Explore HiveMinds' expert digital strategies for e-commerce growth, demand generation, customer retention, app marketing, and brand identity.",
-    path:"solutions"
+    path:"solutions",
+    img:"homepage.png",
+    date_published: "2025-03-21T00:00",
+    date_modified: "2025-03-21T00:00",
 }
 const solutions = () => {
     headingAnim();
@@ -22,6 +26,7 @@ const solutions = () => {
     return (
         <>
         <Metadata metadata={metadata}/>
+        <WebpageJsonLd metadata={metadata}/>
             <Layout>
                 <Hero title1={"Our"} title2={"Solution"} para={"We deliver integrated digital strategies that fuel demand, boost D2C and organic revenue, accelerate e-commerce growth, enhance retention, refine app marketing, and shape compelling digital brand identities—powering measurable, long-term success for modern brands"} img={img} />
                 <section className='w-screen h-full py-[5vw] tablet:py-[8vw]'>

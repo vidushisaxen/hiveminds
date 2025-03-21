@@ -9,11 +9,15 @@ import Testimonials from '@/components/SchoolOfDigital/Testimonials';
 import Join from '@/components/SchoolOfDigital/Join';
 import Hero from '@/components/SchoolOfDigital/Hero';
 import Metadata from '@/components/Metadata';
+import { WebpageJsonLd } from '@/lib/json-ld';
 
 const metadata={
   title:"HiveMinds School of Digital | Advanced Digital Marketing Courses",
   metaDescription:"Join HiveMinds School of Digital for expert-led courses in SEO, Google Ads, and advanced digital marketing. Perfect for students and professionals looking to upskill.",
-  path:"school-of-digital"
+  path:"school-of-digital",
+  img:"homepage.png",
+    date_published: "2025-03-21T00:00",
+    date_modified: "2025-03-21T00:00",
 
 }
 const schoolOfDigital = () => {
@@ -25,6 +29,7 @@ const schoolOfDigital = () => {
   return (
     <>
     <Metadata metadata={metadata}/>
+    <WebpageJsonLd metadata={metadata}/>
    <Layout>
        <Hero/>
        <Offer/>
