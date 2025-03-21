@@ -34,10 +34,11 @@ const Hero = () => {
 
 </div>
           <Image
+          priority={true}
             src={img}
             placeholder="blur"
             alt="hero-img"
-            loading="lazy"
+           
             className="w-full h-full object-cover fadein"
           />
           

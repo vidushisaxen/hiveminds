@@ -160,7 +160,7 @@ const Footer = () => {
                   follow us
                 </p>
                 <div className="flex items-center justify-center gap-[1vw] tablet:gap-4">
-                  <Link href={"#"}>
+                  <Link href={"https://www.facebook.com/hiveminds/"}>
                     <div className="w-[2.4vw] h-[2.4vw] p-[0.8vw] border border-white rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group tablet:w-[5vw] tablet:h-[5vw] tablet:p-[1.6vw]">
                         <svg
                           viewBox="0 0 12 23"
@@ -175,7 +175,7 @@ const Footer = () => {
                         </svg>
                     </div>
                   </Link>
-                  <Link href={"#"}>
+                  <Link href={"https://www.linkedin.com/company/hiveminds-innovative-market-solutions/"}>
                     <div className="w-[2.4vw] h-[2.4vw] p-[0.6vw] border border-white rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group tablet:w-[5vw] tablet:h-[5vw] tablet:p-[1.1vw]">
                         <svg
                           viewBox="0 0 21 21"
@@ -200,7 +200,7 @@ const Footer = () => {
                         </svg>
                     </div>
                   </Link>
-                  <Link href={"#"}>
+                  <Link href={"https://x.com/_hiveminds"}>
                     <div className="w-[2.4vw] h-[2.4vw] p-[0.65vw] border border-white rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group tablet:w-[5vw] tablet:h-[5vw] tablet:p-[1.2vw]">
                         <svg
                           viewBox="0 0 19 20"
@@ -215,7 +215,7 @@ const Footer = () => {
                         </svg>
                     </div>
                   </Link>
-                  <Link href={"#"}>
+                  <Link href={"https://www.instagram.com/_hiveminds/?hl=en"}>
                     <div className="w-[2.4vw] h-[2.4vw] border p-[0.6vw] border-white rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group tablet:w-[5vw] tablet:h-[5vw] tablet:p-[1.2vw]">
                         <svg
                           viewBox="0 0 24 24"
@@ -254,7 +254,7 @@ const Footer = () => {
         <div className="mt-[3vw] tablet:mt-[8vw] tablet:w-[92%] tablet:mx-auto">
           <span className="w-[95vw] h-[1px] bg-white block tablet:w-full"></span>
           <div className="w-full flex items-center justify-between mt-[2vw] tablet:items-start">
-            <Link href={"#"}>
+            <Link href={"https://weareenigma.com/"}>
               <p className="text-white text-[0.94vw] tracking-wide tablet:text-xl">
                 By: Enigma{" "}
               </p>

@@ -22,7 +22,7 @@ const Hero = ({ title1, title2, para, img }) => {
           <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-[#f1f1f1] mobile:bg-white1 imgAnim origin-bottom">
 
 </div>
-            <Image src={img} alt='hero' width={1000} height={1700} placeholder='blur' className='rounded-[1.5vw] h-full object-cover fadein mobile:rounded-[1.2rem] tablet:rounded-[3vw]' />
+            <Image src={img} alt='hero' priority={true} width={1000} height={1700} placeholder='blur' className='rounded-[1.5vw] h-full object-cover fadein mobile:rounded-[1.2rem] tablet:rounded-[3vw]' />
           </div>
         </div>
       </div>
