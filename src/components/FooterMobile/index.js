@@ -200,7 +200,7 @@ const FooterMobile = () => {
                 follow us
               </p>
               <div className="flex items-center justify-center gap-[1vw] mobile:gap-[5vw]">
-                <Link href={"https://www.facebook.com/hiveminds/"}>
+                <Link aria-label="facebook" href={"https://www.facebook.com/hiveminds/"}>
                   <div className=" border border-white rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
                     <span className="flex justify-center items-center ">
                       <svg
@@ -220,7 +220,7 @@ const FooterMobile = () => {
                     </span>
                   </div>
                 </Link>
-                <Link href={"https://www.linkedin.com/company/hiveminds-innovative-market-solutions/"}>
+                <Link aria-label="linkedin" href={"https://www.linkedin.com/company/hiveminds-innovative-market-solutions/"}>
                   <div className="w-[2.4vw] h-[2.4vw] border border-white rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
                     <span className=" flex justify-center items-center">
                       <svg
@@ -250,7 +250,7 @@ const FooterMobile = () => {
                     </span>
                   </div>
                 </Link>
-                <Link href={"https://x.com/_hiveminds"}>
+                <Link aria-label='twitter' href={"https://x.com/_hiveminds"}>
                   <div className="w-[2.4vw] h-[2.4vw] border border-white rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
                     <span className=" flex justify-center items-center">
                       <svg
@@ -270,7 +270,7 @@ const FooterMobile = () => {
                     </span>
                   </div>
                 </Link>
-                <Link href={"https://www.instagram.com/_hiveminds/?hl=en"}>
+                <Link aria-label="instagram" href={"https://www.instagram.com/_hiveminds/?hl=en"}>
                   <div className="w-[2.4vw] h-[2.4vw] border border-white rounded-full relative flex justify-center items-center hover:bg-white transition-all duration-500 ease-in-out group mobile:w-[12vw] mobile:h-[12vw]">
                     <span className="flex justify-center items-center">
                       <svg
