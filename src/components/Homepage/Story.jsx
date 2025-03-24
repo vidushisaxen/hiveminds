@@ -98,7 +98,7 @@ const Story = ({ isOpen, setIsOpen }) => {
               muted
               autoPlay
               loop
-              poster="/assets/images/homepage/about-video-poster.png"
+              poster="/assets/images/homepage/about-video-poster.webp"
               className="object-cover w-full h-full"
             ></video>
           </div>
