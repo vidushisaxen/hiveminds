@@ -44,7 +44,7 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
   }, []);
   const [isOpen, setIsOpen] = useState(false);
 headingAnim()
-paraAnim()
+// paraAnim()
  
 
 
