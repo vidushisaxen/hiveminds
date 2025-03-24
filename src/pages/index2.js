@@ -41,10 +41,10 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
   }, []);
   const [isOpen, setIsOpen] = useState(false);
 
-//   paraAnim();
-//   headingAnim()
-//   fadeUp();
-//   fadeIn();
+  paraAnim();
+  headingAnim()
+  fadeUp();
+  fadeIn();
 
 
   return (
