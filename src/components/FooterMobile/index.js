@@ -130,33 +130,32 @@ const FooterMobile = () => {
                   {/* Icon with Rotation */}
                   <div className="w-[10vw] h-[10vw] relative pt-[3vw] list-icon">
                     <span
-                      className={`w-[6vw] h-[3px] block bg-white absolute transition-transform duration-300 ${
-                        openSection === section.title ? "" : ""
-                      }`}
+                      className={`w-[6vw] h-[3px] block bg-white absolute transition-transform duration-300 ${openSection === section.title ? "" : ""
+                        }`}
                     ></span>
                     <span
-                      className={`w-[6vw] h-[3px] mt-[-1px] block bg-white transition-transform duration-300 ${
-                        openSection === section.title
+                      className={`w-[6vw] h-[3px] mt-[-1px] block bg-white transition-transform duration-300 ${openSection === section.title
                           ? "rotate-180"
                           : "rotate-90"
-                      }`}
+                        }`}
                     ></span>
                   </div>
                 </div>
 
                 {/* Sublist (Expands on Click) */}
                 <div
-                  className={` overflow-hidden transition-all duration-500 ${
-                    openSection === section.title
+                  className={` overflow-hidden transition-all duration-500 ${openSection === section.title
                       ? "max-h-[500px] opacity-100"
                       : "max-h-0 opacity-0"
-                  }`}
+                    }`}
                 >
                   <ul className="text-[4vw] pt-[3vw] pb-[7vw] text-white montreal font-medium flex flex-col items-start justify-center gap-[2vw]">
                     {section.links.map((link, idx) => (
-                      <Link key={idx} href={link.href} className="link-line">
-                        <li>{link.text}</li>
-                      </Link>
+                      <li key={idx}>
+                        <Link className="link-line" href={link.href}>
+                        {link.text}
+                        </Link>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -219,13 +218,6 @@ const FooterMobile = () => {
                         />
                       </svg>
                     </span>
-
-                    {/* <Image
-                      src="/assets/icons/facebook.svg"
-                      fill
-                      alt="facebook"
-                      className="p-[0.6vw]"
-                    /> */}
                   </div>
                 </Link>
                 <Link href={"https://www.linkedin.com/company/hiveminds-innovative-market-solutions/"}>
@@ -236,7 +228,7 @@ const FooterMobile = () => {
                         height="15"
                         viewBox="0 0 21 21"
                         fill="none"
-                         className="mobile:w-[6vw] mobile:h-[6vw]"
+                        className="mobile:w-[6vw] mobile:h-[6vw]"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -266,7 +258,7 @@ const FooterMobile = () => {
                         height="15"
                         viewBox="0 0 19 20"
                         fill="none"
-                         className="mobile:w-[6vw] mobile:h-[6vw]"
+                        className="mobile:w-[6vw] mobile:h-[6vw]"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -286,7 +278,7 @@ const FooterMobile = () => {
                         height="15"
                         viewBox="0 0 24 24"
                         fill="none"
-                         className="mobile:w-[6vw] mobile:h-[6vw]"
+                        className="mobile:w-[6vw] mobile:h-[6vw]"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
@@ -302,19 +294,19 @@ const FooterMobile = () => {
             </div>
           </div>
           <div className="mt-[7vw]">
-          <span className="w-[92vw] h-[1px] bg-white block "></span>
-          <div className="w-full flex justify-between mt-[5vw]">
-            <Link href={"https://weareenigma.com/"}>
-              <p className="text-white text-[0.94vw] tracking-wide mobile:text-[3.5vw]">
-                By: Enigma{" "}
+            <span className="w-[92vw] h-[1px] bg-white block "></span>
+            <div className="w-full flex justify-between mt-[5vw]">
+              <Link href={"https://weareenigma.com/"}>
+                <p className="text-white text-[0.94vw] tracking-wide mobile:text-[3.5vw]">
+                  By: Enigma{" "}
+                </p>
+              </Link>
+              <p className="text-white text-[0.94vw] tracking-wide mobile:text-[3vw] mobile:w-[50%] text-end">
+                © 2024 HiveMinds Innovative Market Solutions Pvt. Ltd. All rights
+                reserved.
               </p>
-            </Link>
-            <p className="text-white text-[0.94vw] tracking-wide mobile:text-[3vw] mobile:w-[50%] text-end">
-              © 2024 HiveMinds Innovative Market Solutions Pvt. Ltd. All rights
-              reserved.
-            </p>
+            </div>
           </div>
-        </div>
         </div>
       </footer>
     </>

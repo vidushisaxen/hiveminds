@@ -26,11 +26,11 @@ const metadata = {
   title: "HiveMinds | Data-Driven Digital Marketing for Business Growth",
   metaDescription: "HiveMinds delivers strategic, data-driven digital marketing solutions to help startups and brands grow sustainably with advanced technology and expertise.",
   path: "",
-  img:"homepage.png",
-    date_published: "2025-03-21T00:00",
-    date_modified: "2025-03-21T00:00",
+  img: "homepage.png",
+  date_published: "2025-03-21T00:00",
+  date_modified: "2025-03-21T00:00",
 }
-const index = ({ stickyCaseStudies , filteredPosts}) => {
+const index = ({ stickyCaseStudies, filteredPosts }) => {
 
   const [mobileWidth, setMobileWidth] = useState(false);
   useEffect(() => {
@@ -51,8 +51,8 @@ const index = ({ stickyCaseStudies , filteredPosts}) => {
   return (
     <>
       <Metadata metadata={metadata} />
-      <WebpageJsonLd metadata={metadata}/>
-     <LoaderHome/>
+      <WebpageJsonLd metadata={metadata} />
+      <LoaderHome />
       <Layout isOpen={isOpen}>
         {!mobileWidth ? <Hero /> : <MobileHero />}
         {/* <HeroCopy/> */}
@@ -78,8 +78,8 @@ export default index;
 export async function getStaticProps() {
   const { caseStudies } = await getHomePageCaseStudies();
   const { industries } = await getAllIndustries();
-  const {posts} = await getAllPosts()
-  const filteredPosts = posts.filter((post)=>post?.blogFields.blogType[0]=="blog"||post?.blogFields.blogType[0]=="Blog")
+  const { posts } = await getAllPosts()
+  const filteredPosts = posts.filter((post) => post?.blogFields.blogType[0] == "blog" || post?.blogFields.blogType[0] == "Blog")
 
   const stickyCaseStudies = caseStudies.filter((caseStudy) => caseStudy.caseStudyFields.ishomepagepost) || null;
   return {
