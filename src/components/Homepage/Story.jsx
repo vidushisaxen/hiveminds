@@ -10,7 +10,7 @@ import LinkButton from "../Button/LinkButton";
 gsap.registerPlugin(ScrollTrigger);
 
 const VideoModal = dynamic(() => import("@/components/VideoPlayer"));
-const Story = ({ isOpen, setIsOpen }) => {
+const StoryCopy = ({ isOpen, setIsOpen }) => {
   
   const videoRef = useRef(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -164,4 +164,4 @@ const Story = ({ isOpen, setIsOpen }) => {
   );
 };
 
-export default Story;
+export default StoryCopy;

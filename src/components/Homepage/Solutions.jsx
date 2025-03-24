@@ -344,7 +344,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter}) => {
     );
 };
 
-const Services = () => {
+const ServicesCopy = () => {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -384,4 +384,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default ServicesCopy;

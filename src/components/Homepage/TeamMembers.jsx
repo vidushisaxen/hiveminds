@@ -3,7 +3,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import styles from "@/styles/team.module.css";
 
-const TeamMembers = () => {
+const TeamMembersCopy = () => {
   const [mobileWidth, setMobileWidth] = useState(false);
   useEffect(() => {
     if (globalThis.innerWidth > 1024) {
@@ -11,29 +11,7 @@ const TeamMembers = () => {
     } else {
       setMobileWidth(true);
     }
-    // gsap.fromTo(
-    //   `.team-container .${styles.card}`,
-    //   {
-    //     scale: 0,
-    //     opacity: 0.5,
-    //   },
-    //   {
-    //     scale: 1,
-    //     opacity: 1,
-    //     duration: 1,
-    //     stagger: {
-    //       amount: 1,
-    //       each: 0.3,
-    //       from: "random",
-    //     },
-    //     ease: "power3.out",
-    //     scrollTrigger: {
-    //       trigger: ".team-container",
-    //       start: "top 80%",
-    //       end: "bottom 20%",
-    //     },
-    //   }
-    // );
+   
   }, []);
 
   useEffect(() => {
@@ -313,4 +291,4 @@ const TeamMembers = () => {
   );
 };
 
-export default TeamMembers;
+export default TeamMembersCopy;
