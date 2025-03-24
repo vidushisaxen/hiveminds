@@ -8,6 +8,12 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/scrollbar";
 import Link from "next/link";
+import img1 from '../../../public/assets/images/homepage/hero-bigbasket-img1.png'
+import img2 from '../../../public/assets/images/homepage/hero-bigbasket-img2.png'
+import img3 from '../../../public/assets/images/homepage/hero-dominos-img1.png'
+import img4 from '../../../public/assets/images/homepage/hero-dominos-img2.png'
+import img5 from '../../../public/assets/images/homepage/hero-flydubai-img1.png'
+import img6 from '../../../public/assets/images/homepage/hero-flydubai-img2.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,18 +22,18 @@ const MobileHeroSwiper = () => {
 
   const images = [
     {
-      src1: "/assets/images/homepage/hero-bigbasket-img1.png",
-      src2: "/assets/images/homepage/hero-bigbasket-img2.png",
+      src1: img1,
+      src2: img2,
       link: "/casestudies/bigbasket",
     },
     {
-      src1: "/assets/images/homepage/hero-dominos-img1.png",
-      src2: "/assets/images/homepage/hero-dominos-img2.png",
+      src1: img3,
+      src2: img4,
       link: "/casestudies/dominos",
     },
     {
-      src2: "/assets/images/homepage/hero-flydubai-img1.png",
-      src1: "/assets/images/homepage/hero-flydubai-img2.png",
+      src2: img5,
+      src1: img6,
       link: "/casestudies/flydubai",
     },
   ];
@@ -76,11 +82,13 @@ const MobileHeroSwiper = () => {
           {images.map((image, index) => (
             <React.Fragment key={index}>
               <SwiperSlide>
-                <Link href={image.link}>
+                <Link href={image.link} prefetch={false}>
                   <div className="relative w-full mobile:h-[100vw] overflow-hidden tablet:h-[50vw] tablet:w-full tablet:rounded-[2vw]">
                     <Image
                       src={image.src1}
+                      placeholder="blur"
                       fill
+                      priority
                       alt="casestudy"
                       className="object-cover group-hover:brightness-75 transition-all duration-500 ease-in-out"
                     />
@@ -88,10 +96,12 @@ const MobileHeroSwiper = () => {
                 </Link>
               </SwiperSlide>
               <SwiperSlide>
-                <Link href={image.link}>
+                <Link href={image.link} prefetch={false}>
                   <div className="relative w-[92vw] mobile:h-[100vw] overflow-hidden tablet:h-[50vw] tablet:w-full tablet:rounded-[2vw]">
                     <Image
                       src={image.src2}
+                      placeholder="blur"
+                      priority
                       fill
                       alt="casestudy"
                       className="object-cover group-hover:brightness-75 transition-all duration-500 ease-in-out"

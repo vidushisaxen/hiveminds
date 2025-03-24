@@ -5,6 +5,9 @@ import { useLenis } from "lenis/react";
 import PlainButton from "../Button/PlainButton";
 import MobileMenu from "./MobileMenu";
 import styles from "../Button/styles.module.css";
+import solutionImg from "../../../public/assets/images/solutions/solutions-hero-img.png"
+import ipImg from "../../../public/assets/images/ip/ips-hero-img.png"
+import digitalImg from "../../../public/assets/images/schoolofdigital/school-of-digital-hero-img.png"
 
 const Header = ({ isOpen }) => {
   const lenis = useLenis();
@@ -46,9 +49,8 @@ const Header = ({ isOpen }) => {
 
   return !isOpen ? (
     <header
-      className={`fixed top-0 left-0 w-full z-[100] header transition-all ease duration-500 ${
-        isHidden ? "-translate-y-full" : "translate-y-0 header-glassmorphism"
-      } ${openMenu ? "!translate-y-0" : ""}`}
+      className={`fixed top-0 left-0 w-full z-[100] header transition-all ease duration-500 ${isHidden ? "-translate-y-full" : "translate-y-0 header-glassmorphism"
+        } ${openMenu ? "!translate-y-0" : ""}`}
     >
       <div className={``}>
         <div
@@ -316,11 +318,8 @@ const Header = ({ isOpen }) => {
                           className="w-[18vw] h-[16vw] rounded-[1.2vw] overflow-hidden flex flex-col gap-[1vw]"
                         >
                           <Image
-                            src={
-                              "/assets/images/solutions/solutions-hero-img.png"
-                            }
-                            height={310}
-                            width={360}
+                            src={solutionImg}
+                            placeholder="blur"
                             alt="header-img"
                             className="hover:scale-[1.2] transition-all duration-500 ease-in-out"
                           />
@@ -360,9 +359,8 @@ const Header = ({ isOpen }) => {
                           className="w-[18vw] h-[16vw] rounded-[1.2vw] overflow-hidden flex flex-col gap-[1vw]"
                         >
                           <Image
-                            src={"/assets/images/ip/ips-hero-img.png"}
-                            height={310}
-                            width={360}
+                            src={ipImg}
+                            placeholder="blur"
                             alt="header-img"
                             className="hover:scale-[1.2] transition-all duration-500 ease-in-out"
                           />
@@ -402,11 +400,8 @@ const Header = ({ isOpen }) => {
                           className="w-[18vw] h-[16vw] rounded-[1.2vw] overflow-hidden flex flex-col gap-[1vw]"
                         >
                           <Image
-                            src={
-                              "/assets/images/schoolofdigital/school-of-digital-hero-img.png"
-                            }
-                            height={310}
-                            width={360}
+                            src={digitalImg}
+                            placeholder="blur"
                             alt="header-img"
                             className="hover:scale-[1.2] transition-all duration-500 ease-in-out"
                           />
@@ -471,7 +466,7 @@ const Header = ({ isOpen }) => {
             </div>
             <div>
               <PlainButton
-              aria-label="to contact us"
+                aria-label="to contact us"
                 link={"/contact-us"}
                 text={"Work with us"}
                 data-btn-blue
