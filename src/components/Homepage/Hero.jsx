@@ -3,6 +3,12 @@ import gsap from "gsap";
 import Image from "next/image";
 import PrimaryButton from "../Button/PrimaryButton";
 import Link from "next/link";
+import img1 from '../../../public/assets/images/homepage/hero-bigbasket-img1.png'
+import img2 from '../../../public/assets/images/homepage/hero-bigbasket-img2.png'
+import img3 from '../../../public/assets/images/homepage/hero-dominos-img1.png'
+import img4 from '../../../public/assets/images/homepage/hero-dominos-img2.png'
+import img5 from '../../../public/assets/images/homepage/hero-flydubai-img1.png'
+import img6 from '../../../public/assets/images/homepage/hero-flydubai-img2.png'
 
 const Hero = () => {
  
@@ -14,21 +20,22 @@ const Hero = () => {
 
   const images = [
     {
-      src1: "/assets/images/homepage/hero-bigbasket-img1.png",
-      src2: "/assets/images/homepage/hero-bigbasket-img2.png",
+      src1: img1,
+      src2: img2,
       link:"/casestudies/bigbasket"
     },
     {
-      src1: "/assets/images/homepage/hero-dominos-img1.png",
-      src2: "/assets/images/homepage/hero-dominos-img2.png",
+      src1: img3,
+      src2: img4,
       link:"/casestudies/dominos",
     },
     {
-      src1: "/assets/images/homepage/hero-flydubai-img1.png",
-      src2: "/assets/images/homepage/hero-flydubai-img2.png",
+      src1: img5,
+      src2: img6,
       link:"/casestudies/flydubai",
     },
   ];
+
   const details = [
     {
       num1: "2.35x",
@@ -169,7 +176,7 @@ const Hero = () => {
           </p>
 
           <PrimaryButton
-          aria-label="to casestudy"
+            aria-label="to casestudy"
             href={slidesData[activeIndex].href}
             text="View Case Study"
             className="button"
@@ -194,8 +201,9 @@ const Hero = () => {
                 <div className="w-[25vw] h-full my-[4vw] flex flex-col gap-[2vw] rounded-[1vw] overflow-hidden group">
                   <Link href={imageSet.link}>
                     <Image
-                    priority={true}
+                      // priority={true}
                       src={imageSet.src1}
+                      placeholder="blur"
                       width={490}
                       height={670}
                       className="object-fill w-full h-full rounded-[1vw] group-hover:scale-[1.08] transition-all duration-700 ease-in-out"
@@ -208,8 +216,9 @@ const Hero = () => {
                 <div className="w-[25vw] h-full mt-[-1vw] flex flex-col gap-[0.9vw] rounded-[1vw] overflow-hidden group">
                   <Link href={imageSet.link}>
                     <Image
-                    priority={true}
+                      // priority={true}
                       src={imageSet.src2}
+                      placeholder="blur"
                       width={490}
                       height={670}
                       className="object-fill w-full h-full rounded-[1vw] group-hover:scale-[1.08] transition-all duration-700 ease-in-out"
