@@ -41,10 +41,10 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
   }, []);
   const [isOpen, setIsOpen] = useState(false);
 
-  paraAnim();
-  headingAnim()
-  fadeUp();
-  fadeIn();
+//   paraAnim();
+//   headingAnim()
+//   fadeUp();
+//   fadeIn();
 
 
   return (
@@ -53,19 +53,19 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
       <WebpageJsonLd metadata={metadata} />
       <LoaderHome />
       <Layout isOpen={isOpen}>
-        {/* {!mobileWidth ? <Hero /> : <MobileHero />} */}
+        {!mobileWidth ? <Hero /> : <MobileHero />}
      
         <Story isOpen={isOpen} setIsOpen={setIsOpen} />
         <Services />
         <Clients2 />
         <TeamMembers />
-        {/* <div className='relative h-fit w-screen rounded-[20px]  '>
+        <div className='relative h-fit w-screen rounded-[20px]  '>
           <span className=' block absolute h-[20%] w-full'></span>
           <CaseStudyComponent caseStudies={stickyCaseStudies} />
           <Awards />
           <span className='absolute h-[20%] bottom-[-10%]  w-full'></span>
           <BlogComponent posts={filteredPosts} />
-        </div> */}
+        </div>
         <Contact title1={"Looking to Drive "} title2={"Growth?"} para={"We're passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us."} />
       </Layout>
     </>

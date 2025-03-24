@@ -5,7 +5,7 @@ import PrimaryButton from "../Button/PrimaryButton";
 import Link from "next/link";
 
 const Hero = () => {
-  const isFirstRender = useRef(true);
+ 
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeDetail, setActiveDetail] = useState(0);
   const headRef = useRef(null);
@@ -190,7 +190,7 @@ const Hero = () => {
                 key={index}
                 className="w-[55vw] h-fit flex gap-[0.9vw] gallery-block relative"
               >
-                {/* Left Column (src1 & src3) */}
+            
                 <div className="w-[25vw] h-full my-[4vw] flex flex-col gap-[2vw] rounded-[1vw] overflow-hidden group">
                   <Link href={imageSet.link}>
                     <Image
@@ -205,7 +205,6 @@ const Hero = () => {
                  
                 </div>
 
-                {/* Right Column (src2 & src4) */}
                 <div className="w-[25vw] h-full mt-[-1vw] flex flex-col gap-[0.9vw] rounded-[1vw] overflow-hidden group">
                   <Link href={imageSet.link}>
                     <Image
@@ -237,9 +236,7 @@ const Hero = () => {
             <span className="h-[4.5vw] w-[1px] bg-black"></span>
 
             <div className="flex flex-col items-center w-[50%]">
-              {/* <h3 className="text-[2.4vw] font-extrabold uppercase leading-[1] content-detail">
-                {details[activeDetail].num2}
-              </h3> */}
+             
 
               <p className="content !leading-[1] content-para">
                 {details[activeDetail].para2}

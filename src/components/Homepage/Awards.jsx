@@ -4,9 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 import { FreeMode } from "swiper/modules";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+
 
 const awards=[
   {
@@ -17,7 +15,7 @@ const awards=[
   },
   {
     img:"/assets/images/homepage/award2.png",
-    title:"The Jury awards  (Flipkart) ",
+    title:"The Jury awards (Flipkart) ",
     year:"2022",
     category:"Best media mix category "
   },
