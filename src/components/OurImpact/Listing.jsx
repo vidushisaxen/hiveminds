@@ -68,7 +68,7 @@ const CaseStudyFilter = ({ industries, industry, setIndustry, clearFilters }) =>
         <div className="flex gap-[1vw] pb-[3vw] tablet:items-end mobile:items-end">
             <div className="flex flex-col">
                 <p className="content px-[1vw] py-[0.5vw] mobile:py-[3vw]">Filters:</p>
-                <Select value={industry || ""} onValueChange={setIndustry}>
+                <Select aria-label='industry-filter' value={industry || ""} onValueChange={setIndustry}>
                     <SelectTrigger className="w-[22vw] h-[3.5vw] drop-shadow-none shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 border-[1.5px] border-black rounded-full mobile:w-[40vw] mobile:rounded-[9vw] mobile:border-[1px] ">
                         <SelectValue placeholder="All Indutries" />
                     </SelectTrigger>

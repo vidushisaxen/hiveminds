@@ -5,20 +5,20 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
 const Hero = ({ title1, title2, para, img }) => {
-  useEffect(()=>{
-  const ctx = gsap.context(()=>{
-    gsap.to(".image-cover",{
-     scaleY:0,
-     duration:1.5,
-     ease:"power4.inOut"
-  
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.to(".image-cover", {
+        scaleY: 0,
+        duration: 1.5,
+        ease: "power4.inOut"
+
+      })
+
     })
-
-  })
-  return()=>ctx.revert()
+    return () => ctx.revert()
 
 
-  },[])
+  }, [])
   return (
     <section
       className="w-screen h-full overflow-hidden bg-[#F1F1F1] pt-[10%] pb-[4%] mobile:pb-8 mobile:bg-white1 mobile:pt-24 tablet:pb-[12vw]"
@@ -35,15 +35,14 @@ const Hero = ({ title1, title2, para, img }) => {
           </p>
         </div>
         <div className="w-[40%] h-[80%] relative rounded-[1.2vw] mobile:rounded-[1.2rem] overflow-hidden  mobile:w-full mobile:h-[90vw] tablet:w-3/5 tablet:rounded-3xl">
-        <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-[#f1f1f1] mobile:bg-white1 image-cover origin-bottom"/>
-
-        
+          <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-[#f1f1f1] mobile:bg-white1 image-cover origin-bottom" />
           <Image
-          priority={true}
+            priority={true}
+            width={720}
+            height={800}
             src={img}
             placeholder="blur"
             alt="hero-img"
-          
             className="w-full h-full object-cover fadein"
           />
         </div>

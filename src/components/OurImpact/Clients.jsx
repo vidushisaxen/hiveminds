@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Marquee } from "@/components/ui/marquee";
+import Image from "next/image";
 
 const clients1 = [
   "/assets/images/impact/clients/bigbasket.png",
@@ -109,7 +110,9 @@ export function Clients() {
                 key={index}
                 className="relative h-full w-[20vw] flex items-center justify-center group fadeup mobile:w-[40vw] tablet:w-[30vw]"
               >
-                <img
+                <Image
+                width={300}
+                height={120}
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
