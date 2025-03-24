@@ -133,12 +133,14 @@ const Story = ({ isOpen, setIsOpen }) => {
               </p>
               <div className="w-full flex items-center justify-start gap-[2vw] mobile:flex-col mobile:items-start mobile:mt-[4vw] tablet:mt-[3vw]">
                 <PrimaryButton
+                aria-label="to about us"
                   className="fadeup"
                   text="Explore The Hiveminds Way"
                   href="/about-us"
                   data-btn-white
                 />
                 <PrimaryButton
+                aria-label="to leadership section"
                   className="fadeup"
                   text="Our Leadership Team"
                   href="/about-us#leadership"
@@ -150,7 +152,7 @@ const Story = ({ isOpen, setIsOpen }) => {
         </div>
         {isModalOpen && (
           <VideoModal
-            poster="/assets/images/homepage/about-video-poster.png"
+            poster="/assets/images/homepage/about-video-poster.webp"
             isOpen={isModalOpen}
             onClose={handleClose}
             videoSrc="/assets/videos/about-video.mp4"

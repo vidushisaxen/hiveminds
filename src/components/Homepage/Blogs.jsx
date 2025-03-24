@@ -97,8 +97,8 @@ const Blogs = ({posts}) => {
                 </p>
               </div>
               <div className="flex flex-wrap items-center mt-[2vw] gap-[0.7vw] mobile:gap-[1.5vw] tablet:gap-[2vw]">
-                <PlainButton text={"Blogs"} link={"/blog?category=Blog"} className="fadeup" />
-                <PlainButton text={"News"} link={"/blog?category=pr"} className="fadeup" />
+                <PlainButton text={"Blogs"} link={"/blog?category=Blog"} className="fadeup" aria-label="to blogs" />
+                <PlainButton text={"News"} link={"/blog?category=pr"} className="fadeup" aria-label="to pr"/>
               </div>
             </div>
             <div className="w-[70%] h-full flex items-center justify-center blog mobile:w-full mobile:flex-col mobile:mt-[8vw] tablet:w-full tablet:items-start tablet:justify-start tablet:mt-[5vw]">
@@ -119,12 +119,7 @@ const Blogs = ({posts}) => {
 
                   
                 ))}
-                {/* // <BlogCard
-                //   src={"/assets/images/homepage/blogs-2.png"}
-                //   link={"/blog/2024-seo-updates-all-bundled-together"}
-                //   date={"June 6, 2024"}
-                //   para={"2024 SEO Updates All Bundled Together for You to Glance"}
-                // /> */}
+              
                 <div className="flex items-center justify-center h-[35vw] w-[7vw]  mobile:h-fit mobile:w-full tablet:h-fit tablet:w-full">
                   <Link href={"/blog"}
                     className={`cursor-pointer flex w-fit relative text-[1.1vw] gap-[0.7vw] group items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw]  `}

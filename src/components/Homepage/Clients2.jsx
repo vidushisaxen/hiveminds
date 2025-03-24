@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import { Marquee } from "@/components/ui/marquee"
+import { Marquee } from "@/components/ui/marquee";
 import { useEffect } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 const clients1 = [
   "/assets/images/homepage/logos/clients/big-basket.png",
   "/assets/images/homepage/logos/clients/dominos.png",
@@ -75,7 +76,9 @@ export function Clients2() {
                 key={index}
                 className="relative h-full w-[16vw] flex items-center justify-start group fadeup mobile:w-[40vw] tablet:w-[30vw]"
               >
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
@@ -91,7 +94,9 @@ export function Clients2() {
                 key={index}
                 className="relative h-full w-[16vw] flex items-center justify-start group fadeup mobile:w-[40vw] tablet:w-[30vw]"
               >
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"
@@ -111,7 +116,9 @@ export function Clients2() {
                 key={index}
                 className="relative h-full w-[16vw]  flex items-center justify-start group fadeup mobile:w-[40vw] tablet:w-[30vw] "
               >
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src={logoSrc}
                   alt={`Logo ${index}`}
                   loading="lazy"

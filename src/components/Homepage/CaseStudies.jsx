@@ -18,38 +18,47 @@ const categories = [
   {
     btnName: "All",
     value: "",
+    label:"to all casestudy"
   },
   {
     btnName: "E-Commerce",
     value: "e-commerce",
+    label:"to e-commerce casestudy"
   },
   {
     btnName: "Travel",
     value: "travel-tourism",
+    label:"to travel-tourism"
   },
   {
     btnName: "Healthcare",
     value: "Healthcare",
+    label:"to healthcare"
   },
   {
     btnName: "BFSI",
     value: "bfsi-fintech",
+    label:"to bfsi"
   },
   {
     btnName: "Automobiles",
     value: "Automobiles",
+    label:"to automobiles"
   },
   {
     btnName: "Wearables",
     value: "Wearables",
+    label:"to wearables"
   },
   {
     btnName: "NBFC",
     value: "NBFC",
+    label:"to nbfc"
   },
   {
     btnName: "CDIT",
     value: "cdit",
+    label:"to cdit"
   },
 ];
 
@@ -58,29 +67,6 @@ const CaseStudies= ({ caseStudies }) => {
   const [slugValue, setslugValue] = useState("");
   const swiperRef = useRef(null);
 
-  // useEffect(() => {
-  //   if (globalThis.innerWidth > 1024) {
-  //     let ctx = gsap.context(() => {
-  //       gsap.from(".casestudy-block", {
-  //         scale: 1.11,
-  //         yPercent: -5,
-  //         duration: 1,
-  //         scrollTrigger: {
-  //           trigger: ".casestudy-block",
-  //           start: "top 80%",
-  //           scrub: true,
-  //         },
-  //       });
-
-  //       ScrollTrigger.create({
-  //         trigger: "#caseStudies",
-  //         start: "70% 60%",
-  //         end: "bottom 20%",
-  //       });
-  //     });
-  //     return () => ctx.revert();
-  //   }
-  // }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -130,6 +116,7 @@ const CaseStudies= ({ caseStudies }) => {
               <div className="flex flex-wrap items-center mt-[2vw] gap-[1vw] mobile:gap-[2vw] w-[90%] mobile:w-full tablet:w-full">
                 {categories.map((category) => (
                   <button
+                  aria-label={category.label}
                     key={category.value}
                     data-text={category.btnName}
                     className={`${

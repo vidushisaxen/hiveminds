@@ -57,7 +57,7 @@ const Header = ({ isOpen }) => {
         >
           <Link href={"/"}>
             <div className="w-[10.5vw] h-[3.2vw] relative mobile:h-[17vw] mobile:w-[30vw] tablet:w-[20vw] tablet:h-[7vw]">
-              <Image src="/assets/icons/logo.svg" fill alt="hiveminds-logo" />
+              <Image src="/assets/icons/logo.svg" width={200} height={100} alt="hiveminds-logo" quality={100} className="w-full h-full object-contain" />
             </div>
           </Link>
           <div className="flex items-center justify-center gap-[2vw] text-[0.94vw] montreal font-medium uppercase mobile:hidden tablet:hidden">
@@ -471,6 +471,7 @@ const Header = ({ isOpen }) => {
             </div>
             <div>
               <PlainButton
+              aria-label="to contact us"
                 link={"/contact-us"}
                 text={"Work with us"}
                 data-btn-blue

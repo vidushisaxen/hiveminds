@@ -146,9 +146,11 @@ const MobileMenu = ({ openMenu }) => {
                 >
                   <ul className="text-lg pt-[3vw] pl-[3vw] pb-[7vw] text-black montreal flex flex-col items-start justify-center gap-[1.5vw]">
                     {section.links.map((link, idx) => (
-                      <Link key={idx} href={link.href} className="link-line">
-                        <li>{link.text}</li>
+                      <li key={idx}>
+                      <Link  href={link.href} className="link-line">
+                        {link.text}
                       </Link>
+                      </li>
                     ))}
                   </ul>
                 </div>

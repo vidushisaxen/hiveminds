@@ -197,7 +197,7 @@ export default function ContactForm() {
 
           {/* Submit */}
           <div className="pt-[2vw]">
-            <Button type="submit" disabled={isLoading} className={`${styles.btn}`}>
+            <Button type="submit" aria-label="submit form" disabled={isLoading} className={`${styles.btn}`}>
               <div aria-hidden="true" className={styles.btnCircle}>
               <div className={styles.btnCircleText}>
                     <svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.btnIcon}>

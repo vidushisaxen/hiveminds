@@ -169,6 +169,7 @@ const Hero = () => {
           </p>
 
           <PrimaryButton
+          aria-label="to casestudy"
             href={slidesData[activeIndex].href}
             text="View Case Study"
             className="button"
