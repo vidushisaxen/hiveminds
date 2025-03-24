@@ -21,27 +21,35 @@
   margin-top: 2%;
   width: 100%;
   line-height: 1;
-
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
 }
 .btn .btnCircle {
   clip-path: inset(15% calc(100% - 3.55vw) 15% .7vw round 1000px);
   position: absolute;
+  
   inset: 0px;
   border-radius: 1000px;
   display: flex;
   align-items: center;
   z-index: 1;
   background-color: white;
-  color: #134BD5;
+  color: #000;
   transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
+.btn .btnCircleText{
+  display: flex;
+  width: 100%;
+  gap: 2.05vw;
+ 
+}
+
 .btn .btnIcon {
   width: 1vw;
   height: 1vw;
   overflow: hidden;
-  margin-left: 1.6vw;
+  margin-top: 0.2vw;
+  margin-left: 1.55vw;
 }
 .btn .btnIcon .btnPath {
   transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -211,6 +219,12 @@
     color: var(--body);
     transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   }
+  .btn .btnCircleText{
+    display: flex;
+    width: 100%;
+    gap: 4vw;
+   
+  }
   .btn[data-secondary] .btnCircle {
     padding: 0 4.5vw;
     clip-path: inset(14% 5% 15% calc(100% - 27%) round 10vw);
@@ -278,6 +292,13 @@
     color: var(--body);
     transition: all 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   }
+  .btn .btnCircleText{
+    display: flex;
+    width: 100%;
+    gap: 7vw;
+    
+   
+  }
   .btn[data-secondary] .btnCircle {
     padding: 0 4.5vw;
     clip-path: inset(14% 5% 15% calc(100% - 27%) round 10vw);
@@ -293,7 +314,7 @@
   .btn .btnIcon {
     width: 3.5vw;
     height: 3.5vw;
-    margin-left: 5.7vw;
+    margin-left: 5.4vw;
   }
   .btn .btnCircleText {
     padding: 0 3.5% 0 0;

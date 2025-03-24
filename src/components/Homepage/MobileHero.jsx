@@ -128,9 +128,9 @@ const MobileHero = () => {
           <div className="w-full h-[22vw] glassmorphism-dark absolute bottom-0 left-0 z-[1] flex tablet:h-[14vw]">
           <div className="w-full h-full flex justify-between items-center px-[3vw] gap-[3vw] tablet:px-[5vw]">
             <div className="flex gap-[2vw] w-[50%] justify-between ">
-              <h3 className="text-[5vw] font-extrabold uppercase leading-[1] content-detail tablet:text-[4vw]">
+              <p className="text-[5vw] font-extrabold uppercase leading-[1] content-detail tablet:text-[4vw]">
                 {details[activeDetail].num1}
-              </h3>
+              </p>
 
               <p className="text-[3.1vw] !leading-[1.3] content-para tablet:text-[2.5vw]">
                 {details[activeDetail].para1}
