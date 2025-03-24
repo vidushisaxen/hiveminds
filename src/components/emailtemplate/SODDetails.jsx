@@ -13,7 +13,7 @@ const SODDetails = ({ userName, userEmail,userCity, userNumber , userMode}) => {
       <Body style={main}>
         <Container style={container}>
           <Img
-            src={"https://hiveminds-staging.vercel.app/assets/icons/logo.png"}
+            src={"https://hiveminds-staging.vercel.app/logo.png"}
             width="140"
             height="40"
             alt="Logo"
