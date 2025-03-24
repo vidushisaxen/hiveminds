@@ -141,9 +141,9 @@ export default function ContactForm() {
             name="services"
             render={({ field }) => (
               <FormItem className="required">
-                <Select onValueChange={field.onChange} value={field.value}>
+                <Select  onValueChange={field.onChange} value={field.value}>
                   <FormControl>
-                  <SelectTrigger className="w-full h-[4vw] drop-shadow-none border  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:px-[5vw]  tablet:h-[8vw] tablet:rounded-[1.5vw]">
+                  <SelectTrigger aria-label="services dropdown" className="w-full h-[4vw] drop-shadow-none border  shadow-none mobile:h-full mobile:py-3.5 mobile:px-6 mobile:rounded-xl tablet:px-[5vw]  tablet:h-[8vw] tablet:rounded-[1.5vw]">
                       <SelectValue placeholder="Services" />
                     </SelectTrigger>
                   </FormControl>

@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import Footer from "../Footer";
-import FooterMobile from "../FooterMobile";
+
 import Header from "../Header";
+import dynamic from "next/dynamic";
+const FooterComponent = dynamic(() => import("@/components/Footer"));
+const FooterMobileComponent = dynamic(() => import("@/components/FooterMobile"));
 
 const Layout = ({ children, isOpen }) => {
   const [mobileWidth, setMobileWidth] = useState(false);
@@ -19,8 +21,8 @@ const Layout = ({ children, isOpen }) => {
       <main className="relative z-[1]">
         {children}
       </main>
-      {!mobileWidth && <Footer />}
-      {mobileWidth && <FooterMobile />}
+      {!mobileWidth && <FooterComponent />}
+      {mobileWidth && <FooterMobileComponent />}
     </>
   )
 }
