@@ -356,7 +356,7 @@ const Footer = () => {
                 By: Enigma{" "}
               </p>
             </Link>
-            <p className="text-white text-[0.94vw] tracking-wide tablet:text-xl tablet:w-2/3">
+            <p className="text-white text-[0.94vw] tracking-wide tablet:text-xl tablet:w-[60%] pr-[5vw] tablet:pr-[8vw]">
               © 2025 HiveMinds Innovative Market Solutions Pvt. Ltd. All rights
               reserved.
             </p>

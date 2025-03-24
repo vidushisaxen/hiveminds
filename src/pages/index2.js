@@ -5,7 +5,7 @@ import Contact from '@/components/Homepage/Contact'
 import Awards from '@/components/Homepage/Awards'
 import Story from '@/components/Homepage/Story'
 import TeamMembers from '@/components/Homepage/TeamMembers'
-import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
+
 import React, { useEffect, useState } from 'react'
 import { Clients2 } from '@/components/Homepage/Clients2'
 import Services from '@/components/Homepage/Solutions'
@@ -41,10 +41,7 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
   }, []);
   const [isOpen, setIsOpen] = useState(false);
 
-  paraAnim();
-  headingAnim()
-  fadeUp();
-  fadeIn();
+ 
 
 
   return (
@@ -54,7 +51,6 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
       <LoaderHome />
       <Layout isOpen={isOpen}>
         {!mobileWidth ? <Hero /> : <MobileHero />}
-     
         <Story isOpen={isOpen} setIsOpen={setIsOpen} />
         <Services />
         <Clients2 />

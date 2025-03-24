@@ -114,7 +114,7 @@ const Awards = () => {
     }
   };
   return (
-    <section id="awards " className="bg-primary mobile:py-[10%] tablet:py-[7%]">
+    <section id="awards " className="bg-primary mobile:py-[10%] tablet:py-[7%] rounded-tl-[2vw] rounded-tr-[2vw] mobile:rounded-tl-[5vw] mobile:rounded-tr-[5vw]">
       <div className="h-full w-[100vw] py-[5%] rounded-[30px] flex flex-col items-start justify-center px-[3vw] overflow-hidden relative mobile:pb-[25%]">
         <div className="w-[35%] flex flex-col gap-[2vw] mobile:w-full mobile:gap-[4vw] tablet:w-[70%]">
           <h2 className="heading-2 font-medium montreal !text-white headingAnim">

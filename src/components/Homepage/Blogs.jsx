@@ -84,7 +84,7 @@ const Blogs = ({posts}) => {
     <>
       <section id="blogs" className="relative">
         <div className="w-screen h-full flex items-center justify-center z-[10] mobile:flex-col ">
-          <div className="w-[92%] h-full rounded-[1.2vw] bg-[#F2F2F2] flex  justify-center px-[2vw] py-[6vw] gap-[2vw]  drop-shadow-2xl shadow-inner overflow-hidden mobile:flex-col mobile:py-[10vw] mobile:drop-shadow-none mobile:shadow-md mobile:px-[3.5vw] mobile:rounded-[4vw] tablet:flex-col tablet:rounded-[3vw] tablet:px-[5vw]">
+          <div className="w-[92%] h-full rounded-[1.2vw] bg-[#F2F2F2] flex  justify-center px-[2vw] py-[6vw] gap-[2vw]  drop-shadow-xl shadow-inner overflow-hidden mobile:flex-col mobile:py-[10vw] mobile:drop-shadow-none mobile:shadow-md mobile:px-[3.5vw] mobile:rounded-[4vw] tablet:flex-col tablet:rounded-[3vw] tablet:px-[5vw]">
             <div className="w-[35%] h-full mobile:w-full tablet:w-full ">
               <div className="flex flex-col gap-[2vw] mobile:gap-[4vw] tablet:gap-[3vw]">
                 <h2 className="heading-2 headingAnim">
@@ -150,7 +150,7 @@ const Blogs = ({posts}) => {
             </div>
           </div>
         </div>
-        <div className="mobile:block h-[50%] mobile:h-[20%] w-screen bg-primary absolute top-0 left-0 mobile:rounded-bl-[4vw] z-[-1] mobile:rounded-br-[4vw] rounded-bl-[2vw] rounded-br-[2vw] tablet:block tablet:h-[150vw] ">
+        <div className="mobile:block h-[60%] mobile:h-[40%] w-screen bg-primary absolute top-0 left-0 mobile:rounded-bl-[4vw] z-[-1] mobile:rounded-br-[4vw] rounded-bl-[2vw] rounded-br-[2vw] tablet:block tablet:h-[150vw] ">
 
         </div>
       </section>

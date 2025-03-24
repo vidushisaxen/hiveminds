@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import Header from "../Header";
 import dynamic from "next/dynamic";
+import FloatContact from "../FloatContact";
 const FooterComponent = dynamic(() => import("@/components/Footer"));
 const FooterMobileComponent = dynamic(() => import("@/components/FooterMobile"));
 
@@ -21,6 +22,7 @@ const Layout = ({ children, isOpen }) => {
       <main className="relative z-[1]">
         {children}
       </main>
+      <FloatContact/>
       {!mobileWidth && <FooterComponent />}
       {mobileWidth && <FooterMobileComponent />}
     </>

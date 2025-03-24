@@ -37,7 +37,11 @@ module.exports = {
       backgroundImage: {
         'grid-pattern': '',
         'grid-pattern-light': '',
-      }
+      },
+      transitionDuration: {
+        '2000': '2000ms',
+        '5000': '5000ms',
+      },
     }
   },
   plugins: [require("tailwindcss-animate")],
