@@ -6,13 +6,12 @@ import "lenis/dist/lenis.css";
 import { DefaultSeo } from "next-seo";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import nextSeoConfig from "../../next-seo.config";
 import { AnimatePresence ,motion} from "framer-motion";
 import { ImageObjectJsonLd, LocalBusiness, OrganizationJsonLd, WebsiteJsonLd } from "@/lib/json-ld";
 import gsap from 'gsap'
-
-
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -100,6 +99,7 @@ export default function App({ Component, pageProps }) {
             </motion.div>
           </AnimatePresence>
           <SpeedInsights />
+          <Analytics />
         </div>
       </ReactLenis>
     </>
