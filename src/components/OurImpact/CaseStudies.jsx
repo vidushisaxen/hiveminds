@@ -228,7 +228,7 @@ const CaseStudies = () => {
             </Select>
           </div>
           <button onClick={handleFilter}
-            className="bg-[#134BD6] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-[30px] tablet:py-[1.5vw] tablet:px-[5vw] mobile:text-[4vw] mobile:px-[7vw] mobile:py-[3vw]">
+            className="bg-[#134bd5] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-[30px] tablet:py-[1.5vw] tablet:px-[5vw] mobile:text-[4vw] mobile:px-[7vw] mobile:py-[3vw]">
             Apply
           </button>
         </div>

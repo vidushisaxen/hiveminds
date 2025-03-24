@@ -12,7 +12,7 @@ const Brochure = () => {
  
 
     return (
-        <section id="brochure" className=' bg-[#134BD6]'>
+        <section id="brochure" className=' bg-[#134bd5]'>
             <div className="w-screen h-full z-[10] relative container-lg py-[7%] mobile:py-[12%]">
                 <div className="w-full h-full flex gap-[10vw] mobile:flex-col tablet:flex-col">
                     <div className="w-[45%] flex flex-col gap-[2vw] mobile:w-full mobile:gap-[4vw] tablet:w-full">

@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --primary: #134bd6;
+  --primary: #134bd5;
   --body: #111111;
   --white-2: #fafafa;
   --font-body: "Avenir", Arial, Helvetica, sans-serif;
@@ -31,7 +31,7 @@ body {
   color: #ffffff;
 }
 .blue-text {
-  color: #134bd6;
+  color: #134bd5;
 }
 .content {
   font-size: 1.15vw;
@@ -92,7 +92,7 @@ body {
   top: 20%;
 }
 .swiper-scrollbar-drag {
-  background-color: #134bd6 !important;
+  background-color: #134bd5 !important;
   height: 0.3vw !important;
 }
 .caseStudySwiper .swiper-slide .swiper-slide-shadow {
@@ -227,7 +227,7 @@ body {
   height: 0px;
   left: 0;
   top: 0;
-  color: #134bd6;
+  color: #134bd5;
   background-color: white;
   z-index: -1;
   border-radius: 100%;
@@ -396,7 +396,7 @@ body.loading {
 }
 
 .swiper-scrollbar-drag {
-  background: #134bd6 !important; /* Solid blue scrollbar */
+  background: #134bd5 !important; /* Solid blue scrollbar */
   border-radius: 10px;
  
 }
@@ -561,7 +561,7 @@ left: 42% !important;
     /* transition: opacity 0.2s ease-in-out; */
   }
   .swiper-scrollbar-drag {
-    background: #134bd6 !important; /* Solid blue scrollbar */
+    background: #134bd5 !important; /* Solid blue scrollbar */
     border-radius: 10px;
     height: 0.5vw !important;
   }
@@ -602,7 +602,7 @@ left: 42% !important;
     /* transition: opacity 0.2s ease-in-out; */
   }
   .swiper-scrollbar-drag {
-    background: #134bd6 !important; /* Solid blue scrollbar */
+    background: #134bd5 !important; /* Solid blue scrollbar */
     border-radius: 10px;
     height: 1.5vw !important;
     width: 23% !important;

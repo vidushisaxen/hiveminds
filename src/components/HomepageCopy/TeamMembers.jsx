@@ -160,7 +160,7 @@ const TeamMembers = () => {
                     />
                   </div>
                   <div
-                    className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]`}
+                    className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134bd5]`}
                   ></div>
                 </div>
               </div>
@@ -181,7 +181,7 @@ const TeamMembers = () => {
                     />
                   </div>
                   <div
-                    className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]`}
+                    className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134bd5]`}
                   ></div>
                 </div>
               </div>
@@ -202,7 +202,7 @@ const TeamMembers = () => {
                     />
                   </div>
                   <div
-                    className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]`}
+                    className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134bd5]`}
                   ></div>
                 </div>
               </div>
@@ -223,7 +223,7 @@ const TeamMembers = () => {
                     />
                   </div>
                   <div
-                    className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]`}
+                    className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134bd5]`}
                   ></div>
                 </div>
               </div>
@@ -244,7 +244,7 @@ const TeamMembers = () => {
                     />
                   </div>
                   <div
-                    className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]`}
+                    className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134bd5]`}
                   ></div>
                 </div>
               </div>
@@ -265,7 +265,7 @@ const TeamMembers = () => {
                     />
                   </div>
                   <div
-                    className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134BD6]`}
+                    className={`${styles.cardBack} absolute w-full h-full top-0 left-0 rounded-[8px] bg-[#134bd5]`}
                   ></div>
                 </div>
               </div>

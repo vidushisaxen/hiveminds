@@ -59,7 +59,7 @@ const Jobs = () => {
                     <JobCard  title={"Marketing Analyst"} duration={"Full Time"} location={"Bangalore"} link={"/"}/>
                 </div>
             </div>
-            <span className='absolute w-screen h-[55%] bottom-0 left-0 bg-[#134BD6] z-[-1]'>
+            <span className='absolute w-screen h-[55%] bottom-0 left-0 bg-[#134bd5] z-[-1]'>
 
             </span>
         </section>

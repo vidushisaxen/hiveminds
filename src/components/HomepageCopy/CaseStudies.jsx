@@ -121,9 +121,9 @@ const CaseStudiesCopy = ({ caseStudies }) => {
                     data-text={category.btnName}
                     className={`${
                       styles.buttonPlain
-                    } cursor-pointer relative overflow-hidden border-[#134BD6] border-[1.5px] rounded-[40px] text-[0.97vw] font-light h-fit flex items-center justify-center text-center px-[1.5vw] py-[0.5vw] transition-all duration-300 mobile:!text-[3.5vw] tablet:text-[2vw] tablet:px-[4vw] tablet:py-[1vw] tablet:w-fit tablet:h-fit ${
+                    } cursor-pointer relative overflow-hidden border-[#134bd5] border-[1.5px] rounded-[40px] text-[0.97vw] font-light h-fit flex items-center justify-center text-center px-[1.5vw] py-[0.5vw] transition-all duration-300 mobile:!text-[3.5vw] tablet:text-[2vw] tablet:px-[4vw] tablet:py-[1vw] tablet:w-fit tablet:h-fit ${
                       activeCategory === category.btnName
-                        ? " text-white bg-[#134BD6]"
+                        ? " text-white bg-[#134bd5]"
                         : ""
                     } `}
                     onClick={() => {

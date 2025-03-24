@@ -355,7 +355,7 @@ const Listing = () => {
           </Select>
         </div>
         <button
-          className="bg-[#134BD6] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-full mobile:text-[5vw] mobile:px-[7vw] mobile:py-[2.5vw]"
+          className="bg-[#134bd5] text-white px-[3vw] py-[1vw] mt-[3vw] rounded-full mobile:text-[5vw] mobile:px-[7vw] mobile:py-[2.5vw]"
           onClick={handleFilter}
         >
           Apply

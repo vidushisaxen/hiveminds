@@ -38,7 +38,7 @@ const LoaderHome = () => {
         className="bg-white text-white h-screen w-screen fixed z-[999] flex items-center justify-center"
       >
         <div className="relative flex items-center justify-center mb-10">
-          <Image src={"/assets/icons/logo.svg"} alt="hiveminds-logo" width={150} height={80} className="w-[18vw] h-[15vw] mobile:w-[50vw] tablet:w-[35vw] tablet:h-[20vw] mobile:h-[30vw] object-contain"/>
+          <Image src={"/assets/icons/logo.svg"} alt="hiveminds-logo" priority={true} width={150} height={80} className="w-[18vw] h-[15vw] mobile:w-[50vw] tablet:w-[35vw] tablet:h-[20vw] mobile:h-[30vw] object-contain"/>
 
           <span
             ref={gradient}

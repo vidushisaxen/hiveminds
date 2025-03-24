@@ -26,7 +26,7 @@ const Locations = () => {
 
   return (
     <section
-      className="w-screen h-[70vw] py-[5%] pb-[25vw] bg-[#134BD6] mobile:h-[370vw] mobile:py-[10%] tablet:h-[160vw] tablet:py-[10%]"
+      className="w-screen h-[70vw] py-[5%] pb-[25vw] bg-[#134bd5] mobile:h-[370vw] mobile:py-[10%] tablet:h-[160vw] tablet:py-[10%]"
       id="locations"
     >
       <div className="container-lg flex flex-col gap-[4vw] items-center justify-center tablet:items-start">
@@ -36,7 +36,7 @@ const Locations = () => {
         <div className="flex w-full justify-between mobile:flex-col mobile:gap-[4vw] mobile:mt-[7vw] tablet:flex-wrap tablet:justify-center tablet:gap-[3vw] tablet:mt-[4vw]">
           <div className="w-[29vw] h-[31vw] rounded-[1.2vw] bg-white p-[3vw] flex flex-col items-center location-card relative mobile:w-[90vw] mobile:h-[90vw] mobile:rounded-[4vw] mobile:pt-[10vw] tablet:w-[43vw] tablet:h-[50vw]">
             <h4 className="text-[2.8vw] montreal font-medium mobile:text-[8vw] tablet:text-[4.5vw]">Bengaluru</h4>
-            <span className="bg-[#134BD6] text-white py-[0.1vw] px-[0.9vw] rounded-full absolute top-[25%] text-[1vw] left-[45%] mobile:text-[4vw] mobile:px-[4vw] mobile:py-[1vw] mobile:top-[25%] mobile:left-[43%] montreal tablet:text-[2vw] tablet:px-[1.5vw] tablet:top-[20%]">
+            <span className="bg-[#134bd5] text-white py-[0.1vw] px-[0.9vw] rounded-full absolute top-[25%] text-[1vw] left-[45%] mobile:text-[4vw] mobile:px-[4vw] mobile:py-[1vw] mobile:top-[25%] mobile:left-[43%] montreal tablet:text-[2vw] tablet:px-[1.5vw] tablet:top-[20%]">
               HQ
             </span>
             <div className="w-full h-[1px] bg-black my-[4vw] mobile:mt-[15vw] mobile:mb-[7vw] tablet:my-[7vw]"></div>

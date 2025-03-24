@@ -184,7 +184,7 @@ export default function ContactForm() {
             name="terms"
             render={({ field }) => (
               <FormItem className="flex items-start gap-3 tablet:gap-1">
-                <Checkbox checked={field.value} onCheckedChange={field.onChange} className="mobile:mt-[2vw] tablet:mt-[2vw]" />
+                <Checkbox aria-label="checkbox" checked={field.value} onCheckedChange={field.onChange} className="mobile:mt-[2vw] tablet:mt-[2vw]" />
                 <span className="text-[1.1vw] text-black/70  capitalize mobile:text-[1rem] tablet:text-[2vw] tablet:px-[3vw]">
                   Sign me up to receive future marketing communications regarding Hiveminds.
                 </span>
