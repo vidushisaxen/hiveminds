@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
 import Image from "next/image";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -15,7 +13,7 @@ import img4 from '../../../public/assets/images/homepage/hero-dominos-img2.png'
 import img5 from '../../../public/assets/images/homepage/hero-flydubai-img1.png'
 import img6 from '../../../public/assets/images/homepage/hero-flydubai-img2.png'
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 const MobileHeroSwiper = () => {
   const swiperRef = useRef(null);

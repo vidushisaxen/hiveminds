@@ -1,18 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-
-import ContactForm from './Contactform';
-import { imgAnim } from '../gsapAnimations';
-gsap.registerPlugin(ScrollTrigger)
-
+import ContactForm from "./Contactform";
+import { imgAnim } from "../gsapAnimations";
 
 const Contact = ({ title1, title2, para }) => {
- imgAnim()
- 
- 
+  imgAnim();
 
   return (
     <section id="contact">
@@ -28,9 +21,7 @@ const Contact = ({ title1, title2, para }) => {
             </p>
             <div className="flex mt-[4vw] items-center justify-center gap-[2vw]">
               <div className="h-[17.5vw] w-[16.5vw] relative rounded-[16px] fadein mobile:w-full mobile:h-[80vw] tablet:w-1/2 tablet:h-[50vw]">
-              <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-white1 imgAnim origin-bottom">
-
-</div>
+                <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-white1 imgAnim origin-bottom"></div>
                 <Image
                   src="/assets/images/homepage/contact-1.png"
                   fill
@@ -39,9 +30,7 @@ const Contact = ({ title1, title2, para }) => {
                 />
               </div>
               <div className="h-[17.5vw] w-[16.5vw] relative rounded-[16px] fadein mobile:hidden tablet:w-1/2 tablet:h-[50vw]">
-              <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-white1 imgAnim origin-bottom">
-
-</div>
+                <div className="absolute w-full h-[100%] z-[2] top-0 left-0 overflow-hidden bg-white1 imgAnim origin-bottom"></div>
                 <Image
                   src="/assets/images/homepage/contact-2.png"
                   fill
@@ -54,18 +43,17 @@ const Contact = ({ title1, title2, para }) => {
 
           <div className="w-[50%] h-full mobile:w-full tablet:w-full">
             <ContactForm />
-        
           </div>
         </div>
-        <div
-          className="absolute h-[2vw] mobile:hidden w-[2.2vw] top-[40%] left-[35%] blue-hexagon-animation tablet:hidden"
-        >
+        <div className="absolute h-[2vw] mobile:hidden w-[2.2vw] top-[40%] left-[35%] blue-hexagon-animation tablet:hidden">
           <Image src="/assets/icons/blue-hexagon.svg" fill alt="blue-hexagon" />
         </div>
-        <div
-          className="absolute h-[2vw] mobile:hidden w-[2.2vw] top-[25%] left-[22%] yellow-hexagon-animation tablet:hidden"
-        >
-          <Image src="/assets/icons/yellow-hexagon.svg" fill alt="yellow-hexagon" />
+        <div className="absolute h-[2vw] mobile:hidden w-[2.2vw] top-[25%] left-[22%] yellow-hexagon-animation tablet:hidden">
+          <Image
+            src="/assets/icons/yellow-hexagon.svg"
+            fill
+            alt="yellow-hexagon"
+          />
         </div>
       </div>
     </section>
