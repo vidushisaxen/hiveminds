@@ -1,44 +1,4 @@
-import gsap from "gsap";
-import Image from "next/image";
-import { useEffect, useRef } from "react";
-
-const LoaderHome = () => {
-  const gradient = useRef(null);
-  const loaderMain = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline();
-      tl.to(gradient.current, {
-        duration: 2,
-        xPercent: 100,
-        delay: 0.5,
-        ease: "power3.out",
-      })
-      .to(loaderMain.current, {
-          duration: 0.5,
-          yPercent: -100,
-          delay: -0.5,
-          onComplete: () => {
-              gsap.set(loaderMain.current, {
-                  display: 'none',
-                  pointerEvents: 'none',
-              })
-          }
-      })
-    });
-    return () => ctx.revert();
-  }, []);
-
-  return (
-    <>
-      <div
-        ref={loaderMain}
-        id="preloader"
-        className="bg-white text-white h-screen w-screen fixed z-[999] flex items-center justify-center"
-      >
-        <div className="relative flex items-center justify-center mb-10">
-          <svg className="w-[18vw] h-[15vw] mobile:w-[50vw] tablet:w-[35vw] tablet:h-[20vw] mobile:h-[30vw] object-contain" viewBox="0 0 202 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="202" height="60" viewBox="0 0 202 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_3506_463)">
 <path d="M16.9874 44.3576C14.369 44.3576 11.7506 44.3514 9.13218 44.37C8.77231 44.37 8.56755 44.2583 8.39382 43.9605C6.79299 41.1683 5.18596 38.3824 3.57893 35.5964C2.61099 33.9212 1.64304 32.2521 0.656487 30.5892C0.402092 30.1673 0.433115 29.8074 0.668896 29.3979C1.94708 27.2138 3.22526 25.0235 4.49103 22.8333C5.80023 20.5685 7.09703 18.2914 8.40623 16.0266C8.55514 15.766 8.74749 15.6357 9.10116 15.6357C14.3566 15.6544 19.612 15.6544 24.8612 15.6357C25.2397 15.6357 25.4135 15.7847 25.5748 16.0701C27.4548 19.3524 29.3411 22.6285 31.2273 25.9046C31.9036 27.0773 32.5862 28.2438 33.2935 29.3917C33.5603 29.826 33.5355 30.1921 33.2811 30.6264C32.2511 32.3638 31.2521 34.1197 30.2346 35.8632C29.1487 37.7247 28.0567 39.5861 26.9709 41.4475C26.4993 42.2604 26.0277 43.0794 25.581 43.9046C25.4073 44.2211 25.2211 44.37 24.8302 44.3638C22.2118 44.3452 19.5934 44.3514 16.975 44.3514" fill="#3A6CB4"/>
 <path d="M45.2631 28.7218C42.6447 28.7218 40.0263 28.7156 37.4079 28.728C37.048 28.728 36.837 28.6225 36.6633 28.3185C35.0625 25.5202 33.4554 22.7218 31.8422 19.9297C30.8743 18.2544 29.9063 16.5853 28.9136 14.9286C28.6654 14.5129 28.6964 14.1717 28.926 13.7746C30.3531 11.3299 31.774 8.88521 33.1886 6.43433C34.3551 4.41779 35.5092 2.40124 36.6695 0.384695C36.8308 0.11789 37.0294 0 37.3769 0C42.6137 0.0186143 47.8567 0.0186143 53.0935 0C53.4534 0 53.6643 0.105481 53.8381 0.409514C55.4389 3.20786 57.0459 6.00621 58.6592 8.79835C59.6271 10.4674 60.5951 12.1427 61.5878 13.7994C61.836 14.2089 61.805 14.5564 61.5754 14.9535C60.1483 17.3981 58.7336 19.8428 57.3127 22.2937C56.1462 24.3102 54.9922 26.3268 53.8319 28.3433C53.6768 28.6163 53.472 28.7342 53.1245 28.728C50.5061 28.7094 47.8877 28.7156 45.2693 28.7156" fill="#639CD4"/>
@@ -80,15 +40,3 @@ const LoaderHome = () => {
 </clipPath>
 </defs>
 </svg>
-
-          <span
-            ref={gradient}
-            className="absolute top-0 -left-full block w-[200%] h-full bg-gradient-to-l from-current via-current to-transparent"
-          />
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default LoaderHome;

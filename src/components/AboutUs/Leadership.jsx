@@ -11,7 +11,7 @@ const team = [
   {
     id: 2,
     name: "Abhishek Upadhya",
-    src: "/assets/images/about/image.png",
+    src: "/assets/images/about/abhishek-updhya.png",
     designation: "SVP - Digital Innovation & Strategy",
   },
   {
@@ -59,13 +59,13 @@ const team = [
   {
     id: 10,
     name: "Pradeep Saluja",
-    src: "/assets/images/about/image.png",
+    src: "/assets/images/about/pradeep-saluja.png",
     designation: "Chief Operating Officer",
   },
   {
     id: 11,
     name: "Sikha Agrawalla",
-    src: "/assets/images/about/image.png",
+    src: "/assets/images/about/sikha-agrawalla.png",
     designation: "VP - People & Culture",
   },
   {
