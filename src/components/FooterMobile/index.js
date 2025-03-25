@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import Map from "../Footer/Map";
 
 const FooterMobile = () => {
   const [openSection, setOpenSection] = useState(null);
+  const [location, setLocation] = useState("Bengaluru")
 
   // Toggle Function
   const toggleSection = (section) => {
@@ -163,37 +165,37 @@ const FooterMobile = () => {
                 {/* Separator Line */}
                 <div className="w-full h-[1px] bg-white mt-[3vw]"></div>
               </div>
-            ))}
+            ))} 
           </div>
           <div className="w-full h-full flex flex-col items-start justify-start gap-[4vw] mobile:mt-[7vw] mobile:gap-[6vw]">
             <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal order-1 mobile:text-[4.5vw]">
               Our Office Address
             </p>
-            <div className="order-3">
-              <p className="content-white underline mobile:!text-[4vw]">
+            <div className="order-3 " onClick={() => setLocation("Bengaluru")} >
+              <p className="content-white  mobile:!text-[4vw]">
                 {" "}
                 BENGALURU (HQ) : No. 11, Seventh Floor, Global Tech Park, O
                 Shaughnessy Rd, Langford Town, Langford Gardens, Bengaluru,
                 Karnataka 560025
               </p>
             </div>
-            <div className="order-4">
+            <div className="order-4" onClick={() => setLocation("Mumbai")} >
               <p className="content-white mobile:!text-[4vw]">
                 MUMBAI : Office no 301 & 302, 3rd Floor, The Eagle&apos;s Flight
                 Building, Gundavali, Andheri East, Andheri, Mumbai, Maharashtra
                 400047
               </p>
             </div>
-            <div className="order-5">
+            <div className="order-5" onClick={() => setLocation("Gurgaon")} >
               <p className="content-white mobile:!text-[4vw]">
                 GURGAON : Spring House Coworking, 4th Floor,JMD Regent Arcade,
                 Haryana 122002
               </p>
             </div>
 
-            <div className="h-[15vw] w-[25vw] relative rounded-[12px] order-2 mobile:w-full mobile:h-[70vw]">
-              {/* <Map /> */}
-              <Image src={"/assets/images/homepage/map.png"} alt="map" fill />
+            <div className="h-[15vw] w-[25vw] relative rounded-[12px] order-2 mobile:w-full mobile:h-[70vw] overflow-hidden">
+              <Map location={location} height={"300px"} className="w-full h-full"/>
+              {/* <Image src={"/assets/images/homepage/map.png"} alt="map" fill /> */}
             </div>
             <div className="w-full flex items-start justify-center gap-[2vw] flex-col order-6 mobile:gap-[4vw]">
               <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal mobile:text-[5vw]">

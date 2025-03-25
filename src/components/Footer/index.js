@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import Map from "./Map";
+import { useState } from "react";
 // import Map from "./Map";
 
 const Footer = () => {
+  const [location, setLocation] = useState("Bengaluru")
   return (
     <footer
       id="footer"
@@ -16,36 +19,36 @@ const Footer = () => {
               <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal tablet:text-[3.2vw] tablet:mb-5">
                 Our Office Address
               </p>
-              <div>
-                <p className="content-white underline">
+              <div onMouseEnter={() => setLocation("Bengaluru")} className="under-multi-parent">
+                <span className="content-white under-multi">
                   {" "}
                   BENGALURU (HQ) : No. 11, Seventh Floor, Global Tech Park, O
                   Shaughnessy Rd, Langford Town, Langford Gardens, Bengaluru,
                   Karnataka 560025
-                </p>
+                </span>
               </div>
-              <div>
-                <p className="content-white">
+              <div onMouseEnter={() => setLocation("Mumbai")} className="under-multi-parent">
+                <span className="content-white under-multi" >
                   MUMBAI : Office no 301 & 302, 3rd Floor, The Eagle&apos;s
                   Flight Building, Gundavali, Andheri East, Andheri, Mumbai,
                   Maharashtra 400047
-                </p>
+                </span>
               </div>
-              <div>
-                <p className="content-white">
+              <div onMouseEnter={() => setLocation("Gurgaon")} className="under-multi-parent">
+                <span className="content-white under-multi">
                   GURGAON : Spring House Coworking, 4th Floor,JMD Regent Arcade,
                   Haryana 122002
-                </p>
+                </span>
               </div>
             </div>
             <div className="h-[15vw] w-[25vw] relative rounded-[12px] tablet:w-2/5 tablet:h-[35vw] overflow-hidden tablet:mt-[6vw]">
-              {/* <Map /> */}
-              <Image
+              <Map location={location} height={"250px"}/>
+              {/* <Image
                 src={"/assets/images/homepage/map.png"}
                 alt="map"
                 fill
                 className="object-cover !static h-full w-full"
-              />
+              /> */}
             </div>
           </div>
 

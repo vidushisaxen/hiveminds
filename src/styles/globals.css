@@ -255,7 +255,25 @@ body {
   opacity: 1 !important;
   color: #000;
 }
+.under-multi {
+  text-decoration: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0, 0)),
+    linear-gradient(#ffffff, #ffffff);
+  background-size:
+    100% 0px,
+    0% 1px;
+  background-position:
+    100% 100%,
+    0 100%;
+  background-repeat: no-repeat, no-repeat;
+  transition: all 1s ease-out;
+}
 
+.under-multi-parent:hover .under-multi {
+  background-size:
+    100% 0px,
+    100% 1px;
+}
 
 /* screen size for mobile */
 @media screen and (max-width: 540px) {

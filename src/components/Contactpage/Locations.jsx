@@ -1,11 +1,13 @@
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Map from "../Footer/Map";
 import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const Locations = () => {
+    const [location, setLocation] = useState("Bengaluru")
+  
   useEffect(() => {
     const ctx = gsap.context(() => {
        gsap.from(".location-card",{
@@ -44,11 +46,11 @@ const Locations = () => {
               No. 11, Seventh Floor, Global Tech Park, O Shaughnessy Rd,
               Langford Town, Langford Gardens, Bengaluru, Karnataka 560025
             </p>
-            <Link href={"/"}>
+            <div className="cursor-pointer" onMouseEnter={() => setLocation("Bengaluru")}>
               <p className="content !font-medium hover:text-blue-700 link-line transition-all duration-300 ease-in-out  mt-[3vw] mobile:mt-[10vw]">
                 Show On Google Map
               </p>
-            </Link>
+            </div>
           </div>
           <div className="w-[29vw] h-[31vw] rounded-[1.2vw] bg-white p-[3vw] flex flex-col items-center location-card mobile:w-[90vw] mobile:h-[90vw] mobile:rounded-[4vw] mobile:pt-[10vw] tablet:w-[43vw] tablet:h-[50vw]">
             <h4 className="text-[2.8vw] montreal font-medium mobile:text-[8vw] tablet:text-[4.5vw]">Mumbai</h4>
@@ -57,11 +59,11 @@ const Locations = () => {
               Office no 301 & 302, 3rd Floor, The Eagle&apos;s Flight Building,
               Gundavali, Andheri East, Andheri, Mumbai, Maharashtra 400047
             </p>
-            <Link href={"/"}>
+            <div className="cursor-pointer" onMouseEnter={() => setLocation("Mumbai")}>
               <p className="content !font-medium hover:text-blue-700 link-line transition-all duration-300 ease-in-out   mt-[3vw]">
                 Show On Google Map
               </p>
-            </Link>
+            </div>
           </div>
           <div className="w-[29vw] h-[31vw] rounded-[1.2vw] bg-white p-[3vw] flex flex-col items-center location-card mobile:w-[90vw] mobile:h-[90vw] mobile:rounded-[4vw] mobile:pt-[10vw] tablet:w-[43vw] tablet:h-[50vw]">
             <h4 className="text-[2.8vw] montreal font-medium mobile:text-[8vw] tablet:text-[4.5vw]">Gurugram</h4>
@@ -72,11 +74,11 @@ const Locations = () => {
                 122002
               </p>
               <div className="flex justify-center items-center w-fit h-full">
-                <Link href={"/"}>
-                  <p className=" content !font-medium hover:text-blue-700 link-line transition-all duration-300 ease-in-out  mt-[3vw]">
+                <div className="cursor-pointer" onMouseEnter={() => setLocation("Gurgaon")}>
+                  <p className=" content !font-medium link-line hover:text-blue-700 div-line transition-all duration-300 ease-in-out  mt-[3vw]">
                     Show On Google Map
                   </p>
-                </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -84,13 +86,13 @@ const Locations = () => {
       </div>
       <div className="w-full px-[5vw]">
         <div className="w-[90vw] h-[40vw]  relative rounded-[1.2vw] overflow-hidden mt-[7vw] z-[10] mobile:w-[88vw] mobile:h-[110vw] mobile:rounded-[6vw]">
-          {/* <Map/> */}
-          <Image
+          <Map location={location} height={"600px"}/>
+          {/* <Image
             src={"/assets/images/contactpage/contact-map-image.png"}
             alt="map"
             fill
             className="object-cover"
-          />
+          /> */}
         </div>
       </div>
     </section>

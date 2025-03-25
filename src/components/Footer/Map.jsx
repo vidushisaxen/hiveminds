@@ -1,18 +1,20 @@
 import React from 'react';
-import { GoogleMapsEmbed } from '@next/third-parties/google';
 
-const Map = () => {
-    const apiKey = process.env.REACT_APP_API_KEY;  
+const Map = ({location,height}) => {
+  const mapUrls = {
+    Bengaluru: "https://snazzymaps.com/embed/694971",
+  Mumbai: "https://snazzymaps.com/embed/694975",
+    Gurgaon: "https://snazzymaps.com/embed/694976",
+  };
   return (
-   <>
+   <>   
    <div>
-      <GoogleMapsEmbed
-      apiKey={apiKey}
-      height="200"
-      width="100%"
-      mode="place"
-      q="Hiveminds+Bengaluru"
-    />
+   <iframe 
+        src={mapUrls[location] || mapUrls.Bengaluru} 
+        width="100%" 
+        height={height} 
+        style={{ border: "none" }} 
+      ></iframe>
     </div>
    </>
   )
