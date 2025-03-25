@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
-import React,{ useState } from 'react'
+import React,{ useEffect, useState } from 'react'
 import Metadata from '@/components/Metadata'
 import { getHomePageCaseStudies } from '@/lib/casestudies'
 import { getAllIndustries } from '@/lib/industries'
@@ -31,6 +31,14 @@ const metadata = {
 }
 const index = ({ stickyCaseStudies, filteredPosts }) => {
 
+  const [mobileWidth, setMobileWidth] = useState(false);
+  useEffect(() => {
+    if (globalThis.innerWidth > 1024) {
+      setMobileWidth(false);
+    } else {
+      setMobileWidth(true);
+    }
+  }, []);
   const [isOpen, setIsOpen] = useState(false);
 
  
@@ -42,8 +50,9 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
       <WebpageJsonLd metadata={metadata} />
       {/* <LoaderHome /> */}
       <Layout isOpen={isOpen}>
-       <HeroCopy /> 
-        <MobileHeroCopy />
+        {mobileWidth? <MobileHeroCopy />:<HeroCopy /> }
+      
+      
         <StoryCopy isOpen={isOpen} setIsOpen={setIsOpen} />
         <ServicesComponent />
         <Clients2Copy />
