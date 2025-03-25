@@ -11,29 +11,7 @@ const TeamMembers = () => {
     } else {
       setMobileWidth(true);
     }
-    // gsap.fromTo(
-    //   `.team-container .${styles.card}`,
-    //   {
-    //     scale: 0,
-    //     opacity: 0.5,
-    //   },
-    //   {
-    //     scale: 1,
-    //     opacity: 1,
-    //     duration: 1,
-    //     stagger: {
-    //       amount: 1,
-    //       each: 0.3,
-    //       from: "random",
-    //     },
-    //     ease: "power3.out",
-    //     scrollTrigger: {
-    //       trigger: ".team-container",
-    //       start: "top 80%",
-    //       end: "bottom 20%",
-    //     },
-    //   }
-    // );
+  
   }, []);
 
   useEffect(() => {
@@ -154,7 +132,8 @@ const TeamMembers = () => {
                   >
                     <Image
                       src="/assets/images/homepage/part-1.png"
-                      fill
+                      width={200}
+                      height={400}
                       alt="team"
                       className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`}
                     />
@@ -175,7 +154,8 @@ const TeamMembers = () => {
                   >
                     <Image
                       src="/assets/images/homepage/part-2.png"
-                      fill
+                      width={300}
+                      height={500}
                       alt="team"
                       className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`}
                     />
@@ -196,7 +176,8 @@ const TeamMembers = () => {
                   >
                     <Image
                       src="/assets/images/homepage/part-3.png"
-                      fill
+                      width={200}
+                      height={400}
                       alt="team"
                       className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`}
                     />
@@ -217,7 +198,8 @@ const TeamMembers = () => {
                   >
                     <Image
                       src="/assets/images/homepage/part-4.png"
-                      fill
+                      width={200}
+                      height={400}
                       alt="team"
                       className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`}
                     />
@@ -238,7 +220,8 @@ const TeamMembers = () => {
                   >
                     <Image
                       src="/assets/images/homepage/part-5.png"
-                      fill
+                      width={200}
+                      height={400}
                       alt="team"
                       className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`}
                     />
@@ -259,7 +242,8 @@ const TeamMembers = () => {
                   >
                     <Image
                       src="/assets/images/homepage/part-6.png"
-                      fill
+                      width={200}
+                      height={400}
                       alt="team"
                       className={`${styles.cardImage} w-full h-full object-cover rounded-[8px]`}
                     />

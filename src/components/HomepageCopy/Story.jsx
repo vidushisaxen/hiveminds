@@ -7,11 +7,14 @@ import { useLenis } from "lenis/react";
 import { initMagneticButton } from "../splitTextUtils";
 import dynamic from "next/dynamic";
 import LinkButton from "../Button/LinkButton";
+import { fadeUp, headingAnim, paraAnim } from "../gsapAnimations";
 gsap.registerPlugin(ScrollTrigger);
 
 const VideoModal = dynamic(() => import("@/components/VideoPlayer"));
-const Story = ({ isOpen, setIsOpen }) => {
-  
+const StoryCopy = ({ isOpen, setIsOpen }) => {
+  headingAnim()
+  paraAnim()
+  fadeUp()
   const videoRef = useRef(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -164,4 +167,4 @@ const Story = ({ isOpen, setIsOpen }) => {
   );
 };
 
-export default Story;
+export default StoryCopy;

@@ -10,13 +10,12 @@ import LoaderHome from '../components/Loader'
 import dynamic from 'next/dynamic'
 import HeroCopy from '@/components/HomepageCopy/Hero'
 import MobileHeroCopy from '@/components/HomepageCopy/MobileHero'
-import StoryCopy from '@/components/Homepage/Story'
-import ServicesCopy from '@/components/Homepage/Solutions'
+import StoryCopy from '@/components/HomepageCopy/Story'
+import ServicesCopy from '@/components/HomepageCopy/Solutions'
 import { Clients2Copy } from '@/components/HomepageCopy/Clients2'
-import TeamMembersCopy from '@/components/Homepage/TeamMembers'
+import TeamMembersCopy from '@/components/HomepageCopy/TeamMembers'
 import AwardsCopy from '@/components/HomepageCopy/Awards'
 import ContactCopy from '@/components/HomepageCopy/Contact'
-import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
 
 
 const BlogComponent = dynamic(() => import("@/components/HomepageCopy/Blogs"));
@@ -40,10 +39,7 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
     }
   }, []);
   const [isOpen, setIsOpen] = useState(false);
-headingAnim()
-paraAnim()
-fadeUp()
-fadeIn()
+
  
 
 

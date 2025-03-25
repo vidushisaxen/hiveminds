@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PlainButton from "../Button/PlainButton";
 import styles from "../Button/styles.module.css";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { formatDate } from "@/lib/datetime";
-gsap.registerPlugin(ScrollTrigger)
+
 
 const BlogCard = ({ link, para, src, date  ,className}) => {
     const formattedDate = formatDate(date);
@@ -63,22 +61,6 @@ const BlogCard = ({ link, para, src, date  ,className}) => {
 
 const BlogsCopy = ({posts}) => {
  
-  useEffect(() => {
-    if (globalThis.innerWidth > 1024) {
-      const ctx = gsap.context(() => {
-        gsap.from(".blog", {
-          xPercent: 100,
-          opacity: 0,
-          duration: 1.2,
-          scrollTrigger: {
-            trigger: "#blogs",
-            start: "top 80%"
-          }
-        })
-      })
-      return () => ctx.revert();
-    }
-  }, []);
 
   return (
     <>
