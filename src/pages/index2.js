@@ -6,20 +6,21 @@ import { getHomePageCaseStudies } from '@/lib/casestudies'
 import { getAllIndustries } from '@/lib/industries'
 import { WebpageJsonLd } from '@/lib/json-ld'
 import { getAllPosts } from '@/lib/blogs'
-import LoaderHome from '../components/Loader'
+// import LoaderHome from '../components/Loader'
 import dynamic from 'next/dynamic'
 import HeroCopy from '@/components/HomepageCopy/Hero'
 import MobileHeroCopy from '@/components/HomepageCopy/MobileHero'
 import StoryCopy from '@/components/HomepageCopy/Story'
-import ServicesCopy from '@/components/HomepageCopy/Solutions'
-import { Clients2Copy } from '@/components/HomepageCopy/Clients2'
 import TeamMembersCopy from '@/components/HomepageCopy/TeamMembers'
 import AwardsCopy from '@/components/HomepageCopy/Awards'
 import ContactCopy from '@/components/HomepageCopy/Contact'
+import { Clients2Copy } from '@/components/HomepageCopy/Clients'
 
 
 const BlogComponent = dynamic(() => import("@/components/HomepageCopy/Blogs"));
 const CaseStudyComponent = dynamic(()=>import("@/components/HomepageCopy/CaseStudies"))
+const ServicesComponent = dynamic(()=>import("@/components/HomepageCopy/Solutions"))
+// const Clients2Component = dynamic(()=>import("@/components/HomepageCopy/Clients"))
 const metadata = {
   title: "HiveMinds | Data-Driven Digital Marketing for Business Growth",
   metaDescription: "HiveMinds delivers strategic, data-driven digital marketing solutions to help startups and brands grow sustainably with advanced technology and expertise.",
@@ -39,12 +40,12 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
     <> 
       <Metadata metadata={metadata} />
       <WebpageJsonLd metadata={metadata} />
-      <LoaderHome />
+      {/* <LoaderHome /> */}
       <Layout isOpen={isOpen}>
        <HeroCopy /> 
         <MobileHeroCopy />
         <StoryCopy isOpen={isOpen} setIsOpen={setIsOpen} />
-        <ServicesCopy />
+        <ServicesComponent />
         <Clients2Copy />
         <TeamMembersCopy />
         <div className='relative h-fit w-screen rounded-[20px]  '>
