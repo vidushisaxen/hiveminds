@@ -152,7 +152,7 @@ const HeroCopy = () => {
   return (
     <section
       id="hero"
-      className="flex w-screen h-screen overflow-hidden relative bg-[#F1F1F1]"
+      className="flex w-screen h-screen overflow-hidden relative bg-[#F1F1F1] mobile:hidden tablet:hidden"
     >
       {/* Left Section */}
       <div className="w-[45%] h-screen flex items-center justify-between container-lg pt-[5vw] pl-[5vw] pr-[2vw]">

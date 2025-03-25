@@ -118,7 +118,7 @@ const MobileHeroCopy = () => {
 
   return (
     <section
-      className="w-screen h-full pt-[30%] pb-[15%] overflow-hidden tablet:pt-[20%] tablet:h-[90vh]"
+      className="w-screen h-full pt-[30%] pb-[15%] overflow-hidden tablet:pt-[20%] tablet:h-[90vh] hidden mobile:block tablet:block"
       id="hero"
     >
       <div className="container-lg flex flex-col gap-[5vw]">
