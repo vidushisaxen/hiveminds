@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import "@/styles/globals.css";
 import { ReactLenis, useLenis } from "lenis/react";
@@ -7,7 +6,12 @@ import { DefaultSeo } from "next-seo";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import nextSeoConfig from "../../next-seo.config";
-import { AnimatePresence, m, domAnimation, LazyMotion } from "framer-motion";
+import { 
+  AnimatePresence, 
+  LazyMotion, 
+  domAnimation ,
+  m
+} from "framer-motion"; 
 import {
   ImageObjectJsonLd,
   LocalBusiness,
@@ -40,7 +44,6 @@ export default function App({ Component, pageProps }) {
     exit: { opacity: 0 },
   };
 
-  // Handle mouse enablement based on viewport width
   useEffect(() => {
     if (globalThis.innerWidth > 1024) {
       const enableMouse = () => setMouseEnabled(true);
@@ -54,8 +57,6 @@ export default function App({ Component, pageProps }) {
       setMouseEnabled(true);
     }
   }, [mouseEnabled]);
-
-  // Handle route change and reset Lenis scroll
   useEffect(() => {
     const handleRouteChange = () => {
       if (lenis) {
@@ -69,7 +70,6 @@ export default function App({ Component, pageProps }) {
     };
   }, [router.events, lenis]);
 
-  // Change background color on route change start
   useEffect(() => {
     const handleRouteChange = () => {
       document.body.style.backgroundColor = "#fafafa";
@@ -79,7 +79,6 @@ export default function App({ Component, pageProps }) {
       router.events.off("routeChangeStart", handleRouteChange);
     };
   }, []);
-  console.log(router.pathname)
 
   return (
     <>
@@ -91,10 +90,10 @@ export default function App({ Component, pageProps }) {
 
       <ReactLenis root options={{ lerp: 0.07, autoRaf: false }} ref={lenisRef}>
         <div style={{ pointerEvents: mouseEnabled ? "auto" : "none" }}>
-          <AnimatePresence mode="wait">
-            <LazyMotion features={domAnimation}>
+          <LazyMotion features={domAnimation}>
+            <AnimatePresence mode="wait">
               <m.div
-                key={router.pathname}  // Ensure this key changes on route change
+                key={router.pathname}
                 initial="initial"
                 animate="animate"
                 exit="exit"
@@ -103,8 +102,8 @@ export default function App({ Component, pageProps }) {
               >
                 <Component {...pageProps} />
               </m.div>
-            </LazyMotion>
-          </AnimatePresence>
+            </AnimatePresence>
+          </LazyMotion>
           <SpeedInsights />
           <Analytics />
         </div>
