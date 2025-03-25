@@ -7,13 +7,13 @@ import { useLenis } from "lenis/react";
 import { initMagneticButton } from "../splitTextUtils";
 import dynamic from "next/dynamic";
 import LinkButton from "../Button/LinkButton";
-import { headingAnim } from "../gsapAnimations";
+import { headingAnim, paraAnim } from "../gsapAnimations";
 gsap.registerPlugin(ScrollTrigger);
 
 const VideoModal = dynamic(() => import("@/components/VideoPlayer"));
 const StoryCopy = ({ isOpen, setIsOpen }) => {
   headingAnim()
-  // paraAnim()
+  paraAnim()
   // fadeUp()
   const videoRef = useRef(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
