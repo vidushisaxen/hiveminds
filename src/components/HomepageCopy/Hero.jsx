@@ -224,9 +224,9 @@ const HeroCopy = () => {
         <div className="w-[51vw] h-[7vw] absolute bottom-0 rounded-tl-[2vw] rounded-tr-[2vw] border left-0 glassmorphism-dark z-[5]">
           <div className="w-full h-full flex justify-between items-center px-[3vw]">
             <div className="flex items-center w-[50%]">
-              <h3 className="text-[2.4vw] font-extrabold uppercase leading-[1] content-detail">
+              <p className="text-[2.4vw] font-extrabold uppercase leading-[1] content-detail">
                 {details[activeDetail].num1}
-              </h3>
+              </p>
 
               <p className="content !leading-[1] content-para pl-[0.8vw]">
                 {details[activeDetail].para1}

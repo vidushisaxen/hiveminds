@@ -19,7 +19,7 @@ import { WebpageJsonLd } from '@/lib/json-ld'
 import { getAllPosts } from '@/lib/blogs'
 import LoaderHome from '../components/Loader'
 import dynamic from 'next/dynamic'
-import { headingAnim, paraAnim } from '@/components/gsapAnimations'
+// import { headingAnim, paraAnim } from '@/components/gsapAnimations'
 
 
 const BlogComponent = dynamic(() => import("@/components/Homepage/Blogs"));
@@ -43,7 +43,7 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
     }
   }, []);
   const [isOpen, setIsOpen] = useState(false);
-headingAnim()
+// headingAnim()
 // paraAnim()
 
   return (
