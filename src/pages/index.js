@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
 import Hero from '@/components/Homepage/Hero'
-import Contact from '@/components/Homepage/Contact'
 import Awards from '@/components/Homepage/Awards'
 // import Blogs from '@/components/Homepage/Blogs'
 import Story from '@/components/Homepage/Story'
@@ -19,11 +18,13 @@ import { WebpageJsonLd } from '@/lib/json-ld'
 import { getAllPosts } from '@/lib/blogs'
 import LoaderHome from '../components/Loader'
 import dynamic from 'next/dynamic'
+import { headingAnim, paraAnim } from '@/components/gsapAnimations'
 // import { headingAnim, paraAnim } from '@/components/gsapAnimations'
 
 
 const BlogComponent = dynamic(() => import("@/components/Homepage/Blogs"));
 const CaseStudyComponent = dynamic(()=>import("@/components/Homepage/CaseStudies"))
+const ContactComponent = dynamic(()=>import("@/components/Homepage/Contact"))
 const metadata = {
   title: "HiveMinds | Data-Driven Digital Marketing for Business Growth",
   metaDescription: "HiveMinds delivers strategic, data-driven digital marketing solutions to help startups and brands grow sustainably with advanced technology and expertise.",
@@ -43,8 +44,8 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
     }
   }, []);
   const [isOpen, setIsOpen] = useState(false);
-// headingAnim()
-// paraAnim()
+headingAnim()
+paraAnim()
 
   return (
     <>
@@ -65,7 +66,7 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
          
           <BlogComponent posts={filteredPosts} />
         </div>
-        <Contact title1={"Looking to Drive "} title2={"Growth?"} para={"We're passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us."} />
+        <ContactComponent title1={"Looking to Drive "} title2={"Growth?"} para={"We're passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us."} />
       </Layout>
     </>
   )

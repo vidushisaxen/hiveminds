@@ -291,7 +291,8 @@ const ServiceCard = ({ service, isActive, onMouseEnter}) => {
             <Image
                 src={service.img}
                 alt={service.title}
-                fill
+                width={400}
+                height={700}
                 className="absolute inset-0 z-0 object-cover w-full h-full"
             />
 

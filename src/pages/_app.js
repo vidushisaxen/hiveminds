@@ -7,63 +7,70 @@ import { DefaultSeo } from "next-seo";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import nextSeoConfig from "../../next-seo.config";
-import { AnimatePresence ,motion} from "framer-motion";
-import { ImageObjectJsonLd, LocalBusiness, OrganizationJsonLd, WebsiteJsonLd } from "@/lib/json-ld";
-import gsap from 'gsap'
+import { AnimatePresence, m, domAnimation, LazyMotion } from "framer-motion";
+import {
+  ImageObjectJsonLd,
+  LocalBusiness,
+  OrganizationJsonLd,
+  WebsiteJsonLd,
+} from "@/lib/json-ld";
+import gsap from "gsap";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [mouseEnabled, setMouseEnabled] = useState(false);
   const lenis = useLenis();
-
   const lenisRef = useRef();
-  
+
   useEffect(() => {
     function update(time) {
-      lenisRef.current?.lenis?.raf(time * 1000)
+      lenisRef.current?.lenis?.raf(time * 1000);
     }
-  
-    gsap.ticker.add(update)
-  
-    return () => gsap.ticker.remove(update)
+
+    gsap.ticker.add(update);
+
+    return () => gsap.ticker.remove(update);
   }, []);
 
   const pageVariants = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
-    exit: { opacity: 0 }
+    exit: { opacity: 0 },
   };
 
+  // Handle mouse enablement based on viewport width
   useEffect(() => {
-    if(globalThis.innerWidth>1024){
+    if (globalThis.innerWidth > 1024) {
       const enableMouse = () => setMouseEnabled(true);
-      document.body.style.pointerEvents = mouseEnabled?"auto":"none";
+      document.body.style.pointerEvents = mouseEnabled ? "auto" : "none";
       window.addEventListener("mousemove", enableMouse, { once: true });
       return () => {
-        document.body.style.pointerEvents = "auto"; 
+        document.body.style.pointerEvents = "auto";
         window.removeEventListener("mousemove", enableMouse);
       };
+    } else {
+      setMouseEnabled(true);
     }
-    else{
-      setMouseEnabled(true)
-    }
-
   }, [mouseEnabled]);
-  
+
+  // Handle route change and reset Lenis scroll
   useEffect(() => {
     const handleRouteChange = () => {
-      lenis && lenis.start();
-      lenis && lenis.scrollTo(0, { immediate: true });
+      if (lenis) {
+        lenis.start();
+        lenis.scrollTo(0, { immediate: true });
+      }
     };
     router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events, lenis]);
+
+  // Change background color on route change start
   useEffect(() => {
-  
     const handleRouteChange = () => {
       document.body.style.backgroundColor = "#fafafa";
     };
@@ -72,31 +79,31 @@ export default function App({ Component, pageProps }) {
       router.events.off("routeChangeStart", handleRouteChange);
     };
   }, []);
+  console.log(router.pathname)
 
   return (
     <>
-    <LocalBusiness/>
-    <OrganizationJsonLd />
+      <LocalBusiness />
+      <OrganizationJsonLd />
       <WebsiteJsonLd />
       <ImageObjectJsonLd />
-      <DefaultSeo {...nextSeoConfig} 
-        // dangerouslySetAllPagesToNoIndex={true}
-        // dangerouslySetAllPagesToNoFollow={true}
-      />
-      {/* <Loader/> */}
+      <DefaultSeo {...nextSeoConfig} />
+
       <ReactLenis root options={{ lerp: 0.07, autoRaf: false }} ref={lenisRef}>
         <div style={{ pointerEvents: mouseEnabled ? "auto" : "none" }}>
-        <AnimatePresence mode="wait">
-            <motion.div
-              key={router.pathname}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              variants={pageVariants}
-              transition={{ duration: 0.5 }}
-            >
-              <Component {...pageProps} />
-            </motion.div>
+          <AnimatePresence mode="wait">
+            <LazyMotion features={domAnimation}>
+              <m.div
+                key={router.pathname}  // Ensure this key changes on route change
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={pageVariants}
+                transition={{ duration: 0.5 }}
+              >
+                <Component {...pageProps} />
+              </m.div>
+            </LazyMotion>
           </AnimatePresence>
           <SpeedInsights />
           <Analytics />
