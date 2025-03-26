@@ -78,7 +78,7 @@ export default function App({ Component, pageProps }) {
     return () => {
       router.events.off("routeChangeStart", handleRouteChange);
     };
-  }, []);
+  }, [router]);
 
   return (
     <>

@@ -19,10 +19,7 @@ const Header = ({ isOpen }) => {
     { name: "Performance Marketing", href: "/services/performance-marketing" },
     { name: "SEO", href: "/services/search-engine-optimization" },
     { name: "Retail Marketing", href: "/services/retail-marketing" },
-    {
-      name: "Creative & Content",
-      href: "/services/creative-content-management",
-    },
+    { name: "Creative & Content", href: "/services/creative-content-management" },
     { name: "ORM", href: "/services/online-reputation-management" },
     { name: "Consumer Insights", href: "/services/consumer-insights" },
     { name: "Influencer Marketing", href: "/services/influencer-marketing" },

@@ -17,12 +17,12 @@ import { WebpageJsonLd } from '@/lib/json-ld'
 import { getAllPosts } from '@/lib/blogs'
 import LoaderHome from '../components/Loader'
 import dynamic from 'next/dynamic'
-import { headingAnim} from '@/components/gsapAnimations'
+import { headingAnim } from '@/components/gsapAnimations'
 
 
 const BlogComponent = dynamic(() => import("@/components/Homepage/Blogs"));
-const CaseStudyComponent = dynamic(()=>import("@/components/Homepage/CaseStudies"))
-const ContactComponent = dynamic(()=>import("@/components/Homepage/Contact"))
+const CaseStudyComponent = dynamic(() => import("@/components/Homepage/CaseStudies"))
+const ContactComponent = dynamic(() => import("@/components/Homepage/Contact"))
 const metadata = {
   title: "HiveMinds | Data-Driven Digital Marketing for Business Growth",
   metaDescription: "HiveMinds delivers strategic, data-driven digital marketing solutions to help startups and brands grow sustainably with advanced technology and expertise.",
@@ -42,8 +42,8 @@ const index = ({ stickyCaseStudies, filteredPosts }) => {
     }
   }, []);
   const [isOpen, setIsOpen] = useState(false);
-headingAnim()
-// paraAnim()
+  headingAnim()
+  // paraAnim()
 
   return (
     <>
@@ -52,16 +52,16 @@ headingAnim()
       <LoaderHome />
       <Layout isOpen={isOpen}>
         {!mobileWidth ? <Hero /> : <MobileHero />}
-     
+
         <Story isOpen={isOpen} setIsOpen={setIsOpen} />
         <Services />
         <Clients2 />
         <CaseStudyComponent caseStudies={stickyCaseStudies} />
         <TeamMembers />
         <div className='relative h-fit w-screen rounded-[20px]  '>
-        
+
           <Awards />
-         
+
           <BlogComponent posts={filteredPosts} />
         </div>
         <ContactComponent title1={"Looking to Drive "} title2={"Growth?"} para={"We're passionate about delivering results and addressing the challenges that matter most to your business. To learn more, get in touch with us."} />

@@ -17,7 +17,6 @@ const Layout = ({ children, isOpen }) => {
   }, []);
   return (
     <>
-     
       <Header isOpen={isOpen} />
       <main className="relative z-[1]">
         {children}
