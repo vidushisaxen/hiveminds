@@ -202,11 +202,9 @@ const Hero = () => {
                 <div className="w-[25vw] h-full my-[4vw] flex flex-col gap-[2vw] rounded-[1vw] overflow-hidden group">
                   <Link href={imageSet.link} prefetch={false}>
                     <Image
-                      priority
+                      loading="lazy"
                       src={imageSet.src1}
                       placeholder="blur"
-                      // width={490}
-                      // height={670}
                       className="object-fill w-full h-full rounded-[1vw] group-hover:scale-[1.08] transition-all duration-700 ease-in-out"
                       alt="gallery image"
                     />
@@ -216,11 +214,9 @@ const Hero = () => {
                 <div className="w-[25vw] h-full mt-[-1vw] flex flex-col gap-[0.9vw] rounded-[1vw] overflow-hidden group">
                   <Link href={imageSet.link} prefetch={false}>
                     <Image
-                      priority
+                      loading="lazy"
                       src={imageSet.src2}
                       placeholder="blur"
-                      // width={490}
-                      // height={670}
                       className="object-fill w-full h-full rounded-[1vw] group-hover:scale-[1.08] transition-all duration-700 ease-in-out"
                       alt="gallery image"
                     />

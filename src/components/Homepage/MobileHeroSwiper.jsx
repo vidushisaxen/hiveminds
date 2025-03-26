@@ -86,7 +86,7 @@ const MobileHeroSwiper = () => {
                       src={image.src1}
                       placeholder="blur"
                       fill
-                      priority
+                      loading="lazy"
                       alt="casestudy"
                       className="object-cover group-hover:brightness-75 transition-all duration-500 ease-in-out"
                     />
@@ -99,7 +99,7 @@ const MobileHeroSwiper = () => {
                     <Image
                       src={image.src2}
                       placeholder="blur"
-                      priority
+                      loading="lazy"
                       fill
                       alt="casestudy"
                       className="object-cover group-hover:brightness-75 transition-all duration-500 ease-in-out"

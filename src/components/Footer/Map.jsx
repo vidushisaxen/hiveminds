@@ -11,6 +11,7 @@ const Map = ({ location, height }) => {
   return (
     <>
       <iframe
+        title='Location Map'
         src={mapUrls[location] || mapUrls.Bengaluru}
         width="100%"
         height={height}
