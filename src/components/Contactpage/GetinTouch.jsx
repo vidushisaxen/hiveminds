@@ -23,13 +23,13 @@ const GetinTouch = () => {
             </p>
             <div className="flex flex-col gap-[1vw] mobile:gap-[4vw] tablet:gap-[2vw]">
               <LinkButton
-                btnLink={"tel:+91 2667671302"}
-                btnText={"+91-8527156227"}
+                btnLink={"tel:+91 080-46801708"}
+                btnText={"+91-080-46801708"}
                 className="text-[1.2vw] leading-[1] fadein"
               />
               <LinkButton
-                btnLink={"mailto:sales@hiveminds.in"}
-                btnText={"sales@hiveminds.in"}
+                btnLink={"mailto:hivemindssupport@hiveminds.in"}
+                btnText={"hivemindssupport@hiveminds.in"}
                 className="text-[1.2vw] leading-[1] fadein"
               />
             </div>

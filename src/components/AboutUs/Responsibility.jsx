@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import img1 from "../../../public/assets/images/about/responsibility-1.png";
-import img2 from "../../../public/assets/images/about/responsibility-2.png";
-import img3 from "../../../public/assets/images/about/responsibility-3.png";
-import img4 from "../../../public/assets/images/about/responsibility-4.png";
-import img5 from "../../../public/assets/images/about/responsibility-5.png";
-import img6 from "../../../public/assets/images/about/responsibility-6.png";
+import img1 from "../../../public/assets/images/about/csr-1.jpg";
+import img2 from "../../../public/assets/images/about/csr-2.jpg";
+import img3 from "../../../public/assets/images/about/csr-3.jpg";
+import img4 from "../../../public/assets/images/about/csr-4.jpg";
+import img5 from "../../../public/assets/images/about/csr-5.jpg";
+import img6 from "../../../public/assets/images/about/csr-6.jpg";
 
 const Responsibility = () => {
   return (

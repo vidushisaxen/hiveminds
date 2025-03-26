@@ -121,7 +121,7 @@ const TeamMembersCopy = () => {
             </div>
 
             <div className="team-container mx-auto grid grid-cols-12 items-center justify-center relative gap-[1.2vw]">
-              {/* Manually created team cards */}
+             
               <div
                 className={`${styles.card} col-span-3 col-start-1 w-[20vw] h-[20vw] flex items-center relative `}
                 data-id="1"
