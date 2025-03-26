@@ -59,7 +59,7 @@ const Header = ({ isOpen }) => {
   ];
   const menuItems = [
     { label: "Our Impact", href: "/our-impact" },
-    { label: "What’s Buzzing", href: "/blog" },
+    { label: "What's Buzzing", href: "/blog" },
     { label: "Careers", href: "/careers" },
   ];
 
