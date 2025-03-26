@@ -57,6 +57,7 @@ export default function App({ Component, pageProps }) {
       setMouseEnabled(true);
     }
   }, [mouseEnabled]);
+  
   useEffect(() => {
     const handleRouteChange = () => {
       if (lenis) {
@@ -78,7 +79,7 @@ export default function App({ Component, pageProps }) {
     return () => {
       router.events.off("routeChangeStart", handleRouteChange);
     };
-  }, [router]);
+  }, [router.events]);
 
   return (
     <>
