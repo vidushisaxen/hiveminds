@@ -28,7 +28,7 @@ export default function FloatContact() {
                     height={120}
                     className='animate-spin transition-transform object-cover duration-5000 w-[6vw] h-[6vw] tablet:w-[12vw] tablet:h-[12vw] mobile:w-[20vw] mobile:h-[20vw]'
                     alt='PopUp Form HireUs Image'
-                    src="/assets/icons/talk-to-us-1.svg"
+                    src="/assets/icons/talk-to-us.svg"
                     priority={true}
                 />
                 <Image
