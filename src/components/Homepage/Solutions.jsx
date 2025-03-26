@@ -8,13 +8,15 @@ import Link from "next/link";
 const services = [
     {
         id: 1,
+        slug:"#digital-brand-building",
         img: "/assets/images/homepage/services/Digital-Brand-building.png",
         title: "Digital Brand Building",
         para: "Transform your digital identity with strategic brand positioning. We leverage data-driven insights to craft compelling narratives, create memorable brand experiences, and establish a powerful online presence that resonates with your target audience.",
-        link:"#"
+        link:"/solutions#solution-details"
     },
     {
         id: 2,
+        slug:"#d2c-revenue",
         img: "/assets/images/homepage/services/Grow-D2C-Revenue.png",
         title: "Grow D2C Revenue ",
         para: "Unlock direct-to-consumer potential through precision marketing. Our approach combines advanced targeting, personalized customer journeys, and optimized conversion strategies to drive sustainable revenue growth and maximize customer lifetime value",
@@ -22,6 +24,7 @@ const services = [
     },
     {
         id: 3,
+        slug:"#organic-revenue",
         img: "/assets/images/homepage/services/Drive-Organic-Revenue.png",
         title: "Drive Organic Revenue",
         para: "Elevate your organic performance with intelligent marketing solutions. We deploy cutting-edge SEO strategies, content optimization, and data-powered insights to increase visibility, attract high-intent customers, and naturally boost your revenue streams.",
@@ -29,6 +32,7 @@ const services = [
     },
     {
         id: 4,
+        slug:"#app-marketing",
         img: "/assets/images/homepage/services/App-Marketing-Solutions.png",
         title: "App Marketing Solutions",
         para: "Accelerate app growth and user acquisition through comprehensive marketing strategies. From user onboarding to retention optimization, we deploy targeted campaigns that increase downloads, enhance engagement, and drive meaningful app interactions.",
@@ -36,6 +40,7 @@ const services = [
     },
     {
         id: 5,
+        slug:"#ecommerce-growth",
         img: "/assets/images/homepage/services/Accelerate-Ecommerce-Growth.png",
         title: "Accelerate Ecommerce Growth",
         para: "Scale your online retail potential with our integrated ecommerce marketing approach. We combine technological innovation, data analytics, and strategic marketing to optimize conversion rates, enhance customer experience, and drive exponential revenue growth.",
@@ -43,6 +48,7 @@ const services = [
     },
     {
         id: 6,
+        slug:"#demand-generation",
         img: "/assets/images/homepage/services/Demand-Generation.png",
         title: "Demand Generation",
         para: "Generate high-quality leads and create a robust pipeline of potential customers. Our data-driven demand generation strategies leverage sophisticated targeting, multi-channel approaches, and intelligent content marketing to attract and nurture valuable prospects.",
@@ -50,6 +56,7 @@ const services = [
     },
     {
         id: 7,
+        slug:"#maximizing-retention",
         img: "/assets/images/homepage/services/Maximise-Retention.png",
         title: "Maximise Retention",
         para: "Transform customers into loyal brand advocates through intelligent retention strategies. We utilize advanced analytics, personalized engagement tactics, and predictive modeling to reduce churn, increase customer lifetime value, and build lasting customer relationships.",
@@ -57,7 +64,7 @@ const services = [
     },
 ];
 
-const ServiceCard = ({ service, isActive, onMouseEnter}) => {
+const ServiceCard = ({ service, isActive, onMouseEnter , slug}) => {
     const cardRef = useRef(null);
     const headingRef = useRef(null);
     const headinginnerRef = useRef(null);
@@ -325,7 +332,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter}) => {
                     {service.para}
                 </p>
 
-                <Link  href={service.link}>
+                <a  href={`/solutions${slug}`}>
                     <div
                         ref={linkRef}
                         className="absolute top-4 right-4 bg-transparent border border-white text-white p-4 rounded-full flex items-center justify-center opacity-0 scale-0"
@@ -337,7 +344,7 @@ const ServiceCard = ({ service, isActive, onMouseEnter}) => {
                             alt="top-right-arrow"
                         />
                         </div>
-                    </Link>
+                    </a>
             </div>
         </div>
     );
@@ -363,6 +370,7 @@ const ServicesCopy = () => {
                         {services.map((service, index) => (
                             <ServiceCard
                                 key={index}
+                                slug={service.slug}
                                 link={service.link}
                                 service={service}
                                 isActive={index === activeIndex}

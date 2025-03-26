@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React, { useEffect, useRef, useState } from "react";
 import PrimaryButton from "../Button/PrimaryButton";
 import gsap from "gsap";
@@ -7,6 +8,7 @@ import { useLenis } from "lenis/react";
 import { initMagneticButton } from "../splitTextUtils";
 import dynamic from "next/dynamic";
 import LinkButton from "../Button/LinkButton";
+import styles from "../Button/styles.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const VideoModal = dynamic(() => import("@/components/VideoPlayer"));
@@ -140,13 +142,40 @@ const StoryCopy = ({ isOpen, setIsOpen }) => {
                   href="/about-us"
                   data-btn-white
                 />
-                <PrimaryButton
-                aria-label="to leadership section"
-                  className="fadeup"
-                  text="Our Leadership Team"
-                  href="/about-us#leadership"
-                  data-btn-b-white
-                />
+                
+                <a href="/about-us#leadership" data-btn-b-white className={`${styles.btn} fadeup`} aria-label="to leadership section">
+      
+      <div aria-hidden="true" className={styles.btnCircle}>
+        <div className={styles.btnCircleText}>
+            <div>
+          <svg
+            viewBox="0 0 10 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={styles.btnIcon}
+          >
+            <path
+              data-v-f4363f2a
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M3.82475e-07 5.625L7.625 5.625L4.125 9.125L5 10L10 5L5 -4.37114e-07L4.125 0.874999L7.625 4.375L4.91753e-07 4.375L3.82475e-07 5.625Z"
+              className={`${styles.btnPath}`}
+            />
+            <path
+              data-v-f4363f2a
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M3.82475e-07 5.625L7.625 5.625L4.125 9.125L5 10L10 5L5 -4.37114e-07L4.125 0.874999L7.625 4.375L4.91753e-07 4.375L3.82475e-07 5.625Z"
+              className={`${styles.btnPath}`}
+            />
+          </svg>
+
+            </div>
+          <span className={`${styles.btnText} !pr-0 !mt-[0.3vw]`}>Our Leadership Team</span>
+        </div>
+      </div>
+      <span className={styles.btnText}>Our Leadership Team</span>
+    </a>
               </div>
             </div>
           </div>
