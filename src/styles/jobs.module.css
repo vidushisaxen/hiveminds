@@ -1,6 +1,7 @@
 
 .jobs :global(.kh-card .kh-card-body){
         width: fit-content !important;
+        font-family: "Avenir"  Arial, Helvetica, sans-serif !important;
         height: 100% !important;
         border-radius: 1.5vw;
         display: flex;
@@ -10,11 +11,10 @@
         padding: 2vw;
         background-color: white;
         padding: 1vw  2vw !important;
-
-  
 }
 .jobs :global(.kh-card .kh-job-title){
-    font-size: 1.8vw;
+    font-size: 1.5vw !important;
+    font-weight: 500 !important;
     height: 30%;
 }
 .jobs :global(.kh-job-container:hover .kh-job-title){
@@ -24,10 +24,10 @@
     color: rgba(19, 75, 214, 1) !important;
 }
 .jobs :global(.kh-job-container .kh-icon-lg){
-    font-size: 50px !important;
+    font-size: 40px !important;
     position: absolute !important;
-    top:2vw !important;
-    right:4vw !important
+    top:1vw !important;
+    right:2vw !important
 }
 .jobs :global(.kh-card .kh-text-secondary>div>span){
    margin: 0.5vw 0px !important;
@@ -35,7 +35,6 @@
 }
 .jobs :global(.kh-card .kh-text-secondary>div){
     color: rgba(17, 17, 17, 1) !important;
-   display: block !important;  
 }
 
 .jobs :global(.kh-card .kh-font-large){
@@ -48,14 +47,16 @@
     line-height: 1.2 !important;
 }
 .jobs :global(.kh-card .kh-dot){
+    background-color: rgba(17, 17, 17, 0.6) !important;
     color: rgba(17, 17, 17, 1) !important;
+    margin:  0px 10px !important;
     width: 8px;
     height: 8px;
-    display: none !important;
 }
 .jobs :global(.kh-main-container h1){
-    font-size: 2.5vw !important;
+    font-size: 2vw !important;
     line-height: 1.3 !important;
+    padding-top: 1vw !important;
     font-weight: 500 !important;
 }
 .jobs :global(.kh-text-lowercase ){
@@ -73,7 +74,8 @@
         padding: 5vw !important; 
 }
 .jobs :global(.kh-card .kh-job-title){
-    font-size: 4vw;
+    font-size: 4vw !important;
+    font-weight: 500 !important;
 }
 .jobs :global(.kh-job-container .kh-icon-lg){
     font-size: 50px !important;
@@ -83,7 +85,6 @@
 }
 .jobs :global(.kh-card .kh-text-secondary>div>span){
    margin: 1.5vw 0px !important;
-
 }
 .jobs :global(.kh-card .kh-font-large){
     font-size: 3.5vw !important;
@@ -104,10 +105,11 @@
     .jobs :global(.kh-card .kh-card-body){
         width: 100% !important;
         border-radius: 3vw;
-        padding: 5vw !important; 
+        padding: 2vw 3vw !important; 
 }
 .jobs :global(.kh-card .kh-job-title){
-    font-size: 4vw;
+    font-size: 3vw !important;
+    font-weight: 500 !important;
 }
 .jobs :global(.kh-job-container .kh-icon-lg){
     font-size: 50px !important;
@@ -126,9 +128,11 @@
     font-size: 2vw !important;
 }
 .jobs :global(.kh-main-container h1){
-    font-size: 4.5vw !important;
+    font-size: 3.5vw !important;
+    padding-top: 2vw !important;
+    font-weight: 500 !important;
 }
 .jobs :global(.kh-text-lowercase ){
-    font-size: 2vw !important;
+    font-size: 2.5vw !important;
 }
 }
