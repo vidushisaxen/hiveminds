@@ -13,8 +13,6 @@ import img4 from '../../../public/assets/images/homepage/hero-dominos-img2.png'
 import img5 from '../../../public/assets/images/homepage/hero-flydubai-img1.png'
 import img6 from '../../../public/assets/images/homepage/hero-flydubai-img2.png'
 
-
-
 const MobileHeroSwiper = () => {
   const swiperRef = useRef(null);
 
@@ -42,13 +40,12 @@ const MobileHeroSwiper = () => {
         <Swiper
           ref={swiperRef}
           loop={true}
-          speed={3000} // Slow and steady scroll
+          speed={3000}
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
           }}
           allowTouchMove={false}
-          
           modules={[FreeMode, Autoplay ]}
           freeMode={true}
           slidesPerView={1}
@@ -61,14 +58,11 @@ const MobileHeroSwiper = () => {
             720:{
               slidesPerView: 2,
               spaceBetween:15,
- 
-
             },
             1024: {
               slidesPerView: 2,
               spaceBetween:15,
             },
-            
           }}
           scrollbar={{
             draggable: true,
