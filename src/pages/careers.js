@@ -3,12 +3,10 @@ import Layout from '@/components/Layout'
 import React from 'react'
 import { fadeIn, fadeUp, headingAnim, paraAnim } from '@/components/gsapAnimations'
 import Hero from '@/components/Hero';
-
 import img from '../../public/assets/images/careers/careers-hero-img.png'
 import Culture from '@/components/Careers/Culture';
 import Jobs from '@/components/Careers/Jobs';
 import Contact from '@/components/Careers/Contact';
-
 import Metadata from '@/components/Metadata';
 import { WebpageJsonLd } from '@/lib/json-ld';
 
