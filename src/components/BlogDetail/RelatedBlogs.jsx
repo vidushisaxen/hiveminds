@@ -58,7 +58,7 @@ const RelatedBlogs = () => {
     <section className="h-full w-screen pb-[5%] mobile:py-[10%]" id="related-blogs">
       <div className="py-[4vw] w-full container-lg">
         <h2 className="heading-2 w-[80%] fadein mobile:w-full">
-          Related <span className="text-primary">Blogs</span>
+          Related <span className="text-primary">PR Articles & Blogs</span>
         </h2>
         <div className="w-full flex justify-between mobile:flex-col mobile:gap-[7vw] mobile:mt-[5vw]">
           <p className="text-[1.2vw] mt-[2vw] w-[35%] fadein mobile:w-full mobile:text-[4vw] tablet:text-[2.4vw] tablet:w-[50%]">

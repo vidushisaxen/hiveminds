@@ -26,6 +26,7 @@ export default function ImpactPage({ stickyCaseStudies, industries }) {
   paraAnim();
   fadeUp();
   fadeIn();
+  //routeChangeTop()
 
   return (
     <>

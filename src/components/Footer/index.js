@@ -20,7 +20,7 @@ const addresses = [
     location: "Mumbai",
     label: "MUMBAI",
     address:
-      "Office no 301 & 302, 3rd Floor, The Eagle's Flight Building, Gundavali, Andheri East, Andheri, Mumbai, Maharashtra 400047",
+      "Office no 301 & 302, 3rd Floor , The Eagle's Flight Building, Gundavali, Andheri East, Andheri, Mumbai, Maharashtra 400047",
   },
   {
     location: "Gurgaon",
@@ -40,10 +40,10 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="w-screen h-[55vw] bg-transparent tablet:h-full"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+      className="w-screen h-full bg-transparent tablet:h-full"
+      // style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="w-screen h-[55vw] flex flex-col items-center justify-between bg-[#134bd5] pt-[3vw] pb-[2vw] gap-[0.5vw] fixed bottom-0 tablet:h-full tablet:static tablet:pt-20">
+      <div className="w-screen h-full flex flex-col items-center justify-between bg-[#134bd5] pt-[3vw] pb-[2vw] gap-[0.5vw] tablet:h-full tablet:static tablet:pt-20">
         <div className="w-full flex items-center justify-between gap-[10vw] text-white container-lg tablet:block tablet:space-y-16">
           <div className="w-[30%] h-full flex flex-col items-start justify-start gap-[2vw] tablet:w-full tablet:flex-row">
             <div className="flex flex-col gap-[2vw] tablet:w-3/5">
@@ -54,16 +54,16 @@ const Footer = () => {
                 <div
                   key={loc}
                   onMouseEnter={() => handleMouseEnter(loc)}
-                  className="under-multi-parent"
+                  className="under-multi-parent w-[89%]"
                 >
-                  <span className="content-white under-multi">
+                  <span className="content-white under-multi ">
                     {label} : {address}
                   </span>
                 </div>
               ))}
             </div>
-            <div className="h-[15vw] w-[25vw] relative rounded-[12px] tablet:w-2/5 tablet:h-[35vw] overflow-hidden tablet:mt-[6vw]">
-              <MapComponent location={location} height="250px" />
+            <div className="h-[15vw] w-[25vw] relative rounded-[12px] tablet:w-2/5  tablet:h-[30vw] overflow-hidden tablet:mt-[6vw]">
+              <MapComponent location={location} height="250px"/>
             </div>
           </div>
 
@@ -71,14 +71,14 @@ const Footer = () => {
             <div className="flex items-start justify-between w-full tablet:gap-4">
               <div className="space-y-[1.5vw]">
                 <p className="uppercase tracking-wider text-[1.16vw] text-white font-medium montreal tablet:text-[3.2vw]">
-                  Expertise
+                  Services
                 </p>
                 <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start gap-[0.5vw] tablet:text-[2.2vw] tablet:gap-2">
                   {expertiseLinks.links.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.href} className="link-line">
+                      <a href={item.href} className="link-line">
                         {item.label}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -90,9 +90,9 @@ const Footer = () => {
                 <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start gap-[0.5vw] tablet:text-[2.2vw] tablet:gap-2">
                   {solutionsLinks.links.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.href} className="link-line">
+                      <a href={item.href} className="link-line">
                         {item.label}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -104,9 +104,9 @@ const Footer = () => {
                 <ul className="text-[1.05vw] text-white montreal font-medium flex flex-col items-start gap-[0.5vw] tablet:text-[2.2vw] tablet:gap-2">
                   {industriesLinks.links.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.href} className="link-line">
+                      <a href={item.href} className="link-line">
                         {item.label}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>

@@ -53,9 +53,9 @@ const FooterMobile = () => {
                                 <ul className="text-[4vw] pt-[3vw] pb-[7vw] text-white montreal font-medium flex flex-col items-start justify-center gap-[2vw]">
                                     {section.links.map((link, idx) => (
                                         <li key={idx}>
-                                            <Link className="link-line" href={link.href}>
+                                            <a className="link-line" href={link.href}>
                                                 {link.label}
-                                            </Link>
+                                            </a>
                                         </li>
                                     ))}
                                 </ul>
@@ -84,7 +84,7 @@ const FooterMobile = () => {
                             GURGAON : Spring House Coworking, 4th Floor, JMD Regent Arcade, Haryana 122002
                         </p>
                     </div>
-                    <div className="h-[15vw] w-[25vw] relative rounded-[12px] order-2 mobile:w-full mobile:h-[70vw] overflow-hidden">
+                    <div className="h-[15vw] w-[25vw] relative rounded-[12px] order-2 mobile:w-full mobile:h-[70vw] overflow-hidden ">
                         <MapComponent location={location} height="300px" className="w-full h-full" />
                     </div>
                     <SocialMedia />

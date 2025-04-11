@@ -1,27 +1,14 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
 
 export default function FloatContact() {
-    const [isHovered, setIsHovered] = useState(false);
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    }
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    }
 
     return (
-        <div className="fixed bottom-3 right-3 h-fit w-fit fadeup group z-[10] bg-white/50 backdrop-blur-sm rounded-full overflow-hidden">
-            <Link
+        <div className="fixed bottom-3 right-3 h-fit w-fit fadeup group z-[10] bg-white/50 backdrop-blur-sm rounded-full overflow-hidden cursor-pointer">
+            <a
                 className="w-full h-full"
-           
                 aria-label="Connect With Us"
-                href="/contact-us"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                href="/contact-us#form"
             >
                 <Image
                     width={120}
@@ -36,10 +23,10 @@ export default function FloatContact() {
                     height={50}
                     width={50}
                     alt="Whatsapp Icon"
-                    className='absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 opacity-90 -translate-y-1/2 w-[40%] h-full object-contain group-hover:scale-110 duration-300'
-                    src={'/assets/icons/float-contact.png'}
+                    className='absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 opacity-90 -translate-y-1/2 w-[28%] h-full object-contain group-hover:scale-110 duration-300'
+                    src={'/assets/icons/telephone.png'}
                 />
-            </Link>
+            </a>
         </div>
     )
 }

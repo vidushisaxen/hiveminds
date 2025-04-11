@@ -5,15 +5,15 @@ import Image from "next/image";
 
 const GetinTouch = () => {
   return (
-    <section className="w-screen h-[90vw] bg-white relative overflow-hidden mobile:h-full mobile:pb-[15%] tablet:h-full tablet:pb-[10%]">
+    <section className="w-screen h-[90vw] bg-white relative overflow-hidden mobile:h-full mobile:pb-[15%] tablet:h-full tablet:pb-[10%]" id="form">
       <div className="container-lg flex h-full justify-between items-center mobile:flex-col mobile:items-start mobile:mt-[67vw] tablet:flex-col tablet:items-start tablet:mt-[20vw]">
         <div className="flex-col flex gap-[1.5vw] mobile:gap-[4vw] tablet:gap-[2vw]">
           <h1 className="heading-2 leading-[1.2] headingAnim">
             Get In
             <span className="text-primary"> Touch</span>
           </h1>
-          <p  className="content w-[70%] fadeup tracking-wide para mobile:w-full tablet:w-[70%]">
-          Leave us your details and a member of our team will get back to you as soon as possible.
+          <p className="content w-[70%] fadeup tracking-wide para mobile:w-full tablet:w-[70%]">
+            Leave us your details and a member of our team will get back to you as soon as possible.
           </p>
 
           <div className="flex flex-col gap-[3vw] mt-[5vw] mobile:gap-[7vw]">
@@ -25,6 +25,11 @@ const GetinTouch = () => {
               <LinkButton
                 btnLink={"tel:+91 080-46801708"}
                 btnText={"+91-080-46801708"}
+                className="text-[1.2vw] leading-[1] fadein"
+              />
+              <LinkButton
+                btnLink={"mailto:sales@hiveminds.in"}
+                btnText={"sales@hiveminds.in"}
                 className="text-[1.2vw] leading-[1] fadein"
               />
               <LinkButton

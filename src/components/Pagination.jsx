@@ -28,15 +28,15 @@ const Pagination = ({ pagesCount, currentPage, basePath }) => {
 
     return (
         <div className="w-fit font-medium mt-10 bg-white border border-slate-300 rounded-full items-center flex py-1 px-4 mx-auto justify-between gap-4">
-            <Link className={`${!hasPreviousPage ? 'pointer-events-none opacity-50' : ''}`}
-                href={hasPreviousPage ? `${path}page/${currentPage - 1}` : '#'}
+            <a className={`${!hasPreviousPage ? 'pointer-events-none opacity-50' : ''}`}
+                href={hasPreviousPage ? `${path}page/${currentPage - 1}#blog-listing` : '#'}
                 aria-label="Go to Previous Page"
                 tabIndex={hasPreviousPage ? 0 : -1}
             >
                 <div className='flex text-xl items-center justify-center w-16 h-16 rounded-full transition-colors duration-300 hover:bg-slate-100'>
                     <ArrowLeft className='' />
                 </div>
-            </Link>
+            </a>
 
             <ul className='flex w-3/4 justify-between items-center gap-4'>
                 {pages.map((page) => {
@@ -49,23 +49,23 @@ const Pagination = ({ pagesCount, currentPage, basePath }) => {
                         </li>
                     ) : (
                         <li key={page} className='text-xl font-medium w-12 h-12 rounded-full flex justify-center items-center overflow-hidden'>
-                            <Link className='hover:bg-slate-100 flex w-full h-full items-center justify-center transition-colors duration-300' href={page === 1 ? path : `${path}page/${page}`} aria-label={`Goto Page ${page}`}>
+                            <a className='hover:bg-slate-100 flex w-full h-full items-center justify-center transition-colors duration-300' href={page === 1 ? path : `${path}page/${page}#blog-listing`} aria-label={`Goto Page ${page}`}>
                                 <span className='mt-1'>{page}</span>
-                            </Link>
+                            </a>
                         </li>
                     );
                 })}
             </ul>
 
-            <Link className={`${!hasNextPage ? 'pointer-events-none opacity-50' : ''}`}
-                href={hasNextPage ? `${path}page/${currentPage + 1}` : '#'}
+            <a className={`${!hasNextPage ? 'pointer-events-none opacity-50' : ''}`}
+                href={hasNextPage ? `${path}page/${currentPage + 1}#blog-listing` : '#'}
                 aria-label="Go to Next Page"
                 tabIndex={hasNextPage ? 0 : -1}
             >
                 <div className='text-xl flex items-center justify-center w-12 h-12 rounded-full transition-colors duration-300 hover:bg-slate-100'>
                     <ArrowRight />
                 </div>
-            </Link>
+            </a>
         </div>
     );
 };

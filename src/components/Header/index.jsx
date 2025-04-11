@@ -13,38 +13,40 @@ const Header = ({ isOpen }) => {
   const lenis = useLenis();
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [mobileWidth, setIsMobileWidth] = useState(false)
+
   const [openMenu, setOpenMenu] = useState(false);
   const headerRef = useRef();
   const services = [
     { name: "Performance Marketing", href: "/services/performance-marketing" },
-    { name: "SEO", href: "/services/search-engine-optimization" },
     { name: "Retail Marketing", href: "/services/retail-marketing" },
-    { name: "Creative & Content", href: "/services/creative-content-management" },
-    { name: "ORM", href: "/services/online-reputation-management" },
+    { name: "Search Engine Optimization", href: "/services/search-engine-optimization" },
+    { text: "Content Management & Creative", href: "/services/creative-content-management" },
+    { name: "Online Reputation Management", href: "/services/online-reputation-management" },
     { name: "Consumer Insights", href: "/services/consumer-insights" },
     { name: "Influencer Marketing", href: "/services/influencer-marketing" },
     { name: "Affiliate Marketing", href: "/services/affiliate-marketing" },
-    { name: "Branding & Programatic Ads", href: "/services/branding" },
-    { name: "Data Analysis", href: "/services/data-analytic" },
-    { name: "Social Media", href: "/services/social-media-marketing" },
+    { name: "Social Media Marketing", href: "/services/social-media-marketing" },
+    { name: "Data & Analytics", href: "/services/data-analytic" },
+    { name: "Branding Services", href: "/services/branding" },
   ];
   const industries = [
-    "FMCG & Beauty",
-    "Health & Wellness",
-    "BFSI - Fintech",
-    "E-Commerce",
-    "Fashion & Lifestyle",
-    "Electronics",
-    "Consumer Durables",
-    "Telecom",
-    "Automobiles",
-    "Travel & Tourism",
+    { name: "FMCG & Beauty", href: "/industry/fmcg-and-beauty" },
+    { name: "Health & Wellness", href: "/industry/health-and-wellness" },
+    { name: "BFSI - Fintech", href: "/industry/bfsi-fintech" },
+    { name: "E-Commerce", href: "/industry/e-commerce" },
+    { name: "Fashion & Lifestyle", href: "/industry/fashion-and-lifestyle" },
+    { name: "Electronics ", href: "/industry/electronics" },
+    { name: "Consumer Durables", href: "/industry/consumer-durables" },
+    { name: "Telecom", href: "/industry/telecom" },
+    { name: "Automobiles", href: "/industry/automobiles" },
+    { name: "Travel & Tourism", href: "/industry/travel-and-tourism" },
   ];
   const links = [
     {
       href: "/solutions",
       imgSrc: solutionImg,
-      text: "Solutions",
+      text: "SOLUTIONS"
     },
     {
       href: "/our-ips",
@@ -54,7 +56,7 @@ const Header = ({ isOpen }) => {
     {
       href: "/school-of-digital",
       imgSrc: digitalImg,
-      text: "School of Digital",
+      text: "SCHOOL OF DIGITAL",
     },
   ];
   const menuItems = [
@@ -64,6 +66,14 @@ const Header = ({ isOpen }) => {
   ];
 
   useEffect(() => {
+
+    if (globalThis.innerWidth > 1024) {
+
+      setIsMobileWidth(false)
+    }
+    else {
+      setIsMobileWidth(true)
+    }
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
@@ -94,111 +104,122 @@ const Header = ({ isOpen }) => {
     }
   }, [openMenu, lenis]);
 
+  const entredMouse = () => {
+
+    setOpenMenu(true)
+  }
+
+  const leaveMouse = () => {
+
+    setOpenMenu(false)
+  }
   return !isOpen ? (
     <header
-      className={`fixed top-0 left-0 w-full z-[100] header transition-all ease duration-500 ${
-        isHidden ? "-translate-y-full" : "translate-y-0 header-glassmorphism"
-      } ${openMenu ? "!translate-y-0" : ""}`}
+      className={`fixed top-0 left-0 w-full z-[100] header transition-all ease duration-500 ${isHidden ? "-translate-y-[120%]" : "translate-y-0 header-glassmorphism"
+        }`}
     >
-      <div className={``}>
-        <div
-          className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw] tablet:py-[3vw]`}
-          ref={headerRef}
-        >
-          <Link href={"/"}>
-            <div className="w-[10.5vw] h-[3.2vw] relative mobile:h-[17vw] mobile:w-[30vw] tablet:w-[20vw] tablet:h-[7vw]">
-              <Image
-                src="/assets/icons/logo.svg"
-                width={200}
-                height={100}
-                alt="hiveminds-logo"
-                quality={100}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </Link>
-          <div className="flex items-center justify-center gap-[2vw] text-[0.94vw] montreal font-medium uppercase mobile:hidden tablet:hidden">
-            <div>
-              <ul className="flex items-center justify-between gap-[1.5vw]">
-                <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
-                  <Link
-                    href={"/about-us"}
-                    className="relative link-line"
-                    prefetch={false}
-                  >
-                    Who We Are
-                  </Link>
-                </li>
-                <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
-                  <Link
-                    href={"#"}
-                    className="relative link-line"
-                    prefetch={false}
-                  >
-                    What We do
-                  </Link>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-3 w-3 group-hover:rotate-[-180deg] ease-in-out transition-all duration-700 "
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
 
-                  <div className="w-[97.5vw] left-[-53vw] bg-white h-0  top-[4.5vw] px-[3vw]  overflow-hidden rounded-[1.5vw] absolute group-hover:h-[40vw]  ease-in-out transition-all duration-700 block bgblur ">
-                    <div className="py-[5vw] flex justify-between gap-[2vw]">
-                      <div>
-                        <Link
-                          href="/services"
-                          prefetch={false}
-                          className="uppercase text-primary link-line text-[1.2vw]"
-                        >
-                          Services
-                        </Link>
-                        <ul className="flex flex-col p-2 mt-2 px-0 rounded-[0.5vw] normal-case top-full pointer-events-auto">
-                          {services.map((service, index) => (
-                            <li key={index} className="py-1 content">
-                              <Link
-                                href={service.href}
-                                prefetch={false}
-                                className="link-line"
-                              >
-                                {service.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <span className="bg-black h-[32vw] w-[1px] " />
-                      <div>
-                        <Link
-                          href="/industry"
-                          prefetch={false}
-                          className="uppercase text-primary link-line text-[1.2vw]"
-                        >
-                          Industries
-                        </Link>
-                        <ul className="flex flex-col p-2 mt-2 px-0 rounded-[0.5vw] normal-case top-full pointer-events-auto">
-                          {industries.map((industry, index) => (
-                            <li key={index} className="py-1 content">
-                              <Link
-                                href="#"
-                                prefetch={false}
-                                className="link-line"
-                              >
-                                {industry}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+      {!mobileWidth ? (<>
+
+        <div className={`relative`}>
+          <div
+            className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw] tablet:py-[3vw]`}
+            ref={headerRef}
+          >
+            <Link href={"/"}>
+              <div className="w-[10.5vw] h-[3.2vw] relative mobile:h-[17vw] mobile:w-[30vw] tablet:w-[20vw] tablet:h-[7vw]">
+                <Image
+                  src="/assets/icons/logo.svg"
+                  width={200}
+                  height={100}
+                  alt="hiveminds-logo"
+                  quality={100}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </Link>
+            <div className="flex items-center justify-center gap-[2vw] text-[0.94vw] montreal font-medium uppercase mobile:hidden tablet:hidden">
+              <div>
+                <ul className="flex items-center justify-between gap-[1.5vw]">
+                  <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[30px]">
+                    <Link
+                      href={"/about-us"}
+                      className="relative link-line"
+                      prefetch={false}
+                    >
+                      Who We Are
+                    </Link>
+                  </li>
+                  <li className="relative group flex items-center gap-1 after:content-[''] after:bg-transparent after:block after:absolute after:top-[20px] after:left-0 after:w-full after:h-[70px]" onMouseEnter={entredMouse} onMouseLeave={leaveMouse}>
+                    <Link
+                      href={"#"}
+                      className="relative link-line"
+                      prefetch={false}
+                    >
+                      What We do
+                    </Link>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-3 w-3 group-hover:rotate-[-180deg] ease-in-out transition-all duration-700 "
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+
+                    {/* Dropdown */}
+                    <nav className={`w-[98vw] bg-white h-0 top-[4.5vw] left-0 -translate-x-[52.5%] px-[3vw] overflow-hidden rounded-[1.5vw] absolute group-hover:h-[40vw]  ease-in-out transition-all duration-500 ${openMenu ? "h-[40vw]" : "h-[0vw]"} `}>
+                      <div className="py-[5vw] flex justify-between gap-[2vw]">
+                        <div>
+                          <Link
+                            href="/services"
+                            prefetch={false}
+                            className="uppercase text-primary link-line text-[1.2vw] font-avenir"
+                          >
+                            Services
+                          </Link>
+                          <ul className="flex flex-col p-2 mt-4 px-0 rounded-[0.5vw] space-y-[0.2vw] normal-case top-full pointer-events-auto font-avenir ">
+                            {services.map((service, index) => (
+                              <li key={index} className=" content ">
+                                <Link
+                                  href={service.href}
+                                  prefetch={false}
+                                  className="link-line"
+                                >
+                                  {service.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <span className="bg-black h-[32vw] w-[1px] " />
+                        <div>
+                          <Link
+                            href="/industry"
+                            prefetch={false}
+                            className="uppercase text-primary link-line text-[1.2vw] font-avenir"
+                          >
+                            Industries
+                          </Link>
+                          <ul className="flex flex-col p-2 mt-4 px-0 rounded-[0.5vw] space-y-[0.2vw] normal-case top-full pointer-events-auto font-avenir">
+                            {industries.map((industry, index) => (
+                              <li key={index} className=" content">
+                                <a
+                                  href={industry.href}
+                                  className="link-line"
+                                >
+                                  {industry.name}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
 
                       <div className="flex gap-[2vw]">
                         {links.map((link, index) => (
@@ -214,12 +235,12 @@ const Header = ({ isOpen }) => {
                                 src={link.imgSrc}
                                 placeholder="blur"
                                 alt={link.text}
-                                className="hover:scale-[1.2] transition-all duration-500 ease-in-out"
+                                className="hover:scale-[1.2] object-cover h-full w-full transition-all duration-500 ease-in-out"
                               />
                             </Link>
                             <Link href={link.href} className="w-fit">
-                              <div className="cursor-pointer flex w-fit relative text-[1.1vw] pl-[0.4vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw]">
-                                <span className="relative link-line text-primary">
+                              <div className="cursor-pointer flex w-fit relative text-[1.1vw] pl-[0.4vw] gap-[0.7vw] items-center mobile:gap-[2vw] tablet:text-[2.5vw] mobile:text-[4vw] normal-case">
+                                <span className="relative link-line text-primary font-avenir">
                                   {link.text}
                                 </span>
                                 <svg
@@ -247,7 +268,7 @@ const Header = ({ isOpen }) => {
                         ))}
                       </div>
                     </div>
-                  </div>
+                  </nav>
                 </li>
                 {menuItems.map((item, index) => (
                   <li
@@ -269,7 +290,7 @@ const Header = ({ isOpen }) => {
               <PlainButton
                 aria-label="to contact us"
                 link={"/contact-us"}
-                text={"Work with us"}
+                text={"Partner with us"}
                 data-btn-blue
               />
             </div>
@@ -286,7 +307,54 @@ const Header = ({ isOpen }) => {
           </div>
         </div>
       </div>
-      <MobileMenu openMenu={openMenu} />
+     
+     </>):(<>
+      <div className={``}>
+        <div
+          className={`h-fit w-full flex items-center justify-between px-[5vw] py-[1.5vw] tablet:py-[3vw]`}
+          ref={headerRef}
+        >
+          <Link href={"/"}>
+            <div className="w-[10.5vw] h-[3.2vw] relative mobile:h-[17vw] mobile:w-[30vw] tablet:w-[20vw] tablet:h-[7vw]">
+              <Image
+                src="/assets/icons/logo.svg"
+                width={200}
+                height={100}
+                alt="hiveminds-logo"
+                quality={100}
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </Link>
+          <div className="flex items-center justify-center gap-[2vw] text-[0.94vw] montreal font-medium uppercase mobile:hidden tablet:hidden">
+           
+            <div>
+              <PlainButton
+                aria-label="to contact us"
+                link={"/contact-us"}
+                text={"Partner with us"}
+                data-btn-blue
+              />
+            </div>
+          </div>
+          <div
+            id="nav-icon3"
+            className={`hidden mobile:block tablet:block fixed z-[999] ${openMenu ? "open" : ""}`}
+            onClick={openHam}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+     
+      <MobileMenu openMenu={openMenu}  setOpenMenu={setOpenMenu}/>
+     
+     </>)
+     
+    } 
     </header>
   ) : (
     <></>

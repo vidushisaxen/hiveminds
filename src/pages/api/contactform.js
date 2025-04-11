@@ -9,14 +9,17 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, company, services, message, terms ,number} = req.body;
+    const { name, email, company, services, message, terms, number, pageURL } = req.body;
      
     if (!name || !email || !company || !services) {
       return res.status(400).json({ error: "Required fields missing" });
     }
     const { data, error } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
-      to: ["harshgoyalrss7@gmail.com"],
+      // from: "Acme <onboarding@resend.dev>",
+      // to: ["harshgoyalrss7@gmail.com"],
+      from:"WebForms <contact@hiveminds.in>",
+      to:["sales@hiveminds.in"],
+      // to: ["hitesh@weareenigma.com"],
       subject: "New Contact Form Submission",
       react: ContactDetails({
         userName: name,
@@ -26,6 +29,7 @@ export default async function handler(req, res) {
         userService: services,
         userMessage: message || "No message provided",
         userConsent: terms ? "Yes" : "No",
+        pageUrl: pageURL || "",
       }),
     });
 

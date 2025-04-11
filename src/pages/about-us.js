@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Layout from '@/components/Layout'
 import React from 'react'
-import { fadeIn, fadeUp, headingAnim, paraAnim, lineAnim } from '@/components/gsapAnimations'
+import { fadeIn, fadeUp, headingAnim, paraAnim, lineAnim, routeChangeTop } from '@/components/gsapAnimations'
 
 import Hero from '@/components/Hero'
 import Leadership from '@/components/AboutUs/Leadership'
@@ -26,13 +26,14 @@ const contact = () => {
   fadeUp();
   fadeIn();
   lineAnim()
+   routeChangeTop()
 
   return (
     <>
       <Metadata metadata={metadata} />
       <WebpageJsonLd metadata={metadata} />
       <Layout>
-        <Hero title1={"Who We"} title2={"Are"} para={"We are HiveMinds—a digital marketing agency where innovative strategies, creative insights, and data-driven solutions converge to transform brands and elevate customer experiences."} img={img} />
+        <Hero title1={"Who We"} title2={"Are"} para={"We are HiveMinds, a unit of Madison World - a digital marketing agency where innovative strategies, creative insights, and data-driven solutions converge to transform brands and elevate customer experiences."} img={img} />
         <Leadership />
         <WhyUs />
         <Life />
