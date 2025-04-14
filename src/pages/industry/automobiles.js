@@ -1,6 +1,6 @@
 import Hero from '@/components/IndustryDetail/Hero'
 import React from 'react'
-import img from '../../../public/assets/images/industry/automobiles.png'
+import img from '../../../public/assets/images/industry/automobiles-detail.png'
 import Layout from '@/components/Layout'
 import Content from '@/components/IndustryDetail/Content'
 import Related from '@/components/IndustryDetail/RelatedCaseStudies'

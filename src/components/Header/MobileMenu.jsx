@@ -24,7 +24,6 @@ const MobileMenu = ({ openMenu, setOpenMenu }) => {
 
           <div className="w-full h-[1px] bg-black/20"></div>
           <div>
-            {/* Sections */}
             {[
               {
                 title: "What We do",
@@ -46,17 +45,17 @@ const MobileMenu = ({ openMenu, setOpenMenu }) => {
               {
                 title: "Services",
                 links: [
-                  { name: "Performance Marketing", href: "/services/performance-marketing" },
-                  { name: "Retail Marketing", href: "/services/retail-marketing" },
-                  { name: "Search Engine Optimization", href: "/services/search-engine-optimization" },
+                  { text: "Performance Marketing", href: "/services/performance-marketing" },
+                  { text: "Retail Marketing", href: "/services/retail-marketing" },
+                  { text: "Search Engine Optimization", href: "/services/search-engine-optimization" },
                   { text: "Content Management & Creative", href: "/services/creative-content-management" },
-                  { name: "Online Reputation Management", href: "/services/online-reputation-management" },
-                  { name: "Consumer Insights", href: "/services/consumer-insights" },
-                  { name: "Influencer Marketing", href: "/services/influencer-marketing" },
-                  { name: "Affiliate Marketing", href: "/services/affiliate-marketing" },
-                  { name: "Social Media Marketing", href: "/services/social-media-marketing" },
-                  { name: "Data & Analytics", href: "/services/data-analytic" },
-                  { name: "Branding Services", href: "/services/branding" },
+                  { text: "Online Reputation Management", href: "/services/online-reputation-management" },
+                  { text: "Consumer Insights", href: "/services/consumer-insights" },
+                  { text: "Influencer Marketing", href: "/services/influencer-marketing" },
+                  { text: "Affiliate Marketing", href: "/services/affiliate-marketing" },
+                  { text: "Social Media Marketing", href: "/services/social-media-marketing" },
+                  { text: "Data & Analytics", href: "/services/data-analytic" },
+                  { text: "Branding Services", href: "/services/branding" },
                 ],
               },
 
@@ -119,7 +118,7 @@ const MobileMenu = ({ openMenu, setOpenMenu }) => {
                 >
                   <ul className="text-lg pt-[3vw] pl-[3vw] pb-[7vw] text-black montreal flex flex-col items-start justify-center gap-[1.5vw]">
                     {section.links.map((link, idx) => (
-                      <li key={idx}>
+                      <li key={idx} >
                         <a href={link.href} className="link-line" onClick={() => (setOpenMenu(false))}>
                           {link.text}
                         </a>

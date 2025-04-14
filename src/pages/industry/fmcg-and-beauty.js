@@ -1,6 +1,6 @@
 import Hero from '@/components/IndustryDetail/Hero'
 import React from 'react'
-import img from '../../../public/assets/images/industry/fmcg-and-beauty.png'
+import img from '../../../public/assets/images/industry/cosmetics-detail.png'
 import Layout from '@/components/Layout'
 import Content from '@/components/IndustryDetail/Content'
 import Related from '@/components/IndustryDetail/RelatedCaseStudies'
