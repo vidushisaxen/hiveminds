@@ -61,7 +61,7 @@ const industry = () => {
 
                     <p className='content tracking-wide para py-[1vw]' dangerouslySetInnerHTML={{ __html: item.para }} />
                     <div className='fadeup mt-[2vw]'>
-                      <PrimaryButton href={item.link} text={"ViewDetails"}/>
+                      <PrimaryButton href={item.link} text={"View Details"}/>
                       </div>
                   </div>
                 </div>
