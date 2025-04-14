@@ -12,7 +12,7 @@ import PrimaryButton from '@/components/Button/PrimaryButton';
 const metadata={
   title:"HiveMinds: Digital Marketing for Diverse Industries",
   metaDescription:"HiveMinds crafts data-driven strategies for FMCG, health, fintech, e-commerce, fashion, and more to drive brand growth and engagement.",
-  path:"industry",
+  path:"industries",
   img:"homepage.png",
     date_published: "2025-03-21T00:00",
     date_modified: "2025-03-21T00:00",

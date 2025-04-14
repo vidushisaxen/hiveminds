@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Map = ({ location, height }) => {
+export default function Map ({ location, height }) {
 
   const mapUrls = {
     Bengaluru: "https://snazzymaps.com/embed/694971",
@@ -11,6 +11,7 @@ const Map = ({ location, height }) => {
   return (
     <>
       <iframe
+        loading='async'
         title='Location Map'
         src={mapUrls[location] || mapUrls.Bengaluru}
         width="100%"
@@ -20,5 +21,3 @@ const Map = ({ location, height }) => {
     </>
   )
 }
-
-export default Map

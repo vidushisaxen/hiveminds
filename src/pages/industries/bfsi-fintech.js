@@ -31,7 +31,7 @@ const bfsi = () => {
   return (
     <>
     <Layout>
-    <Hero title1={"BFSI –"} title2={"Fintech"} img={img}/>
+    <Hero title1={"BFSI -"} title2={"Fintech"} img={img}/>
     <Content data={data}/>
     <Related/>
     </Layout>
