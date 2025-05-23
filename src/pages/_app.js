@@ -22,7 +22,9 @@ export default function App({ Component, pageProps }) {
     function update(time) {
       lenisRef.current?.lenis?.raf(time * 1000);
     }
+
     gsap.ticker.add(update);
+
     return () => gsap.ticker.remove(update);
   }, []);
 
@@ -56,18 +58,6 @@ export default function App({ Component, pageProps }) {
     };
   }, [router.events]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      window.location.reload();
-    };
-  
-    window.addEventListener("resize", handleResize);
-  
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <>
       <LocalBusiness />
@@ -75,6 +65,7 @@ export default function App({ Component, pageProps }) {
       <WebsiteJsonLd />
       <ImageObjectJsonLd />
       <DefaultSeo {...nextSeoConfig} />
+
       <ReactLenis root options={{ lerp: 0.07, autoRaf: false}} ref={lenisRef}>
         <div style={{ pointerEvents: mouseEnabled ? "auto" : "none" }}>
           <LazyMotion features={domAnimation}>
