@@ -30,7 +30,7 @@ const Content = ({ sections }) => {
             if (rect.top < windowHeight && rect.bottom > 0) {
                 const totalScroll = rect.height + windowHeight;
                 progress = 1 - (rect.bottom / totalScroll);
-                progress = Math.min(progress * 1.5, 1);
+                progress = Math.min(progress * 1.4, 1);
                 if (progress < 0) progress = 0;
             }
 
