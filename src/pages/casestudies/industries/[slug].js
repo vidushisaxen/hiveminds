@@ -27,7 +27,7 @@ export default function Blogs({ industry, industries }) {
 
   return (
     <>
-      <Metadata metadata={metadata} />
+      <Metadata metadata={metadata} noindex={true} />
       <WebpageJsonLd metadata={metadata} />
       <Layout>
         <section

@@ -10,8 +10,8 @@ import { WebpageJsonLd } from "@/lib/json-ld";
 
 
 const metadata={
-    title:" HiveMinds | Case Studies",
-    metaDescription:"Case Studies",
+    title:" Hiveminds Case Studies – Retail, Fintech, Consumer Brands",
+    metaDescription:"Browse Hiveminds’ comprehensive case studies covering retail, fintech, consumer brands, healthcare and more—insights driven by data-first marketing.",
     path:"casestudies",
     img:"homepage.png",
     date_published: "2025-03-21T00:00",
