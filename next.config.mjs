@@ -1,4 +1,10 @@
+import bundleAnalyzer from '@next/bundle-analyzer';
+
 /** @type {import('next').NextConfig} */
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
 
 const securityHeaders = [
   {
@@ -43,16 +49,14 @@ const nextConfig = {
     POSTS_PRERENDER_COUNT: "10",
     WORDPRESS_GRAPHQL_ENDPOINT: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
   },
-
-  // 👇 Add this async headers() function
   async headers() {
     return [
       {
-        source: "/(.*)", // Applies to ALL routes
+        source: "/(.*)",
         headers: securityHeaders,
       },
     ];
   },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);
