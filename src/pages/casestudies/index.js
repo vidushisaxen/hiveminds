@@ -29,6 +29,9 @@ export default function Blogs({ caseStudies, pagination, industries }) {
         <WebpageJsonLd metadata={metadata}/>
             <Layout>
                 <Hero title1={"Our Case"} title2={"Studies"} para={"Clients rely on our integrated network of agencies and specialized practices to deliver personalized experiences through creative, media and customer experience management."} img={img} />
+                <div className="container-lg pt-[5%]">
+                    <h2 className="heading-2 headingAnim">View All Case Studies</h2>
+                </div>
                 <CaseStudyListing caseStudies={caseStudies} industries={industries} pagination={pagination} />               
             </Layout>
         </>
