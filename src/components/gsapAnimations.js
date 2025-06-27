@@ -112,7 +112,7 @@ export function paraAnim() {
         });
         return () => ctx.revert();
       }
-    }, [router.asPath]);
+    }, [router.pathname]);
   }
   export function fadeIn() {
     useEffect(() => {
