@@ -17,7 +17,6 @@ export default function CaseStudyDetail({ caseStudy }) {
     lineAnim();
     paraAnim();
     routeChangeTop();
-    // console.log(caseStudy)
 
     const {
         content,
@@ -30,6 +29,7 @@ export default function CaseStudyDetail({ caseStudy }) {
         featuredImage,
         metaImage,
         metaDescription,
+        caseStudyFields
     } = caseStudy;
 
     const path = caseStudyPathBySlug(slug);
@@ -41,6 +41,13 @@ export default function CaseStudyDetail({ caseStudy }) {
         date_published: "2025-03-21T00:00",
         date_modified: "2025-03-21T00:00",
     }
+
+    const caseStudiesData = caseStudyFields?.relatedCaseStudies?.nodes?.map(cs => ({
+        id: cs.id,
+        slug: cs.slug,
+        title: cs.title,
+        featuredImage: cs.featuredImage?.node,
+      })) || [];
 
     return (
         <>
@@ -76,7 +83,7 @@ export default function CaseStudyDetail({ caseStudy }) {
                     img={featuredImage.sourceUrl}
                 />
                 <Content date={date} slug={slug} content={content} categories={categories} industry={industries[0].name} services={services} />
-                <MoreCs />
+                <MoreCs data={caseStudiesData}/>
             </Layout>
         </>
     )

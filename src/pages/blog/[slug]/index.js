@@ -29,6 +29,17 @@ export default function BlogDetail({ post }) {
 
     const path = postPathBySlug(slug); 
 
+    const relatedBlogsData = blogFields?.relatedBlogs?.edges?.map(edge => ({
+        id: edge.node.id,
+        slug: edge.node.slug,
+        title: edge.node.title,
+        heroImage: edge.node.blogFields?.heroImage?.node,
+        category: edge.node.categories?.nodes,
+        date:edge.node.date
+    })) || [];
+
+    console.log(relatedBlogsData)
+
     return (
         <>
             <NextSeo
@@ -65,7 +76,7 @@ export default function BlogDetail({ post }) {
                     category={categories[0].name}
                 />
                 <Content date={date} slug={slug} content={content} />
-                <RelatedBlogs />
+                <RelatedBlogs blogs={relatedBlogsData}/>
             </Layout>
         </>
     )
@@ -85,7 +96,6 @@ export async function getStaticProps({ params = {} }) {
     const props = {
         post,
     }
-
     return {
         props,
         revalidate: 500,
