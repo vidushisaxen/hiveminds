@@ -139,7 +139,7 @@ const Content = ({ sections }) => {
                         })}
                     </motion.svg>
 
-                    <div className="flex flex-col items-start justify-center gap-[6.8vw]">
+                    <div className="flex flex-col items-start justify-center gap-[7.5vw]">
                         {["Startup", "Growth", "Matured"].map((label, i) => (
                             <motion.p
                                 key={i}
@@ -148,7 +148,7 @@ const Content = ({ sections }) => {
                                         ["stage-startup", "stage-growth", "stage-matured"][i]
                                     )
                                 }
-                                className="stage-text text-[1.55vw] font-medium transition-colors duration-500 cursor-pointer"
+                                className="stage-text text-[1.25vw] font-medium transition-colors duration-500 cursor-pointer"
                                 initial={false}
                                 animate={{
                                     color: i === activeIndex ? "#111111" : "#b1b1b1",
@@ -173,8 +173,10 @@ const Content = ({ sections }) => {
                                 <h2 className="heading-2 headingAnim overflow-hidden">
                                     {section.heading}
                                 </h2>
-                                <p className="text-[1.6vw] mobile:text-[4vw] tablet:text-[1.5rem] pb-[1vw] fadeup  overflow-hidden">{section.tagline}</p>
-                                <ul className="text-[1.56vw] mobile:text-[4vw] tablet:text-[1.5rem] list-disc pl-[2vw] space-y-[1.5vw] py-[1.5vw] fadeup mobile:pl-[5vw]">
+                                {section.tagline && (
+                                    <p className="text-[1.5vw] mobile:text-[4.5vw] tablet:text-[1.5rem] pb-[0.5vw] fadeup  overflow-hidden">{section.tagline}</p>
+                                )}
+                                <ul className="text-[1.2vw] mobile:text-[3.5vw] tablet:text-[1.4rem] list-disc pl-[2vw] space-y-[1vw] pb-[1.5vw] fadeup mobile:pl-[5vw]">
                                     {section.content.map((point, i) => (
                                         <li key={i}>{point}</li>
                                     ))}
@@ -183,13 +185,13 @@ const Content = ({ sections }) => {
                             <div className="flex flex-wrap gap-[1vw] mobile:gap-[5vw] tablet:gap-[3vw]">
                                 {section.images.map((item, i) => (
                                     <Link key={i} href={item.link}>
-                                        <div className="relative casestudy w-[30vw] h-[22vw] overflow-hidden rounded-[1.2vw] group cursor-pointer mobile:w-full mobile:h-[85vw] mobile:rounded-[4vw] tablet:h-[35vw] tablet:w-[43vw] tablet:rounded-[3vw] fadeup">
+                                        <div className="relative casestudy w-[30vw] h-[22vw] overflow-hidden rounded-[1.2vw] group cursor-pointer mobile:w-[85vw] mobile:h-[70vw] mobile:rounded-[4vw] tablet:h-[35vw] tablet:w-[43vw] tablet:rounded-[3vw] fadeup">
                                             <Image
                                                 src={item.img}
                                                 height={450}
                                                 width={450}
                                                 alt={"casestudy"}
-                                                className="hover:scale-[1.1] transition-all ease-in-out duration-500 hover:brightness-75 w-full h-full object-fit"
+                                                className="hover:scale-[1.05] object-cover object-top transition-all ease-in-out duration-500 hover:brightness-75 w-full h-full object-fit"
                                             />
                                             <div className="absolute bottom-[10%] left-[10%] flex items-center justify-between gap-[1vw] mobile:gap-[2.5vw] mobile:left-[5%]">
                                                 <p className="text-white text-[1.9vw] font-medium montreal mobile:text-[6.5vw] tablet:text-[4vw]">
