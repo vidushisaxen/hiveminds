@@ -173,6 +173,7 @@ const Content = ({ sections }) => {
                                 <h2 className="heading-2 headingAnim overflow-hidden">
                                     {section.heading}
                                 </h2>
+                                <p className="text-[1.6vw] mobile:text-[4vw] tablet:text-[1.5rem] pb-[1vw] fadeup  overflow-hidden">{section.tagline}</p>
                                 <ul className="text-[1.56vw] mobile:text-[4vw] tablet:text-[1.5rem] list-disc pl-[2vw] space-y-[1.5vw] py-[1.5vw] fadeup mobile:pl-[5vw]">
                                     {section.content.map((point, i) => (
                                         <li key={i}>{point}</li>
