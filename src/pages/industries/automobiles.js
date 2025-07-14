@@ -26,24 +26,14 @@ const sections = [
         id: "stage-startup",
         images: [
             {
-                link: "#",
-                img: "/assets/images/industry/dominos.png",
-                title: "Dominos"
+                link: "/casestudies/bajaj-core",
+                img: "/assets/images/impact/casestudy/bajaj-seasonal.jpg",
+                title: "Bajaj Core"
             },
             {
-                link: "#",
-                img: "/assets/images/industry/fly-dubai.png",
-                title: "Fly dubai"
-            },
-            {
-                link: "#",
-                img: "/assets/images/industry/saffola-honey.png",
-                title: "Saffola Honey"
-            },
-            {
-                link: "#",
-                img: "/assets/images/industry/big-basket.png",
-                title: "Big Basket"
+                link: "/casestudies/titan-clocks",
+                img: "/assets/images/impact/casestudy/titan-cs-hero.jpg",
+                title: "Titan"
             },
         ],
         tagline:"Break into the EV market with speed, style, and storytelling.",
@@ -60,25 +50,15 @@ const sections = [
         id: "stage-growth",
         images: [
             {
-                link: "#",
+                link: "/casestudies/dominos",
                 img: "/assets/images/industry/dominos.png",
                 title: "Dominos"
             },
             {
-                link: "#",
+                link: "/casestudies/flydubai",
                 img: "/assets/images/industry/fly-dubai.png",
                 title: "Fly dubai"
-            },
-            {
-                link: "#",
-                img: "/assets/images/industry/saffola-honey.png",
-                title: "Saffola Honey"
-            },
-            {
-                link: "#",
-                img: "/assets/images/industry/big-basket.png",
-                title: "Big Basket"
-            },
+            }
         ],
         tagline:"Scale brand. Multiply demand. Own your category.",
         content: [
@@ -98,22 +78,12 @@ const sections = [
         id: "stage-matured",
         images: [
             {
-                link: "#",
-                img: "/assets/images/industry/dominos.png",
-                title: "Dominos"
-            },
-            {
-                link: "#",
-                img: "/assets/images/industry/fly-dubai.png",
-                title: "Fly dubai"
-            },
-            {
-                link: "#",
+                link: "/casestudies/saffola-triumph",
                 img: "/assets/images/industry/saffola-honey.png",
                 title: "Saffola Honey"
             },
             {
-                link: "#",
+                link: "/casestudies/bigbasket",
                 img: "/assets/images/industry/big-basket.png",
                 title: "Big Basket"
             },
