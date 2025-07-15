@@ -14,6 +14,7 @@ const Content = ({ sections }) => {
         growthRef,
         maturedRef,
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const sectionRefs = [startupRef, growthRef, maturedRef];
     const [activeIndex, setActiveIndex] = useState(0);
     const [scrollProgress, setScrollProgress] = useState(1);
@@ -176,7 +177,7 @@ const Content = ({ sections }) => {
                                 {section.tagline && (
                                     <p className="text-[1.5vw] mobile:text-[4.5vw] tablet:text-[1.5rem] pb-[0.5vw] fadeup  overflow-hidden">{section.tagline}</p>
                                 )}
-                                <ul className="text-[1.2vw] mobile:text-[3.5vw] tablet:text-[1.4rem] list-disc pl-[2vw] space-y-[1vw] pb-[1.5vw] fadeup mobile:pl-[5vw]">
+                                <ul className="text-[1.2vw] mobile:text-[4vw] tablet:text-[1.4rem] list-disc pl-[2vw] space-y-[1vw] pb-[1.5vw] fadeup mobile:pl-[5vw]">
                                     {section.content.map((point, i) => (
                                         <li key={i}>{point}</li>
                                     ))}

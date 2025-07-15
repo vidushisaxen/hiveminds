@@ -5,8 +5,8 @@ import Layout from '@/components/Layout'
 import React from 'react'
 
 const fmcg = () => {
-     headingAnim();
-      fadeUp();
+    headingAnim();
+    fadeUp();
     return (
         <>
             <Layout>
@@ -31,7 +31,7 @@ const sections = [
                 title: "Sugar Fit"
             }
         ],
-        tagline:"Launch fast. Get visible. Drive leads",
+        tagline: "Launch fast. Get visible. Drive leads",
         content: [
             "Hyper-targeted ads to drive early leads",
             "Awareness via trusted creators across languages",
@@ -51,7 +51,7 @@ const sections = [
                 title: "Dr. Agarwal"
             }
         ],
-        tagline:"Scale smart. Optimize ROI. Expand reach",
+        tagline: "Scale smart. Optimize ROI. Expand reach",
         content: [
             "Local SEO + GMB to dominate nearby searches",
             "Initiate branding into the media mix",
@@ -72,14 +72,14 @@ const sections = [
                 title: "Protinex"
             }
         ],
-        tagline:"",
+        tagline: "",
         content: [
-          "Content marketing including episodic content creation, articles, SEO and digital PR.",
-	"Drive quality footfalls to your hospital/ clinic centers",
-    "Regional creatives for deeper personalization",
-	"Brand + performance campaigns, synced",
-	"Retail marketing- Qcom and E-com management for Healthcare products",
-	"From view till clinic full funnel visibility and campaign management"
+            "Content marketing including episodic content creation, articles, SEO and digital PR.",
+            "Drive quality footfall to your hospital/clinic centers.",
+            "Regional creatives for deeper personalization",
+            "Brand + performance campaigns, synced",
+            "Retail marketing- Qcom and E-com management for Healthcare products",
+            "From view till clinic full funnel visibility and campaign management"
         ],
     },
 ];

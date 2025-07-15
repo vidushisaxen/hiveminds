@@ -5,8 +5,10 @@ import Layout from '@/components/Layout'
 import React from 'react'
 
 const fmcg = () => {
-     headingAnim();
-      fadeUp();
+    
+    headingAnim();
+    fadeUp();
+
     return (
         <>
             <Layout>
@@ -36,7 +38,7 @@ const sections = [
                 title: "Crompton"
             }
         ],
-        tagline:"For new-age durable brands entering a competitive market.",
+        tagline: "For new-age durable brands entering a competitive market.",
         content: [
             "Launch performance ads to drive discovery and sales",
             "Boost product visibility with SEO-rich listings and keyword mapping.",
@@ -63,7 +65,7 @@ const sections = [
                 title: "Titan"
             },
         ],
-        tagline:"For brands scaling across categories, SKUs, and platforms",
+        tagline: "For brands scaling across categories, SKUs, and platforms",
         content: [
             "Expand reach with multi-format ads across Amazon, Flipkart, Qcommerce and digital platforms",
             "Increase share of shelf with assortment and keyword.",
@@ -89,7 +91,7 @@ const sections = [
                 title: "Bajaj Seasonal"
             }
         ],
-        tagline:"For market leaders aiming to deepen dominance and drive efficiency.",
+        tagline: "For market leaders aiming to deepen dominance and drive efficiency.",
         content: [
             "Integrate brand performance to own every stage of the funnel.",
             "Launch new SKUs with synced TV + digital + influencer rollouts.",

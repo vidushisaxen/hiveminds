@@ -63,7 +63,7 @@ const sections = [
         tagline:"Scale brand. Multiply demand. Own your category.",
         content: [
            "Elevate brand search with emotion + performance",
-           "Create discovery across aggregators ,content portals and social influencer channels ",
+           "Create discovery across aggregators, content portals and social influencer channels",
            "Expand reach with hyper-local influencer tiers",
            "Precision mapping for showroom <> campaign catchment area.",
            "Capture mid-funnel with review and test-ride content",
